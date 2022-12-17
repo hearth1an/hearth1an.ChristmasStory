@@ -1,6 +1,6 @@
 ﻿<Project>
   <PropertyGroup>
-    <OutputPath>$(AppData)\OuterWildsModManager\OWML\Mods\hearth1an.ScoutTeleporter</OutputPath>
+    <OutputPath>$(AppData)\OuterWildsModManager\OWML\Mods\hearth1an.ChristmasStory</OutputPath>
     <OuterWildsModsDirectory>$(AppData)\OuterWildsModManager\OWML\Mods</OuterWildsModsDirectory>
   </PropertyGroup>
 </Project>

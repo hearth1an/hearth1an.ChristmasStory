@@ -1,0 +1,41 @@
+{
+	"$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
+	"name": "Angler Nest Dimension",
+	"Base": {
+		"gravityFallOff": "linear"
+	},
+	"Orbit": {},
+	"Props": {
+		"details": [
+			{
+				"path": "DB_PioneerDimension_Body/Sector_PioneerDimension/Interactables_PioneerDimension/Pioneer_Characters/Traveller_HEA_Feldspar",
+				"position": {
+					"x": -29.9611149,
+					"y": -9.082031,
+					"z": -2.49883986
+				},
+				"rotation": {
+					"x": 6.496227,
+					"y": 359.8033,
+					"z": 216.45433
+				}
+			},
+			{
+				"path": "DB_PioneerDimension_Body/Sector_PioneerDimension/Interactables_PioneerDimension/Pioneer_Characters/Signal_Harmonica",
+				"position": {
+					"x": -30.2010555,
+					"y": -8.541016,
+					"z": -4.046608
+				},
+				"rotation": {
+					"x": 19.4203587,
+					"y": 14.0571737,
+					"z": 206.990311
+				}
+			}
+		]
+	},
+	"ReferenceFrame": {},
+	"ShipLog": {},
+	"ShockEffect": {}
+}

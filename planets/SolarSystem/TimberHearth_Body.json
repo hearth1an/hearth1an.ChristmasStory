@@ -1,0 +1,81 @@
+{
+	"$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
+	"name": "TimberHearth",
+	"Base": {
+		"gravityFallOff": "linear"
+	},
+	"Orbit": {},
+	"Props": {
+		"details": [
+			{
+				"rename": "Center_Barrel",
+				"path": "TimberHearth_Body/Sector_TH/Sector_RadioTower/RadioTower_DLC/Props_RadioTower/OtherComponentsGroup/Props_Grove/Props_HEA_BarrelTall",
+				"position": {
+					"x": -8.87561,
+					"y": -15.3046875,
+					"z": 182.628235
+				},
+				"rotation": {
+					"x": 90.0,
+					"y": 1.34304844E-06
+				},
+				"scale": 6.0
+			},
+			{
+				"path": "DB_PioneerDimension_Body/Sector_PioneerDimension/Interactables_PioneerDimension/Pioneer_Characters/Traveller_HEA_Feldspar",
+				"position": {
+					"x": 4.44549561,
+					"y": -21.9639,
+					"z": 187.0863
+				},
+				"rotation": {
+					"x": 323.372,
+					"y": 275.270721,
+					"z": 262.375244
+				}
+			},
+			{
+				"path": "DB_PioneerDimension_Body/Sector_PioneerDimension/Interactables_PioneerDimension/Pioneer_Characters/Signal_Harmonica",
+				"position": {
+					"x": 4.44549561,
+					"y": -21.9639,
+					"z": 187.0863
+				},
+				"rotation": {
+					"x": 321.923584,
+					"y": 275.3957,
+					"z": 262.294617
+				}
+			},
+			{
+				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Characters_Crossroads/Traveller_HEA_Riebeck",
+				"position": {
+					"x": 0.8231104,
+					"y": -24.8915,
+					"z": 185.891388
+				},
+				"rotation": {
+					"x": 311.063721,
+					"y": 279.0904,
+					"z": 258.553925
+				}
+			},
+			{
+				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Characters_Crossroads/Signal_Banjo",
+				"position": {
+					"x": 0.8231104,
+					"y": -24.8915,
+					"z": 184.891388
+				},
+				"rotation": {
+					"x": 311.063721,
+					"y": 279.0904,
+					"z": 258.553925
+				}
+			}
+		]
+	},
+	"ReferenceFrame": {},
+	"ShipLog": {},
+	"ShockEffect": {}
+}
