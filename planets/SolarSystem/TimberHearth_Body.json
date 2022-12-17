@@ -11,22 +11,22 @@
 				"rename": "Center_Barrel",
 				"path": "TimberHearth_Body/Sector_TH/Sector_RadioTower/RadioTower_DLC/Props_RadioTower/OtherComponentsGroup/Props_Grove/Props_HEA_BarrelTall",
 				"position": {
-					"x": -8.87561,
-					"y": -15.3046875,
-					"z": 182.628235
+					"x": -10.1757326,
+					"y": -15.1047,
+					"z": 180.927765
 				},
 				"rotation": {
 					"x": 90.0,
-					"y": 1.34304844E-06
+					"y": -3.54225585E-06
 				},
-				"scale": 6.0
+				"scale": 7.0
 			},
 			{
 				"path": "DB_PioneerDimension_Body/Sector_PioneerDimension/Interactables_PioneerDimension/Pioneer_Characters/Traveller_HEA_Feldspar",
 				"position": {
-					"x": 4.44549561,
+					"x": 4.445449,
 					"y": -21.9639,
-					"z": 187.0863
+					"z": 187.085892
 				},
 				"rotation": {
 					"x": 323.372,
@@ -37,22 +37,18 @@
 			{
 				"path": "DB_PioneerDimension_Body/Sector_PioneerDimension/Interactables_PioneerDimension/Pioneer_Characters/Signal_Harmonica",
 				"position": {
-					"x": 4.44549561,
+					"x": 4.445449,
 					"y": -21.9639,
-					"z": 187.0863
+					"z": 187.085892
 				},
-				"rotation": {
-					"x": 321.923584,
-					"y": 275.3957,
-					"z": 262.294617
-				}
+				"rotation": {}
 			},
 			{
 				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Characters_Crossroads/Traveller_HEA_Riebeck",
 				"position": {
-					"x": 0.8231104,
+					"x": 0.8230513,
 					"y": -24.8915,
-					"z": 185.891388
+					"z": 185.8911
 				},
 				"rotation": {
 					"x": 311.063721,
@@ -63,14 +59,88 @@
 			{
 				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Characters_Crossroads/Signal_Banjo",
 				"position": {
-					"x": 0.8231104,
+					"x": 0.8230818,
 					"y": -24.8915,
-					"z": 184.891388
+					"z": 184.891541
+				},
+				"rotation": {}
+			},
+			{
+				"path": "Moon_Body/Sector_THM/Characters_THM/Villager_HEA_Esker/Villager_HEA_Esker_ANIM_Rocking",
+				"position": {
+					"x": -2.52148366,
+					"y": -23.308136,
+					"z": 185.682327
 				},
 				"rotation": {
-					"x": 311.063721,
-					"y": 279.0904,
-					"z": 258.553925
+					"x": 296.0581,
+					"y": 284.301941,
+					"z": 253.170319
+				}
+			},
+			{
+				"path": "Moon_Body/Sector_THM/Characters_THM/Villager_HEA_Esker/Signal_Whistling",
+				"position": {
+					"x": -2.63016438,
+					"y": -23.378479,
+					"z": 186.165268
+				},
+				"rotation": {
+					"x": 306.07782,
+					"y": 268.564484,
+					"z": 256.177856
+				}
+			},
+			{
+				"path": "CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Interactables_Lakebed/Traveller_HEA_Chert/Traveller_HEA_Chert_ANIM_Chatter_Chipper",
+				"position": {
+					"x": 1.359779,
+					"y": -20.91367,
+					"z": 185.98
+				},
+				"rotation": {
+					"x": 299.5037,
+					"y": 282.136475,
+					"z": 256.8017
+				}
+			},
+			{
+				"path": "CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Volumes_Lakebed/Signal_Drums",
+				"position": {
+					"x": 1.971107,
+					"y": -21.7157,
+					"z": 185.882172
+				},
+				"rotation": {
+					"x": 305.586975,
+					"y": 280.052765,
+					"z": 258.636719
+				}
+			},
+			{
+				"path": "CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Volumes_Lakebed/Signal_Drums",
+				"position": {
+					"x": 3.774497,
+					"y": -21.9059238,
+					"z": 186.47319
+				},
+				"rotation": {
+					"x": 288.420166,
+					"y": 337.318024,
+					"z": 123.272705
+				}
+			},
+			{
+				"path": "GabbroIsland_Body/Sector_GabbroIsland/Interactables_GabbroIsland/Traveller_HEA_Gabbro",
+				"position": {
+					"x": 9.032103,
+					"y": -21.8006268,
+					"z": 185.659134
+				},
+				"rotation": {
+					"x": 320.5242,
+					"y": 278.207947,
+					"z": 261.3781
 				}
 			}
 		]
