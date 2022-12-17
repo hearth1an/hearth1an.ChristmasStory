@@ -1,0 +1,22 @@
+C:\Users\Alternate\AppData\Roaming\OuterWildsModManager\OWML\Mods\hearth1an.ScoutTeleporter\default-config.json
+C:\Users\Alternate\AppData\Roaming\OuterWildsModManager\OWML\Mods\hearth1an.ScoutTeleporter\manifest.json
+C:\Users\Alternate\AppData\Roaming\OuterWildsModManager\OWML\Mods\hearth1an.ScoutTeleporter\planets\SolarSystem\Player.json
+C:\Users\Alternate\AppData\Roaming\OuterWildsModManager\OWML\Mods\hearth1an.ScoutTeleporter\planets\SolarSystem\Probe.json
+C:\Users\Alternate\AppData\Roaming\OuterWildsModManager\OWML\Mods\hearth1an.ScoutTeleporter\translations\english.json
+C:\Users\Alternate\AppData\Roaming\OuterWildsModManager\OWML\Mods\hearth1an.ScoutTeleporter\README.md
+C:\Users\Alternate\AppData\Roaming\OuterWildsModManager\OWML\Mods\hearth1an.ScoutTeleporter\ScoutTeleporter.dll
+C:\Users\Alternate\AppData\Roaming\OuterWildsModManager\OWML\Mods\hearth1an.ScoutTeleporter\ScoutTeleporter.pdb
+E:\Outer Wilds modding\hearth1an.ProbeTeleporter\obj\Debug\ScoutTeleporter.csproj.AssemblyReference.cache
+E:\Outer Wilds modding\hearth1an.ProbeTeleporter\obj\Debug\ScoutTeleporter.GeneratedMSBuildEditorConfig.editorconfig
+E:\Outer Wilds modding\hearth1an.ProbeTeleporter\obj\Debug\ScoutTeleporter.AssemblyInfoInputs.cache
+E:\Outer Wilds modding\hearth1an.ProbeTeleporter\obj\Debug\ScoutTeleporter.AssemblyInfo.cs
+E:\Outer Wilds modding\hearth1an.ProbeTeleporter\obj\Debug\ScoutTeleporter.csproj.CoreCompileInputs.cache
+E:\Outer Wilds modding\hearth1an.ProbeTeleporter\obj\Debug\ScoutTeleporter.dll
+E:\Outer Wilds modding\hearth1an.ProbeTeleporter\obj\Debug\ScoutTeleporter.pdb
+E:\Outer Wilds modding\hearth1an.ScoutTeleporter\obj\Debug\ScoutTeleporter.csproj.AssemblyReference.cache
+E:\Outer Wilds modding\hearth1an.ScoutTeleporter\obj\Debug\ScoutTeleporter.GeneratedMSBuildEditorConfig.editorconfig
+E:\Outer Wilds modding\hearth1an.ScoutTeleporter\obj\Debug\ScoutTeleporter.AssemblyInfoInputs.cache
+E:\Outer Wilds modding\hearth1an.ScoutTeleporter\obj\Debug\ScoutTeleporter.AssemblyInfo.cs
+E:\Outer Wilds modding\hearth1an.ScoutTeleporter\obj\Debug\ScoutTeleporter.csproj.CoreCompileInputs.cache
+E:\Outer Wilds modding\hearth1an.ScoutTeleporter\obj\Debug\ScoutTeleporter.dll
+E:\Outer Wilds modding\hearth1an.ScoutTeleporter\obj\Debug\ScoutTeleporter.pdb
