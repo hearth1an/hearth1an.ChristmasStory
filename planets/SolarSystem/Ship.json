@@ -1,50 +1,158 @@
 {
 	"$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
 	"name": "Ship",
-	"Base": {
-		"gravityFallOff": "linear"
-	},
-	"Orbit": {},
 	"Props": {
 		"details": [
 			{
-				"rename": "Feldspar_Ship",
-				"path": "DB_PioneerDimension_Body/Sector_PioneerDimension/Interactables_PioneerDimension/Pioneer_Characters/Traveller_HEA_Feldspar",
-				"position": {
-					"x": -2.4309,
-					"y": 0.4255
-				},
-				"rotation": {
-					"y": 90.0
-				}
-			},
-			{
-				"rename": "Riebeck_Ship",
 				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Characters_Crossroads/Traveller_HEA_Riebeck",
+				"rename": "Ship_Riebeck",
 				"position": {
 					"x": -2.4309,
-					"y": 0.4255
+					"y": 0.4255,
+					"z": 0
 				},
 				"rotation": {
-					"y": 90.0
+					"x": 0,
+					"y": 90,
+					"z": 0
 				},
 				"scale": 1.1
 			},
 			{
-				"rename": "Esker_Ship",
+				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Characters_Crossroads/Signal_Banjo",
+				"parentPath": "ShipSector/Ship_Riebeck",
+				"position": {
+					"x": -2.4309,
+					"y": 0.4255,
+					"z": 0
+				},
+				"rotation": {
+					"x": 0,
+					"y": 90,
+					"z": 0
+				},
+				"scale": 1
+			},
+			{
+				"path": "CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Interactables_Lakebed/Traveller_HEA_Chert",
+				"rename": "Ship_Chert",
+				"position": {
+					"x": 1.7095,
+					"y": 1.5492,
+					"z": -0.7815
+				},
+				"rotation": {
+					"x": 358.6817,
+					"y": 302.5814,
+					"z": 0
+				},
+				"scale": 1.1
+			},
+			{
+				"path": "CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Volumes_Lakebed/Signal_Drums",
+				"parentPath": "ShipSector/Ship_Chert",
+				"position": {
+					"x": 1.7095,
+					"y": 1.5492,
+					"z": -0.7815
+				},
+				"rotation": {
+					"x": 358.6817,
+					"y": 302.5814,
+					"z": 0
+				},
+				"scale": 1
+			},
+			{
 				"path": "Moon_Body/Sector_THM/Characters_THM/Villager_HEA_Esker/Villager_HEA_Esker_ANIM_Rocking",
+				"rename": "Ship_Esker",
 				"position": {
 					"x": 0.7364,
 					"y": 0.5087,
 					"z": 1.589
 				},
 				"rotation": {
-					"y": 250.2217
-				}
+					"x": 0,
+					"y": 250.2217,
+					"z": 0
+				},
+				"scale": 1
+			},
+			{
+				"path": "Moon_Body/Sector_THM/Characters_THM/Villager_HEA_Esker/Signal_Whistling",
+				"parentPath": "ShipSector/Ship_Esker",
+				"position": {
+					"x": 0.7364,
+					"y": 0.5087,
+					"z": 1.589
+				},
+				"rotation": {
+					"x": 0,
+					"y": 250.2217,
+					"z": 0
+				},
+				"scale": 1
+			},
+			{
+				"path": "GabbroIsland_Body/Sector_GabbroIsland/Interactables_GabbroIsland/Traveller_HEA_Gabbro/Traveller_HEA_Gabbro_ANIM_IdleFlute",
+				"rename": "Ship_Gabbro",
+				"position": {
+					"x": -2.2199,
+					"y": 0.7687,
+					"z": -1.7128
+				},
+				"rotation": {
+					"x": 60.0332,
+					"y": 70.7476,
+					"z": 0
+				},
+				"scale": 1.1
+			},
+			{
+				"path": "GabbroIsland_Body/Sector_GabbroIsland/Interactables_GabbroIsland/Signal_Flute",
+				"parentPath": "ShipSector/Ship_Gabbro",
+				"position": {
+					"x": -2.2199,
+					"y": 0.7687,
+					"z": -1.7128
+				},
+				"rotation": {
+					"x": 60.0332,
+					"y": 70.7476,
+					"z": 0
+				},
+				"scale": 1
+			},
+			{
+				"path": "DB_PioneerDimension_Body/Sector_PioneerDimension/Interactables_PioneerDimension/Pioneer_Characters/Traveller_HEA_Feldspar",
+				"rename": "Ship_Feldspar",
+				"position": {
+					"x": 0.8201,
+					"y": 1.1342,
+					"z": -2.9346
+				},
+				"rotation": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"scale": 1.1
+			},
+			{
+				"path": "DB_PioneerDimension_Body/Sector_PioneerDimension/Interactables_PioneerDimension/Pioneer_Characters/Signal_Harmonica",
+				"parentPath": "ShipSector/Ship_Feldspar",
+				"position": {
+					"x": 0.8201,
+					"y": 1.1342,
+					"z": -2.9346
+				},
+				"rotation": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"scale": 1
 			}
 		]
-	},
-	"ReferenceFrame": {},
-	"ShipLog": {},
-	"ShockEffect": {}
+	}
 }
