@@ -1,10 +1,9 @@
-﻿using NewHorizons.Utility;
+﻿using ChrismasStory.Components;
+using ChrismasStory.Utilities.ModAPIs;
+using NewHorizons.Utility;
 using OWML.Common;
 using OWML.ModHelper;
-using ChrismasStory.Utilities.ModAPIs;
-using NewHorizons.Handlers;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace ChrismasStory
 {
@@ -28,6 +27,7 @@ namespace ChrismasStory
         private void OnStarSystemLoaded(string systemName)
         {
             ModHelper.Console.WriteLine("LOADED SYSTEM " + systemName);
+
             if (systemName == "SolarSystem")
             {
                 SpawnOnStart();
@@ -36,7 +36,14 @@ namespace ChrismasStory
 
         public void SpawnOnStart()
         {
-            GeoRemovements();
+            var player = Locator.GetPlayerBody().gameObject;
+            var ship = Locator.GetShipBody().gameObject;
+
+			player.AddComponent<PlayerEffectController>();
+			ship.AddComponent<ShipHandler>();
+            player.AddComponent<HeldItemHandler>();
+
+			GeoRemovements();
             TransformThings();
             CharactersReplacement();
 
@@ -222,5 +229,7 @@ namespace ChrismasStory
         {
            
         }
+
+
     }
 }
