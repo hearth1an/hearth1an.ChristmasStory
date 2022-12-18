@@ -16,7 +16,8 @@
 					"y": 90,
 					"z": 0
 				},
-				"scale": 1.1
+				"scale": 1.1,
+				"keepLoaded": true
 			},
 			{
 				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Characters_Crossroads/Signal_Banjo",
@@ -46,7 +47,8 @@
 					"y": 302.5814,
 					"z": 0
 				},
-				"scale": 1.1
+				"scale": 1.1,
+				"keepLoaded": true
 			},
 			{
 				"path": "CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Volumes_Lakebed/Signal_Drums",
@@ -76,7 +78,8 @@
 					"y": 250.2217,
 					"z": 0
 				},
-				"scale": 1
+				"scale": 1,
+				"keepLoaded": true
 			},
 			{
 				"path": "Moon_Body/Sector_THM/Characters_THM/Villager_HEA_Esker/Signal_Whistling",
@@ -106,7 +109,8 @@
 					"y": 70.7476,
 					"z": 0
 				},
-				"scale": 1.1
+				"scale": 1.1,
+				"keepLoaded": true
 			},
 			{
 				"path": "GabbroIsland_Body/Sector_GabbroIsland/Interactables_GabbroIsland/Signal_Flute",
@@ -136,7 +140,8 @@
 					"y": 0,
 					"z": 0
 				},
-				"scale": 1.1
+				"scale": 1.1,
+				"keepLoaded": true
 			},
 			{
 				"path": "DB_PioneerDimension_Body/Sector_PioneerDimension/Interactables_PioneerDimension/Pioneer_Characters/Signal_Harmonica",

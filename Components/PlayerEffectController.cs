@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 namespace ChrismasStory.Components
 {
@@ -14,10 +15,13 @@ namespace ChrismasStory.Components
 			_cameraEffectController = Object.FindObjectOfType<PlayerCameraEffectController>();
         }
 
-        public static void Blink(float length = 2)
+        public static void Blink(float length = 2) => _instance.StartCoroutine(_instance.BlinkCoroutine(length));
+
+		private IEnumerator BlinkCoroutine(float length)
         {
-            _instance._cameraEffectController.CloseEyes(length / 2f);
-            _instance._cameraEffectController.OpenEyes(length / 2f, false);
-        }
+			_instance._cameraEffectController.CloseEyes(length / 2f);
+			yield return new WaitForSeconds(length / 2f);
+			_instance._cameraEffectController.OpenEyes(length / 2f, false);
+		}
     }
 }

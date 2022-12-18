@@ -27,9 +27,9 @@ namespace ChrismasStory.Characters
 		private IEnumerator ChangeStateCoroutine(float wait, STATE state)
 		{
 			yield return new WaitForSeconds(wait);
-			originalCharacter.SetActive(state == STATE.ORIGINAL);
-			shipCharacter.SetActive(state == STATE.ON_SHIP);
-			treeCharacter.SetActive(state == STATE.AT_TREE);
+			originalCharacter?.SetActive(state == STATE.ORIGINAL);
+			shipCharacter?.SetActive(state == STATE.ON_SHIP);
+			treeCharacter?.SetActive(state == STATE.AT_TREE);
 		}
 	}
 }
