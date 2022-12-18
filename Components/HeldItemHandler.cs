@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace ChrismasStory.Components
 {
@@ -11,6 +6,12 @@ namespace ChrismasStory.Components
 	{
 		private ToolModeSwapper _toolModeSwapper;
 		private static HeldItemHandler _instance;
+
+		private void Start()
+		{
+			_toolModeSwapper = GameObject.FindObjectOfType<ToolModeSwapper>();
+			_instance = this;
+		}
 
 		public static OWItem GetHeldItem() => _instance._toolModeSwapper.GetItemCarryTool().GetHeldItem();
 
