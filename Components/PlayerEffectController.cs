@@ -14,12 +14,10 @@ namespace ChrismasStory.Components
 			_cameraEffectController = Object.FindObjectOfType<PlayerCameraEffectController>();
         }
 
-        public static void Blink()
+        public static void Blink(float length = 2)
         {
-
-            var time = 2f;
-            _instance._cameraEffectController.CloseEyes(time / 2f);
-            _instance._cameraEffectController.OpenEyes(time / 2f, false);
+            _instance._cameraEffectController.CloseEyes(length / 2f);
+            _instance._cameraEffectController.OpenEyes(length / 2f, false);
         }
     }
 }
