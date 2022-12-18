@@ -10,9 +10,9 @@
 			{
 				"path": "DB_PioneerDimension_Body/Sector_PioneerDimension/Interactables_PioneerDimension/Pioneer_Characters/Traveller_HEA_Feldspar",
 				"position": {
-					"x": -29.9611988,
+					"x": -29.96144,
 					"y": -9.082031,
-					"z": -2.49932146
+					"z": -2.4992795
 				},
 				"rotation": {
 					"x": 6.496227,
@@ -21,16 +21,17 @@
 				}
 			},
 			{
+
 				"path": "DB_PioneerDimension_Body/Sector_PioneerDimension/Interactables_PioneerDimension/Pioneer_Characters/Signal_Harmonica",
 				"position": {
-					"x": -30.2010555,
-					"y": -8.541016,
-					"z": -4.046608
+					"x": -29.96144,
+					"y": -9.082031,
+					"z": -2.4992795
 				},
 				"rotation": {
-					"x": 19.4203587,
-					"y": 14.0571737,
-					"z": 206.990311
+					"x": 0,
+					"y": 0,
+					"z": 0
 				}
 			}
 		]

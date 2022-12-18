@@ -4,7 +4,7 @@
     "author": "hearth1an",
     "name": "Chrismas Story",
     "uniqueName": "hearth1an.ChrismasStory",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "owmlVersion": "2.3.2",
     "dependencies": [ "xen.NewHorizons" ]
 }

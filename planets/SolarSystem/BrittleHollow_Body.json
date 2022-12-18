@@ -1,0 +1,231 @@
+{
+	"$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
+	"name": "BrittleHollow",
+	"Base": {
+		"gravityFallOff": "linear"
+	},
+	"Orbit": {},
+	"Props": {
+		"details": [
+			{
+				"rename": "Grav_Crystal_3",
+				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Interactables_Crossroads/VisibleFrom_BH/GravityCrystals/OtherComponentsGroup/Prefab_NOM_GravityCrystal",
+				"position": {
+					"x": 145.20784,
+					"y": -85.20117,
+					"z": -195.19165
+				},
+				"rotation": {
+					"x": 325.699066,
+					"y": 89.22557,
+					"z": 42.2812347
+				}
+			},
+			{
+				"rename": "Grav_Crystal_4",
+				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Interactables_Crossroads/VisibleFrom_BH/GravityCrystals/OtherComponentsGroup/Prefab_NOM_GravityCrystal",
+				"position": {
+					"x": 141.688736,
+					"y": -89.37695,
+					"z": -194.584518
+				},
+				"rotation": {
+					"x": 330.4404,
+					"y": 63.17579,
+					"z": 59.07472
+				}
+			},
+			{
+				"rename": "Grav_Crystal_5",
+				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Interactables_Crossroads/VisibleFrom_BH/GravityCrystals/OtherComponentsGroup/Prefab_NOM_GravityCrystal",
+				"position": {
+					"x": 141.3629,
+					"y": -84.0332,
+					"z": -198.463989
+				},
+				"rotation": {
+					"x": 33.58152,
+					"y": 32.6296577,
+					"z": 50.72235
+				}
+			},
+			{
+				"rename": "Grav_Crystal_7",
+				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Interactables_Crossroads/VisibleFrom_BH/GravityCrystals/OtherComponentsGroup/Prefab_NOM_GravityCrystal",
+				"position": {
+					"x": 116.239113,
+					"y": -104.736328,
+					"z": -168.763153
+				},
+				"rotation": {
+					"x": 338.560638,
+					"y": 297.057251,
+					"z": 292.2685
+				}
+			},
+			{
+				"rename": "Grav_Crystal_8",
+				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Interactables_Crossroads/VisibleFrom_BH/GravityCrystals/OtherComponentsGroup/Prefab_NOM_GravityCrystal",
+				"position": {
+					"x": 119.796883,
+					"y": -102.267578,
+					"z": -177.252777
+				},
+				"rotation": {
+					"x": 47.67292,
+					"y": 310.888,
+					"z": 254.400482
+				}
+			},
+			{
+				"rename": "Grav_Crystal_10",
+				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Interactables_Crossroads/VisibleFrom_BH/GravityCrystals/OtherComponentsGroup/Prefab_NOM_GravityCrystal",
+				"position": {
+					"x": 131.6556,
+					"y": -103.816406,
+					"z": -189.906052
+				},
+				"rotation": {
+					"x": 15.2950954,
+					"y": 252.6635,
+					"z": 300.9679
+				}
+			},
+			{
+				"rename": "Grav_Crystal_11",
+				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Interactables_Crossroads/VisibleFrom_BH/GravityCrystals/OtherComponentsGroup/Prefab_NOM_GravityCrystal",
+				"position": {
+					"x": 141.115829,
+					"y": -95.578125,
+					"z": -195.3859
+				},
+				"rotation": {
+					"x": 45.55457,
+					"y": 220.439,
+					"z": 246.537064
+				}
+			},
+			{
+				"rename": "Grav_Crystal_12",
+				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Interactables_Crossroads/VisibleFrom_BH/GravityCrystals/OtherComponentsGroup/Prefab_NOM_GravityCrystal",
+				"position": {
+					"x": 136.891388,
+					"y": -105.441406,
+					"z": -194.198792
+				},
+				"rotation": {
+					"x": 336.348,
+					"y": 330.130524,
+					"z": 348.617065
+				}
+			},
+			{
+				"rename": "Grav_Crystal_13",
+				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Interactables_Crossroads/VisibleFrom_BH/GravityCrystals/OtherComponentsGroup/Prefab_NOM_GravityCrystal",
+				"position": {
+					"x": 142.126,
+					"y": -104.457031,
+					"z": -198.483765
+				},
+				"rotation": {
+					"x": 56.6627541,
+					"y": 306.443848,
+					"z": 10.562953
+				}
+			},
+			{
+				"path": "BrittleHollow_Body/Sector_BH/Props_HEA_CampsiteSleepingBag/Props_HEA_SittingPillow",
+				"position": {
+					"x": 143.116989,
+					"y": -85.07422,
+					"z": -196.552963
+				},
+				"rotation": {
+					"x": 54.2129822,
+					"y": 296.495544,
+					"z": 334.471527
+				}
+			},
+			{
+				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Characters_Crossroads/Traveller_HEA_Riebeck",
+				"position": {
+					"x": 143.246521,
+					"y": -85.4668,
+					"z": -196.947922
+				},
+				"rotation": {
+					"x": 53.2430649,
+					"y": 293.255859,
+					"z": 331.859253
+				}
+			},
+			{
+				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Characters_Crossroads/Signal_Banjo",
+				"position": {
+					"x": 142.6831,
+					"y": -85.1777344,
+					"z": -195.737015
+				},
+				"rotation": {
+					"x": 328.1631,
+					"y": 317.373779,
+					"z": 182.624268
+				}
+			},
+			{
+				"path": "BrittleHollow_Body/Sector_BH/Sector Quantum Pole Path/Fragment QuantumPolePath 2/Interactables_QPP2/Prefab_NOM_GravityCrystal_Cracked",
+				"position": {
+					"x": 142.796722,
+					"y": -87.53516,
+					"z": -194.804626
+				},
+				"rotation": {
+					"x": 90.0,
+					"y": 32.23639
+				}
+			},
+			{
+				"path": "BrittleHollow_Body/Sector_BH/Sector Quantum Pole Path/Fragment QuantumPolePath 2/Interactables_QPP2/Prefab_NOM_GravityCrystal_Cracked",
+				"position": {
+					"x": 104.730812,
+					"y": -97.56836,
+					"z": -152.452026
+				},
+				"rotation": {
+					"x": 14.6092024,
+					"y": 4.473454E-06,
+					"z": -5.00289161E-07
+				}
+			},
+			{
+				"path": "BrittleHollow_Body/Sector_BH/Sector Quantum Pole Path/Fragment QuantumPolePath 2/Interactables_QPP2/Prefab_NOM_GravityCrystal_Cracked",
+				"position": {
+					"x": 105.521645,
+					"y": -91.33789,
+					"z": -154.68866
+				},
+				"rotation": {
+					"x": 90.0,
+					"y": 50.2289162
+				}
+			},
+			{
+				"path": "BrittleHollow_Body/Sector_BH/Sector Quantum Pole Path/Fragment QuantumPolePath 2/Interactables_QPP2/Prefab_NOM_GravityCrystal_Cracked",
+				"position": {
+					"x": 100.291405,
+					"y": -92.25586,
+					"z": -156.9526
+				},
+				"rotation": {
+					"x": 340.4031,
+					"y": 187.223755,
+					"z": 143.230469
+				}
+			}
+		]
+	},
+	"ReferenceFrame": {},
+	"ShipLog": {},
+	"ShockEffect": {}
+	
+}

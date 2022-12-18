@@ -11,22 +11,22 @@
 				"rename": "Center_Barrel",
 				"path": "TimberHearth_Body/Sector_TH/Sector_RadioTower/RadioTower_DLC/Props_RadioTower/OtherComponentsGroup/Props_Grove/Props_HEA_BarrelTall",
 				"position": {
-					"x": -10.1757326,
-					"y": -15.1047,
-					"z": 180.927765
+					"x": -10.1751757,
+					"y": -15.1054688,
+					"z": 180.92778
 				},
 				"rotation": {
 					"x": 90.0,
-					"y": -3.54225585E-06
+					"y": 4.361317E-06
 				},
 				"scale": 7.0
 			},
 			{
 				"path": "DB_PioneerDimension_Body/Sector_PioneerDimension/Interactables_PioneerDimension/Pioneer_Characters/Traveller_HEA_Feldspar",
 				"position": {
-					"x": 4.445449,
-					"y": -21.9639,
-					"z": 187.085892
+					"x": 4.44477749,
+					"y": -21.9648438,
+					"z": 187.0858
 				},
 				"rotation": {
 					"x": 323.372,
@@ -37,53 +37,68 @@
 			{
 				"path": "DB_PioneerDimension_Body/Sector_PioneerDimension/Interactables_PioneerDimension/Pioneer_Characters/Signal_Harmonica",
 				"position": {
-					"x": 4.445449,
-					"y": -21.9639,
-					"z": 187.085892
+					"x": 4.44477749,
+					"y": -21.9648438,
+					"z": 187.0858
 				},
 				"rotation": {}
 			},
 			{
 				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Characters_Crossroads/Traveller_HEA_Riebeck",
 				"position": {
-					"x": 0.8230513,
-					"y": -24.8915,
-					"z": 185.8911
+					"x": 8.381132,
+					"y": -20.7929688,
+					"z": 185.790878
 				},
 				"rotation": {
-					"x": 311.063721,
-					"y": 279.0904,
-					"z": 258.553925
+					"x": 334.6309,
+					"y": 281.133972,
+					"z": 258.5539
 				}
+			},
+			{
+				"rename": "Christmas_Tree",
+				"path": "QuantumMoon_Body/Sector_QuantumMoon/State_TH/Interactables_THState/Crater_Surface/Surface_AlpineTrees_Single/QAlpine_Tree_.25 (1)/Prefab_TH_Alpine",
+				"position": {
+					"x": -7.968107,
+					"y": -7.419922,
+					"z": 185.208038
+				},
+				"rotation": {
+					"x": 16.0754013,
+					"y": 88.9094,
+					"z": 92.1217
+				},
+				"scale": 1.5
 			},
 			{
 				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Characters_Crossroads/Signal_Banjo",
 				"position": {
-					"x": 0.8230818,
-					"y": -24.8915,
-					"z": 184.891541
+					"x": 8.381208,
+					"y": -20.7929688,
+					"z": 187.291412
 				},
 				"rotation": {}
 			},
 			{
 				"path": "Moon_Body/Sector_THM/Characters_THM/Villager_HEA_Esker/Villager_HEA_Esker_ANIM_Rocking",
 				"position": {
-					"x": -2.52148366,
-					"y": -23.308136,
-					"z": 185.682327
+					"x": -2.521743,
+					"y": -23.3085938,
+					"z": 185.682617
 				},
 				"rotation": {
 					"x": 296.0581,
-					"y": 284.301941,
-					"z": 253.170319
+					"y": 284.302,
+					"z": 253.170258
 				}
 			},
 			{
 				"path": "Moon_Body/Sector_THM/Characters_THM/Villager_HEA_Esker/Signal_Whistling",
 				"position": {
-					"x": -2.63016438,
-					"y": -23.378479,
-					"z": 186.165268
+					"x": -2.630706,
+					"y": -23.3789063,
+					"z": 186.164841
 				},
 				"rotation": {
 					"x": 306.07782,
@@ -94,58 +109,76 @@
 			{
 				"path": "CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Interactables_Lakebed/Traveller_HEA_Chert/Traveller_HEA_Chert_ANIM_Chatter_Chipper",
 				"position": {
-					"x": 1.359779,
-					"y": -20.91367,
-					"z": 185.98
+					"x": 1.35934412,
+					"y": -20.9140625,
+					"z": 185.979965
 				},
 				"rotation": {
-					"x": 299.5037,
+					"x": 299.503662,
 					"y": 282.136475,
-					"z": 256.8017
+					"z": 256.801758
 				}
 			},
 			{
 				"path": "CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Volumes_Lakebed/Signal_Drums",
 				"position": {
-					"x": 1.971107,
-					"y": -21.7157,
-					"z": 185.882172
-				},
-				"rotation": {
-					"x": 305.586975,
-					"y": 280.052765,
-					"z": 258.636719
-				}
-			},
-			{
-				"path": "CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Volumes_Lakebed/Signal_Drums",
-				"position": {
-					"x": 3.774497,
-					"y": -21.9059238,
-					"z": 186.47319
+					"x": 3.77462673,
+					"y": -21.90625,
+					"z": 186.473587
 				},
 				"rotation": {
 					"x": 288.420166,
-					"y": 337.318024,
-					"z": 123.272705
+					"y": 337.318,
+					"z": 123.27272
 				}
 			},
 			{
 				"path": "GabbroIsland_Body/Sector_GabbroIsland/Interactables_GabbroIsland/Traveller_HEA_Gabbro",
 				"position": {
-					"x": 9.032103,
-					"y": -21.8006268,
-					"z": 185.659134
+					"x": 9.032545,
+					"y": -21.8007813,
+					"z": 185.659546
 				},
 				"rotation": {
-					"x": 320.5242,
+					"x": 320.52417,
 					"y": 278.207947,
 					"z": 261.3781
 				}
+			},
+			{
+				"path": "CaveTwin_Body/Sector_CaveTwin/Geometry_CaveTwin/OtherComponentsGroup/Prefab_HEA_ChertShip",
+				"position": {
+					"x": 33.8095245,
+					"y": 78.29883,
+					"z": 242.81424
+				},
+				"rotation": {
+					"x": 80.99431,
+					"y": 19.8350887,
+					"z": 22.1955814
+				}
+			},
+			{
+				"rename": "GabbroShip",
+				"path": "GabbroShip_Body",
+				"position": {
+					"x": 33.8095245,
+					"y": 78.29883,
+					"z": 242.81424
+				},
+				"rotation": {
+					"x": 80.99431,
+					"y": 19.8350887,
+					"z": 22.1955814
+				}
+				
 			}
 		]
 	},
 	"ReferenceFrame": {},
 	"ShipLog": {},
-	"ShockEffect": {}
+	"ShockEffect": {},
+	"Atmosphere": {
+		"hasSnow": true
+	}
 }

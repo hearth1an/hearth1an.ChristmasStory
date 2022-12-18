@@ -1,0 +1,50 @@
+{
+	"$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
+	"name": "Ship",
+	"Base": {
+		"gravityFallOff": "linear"
+	},
+	"Orbit": {},
+	"Props": {
+		"details": [
+			{
+				"rename": "Feldspar_Ship",
+				"path": "DB_PioneerDimension_Body/Sector_PioneerDimension/Interactables_PioneerDimension/Pioneer_Characters/Traveller_HEA_Feldspar",
+				"position": {
+					"x": -2.4309,
+					"y": 0.4255
+				},
+				"rotation": {
+					"y": 90.0
+				}
+			},
+			{
+				"rename": "Riebeck_Ship",
+				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Characters_Crossroads/Traveller_HEA_Riebeck",
+				"position": {
+					"x": -2.4309,
+					"y": 0.4255
+				},
+				"rotation": {
+					"y": 90.0
+				},
+				"scale": 1.1
+			},
+			{
+				"rename": "Esker_Ship",
+				"path": "Moon_Body/Sector_THM/Characters_THM/Villager_HEA_Esker/Villager_HEA_Esker_ANIM_Rocking",
+				"position": {
+					"x": 0.7364,
+					"y": 0.5087,
+					"z": 1.589
+				},
+				"rotation": {
+					"y": 250.2217
+				}
+			}
+		]
+	},
+	"ReferenceFrame": {},
+	"ShipLog": {},
+	"ShockEffect": {}
+}
