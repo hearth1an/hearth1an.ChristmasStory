@@ -1,8 +1,15 @@
 {
-  "$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/translation_schema.json",
+    "$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/translation_schema.json",
+    "DialogueDictionary": {
+
+        "Feldspar_Note": "Ok I'm leaving this damned place now. Not sure if I sucseed without my ship tho but at least I'll try, bye."
+    },
+
     "UIDictionary": {
 
-        "TELEPORT_PROMT": "Teleport"
+    },
+    "ShipLogDictionary": {
 
     }
-}
+
+    }

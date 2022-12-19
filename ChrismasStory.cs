@@ -63,53 +63,60 @@ namespace ChrismasStory
 			characterControllers.AddComponent<FeldsparCharacterController>();
 			characterControllers.AddComponent<GabbroCharacterController>();
 			characterControllers.AddComponent<RiebeckCharacterController>();
+			characterControllers.AddComponent<PlayerNPCCharacterController>();
 
-			GeoRemovements();
-			TransformThings();
-			CharactersReplacement();
-
-			TravellersReplacements();
+			
+			
+			
+			
 
 			ModHelper.Events.Unity.FireOnNextUpdate(() =>
 			{
-
+				TransformThings();
+				TravellersReplacements();
+				CharactersReplacement();
+				GeoRemovements();
 			});
-		}
+        }
 
-		public void GeoRemovements()
-		{
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Interactables_TH/Geysers/Geyser_Village").SetActive(false);
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Interactables_TH/Geysers/Geyser_TutorialLand").SetActive(false);
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Geometry_TH/Terrain_TH_Water_v3/Village_Lower_Water").SetActive(false);
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Geometry_LowerVillage/OtherComponentsGroup/ControlledByProxy_Structures/Terrain_TH_VillageGeyser").SetActive(false);
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Lighting_LowerVillage/OtherComponentsGroup/LowerVillage/GeyserPlatform_Low").SetActive(false);
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Lighting_LowerVillage/OtherComponentsGroup/LowerVillage/GeyserPlatform_Mid").SetActive(false);
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Interactables_Village/GeyserBoards_Flags").SetActive(false);
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Lighting_LowerVillage/OtherComponentsGroup/LowerVillage/Props_HEA_Lantern (11)").SetActive(false);
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Volumes_Village/MusicVolume_Village").SetActive(false);
-			SearchUtilities.Find("BrittleHollow_Body/Sector_BH/Sector Quantum Pole Path/Fragment QuantumPolePath 5").GetComponent<FragmentIntegrity>().enabled = false;
+        public void GeoRemovements()
+        {
+            SearchUtilities.Find("TimberHearth_Body/Sector_TH/Interactables_TH/Geysers/Geyser_Village").SetActive(false);
+            SearchUtilities.Find("TimberHearth_Body/Sector_TH/Interactables_TH/Geysers/Geyser_TutorialLand").SetActive(false);
+            SearchUtilities.Find("TimberHearth_Body/Sector_TH/Geometry_TH/Terrain_TH_Water_v3/Village_Lower_Water").SetActive(false);
+            SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Geometry_LowerVillage/OtherComponentsGroup/ControlledByProxy_Structures/Terrain_TH_VillageGeyser").SetActive(false);
+            SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Lighting_LowerVillage/OtherComponentsGroup/LowerVillage/GeyserPlatform_Low").SetActive(false);
+            SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Lighting_LowerVillage/OtherComponentsGroup/LowerVillage/GeyserPlatform_Mid").SetActive(false);
+            SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Interactables_Village/GeyserBoards_Flags").SetActive(false);
+            SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Lighting_LowerVillage/OtherComponentsGroup/LowerVillage/Props_HEA_Lantern (11)").SetActive(false);
+            SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Volumes_Village/MusicVolume_Village").SetActive(false);
+            SearchUtilities.Find("BrittleHollow_Body/Sector_BH/Sector Quantum Pole Path/Fragment QuantumPolePath 5").GetComponent<FragmentIntegrity>().enabled = false;
 
-			SearchUtilities.Find("DB_HubDimension_Body/Sector_HubDimension/Interactables_HubDimension/InnerWarp_ToCluster/Signal_Harmonica").SetActive(false);
+            SearchUtilities.Find("DB_HubDimension_Body/Sector_HubDimension/Interactables_HubDimension/InnerWarp_ToCluster/Signal_Harmonica").SetActive(false);
 
-			SearchUtilities.Find("Feldspar_Ship").SetActive(false);
-			SearchUtilities.Find("Riebeck_Ship").SetActive(false);
-			SearchUtilities.Find("Esker_Ship").SetActive(false);
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Prefab_HEA_ChertShip").SetActive(false);
+            /* SearchUtilities.Find("Feldspar_Ship").SetActive(false);
+            SearchUtilities.Find("Riebeck_Ship").SetActive(false);
+            SearchUtilities.Find("Esker_Ship").SetActive(false);
+            SearchUtilities.Find("Esker_Ship").SetActive(false);
+            SearchUtilities.Find("TimberHearth_Body/Sector_TH/Prefab_HEA_ChertShip").SetActive(false);
+            SearchUtilities.Find("Ship_Body/ShipSector/Ship_Player").SetActive(false);
+			*/
 
-			/* Gabbro ship is not working rn
+            /* Gabbro ship is not working rn
             SearchUtilities.Find("TimberHearth_Body/Sector_TH/GabbroShip").SetActive(false);
             */
-		}
+        }
 
-		public void TransformThings()
+        public void TransformThings()
 		{
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Center_Barrel").transform.localScale = new Vector3(7f, 4.5f, 7f);
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Center_Barrel").AddComponent<OWCapsuleCollider>();
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Christmas_Tree").AddComponent<OWCapsuleCollider>();
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Christmas_Tree").GetComponent<CapsuleCollider>().radius = 2f;
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Prefab_HEA_ChertShip").AddComponent<OWCapsuleCollider>();
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Geometry_GabbroShip").AddComponent<OWCapsuleCollider>();
-			SearchUtilities.Find("CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Interactables_Lakebed/Traveller_HEA_Chert/ConversationZone_Chert").AddComponent<OWCapsuleCollider>();
+			// SearchUtilities.Find("TimberHearth_Body/Sector_TH/Geometry_GabbroShip").AddComponent<OWCapsuleCollider>();
+			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Chert_ANIM_Chatter_Chipper").AddComponent<OWCapsuleCollider>();
+			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Villager_HEA_Esker_ANIM_Rocking").AddComponent<OWCapsuleCollider>();
 
 		}
 		public void CharactersReplacement()
@@ -132,19 +139,11 @@ namespace ChrismasStory
 		public void TravellersReplacements()
 		{
 			// Feldspar
-			SearchUtilities.Find("DB_PioneerDimension_Body/Sector_PioneerDimension/Interactables_PioneerDimension/Pioneer_Characters/Traveller_HEA_Feldspar").SetActive(false);
-			SearchUtilities.Find("DB_PioneerDimension_Body/Sector_PioneerDimension/Interactables_PioneerDimension/Pioneer_Characters/Signal_Harmonica").SetActive(false);
-
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Feldspar/ConversationZone_Feldspar").SetActive(false);
-			SearchUtilities.Find("Ship_Body/ShipSector/Feldspar_Ship/ConversationZone_Feldspar").SetActive(false);
+			SearchUtilities.Find("DB_PioneerDimension_Body/Sector_PioneerDimension/Interactables_PioneerDimension/Pioneer_Characters").SetActive(false);
 
 			// Riebec
 			SearchUtilities.Find("BrittleHollow_Body/Sector_BH/Sector_Crossroads/Characters_Crossroads/Traveller_HEA_Riebeck").SetActive(false);
-			SearchUtilities.Find("BrittleHollow_Body/Sector_BH/Sector_Crossroads/Characters_Crossroads/Signal_Banjo").SetActive(false);
-
-			SearchUtilities.Find("BrittleHollow_Body/Sector_BH/Traveller_HEA_Riebeck/ConversationZone_Riebeck").SetActive(false);
-			SearchUtilities.Find("Ship_Body/ShipSector/Riebeck_Ship/ConversationZone_Riebeck").SetActive(false);
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Riebeck/ConversationZone_Riebec").SetActive(false);
+			SearchUtilities.Find("BrittleHollow_Body/Sector_BH/Sector_Crossroads/Characters_Crossroads/Signal_Banjo").SetActive(false);				
 
 			// Esker
 			SearchUtilities.Find("Moon_Body/Sector_THM/Characters_THM/Villager_HEA_Esker/ConversationZone_Esker").SetActive(false);
@@ -153,12 +152,9 @@ namespace ChrismasStory
 			SearchUtilities.Find("CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Interactables_Lakebed/Traveller_HEA_Chert/ConversationZone_Chert").SetActive(false);
 
 			// Gabbro
-			SearchUtilities.Find("GabbroIsland_Body/Sector_GabbroIsland/Interactables_GabbroIsland/Traveller_HEA_Gabbro/ConversationZone_Gabbro").SetActive(false);
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Gabbro/ConversationZone_Gabbro").SetActive(false);
+			SearchUtilities.Find("GabbroIsland_Body/Sector_GabbroIsland/Interactables_GabbroIsland/Traveller_HEA_Gabbro/ConversationZone_Gabbro").SetActive(false);		
 
-
-			SearchUtilities.Find("").SetActive(false);
-			SearchUtilities.Find("").SetActive(false);
+			
 
 
 		}
@@ -197,13 +193,7 @@ namespace ChrismasStory
             */
 		}
 
-		public void Optional_Yourself_Start()
-		{
-			/* 
-            Same thing, you can ask yourself if you can go to TH just for fun. > closing eyes > he appears in ship > flight to TH > talk, closing eyes > He appears near the Christmas tree
-
-            */
-		}
+		
 
 		public void Update()
 		{

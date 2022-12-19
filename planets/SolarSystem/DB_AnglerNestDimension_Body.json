@@ -9,24 +9,26 @@
 		"details": [
 			{
 				"path": "DB_PioneerDimension_Body/Sector_PioneerDimension/Interactables_PioneerDimension/Pioneer_Characters/Traveller_HEA_Feldspar",
+				"removeChildren": [ "ConversationZone_Feldspar" ],
 				"position": {
-					"x": -29.96144,
-					"y": -9.082031,
-					"z": -2.4992795
+					"x": 9.6233,
+					"y": -10.0201,
+					"z": 25.8623
 				},
 				"rotation": {
-					"x": 6.496227,
-					"y": 359.8033,
-					"z": 216.45433
+					"x": 329.3106,
+					"y": 87.8791,
+					"z": 119.8612
 				}
 			},
 			{
 
 				"path": "DB_PioneerDimension_Body/Sector_PioneerDimension/Interactables_PioneerDimension/Pioneer_Characters/Signal_Harmonica",
+				"parentPath": "Sector_AnglerNestDimension/Traveller_HEA_Feldspar",
 				"position": {
-					"x": -29.96144,
-					"y": -9.082031,
-					"z": -2.4992795
+					"x": 0,
+					"y": 0,
+					"z": 0
 				},
 				"rotation": {
 					"x": 0,

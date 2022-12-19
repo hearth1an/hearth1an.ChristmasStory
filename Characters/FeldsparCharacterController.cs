@@ -17,7 +17,9 @@ namespace ChrismasStory.Characters
 		public void Start()
 		{
 			originalCharacter = SearchUtilities.Find("DB_PioneerDimension_Body/Sector_PioneerDimension/Interactables_PioneerDimension/Pioneer_Characters/Traveller_HEA_Feldspar");
-			shipCharacter = SearchUtilities.Find("Ship_Body/ShipSector/Ship_Feldspar");
+            shipCharacter = SearchUtilities.Find("Ship_Body/ShipSector/Ship_Feldspar");
+			treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Feldspar");
+
 
 			ChangeState(STATE.ORIGINAL);
 		}

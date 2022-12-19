@@ -134,7 +134,7 @@
 				}
 			},
 			{
-				"path": "BrittleHollow_Body/Sector_BH/Props_HEA_CampsiteSleepingBag/Props_HEA_SittingPillow",
+				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Props_Crossroads/OtherComponentsGroup/Reibeck_Camp/Props_HEA_CampsiteSleepingBag/Props_HEA_SittingPillow",
 				"position": {
 					"x": 143.116989,
 					"y": -85.07422,
@@ -148,6 +148,7 @@
 			},
 			{
 				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Characters_Crossroads/Traveller_HEA_Riebeck",
+				"removeChildren": [ "ConversationZone_Riebeck" ],
 				"position": {
 					"x": 143.246521,
 					"y": -85.4668,
@@ -161,6 +162,7 @@
 			},
 			{
 				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Characters_Crossroads/Signal_Banjo",
+				"parentPath": "Sector_BH/Traveller_HEA_Riebeck",
 				"position": {
 					"x": 142.6831,
 					"y": -85.1777344,

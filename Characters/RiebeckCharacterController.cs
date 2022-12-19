@@ -17,9 +17,10 @@ namespace ChrismasStory.Characters
 		public void Start()
 		{
 			originalCharacter = SearchUtilities.Find("BrittleHollow_Body/Sector_BH/Sector_Crossroads/Characters_Crossroads/Traveller_HEA_Riebeck");
-			shipCharacter = SearchUtilities.Find("Ship_Body/ShipSector/Ship_Riebeck");
+            shipCharacter = SearchUtilities.Find("Ship_Body/ShipSector/Ship_Riebeck");
+			treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Riebeck");
 
-			ChangeState(STATE.ORIGINAL);
+            ChangeState(STATE.ORIGINAL);
 		}
 	}
 }

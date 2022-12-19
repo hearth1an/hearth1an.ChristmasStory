@@ -16,7 +16,9 @@ namespace ChrismasStory.Characters
 		public void Start()
 		{
 			originalCharacter = SearchUtilities.Find("Moon_Body/Sector_THM/Characters_THM/Villager_HEA_Esker/Villager_HEA_Esker_ANIM_Rocking");
-			shipCharacter = SearchUtilities.Find("Ship_Body/ShipSector/Ship_Esker");
+            shipCharacter = SearchUtilities.Find("Ship_Body/ShipSector/Ship_Esker");
+			treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Villager_HEA_Esker_ANIM_Rocking");
+
 
 			ChangeState(STATE.ORIGINAL);
 		}

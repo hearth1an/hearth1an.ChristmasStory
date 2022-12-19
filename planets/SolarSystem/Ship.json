@@ -4,8 +4,26 @@
 	"Props": {
 		"details": [
 			{
+				"path": "TimeLoopRing_Body/Characters_TimeLoopRing/NPC_Player",
+				"rename": "Ship_Player",
+				"removeChildren": [ "ConversationZone_NPC_Player", "Traveller_Mesh_v01:Props_HEA_Jetpack", "Props_HEA_Lantern" ],
+				"position": {
+					"x": 1.4669,
+					"y": 0.806,
+					"z": -0.9171
+				},
+				"rotation": {
+					"x": 7.8186,
+					"y": 338.0339,
+					"z": 0
+				},
+				"scale": 1,
+				"keepLoaded": true
+			},
+			{
 				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Characters_Crossroads/Traveller_HEA_Riebeck",
 				"rename": "Ship_Riebeck",
+				"removeChildren": [ "ConversationZone_Riebeck" ],
 				"position": {
 					"x": -2.4309,
 					"y": 0.4255,
@@ -30,37 +48,6 @@
 				"rotation": {
 					"x": 0,
 					"y": 90,
-					"z": 0
-				},
-				"scale": 1
-			},
-			{
-				"path": "CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Interactables_Lakebed/Traveller_HEA_Chert",
-				"rename": "Ship_Chert",
-				"position": {
-					"x": 1.7095,
-					"y": 1.5492,
-					"z": -0.7815
-				},
-				"rotation": {
-					"x": 358.6817,
-					"y": 302.5814,
-					"z": 0
-				},
-				"scale": 1.1,
-				"keepLoaded": true
-			},
-			{
-				"path": "CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Volumes_Lakebed/Signal_Drums",
-				"parentPath": "ShipSector/Ship_Chert",
-				"position": {
-					"x": 1.7095,
-					"y": 1.5492,
-					"z": -0.7815
-				},
-				"rotation": {
-					"x": 358.6817,
-					"y": 302.5814,
 					"z": 0
 				},
 				"scale": 1
@@ -97,38 +84,8 @@
 				"scale": 1
 			},
 			{
-				"path": "GabbroIsland_Body/Sector_GabbroIsland/Interactables_GabbroIsland/Traveller_HEA_Gabbro/Traveller_HEA_Gabbro_ANIM_IdleFlute",
-				"rename": "Ship_Gabbro",
-				"position": {
-					"x": -2.2199,
-					"y": 0.7687,
-					"z": -1.7128
-				},
-				"rotation": {
-					"x": 60.0332,
-					"y": 70.7476,
-					"z": 0
-				},
-				"scale": 1.1,
-				"keepLoaded": true
-			},
-			{
-				"path": "GabbroIsland_Body/Sector_GabbroIsland/Interactables_GabbroIsland/Signal_Flute",
-				"parentPath": "ShipSector/Ship_Gabbro",
-				"position": {
-					"x": -2.2199,
-					"y": 0.7687,
-					"z": -1.7128
-				},
-				"rotation": {
-					"x": 60.0332,
-					"y": 70.7476,
-					"z": 0
-				},
-				"scale": 1
-			},
-			{
 				"path": "DB_PioneerDimension_Body/Sector_PioneerDimension/Interactables_PioneerDimension/Pioneer_Characters/Traveller_HEA_Feldspar",
+				"removeChildren": [ "ConversationZone_Feldspar" ],
 				"rename": "Ship_Feldspar",
 				"position": {
 					"x": 0.8201,

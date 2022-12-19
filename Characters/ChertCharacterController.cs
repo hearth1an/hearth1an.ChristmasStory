@@ -14,7 +14,9 @@ namespace ChrismasStory.Characters
 		public void Start()
 		{
 			originalCharacter = SearchUtilities.Find("CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Interactables_Lakebed/Traveller_HEA_Chert");
-			shipCharacter = SearchUtilities.Find("Ship_Body/ShipSector/Ship_Chert");
+			//shipCharacter = SearchUtilities.Find("Ship_Body/ShipSector/Ship_Chert");
+			treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Chert_ANIM_Chatter_Chipper");
+
 
 			ChangeState(STATE.ORIGINAL);
 		}
