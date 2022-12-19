@@ -1,4 +1,4 @@
-﻿using ChrismasStory.Characters;
+﻿using ChrismasStory.Characters.Travelers;
 using ChrismasStory.Components;
 using ChrismasStory.Utilities.ModAPIs;
 using NewHorizons.Utility;
@@ -9,10 +9,10 @@ using UnityEngine;
 
 namespace ChrismasStory
 {
-	public class ChrismasStory : ModBehaviour
+    public class ChristmasStory : ModBehaviour
 	{
 		public static INewHorizons newHorizonsAPI;
-		public static ChrismasStory Instance;
+		public static ChristmasStory Instance;
 
 		private void Awake()
 		{
@@ -23,7 +23,7 @@ namespace ChrismasStory
 			var newHorizonsAPI = ModHelper.Interaction.GetModApi<INewHorizons>("xen.NewHorizons");
 			newHorizonsAPI.LoadConfigs(this);
 			newHorizonsAPI.GetStarSystemLoadedEvent().AddListener(OnStarSystemLoaded);
-			ModHelper.Console.WriteLine($"{nameof(ChrismasStory)} is loaded!", MessageType.Success);
+			ModHelper.Console.WriteLine($"{nameof(ChristmasStory)} is loaded!", MessageType.Success);
 		}
 
 		public static void WriteLine(string line) => Instance.ModHelper.Console.WriteLine(line, MessageType.Info);

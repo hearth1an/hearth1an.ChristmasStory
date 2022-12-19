@@ -1,9 +1,9 @@
 {
     "$schema": "https://raw.githubusercontent.com/amazingalek/owml/master/schemas/manifest_schema.json",
-    "filename": "ChrismasStory.dll",
+    "filename": "ChristmasStory.dll",
     "author": "hearth1an",
-    "name": "Chrismas Story",
-    "uniqueName": "hearth1an.ChrismasStory",
+    "name": "Christmas Story",
+    "uniqueName": "hearth1an.ChristmasStory",
     "version": "0.0.2",
     "owmlVersion": "2.3.2",
     "dependencies": [ "xen.NewHorizons" ]
