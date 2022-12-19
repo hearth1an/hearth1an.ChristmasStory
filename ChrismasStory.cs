@@ -1,4 +1,4 @@
-﻿using ChrismasStory.Characters;
+﻿using ChrismasStory.Characters.Travelers;
 using ChrismasStory.Components;
 using ChrismasStory.Utilities.ModAPIs;
 using NewHorizons.Utility;
@@ -9,7 +9,7 @@ using UnityEngine;
 
 namespace ChrismasStory
 {
-	public class ChrismasStory : ModBehaviour
+    public class ChrismasStory : ModBehaviour
 	{
 		public static INewHorizons newHorizonsAPI;
 		public static ChrismasStory Instance;
