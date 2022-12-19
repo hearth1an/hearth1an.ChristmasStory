@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
-	"name": "Hub Dimension",
+	"name": "Pioneer Dimension",
 	"Base": {
 		"gravityFallOff": "linear"
 	},
@@ -19,6 +19,32 @@
 					"y": 354.579224,
 					"z": 232.379761
 				}
+			},
+			{
+				"path": "DarkBramble_Body/Sector_DB/Interactables_DB/JellyfishNote",
+				"removeChildren": [ "InteractVolume" ],
+				"position": {
+					"x": 20.3621,
+					"y": -14.8843,
+					"z": -0.4492
+				},
+				"rotation": {
+					"x": 314.4013,
+					"y": 253.0724,
+					"z": 327.3363
+				}
+			}
+		],
+		"dialogue": [
+			{
+				"position": {
+					"x": 20.3621,
+					"y": -14.8843,
+					"z": -0.4492
+				},
+				"xmlFile": "planets/Dialogue/Feldspar_Note.xml",
+				"lookAtRadius": 3,
+				"radius": 1
 			}
 		]
 	},
