@@ -31,7 +31,7 @@ namespace ChrismasStory.Characters.Travelers
 
 		protected override void Dialogue_OnStartConversation()
 		{
-			var isShipNear = ShipHandler.IsCharacterNearShip(originalCharacter, 50f);
+			var isShipNear = ShipHandler.IsCharacterNearShip(originalCharacter, 50f); // we can adjust this distance
 
 			// We can use this persistent condition to change the dialogue Riebeck says
 			PlayerData.SetPersistentCondition(ShipNearRiebeck, isShipNear);
