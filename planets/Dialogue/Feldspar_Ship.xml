@@ -1,0 +1,44 @@
+<DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
+	<NameField>Feldspar</NameField>
+
+	<DialogueNode>
+		<Name>Start</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>(FELDSPAR_SHIP_1) Nice ship, captain! I'd ask Slate to make the similar one for me! Let me know when we will land near the Village, ok?</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>(FELDSPAR_SHIP_2) We are at home already, welcome back!</Text>
+				<DialogueTarget>2</DialogueTarget>
+				<RequiredCondition>FELDSPAR_SHIP_DONE</RequiredCondition>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>(FELDSPAR_SHIP_3) Sure! I'll let you know.</Text>
+				<ConditionToSet>FELDSPAR_SHIP_MET</ConditionToSet>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>2</Name>		
+				<Dialogue>
+					<Page>(FELDSPAR_SHIP_4) Yay! Thanks for the ride. Let's go!</Page>
+				</Dialogue>
+			</DialogueNode>
+
+
+	<DialogueNode>
+		<Name>3</Name>
+		<EntryCondition>FELDSPAR_SHIP_MET</EntryCondition>
+		<Dialogue>
+			<Page>(FELDSPAR_SHIP_5) Are we at home, Hatchling?</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>(FELDSPAR_SHIP_6) Nope, not yet. I'll let you know.</Text>
+				<ConditionToSet>FELDSPAR_SHIP_DONE</ConditionToSet>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+	</DialogueTree>

@@ -26,15 +26,28 @@
 				"path": "DB_PioneerDimension_Body/Sector_PioneerDimension/Interactables_PioneerDimension/Pioneer_Characters/Signal_Harmonica",
 				"parentPath": "Sector_AnglerNestDimension/Traveller_HEA_Feldspar",
 				"position": {
-					"x": 0,
-					"y": 0,
-					"z": 0
+					"x": 0.01,
+					"y": 0.01,
+					"z": 0.01
 				},
 				"rotation": {
 					"x": 0,
 					"y": 0,
 					"z": 0
 				}
+			}
+		],
+		"dialogue": [
+			{
+				"position": {
+					"x": 0.01,
+					"y": 0.01,
+					"z": 0.01
+				},
+				"xmlFile": "planets/Dialogue/Feldspar_Start.xml",
+				"parentPath": "Sector_AnglerNestDimension/Traveller_HEA_Feldspar",
+				"lookAtRadius": 3,
+				"radius": 1
 			}
 		]
 	},

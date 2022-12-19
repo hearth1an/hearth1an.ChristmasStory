@@ -115,6 +115,19 @@
 				},
 				"scale": 1
 			}
+		],
+		"dialogue": [
+			{
+				"position": {
+					"x": 0.8201,
+					"y": 1.1342,
+					"z": -2.9346
+				},
+				"xmlFile": "planets/Dialogue/Feldspar_Ship.xml",
+				"parentPath": "ShipSector/Ship_Feldspar",
+				"lookAtRadius": 3,
+				"radius": 1
+			}
 		]
 	}
 }

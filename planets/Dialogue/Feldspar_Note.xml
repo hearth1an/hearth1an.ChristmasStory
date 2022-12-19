@@ -7,5 +7,6 @@
     <Dialogue>
       <Page>Feldspar_Note</Page>
     </Dialogue>
+    <SetPersistentCondition>FELDSPAR_START_ENTRY</SetPersistentCondition>
   </DialogueNode>
 </DialogueTree>
