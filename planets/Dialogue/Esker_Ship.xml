@@ -1,0 +1,49 @@
+<DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
+	<NameField>Esker</NameField>
+
+	<DialogueNode>
+		<Name>Start</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>(ESKER_SHIP_1) I don't remember when I was in spaceship last time...</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>(ESKER_SHIP_2) Alright, we here! Let's go celebrate!</Text>
+				<DialogueTarget>2</DialogueTarget>
+				<RequiredCondition>ESKER_SHIP_DONE</RequiredCondition>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>(ESKER_SHIP_3) I'll let you know when we land near the Village.</Text>
+				<ConditionToSet>ESKER_SHIP_MET</ConditionToSet>				
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>2</Name>	
+		<Dialogue>
+		<Page>(ESKER_SHIP_4) Let's go! Merry Christmas!</Page>
+		</Dialogue>
+		<SetPersistentCondition>ESKER_SHIP_DONE</SetPersistentCondition>	
+	</DialogueNode>
+
+
+	<DialogueNode>
+		<Name>3</Name>
+		<EntryCondition>ESKER_SHIP_MET</EntryCondition>
+		<Dialogue>
+			<Page>(ESKER_SHIP_5) So, the flight is over?</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>(ESKER_SHIP_6) No, but I'll tell you when.</Text>				
+			</DialogueOption>
+			<DialogueOption>
+				<Text>(ESKER_SHIP_2) Alright, we here! Let's go celebrate!</Text>
+				<DialogueTarget>2</DialogueTarget>
+				<RequiredCondition>ESKER_SHIP_DONE</RequiredCondition>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+	</DialogueTree>

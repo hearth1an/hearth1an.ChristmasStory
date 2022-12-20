@@ -1,0 +1,41 @@
+<DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
+	<NameField>Esker</NameField>
+
+	<DialogueNode>
+		<Name>Start</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>(ESKER_TREE_1) Merry Christmas! You're good pilot by the way.</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>(ESKER_TREE_2) Thanks! I know I'm pretty good at it.</Text>				
+				<DialogueTarget>2</DialogueTarget>				
+			</DialogueOption>
+			<DialogueOption>
+				<Text>(ESKER_TREE_3) Do you know anything about Jumbo?</Text>				
+				<DialogueTarget>3</DialogueTarget>				
+			</DialogueOption>						
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+	     <Name>2</Name>
+		 <Dialogue>
+			<Page>(ESKER_TREE_4) Yes, you're also very modest.</Page>
+		 </Dialogue>		
+	</DialogueNode>	
+
+	<DialogueNode>
+	     <Name>3</Name>
+		 <Dialogue>
+			<Page>(ESKER_TREE_5) WHO?.</Page>
+		 </Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>(ESKER_TREE_6) Actually... nevermind...</Text>
+			</DialogueOption>						
+		</DialogueOptionsList>
+	</DialogueNode>	
+	
+</DialogueTree>
