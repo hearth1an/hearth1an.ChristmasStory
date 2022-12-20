@@ -119,9 +119,10 @@ namespace ChrismasStory
 
             SearchUtilities.Find("Ship_Body/ShipSector/Ship_Feldspar/ConversationZone").GetComponent<InteractReceiver>()._usableInShip = true;
 
-			/* Not ready yet
+			
             SearchUtilities.Find("Ship_Body/ShipSector/Ship_Esker/ConversationZone").GetComponent<InteractReceiver>()._usableInShip = true;
             SearchUtilities.Find("Ship_Body/ShipSector/Ship_RiebecConversationZone").GetComponent<InteractReceiver>()._usableInShip = true;
+			/*
 			SearchUtilities.Find("Ship_Body/ShipSector/Ship_Player/ConversationZone").GetComponent<InteractReceiver>()._usableInShip = true;
 			*/
 
