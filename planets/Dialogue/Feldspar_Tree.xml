@@ -1,109 +1,67 @@
 <DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
-  <NameField>Slate</NameField>
+	<NameField>Feldspar</NameField>
 
-  <DialogueNode>
-    <Name>Start</Name>
-    <EntryCondition>DEFAULT</EntryCondition>
-    <Dialogue>
-      <Page>Oh, why are you still here? Did you get the <![CDATA[<color=orange>new launch codes</color>]]> yet?</Page>
-    </Dialogue>
+	<DialogueNode>
+		<Name>Start</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>(FELDSPAR_TREE_1) Merry Christmas! I was missing the Village to be honest.</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>(FELDSPAR_TREE_2) Glad you here, Feldpar.</Text>				
+				<DialogueTarget>2</DialogueTarget>				
+			</DialogueOption>			
+		</DialogueOptionsList>
+	</DialogueNode>
 
-    <DialogueOptionsList>
-      <DialogueOption>
-        <Text>Is that the anglerfish from the museum?</Text>
-        <DialogueTarget>3</DialogueTarget>
-      </DialogueOption>
-      <DialogueOption>
-        <Text><![CDATA[<color=orange>Ernesto</color>]]>?! NO!</Text>
-        <DialogueTarget>2</DialogueTarget>
-      </DialogueOption>
-    </DialogueOptionsList>
-  </DialogueNode>
-
-  <DialogueNode>
-    <Name>2</Name>
-    <Dialogue>
-      <Page>Who is <![CDATA[<color=orange>Ernesto</color>]]>?</Page>
-    </Dialogue>
-    <DialogueOptionsList>
-      <DialogueOption>
-        <Text>The anglerfish from the museum exhibition. Hornfels named it that.</Text>
-        <DialogueTarget>3</DialogueTarget>
-      </DialogueOption>
-    </DialogueOptionsList>
-  </DialogueNode>
+	<DialogueNode>
+	     <Name>2</Name>
+		 <Dialogue>
+			<Page>(FELDSPAR_TREE_4) Yeah. Me too. Space can wait for sure.</Page>
+		 </Dialogue>		
+	</DialogueNode>
 
 
-  <DialogueNode>
-    <Name>3</Name>
-    <Dialogue>
-      <Page>Okay, you know what? Yes, it is the anglerfish from the museum. I'm fed up with marshmallow. I can't take it anymore.</Page>
-    </Dialogue>
-    <DialogueOptionsList>
-      <DialogueOption>
-        <Text>So you decided to eat <![CDATA[<color=orange>Ernesto</color>]]>?! Hornfels said <![CDATA[<color=orange>Ernesto</color>]]> is a friend!</Text>
-        <DialogueTarget>4</DialogueTarget>
-      </DialogueOption>
-    </DialogueOptionsList>
-  </DialogueNode>
+	<DialogueNode>
+		<Name>Start_PlayerNPC</Name>
+		<EntryCondition>PLAYERNPC_DONE</EntryCondition>
+		<Dialogue>
+			<Page>(FELDSPAR_TREE_5) Who's that? That guy looks EXACTLY like you.</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>(FELDSPAR_TREE_6) Well, this is literally me. From past.</Text>
+				<DialogueTarget>3</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>(FELDSPAR_TREE_7) It's my brother.</Text>
+				<DialogueTarget>4</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>(FELDSPAR_TREE_8) Ummm I don't know actually.</Text>
+				<DialogueTarget>5</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
 
-  <DialogueNode>
-    <Name>4</Name>
-    <Dialogue>
-      <Page>Anglerfish is still a fish. Whatever he calls it, is almost done cooking.<![CDATA[<Pause=1>]]>.<![CDATA[<Pause=1>]]>.<![CDATA[<Pause=1>]]> or not. I think it will be prepared in like <![CDATA[<i>30 minutes</i>]]>. Why don't you fly near <![CDATA[<color=orange>Dark Bramble</color>]]> and just get a new one for Hornfels?</Page>
-    </Dialogue>
-    <DialogueOptionsList>
-      <DialogueOption>
-        <Text>I'll do that! <![CDATA[<i>(actually not)</i>]]></Text>
-        <DialogueTarget>END</DialogueTarget>
-      </DialogueOption>
-      <DialogueOption>
-        <Text>That's disgusting.</Text>
-        <DialogueTarget>END2</DialogueTarget>
-      </DialogueOption>
-      <DialogueOption>
-        <Text>Nah, enjoy your meal then.</Text>
-        <DialogueTarget>END3</DialogueTarget>
-      </DialogueOption>
-    </DialogueOptionsList>
-  </DialogueNode>
-
-  <DialogueNode>
-    <Name>END</Name>
-    <Dialogue>
-      <Page>You'll do that for me? Thanks! Just don't tell anyone about <![CDATA[<color=orange>Ernesto</color>]]> alright?</Page>
-    </Dialogue>
-
-    <RevealFacts>
-      <FactID>ERNESTO_POOR_ERNESTO</FactID>
-      <FactID>ERNESTO_FOUND_RUMOR</FactID>
-    </RevealFacts>
-
-  </DialogueNode>
-
-  <DialogueNode>
-    <Name>END2</Name>
-    <Dialogue>
-      <Page>There is no accounting for tastes.</Page>
-    </Dialogue>
-
-    <RevealFacts>
-      <FactID>ERNESTO_POOR_ERNESTO</FactID>
-      <FactID>ERNESTO_FOUND_RUMOR</FactID>
-    </RevealFacts>
-
-  </DialogueNode>
-
-  <DialogueNode>
-    <Name>END3</Name>
-    <Dialogue>
-      <Page>Thank you! Get back within <![CDATA[<i>30 minutes</i>]]> and I'll give you a bite.</Page>
-    </Dialogue>
-
-    <RevealFacts>
-      <FactID>ERNESTO_POOR_ERNESTO</FactID>
-      <FactID>ERNESTO_FOUND_RUMOR</FactID>
-    </RevealFacts>
-
-  </DialogueNode>
+	<DialogueNode>
+		<Name>3</Name>
+		<Dialogue>
+			<Page>(FELDSPAR_TREE_9) Ha-ha-ha. Very funny. VERY.</Page>
+		</Dialogue>
+	</DialogueNode>
+	<DialogueNode>
+		<Name>4</Name>
+		<Dialogue>
+			<Page>(FELDSPAR_TREE_10) Really? I never saw him. Seems like time works different in Dark Bramble if I missed that.</Page>
+		</Dialogue>
+	</DialogueNode>
+	<DialogueNode>
+		<Name>5</Name>
+		<Dialogue>
+			<Page>(FELDSPAR_TREE_11) Ok! But it's weird.</Page>
+		</Dialogue>
+	</DialogueNode>
+	
 </DialogueTree>

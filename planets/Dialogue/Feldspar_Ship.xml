@@ -15,17 +15,18 @@
 			</DialogueOption>
 			<DialogueOption>
 				<Text>(FELDSPAR_SHIP_3) Sure! I'll let you know.</Text>
-				<ConditionToSet>FELDSPAR_SHIP_MET</ConditionToSet>
+				<ConditionToSet>FELDSPAR_SHIP_MET</ConditionToSet>				
 			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
 
 	<DialogueNode>
-		<Name>2</Name>		
-				<Dialogue>
-					<Page>(FELDSPAR_SHIP_4) Yay! Thanks for the ride. Let's go!</Page>
-				</Dialogue>
-			</DialogueNode>
+		<Name>2</Name>	
+		<Dialogue>
+		<Page>(FELDSPAR_SHIP_4) Yay! Thanks for the ride. Let's go!</Page>
+		</Dialogue>
+		<SetPersistentCondition>FELDSPAR_SHIP_DONE</SetPersistentCondition>	
+	</DialogueNode>
 
 
 	<DialogueNode>
@@ -36,8 +37,12 @@
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(FELDSPAR_SHIP_6) Nope, not yet. I'll let you know.</Text>
-				<ConditionToSet>FELDSPAR_SHIP_DONE</ConditionToSet>
+				<Text>(FELDSPAR_SHIP_6) Nope, not yet. I'll let you know.</Text>				
+			</DialogueOption>
+			<DialogueOption>
+				<Text>(FELDSPAR_SHIP_2) We are at home already, welcome back!</Text>
+				<DialogueTarget>2</DialogueTarget>
+				<RequiredCondition>FELDSPAR_SHIP_DONE</RequiredCondition>
 			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>

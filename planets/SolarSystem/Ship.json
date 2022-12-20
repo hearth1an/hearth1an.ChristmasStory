@@ -126,7 +126,9 @@
 				"xmlFile": "planets/Dialogue/Feldspar_Ship.xml",
 				"parentPath": "ShipSector/Ship_Feldspar",
 				"lookAtRadius": 3,
-				"radius": 1
+				"radius": 2,
+				"remoteTriggerRadius": 2,
+				"blockAfterPersistentCondition": "FELDSPAR_SHIP_DONE"
 			}
 		]
 	}

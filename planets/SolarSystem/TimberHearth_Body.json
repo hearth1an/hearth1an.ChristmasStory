@@ -216,6 +216,20 @@
 				}
 
 			}
+		],
+		"dialogue": [
+			{
+				"position": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"xmlFile": "planets/Dialogue/Feldspar_Tree.xml",
+				"parentPath": "Sector_TH/Traveller_HEA_Feldspar",
+				"lookAtRadius": 3,
+				"radius": 1,
+				"remoteTriggerRadius": 2				
+			}
 		]
 	},
 	"ReferenceFrame": {},
