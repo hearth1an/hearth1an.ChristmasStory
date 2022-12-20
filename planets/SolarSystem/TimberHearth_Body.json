@@ -228,8 +228,33 @@
 				"parentPath": "Sector_TH/Traveller_HEA_Feldspar",
 				"lookAtRadius": 3,
 				"radius": 1,
-				"remoteTriggerRadius": 2				
+				"remoteTriggerRadius": 2
+			},
+			{
+				"position": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"xmlFile": "planets/Dialogue/Riebec_Tree.xml",
+				"parentPath": "Sector_TH/Traveller_HEA_Riebeck",
+				"lookAtRadius": 3,
+				"radius": 1,
+				"remoteTriggerRadius": 2
+			},
+			{
+				"position": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"xmlFile": "planets/Dialogue/Esker_Tree.xml",
+				"parentPath": "Sector_TH/Villager_HEA_Esker_ANIM_Rocking",
+				"lookAtRadius": 3,
+				"radius": 1,
+				"remoteTriggerRadius": 2
 			}
+
 		]
 	},
 	"ReferenceFrame": {},

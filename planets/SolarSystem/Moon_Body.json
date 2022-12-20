@@ -1,0 +1,26 @@
+{
+	"$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
+	"name": "TimberMoon",
+	"Base": {
+		"gravityFallOff": "linear"
+	},
+	"Orbit": {},
+	"Props": {
+		"dialogue": [
+			{
+				"position": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"xmlFile": "planets/Dialogue/Esker_Start.xml",
+				"parentPath": "Sector_THM/Characters_THM/Villager_HEA_Esker",
+				"lookAtRadius": 3,
+				"radius": 1
+
+			}
+		]
+	},
+	"ReferenceFrame": {},
+	"ShipLog": {}
+}

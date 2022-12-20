@@ -126,9 +126,35 @@
 				"xmlFile": "planets/Dialogue/Feldspar_Ship.xml",
 				"parentPath": "ShipSector/Ship_Feldspar",
 				"lookAtRadius": 3,
-				"radius": 2,
+				"radius": 1,
 				"remoteTriggerRadius": 2,
 				"blockAfterPersistentCondition": "FELDSPAR_SHIP_DONE"
+			},
+			{
+				"position": {
+					"x": 0.8201,
+					"y": 1.1342,
+					"z": -2.9346
+				},
+				"xmlFile": "planets/Dialogue/Riebec_Ship.xml",
+				"parentPath": "ShipSector/Ship_Riebec",
+				"lookAtRadius": 3,
+				"radius": 1,
+				"remoteTriggerRadius": 2,
+				"blockAfterPersistentCondition": "RIEBEC_SHIP_DONE"
+			},
+			{
+				"position": {
+					"x": 0.8201,
+					"y": 1.1342,
+					"z": -2.9346
+				},
+				"xmlFile": "planets/Dialogue/Esker_Ship.xml",
+				"parentPath": "ShipSector/Ship_Esker",
+				"lookAtRadius": 3,
+				"radius": 1,
+				"remoteTriggerRadius": 2,
+				"blockAfterPersistentCondition": "ESKER_SHIP_DONE"
 			}
 		]
 	}
