@@ -1,4 +1,5 @@
-﻿using NewHorizons.Utility;
+﻿using ChrismasStory.Components;
+using NewHorizons.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,8 +16,8 @@ namespace ChrismasStory.Characters.Travelers
 
         public override void Start()
         {
-            // dialogue =
-            originalCharacter = SearchUtilities.Find("Moon_Body/Sector_THM/Characters_THM/Villager_HEA_Esker/Villager_HEA_Esker_ANIM_Rocking");
+			dialogue = SearchUtilities.Find("Moon_Body/Sector_THM/Esker_Start_Dialogue").GetComponent<CharacterDialogueTree>();
+            originalCharacter = SearchUtilities.Find("Moon_Body/Sector_THM/Characters_THM/Villager_HEA_Esker");
             shipCharacter = SearchUtilities.Find("Ship_Body/ShipSector/Ship_Esker");
             treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Villager_HEA_Esker_ANIM_Rocking");
 
@@ -27,12 +28,21 @@ namespace ChrismasStory.Characters.Travelers
 
 		protected override void Dialogue_OnStartConversation()
 		{
+			var shipNearEsker = ShipHandler.IsCharacterNearShip(originalCharacter.gameObject, 40f);
+			var shipDestroyed = ShipHandler.HasShipExploded();
+			var shipFarNotDestroyed = !shipNearEsker && !shipDestroyed;
 
+			DialogueConditionManager.SharedInstance.SetConditionState("SHIP_NEAR_ESKER", shipNearEsker);
+			DialogueConditionManager.SharedInstance.SetConditionState("SHIP_FAR_ESKER", shipFarNotDestroyed);
+			DialogueConditionManager.SharedInstance.SetConditionState("SHIP_DESTROYED", shipDestroyed);
 		}
 
 		protected override void Dialogue_OnEndConversation()
 		{
-			ChangeState(STATE.ON_SHIP);
+			if (DialogueConditionManager.SharedInstance.GetConditionState("ESKER_START_DONE"))
+			{
+				ChangeState(STATE.ON_SHIP);
+			}
 		}
 	}
 }

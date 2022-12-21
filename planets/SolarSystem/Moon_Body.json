@@ -13,10 +13,13 @@
 					"y": 0,
 					"z": 0
 				},
+				"isRelativeToParent": true,
 				"xmlFile": "planets/Dialogue/Esker_Start.xml",
 				"parentPath": "Sector_THM/Characters_THM/Villager_HEA_Esker",
+				"pathToAnimController": "Sector_THM/Characters_THM/Villager_HEA_Esker",
 				"lookAtRadius": 3,
-				"radius": 1
+				"radius": 1,
+				"rename": "Esker_Start_Dialogue"
 
 			}
 		]

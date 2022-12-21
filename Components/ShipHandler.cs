@@ -38,6 +38,12 @@ namespace ChrismasStory.Components
 		/// <summary>
 		/// For testing!
 		/// </summary>
-		public static void BlowUpShip() => _instance._shipDamageController.TriggerHullBreach();
+		public static void BlowUpShip()
+		{
+			_instance._shipDamageController.TriggerHullBreach(true);
+			_instance._shipDamageController.TriggerElectricalFailure(true);
+			_instance._shipDamageController.TriggerReactorCritical(true);
+		}
+
 	}
 }

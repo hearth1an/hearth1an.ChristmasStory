@@ -21,7 +21,7 @@ namespace ChrismasStory.Characters
 			// Right in the middle we change the state
 
 			PlayerEffectController.Blink(2);
-			StartCoroutine(ChangeStateCoroutine(2, state));
+			StartCoroutine(ChangeStateCoroutine(1, state));
 		}
 
 		private IEnumerator ChangeStateCoroutine(float wait, STATE state)
