@@ -73,6 +73,11 @@
 				<ConditionToSet>ESKER_START_FAILED</ConditionToSet>
 				<DialogueTarget>8</DialogueTarget>
 			</DialogueOption>
+			<DialogueOption>
+				<RequiredCondition>SHIP_DESTROYED</RequiredCondition>
+				<Text>(ESKER_START_10) Hold on, I need to do something first.</Text>				
+				<DialogueTarget>9</DialogueTarget>
+			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
 
@@ -89,6 +94,14 @@
 		<EntryCondition>ESKER_START_FAILED</EntryCondition>
 		<Dialogue>
 			<Page>(ESKER_START_9) No celebration then? Sad... We can still sit here with campfire, you know..</Page>
+		</Dialogue>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>9</Name>
+		<EntryCondition>ESKER_START_FAILED</EntryCondition>
+		<Dialogue>
+			<Page>(ESKER_START_11) Gotcha! I'll wait then.</Page>
 		</Dialogue>
 	</DialogueNode>
 </DialogueTree>

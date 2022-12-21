@@ -125,9 +125,10 @@
 				},
 				"xmlFile": "planets/Dialogue/Feldspar_Ship.xml",
 				"parentPath": "ShipSector/Ship_Feldspar",
+				"isRelativeToParent": true,
 				"lookAtRadius": 3,
 				"radius": 1,
-				"remoteTriggerRadius": 2,
+				"remoteTriggerRadius": 1,
 				"blockAfterPersistentCondition": "FELDSPAR_SHIP_DONE"
 			},
 			{
@@ -138,9 +139,10 @@
 				},
 				"xmlFile": "planets/Dialogue/Riebec_Ship.xml",
 				"parentPath": "ShipSector/Ship_Riebec",
+				"isRelativeToParent": true,
 				"lookAtRadius": 3,
 				"radius": 1,
-				"remoteTriggerRadius": 2,
+				"remoteTriggerRadius": 1,
 				"blockAfterPersistentCondition": "RIEBEC_SHIP_DONE"
 			},
 			{
@@ -151,9 +153,10 @@
 				},
 				"xmlFile": "planets/Dialogue/Esker_Ship.xml",
 				"parentPath": "ShipSector/Ship_Esker",
+				"isRelativeToParent": true,
 				"lookAtRadius": 3,
 				"radius": 1,
-				"remoteTriggerRadius": 2,
+				"remoteTriggerRadius": 1,
 				"blockAfterPersistentCondition": "ESKER_SHIP_DONE"
 			}
 		]

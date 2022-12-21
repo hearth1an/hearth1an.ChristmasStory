@@ -132,7 +132,8 @@ namespace ChrismasStory
 
 
 				SearchUtilities.Find("Ship_Body/ShipSector/Ship_Esker/ConversationZone").GetComponent<InteractReceiver>()._usableInShip = true;
-				SearchUtilities.Find("Ship_Body/ShipSector/Ship_RiebecConversationZone").GetComponent<InteractReceiver>()._usableInShip = true;
+				SearchUtilities.Find("Ship_Body/ShipSector/Ship_Esker/ConversationZone").GetComponent<InteractReceiver>().transform.localPosition = new Vector3(0, 1f, 0);
+				SearchUtilities.Find("Ship_Body/ShipSector/Ship_Riebec/ConversationZone").GetComponent<InteractReceiver>()._usableInShip = true;
 				/*
 				SearchUtilities.Find("Ship_Body/ShipSector/Ship_Player/ConversationZone").GetComponent<InteractReceiver>()._usableInShip = true;
 				*/
