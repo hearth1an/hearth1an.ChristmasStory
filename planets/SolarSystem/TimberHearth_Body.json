@@ -258,7 +258,8 @@
 		],
 		"remotes": [
 			{
-				"id": "",
+				"id": "Hal's stone",
+				"decalPath": "planets/Content/writing.png",
 				"stones": [
 					{
 
@@ -273,7 +274,7 @@
 							"z": 265.6711
 						},
 						"rename": "Stone"
-					},
+					}
 				]
 			}
 		]
