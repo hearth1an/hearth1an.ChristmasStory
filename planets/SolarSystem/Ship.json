@@ -156,8 +156,7 @@
 				"isRelativeToParent": true,
 				"lookAtRadius": 3,
 				"radius": 1,
-				"remoteTriggerRadius": 1,
-				"blockAfterPersistentCondition": "ESKER_SHIP_DONE"
+				"remoteTriggerRadius": 1				
 			}
 		]
 	}

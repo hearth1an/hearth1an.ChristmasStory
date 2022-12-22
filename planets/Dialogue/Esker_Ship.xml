@@ -9,9 +9,10 @@
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
+				<RequiredCondition>SHIP_NEAR_VILLAGE</RequiredCondition>
 				<Text>(ESKER_SHIP_2) Alright, we here! Let's go celebrate!</Text>
 				<DialogueTarget>2</DialogueTarget>
-				<RequiredCondition>ESKER_SHIP_DONE</RequiredCondition>
+				<ConditionToSet>ESKER_SHIP_DONE</ConditionToSet>
 			</DialogueOption>
 			<DialogueOption>
 				<Text>(ESKER_SHIP_3) I'll let you know when we land near the Village.</Text>
@@ -24,8 +25,7 @@
 		<Name>2</Name>	
 		<Dialogue>
 		<Page>(ESKER_SHIP_4) Let's go! Merry Christmas!</Page>
-		</Dialogue>
-		<SetPersistentCondition>ESKER_SHIP_DONE</SetPersistentCondition>	
+		</Dialogue>			
 	</DialogueNode>
 
 
@@ -40,9 +40,10 @@
 				<Text>(ESKER_SHIP_6) No, but I'll tell you when.</Text>				
 			</DialogueOption>
 			<DialogueOption>
-				<Text>(ESKER_SHIP_2) Alright, we here! Let's go celebrate!</Text>
+				<RequiredCondition>SHIP_NEAR_VILLAGE</RequiredCondition>
+				<Text>(ESKER_SHIP_7) Yes, we here! Let's go celebrate!</Text>
 				<DialogueTarget>2</DialogueTarget>
-				<RequiredCondition>ESKER_SHIP_DONE</RequiredCondition>
+				<ConditionToSet>ESKER_SHIP_DONE</ConditionToSet>
 			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
