@@ -25,7 +25,7 @@ namespace ChrismasStory.Characters.Travelers
 
             base.Start();
 
-           ChangeState(STATE.NONE);
+           ChangeState(STATE.ORIGINAL);
         }
 
 		protected override void Dialogue_OnStartConversation()
