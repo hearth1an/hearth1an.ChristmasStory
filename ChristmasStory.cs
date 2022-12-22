@@ -66,6 +66,7 @@ namespace ChrismasStory
 			characterControllers.AddComponent<RiebeckCharacterController>();
 			characterControllers.AddComponent<PlayerNPCCharacterController>();
 
+
 #if DEBUG
 			player.AddComponent<DebugCommands>();
 #endif

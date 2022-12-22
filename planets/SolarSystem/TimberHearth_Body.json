@@ -255,6 +255,27 @@
 				"remoteTriggerRadius": 2
 			}
 
+		],
+		"remotes": [
+			{
+				"id": "",
+				"stones": [
+					{
+
+						"position": {
+							"x": 9.3314,
+							"y": -14.9432,
+							"z": 186.3129
+						},
+						"rotation": {
+							"x": 338.7445,
+							"y": 274.6205,
+							"z": 265.6711
+						},
+						"rename": "Stone"
+					},
+				]
+			}
 		]
 	},
 	"ReferenceFrame": {},

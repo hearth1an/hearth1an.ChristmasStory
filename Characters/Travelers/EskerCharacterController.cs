@@ -17,19 +17,21 @@ namespace ChrismasStory.Characters.Travelers
         public override void Start()
         {
 			dialogue = SearchUtilities.Find("Moon_Body/Sector_THM/Esker_Start_Dialogue").GetComponent<CharacterDialogueTree>();
+            dialogueShip = SearchUtilities.Find("Ship_Body/ShipSector/Ship_Esker/ConversationZone").GetComponent<CharacterDialogueTree>();
+            dialogueVillage = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Villager_HEA_Esker_ANIM_Rocking/ConversationZone").GetComponent<CharacterDialogueTree>();
             originalCharacter = SearchUtilities.Find("Moon_Body/Sector_THM/Characters_THM/Villager_HEA_Esker");
             shipCharacter = SearchUtilities.Find("Ship_Body/ShipSector/Ship_Esker");
             treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Villager_HEA_Esker_ANIM_Rocking");
 
             base.Start();
 
-            ChangeState(STATE.ORIGINAL);
+           ChangeState(STATE.NONE);
         }
 
 		protected override void Dialogue_OnStartConversation()
 		{
 			var shipNearEsker = ShipHandler.IsCharacterNearShip(originalCharacter.gameObject, 40f);
-            var shipNearVillage= ShipHandler.IsCharacterNearVillage(shipCharacter.gameObject, 40f);
+            var shipNearVillage= ShipHandler.IsCharacterNearVillage(shipCharacter.gameObject, 100f);
 			var shipDestroyed = ShipHandler.HasShipExploded();
 			var shipFarNotDestroyed = !shipNearEsker && !shipDestroyed;
 
@@ -40,7 +42,7 @@ namespace ChrismasStory.Characters.Travelers
         }
 
 		protected override void Dialogue_OnEndConversation()
-        {
+        {            
             if (DialogueConditionManager.SharedInstance.GetConditionState("ESKER_START_DONE"))
             {
                 ChangeState(STATE.ON_SHIP);
@@ -49,7 +51,6 @@ namespace ChrismasStory.Characters.Travelers
             {
                 ChangeState(STATE.AT_TREE);
             }
-
         }
     }
 }

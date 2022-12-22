@@ -8,28 +8,37 @@ namespace ChrismasStory.Characters
 	{
 		public GameObject originalCharacter, shipCharacter, treeCharacter;
 
-		public enum STATE
-		{
-			ORIGINAL,
-			ON_SHIP,
-			AT_TREE
-		}
+        public enum STATE
+        {
+			NONE,
+            ORIGINAL,
+            ON_SHIP,
+            AT_TREE
+        };
+		
+		private STATE _state;       
 
-		public void ChangeState(STATE state)
+		
+        public void ChangeState(STATE state)
 		{
-			// Blink for 2 seconds means 1 second to close eyes then 1 second to open
-			// Right in the middle we change the state
+			if (_state != state)
+            {
+				// Blink for 2 seconds means 1 second to close eyes then 1 second to open
+				// Right in the middle we change the state
 
-			PlayerEffectController.Blink(2);
-			StartCoroutine(ChangeStateCoroutine(1, state));
+				_state = state;
+				PlayerEffectController.Blink(2);
+				StartCoroutine(ChangeStateCoroutine(1, state));
+			}		
 		}
 
 		private IEnumerator ChangeStateCoroutine(float wait, STATE state)
 		{
-			yield return new WaitForSeconds(wait);
+			yield return new WaitForSeconds(wait);			
 			originalCharacter?.SetActive(state == STATE.ORIGINAL);
 			shipCharacter?.SetActive(state == STATE.ON_SHIP);
 			treeCharacter?.SetActive(state == STATE.AT_TREE);
+
 		}
 	}
 }
