@@ -1,0 +1,51 @@
+<DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
+	<NameField>Riebeck</NameField>
+
+	<DialogueNode>
+		<Name>Start</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>(RIEBECK_SHIP_1) I like your ship, it's cozy. Please, let me know when we will land near the Village.</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<RequiredCondition>SHIP_NEAR_VILLAGE</RequiredCondition>
+				<Text>(RIEBECK_SHIP_2) Welcome back to Timber Hearth!</Text>
+				<DialogueTarget>2</DialogueTarget>
+				<RequiredCondition>RIEBECK_SHIP_DONE</RequiredCondition>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>(RIEBECK_SHIP_3) I'll let you know. Keep playing, Riebeck!</Text>
+				<ConditionToSet>RIEBECK_SHIP_MET</ConditionToSet>				
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>2</Name>	
+		<Dialogue>
+		<Page>(RIEBECK_SHIP_4) Cool! Let's GO!</Page>
+		</Dialogue>
+		<SetPersistentCondition>RIEBECK_SHIP_DONE</SetPersistentCondition>	
+	</DialogueNode>
+
+
+	<DialogueNode>
+		<Name>3</Name>
+		<EntryCondition>RIEBECK_SHIP_MET</EntryCondition>
+		<Dialogue>
+			<Page>(RIEBECK_SHIP_5) So, where we are? Maybe land closer to our Village?</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>(RIEBECK_SHIP_3) I'll let you know. Keep playing, Riebeck!</Text>				
+			</DialogueOption>
+			<DialogueOption>
+				<RequiredCondition>SHIP_NEAR_VILLAGE</RequiredCondition>
+				<Text>(RIEBECK_SHIP_2) Welcome back to Timber Hearth!</Text>
+				<DialogueTarget>2</DialogueTarget>
+				<RequiredCondition>RIEBECK_SHIP_DONE</RequiredCondition>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+	</DialogueTree>

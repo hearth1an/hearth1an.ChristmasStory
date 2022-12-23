@@ -17,32 +17,55 @@ namespace ChrismasStory.Characters.Travelers
 
         public override void Start()
         {
-            // dialogue =
-            originalCharacter = SearchUtilities.Find("BrittleHollow_Body/Sector_BH/Sector_Crossroads/Characters_Crossroads/Traveller_HEA_Riebeck");
+			dialogue = SearchUtilities.Find("BrittleHollow_Body/Sector_BH/Traveller_HEA_Riebeck/ConversationZone").GetComponent<CharacterDialogueTree>();
+			dialogueShip = SearchUtilities.Find("Ship_Body/ShipSector/Ship_Riebeck/ConversationZone").GetComponent<CharacterDialogueTree>();
+            dialogueVillage = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Riebeck/ConversationZone").GetComponent<CharacterDialogueTree>();
+
+            originalCharacter = SearchUtilities.Find("BrittleHollow_Body/Sector_BH/Traveller_HEA_Riebeck");
             shipCharacter = SearchUtilities.Find("Ship_Body/ShipSector/Ship_Riebeck");
             treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Riebeck");
 
 			base.Start();
 
-			ChangeState(STATE.ORIGINAL);
-        }
+			if (PlayerData.PersistentConditionExists("RIEBECK_SHIP_DONE"))
+			{
+				ChangeState(STATE.AT_TREE);
+			}
+			else
+			{
+				ChangeState(STATE.ORIGINAL);
+			}
+		}
 
 		protected override void Dialogue_OnStartConversation()
 		{
-			var shipNearRiebeck = ShipHandler.IsCharacterNearShip(originalCharacter.gameObject, 40f);
+			var shipNearRiebeck = ShipHandler.IsCharacterNearShip(originalCharacter.gameObject, 100f);
+			var shipNearVillage = ShipHandler.IsCharacterNearVillage(shipCharacter.gameObject, 100f);
 			var shipDestroyed = ShipHandler.HasShipExploded();
 			var shipFarNotDestroyed = !shipNearRiebeck && !shipDestroyed;
 
 			DialogueConditionManager.SharedInstance.SetConditionState("SHIP_NEAR_RIEBECK", shipNearRiebeck);
 			DialogueConditionManager.SharedInstance.SetConditionState("SHIP_FAR_RIEBECK", shipFarNotDestroyed);
 			DialogueConditionManager.SharedInstance.SetConditionState("SHIP_DESTROYED", shipDestroyed);
+			DialogueConditionManager.SharedInstance.SetConditionState("SHIP_NEAR_VILLAGE", shipNearVillage);
 		}
 
 		protected override void Dialogue_OnEndConversation()
 		{
-			if (DialogueConditionManager.SharedInstance.GetConditionState("RIEBEC_START_DONE"))
+			switch (State)
 			{
-				ChangeState(STATE.ON_SHIP);
+				case STATE.ORIGINAL:
+					if (DialogueConditionManager.SharedInstance.GetConditionState("RIEBECK_START_DONE"))
+					{
+						ChangeState(STATE.ON_SHIP);
+					}
+					break;
+				case STATE.ON_SHIP:
+					if (DialogueConditionManager.SharedInstance.GetConditionState("RIEBECK_SHIP_DONE"))
+					{
+						ChangeState(STATE.AT_TREE);
+					}
+					break;
 			}
 		}
 

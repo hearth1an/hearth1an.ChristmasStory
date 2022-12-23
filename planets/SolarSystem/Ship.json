@@ -133,17 +133,17 @@
 			},
 			{
 				"position": {
-					"x": 0.8201,
-					"y": 1.1342,
-					"z": -2.9346
+					"x": -0.134,
+					"y": 1.651,
+					"z": 0.279
 				},
-				"xmlFile": "planets/Dialogue/Riebec_Ship.xml",
-				"parentPath": "ShipSector/Ship_Riebec",
+				"xmlFile": "planets/Dialogue/Riebeck_Ship.xml",
+				"parentPath": "ShipSector/Ship_Riebeck",
 				"isRelativeToParent": true,
-				"lookAtRadius": 3,
+				"lookAtRadius": 2,
 				"radius": 1,
-				"remoteTriggerRadius": 1,
-				"blockAfterPersistentCondition": "RIEBEC_SHIP_DONE"
+				"remoteTriggerRadius": 1.5,
+				"blockAfterPersistentCondition": "RIEBECK_SHIP_DONE"
 			},
 			{
 				"position": {

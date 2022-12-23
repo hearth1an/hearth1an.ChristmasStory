@@ -59,8 +59,8 @@
 		<RequiredCondition>SHIP_NEAR_FELDSPAR</RequiredCondition>
 			<DialogueOption>
 				<Text>(FELDSPAR_START_3) Sure! Let's go.</Text>
-			</DialogueOption>
-			<ConditionToSet>FELDSPAR_START_DONE</ConditionToSet>
+				<ConditionToSet>FELDSPAR_START_DONE</ConditionToSet>
+			</DialogueOption>			
 			<DialogueOption>
 			<RequiredCondition>SHIP_FAR_FELDSPAR</RequiredCondition>
 				<Text>(FELDSPAR_START_4) Don't go anywhere, I'll take ship closer.</Text>

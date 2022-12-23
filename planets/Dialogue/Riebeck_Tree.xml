@@ -1,15 +1,15 @@
 <DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
-	<NameField>Riebec</NameField>
+	<NameField>Riebeck</NameField>
 
 	<DialogueNode>
 		<Name>Start</Name>
 		<EntryCondition>DEFAULT</EntryCondition>
 		<Dialogue>
-			<Page>(RIEBEC_TREE_1) Merry Christmas! I was missing the Village to be honest.</Page>
+			<Page>(RIEBECK_TREE_1) Merry Christmas! We finally at home.</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(RIEBEC_TREE_2) Glad you here, Feldpar.</Text>				
+				<Text>(RIEBECK_TREE_2) We were missing you.</Text>				
 				<DialogueTarget>2</DialogueTarget>				
 			</DialogueOption>			
 		</DialogueOptionsList>
@@ -18,7 +18,8 @@
 	<DialogueNode>
 	     <Name>2</Name>
 		 <Dialogue>
-			<Page>(RIEBEC_TREE_4) Yeah. Me too. Space can wait for sure.</Page>
+			<Page>(RIEBECK_TREE_4) Ahh I really like this tree decorations</Page>
+			 <Page>(RIEBECK_TREE_8)  ... and barrel.</Page>			 
 		 </Dialogue>		
 	</DialogueNode>
 
@@ -27,15 +28,15 @@
 		<Name>Start_Solanum</Name>
 		<EntryCondition>SOLANUM_DONE</EntryCondition>
 		<Dialogue>
-			<Page>(RIEBEC_TREE_5) WAIT IS THAT REAL NOMAI???</Page>
+			<Page>(RIEBECK_TREE_5) WAIT IS THAT REAL NOMAI???</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(RIEBEC_TREE_6) Yes, her name is Solanum. She's from Quantum Moon.</Text>
+				<Text>(RIEBECK_TREE_6) Yes, her name is Solanum. She's from Quantum Moon.</Text>
 				<DialogueTarget>3</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
-				<Text>(RIEBEC_TREE_7) Ha-ha! It's just a costume. Not a real nomai. They all died, you remember?</Text>
+				<Text>(RIEBECK_TREE_7) Ha-ha! It's just a costume. Not a real nomai. They all died, you remember?</Text>
 				<DialogueTarget>4</DialogueTarget>
 			</DialogueOption>			
 		</DialogueOptionsList>
@@ -44,13 +45,13 @@
 	<DialogueNode>
 		<Name>3</Name>
 		<Dialogue>
-			<Page>(RIEBEC_TREE_9) WOAH! Fantastic, living Nomai from Quantum Moon! COOL!</Page>
+			<Page>(RIEBECK_TREE_9) WOAH! Fantastic, living Nomai from Quantum Moon! COOL!</Page>
 		</Dialogue>
 	</DialogueNode>
 	<DialogueNode>
 		<Name>4</Name>
 		<Dialogue>
-			<Page>(RIEBEC_TREE_10) This is very good costume, I'd say! But yeah, you're right...</Page>
+			<Page>(RIEBECK_TREE_10) This is very good costume, I'd say! But yeah, you're right...</Page>
 		</Dialogue>
 	</DialogueNode>	
 	
