@@ -66,7 +66,6 @@ namespace ChrismasStory
 			characterControllers.AddComponent<RiebeckCharacterController>();
 			characterControllers.AddComponent<PlayerNPCCharacterController>();
 
-
 #if DEBUG
 			player.AddComponent<DebugCommands>();
 #endif
@@ -79,8 +78,8 @@ namespace ChrismasStory
 			TransformThings();
 			TravellersReplacements();
 			CharactersReplacement();
-			GeoRemovements();
-		}
+			GeoRemovements();			
+		}	
 
 		public void GeoRemovements()
 		{

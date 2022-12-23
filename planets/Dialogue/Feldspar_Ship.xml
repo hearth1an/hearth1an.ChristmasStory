@@ -9,6 +9,7 @@
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
+				<RequiredCondition>SHIP_NEAR_VILLAGE</RequiredCondition>
 				<Text>(FELDSPAR_SHIP_2) We are at home already, welcome back!</Text>
 				<DialogueTarget>2</DialogueTarget>
 				<RequiredCondition>FELDSPAR_SHIP_DONE</RequiredCondition>
@@ -40,6 +41,7 @@
 				<Text>(FELDSPAR_SHIP_6) Nope, not yet. I'll let you know.</Text>				
 			</DialogueOption>
 			<DialogueOption>
+				<RequiredCondition>SHIP_NEAR_VILLAGE</RequiredCondition>
 				<Text>(FELDSPAR_SHIP_2) We are at home already, welcome back!</Text>
 				<DialogueTarget>2</DialogueTarget>
 				<RequiredCondition>FELDSPAR_SHIP_DONE</RequiredCondition>

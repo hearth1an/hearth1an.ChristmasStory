@@ -203,7 +203,7 @@
 			},
 			{
 				"path": "GabbroShip_Body",
-				"rename": "GabbroShip",
+				"rename": "GabbroShip",				
 				"position": {
 					"x": 33.8095245,
 					"y": 78.29883,
@@ -226,7 +226,7 @@
 				},
 				"xmlFile": "planets/Dialogue/Feldspar_Tree.xml",
 				"parentPath": "Sector_TH/Traveller_HEA_Feldspar",
-				"lookAtRadius": 3,
+				"lookAtRadius": 1,
 				"radius": 1,
 				"remoteTriggerRadius": 2
 			},
@@ -238,7 +238,7 @@
 				},
 				"xmlFile": "planets/Dialogue/Riebec_Tree.xml",
 				"parentPath": "Sector_TH/Traveller_HEA_Riebeck",
-				"lookAtRadius": 3,
+				"lookAtRadius": 1,
 				"radius": 1,
 				"remoteTriggerRadius": 2
 			},
@@ -250,7 +250,9 @@
 				},
 				"xmlFile": "planets/Dialogue/Esker_Tree.xml",
 				"parentPath": "Sector_TH/Villager_HEA_Esker_ANIM_Rocking",
-				"lookAtRadius": 3,
+				"isRelativeToParent": true,
+				"pathToAnimController": "Sector_TH/Villager_HEA_Esker_ANIM_Rocking",
+				"lookAtRadius": 1,
 				"radius": 1,
 				"remoteTriggerRadius": 2
 			}
@@ -258,7 +260,7 @@
 		],
 		"remotes": [
 			{
-				"id": "Hal's stone",
+				"id": "Hal's",
 				"decalPath": "planets/Content/writing.png",
 				"stones": [
 					{

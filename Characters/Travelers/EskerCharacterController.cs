@@ -21,7 +21,15 @@ namespace ChrismasStory.Characters.Travelers
 
 			base.Start();
 
-			ChangeState(STATE.ORIGINAL);
+			if (PlayerData.PersistentConditionExists("ESKER_SHIP_DONE"))
+			{
+				ChangeState(STATE.AT_TREE);				
+			}
+			else
+			{
+				ChangeState(STATE.ORIGINAL);
+			}
+			
 		}
 
 		protected override void Dialogue_OnStartConversation()

@@ -22,6 +22,7 @@
 	</DialogueNode>
 
 	<DialogueNode>
+		<SetPersistentCondition>ESKER_SHIP_DONE</SetPersistentCondition>
 		<Name>2</Name>	
 		<Dialogue>
 		<Page>(ESKER_SHIP_4) Let's go! Merry Christmas!</Page>
@@ -42,8 +43,7 @@
 			<DialogueOption>
 				<RequiredCondition>SHIP_NEAR_VILLAGE</RequiredCondition>
 				<Text>(ESKER_SHIP_7) Yes, we here! Let's go celebrate!</Text>
-				<DialogueTarget>2</DialogueTarget>
-				<ConditionToSet>ESKER_SHIP_DONE</ConditionToSet>
+				<DialogueTarget>2</DialogueTarget>				
 			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>

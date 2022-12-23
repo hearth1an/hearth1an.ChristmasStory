@@ -153,10 +153,11 @@
 				},
 				"xmlFile": "planets/Dialogue/Esker_Ship.xml",
 				"parentPath": "ShipSector/Ship_Esker",
+				"pathToAnimController": "ShipSector/Ship_Esker",
 				"isRelativeToParent": true,
-				"lookAtRadius": 3,
-				"radius": 1,
-				"remoteTriggerRadius": 1				
+				"lookAtRadius": 1,
+				"radius": 1
+
 			}
 		]
 	}

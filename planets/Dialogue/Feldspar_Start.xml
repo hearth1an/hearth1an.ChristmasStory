@@ -16,15 +16,18 @@
 
 			</DialogueOption>
 			<DialogueOption>
+			<RequiredCondition>SHIP_NEAR_FELDSPAR</RequiredCondition>
 				<Text>(FELDSPAR_START_3) Sure! Let's go. (IF SHIP IS CLOSE ENOUGH AND NOT DESTROYED)</Text>
 				<ConditionToSet>FELDSPAR_START_DONE</ConditionToSet>
 			</DialogueOption>
 			<DialogueOption>
+			<RequiredCondition>SHIP_FAR_FELDSPAR</RequiredCondition>
 				<Text>(FELDSPAR_START_4) Don't go anywhere, I'll take ship closer. (IF SHIP IS NOT CLOSE ENOUGH)</Text>
 				<ConditionToSet>FELDSPAR_START_MET</ConditionToSet>
 				<DialogueTarget>4</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
+			<RequiredCondition>SHIP_DESTROYED</RequiredCondition>
 				<Text>(FELDSPAR_START_5) I'm so sorry... but ship is not functioning... we stuck here (IF SHIP IS DESTROYED)</Text>
 				<ConditionToSet>FELDSPAR_START_FAILED</ConditionToSet>
 				<DialogueTarget>8</DialogueTarget>
@@ -53,16 +56,19 @@
 			<Page>(FELDSPAR_START_10) So... any help?</Page>
 		</Dialogue>
 		<DialogueOptionsList>
+		<RequiredCondition>SHIP_NEAR_FELDSPAR</RequiredCondition>
 			<DialogueOption>
-				<Text>(FELDSPAR_START_3) Sure! Let's go. (IF SHIP IS CLOSE ENOUGH AND NOT DESTROYED)</Text>
+				<Text>(FELDSPAR_START_3) Sure! Let's go.</Text>
 			</DialogueOption>
 			<ConditionToSet>FELDSPAR_START_DONE</ConditionToSet>
 			<DialogueOption>
-				<Text>(FELDSPAR_START_4) Don't go anywhere, I'll take ship closer. (IF SHIP IS NOT CLOSE ENOUGH)</Text>
+			<RequiredCondition>SHIP_FAR_FELDSPAR</RequiredCondition>
+				<Text>(FELDSPAR_START_4) Don't go anywhere, I'll take ship closer.</Text>
 				<DialogueTarget>4</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
-				<Text>(FELDSPAR_START_5) I'm so sorry... but ship is not functioning... we stuck here (IF SHIP IS DESTROYED)</Text>
+			<RequiredCondition>SHIP_DESTROYED</RequiredCondition>
+				<Text>(FELDSPAR_START_5) I'm so sorry... but ship is not functioning... we stuck here.</Text>
 				<ConditionToSet>FELDSPAR_START_FAILED</ConditionToSet>
 				<DialogueTarget>8</DialogueTarget>
 			</DialogueOption>
