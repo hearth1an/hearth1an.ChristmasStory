@@ -15,8 +15,6 @@ namespace ChrismasStory.Characters.Travelers
 		Talk to him in ship > Closing eyes > he appears near the Christmas tree always. And he should be the only one Riebec and signal.
 		*/
 
-		private const string ShipNearRiebeck = nameof(ShipNearRiebeck);
-
         public override void Start()
         {
             // dialogue =
@@ -31,15 +29,18 @@ namespace ChrismasStory.Characters.Travelers
 
 		protected override void Dialogue_OnStartConversation()
 		{
-			var isShipNear = ShipHandler.IsCharacterNearShip(originalCharacter, 50f); // we can adjust this distance
+			var shipNearRiebeck = ShipHandler.IsCharacterNearShip(originalCharacter.gameObject, 40f);
+			var shipDestroyed = ShipHandler.HasShipExploded();
+			var shipFarNotDestroyed = !shipNearRiebeck && !shipDestroyed;
 
-			// We can use this persistent condition to change the dialogue Riebeck says
-			PlayerData.SetPersistentCondition(ShipNearRiebeck, isShipNear);
+			DialogueConditionManager.SharedInstance.SetConditionState("SHIP_NEAR_RIEBECK", shipNearRiebeck);
+			DialogueConditionManager.SharedInstance.SetConditionState("SHIP_FAR_RIEBECK", shipFarNotDestroyed);
+			DialogueConditionManager.SharedInstance.SetConditionState("SHIP_DESTROYED", shipDestroyed);
 		}
 
 		protected override void Dialogue_OnEndConversation()
 		{
-			if (PlayerData.GetPersistentCondition(ShipNearRiebeck))
+			if (DialogueConditionManager.SharedInstance.GetConditionState("RIEBEC_START_DONE"))
 			{
 				ChangeState(STATE.ON_SHIP);
 			}

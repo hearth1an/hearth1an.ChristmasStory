@@ -16,15 +16,18 @@
 
 			</DialogueOption>
 			<DialogueOption>
+				<RequiredCondition>SHIP_NEAR_RIEBECK</RequiredCondition>
 				<Text>(RIEBEC_START_3) Sure! Let's go. (IF SHIP IS CLOSE ENOUGH AND NOT DESTROYED)</Text>
 				<ConditionToSet>RIEBEC_START_DONE</ConditionToSet>
 			</DialogueOption>
 			<DialogueOption>
+				<RequiredCondition>SHIP_FAR_RIEBECK</RequiredCondition>
 				<Text>(RIEBEC_START_4) Don't go anywhere, I'll take ship closer. (IF SHIP IS NOT CLOSE ENOUGH)</Text>
 				<ConditionToSet>RIEBEC_START_MET</ConditionToSet>
 				<DialogueTarget>4</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
+				<RequiredCondition>SHIP_DESTROYED</RequiredCondition>
 				<Text>(RIEBEC_START_5) I'm so sorry... but ship is not functioning... we stuck here (IF SHIP IS DESTROYED)</Text>
 				<ConditionToSet>RIEBEC_START_FAILED</ConditionToSet>
 				<DialogueTarget>8</DialogueTarget>
@@ -55,15 +58,19 @@
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(RIEBEC_START_3) Sure! Get in my ship. (IF SHIP IS CLOSE ENOUGH AND NOT DESTROYED)</Text>
+				<RequiredCondition>SHIP_NEAR_RIEBECK</RequiredCondition>
+				<Text>(RIEBEC_START_3) Sure! Let's go. (IF SHIP IS CLOSE ENOUGH AND NOT DESTROYED)</Text>
+				<ConditionToSet>RIEBEC_START_DONE</ConditionToSet>
 			</DialogueOption>
-			<ConditionToSet>RIEBEC_START_DONE</ConditionToSet>
 			<DialogueOption>
-				<Text>(RIEBEC_START_4) Don't go anywhere, Riebec. I'll take ship closer. (IF SHIP IS NOT CLOSE ENOUGH)</Text>
+				<RequiredCondition>SHIP_FAR_RIEBECK</RequiredCondition>
+				<Text>(RIEBEC_START_4) Don't go anywhere, I'll take ship closer. (IF SHIP IS NOT CLOSE ENOUGH)</Text>
+				<ConditionToSet>RIEBEC_START_MET</ConditionToSet>
 				<DialogueTarget>4</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
-				<Text>(RIEBEC_START_5) Sorry to say this.. but ship my ship is destroyed... I can't help you... (IF SHIP IS DESTROYED)</Text>
+				<RequiredCondition>SHIP_DESTROYED</RequiredCondition>
+				<Text>(RIEBEC_START_5) I'm so sorry... but ship is not functioning... we stuck here (IF SHIP IS DESTROYED)</Text>
 				<ConditionToSet>RIEBEC_START_FAILED</ConditionToSet>
 				<DialogueTarget>8</DialogueTarget>
 			</DialogueOption>
