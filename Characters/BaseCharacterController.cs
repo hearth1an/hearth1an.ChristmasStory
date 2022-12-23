@@ -16,17 +16,17 @@ namespace ChrismasStory.Characters
             AT_TREE
         };
 		
-		private STATE _state;       
+		public STATE State { get; private set; }      
 
 		
         public void ChangeState(STATE state)
 		{
-			if (_state != state)
+			if (State != state)
             {
 				// Blink for 2 seconds means 1 second to close eyes then 1 second to open
 				// Right in the middle we change the state
 
-				_state = state;
+				State = state;
 				PlayerEffectController.Blink(2);
 				StartCoroutine(ChangeStateCoroutine(1, state));
 			}		
