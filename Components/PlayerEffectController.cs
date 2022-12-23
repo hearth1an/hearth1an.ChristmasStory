@@ -16,12 +16,16 @@ namespace ChrismasStory.Components
         }
 
         public static void Blink(float length = 2) => _instance.StartCoroutine(_instance.BlinkCoroutine(length));
+        public static void CloseEyes(float length) => _instance._cameraEffectController.CloseEyes(length);
+        public static void OpenEyes(float length) => _instance._cameraEffectController.OpenEyes(length, false);
 
 		private IEnumerator BlinkCoroutine(float length)
         {
-			_instance._cameraEffectController.CloseEyes(length / 2f);
+			CloseEyes(length / 2f);
 			yield return new WaitForSeconds(length / 2f);
-			_instance._cameraEffectController.OpenEyes(length / 2f, false);
+			OpenEyes(length / 2f);
 		}
-    }
+
+        public static void PlayAudioOneShot(AudioType audio, float volume = 1f) => Locator.GetPlayerAudioController()._oneShotExternalSource.PlayOneShot(audio, volume);
+	}
 }

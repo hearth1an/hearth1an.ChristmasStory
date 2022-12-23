@@ -12,15 +12,15 @@
 			if (dialogue != null)
 			{
 				dialogue.OnStartConversation += Dialogue_OnStartConversation;
-				dialogue.OnEndConversation += Dialogue_OnEndConversation;				
+				dialogue.OnEndConversation += Dialogue_OnEndConversation;
 			}
-			if (dialogueShip != null )
-			{				
+			if (dialogueShip != null)
+			{
 				dialogueShip.OnStartConversation += Dialogue_OnStartConversation;
-				dialogueShip.OnEndConversation += Dialogue_OnEndConversation;				
+				dialogueShip.OnEndConversation += Dialogue_OnEndConversation;
 			}
 			if (dialogueVillage != null)
-			{				
+			{
 				dialogueVillage.OnStartConversation += Dialogue_OnStartConversation;
 				dialogueVillage.OnEndConversation += Dialogue_OnEndConversation;
 			}
@@ -34,12 +34,12 @@
 				dialogue.OnEndConversation -= Dialogue_OnEndConversation;
 			}
 			if (dialogueShip != null)
-			{				
+			{
 				dialogueShip.OnStartConversation -= Dialogue_OnStartConversation;
 				dialogueShip.OnEndConversation -= Dialogue_OnEndConversation;
 			}
 			if (dialogueVillage != null)
-			{				
+			{
 				dialogueVillage.OnStartConversation -= Dialogue_OnStartConversation;
 				dialogueVillage.OnEndConversation -= Dialogue_OnEndConversation;
 			}

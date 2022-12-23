@@ -45,5 +45,10 @@ namespace ChrismasStory.Characters.Travelers
 				ChangeState(STATE.ON_SHIP);
 			}
 		}
+
+		protected override void OnChangeState(STATE oldState, STATE newState)
+		{
+
+		}
 	}
 }

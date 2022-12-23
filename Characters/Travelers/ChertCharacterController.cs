@@ -1,4 +1,5 @@
 ﻿using NewHorizons.Utility;
+using UnityEngine;
 
 namespace ChrismasStory.Characters.Travelers
 {
@@ -11,14 +12,19 @@ namespace ChrismasStory.Characters.Travelers
 		> Closing eyes > he appears near the Christmas tree always. And he should be the only one Chert and signal. 
 		*/
 
+        private GameObject _emberTwinShip, _timberHearthShip;
+
         public override void Start()
         {
             // dialogue =
+            
             originalCharacter = SearchUtilities.Find("CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Interactables_Lakebed/Traveller_HEA_Chert");
-            //shipCharacter = SearchUtilities.Find("Ship_Body/ShipSector/Ship_Chert");
             treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Chert_ANIM_Chatter_Chipper");
 
-            base.Start();
+			//_emberTwinShip = SearchUtilities.Find("");
+			//_timberHearthShip = SearchUtilities.Find("");
+
+			base.Start();
 
             ChangeState(STATE.ORIGINAL);
         }
@@ -31,6 +37,13 @@ namespace ChrismasStory.Characters.Travelers
 		protected override void Dialogue_OnEndConversation()
         {
 
+        }
+
+        protected override void OnChangeState(STATE oldState, STATE newState)
+        {
+            // Here we have to update the visibility of the ship at ember twin and the ship at timber hearth
+            _emberTwinShip?.SetActive(newState == STATE.ORIGINAL);
+            _timberHearthShip?.SetActive(newState == STATE.AT_TREE);
         }
     }
 }

@@ -1,13 +1,9 @@
 ﻿using NewHorizons.Utility;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ChrismasStory.Characters.Travelers
 {
-    internal class GabbroCharacterController : TravelerCharacterController
+	internal class GabbroCharacterController : TravelerCharacterController
 	{
         /* Visit Gabbro > He will ask you to start the new loop with exploding your ship near him > There should be a script that will check distance between Gabbro and ship and track the explosion > 
 		Gabbro should disappear, player should die too.> Next loop he will appear Feldspar and signal. 
@@ -31,6 +27,11 @@ namespace ChrismasStory.Characters.Travelers
 		}
 
 		protected override void Dialogue_OnEndConversation()
+		{
+
+		}
+
+		protected override void OnChangeState(STATE oldState, STATE newState)
 		{
 
 		}

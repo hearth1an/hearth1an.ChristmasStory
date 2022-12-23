@@ -35,5 +35,10 @@ namespace ChrismasStory.Characters.Travelers
 		{
 
 		}
+
+		protected override void OnChangeState(STATE oldState, STATE newState)
+		{
+			// We can remove the signals here when it changes state
+		}
 	}
 }
