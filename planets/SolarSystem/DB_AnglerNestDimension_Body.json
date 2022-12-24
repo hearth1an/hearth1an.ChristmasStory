@@ -1,10 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
 	"name": "Angler Nest Dimension",
-	"Base": {
-		"gravityFallOff": "linear"
-	},
-	"Orbit": {},
 	"Props": {
 		"details": [
 			{
@@ -20,21 +16,6 @@
 					"y": 87.8791,
 					"z": 119.8612
 				}
-			},
-			{
-
-				"path": "DB_PioneerDimension_Body/Sector_PioneerDimension/Interactables_PioneerDimension/Pioneer_Characters/Signal_Harmonica",
-				"parentPath": "Sector_AnglerNestDimension/Traveller_HEA_Feldspar",
-				"position": {
-					"x": 0.01,
-					"y": 0.01,
-					"z": 0.01
-				},
-				"rotation": {
-					"x": 0,
-					"y": 0,
-					"z": 0
-				}
 			}
 		],
 		"dialogue": [
@@ -47,11 +28,26 @@
 				"xmlFile": "planets/Dialogue/Feldspar_Start.xml",
 				"parentPath": "Sector_AnglerNestDimension/Traveller_HEA_Feldspar",
 				"lookAtRadius": 3,
-				"radius": 1
+				"radius": 1,
+				"isRelativeToParent": true,
+				"pathToAnimController": "Sector_AnglerNestDimension/Traveller_HEA_Feldspar",
+			}
+		],
+		"signals": [
+			{
+				"name": "Signal_Harmonica",
+				"frequency": "Traveler",
+				"parentPath": "Sector_AnglerNestDimension/Traveller_HEA_Feldspar",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 0.01,
+					"y": 0.01,
+					"z": 0.01
+				},
+				"audio": "TravelerFeldspar",
+				"detectionRadius": 50,
+				"identificationRadius": 5
 			}
 		]
-	},
-	"ReferenceFrame": {},
-	"ShipLog": {},
-	"ShockEffect": {}
+	}
 }
