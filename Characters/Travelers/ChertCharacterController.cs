@@ -1,5 +1,6 @@
 ﻿using NewHorizons.Utility;
 using UnityEngine;
+using ChrismasStory.Components;
 
 namespace ChrismasStory.Characters.Travelers
 {
@@ -16,34 +17,81 @@ namespace ChrismasStory.Characters.Travelers
 
         public override void Start()
         {
-            // dialogue =
-            
+            _emberTwinShip = SearchUtilities.Find("CaveTwin_Body/Sector_CaveTwin/Geometry_CaveTwin/OtherComponentsGroup/Prefab_HEA_ChertShip");
+            _timberHearthShip = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Prefab_HEA_ChertShip");
+
+            dialogue = SearchUtilities.Find("CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Interactables_Lakebed/Traveller_HEA_Chert/ConversationZone").GetComponent<CharacterDialogueTree>();
+
             originalCharacter = SearchUtilities.Find("CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Interactables_Lakebed/Traveller_HEA_Chert");
             treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Chert_ANIM_Chatter_Chipper");
 
-			//_emberTwinShip = SearchUtilities.Find("");
-			//_timberHearthShip = SearchUtilities.Find("");
+			
 
 			base.Start();
 
-            ChangeState(STATE.ORIGINAL);
+            if (PlayerData.PersistentConditionExists("CHERT_SHIP_DONE"))
+            {
+                ChangeState(STATE.AT_TREE);
+                _emberTwinShip.SetActive(false);
+            }           
+            else
+            {
+                ChangeState(STATE.ORIGINAL);
+                _timberHearthShip.SetActive(false);
+            }
         }
 
-		protected override void Dialogue_OnStartConversation()
-		{
-
-		}
-
-		protected override void Dialogue_OnEndConversation()
+        protected override void Dialogue_OnStartConversation()
         {
+            var shipNearChert = ShipHandler.IsCharacterNearShip(originalCharacter.gameObject, 40f);
+            var holdingWarpCore = HeldItemHandler.IsPlayerHoldingWarpCore();
+            var holdingStrangerArtifact = HeldItemHandler.IsPlayerHoldingStrangerArtifact();
+            // var chertShipFly = _emberTwinShip.AddComponent<OWRigidbody>();
 
+
+            var shipDestroyed = ShipHandler.HasShipExploded();
+            var shipFarNotDestroyed = !shipNearChert && !shipDestroyed;
+
+            DialogueConditionManager.SharedInstance.SetConditionState("SHIP_NEAR_CHERT", shipNearChert);
+            DialogueConditionManager.SharedInstance.SetConditionState("SHIP_FAR_CHERT", shipFarNotDestroyed);
+            DialogueConditionManager.SharedInstance.SetConditionState("SHIP_DESTROYED", shipDestroyed);
+            // DialogueConditionManager.SharedInstance.SetConditionState("CHERT_START_DONE", chertShipFly);
+            DialogueConditionManager.SharedInstance.SetConditionState("HOLDING_CORE", holdingWarpCore);
+            DialogueConditionManager.SharedInstance.SetConditionState("HOLDING_DLC_ITEM", holdingStrangerArtifact);
         }
+           
+
+        protected override void Dialogue_OnEndConversation()
+        {
+            switch (State)
+            {
+                case STATE.ORIGINAL:
+                    if (DialogueConditionManager.SharedInstance.GetConditionState("CHERT_START_DONE"))
+                    {
+                        ChangeState(STATE.AT_TREE);
+                    }
+                    break;
+                case STATE.ON_SHIP:
+                    if (DialogueConditionManager.SharedInstance.GetConditionState("CHERT_SHIP_DONE"))
+                    {
+                        ChangeState(STATE.AT_TREE);
+                    }
+                    break;
+            }
+        }
+
 
         protected override void OnChangeState(STATE oldState, STATE newState)
         {
             // Here we have to update the visibility of the ship at ember twin and the ship at timber hearth
             _emberTwinShip?.SetActive(newState == STATE.ORIGINAL);
             _timberHearthShip?.SetActive(newState == STATE.AT_TREE);
+        }
+
+        public void DestroyChertShip()
+        {
+            _emberTwinShip.SetActive(false);
+            ChangeState(STATE.ON_SHIP);
         }
     }
 }

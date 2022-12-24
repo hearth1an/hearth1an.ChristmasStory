@@ -65,6 +65,13 @@ namespace ChrismasStory
 			characterControllers.AddComponent<GabbroCharacterController>();
 			characterControllers.AddComponent<RiebeckCharacterController>();
 			characterControllers.AddComponent<PlayerNPCCharacterController>();
+			
+			if (PlayerData.PersistentConditionExists("CHERT_PHRASE_KNOWN"))
+			{
+				PlayerData.SetPersistentCondition("CHERT_PHRASE_KNOWN_NEXT_LOOP", true);
+				ModHelper.Console.WriteLine("Chert phrase known.", MessageType.Success);
+			}
+			
 
 #if DEBUG
 			player.AddComponent<DebugCommands>();
@@ -78,7 +85,9 @@ namespace ChrismasStory
 			TransformThings();
 			TravellersReplacements();
 			CharactersReplacement();
-			GeoRemovements();			
+			GeoRemovements();
+
+			
 		}	
 
 		public void GeoRemovements()
@@ -134,17 +143,15 @@ namespace ChrismasStory
 				SearchUtilities.Find("Ship_Body/ShipSector/Ship_Esker/ConversationZone").GetComponent<InteractReceiver>()._usableInShip = true;
 				
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Villager_HEA_Esker_ANIM_Rocking/ConversationZone").transform.localPosition = new Vector3(0, 1f, 0);
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Villager_HEA_Esker_ANIM_Rocking/ConversationTrigger").transform.localPosition = new Vector3(0, 1f, 0);
+				
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Villager_HEA_Esker_ANIM_Rocking/Signal_Whistling").transform.localPosition = new Vector3(0, 1f, 0);
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Riebeck/ConversationZone").transform.localPosition = new Vector3(0, 1f, 0);
-                SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Riebeck/ConversationTrigger").transform.localPosition = new Vector3(0, 1f, 0);
+
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Riebeck/Signal_Banjo").transform.localPosition = new Vector3(0, 1f, 0);
 				SearchUtilities.Find("Ship_Body/ShipSector/Ship_Feldspar/ConversationZone").transform.localPosition = new Vector3(-0.1f, 0.8f, 0);
-				SearchUtilities.Find("Ship_Body/ShipSector/Ship_Feldspar/ConversationTrigger").transform.localPosition = new Vector3(-0.1f, 0.8f, 0);
-
+				
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Feldspar/ConversationZone").transform.localPosition = new Vector3(-0.1f, 0.4f, 0);
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Feldspar/Signal_Harmonica").transform.localPosition = new Vector3(0f, 0f, 0f);
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Feldspar/ConversationTrigger").transform.localPosition = new Vector3(-0.1f, 0.8f, 0);
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Feldspar/Signal_Harmonica").transform.localPosition = new Vector3(0f, 0f, 0f);				
 
 				// SearchUtilities.Find("Ship_Body/ShipSector/Ship_Riebec/ConversationZone").GetComponent<InteractReceiver>()._usableInShip = true;
 				/*

@@ -1,0 +1,26 @@
+{
+	"$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
+	"name": "CaveTwin",
+	"Base": {
+		"gravityFallOff": "linear"
+	},
+	"Orbit": {},
+	"Props": {
+		"dialogue": [
+			{
+				"position": {
+					"x": 0.009,
+					"y": 0.363,
+					"z": -0.355
+				},
+				"xmlFile": "planets/Dialogue/Chert_Start.xml",
+				"parentPath": "Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Interactables_Lakebed/Traveller_HEA_Chert/",
+				"isRelativeToParent": true,
+				"lookAtRadius": 2,
+				"radius": 1
+			}
+		]
+	},
+	"ReferenceFrame": {},
+	"ShipLog": {}
+}

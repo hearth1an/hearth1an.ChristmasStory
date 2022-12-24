@@ -1,0 +1,367 @@
+<DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
+	<NameField>Chert</NameField>
+
+	<DialogueNode>
+		<Name>Start</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<SetCondition>CHERT_START_MET</SetCondition>
+		<SetCondition>CHERT_DLC_ITEM_DONE</SetCondition>		
+		<SetCondition>CHERT_CORE_NOT_DONE</SetCondition>
+		<SetCondition>CHERT_PHRASE_NOT_TOLD</SetCondition>		
+		<Dialogue>
+			<Page>(CHERT_START_1) Hello there! It's your first launch, right? Welcome to the Hourglass Twins.</Page>
+		</Dialogue>
+
+
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>(CHERT_START_2) Yes, kind of. What are you doing here exactly?</Text>				
+				<DialogueTarget>2</DialogueTarget>				
+			</DialogueOption>
+
+			<DialogueOption>
+				<Text>(CHERT_START_7) Let's go celebrate Christmas! I'm getting travelers home for celebration.</Text>
+				<DialogueTarget>4</DialogueTarget>						
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>2</Name>
+		<Dialogue>
+			<Page>(CHERT_START_6) Star charts, you know. This is a good place to spot astronomical events, supernovaes for example.</Page>
+			<Page>(CHERT_START_7) I've actually seen a couple today, it's very rare.</Page>			
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>(CHERT_START_56) I see.</Text>
+				<DialogueTarget>3</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>3</Name>
+		<EntryCondition>CHERT_START_MET</EntryCondition>
+		<Dialogue>			
+			<Page>(CHERT_START_8) So, what can I help you with?</Page>
+		</Dialogue>
+
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>(CHERT_START_7) Let's go celebrate Christmas! I'm getting travelers home for celebration.</Text>
+				<DialogueTarget>4</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>(CHERT_START_8) Nothing. Have a nice day!</Text>				
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>4</Name>		
+		<Dialogue>			
+			<Page>(CHERT_START_9) What do you mean? I should just leave my place and interrupt such importaint work? Absolutely no.</Page>
+		</Dialogue>
+
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>(CHERT_START_10) Oh.. the thing is I'm in the time loop. Our sun will become supernova soon and there's no escape from it. I've explored everything already so you can go back.</Text>
+				<DialogueTarget>5</DialogueTarget>
+			</DialogueOption>			
+		</DialogueOptionsList>
+    </DialogueNode>
+
+	<DialogueNode>
+		<Name>5</Name>		
+		<Dialogue>			
+			<Page>(CHERT_START_12) Ha-ha. You're very funny! Go on, tell me what you know then.</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>(CHERT_START_10) Eye of the universe was found by nearby solar system species, their ship is still here.</Text>
+				<DialogueTarget>5.1</DialogueTarget>
+			</DialogueOption>			
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>5.1</Name>
+		<Dialogue>
+			<Page>(CHERT_START_70) Uh-huh...</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>(CHERT_START_71) Nomai came from other solar system too, but they was not able to find the Eye because it's signal was blocked by first species.</Text>
+				<DialogueTarget>5.2</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>5.2</Name>
+		<Dialogue>
+			<Page>(CHERT_START_74) Uh-huh.. go on...</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>(CHERT_START_72) Nomai made a time-loop machine to find the Eye, but died from Interloper and ghost matter.</Text>
+				<DialogueTarget>8</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+
+	<DialogueNode>
+		<Name>8</Name>		
+		<Dialogue>
+			<Page>(CHERT_START_15) Wow. I was expecting you to say something like..</Page>			
+			<Page>(CHERT_START_16) 'Sure, I was joking, gotcha!', but... this...</Page>
+			<Page>(CHERT_START_17) It sounds unbelievable... everything of it!</Page>
+			<Page>(CHERT_START_18) But alright, let's make a deal: I will go to Timber Hearth if you will proof everything you said.</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<RequiredPersistentCondition>CHERT_PHRASE_KNOWN_NEXT_LOOP</RequiredPersistentCondition>
+				<Text>(CHERT_START_53) Sure! I already know exact things you would ask: secret information that only you could know, unknown nomai tech and other kind's any tech.</Text>
+				<DialogueTarget>15.1</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>(CHERT_START_19) Alright! How do we do this?</Text>
+				<DialogueTarget>9</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>9</Name>
+		<SetPersistentCondition>CHERT_PHRASE_KNOWN</SetPersistentCondition>
+		<Dialogue>			
+			<Page>(CHERT_START_20) So if you're saying you're in time loop.. you can proof it with saying something to me that only I could know.</Page>			
+			<Page>(CHERT_START_21) You can say: 'Chert, I know that only you know who is Jumbo marshmallow creator.'</Page>			
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>(CHERT_START_22) Who is it?</Text>
+				<DialogueTarget>9.1</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>(CHERT_START_23) Alright, this will be enough?</Text>
+				<DialogueTarget>10.1</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>9.1</Name>
+		<Dialogue>			
+			<Page>(CHERT_START_24) It's a big secret. Maybe one day you will know but for now it's the only thing I could say.</Page>			
+		</Dialogue>
+		<DialogueOptionsList>			
+			<DialogueOption>
+				<Text>(CHERT_START_23) Alright, this will be enough?</Text>
+				<DialogueTarget>10.1</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>10.1</Name>
+		<Dialogue>
+			<Page>(CHERT_START_25) No, since you're saying you are mr 'I know everything', I'm asking you to bring on the table something new.</Page>
+			<Page>(CHERT_START_26) I mean, any Nomai unknown technology and don't you dare take anything from the museum!</Page>
+			<Page>(CHERT_START_27) What else did you say? Other species ship is still here? Cool, bring me something from their tech and we good.</Page>
+			<Page>(CHERT_START_28) So: secret phrase, some unknown Nomai tech and something significant from other civilisation tech. Deal?</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>(CHERT_START_29) Deal. You better prepare for flying home!</Text>
+				<DialogueTarget>13</DialogueTarget>				
+				<ConditionToSet>CHERT_START_MET_2</ConditionToSet>				
+			</DialogueOption>
+			<DialogueOption>
+				<Text>(CHERT_START_29) Chert, I know that only you know who is Jumbo marshmallow creator.</Text>
+				<DialogueTarget>12.1</DialogueTarget>
+				<CancelledCondition>CHERT_START_MET</CancelledCondition>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>12.1</Name>		
+		<Dialogue>		
+			<Page>(CHERT_START_30) Oh, that was wit. Tell me that next loop in case if you're not lying.</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>(CHERT_START_31) Okay, I'll do this. Bye.</Text>
+				<DialogueTarget>13</DialogueTarget>				
+				<ConditionToSet>CHERT_START_MET_2</ConditionToSet>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>(CHERT_START_29) Chert, I know that only you know who is Jumbo marshmallow creator.</Text>
+				<DialogueTarget>14</DialogueTarget>			
+				<ConditionToSet>CHERT_START_MET_2</ConditionToSet>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>13</Name>
+		<Dialogue>
+			<Page>(CHERT_START_32) Good luck lad!</Page>
+		</Dialogue>		
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>14</Name>
+		<Dialogue>
+			<Page>(CHERT_START_33) Ha-ha.</Page>
+		</Dialogue>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>15</Name>
+		<EntryCondition>CHERT_START_MET_2</EntryCondition>
+		<Dialogue>
+			<Page>(CHERT_START_38) So, I'm waiting for all proofs.</Page>
+		</Dialogue>
+		<DialogueOptionsList>			
+			<DialogueOption>
+				<RequiredPersistentCondition>CHERT_PHRASE_KNOWN_NEXT_LOOP</RequiredPersistentCondition>				
+				<Text>(CHERT_START_29) Chert, I know that only you know who is Jumbo marshmallow creator.</Text>
+				<CancelledCondition>CHERT_PHRASE_TOLD</CancelledCondition>
+				<ConditionToSet>CHERT_PHRASE_TOLD</ConditionToSet>
+				<SetPersistentCondition>CHERT_PHRASE_TOLD</SetPersistentCondition>
+				<DialogueTarget>16</DialogueTarget>				
+			</DialogueOption>
+			<DialogueOption>				
+				<RequiredCondition>HOLDING_CORE</RequiredCondition>			
+				<Text>(CHERT_START_35) Here's the nomai warp core. They used it to enable time loop machine.</Text>				
+				<CancelledCondition>HOLDING_CORE</CancelledCondition>
+				<SetPersistentCondition>CHERT_CORE_DONE</SetPersistentCondition>
+				<DialogueTarget>17</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<RequiredCondition>HOLDING_DLC_ITEM</RequiredCondition>				
+				<Text>(CHERT_START_36) Here's the strangers tech.</Text>
+				<CancelledCondition>HOLDING_DLC_ITEM</CancelledCondition>
+				<DialogueTarget>19</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<RequiredCondition>CHERT_ALL_DONE</RequiredCondition>
+				<Text>(CHERT_START_37) So, I've done everything you asked for. Let's go home to celebrate?</Text>
+				<DialogueTarget>20</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>				
+				<Text>(CHERT_START_80) I'll be right back.</Text>
+				<DialogueTarget>20</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>16</Name>
+		<Dialogue>
+			<Page>(CHERT_START_38) Wow. This is really the thing only I knew. Well, not anymore.</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+		<DialogueOption>			
+			<Text>(CHERT_START_39) Sure! I'll proof everything.</Text>			
+			<DialogueTarget>15</DialogueTarget>
+		</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>17</Name>
+		<Dialogue>
+			<Page>(CHERT_START_40) I.. I'm speachless.. wait if it's enabling time loop and I can't see any wires...</Page>
+			<Page>(CHERT_START_41) OH NO! BRING IT BACK! NOW!</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+		<DialogueOption>
+			<Text>(CHERT_START_42) Oh, don't be mad Chert. I'll figure it out. Calm down!</Text>			
+			<DialogueTarget>18</DialogueTarget>
+		</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+
+	<DialogueNode>
+		<Name>18</Name>
+		<Dialogue>
+			<Page>(CHERT_START_43) Uh.. easy to say! Okay, breath deep... breath..</Page>			
+		</Dialogue>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>19</Name>
+		<Dialogue>
+			<Page>(CHERT_START_44) What an interesting tech! It seems like main concept based on sort of light or flame, right?</Page>			
+		</Dialogue>
+		<DialogueOptionsList>
+		<DialogueOption>
+			<Text>(CHERT_START_45) Yes. They were all about flames and lights.</Text>			
+			<DialogueTarget>18</DialogueTarget>
+		</DialogueOption>
+	    </DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>20</Name>
+		<Dialogue>
+			<Page>(CHERT_START_46) Okay.. you won. I don't feel like I'm doing something important here so... We can go celebrate Christmas!</Page>		
+		</Dialogue>
+		<DialogueOptionsList>
+		<DialogueOption>
+			<RequiredCondition>SHIP_NEAR_CHERT</RequiredCondition>
+			<Text>(CHERT_START_48) Yay! Let's go, my ship is near.</Text>			
+			<DialogueTarget>21</DialogueTarget>
+		</DialogueOption>
+
+		<DialogueOption>
+			<RequiredCondition>SHIP_FAR_CHERT</RequiredCondition>
+			<Text>(CHERT_START_49) Wait a sec. I need to take my ship closer.</Text>			
+			<DialogueTarget>21</DialogueTarget>
+		</DialogueOption>
+
+		<DialogueOption>
+			<RequiredCondition>SHIP_DESTROYED</RequiredCondition>
+			<Text>(CHERT_START_50) My ship is destroyed. Sorry.</Text>			
+			<DialogueTarget>21</DialogueTarget>
+		</DialogueOption>
+			</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>21</Name>
+		<Dialogue>
+			<Page>(CHERT_START_51) I don't really need your ship. Mine is functioning. See ya!</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+		<DialogueOption>
+			<Text>(CHERT_START_52) Bon Voyage!</Text>
+			<ConditionToSet>CHERT_START_DONE</ConditionToSet>		
+		</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>	
+	
+	<DialogueNode>
+		<Name>15.1</Name>		
+		<Dialogue>
+			<Page>(CHERT_START_54) Actually ...yeah. That what I was thinking about. Nice guess!</Page>			
+			<Page>(CHERT_START_55) So you serious about all this?</Page>			
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>(CHERT_START_56) Yes! Let's get to the business.</Text>
+				<DialogueTarget>15</DialogueTarget>
+				
+				<ConditionToSet>CHERT_START_MET_2</ConditionToSet>				
+			</DialogueOption>			
+		</DialogueOptionsList>
+	</DialogueNode>
+	
+	
+</DialogueTree>
