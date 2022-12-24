@@ -8,7 +8,7 @@ namespace ChrismasStory.Components
 		private ToolModeSwapper _toolModeSwapper;
 		private static HeldItemHandler _instance;
 
-		private void Start()
+		public void Start()
 		{
 			_toolModeSwapper = GameObject.FindObjectOfType<ToolModeSwapper>();
 			_instance = this;
@@ -24,16 +24,25 @@ namespace ChrismasStory.Components
 
 		public static bool IsPlayerHoldingStrangerArtifact() => GetHeldItem() is DreamLanternItem or VisionTorchItem;
 
+		#region debug
 		public static void GivePlayerWarpCore()
 		{
-			var warpCore = FindObjectsOfType<WarpCoreItem>().First(x => x._wcType == WarpCoreType.Vessel);
-			Locator.GetToolModeSwapper().GetItemCarryTool().PickUpItemInstantly(warpCore);
+			// Giving item breaks when you're flying the ship
+			if (!PlayerState.AtFlightConsole())
+			{
+				var warpCore = FindObjectsOfType<WarpCoreItem>().First(x => x._wcType == WarpCoreType.Vessel);
+				Locator.GetToolModeSwapper().GetItemCarryTool().PickUpItemInstantly(warpCore);
+			}
 		}
 
 		public static void GivePlayerLantern()
 		{
-			var lantern = FindObjectOfType<DreamLanternItem>();
-			Locator.GetToolModeSwapper().GetItemCarryTool().PickUpItemInstantly(lantern);
+			if (!PlayerState.AtFlightConsole())
+			{
+				var lantern = FindObjectOfType<DreamLanternItem>();
+				Locator.GetToolModeSwapper().GetItemCarryTool().PickUpItemInstantly(lantern);
+			}
 		}
+		#endregion
 	}
 }
