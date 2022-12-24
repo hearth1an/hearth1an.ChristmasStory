@@ -24,9 +24,11 @@
 				dialogueVillage.OnStartConversation += Dialogue_OnStartConversation;
 				dialogueVillage.OnEndConversation += Dialogue_OnEndConversation;
 			}
+
+			ChangeState(STATE.ORIGINAL);
 		}
 
-		public void OnDestroy()
+		public virtual void OnDestroy()
 		{
 			if (dialogue != null)
 			{

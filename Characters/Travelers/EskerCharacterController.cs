@@ -20,16 +20,6 @@ namespace ChrismasStory.Characters.Travelers
 			treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Villager_HEA_Esker_ANIM_Rocking");
 
 			base.Start();
-
-			if (PlayerData.PersistentConditionExists("ESKER_SHIP_DONE"))
-			{
-				ChangeState(STATE.AT_TREE);				
-			}
-			else
-			{
-				ChangeState(STATE.ORIGINAL);
-			}
-			
 		}
 
 		protected override void Dialogue_OnStartConversation()

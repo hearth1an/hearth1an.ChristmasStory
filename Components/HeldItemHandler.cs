@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 
 namespace ChrismasStory.Components
 {
@@ -19,8 +20,20 @@ namespace ChrismasStory.Components
 		/// Returns true if it is the functioning warp core from the ATP
 		/// </summary>
 		/// <returns></returns>
-		public static bool IsPlayerHoldingWarpCore() => GetHeldItem() is WarpCoreItem warpCore && warpCore.IsVesselCoreType();
+		public static bool IsPlayerHoldingWarpCore() => GetHeldItem() is WarpCoreItem warpCore && warpCore._wcType == WarpCoreType.Vessel;
 
 		public static bool IsPlayerHoldingStrangerArtifact() => GetHeldItem() is DreamLanternItem or VisionTorchItem;
+
+		public static void GivePlayerWarpCore()
+		{
+			var warpCore = FindObjectsOfType<WarpCoreItem>().First(x => x._wcType == WarpCoreType.Vessel);
+			Locator.GetToolModeSwapper().GetItemCarryTool().PickUpItemInstantly(warpCore);
+		}
+
+		public static void GivePlayerLantern()
+		{
+			var lantern = FindObjectOfType<DreamLanternItem>();
+			Locator.GetToolModeSwapper().GetItemCarryTool().PickUpItemInstantly(lantern);
+		}
 	}
 }

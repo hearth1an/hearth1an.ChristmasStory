@@ -4,10 +4,6 @@
 	<DialogueNode>
 		<Name>Start</Name>
 		<EntryCondition>DEFAULT</EntryCondition>
-		<SetCondition>CHERT_START_MET</SetCondition>
-		<SetCondition>CHERT_DLC_ITEM_DONE</SetCondition>		
-		<SetCondition>CHERT_CORE_NOT_DONE</SetCondition>
-		<SetCondition>CHERT_PHRASE_NOT_TOLD</SetCondition>		
 		<Dialogue>
 			<Page>(CHERT_START_1) Hello there! It's your first launch, right? Welcome to the Hourglass Twins.</Page>
 		</Dialogue>
@@ -232,25 +228,26 @@
 				<Text>(CHERT_START_29) Chert, I know that only you know who is Jumbo marshmallow creator.</Text>
 				<CancelledCondition>CHERT_PHRASE_TOLD</CancelledCondition>
 				<ConditionToSet>CHERT_PHRASE_TOLD</ConditionToSet>
-				<SetPersistentCondition>CHERT_PHRASE_TOLD</SetPersistentCondition>
 				<DialogueTarget>16</DialogueTarget>				
 			</DialogueOption>
 			<DialogueOption>				
 				<RequiredCondition>HOLDING_CORE</RequiredCondition>			
 				<Text>(CHERT_START_35) Here's the nomai warp core. They used it to enable time loop machine.</Text>				
-				<CancelledCondition>HOLDING_CORE</CancelledCondition>
-				<SetPersistentCondition>CHERT_CORE_DONE</SetPersistentCondition>
+				<ConditionToSet>CHERT_CORE_DONE</ConditionToSet>
+				<CancelledCondition>CHERT_CORE_DONE</CancelledCondition>
 				<DialogueTarget>17</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
 				<RequiredCondition>HOLDING_DLC_ITEM</RequiredCondition>				
 				<Text>(CHERT_START_36) Here's the strangers tech.</Text>
-				<CancelledCondition>HOLDING_DLC_ITEM</CancelledCondition>
+				<CancelledCondition>CHERT_DLC_ITEM_DONE</CancelledCondition>
+				<ConditionToSet>CHERT_DLC_ITEM_DONE</ConditionToSet>
 				<DialogueTarget>19</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
 				<RequiredCondition>CHERT_ALL_DONE</RequiredCondition>
 				<Text>(CHERT_START_37) So, I've done everything you asked for. Let's go home to celebrate?</Text>
+				<ConditionToSet>CHERT_START_DONE</ConditionToSet>
 				<DialogueTarget>20</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>				
@@ -292,6 +289,10 @@
 		<Dialogue>
 			<Page>(CHERT_START_43) Uh.. easy to say! Okay, breath deep... breath..</Page>			
 		</Dialogue>
+		<DialogueOption>
+			<Text>(CHERT_START_43.1) Anyway...</Text>
+			<DialogueTarget>15</DialogueTarget>
+		</DialogueOption>
 	</DialogueNode>
 
 	<DialogueNode>
@@ -302,7 +303,7 @@
 		<DialogueOptionsList>
 		<DialogueOption>
 			<Text>(CHERT_START_45) Yes. They were all about flames and lights.</Text>			
-			<DialogueTarget>18</DialogueTarget>
+			<DialogueTarget>15</DialogueTarget>
 		</DialogueOption>
 	    </DialogueOptionsList>
 	</DialogueNode>
@@ -340,8 +341,7 @@
 		</Dialogue>
 		<DialogueOptionsList>
 		<DialogueOption>
-			<Text>(CHERT_START_52) Bon Voyage!</Text>
-			<ConditionToSet>CHERT_START_DONE</ConditionToSet>		
+			<Text>(CHERT_START_52) Bon Voyage!</Text>	
 		</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>	
