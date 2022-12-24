@@ -254,8 +254,7 @@
 				<DialogueTarget>20</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>				
-				<Text>(CHERT_START_80) I'll be right back.</Text>
-				<DialogueTarget>20</DialogueTarget>
+				<Text>(CHERT_START_80) I'll be right back.</Text>				
 			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
