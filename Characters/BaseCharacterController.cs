@@ -57,6 +57,9 @@ namespace ChrismasStory.Characters
 
 		private IEnumerator ShipCoroutine(STATE state)
 		{
+			OWInput.ChangeInputMode(InputMode.None);
+			Locator.GetPauseCommandListener().AddPauseCommandLock();
+
 			PlayerEffectController.CloseEyes(0.7f);
 			yield return new WaitForSeconds(0.7f);
 
@@ -72,10 +75,16 @@ namespace ChrismasStory.Characters
 
 			// Open eyes
 			PlayerEffectController.OpenEyes(0.7f);
+
+			OWInput.ChangeInputMode(InputMode.Character);
+			Locator.GetPauseCommandListener().RemovePauseCommandLock();
 		}
 
 		private IEnumerator FlyShipCoroutine(STATE state)
 		{
+			OWInput.ChangeInputMode(InputMode.None);
+			Locator.GetPauseCommandListener().AddPauseCommandLock();
+
 			PlayerEffectController.CloseEyes(1f);
 			yield return new WaitForSeconds(1f);
 
@@ -88,15 +97,24 @@ namespace ChrismasStory.Characters
 
 			// Open eyes
 			PlayerEffectController.OpenEyes(1f);
+
+			OWInput.ChangeInputMode(InputMode.Character);
+			Locator.GetPauseCommandListener().RemovePauseCommandLock();
 		}
 
 		private IEnumerator ChangeStateCoroutine(float wait, STATE state)
 		{
+			OWInput.ChangeInputMode(InputMode.None);
+			Locator.GetPauseCommandListener().AddPauseCommandLock();
+
 			PlayerEffectController.Blink(2);
 
 			yield return new WaitForSeconds(wait);
 			
 			OnSetState(state);
+
+			OWInput.ChangeInputMode(InputMode.Character);
+			Locator.GetPauseCommandListener().RemovePauseCommandLock();
 		}
 
 		private void OnSetState(STATE state)
