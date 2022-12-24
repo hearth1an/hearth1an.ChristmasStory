@@ -9,33 +9,33 @@
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(ESKER_TREE_2) Thanks! I know I'm pretty good at it.</Text>				
-				<DialogueTarget>2</DialogueTarget>				
+				<Text>(ESKER_TREE_2) Thanks! I know I'm pretty good at it.</Text>
+				<DialogueTarget>2</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
-				<Text>(ESKER_TREE_3) Do you know anything about Jumbo?</Text>				
-				<DialogueTarget>3</DialogueTarget>				
-			</DialogueOption>						
+				<Text>(ESKER_TREE_3) Do you know anything about Jumbo?</Text>
+				<DialogueTarget>3</DialogueTarget>
+			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
 
 	<DialogueNode>
-	     <Name>2</Name>
-		 <Dialogue>
+		<Name>2</Name>
+		<Dialogue>
 			<Page>(ESKER_TREE_4) Yes, you're also very modest.</Page>
-		 </Dialogue>		
-	</DialogueNode>	
+		</Dialogue>
+	</DialogueNode>
 
 	<DialogueNode>
-	     <Name>3</Name>
-		 <Dialogue>
+		<Name>3</Name>
+		<Dialogue>
 			<Page>(ESKER_TREE_5) WHO?.</Page>
-		 </Dialogue>
+		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
 				<Text>(ESKER_TREE_6) Actually... nevermind...</Text>
-			</DialogueOption>						
+			</DialogueOption>
 		</DialogueOptionsList>
-	</DialogueNode>	
-	
+	</DialogueNode>
+
 </DialogueTree>

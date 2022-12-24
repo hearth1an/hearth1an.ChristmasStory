@@ -16,17 +16,17 @@
 			</DialogueOption>
 			<DialogueOption>
 				<Text>(ESKER_SHIP_3) I'll let you know when we land near the Village.</Text>
-				<ConditionToSet>ESKER_SHIP_MET</ConditionToSet>				
+				<ConditionToSet>ESKER_SHIP_MET</ConditionToSet>
 			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
 
 	<DialogueNode>
 		<SetPersistentCondition>ESKER_SHIP_DONE</SetPersistentCondition>
-		<Name>2</Name>	
+		<Name>2</Name>
 		<Dialogue>
-		<Page>(ESKER_SHIP_4) Let's go! Merry Christmas!</Page>
-		</Dialogue>			
+			<Page>(ESKER_SHIP_4) Let's go! Merry Christmas!</Page>
+		</Dialogue>
 	</DialogueNode>
 
 
@@ -38,13 +38,13 @@
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(ESKER_SHIP_6) No, but I'll tell you when.</Text>				
+				<Text>(ESKER_SHIP_6) No, but I'll tell you when.</Text>
 			</DialogueOption>
 			<DialogueOption>
 				<RequiredCondition>SHIP_NEAR_VILLAGE</RequiredCondition>
 				<Text>(ESKER_SHIP_7) Yes, we here! Let's go celebrate!</Text>
-				<DialogueTarget>2</DialogueTarget>				
+				<DialogueTarget>2</DialogueTarget>
 			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
-	</DialogueTree>
+</DialogueTree>

@@ -21,19 +21,6 @@ namespace ChrismasStory.Characters.Travelers
             treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Feldspar");
 
             base.Start();
-
-			if (!PlayerData.PersistentConditionExists("FELDSPAR_START_ENTRY"))
-			{
-				ChangeState(STATE.NONE);
-			}
-			if (PlayerData.PersistentConditionExists("FELDSPAR_SHIP_DONE"))
-			{
-				ChangeState(STATE.AT_TREE);
-			}
-			else
-			{
-				ChangeState(STATE.ORIGINAL);
-			}
 		}
 
 		protected override void Dialogue_OnStartConversation()
@@ -70,7 +57,7 @@ namespace ChrismasStory.Characters.Travelers
 
 		protected override void OnChangeState(STATE oldState, STATE newState)
 		{
-			// We can remove the signals here when it changes state
+
 		}
 	}
 }

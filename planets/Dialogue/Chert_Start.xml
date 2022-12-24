@@ -11,13 +11,13 @@
 
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(CHERT_START_2) Yes, kind of. What are you doing here exactly?</Text>				
-				<DialogueTarget>2</DialogueTarget>				
+				<Text>(CHERT_START_2) Yes, kind of. What are you doing here exactly?</Text>
+				<DialogueTarget>2</DialogueTarget>
 			</DialogueOption>
 
 			<DialogueOption>
 				<Text>(CHERT_START_7) Let's go celebrate Christmas! I'm getting travelers home for celebration.</Text>
-				<DialogueTarget>4</DialogueTarget>						
+				<DialogueTarget>4</DialogueTarget>
 			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
@@ -26,7 +26,7 @@
 		<Name>2</Name>
 		<Dialogue>
 			<Page>(CHERT_START_6) Star charts, you know. This is a good place to spot astronomical events, supernovaes for example.</Page>
-			<Page>(CHERT_START_7) I've actually seen a couple today, it's very rare.</Page>			
+			<Page>(CHERT_START_7) I've actually seen a couple today, it's very rare.</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
@@ -39,7 +39,7 @@
 	<DialogueNode>
 		<Name>3</Name>
 		<EntryCondition>CHERT_START_MET</EntryCondition>
-		<Dialogue>			
+		<Dialogue>
 			<Page>(CHERT_START_8) So, what can I help you with?</Page>
 		</Dialogue>
 
@@ -49,14 +49,14 @@
 				<DialogueTarget>4</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
-				<Text>(CHERT_START_8) Nothing. Have a nice day!</Text>				
+				<Text>(CHERT_START_8) Nothing. Have a nice day!</Text>
 			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
 
 	<DialogueNode>
-		<Name>4</Name>		
-		<Dialogue>			
+		<Name>4</Name>
+		<Dialogue>
 			<Page>(CHERT_START_9) What do you mean? I should just leave my place and interrupt such importaint work? Absolutely no.</Page>
 		</Dialogue>
 
@@ -64,20 +64,20 @@
 			<DialogueOption>
 				<Text>(CHERT_START_10) Oh.. the thing is I'm in the time loop. Our sun will become supernova soon and there's no escape from it. I've explored everything already so you can go back.</Text>
 				<DialogueTarget>5</DialogueTarget>
-			</DialogueOption>			
+			</DialogueOption>
 		</DialogueOptionsList>
-    </DialogueNode>
+	</DialogueNode>
 
 	<DialogueNode>
-		<Name>5</Name>		
-		<Dialogue>			
+		<Name>5</Name>
+		<Dialogue>
 			<Page>(CHERT_START_12) Ha-ha. You're very funny! Go on, tell me what you know then.</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
 				<Text>(CHERT_START_10) Eye of the universe was found by nearby solar system species, their ship is still here.</Text>
 				<DialogueTarget>5.1</DialogueTarget>
-			</DialogueOption>			
+			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
 
@@ -109,9 +109,9 @@
 
 
 	<DialogueNode>
-		<Name>8</Name>		
+		<Name>8</Name>
 		<Dialogue>
-			<Page>(CHERT_START_15) Wow. I was expecting you to say something like..</Page>			
+			<Page>(CHERT_START_15) Wow. I was expecting you to say something like..</Page>
 			<Page>(CHERT_START_16) 'Sure, I was joking, gotcha!', but... this...</Page>
 			<Page>(CHERT_START_17) It sounds unbelievable... everything of it!</Page>
 			<Page>(CHERT_START_18) But alright, let's make a deal: I will go to Timber Hearth if you will proof everything you said.</Page>
@@ -132,9 +132,9 @@
 	<DialogueNode>
 		<Name>9</Name>
 		<SetPersistentCondition>CHERT_PHRASE_KNOWN</SetPersistentCondition>
-		<Dialogue>			
-			<Page>(CHERT_START_20) So if you're saying you're in time loop.. you can proof it with saying something to me that only I could know.</Page>			
-			<Page>(CHERT_START_21) You can say: 'Chert, I know that only you know who is Jumbo marshmallow creator.'</Page>			
+		<Dialogue>
+			<Page>(CHERT_START_20) So if you're saying you're in time loop.. you can proof it with saying something to me that only I could know.</Page>
+			<Page>(CHERT_START_21) You can say: 'Chert, I know that only you know who is Jumbo marshmallow creator.'</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
@@ -150,10 +150,10 @@
 
 	<DialogueNode>
 		<Name>9.1</Name>
-		<Dialogue>			
-			<Page>(CHERT_START_24) It's a big secret. Maybe one day you will know but for now it's the only thing I could say.</Page>			
+		<Dialogue>
+			<Page>(CHERT_START_24) It's a big secret. Maybe one day you will know but for now it's the only thing I could say.</Page>
 		</Dialogue>
-		<DialogueOptionsList>			
+		<DialogueOptionsList>
 			<DialogueOption>
 				<Text>(CHERT_START_23) Alright, this will be enough?</Text>
 				<DialogueTarget>10.1</DialogueTarget>
@@ -172,8 +172,8 @@
 		<DialogueOptionsList>
 			<DialogueOption>
 				<Text>(CHERT_START_29) Deal. You better prepare for flying home!</Text>
-				<DialogueTarget>13</DialogueTarget>				
-				<ConditionToSet>CHERT_START_MET_2</ConditionToSet>				
+				<DialogueTarget>13</DialogueTarget>
+				<ConditionToSet>CHERT_START_MET_2</ConditionToSet>
 			</DialogueOption>
 			<DialogueOption>
 				<Text>(CHERT_START_29) Chert, I know that only you know who is Jumbo marshmallow creator.</Text>
@@ -184,19 +184,19 @@
 	</DialogueNode>
 
 	<DialogueNode>
-		<Name>12.1</Name>		
-		<Dialogue>		
+		<Name>12.1</Name>
+		<Dialogue>
 			<Page>(CHERT_START_30) Oh, that was wit. Tell me that next loop in case if you're not lying.</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
 				<Text>(CHERT_START_31) Okay, I'll do this. Bye.</Text>
-				<DialogueTarget>13</DialogueTarget>				
+				<DialogueTarget>13</DialogueTarget>
 				<ConditionToSet>CHERT_START_MET_2</ConditionToSet>
 			</DialogueOption>
 			<DialogueOption>
 				<Text>(CHERT_START_29) Chert, I know that only you know who is Jumbo marshmallow creator.</Text>
-				<DialogueTarget>14</DialogueTarget>			
+				<DialogueTarget>14</DialogueTarget>
 				<ConditionToSet>CHERT_START_MET_2</ConditionToSet>
 			</DialogueOption>
 		</DialogueOptionsList>
@@ -206,7 +206,7 @@
 		<Name>13</Name>
 		<Dialogue>
 			<Page>(CHERT_START_32) Good luck lad!</Page>
-		</Dialogue>		
+		</Dialogue>
 	</DialogueNode>
 
 	<DialogueNode>
@@ -222,23 +222,23 @@
 		<Dialogue>
 			<Page>(CHERT_START_38) So, I'm waiting for all proofs.</Page>
 		</Dialogue>
-		<DialogueOptionsList>			
+		<DialogueOptionsList>
 			<DialogueOption>
-				<RequiredPersistentCondition>CHERT_PHRASE_KNOWN_NEXT_LOOP</RequiredPersistentCondition>				
+				<RequiredPersistentCondition>CHERT_PHRASE_KNOWN_NEXT_LOOP</RequiredPersistentCondition>
 				<Text>(CHERT_START_29) Chert, I know that only you know who is Jumbo marshmallow creator.</Text>
 				<CancelledCondition>CHERT_PHRASE_TOLD</CancelledCondition>
 				<ConditionToSet>CHERT_PHRASE_TOLD</ConditionToSet>
-				<DialogueTarget>16</DialogueTarget>				
+				<DialogueTarget>16</DialogueTarget>
 			</DialogueOption>
-			<DialogueOption>				
-				<RequiredCondition>HOLDING_CORE</RequiredCondition>			
-				<Text>(CHERT_START_35) Here's the nomai warp core. They used it to enable time loop machine.</Text>				
+			<DialogueOption>
+				<RequiredCondition>HOLDING_CORE</RequiredCondition>
+				<Text>(CHERT_START_35) Here's the nomai warp core. They used it to enable time loop machine.</Text>
 				<ConditionToSet>CHERT_CORE_DONE</ConditionToSet>
 				<CancelledCondition>CHERT_CORE_DONE</CancelledCondition>
 				<DialogueTarget>17</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
-				<RequiredCondition>HOLDING_DLC_ITEM</RequiredCondition>				
+				<RequiredCondition>HOLDING_DLC_ITEM</RequiredCondition>
 				<Text>(CHERT_START_36) Here's the strangers tech.</Text>
 				<CancelledCondition>CHERT_DLC_ITEM_DONE</CancelledCondition>
 				<ConditionToSet>CHERT_DLC_ITEM_DONE</ConditionToSet>
@@ -250,8 +250,8 @@
 				<ConditionToSet>CHERT_START_DONE</ConditionToSet>
 				<DialogueTarget>20</DialogueTarget>
 			</DialogueOption>
-			<DialogueOption>				
-				<Text>(CHERT_START_80) I'll be right back.</Text>				
+			<DialogueOption>
+				<Text>(CHERT_START_80) I'll be right back.</Text>
 			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
@@ -262,10 +262,10 @@
 			<Page>(CHERT_START_38) Wow. This is really the thing only I knew. Well, not anymore.</Page>
 		</Dialogue>
 		<DialogueOptionsList>
-		<DialogueOption>			
-			<Text>(CHERT_START_39) Sure! I'll proof everything.</Text>			
-			<DialogueTarget>15</DialogueTarget>
-		</DialogueOption>
+			<DialogueOption>
+				<Text>(CHERT_START_39) Sure! I'll proof everything.</Text>
+				<DialogueTarget>15</DialogueTarget>
+			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
 
@@ -276,10 +276,10 @@
 			<Page>(CHERT_START_41) OH NO! BRING IT BACK! NOW!</Page>
 		</Dialogue>
 		<DialogueOptionsList>
-		<DialogueOption>
-			<Text>(CHERT_START_42) Oh, don't be mad Chert. I'll figure it out. Calm down!</Text>			
-			<DialogueTarget>18</DialogueTarget>
-		</DialogueOption>
+			<DialogueOption>
+				<Text>(CHERT_START_42) Oh, don't be mad Chert. I'll figure it out. Calm down!</Text>
+				<DialogueTarget>18</DialogueTarget>
+			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
 
@@ -287,7 +287,7 @@
 	<DialogueNode>
 		<Name>18</Name>
 		<Dialogue>
-			<Page>(CHERT_START_43) Uh.. easy to say! Okay, breath deep... breath..</Page>			
+			<Page>(CHERT_START_43) Uh.. easy to say! Okay, breath deep... breath..</Page>
 		</Dialogue>
 		<DialogueOption>
 			<Text>(CHERT_START_43.1) Anyway...</Text>
@@ -298,40 +298,40 @@
 	<DialogueNode>
 		<Name>19</Name>
 		<Dialogue>
-			<Page>(CHERT_START_44) What an interesting tech! It seems like main concept based on sort of light or flame, right?</Page>			
+			<Page>(CHERT_START_44) What an interesting tech! It seems like main concept based on sort of light or flame, right?</Page>
 		</Dialogue>
 		<DialogueOptionsList>
-		<DialogueOption>
-			<Text>(CHERT_START_45) Yes. They were all about flames and lights.</Text>			
-			<DialogueTarget>15</DialogueTarget>
-		</DialogueOption>
-	    </DialogueOptionsList>
+			<DialogueOption>
+				<Text>(CHERT_START_45) Yes. They were all about flames and lights.</Text>
+				<DialogueTarget>15</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
 	</DialogueNode>
 
 	<DialogueNode>
 		<Name>20</Name>
 		<Dialogue>
-			<Page>(CHERT_START_46) Okay.. you won. I don't feel like I'm doing something important here so... We can go celebrate Christmas!</Page>		
+			<Page>(CHERT_START_46) Okay.. you won. I don't feel like I'm doing something important here so... We can go celebrate Christmas!</Page>
 		</Dialogue>
 		<DialogueOptionsList>
-		<DialogueOption>
-			<RequiredCondition>SHIP_NEAR_CHERT</RequiredCondition>
-			<Text>(CHERT_START_48) Yay! Let's go, my ship is near.</Text>			
-			<DialogueTarget>21</DialogueTarget>
-		</DialogueOption>
+			<DialogueOption>
+				<RequiredCondition>SHIP_NEAR_CHERT</RequiredCondition>
+				<Text>(CHERT_START_48) Yay! Let's go, my ship is near.</Text>
+				<DialogueTarget>21</DialogueTarget>
+			</DialogueOption>
 
-		<DialogueOption>
-			<RequiredCondition>SHIP_FAR_CHERT</RequiredCondition>
-			<Text>(CHERT_START_49) Wait a sec. I need to take my ship closer.</Text>			
-			<DialogueTarget>21</DialogueTarget>
-		</DialogueOption>
+			<DialogueOption>
+				<RequiredCondition>SHIP_FAR_CHERT</RequiredCondition>
+				<Text>(CHERT_START_49) Wait a sec. I need to take my ship closer.</Text>
+				<DialogueTarget>21</DialogueTarget>
+			</DialogueOption>
 
-		<DialogueOption>
-			<RequiredCondition>SHIP_DESTROYED</RequiredCondition>
-			<Text>(CHERT_START_50) My ship is destroyed. Sorry.</Text>			
-			<DialogueTarget>21</DialogueTarget>
-		</DialogueOption>
-			</DialogueOptionsList>
+			<DialogueOption>
+				<RequiredCondition>SHIP_DESTROYED</RequiredCondition>
+				<Text>(CHERT_START_50) My ship is destroyed. Sorry.</Text>
+				<DialogueTarget>21</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
 	</DialogueNode>
 
 	<DialogueNode>
@@ -340,27 +340,27 @@
 			<Page>(CHERT_START_51) I don't really need your ship. Mine is functioning. See ya!</Page>
 		</Dialogue>
 		<DialogueOptionsList>
-		<DialogueOption>
-			<Text>(CHERT_START_52) Bon Voyage!</Text>	
-		</DialogueOption>
+			<DialogueOption>
+				<Text>(CHERT_START_52) Bon Voyage!</Text>
+			</DialogueOption>
 		</DialogueOptionsList>
-	</DialogueNode>	
-	
+	</DialogueNode>
+
 	<DialogueNode>
-		<Name>15.1</Name>		
+		<Name>15.1</Name>
 		<Dialogue>
-			<Page>(CHERT_START_54) Actually ...yeah. That what I was thinking about. Nice guess!</Page>			
-			<Page>(CHERT_START_55) So you serious about all this?</Page>			
+			<Page>(CHERT_START_54) Actually ...yeah. That what I was thinking about. Nice guess!</Page>
+			<Page>(CHERT_START_55) So you serious about all this?</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
 				<Text>(CHERT_START_56) Yes! Let's get to the business.</Text>
 				<DialogueTarget>15</DialogueTarget>
-				
-				<ConditionToSet>CHERT_START_MET_2</ConditionToSet>				
-			</DialogueOption>			
+
+				<ConditionToSet>CHERT_START_MET_2</ConditionToSet>
+			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
-	
-	
+
+
 </DialogueTree>

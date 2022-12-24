@@ -9,17 +9,17 @@
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(FELDSPAR_TREE_2) Glad you here, Feldpar.</Text>				
-				<DialogueTarget>2</DialogueTarget>				
-			</DialogueOption>			
+				<Text>(FELDSPAR_TREE_2) Glad you here, Feldpar.</Text>
+				<DialogueTarget>2</DialogueTarget>
+			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
 
 	<DialogueNode>
-	     <Name>2</Name>
-		 <Dialogue>
+		<Name>2</Name>
+		<Dialogue>
 			<Page>(FELDSPAR_TREE_4) Yeah. Me too. Space can wait for sure.</Page>
-		 </Dialogue>		
+		</Dialogue>
 	</DialogueNode>
 
 
@@ -63,5 +63,5 @@
 			<Page>(FELDSPAR_TREE_11) Ok! But it's weird.</Page>
 		</Dialogue>
 	</DialogueNode>
-	
+
 </DialogueTree>

@@ -73,8 +73,8 @@
 				<ConditionToSet>ESKER_START_FAILED</ConditionToSet>
 				<DialogueTarget>8</DialogueTarget>
 			</DialogueOption>
-			<DialogueOption>				
-				<Text>(ESKER_START_10) Hold on, I need to do something first.</Text>				
+			<DialogueOption>
+				<Text>(ESKER_START_10) Hold on, I need to do something first.</Text>
 				<DialogueTarget>9</DialogueTarget>
 			</DialogueOption>
 		</DialogueOptionsList>
@@ -97,7 +97,7 @@
 	</DialogueNode>
 
 	<DialogueNode>
-		<Name>9</Name>		
+		<Name>9</Name>
 		<Dialogue>
 			<Page>(ESKER_START_11) Gotcha! I'll wait then.</Page>
 		</Dialogue>

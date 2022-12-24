@@ -89,6 +89,8 @@ namespace ChristmasStory.Components
 
 			body.WarpToPositionRotation(newWorldPos, Quaternion.identity);
 			body.SetVelocity(dimension.GetAttachedOWRigidbody().GetPointVelocity(newWorldPos));
+
+			GlobalMessenger.FireEvent("PlayerFogWarp");
 		}
 	}
 }

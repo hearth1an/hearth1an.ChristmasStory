@@ -9,18 +9,18 @@
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(RIEBECK_TREE_2) We were missing you.</Text>				
-				<DialogueTarget>2</DialogueTarget>				
-			</DialogueOption>			
+				<Text>(RIEBECK_TREE_2) We were missing you.</Text>
+				<DialogueTarget>2</DialogueTarget>
+			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
 
 	<DialogueNode>
-	     <Name>2</Name>
-		 <Dialogue>
+		<Name>2</Name>
+		<Dialogue>
 			<Page>(RIEBECK_TREE_4) Ahh I really like this tree decorations</Page>
-			 <Page>(RIEBECK_TREE_8)  ... and barrel.</Page>			 
-		 </Dialogue>		
+			<Page>(RIEBECK_TREE_8)  ... and barrel.</Page>
+		</Dialogue>
 	</DialogueNode>
 
 
@@ -38,7 +38,7 @@
 			<DialogueOption>
 				<Text>(RIEBECK_TREE_7) Ha-ha! It's just a costume. Not a real nomai. They all died, you remember?</Text>
 				<DialogueTarget>4</DialogueTarget>
-			</DialogueOption>			
+			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
 
@@ -53,6 +53,6 @@
 		<Dialogue>
 			<Page>(RIEBECK_TREE_10) This is very good costume, I'd say! But yeah, you're right...</Page>
 		</Dialogue>
-	</DialogueNode>	
-	
+	</DialogueNode>
+
 </DialogueTree>
