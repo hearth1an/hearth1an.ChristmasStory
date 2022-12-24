@@ -30,9 +30,11 @@ namespace ChrismasStory.Characters.Travelers
 
 		protected override void Dialogue_OnStartConversation()
 		{
-			var shipNearRiebeck = ShipHandler.IsCharacterNearShip(originalCharacter.gameObject, 100f);
-			var shipNearVillage = ShipHandler.IsCharacterNearVillage(shipCharacter.gameObject, 100f);
 			var shipDestroyed = ShipHandler.HasShipExploded();
+
+			var shipNearRiebeck = ShipHandler.IsCharacterNearShip(originalCharacter.gameObject, 100f) && !shipDestroyed;
+			var shipNearVillage = ShipHandler.IsCharacterNearVillage(shipCharacter.gameObject, 100f) && !shipDestroyed;
+
 			var shipFarNotDestroyed = !shipNearRiebeck && !shipDestroyed;
 
 			DialogueConditionManager.SharedInstance.SetConditionState("SHIP_NEAR_RIEBECK", shipNearRiebeck);

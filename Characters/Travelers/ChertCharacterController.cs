@@ -48,12 +48,13 @@ namespace ChrismasStory.Characters.Travelers
 			var holdingWarpCore = HeldItemHandler.IsPlayerHoldingWarpCore();
 			var holdingStrangerArtifact = HeldItemHandler.IsPlayerHoldingStrangerArtifact();
 
-			var shipNearChert = ShipHandler.IsCharacterNearShip(originalCharacter.gameObject, 100f);
 			var shipDestroyed = ShipHandler.HasShipExploded();
-			var shipFarNotDestroyed = !shipNearChert && !shipDestroyed;
+
+			var shipNearChert = ShipHandler.IsCharacterNearShip(originalCharacter.gameObject, 100f) && !shipDestroyed;
+			var shipFar = !shipNearChert && !shipDestroyed;
 
 			DialogueConditionManager.SharedInstance.SetConditionState("SHIP_NEAR_CHERT", shipNearChert);
-			DialogueConditionManager.SharedInstance.SetConditionState("SHIP_FAR_CHERT", shipFarNotDestroyed);
+			DialogueConditionManager.SharedInstance.SetConditionState("SHIP_FAR_CHERT", shipFar);
 			DialogueConditionManager.SharedInstance.SetConditionState("SHIP_DESTROYED", shipDestroyed);
 
 			DialogueConditionManager.SharedInstance.SetConditionState("HOLDING_CORE", holdingWarpCore);

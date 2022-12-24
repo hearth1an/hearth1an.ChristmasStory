@@ -1,4 +1,5 @@
-﻿using NewHorizons.Utility;
+﻿using ChrismasStory.Components;
+using NewHorizons.Utility;
 using System;
 
 namespace ChrismasStory.Characters.Travelers
@@ -18,8 +19,14 @@ namespace ChrismasStory.Characters.Travelers
 
 			base.Start();
 
-			ChangeState(STATE.ORIGINAL);
+			ShipHandler.Instance.ShipExplosion.AddListener(ShipHandler_ShipExplosion);
         }
+
+		public override void OnDestroy()
+		{
+			base.OnDestroy();
+			ShipHandler.Instance?.ShipExplosion?.RemoveListener(ShipHandler_ShipExplosion);
+		}
 
 		protected override void Dialogue_OnStartConversation()
 		{
@@ -34,6 +41,14 @@ namespace ChrismasStory.Characters.Travelers
 		protected override void OnChangeState(STATE oldState, STATE newState)
 		{
 
+		}
+
+		private void ShipHandler_ShipExplosion()
+		{
+			if (ShipHandler.IsCharacterNearShip(originalCharacter, 150f))
+			{
+				PlayerData.SetPersistentCondition("GABBRO_SAW_EXPLOSION", true);
+			}
 		}
 	}
 }
