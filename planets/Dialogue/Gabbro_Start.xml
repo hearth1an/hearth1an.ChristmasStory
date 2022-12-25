@@ -5,15 +5,14 @@
 		<Name>Start</Name>
 		<EntryCondition>DEFAULT</EntryCondition>
 		<Dialogue>
-			<Page>(GABBRO_START_1) Hey it's you! Good to see you. Congrats on first launch!</Page>
+			<Page>(GABBRO_START_1) Hey it's you! Congrats on first launch.</Page>
 			<Page>(GABBRO_START_2) I dunno why, but I'm dying repeatedly. Sounds weird, huh?</Page>
 		</Dialogue>
 
-
 		<DialogueOptionsList>
-			<DialogueOption>
-				<RequieredPersistentCondition>GABBRO_START_PERSISTENT</RequieredPersistentCondition>
+			<DialogueOption>				
 				<Text>(GABBRO_START_38) Yes, we already had this conversation.</Text>
+				<RequiredPersistentCondition>GABBRO_START_PERSISTENT</RequiredPersistentCondition>
 				<DialogueTarget>2.3</DialogueTarget>
 			</DialogueOption>
 		    <DialogueOption>
@@ -59,7 +58,7 @@
 			<Page>(GABBRO_START_9) All this depressive and rainy stuff, you know.</Page>
 			<Page>(GABBRO_START_10) But on the oher hand... I'm also too bored to fly anywhere. Or getting in your ship.</Page>
 			<Page>(GABBRO_START_11) Let's do what, can you explode your ship so we both can die and iniciate first loop? I'll be in the ship on loop start and will fly to Timber Heart.</Page>
-			<Page>(GABBRO_START_12) I'll be in the ship on the loop start and could fly to Timber Hearth.</Page>
+			
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
@@ -82,19 +81,20 @@
 		<Name>7</Name>
 		<EntryCondition>GABBRO_START_MET</EntryCondition>		
 		<Dialogue>
-			<Page>(GABBRO_START_15) So... I'm waing for ship explosion so I we can die and start new loop.</Page>
+			<Page>(GABBRO_START_15) So... I'm wating for ship explosion so I we can die and start new loop.</Page>
 		</Dialogue>
-		<DialogueOptionsList>			
+		<DialogueOptionsList>
 			<DialogueOption>
+				<RequiredCondition>SHIP_DESTROYED</RequiredCondition>
+				<Text>(GABBRO_START_40) Um. The thing is... my ship is destroyed already.</Text>				
+				<DialogueTarget>9.1</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<CancelledCondition>SHIP_DESTROYED</CancelledCondition>  
 				<Text>(GABBRO_START_16) Sure. I'm working on it.</Text>
 				<DialogueTarget>9</DialogueTarget>
 			</DialogueOption>
-			<DialogueOption>
-				<RequieredCondition>SHIP_DESTROYED</RequieredCondition>
-				<Text>(GABBRO_START_40) Um. The thing is... my ship is destroyed already.</Text>
-				<CancelledCondition>SHIP_DESTROYED</CancelledCondition>
-				<DialogueTarget>9.1</DialogueTarget>
-			</DialogueOption>
+			
 		</DialogueOptionsList>
 	</DialogueNode>
 
@@ -102,29 +102,15 @@
 		 <Name>9.1</Name>
 		 <Dialogue>
 			 <Page>(GABBRO_START_41) No luck then. Try to not screw this up next loop!</Page>
+			 <ConditionToSet>GABBRO_START_FAILED</ConditionToSet>
 		 </Dialogue>
 	 </DialogueNode>
 
 	<DialogueNode>
-		<Name>4</Name>
-		<Dialogue>
-			<Page>(GABBRO_START_8) Alright, I'll wait for ya!</Page>
-		</Dialogue>
-	</DialogueNode>
-
-
-	<DialogueNode>
-		<Name>8</Name>
-		<EntryCondition>GABBRO_START_FAILED</EntryCondition>
-		<Dialogue>
-			<Page>(GABBRO_START_9) No celebration then? Sad... We can still sit here with campfire, you know..</Page>
-		</Dialogue>
-	</DialogueNode>
-
-	<DialogueNode>
 		<Name>9</Name>
 		<Dialogue>
-			<Page>(GABBRO_START_11) Gotcha! I'll wait then.</Page>
+			<Page>(GABBRO_START_11) Gotcha! I will be here.</Page>
 		</Dialogue>
 	</DialogueNode>
+	 
 </DialogueTree>

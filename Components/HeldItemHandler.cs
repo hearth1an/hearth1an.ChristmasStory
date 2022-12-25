@@ -7,16 +7,20 @@ namespace ChrismasStory.Components
 	{
 		private ToolModeSwapper _toolModeSwapper;
 		private static HeldItemHandler _instance;
+		private ItemTool _itemTool;
 
 		public void Start()
 		{
 			_toolModeSwapper = GameObject.FindObjectOfType<ToolModeSwapper>();
 			_instance = this;
+			_itemTool = GameObject.FindObjectOfType<ItemTool>();
 		}
 
 		public static OWItem GetHeldItem() => _instance._toolModeSwapper.GetItemCarryTool().GetHeldItem();
+		public static OWItem GetNullItem() => _instance._itemTool._heldItem = null;
 
-		
+
+
 
 		/// <summary>
 		/// Returns true if it is the functioning warp core from the ATP
@@ -26,7 +30,7 @@ namespace ChrismasStory.Components
 
 		public static bool IsPlayerHoldingStrangerArtifact() => GetHeldItem() is DreamLanternItem or VisionTorchItem;
 
-		public static bool IsPlayerHoldingJunk() => GetHeldItem() is not WarpCoreItem or DreamLanternItem && !GetHeldItem();
+		public static bool IsPlayerHoldingJunk() => GetHeldItem() is not WarpCoreItem or DreamLanternItem && GetNullItem();
 
 
         #region debug

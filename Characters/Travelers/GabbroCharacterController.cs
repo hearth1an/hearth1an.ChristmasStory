@@ -12,8 +12,8 @@ namespace ChrismasStory.Characters.Travelers
 
         public override void Start()
         {
-			dialogue = SearchUtilities.Find("GabbroIsland_Body/Sector_GabbroIsland/Interactables_GabbroIsland/Traveller_HEA_Gabbro/Traveller_HEA_Gabbro_ANIM_IdleFlute/ConversationZone").GetComponent<CharacterDialogueTree>();
-			// dialogue =
+			dialogue = SearchUtilities.Find("GabbroIsland_Body/Sector_GabbroIsland/Interactables_GabbroIsland/Traveller_HEA_Gabbro/ConversationZone").GetComponent<CharacterDialogueTree>();
+			
 			originalCharacter = SearchUtilities.Find("GabbroIsland_Body/Sector_GabbroIsland/Interactables_GabbroIsland/Traveller_HEA_Gabbro/Traveller_HEA_Gabbro_ANIM_IdleFlute");
             
             treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Gabbro"); // Will need to change the model since he don't have any static animation. Probably the best way is to rip from Eye Scene
@@ -25,9 +25,11 @@ namespace ChrismasStory.Characters.Travelers
 
 		public override void OnDestroy()
 		{
-			base.OnDestroy();
+			ChangeState(STATE.AT_TREE);
+			base.OnDestroy();			
 			ShipHandler.Instance?.ShipExplosion?.RemoveListener(ShipHandler_ShipExplosion);
-        }
+			
+		}
 
         protected override void Dialogue_OnStartConversation()
         {
@@ -45,18 +47,17 @@ namespace ChrismasStory.Characters.Travelers
 		}
 
 		protected override void OnChangeState(STATE oldState, STATE newState)
-		{
-			
+		{			
 
 		}
 
 		private void ShipHandler_ShipExplosion()
 		{
-			if (ShipHandler.IsCharacterNearShip(originalCharacter, 20f))
+			if (ShipHandler.IsCharacterNearShip(originalCharacter, 30f))
             {
-                PlayerData.SetPersistentCondition("GABBRO_SAW_EXPLOSION", true);
-                originalCharacter.SetActive(false);
+                PlayerData.SetPersistentCondition("GABBRO_SAW_EXPLOSION", true);				               
             }
+			OnDestroy();
         }
 	}
 }
