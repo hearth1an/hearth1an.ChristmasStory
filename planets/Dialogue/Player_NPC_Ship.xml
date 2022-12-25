@@ -1,49 +1,49 @@
 <DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
-	<NameField>Esker</NameField>
+	<NameField>Self</NameField>
 
 	<DialogueNode>
 		<Name>Start</Name>
 		<EntryCondition>DEFAULT</EntryCondition>
 		<Dialogue>
-			<Page>(ESKER_SHIP_1) I don't remember when I was in spaceship last time...</Page>
+			<Page>(NPC_PLAYER_SHIP_1) Let me see you drive. Are you better at it or not?</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
 				<RequiredCondition>SHIP_NEAR_VILLAGE</RequiredCondition>
-				<Text>(ESKER_SHIP_2) Alright, we here! Let's go celebrate!</Text>
-				<DialogueTarget>2</DialogueTarget>
-				<ConditionToSet>ESKER_SHIP_DONE</ConditionToSet>
+				<Text>(NPC_PLAYER_SHIP_2) Oh, we're at home already.</Text>
+				<DialogueTarget>2</DialogueTarget>				
 			</DialogueOption>
 			<DialogueOption>
-				<Text>(ESKER_SHIP_3) I'll let you know when we land near the Village.</Text>
-				<ConditionToSet>ESKER_SHIP_MET</ConditionToSet>
+				<Text>(NPC_PLAYER_SHIP_3) We'll go home soon. Just wait a bit.</Text>
+				<ConditionToSet>NPC_PLAYER_SHIP_MET</ConditionToSet>
 			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
 
 	<DialogueNode>
-		<SetPersistentCondition>ESKER_SHIP_DONE</SetPersistentCondition>
 		<Name>2</Name>
 		<Dialogue>
-			<Page>(ESKER_SHIP_4) Let's go! Merry Christmas!</Page>
+			<Page>(NPC_PLAYER_SHIP_4) Oh, that was fast!</Page>
 		</Dialogue>
+		<SetPersistentCondition>NPC_PLAYER_SHIP_DONE</SetPersistentCondition>
 	</DialogueNode>
 
 
 	<DialogueNode>
 		<Name>3</Name>
-		<EntryCondition>ESKER_SHIP_MET</EntryCondition>
+		<EntryCondition>NPC_PLAYER_SHIP_MET</EntryCondition>
 		<Dialogue>
-			<Page>(ESKER_SHIP_5) So, the flight is over?</Page>
+			<Page>(NPC_PLAYER_SHIP_5) So, are you the best at driving?</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(ESKER_SHIP_6) No, but I'll tell you when.</Text>
+				<Text>(NPC_PLAYER_SHIP_3) We'll go home soon. Just wait a bit.</Text>
 			</DialogueOption>
 			<DialogueOption>
 				<RequiredCondition>SHIP_NEAR_VILLAGE</RequiredCondition>
-				<Text>(ESKER_SHIP_7) Yes, we here! Let's go celebrate!</Text>
+				<Text>(NPC_PLAYER_SHIP_2) Oh, we're at home already.</Text>
 				<DialogueTarget>2</DialogueTarget>
+				<RequiredCondition>NPC_PLAYER_SHIP_DONE</RequiredCondition>
 			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>

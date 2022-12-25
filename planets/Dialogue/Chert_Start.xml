@@ -245,6 +245,11 @@
 				<DialogueTarget>19</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
+				<RequiredCondition>HOLDING_JUNK_ITEM</RequiredCondition>
+				<Text>(CHERT_START_99) Take a look at this item.</Text>
+				<DialogueTarget>19.1</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
 				<RequiredCondition>CHERT_ALL_DONE</RequiredCondition>
 				<Text>(CHERT_START_37) So, I've done everything you asked for. Let's go home to celebrate?</Text>
 				<ConditionToSet>CHERT_START_DONE</ConditionToSet>
@@ -254,6 +259,13 @@
 				<Text>(CHERT_START_80) I'll be right back.</Text>
 			</DialogueOption>
 		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>19.1</Name>
+		<Dialogue>
+			<Page>(CHERT_START_100) B-o-o-o-ring. Bring something significant!</Page>
+		</Dialogue>		
 	</DialogueNode>
 
 	<DialogueNode>
@@ -289,10 +301,12 @@
 		<Dialogue>
 			<Page>(CHERT_START_43) Uh.. easy to say! Okay, breath deep... breath..</Page>
 		</Dialogue>
+		<DialogueOptionsList>
 		<DialogueOption>
 			<Text>(CHERT_START_43.1) Anyway...</Text>
 			<DialogueTarget>15</DialogueTarget>
 		</DialogueOption>
+	  </DialogueOptionsList>
 	</DialogueNode>
 
 	<DialogueNode>
@@ -336,6 +350,7 @@
 
 	<DialogueNode>
 		<Name>21</Name>
+		<SetPersistentCondition>CHERT_START_DONE</SetPersistentCondition>
 		<Dialogue>
 			<Page>(CHERT_START_51) I don't really need your ship. Mine is functioning. See ya!</Page>
 		</Dialogue>

@@ -151,14 +151,9 @@
 				"path": "CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Volumes_Lakebed/Signal_Drums",
 				"parentPath": "Sector_TH/Traveller_HEA_Chert_ANIM_Chatter_Chipper",
 				"position": {
-					"x": -0.2,
-					"y": -0.1,
-					"z": -1.1
-				},
-				"rotation": {
-					"x": 0,
-					"y": 0,
-					"z": 0
+					"x": 0.009,
+					"y": 0.363,
+					"z": -0.355
 				}
 			},
 			{
@@ -245,16 +240,27 @@
 			},
 			{
 				"position": {
-					"x": 0,
-					"y": 0,
-					"z": 0
+					"x": 0.009,
+					"y": 0.363,
+					"z": -0.355
 				},
-				"xmlFile": "planets/Dialogue/Esker_Tree.xml",
-				"parentPath": "Sector_TH/Villager_HEA_Esker_ANIM_Rocking",
+				"xmlFile": "planets/Dialogue/Chert_Tree.xml",
+				"parentPath": "Sector_TH/Traveller_HEA_Chert_ANIM_Chatter_Chipper",
 				"isRelativeToParent": true,
 				"lookAtRadius": 2,
 				"radius": 1
-
+			},
+			{
+				"position": {
+					"x": -0.071,
+					"y": 0.922,
+					"z": -0.049
+				},
+				"xmlFile": "planets/Dialogue/Player_NPC_Tree.xml",
+				"parentPath": "Sector_TH/NPC_Player",
+				"isRelativeToParent": true,
+				"lookAtRadius": 2,
+				"radius": 1
 			}
 
 

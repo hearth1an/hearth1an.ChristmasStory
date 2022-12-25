@@ -38,13 +38,13 @@
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(ESKER_SHIP_6) No, but I'll tell you when.</Text>
-			</DialogueOption>
-			<DialogueOption>
 				<RequiredCondition>SHIP_NEAR_VILLAGE</RequiredCondition>
 				<Text>(ESKER_SHIP_7) Yes, we here! Let's go celebrate!</Text>
 				<DialogueTarget>2</DialogueTarget>
 			</DialogueOption>
+			<DialogueOption>
+				<Text>(ESKER_SHIP_6) No, but I'll tell you when.</Text>
+			</DialogueOption>			
 		</DialogueOptionsList>
 	</DialogueNode>
 </DialogueTree>

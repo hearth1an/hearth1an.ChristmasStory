@@ -12,9 +12,10 @@ namespace ChrismasStory.Characters.Travelers
 
         public override void Start()
         {
-            // dialogue =
-            originalCharacter = SearchUtilities.Find("GabbroIsland_Body/Sector_GabbroIsland/Interactables_GabbroIsland/Traveller_HEA_Gabbro/Traveller_HEA_Gabbro_ANIM_IdleFlute");
-            // shipCharacter = SearchUtilities.Find("Ship_Body/ShipSector/Ship_Gabbro");
+			dialogue = SearchUtilities.Find("GabbroIsland_Body/Sector_GabbroIsland/Interactables_GabbroIsland/Traveller_HEA_Gabbro/Traveller_HEA_Gabbro_ANIM_IdleFlute/ConversationZone").GetComponent<CharacterDialogueTree>();
+			// dialogue =
+			originalCharacter = SearchUtilities.Find("GabbroIsland_Body/Sector_GabbroIsland/Interactables_GabbroIsland/Traveller_HEA_Gabbro/Traveller_HEA_Gabbro_ANIM_IdleFlute");
+            
             treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Gabbro"); // Will need to change the model since he don't have any static animation. Probably the best way is to rip from Eye Scene
 
 			base.Start();
@@ -26,29 +27,36 @@ namespace ChrismasStory.Characters.Travelers
 		{
 			base.OnDestroy();
 			ShipHandler.Instance?.ShipExplosion?.RemoveListener(ShipHandler_ShipExplosion);
+        }
+
+        protected override void Dialogue_OnStartConversation()
+        {
+
+            var shipDestroyed = ShipHandler.HasShipExploded();
+            var shipNearGabbro = ShipHandler.IsCharacterNearShip(originalCharacter.gameObject, 100f) && !shipDestroyed;
+            var shipFar = !shipNearGabbro && !shipDestroyed;
+			
+			DialogueConditionManager.SharedInstance.SetConditionState("SHIP_DESTROYED", shipDestroyed);
 		}
 
-		protected override void Dialogue_OnStartConversation()
-		{
-
-		}
-
-		protected override void Dialogue_OnEndConversation()
+        protected override void Dialogue_OnEndConversation()
 		{
 
 		}
 
 		protected override void OnChangeState(STATE oldState, STATE newState)
 		{
+			
 
 		}
 
 		private void ShipHandler_ShipExplosion()
 		{
-			if (ShipHandler.IsCharacterNearShip(originalCharacter, 150f))
-			{
-				PlayerData.SetPersistentCondition("GABBRO_SAW_EXPLOSION", true);
-			}
-		}
+			if (ShipHandler.IsCharacterNearShip(originalCharacter, 20f))
+            {
+                PlayerData.SetPersistentCondition("GABBRO_SAW_EXPLOSION", true);
+                originalCharacter.SetActive(false);
+            }
+        }
 	}
 }

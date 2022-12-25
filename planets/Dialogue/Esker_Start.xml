@@ -13,25 +13,7 @@
 			<DialogueOption>
 				<Text>(ESKER_START_2) Wait, what? How did you know?</Text>
 				<DialogueTarget>2</DialogueTarget>
-
-			</DialogueOption>
-			<DialogueOption>
-				<RequiredCondition>SHIP_NEAR_ESKER</RequiredCondition>
-				<Text>(ESKER_START_3) Yes! I need you to celebrate Christmas. Let's go! (IF SHIP IS CLOSE ENOUGH AND NOT DESTROYED)</Text>
-				<ConditionToSet>ESKER_START_DONE</ConditionToSet>
-			</DialogueOption>
-			<DialogueOption>
-				<RequiredCondition>SHIP_FAR_ESKER</RequiredCondition>
-				<Text>(ESKER_START_4) Yes, but don't go anywhere, I need to take ship closer. (IF SHIP IS NOT CLOSE ENOUGH)</Text>
-				<ConditionToSet>ESKER_START_MET</ConditionToSet>
-				<DialogueTarget>4</DialogueTarget>
-			</DialogueOption>
-			<DialogueOption>
-				<RequiredCondition>SHIP_DESTROYED</RequiredCondition>
-				<Text>(ESKER_START_5) I'm sorry, Esker, but it seems like my ship is not working anymore. Sorry. (IF SHIP IS DESTROYED)</Text>
-				<ConditionToSet>ESKER_START_FAILED</ConditionToSet>
-				<DialogueTarget>8</DialogueTarget>
-			</DialogueOption>
+		    </DialogueOption>			
 		</DialogueOptionsList>
 	</DialogueNode>
 
@@ -44,6 +26,7 @@
 			<DialogueOption>
 				<Text>(ESKER_START_7) Oh, I see... You got me scared sometimes, Esker.</Text>
 				<DialogueTarget>7</DialogueTarget>
+				<ConditionToSet>ESKER_START_MET</ConditionToSet>
 			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
@@ -89,8 +72,7 @@
 
 
 	<DialogueNode>
-		<Name>8</Name>
-		<EntryCondition>ESKER_START_FAILED</EntryCondition>
+		<Name>8</Name>		
 		<Dialogue>
 			<Page>(ESKER_START_9) No celebration then? Sad... We can still sit here with campfire, you know..</Page>
 		</Dialogue>

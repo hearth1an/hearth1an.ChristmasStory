@@ -26,6 +26,7 @@ namespace ChrismasStory.Characters.Travelers
             treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Riebeck");
 
 			base.Start();
+			
 		}
 
 		protected override void Dialogue_OnStartConversation()

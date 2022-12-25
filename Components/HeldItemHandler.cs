@@ -16,6 +16,8 @@ namespace ChrismasStory.Components
 
 		public static OWItem GetHeldItem() => _instance._toolModeSwapper.GetItemCarryTool().GetHeldItem();
 
+		
+
 		/// <summary>
 		/// Returns true if it is the functioning warp core from the ATP
 		/// </summary>
@@ -24,8 +26,11 @@ namespace ChrismasStory.Components
 
 		public static bool IsPlayerHoldingStrangerArtifact() => GetHeldItem() is DreamLanternItem or VisionTorchItem;
 
-		#region debug
-		public static void GivePlayerWarpCore()
+		public static bool IsPlayerHoldingJunk() => GetHeldItem() is not WarpCoreItem or DreamLanternItem && !GetHeldItem();
+
+
+        #region debug
+        public static void GivePlayerWarpCore()
 		{
 			// Giving item breaks when you're flying the ship
 			if (!PlayerState.AtFlightConsole())

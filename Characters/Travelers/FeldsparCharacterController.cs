@@ -4,7 +4,7 @@ using NewHorizons.Utility;
 namespace ChrismasStory.Characters.Travelers
 {
     internal class FeldsparCharacterController : TravelerCharacterController
-	{
+    {
         /* Find Feldspar's note > Change some signals destinations > Find him in Dark Bramble, talk to him > Сlose eyes > 
 		He disappears, signal too > activating Feldspar in ship > Escort him to TH carefully > Check if we near the Village > 
 		Talk to him in ship > Closing eyes > he appears near the Christmas tree always. And sure he should be the only one Feldspar and signal (!!! There's a lot of signals). 
@@ -12,18 +12,20 @@ namespace ChrismasStory.Characters.Travelers
 
         public override void Start()
         {
-			dialogue = SearchUtilities.Find("DB_AnglerNestDimension_Body/Sector_AnglerNestDimension/Traveller_HEA_Feldspar/ConversationZone").GetComponent<CharacterDialogueTree>();
-			dialogueShip = SearchUtilities.Find("Ship_Body/ShipSector/Ship_Feldspar/ConversationZone").GetComponent<CharacterDialogueTree>();
-			dialogueVillage = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Feldspar/ConversationZone").GetComponent<CharacterDialogueTree>();
+            dialogue = SearchUtilities.Find("DB_AnglerNestDimension_Body/Sector_AnglerNestDimension/Traveller_HEA_Feldspar/ConversationZone").GetComponent<CharacterDialogueTree>();
+            dialogueShip = SearchUtilities.Find("Ship_Body/ShipSector/Ship_Feldspar/ConversationZone").GetComponent<CharacterDialogueTree>();
+            dialogueVillage = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Feldspar/ConversationZone").GetComponent<CharacterDialogueTree>();
 
-			originalCharacter = SearchUtilities.Find("DB_AnglerNestDimension_Body/Sector_AnglerNestDimension/Traveller_HEA_Feldspar");
+            originalCharacter = SearchUtilities.Find("DB_AnglerNestDimension_Body/Sector_AnglerNestDimension/Traveller_HEA_Feldspar");
             shipCharacter = SearchUtilities.Find("Ship_Body/ShipSector/Ship_Feldspar");
             treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Feldspar");
 
             base.Start();
+
+			
 		}
 
-		protected override void Dialogue_OnStartConversation()
+        protected override void Dialogue_OnStartConversation()
 		{
 			var shipDestroyed = ShipHandler.HasShipExploded();
 

@@ -15,24 +15,25 @@ namespace ChrismasStory.Characters.Travelers
 
 		private GameObject _emberTwinShip, _timberHearthShip, _originalDrums;
 
-		public override void Start()
-		{
-			_emberTwinShip = SearchUtilities.Find("CaveTwin_Body/Sector_CaveTwin/Geometry_CaveTwin/OtherComponentsGroup/Prefab_HEA_ChertShip");
-			_timberHearthShip = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Prefab_HEA_ChertShip");
+        public override void Start()
+        {
+            _emberTwinShip = SearchUtilities.Find("CaveTwin_Body/Sector_CaveTwin/Geometry_CaveTwin/OtherComponentsGroup/Prefab_HEA_ChertShip");
+            _timberHearthShip = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Prefab_HEA_ChertShip");
 
-			_originalDrums = SearchUtilities.Find("CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Volumes_Lakebed/Signal_Drums");
+            _originalDrums = SearchUtilities.Find("CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Volumes_Lakebed/Signal_Drums");
 
-			dialogue = SearchUtilities.Find("CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Interactables_Lakebed/Traveller_HEA_Chert/ConversationZone").GetComponent<CharacterDialogueTree>();
+            dialogue = SearchUtilities.Find("CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Interactables_Lakebed/Traveller_HEA_Chert/ConversationZone").GetComponent<CharacterDialogueTree>();
 
-			originalCharacter = SearchUtilities.Find("CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Interactables_Lakebed/Traveller_HEA_Chert");
-			treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Chert_ANIM_Chatter_Chipper");
+            originalCharacter = SearchUtilities.Find("CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Interactables_Lakebed/Traveller_HEA_Chert");
+            treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Chert_ANIM_Chatter_Chipper");
 
-			dialogue.OnSelectDialogueOption += Dialogue_OnSelectDialogueOption;
+            dialogue.OnSelectDialogueOption += Dialogue_OnSelectDialogueOption;
 
-			base.Start();
+            base.Start();
+			
 		}
 
-		public override void OnDestroy()
+        public override void OnDestroy()
 		{
 			base.OnDestroy();
 			if (dialogue) dialogue.OnSelectDialogueOption -= Dialogue_OnSelectDialogueOption;
@@ -47,6 +48,7 @@ namespace ChrismasStory.Characters.Travelers
 		{
 			var holdingWarpCore = HeldItemHandler.IsPlayerHoldingWarpCore();
 			var holdingStrangerArtifact = HeldItemHandler.IsPlayerHoldingStrangerArtifact();
+			var holdingJunkItem = HeldItemHandler.IsPlayerHoldingJunk(); 
 
 			var shipDestroyed = ShipHandler.HasShipExploded();
 
@@ -59,6 +61,7 @@ namespace ChrismasStory.Characters.Travelers
 
 			DialogueConditionManager.SharedInstance.SetConditionState("HOLDING_CORE", holdingWarpCore);
 			DialogueConditionManager.SharedInstance.SetConditionState("HOLDING_DLC_ITEM", holdingStrangerArtifact);
+			DialogueConditionManager.SharedInstance.SetConditionState("HOLDING_JUNK_ITEM", holdingJunkItem); 
 
 			ValidateAllDone();
 		}

@@ -5,13 +5,13 @@
 		<Name>Start</Name>
 		<EntryCondition>DEFAULT</EntryCondition>
 		<Dialogue>
-			<Page>(RIEBEKC_START_1) Oh, hello! Are you here to help?</Page>
+			<Page>(RIEBECK_START_1) Oh, hello! Are you here to help?</Page>
 		</Dialogue>
 
 
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(RIEBEC_START_2) Just... how? I mean... how you are here?</Text>
+				<Text>(RIEBECK_START_2) Just... how? I mean... how you are here?</Text>
 				<DialogueTarget>2</DialogueTarget>
 
 			</DialogueOption>
@@ -44,7 +44,7 @@
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(RIEBECK_START_7) I got you, Riebec glad to see you're alive and... safe. Kind of.</Text>
+				<Text>(RIEBECK_START_7) I got you, Riebeck glad to see you're alive and... safe. Kind of.</Text>
 				<DialogueTarget>7</DialogueTarget>
 			</DialogueOption>
 		</DialogueOptionsList>
@@ -81,16 +81,16 @@
 	<DialogueNode>
 		<Name>4</Name>
 		<Dialogue>
-			<Page>(RIEBEC_START_8) Of course! Just be careful here.</Page>
+			<Page>(RIEBECK_START_8) Of course! Just be careful here.</Page>
 		</Dialogue>
 	</DialogueNode>
 
 
 	<DialogueNode>
 		<Name>8</Name>
-		<EntryCondition>RIEBEC_START_FAILED</EntryCondition>
+		<EntryCondition>RIEBECK_START_FAILED</EntryCondition>
 		<Dialogue>
-			<Page>(RIEBEC_START_9) Damn it.. I guess I'll stay here for a while then...</Page>
+			<Page>(RIEBECK_START_9) Damn it.. I guess I'll stay here for a while then...</Page>
 		</Dialogue>
 	</DialogueNode>
 </DialogueTree>

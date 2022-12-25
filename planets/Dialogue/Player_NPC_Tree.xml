@@ -1,0 +1,60 @@
+<DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
+	<NameField>Self</NameField>
+
+	<DialogueNode>
+		<Name>Start</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>(NPC_PLAYER_TREE_1) ..Merry Christmas! To me.</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>(NPC_PLAYER_TREE_2) Yes, and to me.</Text>
+				<DialogueTarget>2</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>2</Name>
+		<Dialogue>
+			<Page>(NPC_PLAYER_TREE_4) Thanks.</Page>
+			<Page>(NPC_PLAYER_TREE_8) Don't you worry about time traveling stuff?</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>(NPC_PLAYER_TREE_11) What do you mean?</Text>
+				<DialogueTarget>5</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+
+	<DialogueNode>
+		<Name>5</Name>		
+		<Dialogue>
+			<Page>(NPC_PLAYERK_TREE_5) Well, that things about others seeing us both at the same time..</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>(NPC_PLAYER_TREE_6) I can't se anything explodes.</Text>
+				<DialogueTarget>3</DialogueTarget>
+			</DialogueOption>			
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>3</Name>
+		<Dialogue>
+			<Page>(NPC_PLAYER_TREE_9) Yes, that's what I would say too.</Page>
+			<Page>(NPC_PLAYER_TREE_12) You also could say it's someone in very good costume.</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>(NPC_PLAYER_TREE_13) My exact thought.</Text>
+				<DialogueTarget>3</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>	
+
+</DialogueTree>

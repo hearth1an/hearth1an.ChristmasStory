@@ -1,0 +1,26 @@
+{
+	"$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
+	"name": "GabbroIsland",
+	"Base": {
+		"gravityFallOff": "linear"
+	},
+	"Orbit": {},
+	"Props": {
+		"dialogue": [
+			{
+				"position": {
+					"x": -0.09,
+					"y": 1.21,
+					"z": 0
+				},
+				"xmlFile": "planets/Dialogue/Gabbro_Start.xml",
+				"parentPath": "Sector_GabbroIsland/Interactables_GabbroIsland/Traveller_HEA_Gabbro",
+				"isRelativeToParent": true,
+				"lookAtRadius": 2,
+				"radius": 1
+			}
+		]
+	},
+	"ReferenceFrame": {},
+	"ShipLog": {}
+}

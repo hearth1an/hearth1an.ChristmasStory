@@ -1,0 +1,130 @@
+ <DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
+	<NameField>Gabbro</NameField>
+
+	<DialogueNode>
+		<Name>Start</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>(GABBRO_START_1) Hey it's you! Good to see you. Congrats on first launch!</Page>
+			<Page>(GABBRO_START_2) I dunno why, but I'm dying repeatedly. Sounds weird, huh?</Page>
+		</Dialogue>
+
+
+		<DialogueOptionsList>
+			<DialogueOption>
+				<RequieredPersistentCondition>GABBRO_START_PERSISTENT</RequieredPersistentCondition>
+				<Text>(GABBRO_START_38) Yes, we already had this conversation.</Text>
+				<DialogueTarget>2.3</DialogueTarget>
+			</DialogueOption>
+		    <DialogueOption>
+				<CancelledPersistentCondition>GABBRO_START_PERSISTENT</CancelledPersistentCondition>
+				<Text>(GABBRO_START_28) Yeah, me too. We're in a time loop. Just me and you.</Text>
+				<DialogueTarget>2</DialogueTarget>
+		    </DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	 <DialogueNode>
+		 <Name>2.3</Name>
+		 <SetCondition>GABBRO_START_MET</SetCondition>
+		 <Dialogue>
+			 <Page>(GABBRO_START_39) Oh, yes, I remember. So.. something went wrong, right?</Page>
+		 </Dialogue>
+		 <DialogueOptionsList>
+			 <DialogueOption>
+				 <Text>(GABBRO_START_40) Yes. Let's try again.</Text>
+				 <DialogueTarget>7</DialogueTarget>
+			 </DialogueOption>
+		 </DialogueOptionsList>
+	 </DialogueNode>
+
+	 <DialogueNode>
+		<Name>2</Name>
+		<Dialogue>
+			<Page>(GABBRO_START_6) Ummm... makes sense. Hornfels didn't believe me that I'm dying every time.</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>(GABBRO_START_7) You seem comfortable here. By the way, we are celebrating Christmas in the Village, wanna join?</Text>
+				<DialogueTarget>2.1</DialogueTarget>				
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>2.1</Name>
+		<SetPersistentCondition>GABBRO_START_PERSISTENT</SetPersistentCondition>
+		<Dialogue>
+			<Page>(GABBRO_START_8) M-m-m... I don't know. I feel bored here to be honest.</Page>
+			<Page>(GABBRO_START_9) All this depressive and rainy stuff, you know.</Page>
+			<Page>(GABBRO_START_10) But on the oher hand... I'm also too bored to fly anywhere. Or getting in your ship.</Page>
+			<Page>(GABBRO_START_11) Let's do what, can you explode your ship so we both can die and iniciate first loop? I'll be in the ship on loop start and will fly to Timber Heart.</Page>
+			<Page>(GABBRO_START_12) I'll be in the ship on the loop start and could fly to Timber Hearth.</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>(GABBRO_START_13) I've never realized you're such lazy person before.</Text>
+				<DialogueTarget>2.2</DialogueTarget>				
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>2.2</Name>
+		<SetCondition>GABBRO_START_MET</SetCondition>
+		<Dialogue>
+			<Page>(GABBRO_START_14) Haha yep! That's me.</Page>			
+		</Dialogue>		
+	</DialogueNode>
+
+
+	<DialogueNode>
+		<Name>7</Name>
+		<EntryCondition>GABBRO_START_MET</EntryCondition>		
+		<Dialogue>
+			<Page>(GABBRO_START_15) So... I'm waing for ship explosion so I we can die and start new loop.</Page>
+		</Dialogue>
+		<DialogueOptionsList>			
+			<DialogueOption>
+				<Text>(GABBRO_START_16) Sure. I'm working on it.</Text>
+				<DialogueTarget>9</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<RequieredCondition>SHIP_DESTROYED</RequieredCondition>
+				<Text>(GABBRO_START_40) Um. The thing is... my ship is destroyed already.</Text>
+				<CancelledCondition>SHIP_DESTROYED</CancelledCondition>
+				<DialogueTarget>9.1</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	 <DialogueNode>
+		 <Name>9.1</Name>
+		 <Dialogue>
+			 <Page>(GABBRO_START_41) No luck then. Try to not screw this up next loop!</Page>
+		 </Dialogue>
+	 </DialogueNode>
+
+	<DialogueNode>
+		<Name>4</Name>
+		<Dialogue>
+			<Page>(GABBRO_START_8) Alright, I'll wait for ya!</Page>
+		</Dialogue>
+	</DialogueNode>
+
+
+	<DialogueNode>
+		<Name>8</Name>
+		<EntryCondition>GABBRO_START_FAILED</EntryCondition>
+		<Dialogue>
+			<Page>(GABBRO_START_9) No celebration then? Sad... We can still sit here with campfire, you know..</Page>
+		</Dialogue>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>9</Name>
+		<Dialogue>
+			<Page>(GABBRO_START_11) Gotcha! I'll wait then.</Page>
+		</Dialogue>
+	</DialogueNode>
+</DialogueTree>
