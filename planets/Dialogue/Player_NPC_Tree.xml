@@ -12,6 +12,10 @@
 				<Text>(NPC_PLAYER_TREE_2) Yes, and to me.</Text>
 				<DialogueTarget>2</DialogueTarget>
 			</DialogueOption>
+			<DialogueOption>
+				<Text>(NPC_PLAYER_TREE_14) Yep. Bye.</Text>
+				<DialogueTarget>2</DialogueTarget>
+			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
 
@@ -51,8 +55,7 @@
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(NPC_PLAYER_TREE_13) My exact thought.</Text>
-				<DialogueTarget>3</DialogueTarget>
+				<Text>(NPC_PLAYER_TREE_13) My exact thought.</Text>				
 			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>	

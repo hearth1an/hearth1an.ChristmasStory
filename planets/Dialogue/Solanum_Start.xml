@@ -1,0 +1,34 @@
+<DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
+	<NameField>Solanum</NameField>
+
+	<DialogueNode>
+		<Name>Start</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>(SOLANUM_START_1) ...</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+			    <RequiredCondition>HOLDING_ROCK</RequiredCondition>				
+				<Text>(SOLANUM_START_2) Hey! I.. I have something for you.</Text>
+				<ConditionToSet>SOLANUM_START</ConditionToSet>			
+			</DialogueOption>
+			<DialogueOption>
+			    <RequiredCondition>HOLDING_ROCK</RequiredCondition>
+				<Text>(SOLANUM_START_3) Could you read this please?</Text>
+				<ConditionToSet>SOLANUM_START</ConditionToSet>
+			</DialogueOption>
+			<DialogueOption>			   
+				<Text>(SOLANUM_START_1) ...</Text>				
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>3</Name>
+		<EntryCondition>SOLANUM_START</EntryCondition>
+		<Dialogue>
+			<Page>(SOLANUM_START_1) ...</Page>
+		</Dialogue>		
+	</DialogueNode>
+</DialogueTree>
