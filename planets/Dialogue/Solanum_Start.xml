@@ -7,16 +7,11 @@
 		<Dialogue>
 			<Page>(SOLANUM_START_1) ...</Page>
 		</Dialogue>
-		<DialogueOptionsList>
+		<DialogueOptionsList>			
 			<DialogueOption>
-			    <RequiredCondition>HOLDING_ROCK</RequiredCondition>				
-				<Text>(SOLANUM_START_2) Hey! I.. I have something for you.</Text>
-				<ConditionToSet>SOLANUM_START</ConditionToSet>			
-			</DialogueOption>
-			<DialogueOption>
-			    <RequiredCondition>HOLDING_ROCK</RequiredCondition>
-				<Text>(SOLANUM_START_3) Could you read this please?</Text>
-				<ConditionToSet>SOLANUM_START</ConditionToSet>
+			    <RequiredCondition>HOLDING_INVITE_STONE</RequiredCondition>
+				<Text>(SOLANUM_START_3) Hey! I got something for you.</Text>
+				<ConditionToSet>SOLANUM_START</ConditionToSet>				
 			</DialogueOption>
 			<DialogueOption>			   
 				<Text>(SOLANUM_START_1) ...</Text>				
@@ -26,9 +21,9 @@
 
 	<DialogueNode>
 		<Name>3</Name>
-		<EntryCondition>SOLANUM_START</EntryCondition>
+		<EntryCondition>SOLANUM_START_DONE</EntryCondition>
 		<Dialogue>
-			<Page>(SOLANUM_START_1) ...</Page>
+			<Page>(SOLANUM_START_1) ...</Page>			
 		</Dialogue>		
-	</DialogueNode>
+	</DialogueNode>	
 </DialogueTree>

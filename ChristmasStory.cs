@@ -53,6 +53,8 @@ namespace ChrismasStory
 			var player = SearchUtilities.Find("Player_Body");
 			player.AddComponent<PlayerEffectController>();
 			player.AddComponent<HeldItemHandler>();
+			player.AddComponent<SolanumAnimationController>();
+			// player.AddComponent<PrisonerAnimationController>();
 
 			var ship = SearchUtilities.Find("Ship_Body");
 			ship.AddComponent<ShipHandler>();
@@ -65,13 +67,20 @@ namespace ChrismasStory
 			characterControllers.AddComponent<GabbroCharacterController>();
 			characterControllers.AddComponent<RiebeckCharacterController>();
 			characterControllers.AddComponent<PlayerNPCCharacterController>();
-			
+			characterControllers.AddComponent<SolanumCharacterController>();
+			// characterControllers.AddComponent<PrisonerCharacterController>();
+
+
 			if (PlayerData.PersistentConditionExists("CHERT_PHRASE_KNOWN"))
 			{
 				PlayerData.SetPersistentCondition("CHERT_PHRASE_KNOWN_NEXT_LOOP", true);
 				ModHelper.Console.WriteLine("Chert phrase known.", MessageType.Success);
 			}
-			
+			if (PlayerData.PersistentConditionExists("SOLANUM_DONE"))
+			{				
+				ModHelper.Console.WriteLine("Solanum event completed.", MessageType.Success);
+			}
+
 
 #if DEBUG
 			player.AddComponent<DebugCommands>();
@@ -104,7 +113,8 @@ namespace ChrismasStory
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Lighting_LowerVillage/OtherComponentsGroup/LowerVillage/Props_HEA_Lantern (11)").SetActive(false);
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Volumes_Village/MusicVolume_Village").SetActive(false);
 				SearchUtilities.Find("BrittleHollow_Body/Sector_BH/Sector Quantum Pole Path/Fragment QuantumPolePath 5").GetComponent<FragmentIntegrity>().enabled = false;
-
+				SearchUtilities.Find("QuantumMoon_Body/Sector_QuantumMoon/State_EYE/Interactables_EYEState/ConversationPivot/Character_NOM_Solanum/ConversationZone").SetActive(false);
+				SearchUtilities.Find("QuantumMoon_Body/Sector_QuantumMoon/State_EYE/Interactables_EYEState/ConversationPivot/Character_NOM_Solanum/WatchZone").SetActive(false);
 				SearchUtilities.Find("DB_HubDimension_Body/Sector_HubDimension/Interactables_HubDimension/InnerWarp_ToCluster/Signal_Harmonica").SetActive(false);
 
 

@@ -21,6 +21,7 @@ namespace ChrismasStory.Characters.Travelers
 			base.Start();
 
 			ShipHandler.Instance.ShipExplosion.AddListener(ShipHandler_ShipExplosion);
+			
         }
 
 		public override void OnDestroy()
@@ -56,8 +57,7 @@ namespace ChrismasStory.Characters.Travelers
 			if (ShipHandler.IsCharacterNearShip(originalCharacter, 30f))
             {
                 PlayerData.SetPersistentCondition("GABBRO_SAW_EXPLOSION", true);				               
-            }
-			OnDestroy();
+            }			
         }
 	}
 }

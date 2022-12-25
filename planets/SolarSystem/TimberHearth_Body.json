@@ -1,10 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
-	"name": "TimberHearth",
-	"Base": {
-		"gravityFallOff": "linear"
-	},
-	"Orbit": {},
+	"name": "TimberHearth",	
 	"Props": {
 		"details": [
 			{
@@ -199,6 +195,8 @@
 			{
 				"path": "GabbroShip_Body",
 				"rename": "GabbroShip",
+				"parentPath": "Sector_TH",
+				"removeComponents": true,
 				"position": {
 					"x": 33.8095245,
 					"y": 78.29883,
@@ -210,6 +208,19 @@
 					"z": 22.1955814
 				}
 
+			},
+			{
+				"path": "QuantumMoon_Body/Sector_QuantumMoon/State_EYE/Interactables_EYEState/ConversationPivot/Character_NOM_Solanum/Nomai_ANIM_SkyWatching_Idle",
+				"position": {
+					"x": 1.33840907,
+					"y": -25.1820259,
+					"z": 185.448227
+				},
+				"rotation": {
+					"x": 290.42395,
+					"y": 292.150482,
+					"z": 246.990112
+				}
 			}
 		],
 		"dialogue": [
@@ -261,20 +272,8 @@
 				"isRelativeToParent": true,
 				"lookAtRadius": 2,
 				"radius": 1
-			},
-			{
-				"path": "QuantumMoon_Body/Sector_QuantumMoon/State_EYE/Interactables_EYEState/ConversationPivot/Character_NOM_Solanum/Nomai_ANIM_SkyWatching_Idle",
-				"position": {
-					"x": 1.33840907,
-					"y": -25.1820259,
-					"z": 185.448227
-				},
-				"rotation": {
-					"x": 290.42395,
-					"y": 292.150482,
-					"z": 246.990112
-				}
 			}
+			
 
 
 		],
@@ -295,7 +294,7 @@
 							"y": 274.6205,
 							"z": 265.6711
 						},
-						"rename": "Stone"
+						"rename": "Invite_Stone"
 					}
 				]
 			}
