@@ -16,12 +16,12 @@
 
 			</DialogueOption>
 			<DialogueOption>
-				<RequiredCondition>SHIP_NEAR_FELDSPAR</RequiredCondition>
+				<RequiredCondition>FELDSPAR_SHIP_NEAR</RequiredCondition>
 				<Text>(FELDSPAR_START_3) Sure! Let's go. (IF SHIP IS CLOSE ENOUGH AND NOT DESTROYED)</Text>
 				<ConditionToSet>FELDSPAR_START_DONE</ConditionToSet>
 			</DialogueOption>
 			<DialogueOption>
-				<RequiredCondition>SHIP_FAR_FELDSPAR</RequiredCondition>
+				<RequiredCondition>FELDSPAR_SHIP_FAR</RequiredCondition>
 				<Text>(FELDSPAR_START_4) Don't go anywhere, I'll take ship closer. (IF SHIP IS NOT CLOSE ENOUGH)</Text>
 				<ConditionToSet>FELDSPAR_START_MET</ConditionToSet>
 				<DialogueTarget>4</DialogueTarget>
@@ -57,12 +57,12 @@
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<RequiredCondition>SHIP_NEAR_FELDSPAR</RequiredCondition>
+				<RequiredCondition>FELDSPAR_SHIP_NEAR</RequiredCondition>
 				<Text>(FELDSPAR_START_3) Sure! Let's go.</Text>
 				<ConditionToSet>FELDSPAR_START_DONE</ConditionToSet>
 			</DialogueOption>
 			<DialogueOption>
-				<RequiredCondition>SHIP_FAR_FELDSPAR</RequiredCondition>
+				<RequiredCondition>FELDSPAR_SHIP_FAR</RequiredCondition>
 				<Text>(FELDSPAR_START_4) Don't go anywhere, I'll take ship closer.</Text>
 				<DialogueTarget>4</DialogueTarget>
 			</DialogueOption>

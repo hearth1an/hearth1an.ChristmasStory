@@ -7,7 +7,7 @@
 		public CharacterDialogueTree dialogueShip;
 		public CharacterDialogueTree dialogueVillage;
 
-		public virtual void Start()
+		public override void Start()
 		{
 			if (dialogue != null)
 			{
@@ -25,7 +25,7 @@
 				dialogueVillage.OnEndConversation += Dialogue_OnEndConversation;
 			}
 
-			ChangeState(STATE.ORIGINAL);
+			base.Start();
 		}
 
 		public virtual void OnDestroy()

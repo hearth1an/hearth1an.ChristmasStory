@@ -43,13 +43,13 @@
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<RequiredCondition>SHIP_NEAR_NPC_PLAYER</RequiredCondition>
+				<RequiredCondition>NPC_PLAYER_SHIP_NEAR</RequiredCondition>
 				<Text>(NPC_PLAYER_START_3) Let's get into the ship then.</Text>
 				<ConditionToSet>NPC_PLAYER_START_DONE</ConditionToSet>
 				<DialogueTarget>5</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
-				<RequiredCondition>SHIP_FAR_NPC_PLAYER</RequiredCondition>
+				<RequiredCondition>NPC_PLAYER_SHIP_FAR</RequiredCondition>
 				<Text>(NPC_PLAYER_START_4) Just don't go anywhere, I'll take my ship closer.</Text>
 				<ConditionToSet>NPC_PLAYER_START_MET</ConditionToSet>
 				<DialogueTarget>4</DialogueTarget>

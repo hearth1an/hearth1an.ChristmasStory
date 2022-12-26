@@ -2,6 +2,7 @@
 using NewHorizons.Utility;
 using HarmonyLib;
 using UnityEngine.Events;
+using ChristmasStory.Utility;
 
 namespace ChrismasStory.Components
 {
@@ -63,6 +64,7 @@ namespace ChrismasStory.Components
 		[HarmonyPatch(typeof(ShipDamageController), nameof(ShipDamageController.Explode))]
 		private static void ShipDamageController_Explode()
 		{
+			Conditions.Set(Conditions.CONDITION.SHIP_DESTROYED, true);
 			Instance.ShipExplosion.Invoke();
 		}
 	}

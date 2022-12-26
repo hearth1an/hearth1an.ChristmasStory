@@ -13,9 +13,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="HarmonyX" Version="2.10.0" />
-    <PackageReference Include="OWML" Version="2.3.2" />
-    <PackageReference Include="OuterWildsGameLibs" Version="1.1.12.168" />
+    <PackageReference Include="HarmonyX" Version="2.10.1" />
+    <PackageReference Include="OWML" Version="2.8.0" />
+    <PackageReference Include="OuterWildsGameLibs" Version="1.1.13.393" />
     
     <Reference Include="NewHorizons">
       <HintPath>$(OuterWildsModsDirectory)\xen.NewHorizons\NewHorizons.dll</HintPath>

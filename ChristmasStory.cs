@@ -21,7 +21,7 @@ namespace ChrismasStory
 		}
 		private void Start()
 		{
-			var newHorizonsAPI = ModHelper.Interaction.GetModApi<INewHorizons>("xen.NewHorizons");
+			var newHorizonsAPI = ModHelper.Interaction.TryGetModApi<INewHorizons>("xen.NewHorizons");
 			newHorizonsAPI.LoadConfigs(this);
 			newHorizonsAPI.GetStarSystemLoadedEvent().AddListener(OnStarSystemLoaded);
 			ModHelper.Console.WriteLine($"{nameof(ChristmasStory)} is loaded!", MessageType.Success);
@@ -86,7 +86,7 @@ namespace ChrismasStory
 			player.AddComponent<DebugCommands>();
 #endif
 
-			ModHelper.Events.Unity.FireOnNextUpdate(AfterSpawn);
+			Delay.FireOnNextUpdate(AfterSpawn);
 		}
 
 		private void AfterSpawn()

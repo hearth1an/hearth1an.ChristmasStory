@@ -1,4 +1,5 @@
 ﻿using ChrismasStory.Components;
+using ChristmasStory.Utility;
 using NewHorizons.Utility;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,7 @@ namespace ChristmasStory.Components
 			RegisterDebugCommand(Key.Numpad1, ShipHandler.BlowUpShip);
 			RegisterDebugCommand(Key.Numpad2, HeldItemHandler.GivePlayerWarpCore);
 			RegisterDebugCommand(Key.Numpad3, HeldItemHandler.GivePlayerLantern);
+			RegisterDebugCommand(Key.Numpad9, Conditions.ResetAllConditions);
 
 			RegisterDebugWarpCommand(Key.Numpad1, () => WarpToPlanet(AstroObject.Name.TimberMoon, 100f)); // Esker
 			RegisterDebugWarpCommand(Key.Numpad2, () => WarpToPlanet(AstroObject.Name.CaveTwin, 180)); // Chert

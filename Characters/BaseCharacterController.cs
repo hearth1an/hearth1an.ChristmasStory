@@ -1,4 +1,5 @@
 ﻿using ChrismasStory.Components;
+using ChristmasStory.Utility;
 using System.Collections;
 using UnityEngine;
 
@@ -8,21 +9,34 @@ namespace ChrismasStory.Characters
 	{
 		public GameObject originalCharacter, shipCharacter, treeCharacter;
 
-        public enum STATE
-        {
+		public enum STATE
+		{
 			NONE,
-            ORIGINAL,
-            ON_SHIP,
-            AT_TREE
-        };
-		
-		public STATE State { get; private set; }      
+			ORIGINAL,
+			ON_SHIP,
+			AT_TREE
+		};
 
-		
-        public void ChangeState(STATE newState)
+		public STATE State { get; private set; }
+
+		public abstract Conditions.PERSISTENT DoneCondition { get; }
+
+		public virtual void Start()
+		{
+			if (Conditions.Get(DoneCondition))
+			{
+				ChangeState(STATE.AT_TREE);
+			}
+			else
+			{
+				ChangeState(STATE.ORIGINAL);
+			}
+		}
+
+		public void ChangeState(STATE newState)
 		{
 			if (State != newState)
-            {
+			{
 				// Blink for 2 seconds means 1 second to close eyes then 1 second to open
 				// Right in the middle we change the state
 
@@ -50,7 +64,13 @@ namespace ChrismasStory.Characters
 				OnChangeState(State, newState);
 
 				State = newState;
-			}		
+
+				if (State == STATE.AT_TREE)
+				{
+					// Now that they are done we set it as a persistent condition
+					Conditions.Set(DoneCondition, true);
+				}
+			}
 		}
 
 		protected abstract void OnChangeState(STATE oldState, STATE newState);
@@ -110,7 +130,7 @@ namespace ChrismasStory.Characters
 			PlayerEffectController.Blink(2);
 
 			yield return new WaitForSeconds(wait);
-			
+
 			OnSetState(state);
 
 			OWInput.ChangeInputMode(InputMode.Character);

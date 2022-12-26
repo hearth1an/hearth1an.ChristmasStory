@@ -329,13 +329,13 @@
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<RequiredCondition>SHIP_NEAR_CHERT</RequiredCondition>
+				<RequiredCondition>CHERT_SHIP_NEAR</RequiredCondition>
 				<Text>(CHERT_START_48) Yay! Let's go, my ship is near.</Text>
 				<DialogueTarget>21</DialogueTarget>
 			</DialogueOption>
 
 			<DialogueOption>
-				<RequiredCondition>SHIP_FAR_CHERT</RequiredCondition>
+				<RequiredCondition>CHERT_SHIP_FAR</RequiredCondition>
 				<Text>(CHERT_START_49) Wait a sec. I need to take my ship closer.</Text>
 				<DialogueTarget>21</DialogueTarget>
 			</DialogueOption>

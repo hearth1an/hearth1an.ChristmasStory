@@ -40,12 +40,12 @@
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<RequiredCondition>SHIP_NEAR_ESKER</RequiredCondition>
+				<RequiredCondition>ESKER_SHIP_NEAR</RequiredCondition>
 				<Text>(ESKER_START_3) Yes! I need you to celebrate Christmas. Let's go! (IF SHIP IS CLOSE ENOUGH AND NOT DESTROYED)</Text>
 				<ConditionToSet>ESKER_START_DONE</ConditionToSet>
 			</DialogueOption>
 			<DialogueOption>
-				<RequiredCondition>SHIP_FAR_ESKER</RequiredCondition>
+				<RequiredCondition>ESKER_SHIP_FAR</RequiredCondition>
 				<Text>(ESKER_START_4) Yes, but don't go anywhere, I need to take ship closer. (IF SHIP IS NOT CLOSE ENOUGH)</Text>
 				<ConditionToSet>ESKER_START_MET</ConditionToSet>
 				<DialogueTarget>4</DialogueTarget>

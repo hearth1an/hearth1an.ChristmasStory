@@ -1,4 +1,5 @@
 ﻿using ChrismasStory.Components;
+using ChristmasStory.Utility;
 using NewHorizons.Utility;
 using UnityEngine;
 
@@ -15,25 +16,26 @@ namespace ChrismasStory.Characters.Travelers
 
 		private GameObject _emberTwinShip, _timberHearthShip, _originalDrums;
 
-        public override void Start()
-        {
-            _emberTwinShip = SearchUtilities.Find("CaveTwin_Body/Sector_CaveTwin/Geometry_CaveTwin/OtherComponentsGroup/Prefab_HEA_ChertShip");
-            _timberHearthShip = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Prefab_HEA_ChertShip");
+		public override Conditions.PERSISTENT DoneCondition => Conditions.PERSISTENT.CHERT_DONE;
 
-            _originalDrums = SearchUtilities.Find("CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Volumes_Lakebed/Signal_Drums");
+		public override void Start()
+		{
+			_emberTwinShip = SearchUtilities.Find("CaveTwin_Body/Sector_CaveTwin/Geometry_CaveTwin/OtherComponentsGroup/Prefab_HEA_ChertShip");
+			_timberHearthShip = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Prefab_HEA_ChertShip");
 
-            dialogue = SearchUtilities.Find("CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Interactables_Lakebed/Traveller_HEA_Chert/ConversationZone").GetComponent<CharacterDialogueTree>();
+			_originalDrums = SearchUtilities.Find("CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Volumes_Lakebed/Signal_Drums");
 
-            originalCharacter = SearchUtilities.Find("CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Interactables_Lakebed/Traveller_HEA_Chert");
-            treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Chert_ANIM_Chatter_Chipper");
+			dialogue = SearchUtilities.Find("CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Interactables_Lakebed/Traveller_HEA_Chert/ConversationZone").GetComponent<CharacterDialogueTree>();
 
-            dialogue.OnSelectDialogueOption += Dialogue_OnSelectDialogueOption;
+			originalCharacter = SearchUtilities.Find("CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Interactables_Lakebed/Traveller_HEA_Chert");
+			treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Chert_ANIM_Chatter_Chipper");
 
-            base.Start();
-			
+			dialogue.OnSelectDialogueOption += Dialogue_OnSelectDialogueOption;
+
+			base.Start();
 		}
 
-        public override void OnDestroy()
+		public override void OnDestroy()
 		{
 			base.OnDestroy();
 			if (dialogue) dialogue.OnSelectDialogueOption -= Dialogue_OnSelectDialogueOption;
@@ -48,31 +50,32 @@ namespace ChrismasStory.Characters.Travelers
 		{
 			var holdingWarpCore = HeldItemHandler.IsPlayerHoldingWarpCore();
 			var holdingStrangerArtifact = HeldItemHandler.IsPlayerHoldingStrangerArtifact();
-			var holdingJunkItem = HeldItemHandler.IsPlayerHoldingJunk(); 
+			var holdingJunkItem = HeldItemHandler.IsPlayerHoldingJunk();
 
 			var shipDestroyed = ShipHandler.HasShipExploded();
 
 			var shipNearChert = ShipHandler.IsCharacterNearShip(originalCharacter.gameObject, 100f) && !shipDestroyed;
 			var shipFar = !shipNearChert && !shipDestroyed;
 
-			DialogueConditionManager.SharedInstance.SetConditionState("SHIP_NEAR_CHERT", shipNearChert);
-			DialogueConditionManager.SharedInstance.SetConditionState("SHIP_FAR_CHERT", shipFar);
-			DialogueConditionManager.SharedInstance.SetConditionState("SHIP_DESTROYED", shipDestroyed);
+			Conditions.Set(Conditions.CONDITION.CHERT_SHIP_NEAR, shipNearChert);
+			Conditions.Set(Conditions.CONDITION.CHERT_SHIP_FAR, shipFar);
 
-			DialogueConditionManager.SharedInstance.SetConditionState("HOLDING_CORE", holdingWarpCore);
-			DialogueConditionManager.SharedInstance.SetConditionState("HOLDING_DLC_ITEM", holdingStrangerArtifact);
-			DialogueConditionManager.SharedInstance.SetConditionState("HOLDING_JUNK_ITEM", holdingJunkItem); 
+			Conditions.Set(Conditions.CONDITION.HOLDING_CORE, holdingWarpCore);
+			Conditions.Set(Conditions.CONDITION.HOLDING_DLC_ITEM, holdingStrangerArtifact);
+			Conditions.Set(Conditions.CONDITION.HOLDING_JUNK_ITEM, holdingJunkItem);
 
 			ValidateAllDone();
 		}
 
 		private void ValidateAllDone()
 		{
-			if (DialogueConditionManager.SharedInstance.GetConditionState("CHERT_PHRASE_TOLD") &&
-				DialogueConditionManager.SharedInstance.GetConditionState("CHERT_CORE_DONE") &&
-				DialogueConditionManager.SharedInstance.GetConditionState("CHERT_DLC_ITEM_DONE"))
+			var phraseTold = Conditions.Get(Conditions.CONDITION.CHERT_PHRASE_TOLD);
+			var coreDone = Conditions.Get(Conditions.CONDITION.CHERT_CORE_DONE);
+			var dlcDone = Conditions.Get(Conditions.CONDITION.CHERT_DLC_ITEM_DONE);
+
+			if (phraseTold && coreDone && dlcDone)
 			{
-				DialogueConditionManager.SharedInstance.SetConditionState("CHERT_ALL_DONE", true);
+				Conditions.Set(Conditions.CONDITION.CHERT_ALL_DONE, true);
 			}
 		}
 
@@ -81,7 +84,7 @@ namespace ChrismasStory.Characters.Travelers
 			switch (State)
 			{
 				case STATE.ORIGINAL:
-					if (DialogueConditionManager.SharedInstance.GetConditionState("CHERT_START_DONE"))
+					if (Conditions.Get(Conditions.CONDITION.CHERT_START_DONE))
 					{
 						ChangeState(STATE.AT_TREE);
 					}

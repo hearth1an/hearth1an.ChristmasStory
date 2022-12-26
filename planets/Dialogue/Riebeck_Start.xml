@@ -16,12 +16,12 @@
 
 			</DialogueOption>
 			<DialogueOption>
-				<RequiredCondition>SHIP_NEAR_RIEBECK</RequiredCondition>
+				<RequiredCondition>RIEBECK_SHIP_NEAR</RequiredCondition>
 				<Text>(RIEBECK_START_3) Yep, my ship should be near, let's get in.</Text>
 				<ConditionToSet>RIEBECK_START_DONE</ConditionToSet>
 			</DialogueOption>
 			<DialogueOption>
-				<RequiredCondition>SHIP_FAR_RIEBECK</RequiredCondition>
+				<RequiredCondition>RIEBECK_SHIP_FAR</RequiredCondition>
 				<Text>(RIEBECK_START_4) Hold on, I'll take ship little closer.</Text>
 				<ConditionToSet>RIEBECK_START_MET</ConditionToSet>
 				<DialogueTarget>4</DialogueTarget>
@@ -59,12 +59,12 @@
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<RequiredCondition>SHIP_NEAR_RIEBECK</RequiredCondition>
+				<RequiredCondition>RIEBECK_SHIP_NEAR</RequiredCondition>
 				<Text>(RIEBECK_START_3) Sure! Let's go.</Text>
 				<ConditionToSet>RIEBECK_START_DONE</ConditionToSet>
 			</DialogueOption>
 			<DialogueOption>
-				<RequiredCondition>SHIP_FAR_RIEBECK</RequiredCondition>
+				<RequiredCondition>RIEBECK_SHIP_FAR</RequiredCondition>
 				<Text>(RIEBECK_START_4) Don't go anywhere, I'll take ship closer.</Text>
 				<ConditionToSet>RIEBECK_START_MET</ConditionToSet>
 				<DialogueTarget>4</DialogueTarget>
