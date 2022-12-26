@@ -72,7 +72,7 @@ namespace ChrismasStory.Characters.Travelers
 
 		private void ValidateAllDone()
 		{
-			var phraseTold = Conditions.Get(Conditions.CONDITION.CHERT_PHRASE_TOLD);
+			var phraseTold = Conditions.Get(Conditions.PERSISTENT.CHERT_PHRASE_TOLD);
 			var coreDone = Conditions.Get(Conditions.CONDITION.CHERT_CORE_DONE);
 			var dlcDone = Conditions.Get(Conditions.CONDITION.CHERT_DLC_ITEM_DONE);
 

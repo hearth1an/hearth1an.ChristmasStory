@@ -45,7 +45,7 @@ namespace ChrismasStory.Characters
 					if (State == STATE.ORIGINAL && newState == STATE.AT_TREE)
 					{
 						// If going from original position to tree, they are taking their own ship
-						StartCoroutine(FlyShipCoroutine(newState));
+						StartCoroutine(DirectToTree(newState));
 					}
 					else if (State == STATE.ORIGINAL && newState == STATE.ON_SHIP)
 					{
@@ -109,7 +109,7 @@ namespace ChrismasStory.Characters
 			Locator.GetPauseCommandListener().RemovePauseCommandLock();
 		}
 
-		private IEnumerator FlyShipCoroutine(STATE state)
+		protected virtual IEnumerator DirectToTree(STATE state)
 		{
 			var oldInputMode = OWInput.GetInputMode();
 			OWInput.ChangeInputMode(InputMode.None);
@@ -148,7 +148,7 @@ namespace ChrismasStory.Characters
 			Locator.GetPauseCommandListener().RemovePauseCommandLock();
 		}
 
-		private void OnSetState(STATE state)
+		protected void OnSetState(STATE state)
 		{
 			originalCharacter?.SetActive(state == STATE.ORIGINAL);
 			shipCharacter?.SetActive(state == STATE.ON_SHIP);

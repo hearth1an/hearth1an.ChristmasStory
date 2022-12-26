@@ -1,32 +1,33 @@
-﻿using System.Linq;
-using UnityEngine;
+﻿using HarmonyLib;
 using NewHorizons.Utility;
+using System.Linq;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace ChrismasStory.Components
 {
+	[HarmonyPatch]
 	internal class HeldItemHandler : MonoBehaviour
 	{
 		private ToolModeSwapper _toolModeSwapper;
 		private static HeldItemHandler _instance;
 		private ItemTool _itemTool;
 		public SharedStone _sharedStone;
-		private NomaiConversationStone _nomaiConversationStone;
 		private GameObject _villageSector;
 
-		public UnityEvent BringItem { get; private set; }
+		public class ItemEvent : UnityEvent<OWItem> { }
+		public ItemEvent ItemDropped = new();
 
 		public static HeldItemHandler Instance;
 
 		public void Start()
 		{
-			BringItem = new();
 			Instance = this;
 			_toolModeSwapper = GameObject.FindObjectOfType<ToolModeSwapper>();
 			_instance = this;
 			_itemTool = GameObject.FindObjectOfType<ItemTool>();
             _sharedStone = GameObject.FindObjectsOfType<SharedStone>().First(x => x.name == "Invite_Stone");
-			_nomaiConversationStone = GameObject.FindObjectOfType<NomaiConversationStone>();
+
 			_villageSector = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Nomai_ANIM_SkyWatching_Idle");
 		}
 
@@ -45,14 +46,11 @@ namespace ChrismasStory.Components
 
 		public static bool IsPlayerHoldingInviteStone() => GetHeldItem() == _instance._sharedStone;
 
-		public static bool IsCharacterNearVillage(float distance)
+		[HarmonyPrefix]
+		[HarmonyPatch(typeof(OWItem), nameof(OWItem.DropItem))]
+		private static void OWItem_DropItem()
 		{
-			return (Instance._nomaiConversationStone.transform.position - Instance._villageSector.transform.position).sqrMagnitude < distance * distance;
-		}
-
-		private static void BringItem_Done()
-		{
-			Instance.BringItem.Invoke();
+			Instance?.ItemDropped?.Invoke(GetHeldItem());
 		}
 
 		#region debug

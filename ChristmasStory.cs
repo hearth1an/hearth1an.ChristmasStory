@@ -2,6 +2,8 @@
 using ChrismasStory.Components;
 using ChrismasStory.Utilities.ModAPIs;
 using ChristmasStory.Components;
+using ChristmasStory.Components.Animation;
+using ChristmasStory.Utility;
 using HarmonyLib;
 using NewHorizons.Utility;
 using OWML.Common;
@@ -12,7 +14,7 @@ using UnityEngine;
 
 namespace ChrismasStory
 {
-	public class ChristmasStory : ModBehaviour
+    public class ChristmasStory : ModBehaviour
 	{
 		public static INewHorizons newHorizonsAPI;
 		public static ChristmasStory Instance;
@@ -80,17 +82,15 @@ namespace ChrismasStory
 			characterControllers.AddComponent<SolanumCharacterController>();
 			// characterControllers.AddComponent<PrisonerCharacterController>();
 
-
-			if (PlayerData.PersistentConditionExists("CHERT_PHRASE_KNOWN"))
+			if (Conditions.Get(Conditions.PERSISTENT.CHERT_PHRASE_TOLD))
 			{
-				PlayerData.SetPersistentCondition("CHERT_PHRASE_KNOWN_NEXT_LOOP", true);
-				ModHelper.Console.WriteLine("Chert phrase known.", MessageType.Success);
+				Conditions.Set(Conditions.PERSISTENT.CHERT_PHRASE_KNOWN_NEXT_LOOP, true);
+				WriteLine("Chert phrase known.");
 			}
-			if (PlayerData.PersistentConditionExists("SOLANUM_DONE"))
+			if (Conditions.Get(Conditions.PERSISTENT.SOLANUM_DONE))
 			{
 				ModHelper.Console.WriteLine("Solanum event completed.", MessageType.Success);
 			}
-
 
 #if DEBUG
 			player.AddComponent<DebugCommands>();
@@ -105,8 +105,6 @@ namespace ChrismasStory
 			TravellersReplacements();
 			CharactersReplacement();
 			GeoRemovements();
-
-
 		}
 
 		public void GeoRemovements()
@@ -126,8 +124,6 @@ namespace ChrismasStory
 				SearchUtilities.Find("QuantumMoon_Body/Sector_QuantumMoon/State_EYE/Interactables_EYEState/ConversationPivot/Character_NOM_Solanum/ConversationZone").SetActive(false);
 				SearchUtilities.Find("QuantumMoon_Body/Sector_QuantumMoon/State_EYE/Interactables_EYEState/ConversationPivot/Character_NOM_Solanum/WatchZone").SetActive(false);
 				SearchUtilities.Find("DB_HubDimension_Body/Sector_HubDimension/Interactables_HubDimension/InnerWarp_ToCluster/Signal_Harmonica").SetActive(false);
-
-
 			}
 			catch (Exception ex)
 			{

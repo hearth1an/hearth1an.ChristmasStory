@@ -2,9 +2,8 @@
 using NewHorizons.Handlers;
 using NewHorizons.Utility;
 using UnityEngine;
-using UnityEngine.Events;
 
-namespace ChrismasStory.Components
+namespace ChristmasStory.Components.Animation
 {
     internal class SolanumAnimationController : MonoBehaviour
     {
@@ -27,8 +26,8 @@ namespace ChrismasStory.Components
 
             _nomaiText.HideTextOnStart();
 
-			StreamingHandler.SetUpStreaming(_conversationStone.gameObject, null);
-		}
+            StreamingHandler.SetUpStreaming(_conversationStone.gameObject, null);
+        }
         public void WriteWallText()
         {
             Instance._animator.StartWritingMessage();
@@ -47,7 +46,7 @@ namespace ChrismasStory.Components
         }
         public void RevealStone()
         {
-            Instance._conversationStone.Reveal();           
+            Instance._conversationStone.Reveal();
             Instance._audioSource.PlayOneShot(AudioType.SolanumSymbolReveal, 0.5f);
         }
         public void StopSound()
@@ -79,7 +78,7 @@ namespace ChrismasStory.Components
             Invoke("PlayWholeAnimation", 2f);
         }
 
-        
+
 
     }
 }

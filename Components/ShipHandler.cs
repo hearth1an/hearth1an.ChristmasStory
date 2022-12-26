@@ -41,9 +41,9 @@ namespace ChrismasStory.Components
 			return (character.transform.position - Instance._shipBody.transform.position).sqrMagnitude < distance * distance;
 		}
 
-		public static bool IsCharacterNearVillage(GameObject character, float distance)
+		public static bool IsShipNearVillage(float distance)
 		{
-			return (character.transform.position - Instance._villageSector.transform.position).sqrMagnitude < distance * distance;
+			return (Instance._shipBody.transform.position - Instance._villageSector.transform.position).sqrMagnitude < distance * distance;
 		}
 
 		public static bool HasShipExploded() => Instance._shipDamageController._hullBreach;

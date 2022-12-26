@@ -33,7 +33,7 @@ namespace ChrismasStory.Characters.Travelers
 			var shipDestroyed = ShipHandler.HasShipExploded();
 
 			var shipNearNPCPlayer = ShipHandler.IsCharacterNearShip(originalCharacter.gameObject, 150f) && !shipDestroyed;
-			var shipNearVillage = ShipHandler.IsCharacterNearVillage(shipCharacter.gameObject, 100f) && !shipDestroyed;
+			var shipNearVillage = ShipHandler.IsShipNearVillage(100f) && !shipDestroyed;
 			var shipFar = !shipNearNPCPlayer && !shipDestroyed;
 
 			Conditions.Set(Conditions.CONDITION.NPC_PLAYER_SHIP_NEAR, shipNearNPCPlayer);

@@ -1,6 +1,9 @@
 ﻿using ChrismasStory.Components;
+using ChristmasStory.Components.Animation;
 using ChristmasStory.Utility;
 using NewHorizons.Utility;
+using System.Collections;
+using UnityEngine;
 
 namespace ChrismasStory.Characters.Travelers
 {
@@ -20,35 +23,27 @@ namespace ChrismasStory.Characters.Travelers
 		{
 			dialogue = SearchUtilities.Find("QuantumMoon_Body/Sector_QuantumMoon/State_EYE/Interactables_EYEState/ConversationPivot/Character_NOM_Solanum/Nomai_ANIM_SkyWatching_Idle/ConversationZone").GetComponent<CharacterDialogueTree>();
 			treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Nomai_ANIM_SkyWatching_Idle");
+			originalCharacter = SearchUtilities.Find("QuantumMoon_Body/Sector_QuantumMoon/State_EYE/Interactables_EYEState/ConversationPivot/Character_NOM_Solanum");
+
+			HeldItemHandler.Instance.ItemDropped.AddListener(OnItemDropped);
 
 			base.Start();
-
-			HeldItemHandler.Instance.BringItem.AddListener(HeldItemHandler_BringItemDone);
-		}
-
-		public override void OnDestroy()
-		{
-			ChangeState(STATE.AT_TREE);
-			base.OnDestroy();
-			HeldItemHandler.Instance?.BringItem?.RemoveListener(HeldItemHandler_BringItemDone);
 		}
 
 		protected override void Dialogue_OnStartConversation()
 		{
 			var holdingInviteStone = HeldItemHandler.IsPlayerHoldingInviteStone();
-			// var inviteStoneNearTheVillage = HeldItemHandler.IsCharacterNearVillage();
-			DialogueConditionManager.SharedInstance.SetConditionState("HOLDING_INVITE_STONE", holdingInviteStone);
+			Conditions.Set(Conditions.CONDITION.HOLDING_INVITE_STONE, holdingInviteStone);
 		}
 
 		protected override void Dialogue_OnEndConversation()
 		{
-			if (DialogueConditionManager.SharedInstance.GetConditionState("SOLANUM_START"))
+			if (Conditions.Get(Conditions.CONDITION.SOLANUM_START)) 
 			{
 				SolanumAnimationController.Instance.SolanumAnimEvent();
 
-				DialogueConditionManager.SharedInstance.SetConditionState("SOLANUM_START", false);
-				DialogueConditionManager.SharedInstance.SetConditionState("SOLANUM_START_DONE", true);
-
+				Conditions.Set(Conditions.CONDITION.SOLANUM_START, false);
+				Conditions.Set(Conditions.CONDITION.SOLANUM_START_DONE, true);
 			}
 		}
 
@@ -57,12 +52,38 @@ namespace ChrismasStory.Characters.Travelers
 
 		}
 
-		private void HeldItemHandler_BringItemDone()
+		private void OnItemDropped(OWItem item)
 		{
-			if (HeldItemHandler.IsCharacterNearVillage(50f))
+			var distance = 100f;
+			var withinDistance = (Locator.GetPlayerTransform().position - treeCharacter.transform.position).sqrMagnitude < distance * distance;
+			if (item.name == "WordStone_You" && withinDistance)
 			{
-				PlayerData.SetPersistentCondition("SOLANUM_DONE", true);
+				ChangeState(STATE.AT_TREE);
 			}
+		}
+
+		protected override IEnumerator DirectToTree(STATE state)
+		{
+			// Plays for 15.33s
+			PlayerEffectController.PlayAudioOneShot(AudioType.EYE_QuantumFoamApproach, 1f);
+
+			yield return new WaitForSeconds(15f);
+
+			var oldInputMode = OWInput.GetInputMode();
+			OWInput.ChangeInputMode(InputMode.None);
+			Locator.GetPauseCommandListener().AddPauseCommandLock();
+
+			PlayerEffectController.CloseEyes(0.33f);
+			yield return new WaitForSeconds(0.33f);
+
+			// Eyes closed: swap character state
+			OnSetState(state);
+
+			// Open eyes
+			PlayerEffectController.OpenEyes(0.33f);
+
+			OWInput.ChangeInputMode(oldInputMode);
+			Locator.GetPauseCommandListener().RemovePauseCommandLock();
 		}
 	}
 }

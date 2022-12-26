@@ -1,57 +1,57 @@
 {
-    "$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
-    "name": "QuantumMoon",
-    "Props": {
-        "nomaiText": [
-            {
-                "arcInfo": [
-                    {
-                        "position": {
-                            "x": 0.4,
-                            "y": 0.5
-                        },
-                        "type": "adult",
-                        "variation": 28,
-                        "zRotation": 93.0
-                    }
-                ],
-                "normal": {
-                    "x": -0.719040334,
-                    "y": 0.0947849154,
-                    "z": 0.688474655
-                },
-                "position": {
-                    "x": -2.71077561,
-                    "y": -70.5499,
-                    "z": 1.55687451
-                },
-                "rotation": {
-                    "x": 356.639343,
-                    "y": 314.3946,
-                    "z": 86.70398
-                },
-                "seed": 42,
-                "type": "wall",
-                "location": "unspecified",
-                "xmlFile": "planets/Text/QMresponse.xml",
-                "parentPath": "Sector_QuantumMoon/State_EYE",
-                "rename": "QMResponseText"
-            }
-        ],
-        "dialogue": [
-            {
-                "position": {
-                    "x": 0,
-                    "y": 1.759,
-                    "z": 0.216
-                },
-                "xmlFile": "planets/Dialogue/Solanum_Start.xml",
-                "parentPath": "Sector_QuantumMoon/State_EYE/Interactables_EYEState/ConversationPivot/Character_NOM_Solanum/Nomai_ANIM_SkyWatching_Idle",
-                "isRelativeToParent": true,
-                "lookAtRadius": 10,
-                "pathToAnimController": "Sector_QuantumMoon/State_EYE/Interactables_EYEState/ConversationPivot/Character_NOM_Solanum/Nomai_ANIM_SkyWatching_Idle",                
-                "radius": 1           
-            }
-        ]
-    }
+	"$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
+	"name": "QuantumMoon",
+	"Props": {
+		"nomaiText": [
+			{
+				"arcInfo": [
+					{
+						"position": {
+							"x": 0.4,
+							"y": 0.5
+						},
+						"type": "adult",
+						"variation": 28,
+						"zRotation": 93.0
+					}
+				],
+				"normal": {
+					"x": -0.719040334,
+					"y": 0.0947849154,
+					"z": 0.688474655
+				},
+				"position": {
+					"x": -2.71077561,
+					"y": -70.5499,
+					"z": 1.55687451
+				},
+				"rotation": {
+					"x": 356.639343,
+					"y": 314.3946,
+					"z": 86.70398
+				},
+				"seed": 42,
+				"type": "wall",
+				"location": "unspecified",
+				"xmlFile": "planets/Text/QMresponse.xml",
+				"parentPath": "Sector_QuantumMoon/State_EYE",
+				"rename": "QMResponseText"
+			}
+		],
+		"dialogue": [
+			{
+				"position": {
+					"x": 0,
+					"y": 1.759,
+					"z": 0.216
+				},
+				"xmlFile": "planets/Dialogue/Solanum_Start.xml",
+				"parentPath": "Sector_QuantumMoon/State_EYE/Interactables_EYEState/ConversationPivot/Character_NOM_Solanum/Nomai_ANIM_SkyWatching_Idle",
+				"isRelativeToParent": true,
+				"lookAtRadius": 10,
+				"pathToAnimController": "Sector_QuantumMoon/State_EYE/Interactables_EYEState/ConversationPivot/Character_NOM_Solanum/Nomai_ANIM_SkyWatching_Idle",
+				"radius": 1
+			}
+		]
+	}
 }

@@ -15,7 +15,6 @@ namespace ChristmasStory.Utility
             HOLDING_CORE,
             HOLDING_DLC_ITEM,
             HOLDING_JUNK_ITEM,
-            CHERT_PHRASE_TOLD,
             CHERT_CORE_DONE,
             CHERT_DLC_ITEM_DONE,
             CHERT_ALL_DONE,
@@ -43,15 +42,21 @@ namespace ChristmasStory.Utility
             RIEBECK_SHIP_NEAR,
             RIEBECK_SHIP_FAR,
             RIEBECK_START_DONE,
-            RIEBECK_SHIP_DONE
+            RIEBECK_SHIP_DONE,
 
-
-        }
+			// Solanum
+			SOLANUM_START,
+			SOLANUM_START_DONE,
+			HOLDING_INVITE_STONE
+		}
 
         public enum PERSISTENT
         {
             CHERT_DONE,
-            ESKER_DONE,
+			CHERT_PHRASE_TOLD,
+			CHERT_PHRASE_KNOWN_NEXT_LOOP,
+
+			ESKER_DONE,
             FELDSPAR_DONE,
             GABBRO_DONE,
             SELF_DONE,
