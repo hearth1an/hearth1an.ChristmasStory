@@ -32,11 +32,13 @@ namespace ChristmasStory.Components
 			RegisterDebugCommand(Key.Numpad3, HeldItemHandler.GivePlayerLantern, "Get lantern");
 			RegisterDebugCommand(Key.Numpad9, Conditions.ResetAllConditions, "Reset conditions");
 
-			RegisterDebugWarpCommand(Key.Numpad1, () => WarpToPlanet(AstroObject.Name.TimberMoon, 100f), "Warp to Esker");
-			RegisterDebugWarpCommand(Key.Numpad2, () => WarpToPlanet(AstroObject.Name.CaveTwin, 180), "Warp to Chert");
-			RegisterDebugWarpCommand(Key.Numpad3, () => WarpToPlanet(AstroObject.Name.BrittleHollow, 350f), "Warp to Riebeck");
-			RegisterDebugWarpCommand(Key.Numpad4, WarpToGabbroIsland, "Warp to Gabbro");
-			RegisterDebugWarpCommand(Key.Numpad5, WarpToFeldspar, "Warp to Feldspar");
+			RegisterDebugWarpCommand(Key.Numpad0, () => WarpUtils.WarpToPlanet(AstroObject.Name.TimberHearth, new Vector3(-11.8f, -27.2f, 184.8f)), "Warp to Village");
+			RegisterDebugWarpCommand(Key.Numpad1, () => WarpUtils.WarpToPlanet(AstroObject.Name.TimberMoon, 100f), "Warp to Esker");
+			RegisterDebugWarpCommand(Key.Numpad2, () => WarpUtils.WarpToPlanet(AstroObject.Name.CaveTwin, 180), "Warp to Chert");
+			RegisterDebugWarpCommand(Key.Numpad3, () => WarpUtils.WarpToPlanet(AstroObject.Name.BrittleHollow, 350f), "Warp to Riebeck");
+			RegisterDebugWarpCommand(Key.Numpad4, WarpUtils.WarpToGabbroIsland, "Warp to Gabbro");
+			RegisterDebugWarpCommand(Key.Numpad5, WarpUtils.WarpToFeldspar, "Warp to Feldspar");
+			RegisterDebugWarpCommand(Key.Numpad6, WarpUtils.WarpToSixthLocation, "Warp to Solanum");
 		}
 
 		public void Update()
@@ -110,44 +112,6 @@ namespace ChristmasStory.Components
 			_warpPromptList.Add(PromptUtils.AddPrompt(description, PromptPosition.UpperRight, key));
 		}
 
-		private static void WarpToPlanet(AstroObject.Name planetName, float offset)
-		{
-			var planet = Locator.GetAstroObject(planetName);
 
-			var body = PlayerState.AtFlightConsole() ? Locator.GetShipBody() : Locator.GetPlayerBody();
-
-			var newWorldPos = planet.transform.position + Vector3.up * offset;
-
-			body.WarpToPositionRotation(newWorldPos, Quaternion.identity);
-			body.SetVelocity(planet.GetAttachedOWRigidbody().GetPointVelocity(newWorldPos));
-		}
-
-		private static void WarpToGabbroIsland()
-		{
-			var island = SearchUtilities.Find("GabbroIsland_Body");
-
-			var planet = Locator.GetAstroObject(AstroObject.Name.GiantsDeep);
-
-			var body = PlayerState.AtFlightConsole() ? Locator.GetShipBody() : Locator.GetPlayerBody();
-
-			var newWorldPos = island.transform.TransformPoint(Vector3.up * 30f);
-
-			body.WarpToPositionRotation(newWorldPos, island.transform.rotation);
-			body.SetVelocity(planet.GetAttachedOWRigidbody().GetPointVelocity(newWorldPos));
-		}
-
-		private static void WarpToFeldspar()
-		{
-			var dimension = SearchUtilities.Find("DB_AnglerNestDimension_Body");
-
-			var body = PlayerState.AtFlightConsole() ? Locator.GetShipBody() : Locator.GetPlayerBody();
-
-			var newWorldPos = dimension.transform.TransformPoint(new Vector3(10, 10, 25));
-
-			body.WarpToPositionRotation(newWorldPos, Quaternion.identity);
-			body.SetVelocity(dimension.GetAttachedOWRigidbody().GetPointVelocity(newWorldPos));
-
-			GlobalMessenger.FireEvent("PlayerFogWarp");
-		}
 	}
 }

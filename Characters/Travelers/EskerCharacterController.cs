@@ -15,9 +15,8 @@ namespace ChrismasStory.Characters.Travelers
 
 		public override void Start()
 		{
-			dialogue = SearchUtilities.Find("Moon_Body/Sector_THM/Esker_Start_Dialogue").GetComponent<CharacterDialogueTree>();
+			dialogue = SearchUtilities.Find("Moon_Body/Sector_THM/Characters_THM/Villager_HEA_Esker/Esker_Start_Dialogue").GetComponent<CharacterDialogueTree>();
 			dialogueShip = SearchUtilities.Find("Ship_Body/ShipSector/Ship_Esker/ConversationZone").GetComponent<CharacterDialogueTree>();
-			dialogueVillage = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Villager_HEA_Esker_ANIM_Rocking/ConversationZone").GetComponent<CharacterDialogueTree>();
 
 			originalCharacter = SearchUtilities.Find("Moon_Body/Sector_THM/Characters_THM/Villager_HEA_Esker");
 			shipCharacter = SearchUtilities.Find("Ship_Body/ShipSector/Ship_Esker");
