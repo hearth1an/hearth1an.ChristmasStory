@@ -1,8 +1,6 @@
 ﻿using ChrismasStory.Components;
 using ChristmasStory.Utility;
 using NewHorizons.Utility;
-using UnityEngine;
-using UnityEngine.Events;
 
 namespace ChrismasStory.Characters.Travelers
 {
@@ -27,14 +25,12 @@ namespace ChrismasStory.Characters.Travelers
 			HeldItemHandler.Instance?.BringItem?.RemoveListener(HeldItemHandler_BringItemDone);
 		}
 
-
 		protected override void Dialogue_OnStartConversation()
 		{
 			var holdingInviteStone = HeldItemHandler.IsPlayerHoldingInviteStone();
 			// var inviteStoneNearTheVillage = HeldItemHandler.IsCharacterNearVillage();
 			DialogueConditionManager.SharedInstance.SetConditionState("HOLDING_INVITE_STONE", holdingInviteStone);
 		}
-
 
 		protected override void Dialogue_OnEndConversation()
 		{

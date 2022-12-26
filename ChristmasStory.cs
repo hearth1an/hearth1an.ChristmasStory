@@ -2,10 +2,12 @@
 using ChrismasStory.Components;
 using ChrismasStory.Utilities.ModAPIs;
 using ChristmasStory.Components;
+using HarmonyLib;
 using NewHorizons.Utility;
 using OWML.Common;
 using OWML.ModHelper;
 using System;
+using System.Reflection;
 using UnityEngine;
 
 namespace ChrismasStory
@@ -18,7 +20,9 @@ namespace ChrismasStory
 		private void Awake()
 		{
 			Instance = this;
+			Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly());
 		}
+
 		private void Start()
 		{
 			var newHorizonsAPI = ModHelper.Interaction.TryGetModApi<INewHorizons>("xen.NewHorizons");
@@ -27,6 +31,12 @@ namespace ChrismasStory
 			ModHelper.Console.WriteLine($"{nameof(ChristmasStory)} is loaded!", MessageType.Success);
 		}
 
+		public static void WriteDebug(string line)
+		{
+#if DEBUG
+			Instance.ModHelper.Console.WriteLine(line, MessageType.Debug);
+#endif
+		}
 		public static void WriteLine(string line) => Instance.ModHelper.Console.WriteLine(line, MessageType.Info);
 		public static void WriteError(string line) => Instance.ModHelper.Console.WriteLine(line, MessageType.Error);
 		public static void WriteLine(string line, MessageType type) => Instance.ModHelper.Console.WriteLine($"{type}: " + line, type);

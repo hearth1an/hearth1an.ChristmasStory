@@ -64,8 +64,9 @@ namespace ChrismasStory.Components
 		[HarmonyPatch(typeof(ShipDamageController), nameof(ShipDamageController.Explode))]
 		private static void ShipDamageController_Explode()
 		{
+			ChristmasStory.WriteDebug("Explosion event");
 			Conditions.Set(Conditions.CONDITION.SHIP_DESTROYED, true);
-			Instance.ShipExplosion.Invoke();
+			Instance.ShipExplosion?.Invoke();
 		}
 	}
 }

@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
-	"name": "TimberHearth",	
+	"name": "TimberHearth",
 	"Props": {
 		"details": [
 			{
@@ -193,10 +193,13 @@
 				}
 			},
 			{
-				"path": "GabbroShip_Body",
+				"path": "GabbroShip_Body/Sector_GabbroShip",
 				"rename": "GabbroShip",
-				"parentPath": "Sector_TH",
 				"removeComponents": true,
+				"removeChildren": [
+					"SectorTrigger_GabbroShip",
+					"FoundShipTrigger"
+				],
 				"position": {
 					"x": 33.8095245,
 					"y": 78.29883,
@@ -207,7 +210,6 @@
 					"y": 19.8350887,
 					"z": 22.1955814
 				}
-
 			},
 			{
 				"path": "QuantumMoon_Body/Sector_QuantumMoon/State_EYE/Interactables_EYEState/ConversationPivot/Character_NOM_Solanum/Nomai_ANIM_SkyWatching_Idle",
@@ -273,7 +275,7 @@
 				"lookAtRadius": 2,
 				"radius": 1
 			}
-			
+
 
 
 		],

@@ -25,41 +25,49 @@ namespace ChrismasStory.Characters
 		{
 			if (Conditions.Get(DoneCondition))
 			{
-				ChangeState(STATE.AT_TREE);
+				ChangeState(STATE.AT_TREE, false);
 			}
 			else
 			{
-				ChangeState(STATE.ORIGINAL);
+				ChangeState(STATE.ORIGINAL, false);
 			}
 		}
 
-		public void ChangeState(STATE newState)
+		public void ChangeState(STATE newState, bool blink = true)
 		{
 			if (State != newState)
 			{
 				// Blink for 2 seconds means 1 second to close eyes then 1 second to open
 				// Right in the middle we change the state
 
-				if (State == STATE.ORIGINAL && newState == STATE.AT_TREE)
+				if (blink)
 				{
-					// If going from original position to tree, they are taking their own ship
-					StartCoroutine(FlyShipCoroutine(newState));
-				}
-				else if (State == STATE.ORIGINAL && newState == STATE.ON_SHIP)
-				{
-					// From original position into the ship they are walking to the ship and into the hatch
-					StartCoroutine(ShipCoroutine(newState));
-				}
-				else if (State == STATE.ON_SHIP && newState == STATE.AT_TREE)
-				{
-					// Exit hatch then walk
-					StartCoroutine(ShipCoroutine(newState));
+					if (State == STATE.ORIGINAL && newState == STATE.AT_TREE)
+					{
+						// If going from original position to tree, they are taking their own ship
+						StartCoroutine(FlyShipCoroutine(newState));
+					}
+					else if (State == STATE.ORIGINAL && newState == STATE.ON_SHIP)
+					{
+						// From original position into the ship they are walking to the ship and into the hatch
+						StartCoroutine(ShipCoroutine(newState));
+					}
+					else if (State == STATE.ON_SHIP && newState == STATE.AT_TREE)
+					{
+						// Exit hatch then walk
+						StartCoroutine(ShipCoroutine(newState));
+					}
+					else
+					{
+						// This shouldn't happen but just in case
+						StartCoroutine(ChangeStateCoroutine(2f, newState));
+					}
 				}
 				else
 				{
-					// This shouldn't happen but just in case
-					StartCoroutine(ChangeStateCoroutine(2f, newState));
+					OnSetState(newState);
 				}
+
 
 				OnChangeState(State, newState);
 
@@ -77,6 +85,7 @@ namespace ChrismasStory.Characters
 
 		private IEnumerator ShipCoroutine(STATE state)
 		{
+			var oldInputMode = OWInput.GetInputMode();
 			OWInput.ChangeInputMode(InputMode.None);
 			Locator.GetPauseCommandListener().AddPauseCommandLock();
 
@@ -96,12 +105,13 @@ namespace ChrismasStory.Characters
 			// Open eyes
 			PlayerEffectController.OpenEyes(0.7f);
 
-			OWInput.ChangeInputMode(InputMode.Character);
+			OWInput.ChangeInputMode(oldInputMode);
 			Locator.GetPauseCommandListener().RemovePauseCommandLock();
 		}
 
 		private IEnumerator FlyShipCoroutine(STATE state)
 		{
+			var oldInputMode = OWInput.GetInputMode();
 			OWInput.ChangeInputMode(InputMode.None);
 			Locator.GetPauseCommandListener().AddPauseCommandLock();
 
@@ -118,12 +128,13 @@ namespace ChrismasStory.Characters
 			// Open eyes
 			PlayerEffectController.OpenEyes(1f);
 
-			OWInput.ChangeInputMode(InputMode.Character);
+			OWInput.ChangeInputMode(oldInputMode);
 			Locator.GetPauseCommandListener().RemovePauseCommandLock();
 		}
 
 		private IEnumerator ChangeStateCoroutine(float wait, STATE state)
 		{
+			var oldInputMode = OWInput.GetInputMode();
 			OWInput.ChangeInputMode(InputMode.None);
 			Locator.GetPauseCommandListener().AddPauseCommandLock();
 
@@ -133,7 +144,7 @@ namespace ChrismasStory.Characters
 
 			OnSetState(state);
 
-			OWInput.ChangeInputMode(InputMode.Character);
+			OWInput.ChangeInputMode(oldInputMode);
 			Locator.GetPauseCommandListener().RemovePauseCommandLock();
 		}
 

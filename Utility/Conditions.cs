@@ -57,9 +57,6 @@ namespace ChristmasStory.Utility
             SELF_DONE,
             RIEBECK_DONE,
             SOLANUM_DONE,
-
-            // Gabbro
-            GABBRO_DIED_EXPLOSION
         }
 
         public static bool Get(PERSISTENT condition) => PlayerData.GetPersistentCondition(condition.ToString());

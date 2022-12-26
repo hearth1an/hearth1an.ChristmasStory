@@ -4,14 +4,14 @@ using NewHorizons.Utility;
 
 namespace ChrismasStory.Characters.Travelers
 {
+	/* Find Feldspar's note > Change some signals destinations > Find him in Dark Bramble, talk to him > Сlose eyes > 
+	 * He disappears, signal too > activating Feldspar in ship > Escort him to TH carefully > Check if we near the Village > 
+	 * Talk to him in ship > Closing eyes > he appears near the Christmas tree always. And sure he should be the only one Feldspar and signal (!!! There's a lot of signals). 
+	 */
+
 	internal class FeldsparCharacterController : TravelerCharacterController
 	{
 		public override Conditions.PERSISTENT DoneCondition => Conditions.PERSISTENT.FELDSPAR_DONE;
-
-		/* Find Feldspar's note > Change some signals destinations > Find him in Dark Bramble, talk to him > Сlose eyes > 
-He disappears, signal too > activating Feldspar in ship > Escort him to TH carefully > Check if we near the Village > 
-Talk to him in ship > Closing eyes > he appears near the Christmas tree always. And sure he should be the only one Feldspar and signal (!!! There's a lot of signals). 
-*/
 
 		public override void Start()
 		{
