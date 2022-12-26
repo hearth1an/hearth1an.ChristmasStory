@@ -1,25 +1,8 @@
 {
 	"$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
 	"name": "Pioneer Dimension",
-	"Base": {
-		"gravityFallOff": "linear"
-	},
-	"Orbit": {},
 	"Props": {
 		"details": [
-			{
-				"path": "DB_HubDimension_Body/Sector_HubDimension/Interactables_HubDimension/InnerWarp_ToCluster/Signal_Harmonica",
-				"position": {
-					"x": 264.429779,
-					"y": -195.167542,
-					"z": -262.286377
-				},
-				"rotation": {
-					"x": 6.52850342,
-					"y": 354.579224,
-					"z": 232.379761
-				}
-			},
 			{
 				"path": "DarkBramble_Body/Sector_DB/Interactables_DB/JellyfishNote",
 				"removeChildren": [ "InteractVolume" ],
@@ -46,8 +29,20 @@
 				"lookAtRadius": 3,
 				"radius": 1
 			}
+		],
+		"signals": [
+			{
+				"name": "Signal_Harmonica",
+				"frequency": "Traveler",
+				"position": {
+					"x": 264.429779,
+					"y": -195.167542,
+					"z": -262.286377
+				},
+				"audio": "TravelerFeldspar",
+				"detectionRadius": 50,
+				"identificationRadius": 5
+			}
 		]
-	},
-	"ReferenceFrame": {},
-	"ShipLog": {}
+	}
 }
