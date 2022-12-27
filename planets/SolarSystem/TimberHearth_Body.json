@@ -4,6 +4,21 @@
 	"Props": {
 		"details": [
 			{
+				"assetBundle": "planets/assetbundle/ghostbird",
+				"path": "Assets/Prefabs/Ghostbird_IP_ANIM 1.prefab",
+				"rename": "GhostBird",
+				"position": {
+					"x": -1.0669,
+					"y": -25.4832,
+					"z": 185.4618
+				},
+				"rotation": {
+					"x": 270.0791,
+					"y": 181.4356,
+					"z": 0
+				}
+			},
+			{
 				"path": "TimeLoopRing_Body/Characters_TimeLoopRing/NPC_Player",
 				"rename": "NPC_Player",
 				"removeChildren": [ "ConversationZone_NPC_Player", "Traveller_Mesh_v01:Props_HEA_Jetpack", "Props_HEA_Lantern" ],
@@ -131,6 +146,22 @@
 				}
 			},
 			{
+				"assetBundle": "planets/assetbundle/ghostbird",
+				"path": "Assets/Prefabs/SLATE TALKING.prefab",
+				"rename": "Slate_Village",
+				"position": {
+					"x": 8.9599,
+					"y": -6.2049,
+					"z": 186.7598
+				},
+				"rotation": {
+					"x": 0.5943,
+					"y": 92.4013,
+					"z": 91.7782
+				},
+				"scale": 10.5
+			},
+			{
 				"path": "CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Interactables_Lakebed/Traveller_HEA_Chert/Traveller_HEA_Chert_ANIM_Chatter_Chipper",
 				"position": {
 					"x": 3.4593,
@@ -146,6 +177,7 @@
 			{
 				"path": "CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Volumes_Lakebed/Signal_Drums",
 				"parentPath": "Sector_TH/Traveller_HEA_Chert_ANIM_Chatter_Chipper",
+				"isRelativeToParent": true,
 				"position": {
 					"x": 0.009,
 					"y": 0.363,
@@ -153,21 +185,56 @@
 				}
 			},
 			{
-				"path": "GabbroIsland_Body/Sector_GabbroIsland/Interactables_GabbroIsland/Traveller_HEA_Gabbro",
+				"path": "Ship_Body/Module_Cockpit/Systems_Cockpit/ProbeLauncher/Props_HEA_Probe_Prelaunch",
 				"position": {
-					"x": 9.032545,
-					"y": -21.8007813,
-					"z": 185.659546
+					"x": 8.4887,
+					"y": -6.9463,
+					"z": 186.8114
 				},
 				"rotation": {
-					"x": 320.52417,
-					"y": 278.207947,
-					"z": 261.3781
+					"x": 23.0689,
+					"y": 93.1714,
+					"z": 91.9808
 				}
+			},
+			{
+				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Interactables_Crossroads/VisibleFrom_BH/GravityCrystals/OtherComponentsGroup/Prefab_NOM_GravityCrystal",
+				"parentPath": "Sector_TH/Props_HEA_Probe_Prelaunch",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 0,
+					"y": 0.6891,
+					"z": 0
+				},
+				"rotation": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"scale": 0.15,
+				"rename": "ProbeGravity"
+			},
+
+			{
+				"assetBundle": "planets/assetbundle/ghostbird",
+				"path": "Assets/Prefabs/Traveller_HEA_Gabbro_ANIM_IdleFlute.prefab",
+				"rename": "Traveller_HEA_Gabbro",
+				"position": {
+					"x": 4.8325,
+					"y": -26.9008,
+					"z": 187.8594
+				},
+				"rotation": {
+					"x": 304.1283,
+					"y": 252.01,
+					"z": 282.034
+				}
+
 			},
 			{
 				"path": "GabbroIsland_Body/Sector_GabbroIsland/Interactables_GabbroIsland/Signal_Flute",
 				"parentPath": "Sector_TH/Traveller_HEA_Gabbro",
+				"isRelativeToParent": true,
 				"position": {
 					"x": -0.2,
 					"y": -0.1,
@@ -178,7 +245,9 @@
 					"y": 0,
 					"z": 0
 				}
+
 			},
+
 			{
 				"path": "CaveTwin_Body/Sector_CaveTwin/Geometry_CaveTwin/OtherComponentsGroup/Prefab_HEA_ChertShip",
 				"position": {
@@ -191,6 +260,7 @@
 					"y": 19.8350887,
 					"z": 22.1955814
 				}
+
 			},
 			{
 				"path": "GabbroShip_Body/Sector_GabbroShip",
@@ -210,9 +280,12 @@
 					"y": 19.8350887,
 					"z": 22.1955814
 				}
+
 			},
 			{
-				"path": "QuantumMoon_Body/Sector_QuantumMoon/State_EYE/Interactables_EYEState/ConversationPivot/Character_NOM_Solanum/Nomai_ANIM_SkyWatching_Idle",
+				"assetBundle": "planets/assetbundle/ghostbird",
+				"path": "Assets/Prefabs/Nomai_ANIM_SkyWatching_Idle.prefab",
+				"rename": "Nomai_ANIM_SkyWatching_Idle",
 				"position": {
 					"x": 1.33840907,
 					"y": -25.1820259,
@@ -223,6 +296,23 @@
 					"y": 292.150482,
 					"z": 246.990112
 				}
+
+			},
+			{
+				"path": "TowerTwin_Body/Sector_TowerTwin/Sector_TimeLoopInterior/Interactables_TimeLoopInterior/WarpCoreSocket/Prefab_NOM_WarpCoreVessel/Effects_NOM_AdvancedWarpCore/Effects_NOM_WarpParticlesWhite",
+				"position": {
+					"x": -0.1,
+					"y": -0.5,
+					"z": 0
+				},
+				"rotation": {
+					"x": 317.328369,
+					"y": 2.65918,
+					"z": 168.477509
+				},
+				"scale": 5,
+				"parentPath": "Sector_TH/Nomai_ANIM_SkyWatching_Idle/Nomai_Rig_v01:TrajectorySHJnt/Nomai_Rig_v01:ROOTSHJnt/Nomai_Rig_v01:Spine_01SHJnt/Nomai_Rig_v01:Spine_02SHJnt/Nomai_Rig_v01:Spine_TopSHJnt/Nomai_Rig_v01:Neck_01SHJnt",
+				"isRelativeToParent": true
 			}
 		],
 		"dialogue": [
@@ -299,6 +389,41 @@
 						"rename": "Invite_Stone"
 					}
 				]
+			}
+		],
+		"signals": [
+			{
+				"audio": "planets/Content/solanum.ogg",
+				"detectionRadius": 0,
+				"frequency": "Quantum Consciousness",
+				"identificationRadius": 0,
+				"name": "Solanum",
+				"onlyAudibleToScope": false,
+				"position": {
+					"x": 0,
+					"y": 0,
+					"z": -4
+				},
+				"sourceRadius": 2,
+				"parentPath": "Sector_TH/Nomai_ANIM_SkyWatching_Idle",
+				"isRelativeToParent": true
+
+			},
+			{
+				"audio": "planets/Content/prisoner.ogg",
+				"detectionRadius": 0,
+				"frequency": "Unidentified",
+				"identificationRadius": 0,
+				"name": "Prisoner",
+				"onlyAudibleToScope": false,
+				"position": {
+					"x": 0,
+					"y": 0,
+					"z": -4
+				},
+				"sourceRadius": 2,
+				"parentPath": "Sector_TH/GhostBird",
+				"isRelativeToParent": true
 			}
 		]
 	},
