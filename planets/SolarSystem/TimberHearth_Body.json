@@ -214,7 +214,6 @@
 				"scale": 0.15,
 				"rename": "ProbeGravity"
 			},
-
 			{
 				"assetBundle": "planets/assetbundle/ghostbird",
 				"path": "Assets/Prefabs/Traveller_HEA_Gabbro_ANIM_IdleFlute.prefab",
@@ -229,7 +228,6 @@
 					"y": 252.01,
 					"z": 282.034
 				}
-
 			},
 			{
 				"path": "GabbroIsland_Body/Sector_GabbroIsland/Interactables_GabbroIsland/Signal_Flute",
@@ -245,9 +243,7 @@
 					"y": 0,
 					"z": 0
 				}
-
 			},
-
 			{
 				"path": "CaveTwin_Body/Sector_CaveTwin/Geometry_CaveTwin/OtherComponentsGroup/Prefab_HEA_ChertShip",
 				"position": {
@@ -280,7 +276,6 @@
 					"y": 19.8350887,
 					"z": 22.1955814
 				}
-
 			},
 			{
 				"assetBundle": "planets/assetbundle/ghostbird",
@@ -365,9 +360,6 @@
 				"lookAtRadius": 2,
 				"radius": 1
 			}
-
-
-
 		],
 		"remotes": [
 			{
@@ -375,7 +367,6 @@
 				"decalPath": "planets/Content/writing.png",
 				"stones": [
 					{
-
 						"position": {
 							"x": 9.3314,
 							"y": -14.9432,
@@ -407,7 +398,6 @@
 				"sourceRadius": 2,
 				"parentPath": "Sector_TH/Nomai_ANIM_SkyWatching_Idle",
 				"isRelativeToParent": true
-
 			},
 			{
 				"audio": "planets/Content/prisoner.ogg",
@@ -427,9 +417,6 @@
 			}
 		]
 	},
-	"ReferenceFrame": {},
-	"ShipLog": {},
-	"ShockEffect": {},
 	"Atmosphere": {
 		"hasSnow": true
 	}

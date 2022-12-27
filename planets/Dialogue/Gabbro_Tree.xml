@@ -11,7 +11,7 @@
 			<DialogueOption>
 				<Text>(CHERT_TREE_2) I'm ok, Chert.</Text>
 				<DialogueTarget>2</DialogueTarget>
-			</DialogueOption>			
+			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
 
@@ -41,10 +41,10 @@
 	</DialogueNode>
 
 	<DialogueNode>
-		<Name>3</Name>		
+		<Name>3</Name>
 		<Dialogue>
 			<Page>(CHERT_TREE_8) Yeah, they were very different and little kreepy..</Page>
-		</Dialogue>		
-	</DialogueNode>	
+		</Dialogue>
+	</DialogueNode>
 
 </DialogueTree>

@@ -1,24 +1,21 @@
 {
-    "$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
-    "name": "Time Loop Ring",
-    "Props": {       
-        "dialogue": [
-            {
-                "position": {
-                    "x": -0.071,
-                    "y": 0.922,
-                    "z": -0.049
-                },
-                "xmlFile": "planets/Dialogue/Player_NPC_Start.xml",
-                "parentPath": "Characters_TimeLoopRing/NPC_Player",
-                "isRelativeToParent": true,
-                "lookAtRadius": 2,
-                "pathToAnimController": "Characters_TimeLoopRing/NPC_Player/Traveller_HEA_Player_v2",
-                "radius": 1
-
-            }
-        ]
-
-    }
+	"$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
+	"name": "Time Loop Ring",
+	"Props": {
+		"dialogue": [
+			{
+				"position": {
+					"x": -0.071,
+					"y": 0.922,
+					"z": -0.049
+				},
+				"xmlFile": "planets/Dialogue/Player_NPC_Start.xml",
+				"parentPath": "Characters_TimeLoopRing/NPC_Player",
+				"isRelativeToParent": true,
+				"lookAtRadius": 2,
+				"pathToAnimController": "Characters_TimeLoopRing/NPC_Player/Traveller_HEA_Player_v2",
+				"radius": 1
+			}
+		]
+	}
 }
-  

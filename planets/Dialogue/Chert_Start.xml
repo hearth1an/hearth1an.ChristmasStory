@@ -265,7 +265,7 @@
 		<Name>19.1</Name>
 		<Dialogue>
 			<Page>(CHERT_START_100) B-o-o-o-ring. Bring something significant!</Page>
-		</Dialogue>		
+		</Dialogue>
 	</DialogueNode>
 
 	<DialogueNode>
@@ -302,11 +302,11 @@
 			<Page>(CHERT_START_43) Uh.. easy to say! Okay, breath deep... breath..</Page>
 		</Dialogue>
 		<DialogueOptionsList>
-		<DialogueOption>
-			<Text>(CHERT_START_43.1) Anyway...</Text>
-			<DialogueTarget>15</DialogueTarget>
-		</DialogueOption>
-	  </DialogueOptionsList>
+			<DialogueOption>
+				<Text>(CHERT_START_43.1) Anyway...</Text>
+				<DialogueTarget>15</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
 	</DialogueNode>
 
 	<DialogueNode>

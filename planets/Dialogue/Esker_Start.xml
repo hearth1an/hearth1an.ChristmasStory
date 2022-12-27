@@ -13,7 +13,7 @@
 			<DialogueOption>
 				<Text>(ESKER_START_2) Wait, what? How did you know?</Text>
 				<DialogueTarget>2</DialogueTarget>
-		    </DialogueOption>			
+			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
 
@@ -72,7 +72,7 @@
 
 
 	<DialogueNode>
-		<Name>8</Name>		
+		<Name>8</Name>
 		<Dialogue>
 			<Page>(ESKER_START_9) No celebration then? Sad... We can still sit here with campfire, you know..</Page>
 		</Dialogue>

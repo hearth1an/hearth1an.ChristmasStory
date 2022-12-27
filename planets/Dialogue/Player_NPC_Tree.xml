@@ -35,7 +35,7 @@
 
 
 	<DialogueNode>
-		<Name>5</Name>		
+		<Name>5</Name>
 		<Dialogue>
 			<Page>(NPC_PLAYERK_TREE_5) Well, that things about others seeing us both at the same time..</Page>
 		</Dialogue>
@@ -43,7 +43,7 @@
 			<DialogueOption>
 				<Text>(NPC_PLAYER_TREE_6) I can't se anything explodes.</Text>
 				<DialogueTarget>3</DialogueTarget>
-			</DialogueOption>			
+			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
 
@@ -55,9 +55,9 @@
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(NPC_PLAYER_TREE_13) My exact thought.</Text>				
+				<Text>(NPC_PLAYER_TREE_13) My exact thought.</Text>
 			</DialogueOption>
 		</DialogueOptionsList>
-	</DialogueNode>	
+	</DialogueNode>
 
 </DialogueTree>

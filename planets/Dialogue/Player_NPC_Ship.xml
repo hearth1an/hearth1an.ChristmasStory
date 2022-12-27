@@ -11,7 +11,7 @@
 			<DialogueOption>
 				<RequiredCondition>SHIP_NEAR_VILLAGE</RequiredCondition>
 				<Text>(NPC_PLAYER_SHIP_2) Oh, we're at home already.</Text>
-				<DialogueTarget>2</DialogueTarget>				
+				<DialogueTarget>2</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
 				<Text>(NPC_PLAYER_SHIP_3) We'll go home soon. Just wait a bit.</Text>

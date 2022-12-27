@@ -13,7 +13,7 @@
 			<DialogueOption>
 				<Text>(NPC_PLAYER_START_2) May I invite you to...</Text>
 				<DialogueTarget>2</DialogueTarget>
-			</DialogueOption>			
+			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
 
@@ -60,8 +60,8 @@
 				<ConditionToSet>NPC_PLAYER_START_FAILED</ConditionToSet>
 				<DialogueTarget>8</DialogueTarget>
 			</DialogueOption>
-			<DialogueOption>				
-				<Text>(NPC_PLAYER_START_20) I'll be right back.</Text>				
+			<DialogueOption>
+				<Text>(NPC_PLAYER_START_20) I'll be right back.</Text>
 			</DialogueOption>
 
 		</DialogueOptionsList>
@@ -90,7 +90,7 @@
 		<Dialogue>
 			<Page>(NPC_PLAYER_START_9) I was wondering which version of us was better...</Page>
 			<Page>(NPC_PLAYER_START_10) Now I know! I'm definitely better pilot than you!</Page>
-			 
+
 		</Dialogue>
 	</DialogueNode>
 </DialogueTree>

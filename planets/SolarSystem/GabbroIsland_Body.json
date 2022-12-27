@@ -1,10 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
 	"name": "GabbroIsland",
-	"Base": {
-		"gravityFallOff": "linear"
-	},
-	"Orbit": {},
 	"Props": {
 		"dialogue": [
 			{
@@ -20,7 +16,5 @@
 				"radius": 1
 			}
 		]
-	},
-	"ReferenceFrame": {},
-	"ShipLog": {}
+	}
 }

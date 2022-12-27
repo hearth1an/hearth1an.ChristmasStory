@@ -44,7 +44,7 @@
 			</DialogueOption>
 			<DialogueOption>
 				<Text>(ESKER_SHIP_6) No, but I'll tell you when.</Text>
-			</DialogueOption>			
+			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
 </DialogueTree>

@@ -1,4 +1,4 @@
- <DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
+<DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
 	<NameField>Gabbro</NameField>
 
 	<DialogueNode>
@@ -10,34 +10,34 @@
 		</Dialogue>
 
 		<DialogueOptionsList>
-			<DialogueOption>				
+			<DialogueOption>
 				<Text>(GABBRO_START_38) Yes, we already had this conversation.</Text>
 				<RequiredPersistentCondition>GABBRO_START_PERSISTENT</RequiredPersistentCondition>
 				<DialogueTarget>2.3</DialogueTarget>
 			</DialogueOption>
-		    <DialogueOption>
+			<DialogueOption>
 				<CancelledPersistentCondition>GABBRO_START_PERSISTENT</CancelledPersistentCondition>
 				<Text>(GABBRO_START_28) Yeah, me too. We're in a time loop. Just me and you.</Text>
 				<DialogueTarget>2</DialogueTarget>
-		    </DialogueOption>
+			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
 
-	 <DialogueNode>
-		 <Name>2.3</Name>
-		 <SetCondition>GABBRO_START_MET</SetCondition>
-		 <Dialogue>
-			 <Page>(GABBRO_START_39) Oh, yes, I remember. So.. something went wrong, right?</Page>
-		 </Dialogue>
-		 <DialogueOptionsList>
-			 <DialogueOption>
-				 <Text>(GABBRO_START_40) Yes. Let's try again.</Text>
-				 <DialogueTarget>7</DialogueTarget>
-			 </DialogueOption>
-		 </DialogueOptionsList>
-	 </DialogueNode>
+	<DialogueNode>
+		<Name>2.3</Name>
+		<SetCondition>GABBRO_START_MET</SetCondition>
+		<Dialogue>
+			<Page>(GABBRO_START_39) Oh, yes, I remember. So.. something went wrong, right?</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>(GABBRO_START_40) Yes. Let's try again.</Text>
+				<DialogueTarget>7</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
 
-	 <DialogueNode>
+	<DialogueNode>
 		<Name>2</Name>
 		<Dialogue>
 			<Page>(GABBRO_START_6) Ummm... makes sense. Hornfels didn't believe me that I'm dying every time.</Page>
@@ -45,7 +45,7 @@
 		<DialogueOptionsList>
 			<DialogueOption>
 				<Text>(GABBRO_START_7) You seem comfortable here. By the way, we are celebrating Christmas in the Village, wanna join?</Text>
-				<DialogueTarget>2.1</DialogueTarget>				
+				<DialogueTarget>2.1</DialogueTarget>
 			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
@@ -58,12 +58,12 @@
 			<Page>(GABBRO_START_9) All this depressive and rainy stuff, you know.</Page>
 			<Page>(GABBRO_START_10) But on the oher hand... I'm also too bored to fly anywhere. Or getting in your ship.</Page>
 			<Page>(GABBRO_START_11) Let's do what, can you explode your ship so we both can die and iniciate first loop? I'll be in the ship on loop start and will fly to Timber Heart.</Page>
-			
+
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
 				<Text>(GABBRO_START_13) I've never realized you're such lazy person before.</Text>
-				<DialogueTarget>2.2</DialogueTarget>				
+				<DialogueTarget>2.2</DialogueTarget>
 			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
@@ -72,39 +72,39 @@
 		<Name>2.2</Name>
 		<SetCondition>GABBRO_START_MET</SetCondition>
 		<Dialogue>
-			<Page>(GABBRO_START_14) Haha yep! That's me.</Page>			
-		</Dialogue>		
+			<Page>(GABBRO_START_14) Haha yep! That's me.</Page>
+		</Dialogue>
 	</DialogueNode>
 
 
 	<DialogueNode>
 		<Name>7</Name>
-		<EntryCondition>GABBRO_START_MET</EntryCondition>		
+		<EntryCondition>GABBRO_START_MET</EntryCondition>
 		<Dialogue>
 			<Page>(GABBRO_START_15) So... I'm wating for ship explosion so I we can die and start new loop.</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
 				<RequiredCondition>SHIP_DESTROYED</RequiredCondition>
-				<Text>(GABBRO_START_40) Um. The thing is... my ship is destroyed already.</Text>				
+				<Text>(GABBRO_START_40) Um. The thing is... my ship is destroyed already.</Text>
 				<DialogueTarget>9.1</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
-				<CancelledCondition>SHIP_DESTROYED</CancelledCondition>  
+				<CancelledCondition>SHIP_DESTROYED</CancelledCondition>
 				<Text>(GABBRO_START_16) Sure. I'm working on it.</Text>
 				<DialogueTarget>9</DialogueTarget>
 			</DialogueOption>
-			
+
 		</DialogueOptionsList>
 	</DialogueNode>
 
-	 <DialogueNode>
-		 <Name>9.1</Name>
-		 <Dialogue>
-			 <Page>(GABBRO_START_41) No luck then. Try to not screw this up next loop!</Page>
-			 <ConditionToSet>GABBRO_START_FAILED</ConditionToSet>
-		 </Dialogue>
-	 </DialogueNode>
+	<DialogueNode>
+		<Name>9.1</Name>
+		<Dialogue>
+			<Page>(GABBRO_START_41) No luck then. Try to not screw this up next loop!</Page>
+			<ConditionToSet>GABBRO_START_FAILED</ConditionToSet>
+		</Dialogue>
+	</DialogueNode>
 
 	<DialogueNode>
 		<Name>9</Name>
@@ -112,5 +112,5 @@
 			<Page>(GABBRO_START_11) Gotcha! I will be here.</Page>
 		</Dialogue>
 	</DialogueNode>
-	 
+
 </DialogueTree>
