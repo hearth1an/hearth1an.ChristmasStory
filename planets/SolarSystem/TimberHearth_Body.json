@@ -19,6 +19,34 @@
 				}
 			},
 			{
+				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/Prefab_IP_Reel_TowerVision/Effects_IP_SarcophagusGlowCenter",
+				"position": {
+					"x": -2.8058,
+					"y": -28.2596,
+					"z": 183.4137
+				},
+				"rotation": {
+					"x": 317.5735,
+					"y": 261.2365,
+					"z": 258.6816
+				},
+				"scale": 1
+			},
+			{
+				"path": "RingWorld_Body/Sector_RingInterior/Sector_Zone1/Sector_ArtifactHouse_Zone1/Interactibles_ArtifactHouse_Zone1/Prefab_IP_DreamLanternItem_2",
+				"position": {
+					"x": -3.4612,
+					"y": -28.5004,
+					"z": 184.9411
+				},
+				"rotation": {
+					"x": 306.8147,
+					"y": 76.733,
+					"z": 104.7151
+				},
+				"scale": 1
+			},
+			{
 				"path": "TimeLoopRing_Body/Characters_TimeLoopRing/NPC_Player",
 				"rename": "NPC_Player",
 				"removeChildren": [ "ConversationZone_NPC_Player", "Traveller_Mesh_v01:Props_HEA_Jetpack", "Props_HEA_Lantern" ],
