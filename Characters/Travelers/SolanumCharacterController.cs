@@ -8,7 +8,7 @@ using UnityEngine;
 namespace ChrismasStory.Characters.Travelers
 {
 	/* 
-	At the start of the game when player will have a conversation with Gal. He will say that he happy about translator and he also can do nomai writings on stones and he 
+	At the start of the game when player will have a conversation with Hal. He will say that he happy about translator and he also can do nomai writings on stones and he 
 	wish if someone could read them one day. > Player will need to ask him if he could write something like "Merry Christmas, Solanum! Join us to celebration on Timber Hearth!" > closing eyes, stone with writing appears >
 	player brings it to Solanum > Drop it near her > Script checking the distance > she replying that she probably will be able to appear on TH, we just need to take Nomai rock to TH > player takes it and brings to TH.
 
