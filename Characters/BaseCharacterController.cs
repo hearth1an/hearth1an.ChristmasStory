@@ -85,7 +85,6 @@ namespace ChrismasStory.Characters
 
 		private IEnumerator ShipCoroutine(STATE state)
 		{
-			var oldInputMode = OWInput.GetInputMode();
 			OWInput.ChangeInputMode(InputMode.None);
 			Locator.GetPauseCommandListener().AddPauseCommandLock();
 
@@ -105,13 +104,12 @@ namespace ChrismasStory.Characters
 			// Open eyes
 			PlayerEffectController.OpenEyes(0.7f);
 
-			OWInput.ChangeInputMode(oldInputMode);
+			OWInput.ChangeInputMode(InputMode.Character);
 			Locator.GetPauseCommandListener().RemovePauseCommandLock();
 		}
 
 		protected virtual IEnumerator DirectToTree(STATE state)
 		{
-			var oldInputMode = OWInput.GetInputMode();
 			OWInput.ChangeInputMode(InputMode.None);
 			Locator.GetPauseCommandListener().AddPauseCommandLock();
 
@@ -128,13 +126,12 @@ namespace ChrismasStory.Characters
 			// Open eyes
 			PlayerEffectController.OpenEyes(1f);
 
-			OWInput.ChangeInputMode(oldInputMode);
+			OWInput.ChangeInputMode(InputMode.Character);
 			Locator.GetPauseCommandListener().RemovePauseCommandLock();
 		}
 
 		private IEnumerator ChangeStateCoroutine(float wait, STATE state)
 		{
-			var oldInputMode = OWInput.GetInputMode();
 			OWInput.ChangeInputMode(InputMode.None);
 			Locator.GetPauseCommandListener().AddPauseCommandLock();
 
@@ -144,7 +141,7 @@ namespace ChrismasStory.Characters
 
 			OnSetState(state);
 
-			OWInput.ChangeInputMode(oldInputMode);
+			OWInput.ChangeInputMode(InputMode.Character);
 			Locator.GetPauseCommandListener().RemovePauseCommandLock();
 		}
 
