@@ -230,6 +230,7 @@
 				},
 				"xmlFile": "planets/Dialogue/Riebeck_Start.xml",
 				"parentPath": "Sector_BH/Traveller_HEA_Riebeck",
+				"pathToAnimController": "Sector_BH/Traveller_HEA_Riebeck",
 				"isRelativeToParent": true,
 				"lookAtRadius": 2,
 				"radius": 2

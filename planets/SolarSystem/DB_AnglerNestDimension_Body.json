@@ -30,7 +30,7 @@
 				"lookAtRadius": 3,
 				"radius": 1,
 				"isRelativeToParent": true,
-				"pathToAnimController": "Sector_AnglerNestDimension/Traveller_HEA_Feldspar",
+				"pathToAnimController": "Sector_AnglerNestDimension/Traveller_HEA_Feldspar"
 			}
 		],
 		"signals": [
@@ -46,7 +46,8 @@
 				},
 				"audio": "TravelerFeldspar",
 				"detectionRadius": 50,
-				"identificationRadius": 5
+				"identificationRadius": 5,
+				"onlyAudibleToScope": false
 			}
 		]
 	}

@@ -10,7 +10,8 @@
 					"z": -0.355
 				},
 				"xmlFile": "planets/Dialogue/Chert_Start.xml",
-				"parentPath": "Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Interactables_Lakebed/Traveller_HEA_Chert/",
+				"parentPath": "Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Interactables_Lakebed/Traveller_HEA_Chert",
+				"pathToAnimController": "Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Interactables_Lakebed/Traveller_HEA_Chert",
 				"isRelativeToParent": true,
 				"lookAtRadius": 2,
 				"radius": 1
