@@ -47,8 +47,14 @@ namespace ChristmasStory.Utility
 			// Solanum
 			SOLANUM_START,
 			SOLANUM_START_DONE,
-			HOLDING_INVITE_STONE
-		}
+			HOLDING_INVITE_STONE,
+
+            // Prisoner
+
+            PRISONER_START,
+            PRISONER_START_DONE,
+            HOLDING_PRISONER_ARTIFACT
+        }
 
         public enum PERSISTENT
         {
@@ -62,6 +68,7 @@ namespace ChristmasStory.Utility
             SELF_DONE,
             RIEBECK_DONE,
             SOLANUM_DONE,
+            PRISONER_DONE
         }
 
         public static bool Get(PERSISTENT condition) => PlayerData.GetPersistentCondition(condition.ToString());

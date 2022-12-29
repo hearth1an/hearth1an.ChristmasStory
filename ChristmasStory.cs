@@ -66,7 +66,7 @@ namespace ChrismasStory
 			player.AddComponent<PlayerEffectController>();
 			player.AddComponent<HeldItemHandler>();
 			player.AddComponent<SolanumAnimationController>();
-			// player.AddComponent<PrisonerAnimationController>();
+			player.AddComponent<PrisonerAnimationController>();
 
 			var ship = SearchUtilities.Find("Ship_Body");
 			ship.AddComponent<ShipHandler>();
@@ -80,7 +80,7 @@ namespace ChrismasStory
 			characterControllers.AddComponent<RiebeckCharacterController>();
 			characterControllers.AddComponent<PlayerNPCCharacterController>();
 			characterControllers.AddComponent<SolanumCharacterController>();
-			// characterControllers.AddComponent<PrisonerCharacterController>();
+			characterControllers.AddComponent<PrisonerCharacterController>();
 
 			if (Conditions.Get(Conditions.PERSISTENT.CHERT_PHRASE_TOLD))
 			{
@@ -168,22 +168,37 @@ namespace ChrismasStory
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Feldspar/ConversationZone").transform.localPosition = new Vector3(-0.1f, 0.4f, 0);
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Feldspar/Signal_Harmonica").transform.localPosition = new Vector3(0f, 0f, 0f);
 
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/GhostBird/Ghostbird_Skin_01:Ghostbird_Rig_V01:Base/Ghostbird_Skin_01:Ghostbird_Rig_V01:Root/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine01/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine02/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine03/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine04/Ghostbird_Skin_01:Ghostbird_Rig_V01:ClavicleR/Ghostbird_Skin_01:Ghostbird_Rig_V01:ShoulderR/Ghostbird_Skin_01:Ghostbird_Rig_V01:ElbowR/Ghostbird_Skin_01:Ghostbird_Rig_V01:WristR/Ghostbird_Skin_01:Ghostbird_Rig_V01:HandAttachR/Props_IP_DW_GhostbirdInstrument_Bow").transform.localPosition = new Vector3(0.551f, -0.5451f, 0.2882f);
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/GhostBird/Ghostbird_Skin_01:Ghostbird_Rig_V01:Base/Ghostbird_Skin_01:Ghostbird_Rig_V01:Root/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine01/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine02/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine03/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine04/Ghostbird_Skin_01:Ghostbird_Rig_V01:ClavicleR/Ghostbird_Skin_01:Ghostbird_Rig_V01:ShoulderR/Ghostbird_Skin_01:Ghostbird_Rig_V01:ElbowR/Ghostbird_Skin_01:Ghostbird_Rig_V01:WristR/Ghostbird_Skin_01:Ghostbird_Rig_V01:HandAttachR/Props_IP_DW_GhostbirdInstrument_Bow").transform.localRotation = new Quaternion(0.8624f, 0.037f,-0.5042f, 0.0256f);
-				// SearchUtilities.Find("Ship_Body/ShipSector/Ship_Riebec/ConversationZone").GetComponent<InteractReceiver>()._usableInShip = true;
-				/*
-				SearchUtilities.Find("Ship_Body/ShipSector/Ship_Player/ConversationZone").GetComponent<InteractReceiver>()._usableInShip = true;
-				*/
+                SearchUtilities.Find("TimberHearth_Body/Sector_TH/GhostBird/Ghostbird_Skin_01:Ghostbird_Rig_V01:Base/Ghostbird_Skin_01:Ghostbird_Rig_V01:Root/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine01/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine02/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine03/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine04/Ghostbird_Skin_01:Ghostbird_Rig_V01:ClavicleR/Ghostbird_Skin_01:Ghostbird_Rig_V01:ShoulderR/Ghostbird_Skin_01:Ghostbird_Rig_V01:ElbowR/Ghostbird_Skin_01:Ghostbird_Rig_V01:WristR/Ghostbird_Skin_01:Ghostbird_Rig_V01:HandAttachR/Props_IP_DW_GhostbirdInstrument_Bow").transform.localPosition = new Vector3(0.551f, -0.5451f, 0.2882f);
+                SearchUtilities.Find("TimberHearth_Body/Sector_TH/GhostBird/Ghostbird_Skin_01:Ghostbird_Rig_V01:Base/Ghostbird_Skin_01:Ghostbird_Rig_V01:Root/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine01/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine02/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine03/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine04/Ghostbird_Skin_01:Ghostbird_Rig_V01:ClavicleR/Ghostbird_Skin_01:Ghostbird_Rig_V01:ShoulderR/Ghostbird_Skin_01:Ghostbird_Rig_V01:ElbowR/Ghostbird_Skin_01:Ghostbird_Rig_V01:WristR/Ghostbird_Skin_01:Ghostbird_Rig_V01:HandAttachR/Props_IP_DW_GhostbirdInstrument_Bow").transform.localRotation = new Quaternion(0.8624f, 0.037f, -0.5042f, 0.0256f);
+                // SearchUtilities.Find("Ship_Body/ShipSector/Ship_Riebec/ConversationZone").GetComponent<InteractReceiver>()._usableInShip = true;
+                /*
+				SearchUtilities.Find("Ship_Body/ShipSector/Ship_Player/ConversationZone").GetComponent<InteractReceiver>()._usableInShip = true;			*/
 
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Prefab_IP_DreamLanternItem_2/Props_IP_Artifact/Flame").transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
-				var artifact = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Prefab_IP_DreamLanternItem_2").GetComponent<DreamLanternController>();
-				artifact.enabled = true;
-				artifact._lit = true;
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Prefab_IP_DreamLanternItem_2").GetComponent<DreamLanternItem>()._interactable = false;
-				
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Effects_IP_SarcophagusGlowCenter").transform.localScale = new Vector3(0.4f, 1f, 1f);
 
-            }
+                SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Interactibles_PrisonCell/PrisonerSequence/VisionTorchWallSocket/Prefab_IP_VisionTorchItem").GetComponent<OWItem>()._interactable = true;
+
+                SearchUtilities.Find("TimberHearth_Body/Sector_TH/Prefab_IP_DreamLanternItem_2/Props_IP_Artifact/Flame").transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+                var artifact = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Prefab_IP_DreamLanternItem_2").GetComponent<DreamLanternController>();
+                artifact.enabled = true;
+                artifact._lit = true;
+                SearchUtilities.Find("TimberHearth_Body/Sector_TH/Prefab_IP_DreamLanternItem_2").GetComponent<DreamLanternItem>()._interactable = false;
+
+                SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner/InteractReceiver").SetActive(false);
+                SearchUtilities.Find("TimberHearth_Body/Sector_TH/Effects_IP_SarcophagusGlowCenter").transform.localScale = new Vector3(0.4f, 1f, 1f);
+				SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner/Ghostbird_IP_ANIM/Ghostbird_Skin_01:Ghostbird_Rig_V01:Base/Ghostbird_Skin_01:Ghostbird_Rig_V01:Root/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine01/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine02/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine03/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine04/Ghostbird_Skin_01:Ghostbird_Rig_V01:Neck01/Ghostbird_Skin_01:Ghostbird_Rig_V01:Neck02/Ghostbird_Skin_01:Ghostbird_Rig_V01:Head/PrisonerHeadDetector").SetActive(false);
+				SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner/Ghostbird_IP_ANIM/Ghostbird_Skin_01:Ghostbird_Rig_V01:Base/Ghostbird_Skin_01:Ghostbird_Rig_V01:Root/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine01/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine02/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine03/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine04/Ghostbird_Skin_01:Ghostbird_Rig_V01:Neck01/Ghostbird_Skin_01:Ghostbird_Rig_V01:Neck02/Ghostbird_Skin_01:Ghostbird_Rig_V01:Head/LightSensor_GhostHead").SetActive(false);
+
+
+				var prisonerDialogue = SearchUtilities.Find("Prisoner_Dialogue");
+				var prisonerInteractReciever = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner/InteractReceiver");
+				prisonerDialogue.transform.parent = prisonerInteractReciever.transform.parent;
+				prisonerDialogue.transform.localPosition = new Vector3(0, 0, -1f);
+
+				var prisonerVision = SearchUtilities.Find("Prisoner_Vision");
+                prisonerVision.transform.parent = prisonerInteractReciever.transform.parent;
+				prisonerVision.transform.localPosition = new Vector3(0, 0, -1f);
+
+			}
             catch (Exception ex)
 			{
 				WriteError(ex.ToString());

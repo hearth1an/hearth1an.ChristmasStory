@@ -1,0 +1,25 @@
+{
+	"$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
+	"name": "RingWorld",
+	"Props": {
+		"details": [
+			{
+				"path": "RingWorld_Body/Sector_RingInterior/Sector_Zone1/Sector_ArtifactHouse_Zone1/Interactibles_ArtifactHouse_Zone1/Prefab_IP_DreamLanternItem_2",
+				"parentPath": "Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Sector_PrisonInterior/Interactibles_PrisonInterior/Prefab_IP_Sarcophagus/Prefab_IP_SleepingMummy_v2 (PRISONER)/Mummy_IP_ArtifactAnim",
+				"isRelativeToParent": true,
+				"rename": "Prisoner_Artifact",
+				"position": {
+					"x": -0.1,
+					"y": 1.6,
+					"z": 0.2
+				},
+				"rotation": {
+					"x": 0.3095,
+					"y": 5.5594,
+					"z": 0.2365
+				}
+			}
+		]
+
+	}
+}

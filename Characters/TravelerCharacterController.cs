@@ -5,12 +5,12 @@
 	{
 		public CharacterDialogueTree dialogue;
 		public CharacterDialogueTree dialogueShip;
-		public CharacterDialogueTree dialogueVillage;
+		public CharacterDialogueTree dialogueVillage;		
 
 		public override void Start()
 		{
 			if (dialogue != null)
-			{
+			{				
 				dialogue.OnStartConversation += Dialogue_OnStartConversation;
 				dialogue.OnEndConversation += Dialogue_OnEndConversation;
 			}

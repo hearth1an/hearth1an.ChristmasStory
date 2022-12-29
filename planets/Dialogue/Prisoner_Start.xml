@@ -1,0 +1,25 @@
+<DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
+	<NameField>the Prisoner</NameField>
+
+	<DialogueNode>
+		<Name>Start</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>(PRISONER_START_1) ...</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>				
+				<Text>(PRISONER_START_1) ...</Text>
+				<ConditionToSet>PRISONER_START</ConditionToSet>
+			</DialogueOption>			
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>3</Name>
+		<EntryCondition>PRISONER_START_DONE</EntryCondition>
+		<Dialogue>
+			<Page>(PRISONER_START_1) ...</Page>
+		</Dialogue>
+	</DialogueNode>
+</DialogueTree>
