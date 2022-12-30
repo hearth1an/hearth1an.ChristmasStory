@@ -8,28 +8,43 @@
 	"Props": {
 		"details": [
 			{
-				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner/Ghostbird_IP_ANIM",
-
+				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner",								
+				"rename": "Prisoner_Clone",				
+				"position": {
+					"x": -6.6075,
+					"y": -293.9034,
+					"z": 673.4507
+				},
+				"rotation": {
+					"x": 0,
+					"y": 20.9969,
+					"z": 0
+				}
 			}
 		],
 		"dialogue": [
 			{
 				"position": {
-					"y": 2.035
+					"x": 0,
+					"y": -2.92,
+					"z": 0.369
 				},
-				"radius": 3,
+				"radius": 2,
 				"xmlFile": "planets/Dialogue/Prisoner_Start.xml",
 				"parentPath": "Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner",
 				"isRelativeToParent": true,
 				"rename": "Prisoner_Dialogue",
-				"range": 2
+				"range": 1
+
 			}
 
 		],
 		"slideShows": [
 			{
 				"position": {
-					"y": 0
+					"x": 0,
+					"y": 2.92,
+					"z": 0.369
 				},
 				"rotation": {},
 				"slides": [
@@ -68,9 +83,15 @@
 			},
 			{
 				"position": {
-					"y": 0
+					"x": -6.7621,
+					"y": -293.5659,
+					"z": 676.6439
 				},
-				"rotation": {},
+				"rotation": {
+					"x": 343.4101,
+					"y": 84.9805,
+					"z": 339.7789
+				},	
 				"slides": [
 					{
 						"imagePath": "planets/Content/visions/Slide (2).png"
@@ -101,9 +122,7 @@
 					}
 				],
 				"type": "standingVisionTorch",
-				"parentPath": "Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner/Ghostbird_IP_ANIM/Ghostbird_Skin_01:Ghostbird_Rig_V01:Base/Ghostbird_Skin_01:Ghostbird_Rig_V01:Root/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine01/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine02/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine03/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine04/Ghostbird_Skin_01:Ghostbird_Rig_V01:Neck01/Ghostbird_Skin_01:Ghostbird_Rig_V01:Neck02/Ghostbird_Skin_01:Ghostbird_Rig_V01:Head",
-				"isRelativeToParent": true,
-				"rename": "Prisoner_Vision"
+				"rename": "Prisoner_Vision_Torch"
 			}
 		]
 	},
