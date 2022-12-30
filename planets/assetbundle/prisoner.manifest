@@ -1,0 +1,43 @@
+ManifestFileVersion: 0
+CRC: 1799277543
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 317503a8c1aca800c2cb0a8d72c25efb
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9274d255fda4bc6640b436918e9de960
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 82
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Prefabs_/Ghostbird_IP_ANIM.prefab
+Dependencies: []

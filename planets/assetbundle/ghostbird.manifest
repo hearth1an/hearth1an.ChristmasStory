@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2226575988
+CRC: 392672787
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 1506998511f4a0ed047a29ca0031f0e6
+    Hash: 0c89c78503e84468e9aa0a20c5f980c7
   TypeTreeHash:
     serializedVersion: 2
     Hash: 937bfd66dac56308391a18b564f5210b
@@ -43,7 +43,7 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
-- Assets/Prefabs/Ghostbird_IP_ANIM 1.prefab
+- Assets/Prefabs_/Ghostbird_IP_ANIM.prefab
 - Assets/Prefabs/Nomai_ANIM_SkyWatching_Idle.prefab
 - Assets/Prefabs/Traveller_HEA_Gabbro_ANIM_IdleFlute.prefab
 - Assets/Prefabs/SLATE TALKING.prefab

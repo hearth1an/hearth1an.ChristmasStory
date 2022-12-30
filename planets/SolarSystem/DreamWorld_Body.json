@@ -8,8 +8,9 @@
 	"Props": {
 		"details": [
 			{
-				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner",								
-				"rename": "Prisoner_Clone",				
+				"assetBundle": "planets/assetbundle/prisoner",
+				"path": "Assets/Prefabs/Ghostbird_IP_ANIM.prefab",
+				"rename": "Prisoner_Clone",
 				"position": {
 					"x": -6.6075,
 					"y": -293.9034,
