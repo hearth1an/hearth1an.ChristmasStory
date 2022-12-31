@@ -5,7 +5,7 @@
 		"details": [
 			{
 				"path": "RingWorld_Body/Sector_RingInterior/Sector_Zone1/Sector_ArtifactHouse_Zone1/Interactibles_ArtifactHouse_Zone1/Prefab_IP_DreamLanternItem_2",
-				"parentPath": "Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Sector_PrisonInterior/Interactibles_PrisonInterior/Prefab_IP_Sarcophagus/Prefab_IP_SleepingMummy_v2 (PRISONER)/Mummy_IP_ArtifactAnim",
+				"parentPath": "Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Sector_PrisonInterior/Interactibles_PrisonInterior/Prefab_IP_Sarcophagus/Prefab_IP_SleepingMummy_v2 (PRISONER)",
 				"isRelativeToParent": true,
 				"rename": "Prisoner_Artifact",
 				"position": {

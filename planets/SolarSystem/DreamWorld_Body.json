@@ -6,23 +6,7 @@
 	},
 	"Orbit": {},
 	"Props": {
-		"details": [
-			{
-				"assetBundle": "planets/assetbundle/prisoner",
-				"path": "Assets/Prefabs/Ghostbird_IP_ANIM.prefab",
-				"rename": "Prisoner_Clone",
-				"position": {
-					"x": -6.6075,
-					"y": -293.9034,
-					"z": 673.4507
-				},
-				"rotation": {
-					"x": 0,
-					"y": 20.9969,
-					"z": 0
-				}
-			}
-		],
+
 		"dialogue": [
 			{
 				"position": {
@@ -31,8 +15,7 @@
 					"z": 0.369
 				},
 				"radius": 2,
-				"xmlFile": "planets/Dialogue/Prisoner_Start.xml",
-				"parentPath": "Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner",
+				"xmlFile": "planets/Dialogue/Prisoner_Start.xml",				
 				"isRelativeToParent": true,
 				"rename": "Prisoner_Dialogue",
 				"range": 1
@@ -92,7 +75,7 @@
 					"x": 343.4101,
 					"y": 84.9805,
 					"z": 339.7789
-				},	
+				},
 				"slides": [
 					{
 						"imagePath": "planets/Content/visions/Slide (2).png"
@@ -125,6 +108,120 @@
 				"type": "standingVisionTorch",
 				"rename": "Prisoner_Vision_Torch"
 			}
+		],
+		"details": [
+			{
+				"assetBundle": "planets/assetbundle/prisoner",
+				"path": "Assets/Prefabs_/Ghostbird_IP_ANIM.prefab",
+				"rename": "Prisoner_Clone",
+				"position": {
+					"x": -9.8074,
+					"y": -293.9033,
+					"z": 674.1505
+				},
+				"rotation": {
+					"x": 0,
+					"y": 81.6854,
+					"z": 0
+				}
+			},
+			{
+				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/Prefab_IP_VisionTorchProjector/Effects_IP_SIM_VisionTorch",
+				"parentPath": "Sector_DreamWorld/Prisoner_Vision_Torch",
+				"isRelativeToParent": true,
+				"position": {
+					"x": -6.7621,
+					"y": -293.5659,
+					"z": 676.5439
+				},
+				"rotation": {
+					"x": 11.8544,
+					"y": 263.7103,
+					"z": 6.1727
+				}
+			},
+			{
+				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_DreamZone_3/Sector_Hotel/Ghosts_Hotel/GhostNodeMap_Depths/Prefab_IP_GhostBird_Bou/Ghostbird_IP_ANIM",
+				"removeChildren": [ "Ghostbird_Skin_01:Ghostbird_Rig_V01:ControlRig", "Ghostbird_Skin_01:Ghostbird_v004:Ghostbird_IP" ],
+				"parentPath": "Sector_DreamWorld/Prisoner_Clone",
+				"isRelativeToParent": true,
+				"position": {
+					"x": -0.1764,
+					"y": -0.2,
+					"z": 0.6
+				},
+				"rotation": {
+					"x": 331.9223,
+					"y": 5.5707,
+					"z": 352.9661
+				}
+			},
+			{
+				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_DreamZone_3/Sector_Hotel/Ghosts_Hotel/GhostNodeMap_Depths/Prefab_IP_GhostBird_Bou/Ghostbird_IP_ANIM/Ghostbird_Skin_01:Ghostbird_Rig_V01:Base/Ghostbird_Skin_01:Ghostbird_Rig_V01:Root/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine01/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine02/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine03/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine04/Ghostbird_Skin_01:Ghostbird_Rig_V01:ClavicleR/Ghostbird_Skin_01:Ghostbird_Rig_V01:ShoulderR/Ghostbird_Skin_01:Ghostbird_Rig_V01:ElbowR/Ghostbird_Skin_01:Ghostbird_Rig_V01:WristR/LanternCarrySocket/GhostLantern",
+				"parentPath": "Sector_DreamWorld/Prisoner_Clone",
+				"isRelativeToParent": true,
+				"rename": "Prisoner_Lantern",
+				"position": {
+					"x": 1.0418,
+					"y": -0.3927,
+					"z": 0.3745
+				},
+				"rotation": {
+					"x": 350.2967,
+					"y": 335.4815,
+					"z": 345.2463
+				}
+				
+			},
+			{
+				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
+				"rename": "Footprint_1",
+				"parentPath": "Sector_DreamWorld/Prisoner_Clone",
+				"position": {
+					"x": -6.09301,
+					"y": -293.67337,
+					"z": 674.883
+				},
+				"rotation": {
+					"x": 6.43426132,
+					"y": 252.247437,
+					"z": 16.2062435
+				},
+				"scale": 0.6
+			},
+			{
+				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
+				"rename": "Footprint_2",
+				"parentPath": "Sector_DreamWorld/Prisoner_Clone",
+				"position": {
+					"x": -7.501274,
+					"y": -293.615631,
+					"z": 675.1181
+				},
+				"rotation": {
+					"x": 4.07460356,
+					"y": 256.659363,
+					"z": 17.3828564
+				},
+				"scale": 0.6
+			},
+			{
+				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
+				"rename": "Footprint_3",
+				"parentPath": "Sector_DreamWorld/Prisoner_Clone",
+				"position": {
+					"x": -5.957367,
+					"y": -293.220428,
+					"z": 676.3393
+				},
+				"rotation": {
+					"x": 11.2283,
+					"y": 231.10939,
+					"z": 12.8863764
+				},
+				"scale": 0.6
+			}
+
 		]
 	},
 	"ReferenceFrame": {},

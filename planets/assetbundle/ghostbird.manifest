@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 392672787
+CRC: 2982442680
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 0c89c78503e84468e9aa0a20c5f980c7
+    Hash: 34ac12061c74a07315e829b88f30e303
   TypeTreeHash:
     serializedVersion: 2
     Hash: 937bfd66dac56308391a18b564f5210b
@@ -43,8 +43,9 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
-- Assets/Prefabs_/Ghostbird_IP_ANIM.prefab
+- Assets/Prefabs/Ghostbird_IP_ANIM.prefab
 - Assets/Prefabs/Nomai_ANIM_SkyWatching_Idle.prefab
 - Assets/Prefabs/Traveller_HEA_Gabbro_ANIM_IdleFlute.prefab
 - Assets/Prefabs/SLATE TALKING.prefab
-Dependencies: []
+Dependencies:
+- E:/Outer Wilds modding/OW RIPPED/Bundles/greenmats

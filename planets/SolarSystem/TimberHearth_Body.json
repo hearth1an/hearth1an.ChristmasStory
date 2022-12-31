@@ -5,7 +5,7 @@
 		"details": [
 			{
 				"assetBundle": "planets/assetbundle/ghostbird",
-				"path": "Assets/Prefabs/Ghostbird_IP_ANIM 1.prefab",
+				"path": "Assets/Prefabs/Ghostbird_IP_ANIM.prefab",
 				"rename": "GhostBird",
 				"position": {
 					"x": -1.0669,

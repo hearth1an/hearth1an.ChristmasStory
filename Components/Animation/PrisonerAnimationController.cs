@@ -4,6 +4,11 @@ using NewHorizons.Utility;
 using UnityEngine;
 using NewHorizons.Builder.Props;
 using System;
+using OWML.ModHelper;
+using HarmonyLib;
+using System.Reflection;
+using NewHorizons.Utility;
+using NewHorizons.Handlers;
 
 
 
@@ -19,8 +24,7 @@ namespace ChristmasStory.Components.Animation
         private VisionTorchSocket _visionTorchSocket;
         private PrisonerDirector _prisonerDirector;
         private OWItem _visionTorchItem;
-
-
+        private GameObject _dialogue;
 
         public static PrisonerAnimationController Instance;
         public void Start()
@@ -38,6 +42,11 @@ namespace ChristmasStory.Components.Animation
             _visionTorchItem = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Interactibles_PrisonCell/PrisonerSequence/VisionTorchWallSocket/Prefab_IP_VisionTorchItem").GetComponent<OWItem>();
                         
             _visionTorchTarget.onSlidesComplete = Instance.OnVisionEnd;
+
+            _dialogue = SearchUtilities.Find("Prisoner_Dialogue");
+
+
+            OnPrisonerReady();
         }
 
         public void PlayLightsUp()
@@ -47,20 +56,27 @@ namespace ChristmasStory.Components.Animation
             var prisonersOriginalTorch = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/Prefab_IP_VisionTorchProjector");
             var prisonersTorch = SearchUtilities.Find("Prisoner_Vision_Torch");
             SearchUtilities.Find("Prisoner_Clone").SetActive(true);
+            SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Effects_IP_SIM_VisionTorch").SetActive(true);
 
             prisonersTorch.SetActive(true);
 
             // Destroy(prisonersOriginalTorch);
         }
         public void OnVisionEnd()
-        {            
+        {
             SearchUtilities.Find("Prisoner_Vision").SetActive(false);
-            _prisonerBrain.BeginBehavior(PrisonerBehavior.WaitForTorchReturn, 4f);
-            
+            SearchUtilities.Find("Prisoner_Dialogue").SetActive(false);
+            SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Props_PrisonCell/LowerCell/Props_IP_GhostbirdInstrument").SetActive(false);
+            SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Props_PrisonCell/LowerCell/Props_IP_GhostbirdInstrument_Bow").SetActive(false);
         }
-       
-    }
-}
+
+        private void OnPrisonerReady()
+        {
+            Instance._prisonerBrain.OnFinishEmergeAnimation();
+            Instance._dialogue.SetActive(true);        }
+
+
+    }   }
 
 
         /*
@@ -93,54 +109,54 @@ namespace ChristmasStory.Components.Animation
 
 
 
-        /*
-       public void RevealWallText()
-       {
-           Instance._nomaiText.Show();
-       }
-       public void StopWriteWallText()
-       {
-           Instance._animator.StopWritingMessage(gestureToText: true);
-       }
-       public void GestureToStone()
-       {
-           Instance._animator.PlayGestureToWordStones();
-       }
-       public void RevealStone()
-       {
-           Instance._conversationStone.Reveal();
-           Instance._audioSource.PlayOneShot(AudioType.SolanumSymbolReveal, 0.5f);
-       }
-       public void StopSound()
-       {
-           Instance._audioSource.Stop();
-       }
-       public void TransformWatchingTarget()
-       {
-           Instance._animator.StartWatchingPlayer();
-           Instance._animator._playerCameraTransform = _sharedStone.transform;
-       }
-       public void StopWatching()
-       {
-           Instance._animator.StopWatchingPlayer();
-       }
-       public void PlayWholeAnimation()
-       {
-           Invoke("WriteWallText", 1f);
-           Invoke("RevealWallText", 5f);
-           Invoke("StopWriteWallText", 6f);
-           Invoke("GestureToStone", 7f);
-           Invoke("RevealStone", 10.5f);
-           Invoke("StopSound", 11.4f);
-           Invoke("StopWatching", 20f);
-       }
-       public void SolanumAnimEvent()
-       {
-           Invoke("TransformWatchingTarget", 2f);
-           Invoke("PlayWholeAnimation", 2f);
-       }
+/*
+public void RevealWallText()
+{
+   Instance._nomaiText.Show();
+}
+public void StopWriteWallText()
+{
+   Instance._animator.StopWritingMessage(gestureToText: true);
+}
+public void GestureToStone()
+{
+   Instance._animator.PlayGestureToWordStones();
+}
+public void RevealStone()
+{
+   Instance._conversationStone.Reveal();
+   Instance._audioSource.PlayOneShot(AudioType.SolanumSymbolReveal, 0.5f);
+}
+public void StopSound()
+{
+   Instance._audioSource.Stop();
+}
+public void TransformWatchingTarget()
+{
+   Instance._animator.StartWatchingPlayer();
+   Instance._animator._playerCameraTransform = _sharedStone.transform;
+}
+public void StopWatching()
+{
+   Instance._animator.StopWatchingPlayer();
+}
+public void PlayWholeAnimation()
+{
+   Invoke("WriteWallText", 1f);
+   Invoke("RevealWallText", 5f);
+   Invoke("StopWriteWallText", 6f);
+   Invoke("GestureToStone", 7f);
+   Invoke("RevealStone", 10.5f);
+   Invoke("StopSound", 11.4f);
+   Invoke("StopWatching", 20f);
+}
+public void SolanumAnimEvent()
+{
+   Invoke("TransformWatchingTarget", 2f);
+   Invoke("PlayWholeAnimation", 2f);
+}
 
-       */
+*/
 
 
 

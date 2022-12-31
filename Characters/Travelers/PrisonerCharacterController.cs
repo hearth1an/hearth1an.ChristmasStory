@@ -17,7 +17,8 @@ namespace ChrismasStory.Characters.Travelers
 			dialogue = SearchUtilities.Find("Prisoner_Dialogue").GetComponent<CharacterDialogueTree>();
 			treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/GhostBird");
 			originalCharacter = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner/Ghostbird_IP_ANIM");
-
+			
+			
 			HeldItemHandler.Instance.ItemDropped.AddListener(OnItemDropped);
 
 			base.Start();
