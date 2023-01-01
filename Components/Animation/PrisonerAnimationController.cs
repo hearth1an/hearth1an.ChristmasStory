@@ -68,6 +68,34 @@ namespace ChristmasStory.Components.Animation
             SearchUtilities.Find("Prisoner_Dialogue").SetActive(false);
             SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Props_PrisonCell/LowerCell/Props_IP_GhostbirdInstrument").SetActive(false);
             SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Props_PrisonCell/LowerCell/Props_IP_GhostbirdInstrument_Bow").SetActive(false);
+
+            TransformTotemRings();
+        }
+
+        private void TransformTotemRings()
+        {
+            var ring_1 = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/IslandsRoot/IslandPivot_C/Island_C/Interactibles_Island_C/Prefab_IP_DW_CodeTotem/CodeDisplay/Props_IP_CodeTotem/rings/ring01").GetComponent<RotaryDial>();
+            var ring_2 = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/IslandsRoot/IslandPivot_C/Island_C/Interactibles_Island_C/Prefab_IP_DW_CodeTotem/CodeDisplay/Props_IP_CodeTotem/rings/ring02").GetComponent<RotaryDial>();
+            var ring_3 = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/IslandsRoot/IslandPivot_C/Island_C/Interactibles_Island_C/Prefab_IP_DW_CodeTotem/CodeDisplay/Props_IP_CodeTotem/rings/ring03").GetComponent<RotaryDial>();
+            var ring_4 = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/IslandsRoot/IslandPivot_C/Island_C/Interactibles_Island_C/Prefab_IP_DW_CodeTotem/CodeDisplay/Props_IP_CodeTotem/rings/ring04").GetComponent<RotaryDial>();
+            var ring_5 = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/IslandsRoot/IslandPivot_C/Island_C/Interactibles_Island_C/Prefab_IP_DW_CodeTotem/CodeDisplay/Props_IP_CodeTotem/rings/ring05").GetComponent<RotaryDial>();
+
+            ring_1._symbolSelected = 1;
+            ring_1.Awake();
+
+            ring_2._symbolSelected = 2;
+            ring_2.Awake();
+
+            ring_3._symbolSelected = 3;
+            ring_3.Awake();
+
+            ring_4._symbolSelected = 2;
+            ring_4.Awake();
+
+            ring_5._symbolSelected = 1;
+            ring_5.Awake();
+
+            SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/IslandsRoot/IslandPivot_C/Island_C/Interactibles_Island_C/Prefab_IP_DW_CodeTotem").GetComponent<EclipseCodeController4>().CheckForCode();
         }
 
         private void OnPrisonerReady()

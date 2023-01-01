@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2982442680
+CRC: 1800522763
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 34ac12061c74a07315e829b88f30e303
+    Hash: f03ea5154769564a62137ce5284d604f
   TypeTreeHash:
     serializedVersion: 2
     Hash: 937bfd66dac56308391a18b564f5210b
@@ -47,5 +47,4 @@ Assets:
 - Assets/Prefabs/Nomai_ANIM_SkyWatching_Idle.prefab
 - Assets/Prefabs/Traveller_HEA_Gabbro_ANIM_IdleFlute.prefab
 - Assets/Prefabs/SLATE TALKING.prefab
-Dependencies:
-- E:/Outer Wilds modding/OW RIPPED/Bundles/greenmats
+Dependencies: []
