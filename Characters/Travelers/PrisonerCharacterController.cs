@@ -48,8 +48,9 @@ namespace ChrismasStory.Characters.Travelers
 		private void OnItemDropped(OWItem item)
 		{
 			var distance = 100f;
+			var artifact = SearchUtilities.Find("Prisoner_Artifact").GetComponent<DreamLanternController>()._lit = true;
 			var withinDistance = (Locator.GetPlayerTransform().position - treeCharacter.transform.position).sqrMagnitude < distance * distance;
-			if (item.name == "Prisoner_Artifact" && withinDistance)
+			if (item.name == "Prisoner_Artifact" && withinDistance && artifact)
 			{
 				ChangeState(STATE.AT_TREE);
 			}

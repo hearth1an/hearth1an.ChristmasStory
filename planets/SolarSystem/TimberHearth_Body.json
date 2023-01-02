@@ -4,6 +4,21 @@
 	"Props": {
 		"details": [
 			{
+				"assetBundle": "planets/assetbundle/meshasset",
+				"path": "Assets/Prefabs/Collider_Geometry_LowerVillage_0_Fixed.prefab",
+				"rename": "TH_Fixed_Geometry",
+				"position": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"rotation": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				}
+			},
+			{
 				"assetBundle": "planets/assetbundle/ghostbird",
 				"path": "Assets/Prefabs/Ghostbird_IP_ANIM.prefab",
 				"rename": "GhostBird",
@@ -32,6 +47,107 @@
 				},
 				"scale": 1
 			},
+			{
+				"path": "TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Lighting_LowerVillage/OtherComponentsGroup/LaunchTower/Props_HEA_WallLamp_Pulsing",
+				"removeChildren": [ "LampPost_Lamp", "LampPost_Top" ],
+				"rename": "Tree_Lamp_Yellow",				
+				"position": {
+					"x": -1.2564,
+					"y": -7.0225,
+					"z": 187.9808
+				},
+				"rotation": {
+					"x": 63.5864,
+					"y": 284.6286,
+					"z": 292.6249
+				},
+				"scale": 1
+			},
+			{
+				"path": "TimberHearth_Body/Sector_TH/Tree_Lamp_Yellow",
+				"rename": "Tree_Lamp_Yellow_1",
+				"parentPath": "Sector_TH/Tree_Lamp_Yellow",
+				"isRelativeToParent": true,
+				"position": {
+					"x": -1.8655,
+					"y": 4.4,
+					"z": -2.1
+				},
+				"rotation": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"scale": 1
+			},
+			{
+				"path": "TimberHearth_Body/Sector_TH/Tree_Lamp_Yellow",
+				"rename": "Tree_Lamp_Yellow_2",
+				"parentPath": "Sector_TH/Tree_Lamp_Yellow",
+				"isRelativeToParent": true,
+				"position": {
+					"x": -0.0764,
+					"y": 7.5582,
+					"z": 10.3855
+				},
+				"rotation": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"scale": 1
+			},
+			{
+				"path": "TimberHearth_Body/Sector_TH/Tree_Lamp_Yellow",
+				"rename": "Tree_Lamp_Yellow_3",
+				"parentPath": "Sector_TH/Tree_Lamp_Yellow",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 0.5927,
+					"y": 6.1182,
+					"z": 1.2073
+				},
+				"rotation": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"scale": 1
+			},
+			{
+				"path": "TimberHearth_Body/Sector_TH/Tree_Lamp_Yellow",
+				"rename": "Tree_Lamp_Yellow_4",
+				"parentPath": "Sector_TH/Tree_Lamp_Yellow",
+				"isRelativeToParent": true,
+				"position": {
+					"x": -6.4473,
+					"y": 17.3783,
+					"z": 7.7709
+				},
+				"rotation": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"scale": 1
+			},
+			{
+				"path": "TimberHearth_Body/Sector_TH/Tree_Lamp_Yellow",
+				"rename": "Tree_Lamp_Yellow_5",
+				"parentPath": "Sector_TH/Tree_Lamp_Yellow",
+				"isRelativeToParent": true,
+				"position": {
+					"x": -6.9818,
+					"y": 12.3454,
+					"z": -1.2582
+				},
+				"rotation": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"scale": 1
+			},			
 			{
 				"path": "RingWorld_Body/Sector_RingInterior/Sector_Zone1/Sector_ArtifactHouse_Zone1/Interactibles_ArtifactHouse_Zone1/Prefab_IP_DreamLanternItem_2",
 				"position": {

@@ -4,7 +4,7 @@
 	"Props": {
 		"details": [
 			{
-				"path": "RingWorld_Body/Sector_RingInterior/Sector_Zone1/Sector_ArtifactHouse_Zone1/Interactibles_ArtifactHouse_Zone1/Prefab_IP_DreamLanternItem_2",				
+				"path": "RingWorld_Body/Sector_RingInterior/Sector_Zone1/Sector_ArtifactHouse_Zone1/Interactibles_ArtifactHouse_Zone1/Prefab_IP_DreamLanternItem_2",
 				"rename": "Prisoner_Artifact",
 				"position": {
 					"x": -0.1,
@@ -16,6 +16,36 @@
 					"y": 6.17,
 					"z": 0
 				}
+			},
+			{
+				"assetBundle": "planets/assetbundle/meshasset",
+				"path": "Assets/Prefabs/COL_Prison_Body_Interior.prefab",
+				"rename": "Prison_Mesh_Fixed",
+				"position": {
+					"x": -0.1,
+					"y": 1.6,
+					"z": 0.2
+				},
+				"rotation": {
+					"x": 0,
+					"y": 6.17,
+					"z": 0
+				}
+			},
+			{
+				"path": "RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/SectorTrigger_PrisonDocks/SectorTrigger_PrisonDocks_2",
+				"rename": "Sector_Prison_Trigger_Copy",
+				"position": {
+					"x": 231.4488,
+					"y": -68.25787,
+					"z": -145.9255
+				},
+				"rotation": {
+					"x": 343.3943,
+					"y": 131.6786,
+					"z": 187.7658
+				}
+
 			}
 		]
 

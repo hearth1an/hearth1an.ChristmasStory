@@ -1,0 +1,29 @@
+ManifestFileVersion: 0
+CRC: 1237002183
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 199d7b1c375ae31911f97d4e0e3be75e
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 27e5294c843bdca701ef1b2aa39c71eb
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 64
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Prefabs/Collider_Geometry_LowerVillage_0_Fixed.prefab
+- Assets/Prefabs/COL_Prison_Body_Interior.prefab
+- Assets/Prefabs/COL_Prison_Body_Interior 1.prefab
+Dependencies: []

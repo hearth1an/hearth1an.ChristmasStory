@@ -33,23 +33,19 @@
 			},
 			{
 				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_DreamZone_3/Sector_Hotel/Ghosts_Hotel/GhostNodeMap_Depths/Prefab_IP_GhostBird_Bou/Ghostbird_IP_ANIM",
+				"removeChildren": [ "Ghostbird_Skin_01:Ghostbird_Rig_V01:ControlRig", "Ghostbird_Skin_01:Ghostbird_v004:Ghostbird_IP" ],
 				"parentPath": "Sector_DreamWorld/Prisoner_Clone",
 				"isRelativeToParent": true,
 				"position": {
-					"x": -9.239243,
-					"y": -294.103333,
-					"z": 674.4118
+					"x": -0.1764,
+					"y": -0.2,
+					"z": 0.6
 				},
-				"removeChildren": [
-					"Ghostbird_Skin_01:Ghostbird_Rig_V01:ControlRig",
-					"Ghostbird_Skin_01:Ghostbird_v004:Ghostbird_IP"
-				],
 				"rotation": {
 					"x": 331.9223,
-					"y": 87.25612,
+					"y": 5.5707,
 					"z": 352.9661
 				}
-
 			},
 			{
 				"rename": "Prisoner_Lantern",
@@ -74,15 +70,17 @@
 				"position": {
 					"x": -0.5239,
 					"y": 0.3876,
-					"z": 4.0218
+					"z": 3.8218
 				},
 				"rotation": {
-					"x": 6.9,
-					"y": 138.3215,
-					"z": 0
+					"x": 4.0747,
+					"y": 160.7124,
+					"z": 17.3829
 				},
 				"scale": 0.6,
-				"parentPath": "Sector_DreamWorld/Prisoner_Clone"
+				"parentPath": "Sector_DreamWorld/Prisoner_Clone",
+				"isRelativeToParent": true,
+				"alignToNormal": true
 			},
 			{
 				"rename": "Footprint_2",
