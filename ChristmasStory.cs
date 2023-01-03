@@ -9,6 +9,7 @@ using NewHorizons.Utility;
 using OWML.Common;
 using OWML.ModHelper;
 using System;
+using System.Linq;
 using System.Reflection;
 using UnityEngine;
 
@@ -109,6 +110,7 @@ namespace ChrismasStory
 			TravellersReplacements();
 			CharactersReplacement();
 			GeoRemovements();
+			THModifications();
 		}
 
 		public void GeoRemovements()
@@ -327,33 +329,7 @@ namespace ChrismasStory
 				ghostBirdInstrumentBow.materials[2].CopyPropertiesFromMaterial(neededMaterial.material);
 				ghostBirdInstrumentBow.materials[3].CopyPropertiesFromMaterial(neededMaterial.material);
 
-				var thTerrain = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/OtherComponentsGroup/ControlledByProxy_Base/VillageCraterFloors/BatchedGroup/BatchedMeshRenderers_0").GetComponent<MeshRenderer>();
-				var otherTerrain = SearchUtilities.Find("QuantumMoon_Body/Sector_QuantumMoon/State_BH/Geometry_BHState/BatchedGroup/BatchedMeshRenderers_3").GetComponent<MeshRenderer>();
-				
-				thTerrain.material.shader = otherTerrain.material.shader;
-				thTerrain.materials = otherTerrain.materials;
 
-				var grassTextureDummy = SearchUtilities.Find("Grass_Texture_Dummy").GetComponent<MeshRenderer>();
-                var grassTexture = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/DetailPatches_LowerVillage/LandingGeyserVillageArea/Foliage_TH_GrassPatch (2)").GetComponent<MeshRenderer>();
-
-				grassTexture.material.CopyFrom(grassTextureDummy.materials[0]);
-                
-				
-				
-				// grassTexture.material.SetTexture("_MainTex",);
-
-				var snowGrassTexture = Instance.ModHelper.Assets.GetTexture("planets/Content/Textures/Foliage_TH_Snow.png");
-				var gtexture = Resources.FindObjectsOfTypeAll(typeof(Material));
-
-				// grassTexture.material.SetTexture("_MainTex", snowGrassTexture);
-
-				
-
-
-
-				// grassTexture.sharedMaterial = grassTextureDummy.sharedMaterial;
-
-				//.mainTexture SetTexture("_MainTex", grassTextureDummy);
 
 
 				var prisonerBehavior = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostDirector_Prisoner").GetComponent<PrisonerDirector>();
@@ -425,6 +401,46 @@ namespace ChrismasStory
 			catch (Exception ex)
 			{
 				WriteError(ex.ToString());
+			}
+		}
+
+		public void THModifications()
+		{
+			// More snowflakes
+			var effects = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Effects_TH/Effects_TH_Snowflakes");
+			var vectionController = effects.GetComponent<PlanetaryVectionController>();
+			vectionController._exclusionSectors.Clear();
+
+			for (int i = 0; i < 10; i ++)
+			{
+				var moreEffects = GameObject.Instantiate(effects);
+				moreEffects.transform.parent = effects.transform.parent;
+				moreEffects.transform.localPosition = Vector3.zero;
+			}
+
+			// Snow on ground
+			var thTerrain = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/OtherComponentsGroup/ControlledByProxy_Base/VillageCraterFloors/BatchedGroup/BatchedMeshRenderers_0").GetComponent<MeshRenderer>();
+			var snowTerrain = SearchUtilities.Find("QuantumMoon_Body/Sector_QuantumMoon/State_BH/Geometry_BHState/BatchedGroup/BatchedMeshRenderers_3").GetComponent<MeshRenderer>();
+
+			thTerrain.material.shader = snowTerrain.material.shader;
+			thTerrain.materials = snowTerrain.materials;
+
+			// Snow on grass
+			var snowyGrassMaterial = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/DetailPatches_LowerVillage/LandingGeyserVillageArea/Foliage_TH_GrassPatch (2)").GetComponent<MeshRenderer>().materials[0];
+			var snowGrassTexture = Instance.ModHelper.Assets.GetTexture("planets/Content/Textures/Foliage_TH_Snow.png");
+			snowyGrassMaterial.mainTexture = snowGrassTexture;
+
+			var thMeshRenderers = SearchUtilities.Find("TimberHearth_Body").GetComponentsInChildren<MeshRenderer>();
+			foreach (var meshRenderer in thMeshRenderers)
+			{
+				if (meshRenderer.name.Contains("Foliage_TH_GrassPatch"))
+				{
+					meshRenderer.sharedMaterial = snowyGrassMaterial;
+				}
+				else if (meshRenderer.material.name.Contains("Terrain_TH_THSurface_mat"))
+				{
+					meshRenderer.sharedMaterial = snowTerrain.material;
+				}
 			}
 		}
 	}

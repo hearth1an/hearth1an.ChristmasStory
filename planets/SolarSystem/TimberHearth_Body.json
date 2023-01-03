@@ -1,6 +1,9 @@
 {
 	"$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
 	"name": "TimberHearth",
+	"Base": {
+		"surfaceSize": 200
+	},
 	"Props": {
 		"details": [
 			{
@@ -491,6 +494,7 @@
 		]
 	},
 	"Atmosphere": {
-		"hasSnow": true
+		"hasSnow": true,
+		"size": 300
 	}
 }
