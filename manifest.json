@@ -5,6 +5,6 @@
     "name": "Christmas Story",
     "uniqueName": "hearth1an.ChristmasStory",
     "version": "0.0.2",
-    "owmlVersion": "2.8.0",
+    "owmlVersion": "2.9.0",
     "dependencies": [ "xen.NewHorizons" ]
 }
