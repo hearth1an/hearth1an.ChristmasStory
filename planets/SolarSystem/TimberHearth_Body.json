@@ -82,6 +82,7 @@
 			{
 				"rename": "Center_Barrel",
 				"path": "TimberHearth_Body/Sector_TH/Sector_RadioTower/RadioTower_DLC/Props_RadioTower/OtherComponentsGroup/Props_Grove/Props_HEA_BarrelTall",
+				"parentPath": "Sector_TH/Sector_Village",
 				"position": {
 					"x": -10.1751757,
 					"y": -15.1054688,

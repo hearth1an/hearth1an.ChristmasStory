@@ -406,6 +406,7 @@ namespace ChrismasStory
 
 		public void THModifications()
 		{
+			/*
 			// More snowflakes
 			var effects = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Effects_TH/Effects_TH_Snowflakes");
 			var vectionController = effects.GetComponent<PlanetaryVectionController>();
@@ -416,24 +417,46 @@ namespace ChrismasStory
 				var moreEffects = GameObject.Instantiate(effects);
 				moreEffects.transform.parent = effects.transform.parent;
 				moreEffects.transform.localPosition = Vector3.zero;
-			}
-
+			}			
+			*/ 
+			var alpine = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Prefab_TH_Alpine").GetComponent<Renderer>();			
+				
 			// Snow on ground
-			var thTerrain = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/OtherComponentsGroup/ControlledByProxy_Base/VillageCraterFloors/BatchedGroup/BatchedMeshRenderers_0").GetComponent<MeshRenderer>();
-			var snowTerrain = SearchUtilities.Find("QuantumMoon_Body/Sector_QuantumMoon/State_BH/Geometry_BHState/BatchedGroup/BatchedMeshRenderers_3").GetComponent<MeshRenderer>();
+			var thTerrain = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/OtherComponentsGroup/ControlledByProxy_Base/VillageCraterFloors/BatchedGroup/BatchedMeshRenderers_0").GetComponent<Renderer>();
+			var snowTerrain = SearchUtilities.Find("QuantumMoon_Body/Sector_QuantumMoon/State_BH/Geometry_BHState/BatchedGroup/BatchedMeshRenderers_3").GetComponent<Renderer>();
 
 			thTerrain.material.shader = snowTerrain.material.shader;
 			thTerrain.materials = snowTerrain.materials;
 
 			// Snow on grass
-			var snowyGrassMaterial = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/DetailPatches_LowerVillage/LandingGeyserVillageArea/Foliage_TH_GrassPatch (2)").GetComponent<MeshRenderer>().materials[0];
-			var snowGrassTexture = Instance.ModHelper.Assets.GetTexture("planets/Content/Textures/Foliage_TH_Snow.png");
-			snowyGrassMaterial.mainTexture = snowGrassTexture;
+			var snowyGrassMaterial = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/DetailPatches_LowerVillage/LandingGeyserVillageArea/Foliage_TH_GrassPatch (2)").GetComponent<Renderer>().materials[0];
+			var snowyWoodMaterial = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Props_LowerVillage/OtherComponentsGroup/Architecture_LowerVillage/BatchedGroup/BatchedMeshRenderers_0").GetComponent<Renderer>().materials[0];
+			var snowyTreesMaterial = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Props_LowerVillage/OtherComponentsGroup/Trees_LowerVillage/BatchedGroup/BatchedMeshRenderers_0").GetComponent<Renderer>().materials[0];
+			var observatoryMaterial = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Geometry_Observatory/Structure_HEA_Observatory_v3/ObservatoryPivot/Observatory_Interior/Interior_Planks").GetComponent<Renderer>().materials[0];
+			var snowyStructureMaterial = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Geometry_LowerVillage/OtherComponentsGroup/ControlledByProxy_Structures/Architecture_LowerVillage/BatchedGroup/BatchedMeshRenderers_1").GetComponent<Renderer>().materials[0];
 
-			var thMeshRenderers = SearchUtilities.Find("TimberHearth_Body").GetComponentsInChildren<MeshRenderer>();
+			var mainTreeTexture = Instance.ModHelper.Assets.GetTexture("planets/Content/Textures/Foliage_TH_Main_Tree_Snow.png");
+			var snowGrassTexture = Instance.ModHelper.Assets.GetTexture("planets/Content/Textures/Foliage_TH_Snow.png");
+			var snowWoodTexture = Instance.ModHelper.Assets.GetTexture("planets/Content/Textures/Foliage_TH_Crater_Snow_Wood.png");
+			var woodTextureCleam = Instance.ModHelper.Assets.GetTexture("planets/Content/Textures/Foliage_TH_Crater_Wood_Clean.png");
+			var snowTreeTexture = Instance.ModHelper.Assets.GetTexture("planets/Content/Textures/Foliage_TH_Snow_Tree.png");			
+			var snowStructureTexture = Instance.ModHelper.Assets.GetTexture("planets/Content/Textures/Structure_HEA_VillageCabin_Snow.png");
+
+			alpine.material.mainTexture = mainTreeTexture;			
+			
+			snowyTreesMaterial.mainTexture = snowTreeTexture;
+			snowyWoodMaterial.mainTexture = snowWoodTexture;
+			snowyGrassMaterial.mainTexture = snowGrassTexture;
+			snowyStructureMaterial.mainTexture = snowStructureTexture;
+			observatoryMaterial.mainTexture = woodTextureCleam;
+
+			var thMeshRenderers = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village").GetComponentsInChildren<Renderer>();
+			var thMeshRenderers_2 = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Props_TH/OtherComponentsGroup/ControlledByProxy_Terrain/Village").GetComponentsInChildren<Renderer>();
+			var thExcludedSector = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Geometry_Observatory/Structure_HEA_Observatory_v3/ObservatoryPivot/Observatory_Interior").GetComponentsInChildren<Renderer>();
+			
 			foreach (var meshRenderer in thMeshRenderers)
 			{
-				if (meshRenderer.name.Contains("Foliage_TH_GrassPatch"))
+				if (meshRenderer.name.Contains("Foliage_TH"))
 				{
 					meshRenderer.sharedMaterial = snowyGrassMaterial;
 				}
@@ -441,7 +464,44 @@ namespace ChrismasStory
 				{
 					meshRenderer.sharedMaterial = snowTerrain.material;
 				}
+				else if (meshRenderer.material.name.Contains("Foliage_TH"))
+				{
+					meshRenderer.sharedMaterial = snowTerrain.material;
+				}
+				else if (meshRenderer.material.name.Contains("VillagePlanks_mat"))
+				{
+					meshRenderer.sharedMaterial = snowyWoodMaterial;
+				}
+				else if (meshRenderer.material.name.Contains("Tree_TH_RedwoodLeaves"))
+				{
+					meshRenderer.sharedMaterial = snowyTreesMaterial;
+				}				
+				else if (meshRenderer.material.name.Contains("Tree_TH_RedwoodLeaves_mat (Instance)"))
+				{
+					meshRenderer.sharedMaterial = snowyTreesMaterial;
+				}
+				else if (meshRenderer.material.name.Contains("Structure_HEA_VillageCabin"))
+				{
+					meshRenderer.sharedMaterial = snowyStructureMaterial;
+				}
 			}
-		}
+			foreach (var meshRenderer in thMeshRenderers_2)
+			{
+				if (meshRenderer.material.name.Contains("Tree_TH_RedwoodLeaves"))
+				{
+					meshRenderer.sharedMaterial = snowyTreesMaterial;
+				}
+			}
+			foreach (var meshRenderer in thExcludedSector)
+			{
+				if (meshRenderer.material.name.Contains("Structure_HEA_VillagePlanks"))
+				{
+					meshRenderer.sharedMaterial = observatoryMaterial;
+				}
+			}
+			
+			
+			
+		}	
 	}
 }
