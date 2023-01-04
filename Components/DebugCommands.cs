@@ -30,6 +30,7 @@ namespace ChristmasStory.Components
 			RegisterDebugCommand(Key.Numpad1, ShipHandler.BlowUpShip, "Blow up ship");
 			RegisterDebugCommand(Key.Numpad2, HeldItemHandler.GivePlayerWarpCore, "Get warp core");
 			RegisterDebugCommand(Key.Numpad3, HeldItemHandler.GivePlayerLantern, "Get lantern");
+			RegisterDebugCommand(Key.Numpad4, OpenSarcophagus, "Open sarcophagus");
 			RegisterDebugCommand(Key.Numpad9, Conditions.ResetAllConditions, "Reset conditions");
 
 			RegisterDebugWarpCommand(Key.Numpad0, () => WarpUtils.WarpToPlanet(AstroObject.Name.TimberHearth, new Vector3(-11.8f, -27.2f, 184.8f)), "Warp to Village");
@@ -39,6 +40,7 @@ namespace ChristmasStory.Components
 			RegisterDebugWarpCommand(Key.Numpad4, WarpUtils.WarpToGabbroIsland, "Warp to Gabbro");
 			RegisterDebugWarpCommand(Key.Numpad5, WarpUtils.WarpToFeldspar, "Warp to Feldspar");
 			RegisterDebugWarpCommand(Key.Numpad6, WarpUtils.WarpToSixthLocation, "Warp to Solanum");
+			RegisterDebugWarpCommand(Key.Numpad7, WarpUtils.WarpToLetranger, "Warp to Letranger");
 		}
 
 		public void Update()
@@ -112,6 +114,12 @@ namespace ChristmasStory.Components
 			_warpPromptList.Add(PromptUtils.AddPrompt(description, PromptPosition.UpperRight, key));
 		}
 
-
+		public static void OpenSarcophagus()
+		{
+			var sarcophagusController = GameObject.FindObjectOfType<SarcophagusRingworldController>();
+			sarcophagusController.OnFirstSealExtinguish();
+			sarcophagusController.OnSecondSealExtinguish();
+			sarcophagusController.OnThirdSealExtinguish();
+		}
 	}
 }

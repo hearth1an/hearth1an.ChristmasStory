@@ -65,5 +65,20 @@ namespace ChristmasStory.Utility
 
 			GlobalMessenger.FireEvent("PlayerFogWarp");
 		}
+
+		public static void WarpToLetranger()
+		{
+			var ringworldSector = SearchUtilities.Find("RingWorld_Body/Sector_RingInterior").GetComponent<Sector>();
+
+			WarpToPlanet(AstroObject.Name.RingWorld, PlayerState.AtFlightConsole() ? Vector3.zero : new Vector3(212.3f, -75.6f, -151.2f));
+			Locator.GetPlayerSectorDetector().RemoveFromAllSectors();
+			ringworldSector.GetTriggerVolume().AddObjectToVolume(Locator.GetPlayerDetector());
+			Locator.GetRingWorldController()._insideRingWorldVolume.AddObjectToVolume(Locator.GetPlayerDetector());
+			if (!PlayerState.AtFlightConsole())
+			{
+				SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Sector_PrisonInterior/Volumes_PrisonInterior/PrisonInteriorVolume")
+					.GetComponent<OWTriggerVolume>().AddObjectToVolume(Locator.GetPlayerDetector());
+			}
+		}
 	}
 }
