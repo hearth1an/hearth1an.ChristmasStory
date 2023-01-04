@@ -7,20 +7,20 @@
 				"path": "RingWorld_Body/Sector_RingInterior/Sector_Zone1/Sector_ArtifactHouse_Zone1/Interactibles_ArtifactHouse_Zone1/Prefab_IP_DreamLanternItem_2",
 				"rename": "Prisoner_Artifact",
 				"position": {
-					"x": -0.1,
-					"y": 1.6,
-					"z": 0.2
+					"x": 214.3936,
+					"y": -75.9134,
+					"z": -144.5425
 				},
 				"rotation": {
-					"x": 0,
-					"y": 6.17,
-					"z": 0
+					"x": 326.1879,
+					"y": 221.6191,
+					"z": 285.6536
 				}
 			},
 			{
-				"assetBundle": "planets/assetbundle/meshasset",
-				"path": "Assets/Prefabs/COL_Prison_Body_Interior.prefab",
-				"rename": "Prison_Mesh_Fixed",
+				"assetBundle": "planets/assetbundle/prison",
+				"path": "Assets/Prefabs/prison_body_ext_fixed.prefab",
+				"rename": "Prison_Exterior_Fixed",
 				"position": {
 					"x": -0.1,
 					"y": 1.6,
@@ -33,20 +33,51 @@
 				}
 			},
 			{
-				"path": "RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/SectorTrigger_PrisonDocks/SectorTrigger_PrisonDocks_2",
-				"rename": "Sector_Prison_Trigger_Copy",
+				"assetBundle": "planets/assetbundle/prison",
+				"path": "Assets/Prefabs/Prison_Body_Interior_fixed.prefab",
+				"rename": "Prison_Interior_Fixed",
 				"position": {
-					"x": 231.4488,
-					"y": -68.25787,
-					"z": -145.9255
+					"x": -0.1,
+					"y": 1.6,
+					"z": 0.2
 				},
 				"rotation": {
-					"x": 343.3943,
-					"y": 131.6786,
-					"z": 187.7658
+					"x": 0,
+					"y": 6.17,
+					"z": 0
 				}
+			},
+			{
+				"path": "RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_BlightedShore/Structures_BlightedShore/RaftHouse_BlightedShore_Zone4/Interactables_RaftHouse_BlightedShore_Zone4/Prefab_IP_RaftDock/Structure_IP_RaftDock/Structure_IP_RaftDock_lights/raftdock_lightbeam",
+				"rename": "Prison_Light",
+				"position": {
+					"x": -0.2,
+					"y": -8.7615,
+					"z": 0
+				},
+				"rotation": {
+					"x": 359.8466,
+					"y": 45.1018,
+					"z": -0.0048
+				}, "scale": 1
+			},
+			{
+				"path": "RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_BlightedShore/Structures_BlightedShore/RaftHouse_BlightedShore_Zone4/Interactables_RaftHouse_BlightedShore_Zone4/Prefab_IP_RaftDock/Structure_IP_RaftDock/Structure_IP_RaftDock_lights/raftdock_lightbulb_down",
+				"rename": "Prison_Light2",
+				"position": {
+					"x": -0.1,
+					"y": 8.9783,
+					"z": 0
+				},
+				"rotation": {
+					"x": 359.8055,
+					"y": 1.238,
+					"z": 383.1616
+				},
+				"scale": 0.5
 
 			}
+
 		]
 
 	}

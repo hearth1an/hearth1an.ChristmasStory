@@ -70,9 +70,11 @@ namespace ChrismasStory.Characters.Travelers
 			PlayerEffectController.CloseEyes(0.33f);
 			yield return new WaitForSeconds(0.33f);
 
+			SearchUtilities.Find("Prisoner_Artifact").SetActive(false);
+
 			// Eyes closed: swap character state
 			OnSetState(state);
-
+			
 			// Open eyes
 			PlayerEffectController.OpenEyes(0.33f);
 

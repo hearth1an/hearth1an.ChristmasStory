@@ -20,6 +20,7 @@ namespace ChrismasStory
 		public static INewHorizons newHorizonsAPI;
 		public static ChristmasStory Instance;
 		public static PrisonerBehavior behaviour;
+		public FluidDetector FluidDetector;
 
 		public Material grassMaterial;
 
@@ -141,7 +142,9 @@ namespace ChrismasStory
         {
             try
             {
-                SearchUtilities.Find("TimberHearth_Body/Sector_TH/Center_Barrel").transform.localScale = new Vector3(7f, 4.5f, 7f);
+				SearchUtilities.Find("Probe_Body/ProbeGravity/Props_NOM_GravityCrystal").transform.localScale = new Vector3(0.16f, 0.16f, 0.16f);
+				SearchUtilities.Find("Probe_Body/ProbeGravity/Props_NOM_GravityCrystal_Base").transform.localScale = new Vector3(0.16f, 0.16f, 0.16f);
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Center_Barrel").transform.localScale = new Vector3(7f, 4.5f, 7f);
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Center_Barrel").AddComponent<OWCapsuleCollider>();
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Christmas_Tree").AddComponent<OWCapsuleCollider>();
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Christmas_Tree").GetComponent<CapsuleCollider>().radius = 0.5f;
@@ -173,27 +176,59 @@ namespace ChrismasStory
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Effects_IP_SarcophagusGlowCenter").transform.localScale = new Vector3(0.4f, 1f, 1f);
                 SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner/Ghostbird_IP_ANIM/Ghostbird_Skin_01:Ghostbird_Rig_V01:Base/Ghostbird_Skin_01:Ghostbird_Rig_V01:Root/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine01/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine02/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine03/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine04/Ghostbird_Skin_01:Ghostbird_Rig_V01:Neck01/Ghostbird_Skin_01:Ghostbird_Rig_V01:Neck02/Ghostbird_Skin_01:Ghostbird_Rig_V01:Head/PrisonerHeadDetector").SetActive(false);
                 SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner/Ghostbird_IP_ANIM/Ghostbird_Skin_01:Ghostbird_Rig_V01:Base/Ghostbird_Skin_01:Ghostbird_Rig_V01:Root/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine01/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine02/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine03/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine04/Ghostbird_Skin_01:Ghostbird_Rig_V01:Neck01/Ghostbird_Skin_01:Ghostbird_Rig_V01:Neck02/Ghostbird_Skin_01:Ghostbird_Rig_V01:Head/LightSensor_GhostHead").SetActive(false);
-					
+                
+				// Transform prison sector
+				
+				SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4").transform.localPosition = new Vector3(-19f, 0, 0);
+
+				// Disabling water in prison, should be done only after the damb crush!
+				/*
+				SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Sector_PrisonInterior/Volumes_PrisonInterior/WaterVolume_Prison").SetActive(false);
+				SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Sector_PrisonInterior/Volumes_PrisonInterior/UnderwaterAudioVolume_Prison").SetActive(false);
+				SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Structures_PrisonDocks/Prison_Zone4/Geo_Prison/Effects_IP_PrisonWater").SetActive(false);
+				SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Structures_PrisonDocks/Prison_Zone4/Effects_Prison").SetActive(false);
+				*/
+
 				var artifact = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Prefab_IP_DreamLanternItem_2").GetComponent<DreamLanternController>();
 				artifact.enabled = true;
 				artifact._lit = true;
 
-				var prisonerArtifact = SearchUtilities.Find("Prisoner_Artifact");
-				prisonerArtifact.transform.localPosition = new Vector3(233.4259f, -75.8258f, -144.5425f);
-				prisonerArtifact.transform.localRotation = new Quaternion(-0.4581f, 0.7751f, 0.422f, -0.1066f);
+				var prisonerArtifact = SearchUtilities.Find("Prisoner_Artifact");				
 				prisonerArtifact.GetComponent<DreamLanternController>().enabled = true;
 				prisonerArtifact.GetComponent<DreamLanternController>()._lit = true;
-				prisonerArtifact.GetComponent<DreamLanternController>()._concealed = true;
 
-				var prisonMesh = SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Structures_PrisonDocks/Prison_Zone4/Geo_Prison/Structure_IP_Prison/Prison_Interior/Prison_Body_Interior/COL_Prison_Body_Interior");
-				var prisonMeshFixed = SearchUtilities.Find("Prison_Mesh_Fixed");
-				prisonMeshFixed.transform.parent = prisonMesh.transform.parent;
-				prisonMeshFixed.transform.position = prisonMesh.transform.position;
-				prisonMeshFixed.transform.rotation = prisonMesh.transform.rotation;
+				FluidDetector = SearchUtilities.Find("RingWorld_Body/Sector_RingWorld/Prisoner_Artifact/FluidDetector").GetAddComponent<LanternFluidDetector>();
 
-				prisonMesh.GetComponent<MeshCollider>().sharedMesh = prisonMeshFixed.GetComponent<MeshCollider>().sharedMesh;
-				prisonMesh.SetActive(false);
-				prisonMeshFixed.DestroyAllComponents<MeshRenderer>();
+				var prisonBodyExt = SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Structures_PrisonDocks/Prison_Zone4/Geo_Prison/Structure_IP_Prison/prison_body_ext");
+				var prisonBodyInt = SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Structures_PrisonDocks/Prison_Zone4/Geo_Prison/Structure_IP_Prison/Prison_Interior/Prison_Body_Interior");
+
+				var prisonBodyExtCollider = SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Structures_PrisonDocks/Prison_Zone4/Geo_Prison/Structure_IP_Prison/prison_body_ext/body_ext_col");
+				var prisonBodyIntCollider = SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Structures_PrisonDocks/Prison_Zone4/Geo_Prison/Structure_IP_Prison/Prison_Interior/Prison_Body_Interior/COL_Prison_Body_Interior");
+
+				var prisonBodyExtFixed = SearchUtilities.Find("RingWorld_Body/Sector_RingWorld/Prison_Exterior_Fixed");
+				var prisonBodyInteriorFixed = SearchUtilities.Find("RingWorld_Body/Sector_RingWorld/Prison_Interior_Fixed");
+			
+
+				prisonBodyExtFixed.transform.position = prisonBodyInt.transform.position;
+				prisonBodyExtFixed.transform.rotation = prisonBodyInt.transform.rotation;
+
+				prisonBodyInteriorFixed.transform.position = prisonBodyExt.transform.position;
+				prisonBodyInteriorFixed.transform.rotation = prisonBodyExt.transform.rotation;				
+
+				prisonBodyExt.SetActive(false);
+				prisonBodyInt.SetActive(false);
+
+				var prisonLigthBeam = SearchUtilities.Find("RingWorld_Body/Sector_RingWorld/Prison_Light");
+				var prisonLight = SearchUtilities.Find("RingWorld_Body/Sector_RingWorld/Prison_Light2");
+
+				prisonLigthBeam.transform.localPosition = new Vector3(202.1948f, -71.4272f, -140.7394f);
+				prisonLigthBeam.transform.localRotation = new Quaternion(-0.616f, 0.3204f, -0.3022f, -0.6531f);
+				prisonLigthBeam.transform.localScale = new Vector3(0.3f, 1/2f, 0.3f);
+
+				prisonLight.transform.localPosition = new Vector3(196.7155f, -70.8414f, -136.5985f);
+				prisonLight.transform.localRotation = new Quaternion(-0.0191f, 0.8858f, 0.183f, -0.426f);
+				prisonLight.transform.localScale = new Vector3(0.7f, 0.7f, 0.7f);
+
 
 				var thMesh = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Geometry_LowerVillage/BatchedGroup/BatchedMeshColliders_0");
 				var thMeshFixed = SearchUtilities.Find("TH_Fixed_Geometry");
@@ -204,9 +239,7 @@ namespace ChrismasStory
 				thMesh.GetComponent<MeshCollider>().sharedMesh = thMeshFixed.GetComponent<MeshCollider>().sharedMesh;
 				thMesh.SetActive(false);
 				thMeshFixed.DestroyAllComponents<MeshRenderer>();
-
-				var prisonEnterTrigger = SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/SectorTrigger_PrisonDocks/SectorTrigger_PrisonDocks_2").GetComponent<BoxShape>();
-				var prisonEnterTriggerCopy = SearchUtilities.Find("RingWorld_Body/Sector_RingWorld/Sector_Prison_Trigger_Copy").GetComponent<BoxShape>();
+								
 				
 				ModHelper.Events.Unity.RunWhen(() => prisonerArtifact.GetComponent<DreamLanternController>()._lit != true, () =>
                 {
