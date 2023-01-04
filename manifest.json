@@ -1,7 +1,7 @@
 {
     "$schema": "https://raw.githubusercontent.com/amazingalek/owml/master/schemas/manifest_schema.json",
     "filename": "ChristmasStory.dll",
-    "author": "hearth1an",
+    "author": "hearth1an & xen",
     "name": "Christmas Story",
     "uniqueName": "hearth1an.ChristmasStory",
     "version": "0.0.2",
