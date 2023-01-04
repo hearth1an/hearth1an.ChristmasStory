@@ -27,7 +27,7 @@ namespace ChrismasStory.Characters.Travelers
 			controller._flameStrength = 100f;
 			controller.UpdateVisuals();
 			controller.GetComponent<DreamLanternItem>().EnableInteraction(false);
-			controller.transform.Find("Spotlight_Lantern").GetComponent<Light>().intensity = 0.2f;
+			Delay.FireOnNextUpdate(() => controller.transform.Find("Spotlight_Lantern").GetComponent<OWLight2>()._intensityScale = 0.2f);
 
 			HeldItemHandler.Instance.ItemDropped.AddListener(OnItemDropped);
 
