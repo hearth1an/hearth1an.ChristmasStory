@@ -19,6 +19,9 @@ namespace ChrismasStory.Components
 		public DreamLanternController PrisonerLantern { get; private set; }
 		public DreamLanternItem PrisonerLanternItem { get; private set; }
 
+		private OWTriggerVolume _bellInterior;
+		private EntrywayTrigger _bellEntry;
+
 		public class ItemEvent : UnityEvent<OWItem> { }
 		public ItemEvent ItemDropped = new();
 
@@ -38,23 +41,28 @@ namespace ChrismasStory.Components
 			PrisonerLantern = SearchUtilities.Find("Prisoner_Artifact").GetComponent<DreamLanternController>();
 			PrisonerLanternItem = PrisonerLantern.GetComponent<DreamLanternItem>();
 
-			// Else it tries to wake us up
 			PrisonerLanternItem._fluidDetector.OnEnterFluidType += PrisonerLanternItem_EnterFluidType;
 			PrisonerLanternItem._fluidDetector._shape.SetActivation(true);
 
+			PrisonerLanternItem.onPickedUp.AddListener(PrisonerLanternItem_OnPickedUp);
+
 			// Add the lantern to the right volumes
 			Locator.GetRingWorldController()._insideRingWorldVolume.AddObjectToVolume(PrisonerLanternItem._fluidDetector.gameObject);
-			SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Sector_PrisonInterior/Volumes_PrisonInterior/PrisonInteriorVolume")
-				.GetComponent<OWTriggerVolume>().AddObjectToVolume(PrisonerLanternItem._fluidDetector.gameObject);
 
 			// Fix appearance
 			Delay.FireOnNextUpdate(() =>
 			{
 				PrisonerLantern.enabled = true;
 				PrisonerLantern.SetLit(true);
-				PrisonerLantern.SetFocus(1);
+				PrisonerLantern._focus = 100f;
 				PrisonerLantern.UpdateVisuals();
 			});
+
+			_bellInterior = SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Sector_PrisonInterior/Volumes_PrisonInterior/PrisonInteriorVolume")
+				.GetComponent<OWTriggerVolume>();
+
+			_bellEntry = SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Sector_PrisonInterior/Volumes_PrisonInterior/PrisonInteriorVolume/Entryway")
+				.GetComponent<EntrywayTrigger>();
 		}
 
 		private static void PrisonerLanternItem_EnterFluidType(FluidVolume.Type fluidType)
@@ -72,7 +80,22 @@ namespace ChrismasStory.Components
 			}
 		}
 
-        public static OWItem GetHeldItem() => _instance._toolModeSwapper.GetItemCarryTool().GetHeldItem();
+		private static void PrisonerLanternItem_OnPickedUp(OWItem item)
+		{
+			var isPlayerInsideBell = Instance._bellInterior.IsTrackingObject(Locator.GetPlayerDetector());
+
+			ChristmasStory.WriteDebug($"Is player inside bell: [{isPlayerInsideBell}]");
+
+			// If we pick it up from outside the bell we have to update the volumes
+			if (!isPlayerInsideBell)
+			{
+				Instance._bellInterior.RemoveObjectFromVolume(Instance.PrisonerLanternItem._fluidDetector.gameObject);
+				Instance._bellEntry.OnShapeExit(Instance.PrisonerLanternItem._fluidDetector._shape);
+			}
+		}
+
+
+		public static OWItem GetHeldItem() => _instance._toolModeSwapper.GetItemCarryTool().GetHeldItem();
 		public static OWItem GetNullItem() => _instance._itemTool._heldItem = null;
 
 		/// <summary>
