@@ -41,11 +41,11 @@ namespace ChrismasStory
 		public static void WriteDebug(string line)
 		{
 #if DEBUG
-			Instance.ModHelper.Console.WriteLine(line, MessageType.Debug);
+			Instance.ModHelper.Console.WriteLine("Debug: " + line, MessageType.Info);
 #endif
 		}
-		public static void WriteLine(string line) => Instance.ModHelper.Console.WriteLine(line, MessageType.Info);
-		public static void WriteError(string line) => Instance.ModHelper.Console.WriteLine(line, MessageType.Error);
+		public static void WriteLine(string line) => WriteLine(line, MessageType.Info);
+		public static void WriteError(string line) => WriteLine(line, MessageType.Error);
 		public static void WriteLine(string line, MessageType type) => Instance.ModHelper.Console.WriteLine($"{type}: " + line, type);
 
 		private void OnStarSystemLoaded(string systemName)
@@ -193,12 +193,6 @@ namespace ChrismasStory
 				artifact.enabled = true;
 				artifact._lit = true;
 
-				var prisonerArtifact = SearchUtilities.Find("Prisoner_Artifact");				
-				prisonerArtifact.GetComponent<DreamLanternController>().enabled = true;
-				prisonerArtifact.GetComponent<DreamLanternController>()._lit = true;
-
-				FluidDetector = SearchUtilities.Find("RingWorld_Body/Sector_RingWorld/Prisoner_Artifact/FluidDetector").GetAddComponent<LanternFluidDetector>();
-
 				var prisonBodyExt = SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Structures_PrisonDocks/Prison_Zone4/Geo_Prison/Structure_IP_Prison/prison_body_ext");
 				var prisonBodyInt = SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Structures_PrisonDocks/Prison_Zone4/Geo_Prison/Structure_IP_Prison/Prison_Interior/Prison_Body_Interior");
 
@@ -239,16 +233,6 @@ namespace ChrismasStory
 				thMesh.GetComponent<MeshCollider>().sharedMesh = thMeshFixed.GetComponent<MeshCollider>().sharedMesh;
 				thMesh.SetActive(false);
 				thMeshFixed.DestroyAllComponents<MeshRenderer>();
-								
-				
-				ModHelper.Events.Unity.RunWhen(() => prisonerArtifact.GetComponent<DreamLanternController>()._lit != true, () =>
-                {
-                    SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Prisoner_Clone/Ghostbird_IP_ANIM").SetActive(false);
-                    SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Prisoner_Clone/Prisoner_Lantern").SetActive(false);
-                    SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Prisoner_Clone/Ghostbird_Skin_01:Ghostbird_v004:Ghostbird_IP").SetActive(false);
-
-					PlayerEffectController.PlayAudioOneShot(AudioType.Ghost_DeathSingle, 0.5f);
-				});
 
 				SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)").SetActive(false);
 				SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_R (1)").SetActive(false);

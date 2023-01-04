@@ -1,8 +1,10 @@
 ﻿using HarmonyLib;
 using NewHorizons.Utility;
+using OWML.ModHelper;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem.XR;
 
 namespace ChrismasStory.Components
 {
@@ -14,6 +16,8 @@ namespace ChrismasStory.Components
 		private ItemTool _itemTool;
 		public SharedStone _sharedStone;
 		private GameObject _villageSector;
+		public DreamLanternController PrisonerLantern { get; private set; }
+		public DreamLanternItem PrisonerLanternItem { get; private set; }
 
 		public class ItemEvent : UnityEvent<OWItem> { }
 		public ItemEvent ItemDropped = new();
@@ -26,9 +30,46 @@ namespace ChrismasStory.Components
 			_toolModeSwapper = GameObject.FindObjectOfType<ToolModeSwapper>();
 			_instance = this;
 			_itemTool = GameObject.FindObjectOfType<ItemTool>();
-            _sharedStone = GameObject.FindObjectsOfType<SharedStone>().First(x => x.name == "Invite_Stone");
+			_sharedStone = GameObject.FindObjectsOfType<SharedStone>().First(x => x.name == "Invite_Stone");
 
 			_villageSector = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Nomai_ANIM_SkyWatching_Idle");
+
+			// Fix prisoner lantern
+			PrisonerLantern = SearchUtilities.Find("Prisoner_Artifact").GetComponent<DreamLanternController>();
+			PrisonerLanternItem = PrisonerLantern.GetComponent<DreamLanternItem>();
+
+			// Else it tries to wake us up
+			PrisonerLanternItem._fluidDetector.OnEnterFluidType += PrisonerLanternItem_EnterFluidType;
+			PrisonerLanternItem._fluidDetector._shape.SetActivation(true);
+
+			// Add the lantern to the right volumes
+			Locator.GetRingWorldController()._insideRingWorldVolume.AddObjectToVolume(PrisonerLanternItem._fluidDetector.gameObject);
+			SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Sector_PrisonInterior/Volumes_PrisonInterior/PrisonInteriorVolume")
+				.GetComponent<OWTriggerVolume>().AddObjectToVolume(PrisonerLanternItem._fluidDetector.gameObject);
+
+			// Fix appearance
+			Delay.FireOnNextUpdate(() =>
+			{
+				PrisonerLantern.enabled = true;
+				PrisonerLantern.SetLit(true);
+				PrisonerLantern.SetFocus(1);
+				PrisonerLantern.UpdateVisuals();
+			});
+		}
+
+		private static void PrisonerLanternItem_EnterFluidType(FluidVolume.Type fluidType)
+		{
+			ChristmasStory.WriteDebug($"Prisoner artifact entered fluid [{fluidType}]");
+			if (Instance.PrisonerLantern.IsLit() && fluidType == FluidVolume.Type.WATER)
+			{
+				SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Prisoner_Clone/Ghostbird_IP_ANIM").SetActive(false);
+				SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Prisoner_Clone/Prisoner_Lantern").SetActive(false);
+				SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Prisoner_Clone/Ghostbird_Skin_01:Ghostbird_v004:Ghostbird_IP").SetActive(false);
+
+				Instance.PrisonerLantern.SetLit(false);
+
+				PlayerEffectController.PlayAudioOneShot(AudioType.Ghost_DeathSingle, 0.5f);
+			}
 		}
 
         public static OWItem GetHeldItem() => _instance._toolModeSwapper.GetItemCarryTool().GetHeldItem();
@@ -52,6 +93,12 @@ namespace ChrismasStory.Components
 		{
 			Instance?.ItemDropped?.Invoke(GetHeldItem());
 		}
+
+		[HarmonyPrefix]
+		[HarmonyPatch(typeof(DreamLanternItem), nameof(DreamLanternItem.OnEnterDreamWorld))]
+		[HarmonyPatch(typeof(DreamLanternItem), nameof(DreamLanternItem.OnExitDreamWorld))]
+		[HarmonyPatch(typeof(DreamLanternItem), nameof(DreamLanternItem.OnEnterFluidType))]
+		private static bool PrisonerLanternPatch(DreamLanternItem __instance) => __instance != Instance.PrisonerLanternItem;
 
 		#region debug
 		public static void GivePlayerWarpCore()
