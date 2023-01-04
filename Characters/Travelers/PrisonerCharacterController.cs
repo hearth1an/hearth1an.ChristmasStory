@@ -12,13 +12,23 @@ namespace ChrismasStory.Characters.Travelers
 	{
 		public override Conditions.PERSISTENT DoneCondition => Conditions.PERSISTENT.PRISONER_DONE;
 
+		private GameObject _lantern;
+
 		public override void Start()
 		{
 			dialogue = SearchUtilities.Find("Prisoner_Dialogue").GetComponent<CharacterDialogueTree>();
 			treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/GhostBird");
 			originalCharacter = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner/Ghostbird_IP_ANIM");
-			
-			
+			_lantern = SearchUtilities.Find("Village_Lantern");
+			var controller = _lantern.GetComponent<DreamLanternController>();
+			controller.enabled = true;
+			controller.SetLit(true);
+			controller.SetHeldByPlayer(false);
+			controller._flameStrength = 100f;
+			controller.UpdateVisuals();
+			controller.GetComponent<DreamLanternItem>().EnableInteraction(false);
+			controller.transform.Find("Spotlight_Lantern").GetComponent<Light>().intensity = 0.2f;
+
 			HeldItemHandler.Instance.ItemDropped.AddListener(OnItemDropped);
 
 			base.Start();
@@ -42,23 +52,25 @@ namespace ChrismasStory.Characters.Travelers
 
 		protected override void OnChangeState(STATE oldState, STATE newState)
 		{
-
+			_lantern.SetActive(newState == STATE.AT_TREE);
 		}
 
 		private void OnItemDropped(OWItem item)
 		{
-			var distance = 100f;
-			var artifact = SearchUtilities.Find("Prisoner_Artifact").GetComponent<DreamLanternController>()._lit = true;
-			var withinDistance = (Locator.GetPlayerTransform().position - treeCharacter.transform.position).sqrMagnitude < distance * distance;
-			if (item.name == "Prisoner_Artifact" && withinDistance && artifact)
+			if (item == HeldItemHandler.Instance.PrisonerLanternItem)
 			{
-				ChangeState(STATE.AT_TREE);
+				var distance = 100f;
+				var lit = HeldItemHandler.Instance.PrisonerLantern._lit == true;
+				var withinDistance = (Locator.GetPlayerTransform().position - treeCharacter.transform.position).sqrMagnitude < distance * distance;
+				if (withinDistance && lit)
+				{
+					ChangeState(STATE.AT_TREE);
+				}
 			}
 		}
 
 		protected override IEnumerator DirectToTree(STATE state)
 		{
-			// Plays for 15.33s
 			PlayerEffectController.PlayAudioOneShot(AudioType.Ghost_Laugh, 1f);
 
 			yield return new WaitForSeconds(2f);
@@ -70,7 +82,7 @@ namespace ChrismasStory.Characters.Travelers
 			PlayerEffectController.CloseEyes(0.33f);
 			yield return new WaitForSeconds(0.33f);
 
-			SearchUtilities.Find("Prisoner_Artifact").SetActive(false);
+			HeldItemHandler.Instance.PrisonerLantern.gameObject.SetActive(false);
 
 			// Eyes closed: swap character state
 			OnSetState(state);

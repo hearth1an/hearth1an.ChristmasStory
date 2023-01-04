@@ -62,7 +62,8 @@
 					"y": 76.733,
 					"z": 104.7151
 				},
-				"scale": 1
+				"scale": 1,
+				"rename": "Village_Lantern"
 			},
 			{
 				"path": "TimeLoopRing_Body/Characters_TimeLoopRing/NPC_Player",
