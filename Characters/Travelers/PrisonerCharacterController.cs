@@ -71,7 +71,7 @@ namespace ChrismasStory.Characters.Travelers
 
 		protected override IEnumerator DirectToTree(STATE state)
 		{
-			PlayerEffectController.PlayAudioOneShot(AudioType.Ghost_Laugh, 1f);
+			PlayerEffectController.PlayAudioOneShot(AudioType.Ghost_Laugh, 2f);
 
 			yield return new WaitForSeconds(2f);
 

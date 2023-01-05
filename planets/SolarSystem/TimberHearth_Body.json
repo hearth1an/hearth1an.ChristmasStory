@@ -437,6 +437,25 @@
 				"isRelativeToParent": true,
 				"lookAtRadius": 2,
 				"radius": 1
+			},
+			{
+				"position": {
+					"x": 8.9599,
+					"y": -6.2049,
+					"z": 186.9598
+				},
+				"xmlFile": "planets/Dialogue/Slate.xml",
+				"parentPath": "Sector_TH/Slate_Village",
+				"isRelativeToParent": false,
+				"remoteTriggerRadius": 3,
+				"remoteTriggerPosition": {
+					"x": 8.9599,
+					"y": -6.2049,
+					"z": 186.9598
+				},
+				"radius": 1,
+				"range": 2,
+				"blockAfterPersistentCondition": "SLATE_FIRST_LOOP_DONE"
 			}
 		],
 		"remotes": [

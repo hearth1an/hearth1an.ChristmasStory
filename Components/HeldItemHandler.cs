@@ -36,7 +36,7 @@ namespace ChrismasStory.Components
 			_sharedStone = GameObject.FindObjectsOfType<SharedStone>().First(x => x.name == "Invite_Stone");
 
 			_villageSector = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Nomai_ANIM_SkyWatching_Idle");
-
+			/*
 			// Fix prisoner lantern
 			PrisonerLantern = SearchUtilities.Find("Prisoner_Artifact").GetComponent<DreamLanternController>();
 			PrisonerLanternItem = PrisonerLantern.GetComponent<DreamLanternItem>();
@@ -63,6 +63,7 @@ namespace ChrismasStory.Components
 
 			_bellEntry = SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Sector_PrisonInterior/Volumes_PrisonInterior/PrisonInteriorVolume/Entryway")
 				.GetComponent<EntrywayTrigger>();
+			*/
 		}
 
 		private static void PrisonerLanternItem_EnterFluidType(FluidVolume.Type fluidType)
@@ -76,7 +77,7 @@ namespace ChrismasStory.Components
 
 				Instance.PrisonerLantern.SetLit(false);
 
-				PlayerEffectController.PlayAudioOneShot(AudioType.Ghost_DeathSingle, 0.5f);
+				PlayerEffectController.PlayAudioOneShot(AudioType.Ghost_DeathSingle, 1f);
 			}
 		}
 
