@@ -71,15 +71,16 @@ namespace ChrismasStory.Components
 
 		public static bool IsPlayerHoldingInviteStone() => GetHeldItem() == _instance._sharedStone;
 
-		public void Update()
+		private void Update()
 		{
-			if (IsPlayerHoldingPrisonerArtifact() && PrisonerLantern._lit == true)
+			if (IsPlayerHoldingPrisonerArtifact()!=null && IsPlayerHoldingPrisonerArtifact() && PrisonerLantern._lit == true)
 			{
 				if (PlayerState._isCameraUnderwater == true)
 				{
 					PrisonerFailed();
-				}
-			}
+				}				
+			} 
+			else return;			
 		}
 
 		[HarmonyPrefix]

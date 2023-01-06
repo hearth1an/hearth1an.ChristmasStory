@@ -51,7 +51,7 @@ namespace ChrismasStory.Characters.Travelers
 		}
 		protected override void OnChangeState(STATE oldState, STATE newState)
 		{
-			_lantern.SetActive(newState == STATE.AT_TREE);
+			originalCharacter.SetActive(newState == STATE.AT_TREE);
 		}
 		private void OnItemDropped(OWItem item)
 		{

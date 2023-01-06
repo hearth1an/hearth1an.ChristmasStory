@@ -16,6 +16,36 @@
 					"y": 87.8791,
 					"z": 119.8612
 				}
+			},
+			{
+				"path": "Anglerfish_Body/Beast_Anglerfish",
+				"position": {
+					"x": 22.6,
+					"y": 0.7,
+					"z": -3.3964
+				},
+				"scale": 0.02,
+				"rename": "Ernando"
+			},
+			{
+				"path": "Anglerfish_Body/Beast_Anglerfish",
+				"position": {
+					"x": 13.7,
+					"y": -5.6,
+					"z": 8.84
+				},
+				"scale": 0.03,
+				"rename": "Gustavo"
+			},
+			{
+				"path": "Anglerfish_Body/Beast_Anglerfish",
+				"position": {
+					"x": -3.7,
+					"y": 0.94,
+					"z": 23
+				},
+				"scale": 0.01,
+				"rename": "Rudolfo"
 			}
 		],
 		"dialogue": [

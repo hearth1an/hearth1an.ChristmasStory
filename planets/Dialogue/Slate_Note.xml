@@ -1,0 +1,11 @@
+<DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
+  <NameField>SIGN</NameField>
+
+  <DialogueNode>
+    <Name>Start</Name>
+    <EntryCondition>DEFAULT</EntryCondition>
+    <Dialogue>
+      <Page>(SLATE_NOTE_1_) Hey, sleepyhead! Find me in Village when you wake up, we need to talk. <![CDATA[<Pause>]]> Slate.</Page>
+    </Dialogue>
+  </DialogueNode>
+</DialogueTree>

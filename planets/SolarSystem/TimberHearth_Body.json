@@ -37,7 +37,21 @@
 				}
 			},
 			{
+				"path": "TimberHearth_Body/Sector_TH/Sector_RadioTower/RadioTower_DLC/Interactibles_RadioTower/Hornfels'GrovePivot/Prefab_HEA_Journal",
+				"position": {
+					"x": 16.9945,
+					"y": -40.7713,
+					"z": 185.9359
+				},
+				"rotation": {
+					"x": 342.581,
+					"y": 356.9867,
+					"z": 12.2146
+				}
+			},
+			{
 				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/Prefab_IP_Reel_TowerVision/Effects_IP_SarcophagusGlowCenter",
+				"parentPath": "Sector_TH/GhostBird",
 				"position": {
 					"x": -2.8058,
 					"y": -28.2596,
@@ -52,6 +66,7 @@
 			},
 			{
 				"path": "RingWorld_Body/Sector_RingInterior/Sector_Zone1/Sector_ArtifactHouse_Zone1/Interactibles_ArtifactHouse_Zone1/Prefab_IP_DreamLanternItem_2",
+				"parentPath": "Sector_TH/GhostBird",
 				"position": {
 					"x": -3.4612,
 					"y": -28.5004,
@@ -166,7 +181,7 @@
 					"x": 16.0754013,
 					"y": 88.9094,
 					"z": 92.1217
-				}				
+				}
 			},
 			{
 				"path": "QuantumMoon_Body/Sector_QuantumMoon/State_TH/Interactables_THState/Crater_Surface/Surface_AlpineTrees_Single/QAlpine_Tree_.25 (1)/Prefab_TH_Alpine",
@@ -391,12 +406,36 @@
 		"dialogue": [
 			{
 				"position": {
+					"x": 16.9945,
+					"y": -40.7713,
+					"z": 185.9359
+				},
+				"xmlFile": "planets/Dialogue/Slate_Note.xml",
+				"lookAtRadius": 3,
+				"radius": 1
+			},
+			{
+				"position": {
 					"x": 0,
 					"y": 0,
 					"z": 0
 				},
 				"xmlFile": "planets/Dialogue/Feldspar_Tree.xml",
 				"parentPath": "Sector_TH/Traveller_HEA_Feldspar",
+				"lookAtRadius": 2,
+				"radius": 1
+
+			},
+			{
+				"parentPath": "Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Porphy",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 0,
+					"y": 1.5,
+					"z": 0
+				},
+				"xmlFile": "planets/Dialogue/Porphy.xml",
+				"pathToAnimController": "Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Porphy/Villager_HEA_Porphy_ANIM_Taste",
 				"lookAtRadius": 2,
 				"radius": 1
 

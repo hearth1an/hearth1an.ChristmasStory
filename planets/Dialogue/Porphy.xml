@@ -1,0 +1,88 @@
+<DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
+	<NameField>Porphy</NameField>
+
+	<DialogueNode>
+		<Name>Start</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>(PORPHY_TREE_1) Heyo, hatchling! How do you feel before the launch?</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>			    
+				<Text>(PORPHY_TREE_2) Hey! I'm good.</Text>
+				<DialogueTarget>2</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>(PORPHY_TREE_3) What is this barrel in the center?</Text>
+				<DialogueTarget>3</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>2</Name>		
+		<Dialogue>
+			<Page>(PORPHY_TREE_4) Glad to hear it! You know how importaint our space program is, we believe in you, Hornfels especially.</Page>
+		</Dialogue>		
+		<DialogueOptionsList>			
+			<DialogueOption>
+				<Text>(PORPHY_TREE_19) Sure! What is this barrel in the center by the way?</Text>
+				<DialogueTarget>3</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>3</Name>		
+		<Dialogue>
+			<Page>(PORPHY_TREE_5) Oh, yes, it's the biggest one from my colletction. You like it?</Page>
+			<Page>(PORPHY_TREE_6) Seems like this geyser is not functiouning and we had to block it's hole for safety. We'll see if wine in it will have different taste.</Page>
+			<Page>(PORPHY_TREE_9) Anyway, I feel like with this tree and flares it was totally worth it.</Page>		
+		</Dialogue>		
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>(PORPHY_TREE_7) Okay, got it. I gotta go.</Text>
+				<ConditionToSet>START_2</ConditionToSet>
+				<DialogueTarget>END</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>END</Name>
+		<Dialogue>
+			<Page>(PORPHY_TREE_10) Bye!</Page>
+			<Page>(PORPHY_TREE_18) And good luck!</Page>		
+		</Dialogue>		
+	</DialogueNode>
+	<DialogueNode>
+
+		<Name>END2</Name>
+		<Dialogue>
+			<Page>(PORPHY_TREE_10) Bye!</Page>
+			<Page>(PORPHY_TREE_18) And good luck!</Page>
+			<Page>(PORPHY_TREE_19) Again.</Page>
+		</Dialogue>		
+	</DialogueNode>
+	
+
+	<DialogueNode>
+		<Name>Start2</Name>
+		<EntryCondition>START_2</EntryCondition>
+		<Dialogue>
+			<Page>(PORPHY_TREE_15) It's you again!</Page>
+			<Page>(PORPHY_TREE_16) What I can help you with?</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>			    
+				<Text>(PORPHY_TREE_17) Nothing actually.</Text>
+				<DialogueTarget>END2</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>(PORPHY_TREE_17)Remind me, what is this barrel in the center?</Text>
+			<DialogueTarget>3</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+</DialogueTree>
