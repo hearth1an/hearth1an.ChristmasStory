@@ -2,20 +2,22 @@
 using ChristmasStory.Components.Animation;
 using ChristmasStory.Utility;
 using NewHorizons.Utility;
+using System;
 using System.Collections;
 using UnityEngine;
 
 namespace ChrismasStory.Characters.Travelers
 {
-	
+
 	internal class PrisonerCharacterController : TravelerCharacterController
 	{
 		public override Conditions.PERSISTENT DoneCondition => Conditions.PERSISTENT.PRISONER_DONE;
-
+		public static PrisonerCharacterController Instance;
 		private GameObject _lantern;
 
 		public override void Start()
 		{
+			Instance = this;
 			dialogue = SearchUtilities.Find("Prisoner_Dialogue").GetComponent<CharacterDialogueTree>();
 			treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/GhostBird");
 			originalCharacter = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner/Ghostbird_IP_ANIM");
@@ -28,20 +30,18 @@ namespace ChrismasStory.Characters.Travelers
 			controller.UpdateVisuals();
 			controller.GetComponent<DreamLanternItem>().EnableInteraction(false);
 			Delay.FireOnNextUpdate(() => controller.transform.Find("Spotlight_Lantern").GetComponent<OWLight2>()._intensityScale = 0.2f);
-
+			var prisonerArtifact = SearchUtilities.Find("Prisoner_Artifact").GetComponent<DreamLanternController>();
 			HeldItemHandler.Instance.ItemDropped.AddListener(OnItemDropped);
 
 			base.Start();
 		}
-
 		protected override void Dialogue_OnStartConversation()
 		{
-			
-		}
 
+		}
 		protected override void Dialogue_OnEndConversation()
 		{
-			if (Conditions.Get(Conditions.CONDITION.PRISONER_START)) 
+			if (Conditions.Get(Conditions.CONDITION.PRISONER_START))
 			{
 				PrisonerAnimationController.Instance.PlayLightsUp();
 
@@ -49,15 +49,13 @@ namespace ChrismasStory.Characters.Travelers
 				Conditions.Set(Conditions.CONDITION.PRISONER_START_DONE, true);
 			}
 		}
-
 		protected override void OnChangeState(STATE oldState, STATE newState)
 		{
 			_lantern.SetActive(newState == STATE.AT_TREE);
 		}
-
 		private void OnItemDropped(OWItem item)
 		{
-			if (item == HeldItemHandler.Instance.PrisonerLanternItem)
+			if (item == HeldItemHandler.Instance.PrisonerLantern)
 			{
 				var distance = 100f;
 				var lit = HeldItemHandler.Instance.PrisonerLantern._lit == true;
@@ -67,7 +65,7 @@ namespace ChrismasStory.Characters.Travelers
 					ChangeState(STATE.AT_TREE);
 				}
 			}
-		}
+		}		
 
 		protected override IEnumerator DirectToTree(STATE state)
 		{
@@ -86,12 +84,13 @@ namespace ChrismasStory.Characters.Travelers
 
 			// Eyes closed: swap character state
 			OnSetState(state);
-			
+
 			// Open eyes
 			PlayerEffectController.OpenEyes(0.33f);
 
 			OWInput.ChangeInputMode(oldInputMode);
 			Locator.GetPauseCommandListener().RemovePauseCommandLock();
-		}
+		}		
 	}
 }
+

@@ -150,33 +150,19 @@ namespace ChrismasStory
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village").GetComponent<CapsuleCollider>().radius = 0.05f;
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village/ConversationZone").transform.localPosition = new Vector3(0, 0.19f, 0);
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village/ConversationTrigger").transform.localPosition = new Vector3(0, 0.19f, 0);
-
-
+				
 				var prisonerArtifact = SearchUtilities.Find("Prisoner_Artifact").GetComponent<DreamLanternController>();
 				Delay.FireOnNextUpdate(() =>
 				{
 					prisonerArtifact.enabled = true;
-					prisonerArtifact.SetLit(true);
-					prisonerArtifact._focus = 100f;
-					prisonerArtifact.UpdateVisuals();
-				});			
-				
-				bool isPrisonerArtifactHeld = prisonerArtifact._heldByPlayer;				
-				AudioClip audioClip = FindObjectOfType<AudioClip>();
-				audioClip.name = "OW_TH_Underwater";
-				bool isPlayerInFluid = audioClip.isReadyToPlay;
-				ModHelper.Events.Unity.RunWhen(() => isPrisonerArtifactHeld != false && isPlayerInFluid != false, () =>
-				{
-					prisonerArtifact.SetLit(false);
+					prisonerArtifact.SetLit(true);					
+					prisonerArtifact.UpdateVisuals();					
 				});
 
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Christmas_Tree").AddComponent<OWCapsuleCollider>();
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Christmas_Tree").GetComponent<CapsuleCollider>().radius = 0.5f;
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Prefab_HEA_ChertShip").AddComponent<OWCapsuleCollider>();
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Prefab_HEA_ChertShip").GetComponent<CapsuleCollider>().radius = 7f;
-
-				
-               
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Chert_ANIM_Chatter_Chipper").AddComponent<OWCapsuleCollider>();
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Villager_HEA_Esker_ANIM_Rocking").AddComponent<OWCapsuleCollider>();
                 SearchUtilities.Find("Ship_Body/ShipSector/Ship_Esker").AddComponent<OWCapsuleCollider>();
@@ -206,8 +192,6 @@ namespace ChrismasStory
 				// Transform prison sector
 
 				SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4").transform.localPosition = new Vector3(-19f, 0, 0);
-
-
 
 				// Disabling water in prison, should be done only after the damb crush!
 				/*
@@ -375,28 +359,21 @@ namespace ChrismasStory
 				ghostBirdInstrumentBow.materials[2].CopyPropertiesFromMaterial(neededMaterial.material);
 				ghostBirdInstrumentBow.materials[3].CopyPropertiesFromMaterial(neededMaterial.material);
 
-
-
-
 				var prisonerBehavior = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostDirector_Prisoner").GetComponent<PrisonerDirector>();
 
 				ModHelper.Events.Unity.RunWhen(() => prisonerBehavior._prisonerBrain._currentBehavior == PrisonerBehavior.WaitForConversation, () =>
 				{
-					SearchUtilities.Find("Prisoner_Dialogue").SetActive(true);
-					
+					SearchUtilities.Find("Prisoner_Dialogue").SetActive(true);					
 				});
 			}
 			catch (Exception ex)
 			{
 				WriteError(ex.ToString());
 			}
-		}
-
-		
+		}	
 
 		public void CharactersReplacement()
 		{
-
 			try
 			{
 				// Marl
@@ -545,9 +522,6 @@ namespace ChrismasStory
 					meshRenderer.sharedMaterial = observatoryMaterial;
 				}
 			}
-			
-			
-			
 		}	
 	}
 }
