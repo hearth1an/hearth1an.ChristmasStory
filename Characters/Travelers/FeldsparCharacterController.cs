@@ -21,7 +21,9 @@ namespace ChrismasStory.Characters.Travelers
 
 			originalCharacter = SearchUtilities.Find("DB_AnglerNestDimension_Body/Sector_AnglerNestDimension/Traveller_HEA_Feldspar");
 			shipCharacter = SearchUtilities.Find("Ship_Body/ShipSector/Ship_Feldspar");
-			treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Feldspar");
+            treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Feldspar");
+
+			
 
 			base.Start();
 		}
@@ -47,6 +49,11 @@ namespace ChrismasStory.Characters.Travelers
 					if (Conditions.Get(Conditions.CONDITION.FELDSPAR_START_DONE))
 					{
 						ChangeState(STATE.ON_SHIP);
+
+						SearchUtilities.Find("Ernando").SetActive(true);
+						SearchUtilities.Find("Gustavo").SetActive(true); 
+						SearchUtilities.Find("Rudolfo").SetActive(true);
+						SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Interactables_ImpactCrater/BrambleSeed/InnerWarp_ToPioneer (1)/Signal_Harmonica").SetActive(false);
 					}
 					break;
 				case STATE.ON_SHIP:

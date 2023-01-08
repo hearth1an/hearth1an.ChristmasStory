@@ -151,7 +151,7 @@ namespace ChrismasStory
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village").AddComponent<OWCapsuleCollider>();
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village").GetComponent<CapsuleCollider>().radius = 0.05f;
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village/ConversationZone").transform.localPosition = new Vector3(0, 0.19f, 0);
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village/ConversationTrigger").transform.localPosition = new Vector3(0, 0.19f, 0);
+				
 				
 				var prisonerArtifact = SearchUtilities.Find("Prisoner_Artifact").GetComponent<DreamLanternController>();
 				Delay.FireOnNextUpdate(() =>
@@ -188,10 +188,25 @@ namespace ChrismasStory
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Prefab_IP_DreamLanternItem_2/Props_IP_Artifact/Flame").transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);               
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Prefab_IP_DreamLanternItem_2").GetComponent<DreamLanternItem>()._interactable = false;
                 SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner/InteractReceiver").SetActive(false);
-                SearchUtilities.Find("TimberHearth_Body/Sector_TH/Effects_IP_SarcophagusGlowCenter").transform.localScale = new Vector3(0.4f, 1f, 1f);
+                SearchUtilities.Find("TimberHearth_Body/Sector_TH/Effects_IP_SarcophagusGlowCenter").transform.localScale = new Vector3(0.2f, 0.2f, 1f);
                 SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner/Ghostbird_IP_ANIM/Ghostbird_Skin_01:Ghostbird_Rig_V01:Base/Ghostbird_Skin_01:Ghostbird_Rig_V01:Root/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine01/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine02/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine03/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine04/Ghostbird_Skin_01:Ghostbird_Rig_V01:Neck01/Ghostbird_Skin_01:Ghostbird_Rig_V01:Neck02/Ghostbird_Skin_01:Ghostbird_Rig_V01:Head/PrisonerHeadDetector").SetActive(false);
                 SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner/Ghostbird_IP_ANIM/Ghostbird_Skin_01:Ghostbird_Rig_V01:Base/Ghostbird_Skin_01:Ghostbird_Rig_V01:Root/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine01/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine02/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine03/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine04/Ghostbird_Skin_01:Ghostbird_Rig_V01:Neck01/Ghostbird_Skin_01:Ghostbird_Rig_V01:Neck02/Ghostbird_Skin_01:Ghostbird_Rig_V01:Head/LightSensor_GhostHead").SetActive(false);
+
+
+				SearchUtilities.Find("Ernando/AudioController/LoopSource").GetComponent<AudioSource>().pitch = 2f;
+				SearchUtilities.Find("Alejandro/AudioController/LoopSource").GetComponent<AudioSource>().pitch = 3f;
+				SearchUtilities.Find("Rudolfo/AudioController/LoopSource").GetComponent<AudioSource>().pitch = 1.5f;
+
+				SearchUtilities.Find("Ernando").SetActive(false);
+				SearchUtilities.Find("Gustavo").SetActive(false);
+				SearchUtilities.Find("Rudolfo").SetActive(false);
+
+
+				// var slateOrigComponents = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_StartingCamp/Characters_StartingCamp/Villager_HEA_Slate/Villager_HEA_Slate_ANIM_LogSit/Slate_Skin_01:Slate_Mesh:Villager_HEA_Slate/Slate_Skin_01:Slate_Mesh:Slate_Skin").GetComponent<S>;
+				// var slateNewComponents = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village/Villager_HEA_Slate_ANIM_LogSit/Slate_Skin_01:Slate_Mesh:Villager_HEA_Slate").GetComponentsInChildren<SkinnedMeshRenderer>();
+
 				
+
 				// Transform prison sector
 
 				SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4").transform.localPosition = new Vector3(-19f, 0, 0);

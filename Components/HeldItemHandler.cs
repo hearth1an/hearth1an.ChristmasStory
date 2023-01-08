@@ -65,7 +65,7 @@ namespace ChrismasStory.Components
 
 		public static bool IsPlayerHoldingStrangerArtifact() => GetHeldItem() is DreamLanternItem or VisionTorchItem;
 
-		public static bool IsPlayerHoldingPrisonerArtifact() => GetHeldItem().name == "Prisoner_Artifact";
+		public static bool IsPlayerHoldingPrisonerArtifact() => GetHeldItem()?.name == "Prisoner_Artifact";
 
 		public static bool IsPlayerHoldingJunk() => GetHeldItem() is not WarpCoreItem or DreamLanternItem && GetNullItem();
 
@@ -73,7 +73,7 @@ namespace ChrismasStory.Components
 
 		private void Update()
 		{
-			if (IsPlayerHoldingPrisonerArtifact()!=null && IsPlayerHoldingPrisonerArtifact() && PrisonerLantern._lit == true)
+			if (IsPlayerHoldingPrisonerArtifact() && PrisonerLantern._lit == true)
 			{
 				if (PlayerState._isCameraUnderwater == true)
 				{

@@ -52,15 +52,16 @@
 			{
 				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/Prefab_IP_Reel_TowerVision/Effects_IP_SarcophagusGlowCenter",
 				"parentPath": "Sector_TH/GhostBird",
+				"isRelativeToParent": true,
 				"position": {
-					"x": -2.8058,
-					"y": -28.2596,
-					"z": 183.4137
+					"x": 2.1871,
+					"y": -0.59,
+					"z": -2.9735
 				},
 				"rotation": {
-					"x": 317.5735,
-					"y": 261.2365,
-					"z": 258.6816
+					"x": 7.4563,
+					"y": 47.1111,
+					"z": 341.7027
 				},
 				"scale": 1
 			},
@@ -169,21 +170,6 @@
 				"scale": 1.5
 			},
 			{
-				"assetBundle": "planets/assetbundle/ghostbird",
-				"path": "Assets/Prefabs/GrassTextureDummy 1.prefab",
-				"rename": "Grass_Texture_Dummy",
-				"position": {
-					"x": -7.968107,
-					"y": -7.419922,
-					"z": 185.208038
-				},
-				"rotation": {
-					"x": 16.0754013,
-					"y": 88.9094,
-					"z": 92.1217
-				}
-			},
-			{
 				"path": "QuantumMoon_Body/Sector_QuantumMoon/State_TH/Interactables_THState/Crater_Surface/Surface_AlpineTrees_Single/QAlpine_Tree_.25 (1)/Prefab_TH_Alpine",
 				"position": {
 					"x": -7.968107,
@@ -239,8 +225,8 @@
 				}
 			},
 			{
-				"assetBundle": "planets/assetbundle/ghostbird",
-				"path": "Assets/Prefabs/SLATE TALKING.prefab",
+				"assetBundle": "planets/assetbundle/hearthians",
+				"path": "Assets/Prefabs/Villager_HEA_Slate.prefab",
 				"rename": "Slate_Village",
 				"position": {
 					"x": 8.9599,
@@ -252,7 +238,39 @@
 					"y": 92.4013,
 					"z": 91.7782
 				},
-				"scale": 10.5
+				"scale": 1
+			},
+			{
+				"assetBundle": "planets/assetbundle/hearthians",
+				"path": "Assets/Prefabs/Villager_HEA_Hal_Outside.prefab",
+				"rename": "Hal_Village",
+				"position": {
+					"x": 10.9599,
+					"y": -6.2049,
+					"z": 190.7598
+				},
+				"rotation": {
+					"x": 0.5943,
+					"y": 92.4013,
+					"z": 91.7782
+				},
+				"scale": 1
+			},
+			{
+				"assetBundle": "planets/assetbundle/hearthians",
+				"path": "Assets/Prefabs/Props_HEA_NomaiCable.prefab",
+				"rename": "Nomai_Cable",
+				"position": {
+					"x": 10.9599,
+					"y": -6.2049,
+					"z": 190.7598
+				},
+				"rotation": {
+					"x": 0.5943,
+					"y": 92.4013,
+					"z": 91.7782
+				},
+				"scale": 2
 			},
 			{
 				"path": "CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Interactables_Lakebed/Traveller_HEA_Chert/Traveller_HEA_Chert_ANIM_Chatter_Chipper",
@@ -415,13 +433,14 @@
 				"radius": 1
 			},
 			{
+				"parentPath": "Sector_TH/Traveller_HEA_Feldspar",
+				"isRelativeToParent": true,
 				"position": {
 					"x": 0,
-					"y": 0,
+					"y": 1,
 					"z": 0
 				},
 				"xmlFile": "planets/Dialogue/Feldspar_Tree.xml",
-				"parentPath": "Sector_TH/Traveller_HEA_Feldspar",
 				"lookAtRadius": 2,
 				"radius": 1
 
@@ -441,35 +460,47 @@
 
 			},
 			{
+				"parentPath": "Sector_TH/Villager_HEA_Esker_ANIM_Rocking",
+				"isRelativeToParent": true,
 				"position": {
-					"x": -0.134,
-					"y": 1.651,
-					"z": 0.279
+					"x": 0,
+					"y": 1.5,
+					"z": 0
 				},
-				"xmlFile": "planets/Dialogue/Riebeck_Tree.xml",
+				"xmlFile": "planets/Dialogue/Esker_Tree.xml",				
+				"lookAtRadius": 3,
+				"radius": 1
+			},
+			{
 				"parentPath": "Sector_TH/Traveller_HEA_Riebeck",
 				"isRelativeToParent": true,
+				"position": {
+					"x": 0,
+					"y": 1,
+					"z": 0
+				},
+				"xmlFile": "planets/Dialogue/Riebeck_Tree.xml",
 				"lookAtRadius": 2,
 				"radius": 2
 
 			},
 			{
-				"position": {
-					"x": 0.009,
-					"y": 0.363,
-					"z": -0.355
-				},
-				"xmlFile": "planets/Dialogue/Chert_Tree.xml",
 				"parentPath": "Sector_TH/Traveller_HEA_Chert_ANIM_Chatter_Chipper",
 				"isRelativeToParent": true,
+				"position": {
+					"x": 0,
+					"y": 1,
+					"z": 0
+				},
+				"xmlFile": "planets/Dialogue/Chert_Tree.xml",
 				"lookAtRadius": 2,
 				"radius": 1
 			},
 			{
 				"position": {
-					"x": -0.071,
-					"y": 0.922,
-					"z": -0.049
+					"x": 0,
+					"y": 1.2,
+					"z": 0
 				},
 				"xmlFile": "planets/Dialogue/Player_NPC_Tree.xml",
 				"parentPath": "Sector_TH/NPC_Player",
@@ -486,6 +517,7 @@
 				"xmlFile": "planets/Dialogue/Slate.xml",
 				"parentPath": "Sector_TH/Slate_Village",
 				"isRelativeToParent": false,
+				"pathToAnimController": "Sector_TH/Slate_Village",
 				"remoteTriggerRadius": 3,
 				"remoteTriggerPosition": {
 					"x": 8.9599,
@@ -493,8 +525,7 @@
 					"z": 186.9598
 				},
 				"radius": 1,
-				"range": 2,
-				"blockAfterPersistentCondition": "SLATE_FIRST_LOOP_DONE"
+				"range": 2
 			}
 		],
 		"remotes": [
@@ -537,17 +568,17 @@
 			},
 			{
 				"audio": "planets/Content/prisoner.ogg",
-				"detectionRadius": 0,
+				"detectionRadius": 10,
 				"frequency": "Unidentified",
-				"identificationRadius": 0,
+				"identificationRadius": 1,
 				"name": "Prisoner",
-				"onlyAudibleToScope": false,
+				"onlyAudibleToScope": false,				
 				"position": {
 					"x": 0,
 					"y": 0,
-					"z": -4
+					"z": -5
 				},
-				"sourceRadius": 2,
+				"sourceRadius": 3,
 				"parentPath": "Sector_TH/GhostBird",
 				"isRelativeToParent": true
 			}

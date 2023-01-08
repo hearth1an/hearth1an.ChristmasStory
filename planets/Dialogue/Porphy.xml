@@ -5,7 +5,8 @@
 		<Name>Start</Name>
 		<EntryCondition>DEFAULT</EntryCondition>
 		<Dialogue>
-			<Page>(PORPHY_TREE_1) Heyo, hatchling! How do you feel before the launch?</Page>
+			<Page>(PORPHY_TREE_1) Heyo, hatchling! </Page>
+			<Page>(PORPHY_TREE_1) How do you feel before the launch?</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>			    
@@ -15,6 +16,25 @@
 			<DialogueOption>
 				<Text>(PORPHY_TREE_3) What is this barrel in the center?</Text>
 				<DialogueTarget>3</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>(PORPHY_TREE_3) Are you happy with snow?</Text>
+				<DialogueTarget>3.1</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>3.1</Name>		
+		<Dialogue>
+			<Page>(PORPHY_TREE_4) Well, I personally prefer the previous climat.</Page>
+			<Page>(PORPHY_TREE_4) But honestly such temperature is better for wine in barrels.</Page>			
+		</Dialogue>		
+		<DialogueOptionsList>			
+			<DialogueOption>
+				<Text>(PORPHY_TREE_7) Okay, got it. I gotta go.</Text>
+				<ConditionToSet>START_2</ConditionToSet>
+				<DialogueTarget>END</DialogueTarget>
 			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
@@ -77,6 +97,10 @@
 			<DialogueOption>			    
 				<Text>(PORPHY_TREE_17) Nothing actually.</Text>
 				<DialogueTarget>END2</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>(PORPHY_TREE_3) Are you happy with snow?</Text>
+				<DialogueTarget>3.1</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
 				<Text>(PORPHY_TREE_17)Remind me, what is this barrel in the center?</Text>

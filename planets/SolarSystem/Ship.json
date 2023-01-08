@@ -93,7 +93,8 @@
 				"pathToAnimController": "ShipSector/Ship_Feldspar",
 				"position": { "y": 0.5 },
 				"isRelativeToParent": true,
-				"radius": 1
+				"radius": 1,
+				"lookAtRadius": 1
 			},
 			{
 				"xmlFile": "planets/Dialogue/Player_NPC_Ship.xml",
@@ -101,7 +102,8 @@
 				"pathToAnimController": "ShipSector/Ship_Player",
 				"position": { "y": 0.5 },
 				"isRelativeToParent": true,
-				"radius": 1
+				"radius": 1,
+				"lookAtRadius": 1
 			},
 			{
 				"xmlFile": "planets/Dialogue/Riebeck_Ship.xml",
@@ -109,7 +111,8 @@
 				"pathToAnimController": "ShipSector/Ship_Riebeck",
 				"position": { "y": 0.5 },
 				"isRelativeToParent": true,
-				"radius": 1
+				"radius": 1,
+				"lookAtRadius": 1
 			},
 			{
 				"xmlFile": "planets/Dialogue/Esker_Ship.xml",
@@ -117,7 +120,8 @@
 				"pathToAnimController": "ShipSector/Ship_Esker",
 				"position": { "y": 0.5 },
 				"isRelativeToParent": true,
-				"radius": 1
+				"radius": 1,
+				"lookAtRadius": 1
 			}
 		]
 	}

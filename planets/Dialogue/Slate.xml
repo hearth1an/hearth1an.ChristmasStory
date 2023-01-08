@@ -13,6 +13,7 @@
 				<CancelledCondition>SLATE_TOLD_PLAN</CancelledCondition>				
 				<Text>(SLATE_START_3) Yes! I'm ready for my first Voyage.</Text>
 				<DialogueTarget>2</DialogueTarget>
+				<ConditionToSet>SLATE_START_TRAVELLERS_DONE</ConditionToSet>
 			</DialogueOption>
 			<DialogueOption>
 				<RequiredCondition>LOOP_COUNT_GOE_2</RequiredCondition>
@@ -23,8 +24,7 @@
 				<CancelledCondition>SLATE_TOLD_PLAN</CancelledCondition>
 				<CancelledPersistentCondition></CancelledPersistentCondition>
 				<Text>(SLATE_START_4) Is it winter here or something?</Text>
-				<DialogueTarget>3</DialogueTarget>
-			
+				<DialogueTarget>3</DialogueTarget>			
 		</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
@@ -56,9 +56,15 @@
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
+			    <CancelledPersistentCondition>SLATE_FIRST_LOOP_DONE</CancelledPersistentCondition>
 				<Text>(SLATE_START_30) Sure. Can't wait to begin space adventure!</Text>
 				<DialogueTarget>2</DialogueTarget>				
-			</DialogueOption>			
+			</DialogueOption>
+			<DialogueOption>
+				<RequiredPersistentCondition>SLATE_FIRST_LOOP_DONE</RequiredPersistentCondition>
+				<Text>(SLATE_START_35) Okay, thanks for reminding.</Text>
+				<DialogueTarget>11.1</DialogueTarget>
+			</DialogueOption>		
 		</DialogueOptionsList>
 	</DialogueNode>
 
@@ -116,7 +122,7 @@
 	<DialogueNode>
 		<Name>9</Name>
 		<Dialogue>
-			<Page>(SLATE_START_17) Yes, me too! I miss their music so much.</Page>
+			<Page>(SLATE_START_17) Yes, me too! Listen, it's too quiet here. We need their music or Christmas magic will never happen. So...</Page>
 			<Page>(SLATE_START_18) Any questions left?</Page>			
 		</Dialogue>
 		<DialogueOptionsList>
@@ -143,6 +149,11 @@
 		</Dialogue>
 		<DialogueOptionsList>
 		<DialogueOption>
+			    <RequiredPersistentCondition>TRAVELLERS_AT_HOME</RequiredPersistentCondition>
+				<Text>(SLATE_START_31) All travellers are here!</Text>
+				<DialogueTarget>100</DialogueTarget>
+		</DialogueOption>	
+		<DialogueOption>
 			    <CancelledPersistentCondition>SLATE_TOLD_SCOUT</CancelledPersistentCondition>
 				<Text>(SLATE_START_16) Is it a little scout?</Text>
 				<DialogueTarget>10</DialogueTarget>
@@ -155,11 +166,7 @@
 				<Text>(SLATE_START_19) Nope, everyhing is clear to me.</Text>
 				<DialogueTarget>11</DialogueTarget>
 		</DialogueOption>		
-		<DialogueOption>
-			    <RequiredPersistentCondition>TRAVELLERS_AT_HOME</RequiredPersistentCondition>
-				<Text>(SLATE_START_31) All travellers are here!</Text>
-				<DialogueTarget>100</DialogueTarget>
-		</DialogueOption>				
+					
 		</DialogueOptionsList>
 	</DialogueNode>
 
@@ -187,7 +194,7 @@
 		<DialogueOptionsList>
 		<DialogueOption>
 				<Text>(SLATE_START_24) Sounds good.</Text>
-				<DialogueTarget>13</DialogueTarget>
+		<DialogueTarget>13</DialogueTarget>
 		</DialogueOption>		
 		</DialogueOptionsList>
 	</DialogueNode>
@@ -204,4 +211,70 @@
 		</DialogueOption>	
 		</DialogueOptionsList>
 	</DialogueNode>
+
+	<DialogueNode>
+		<Name>100</Name>
+		<EntryCondition>SLATE_START_TRAVELLERS_DONE</EntryCondition>
+		<Dialogue>
+			<Page>(SLATE_START_25) Alright! You did good job, hatchling! I glad all friends are here and music is playing.</Page>
+			<Page>(SLATE_START_25) So, are you we ready to tell Hornfels and Hal? Don't you want to invite someone else?</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+		<DialogueOption>
+				<Text>(SLATE_START_26) You know, actually I'll invite someone else.</Text>
+				<DialogueTarget>11</DialogueTarget>
+				<ConditionToSet>SLATE_START_TRAVELLERS_DONE_2</ConditionToSet>
+		</DialogueOption>
+		<DialogueOption>
+				<Text>(SLATE_START_26) Yes, let's start.</Text>
+				<DialogueTarget>102</DialogueTarget>
+		</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>101</Name>
+		<Dialogue>
+			<Page>(SLATE_START_25) I was kidding. All travellers are here already, who else you want to invite?</Page>
+			<Page>(SLATE_START_25) Actually, nevermind. Just tell me whenever we ready to start.</Page>			
+		</Dialogue>
+		<DialogueOptionsList>
+		<DialogueOption>
+				<Text>(SLATE_START_26) Yes, I'll let you know.</Text>
+				<DialogueTarget>11.1</DialogueTarget>
+		</DialogueOption>
+		<DialogueOption>
+				<Text>(SLATE_START_26) Yes, let's start.</Text>
+				<DialogueTarget>103</DialogueTarget>
+		</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>102</Name>
+		<EntryCondition>SLATE_START_TRAVELLERS_DONE_2</EntryCondition>
+		<Dialogue>			
+			<Page>(SLATE_START_25) So, are you we ready to tell Hornfels and Hal? Are you done with other "invites?"</Page>
+		</Dialogue>
+		<DialogueOptionsList>		
+		<DialogueOption>
+				<Text>(SLATE_START_26) No, not yet. I'll let you know.</Text>
+				<DialogueTarget>11.1</DialogueTarget>				
+		</DialogueOption>
+		<DialogueOption>
+				<Text>(SLATE_START_26) Yes, let's start.</Text>
+				<DialogueTarget>103</DialogueTarget>				
+		</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>103</Name>		
+		<Dialogue>			
+			<Page>(SLATE_START_25) Perfect! I'll go for Hornfels and Hal.</Page>
+			<Page>(SLATE_START_25) Merry Christmas!</Page>
+		</Dialogue>		
+	</DialogueNode>
+
+
 </DialogueTree>

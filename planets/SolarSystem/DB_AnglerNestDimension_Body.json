@@ -18,33 +18,39 @@
 				}
 			},
 			{
-				"path": "Anglerfish_Body/Beast_Anglerfish",
+				"path": "DB_HubDimension_Body/Sector_HubDimension/Interactables_HubDimension/Anglerfish_Body",
+				"removeChildren": [ "Beast_Anglerfish/B_angler_root/B_angler_body01/B_angler_body02/B_angler_antenna01/B_angler_antenna02/B_angler_antenna03/B_angler_antenna04/B_angler_antenna05/B_angler_antenna06/B_angler_antenna07/B_angler_antenna08/B_angler_antenna09/B_angler_antenna10/B_angler_antenna11/B_angler_antenna12_end/Lure_FogGlow" ],
+				"isRelativeToParent": true,
 				"position": {
-					"x": 22.6,
-					"y": 0.7,
-					"z": -3.3964
+					"x": 9,
+					"y": -10,
+					"z": -25
 				},
-				"scale": 0.02,
+				"scale": 0.25,
 				"rename": "Ernando"
 			},
 			{
-				"path": "Anglerfish_Body/Beast_Anglerfish",
+				"path": "DB_HubDimension_Body/Sector_HubDimension/Interactables_HubDimension/Anglerfish_Body",
+				"removeChildren": [ "Beast_Anglerfish/B_angler_root/B_angler_body01/B_angler_body02/B_angler_antenna01/B_angler_antenna02/B_angler_antenna03/B_angler_antenna04/B_angler_antenna05/B_angler_antenna06/B_angler_antenna07/B_angler_antenna08/B_angler_antenna09/B_angler_antenna10/B_angler_antenna11/B_angler_antenna12_end/Lure_FogGlow" ],
+				"isRelativeToParent": true,				
 				"position": {
-					"x": 13.7,
-					"y": -5.6,
-					"z": 8.84
+					"x": 9,
+					"y": -10,
+					"z": -25
 				},
-				"scale": 0.03,
+				"scale": 0.4,
 				"rename": "Gustavo"
 			},
 			{
-				"path": "Anglerfish_Body/Beast_Anglerfish",
+				"path": "DB_HubDimension_Body/Sector_HubDimension/Interactables_HubDimension/Anglerfish_Body",
+				"removeChildren": [ "Beast_Anglerfish/B_angler_root/B_angler_body01/B_angler_body02/B_angler_antenna01/B_angler_antenna02/B_angler_antenna03/B_angler_antenna04/B_angler_antenna05/B_angler_antenna06/B_angler_antenna07/B_angler_antenna08/B_angler_antenna09/B_angler_antenna10/B_angler_antenna11/B_angler_antenna12_end/Lure_FogGlow" ],
+				"isRelativeToParent": true,
 				"position": {
-					"x": -3.7,
-					"y": 0.94,
-					"z": 23
+					"x": 9,
+					"y": -10,
+					"z": -25
 				},
-				"scale": 0.01,
+				"scale": 0.3,
 				"rename": "Rudolfo"
 			}
 		],
