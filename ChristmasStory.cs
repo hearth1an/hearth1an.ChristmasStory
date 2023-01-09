@@ -148,11 +148,15 @@ namespace ChrismasStory
 				SearchUtilities.Find("Probe_Body/ProbeGravity/Props_NOM_GravityCrystal_Base").transform.localScale = new Vector3(0.16f, 0.16f, 0.16f);
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Center_Barrel").transform.localScale = new Vector3(7f, 4.5f, 7f);
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Center_Barrel").AddComponent<OWCapsuleCollider>();
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village").AddComponent<OWCapsuleCollider>();
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village").GetComponent<CapsuleCollider>().radius = 0.05f;
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village/ConversationZone").transform.localPosition = new Vector3(0, 0.19f, 0);
-				
-				
+
+				//var playerCamera = Locator.GetPlayerBody();
+				//var slateWatch = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village/Villager_HEA_Slate_ANIM_LogSit").GetComponent<CharacterAnimController>();
+
+				//slateWatch._currentLookTarget = playerCamera.transform.position;
+				//SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village").AddComponent<OWCapsuleCollider>();
+				//SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village").GetComponent<CapsuleCollider>().radius = 0.05f;
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village/ConversationZone").transform.localPosition = new Vector3(0, 2f, 0);
+								
 				var prisonerArtifact = SearchUtilities.Find("Prisoner_Artifact").GetComponent<DreamLanternController>();
 				Delay.FireOnNextUpdate(() =>
 				{
@@ -160,7 +164,6 @@ namespace ChrismasStory
 					prisonerArtifact.SetLit(true);					
 					prisonerArtifact.UpdateVisuals();					
 				});
-
 				
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Christmas_Tree").AddComponent<OWCapsuleCollider>();
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Christmas_Tree").GetComponent<CapsuleCollider>().radius = 0.5f;
@@ -194,7 +197,7 @@ namespace ChrismasStory
 
 
 				SearchUtilities.Find("Ernando/AudioController/LoopSource").GetComponent<AudioSource>().pitch = 2f;
-				SearchUtilities.Find("Alejandro/AudioController/LoopSource").GetComponent<AudioSource>().pitch = 3f;
+				SearchUtilities.Find("Gustavo/AudioController/LoopSource").GetComponent<AudioSource>().pitch = 3f;
 				SearchUtilities.Find("Rudolfo/AudioController/LoopSource").GetComponent<AudioSource>().pitch = 1.5f;
 
 				SearchUtilities.Find("Ernando").SetActive(false);
@@ -469,11 +472,13 @@ namespace ChrismasStory
 
 			thTerrain.material.shader = snowTerrain.material.shader;
 			thTerrain.materials = snowTerrain.materials;
+			
 
 			// Snow on grass
 			var snowyGrassMaterial = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/DetailPatches_LowerVillage/LandingGeyserVillageArea/Foliage_TH_GrassPatch (2)").GetComponent<Renderer>().materials[0];
 			var snowyWoodMaterial = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Props_LowerVillage/OtherComponentsGroup/Architecture_LowerVillage/BatchedGroup/BatchedMeshRenderers_0").GetComponent<Renderer>().materials[0];
-			var snowyTreesMaterial = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Props_LowerVillage/OtherComponentsGroup/Trees_LowerVillage/BatchedGroup/BatchedMeshRenderers_0").GetComponent<Renderer>().materials[0];
+
+            var snowyTreesMaterial = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Props_LowerVillage/OtherComponentsGroup/Trees_LowerVillage/BatchedGroup/BatchedMeshRenderers_0").GetComponent<Renderer>().materials[0];
 			var observatoryMaterial = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Geometry_Observatory/Structure_HEA_Observatory_v3/ObservatoryPivot/Observatory_Interior/Interior_Planks").GetComponent<Renderer>().materials[0];
 			var snowyStructureMaterial = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Geometry_LowerVillage/OtherComponentsGroup/ControlledByProxy_Structures/Architecture_LowerVillage/BatchedGroup/BatchedMeshRenderers_1").GetComponent<Renderer>().materials[0];
 
@@ -517,6 +522,7 @@ namespace ChrismasStory
 				else if (meshRenderer.material.name.Contains("Tree_TH_RedwoodLeaves"))
 				{
 					meshRenderer.sharedMaterial = snowyTreesMaterial;
+					snowyTreesMaterial.color = new Color(1f, 1f, 1f, 1f);
 				}				
 				else if (meshRenderer.material.name.Contains("Tree_TH_RedwoodLeaves_mat (Instance)"))
 				{
@@ -532,6 +538,7 @@ namespace ChrismasStory
 				if (meshRenderer.material.name.Contains("Tree_TH_RedwoodLeaves"))
 				{
 					meshRenderer.sharedMaterial = snowyTreesMaterial;
+					snowyTreesMaterial.color = new Color(1f, 1f, 1f, 1f);
 				}
 			}
 			foreach (var meshRenderer in thExcludedSector)
