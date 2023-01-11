@@ -1,0 +1,49 @@
+<DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
+	<NameField>Hal</NameField>
+
+	<DialogueNode>
+		<Name>Start</Name>		
+		<EntryCondition>DEFAULT</EntryCondition>		
+		<Dialogue>
+			<Page>(HAL_FINAL_1) Woah, I see now what did you mean by saying about celebrating!</Page>			
+		</Dialogue>
+		<DialogueOptionsList>	
+		    <DialogueOption>
+				<RequiredPersistentCondition>SOLANUM_DONE</RequiredPersistentCondition>	   
+				<Text>(HAL_FINAL_2) Sure, and see what I did with your rock! I invited a living Nomai!</Text>
+				<DialogueTarget>2</DialogueTarget>
+				<ConditionToSet>HAL_FINAL_DONE_2</ConditionToSet>
+			</DialogueOption>
+			<DialogueOption>
+			    <CancelledPersistentCondition>SOLANUM_DONE</CancelledPersistentCondition>
+				<Text>(HAL_FINAL_2) Yep. It's very cool.</Text>
+				<DialogueTarget>3</DialogueTarget>
+				<ConditionToSet>HAL_FINAL_DONE</ConditionToSet>
+			</DialogueOption>						
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>2</Name>
+		<Dialogue>
+			<Page>(HAL_FINAL_4) UNBELIVABLE! Wait, stop, maybe it is illusion?</Page>
+			<Page>(HAL_FINAL_4) Or it's just me dreaming? This it too good to be truth!</Page>					
+		</Dialogue>		
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>4</Name>		
+		<EntryCondition>HAL_FINAL_DONE</EntryCondition>		
+		<Dialogue>
+			<Page>(HAL_FINAL_5) What do we do next? Maybe ask Hornfels?</Page>						
+		</Dialogue>		
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>4</Name>		
+		<EntryCondition>HAL_FINAL_DONE_2</EntryCondition>		
+		<Dialogue>
+			<Page>(HAL_FINAL_5) S-s-sorry. I'm literally speachless.</Page>						
+		</Dialogue>		
+	</DialogueNode>
+</DialogueTree>

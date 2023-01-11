@@ -1,0 +1,33 @@
+<DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
+	<NameField>Marl</NameField>
+
+	<DialogueNode>
+		<Name>Start</Name>		
+		<EntryCondition>DEFAULT</EntryCondition>		
+		<Dialogue>
+			<Page>(MARL_FINAL_1) No way! Everyone is here, woah. Thank you for bringing em back!</Page>			
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>			   
+				<Text>(MARL_FINAL_2) Sure! That was fun.</Text>
+				<DialogueTarget>2</DialogueTarget>
+				<ConditionToSet>MARL_FINAL_DONE</ConditionToSet>
+			</DialogueOption>			
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>2</Name>
+		<Dialogue>
+			<Page>(MARL_FINAL_4) I can imagine. Ask Hornfels what we are doing next.</Page>					
+		</Dialogue>		
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>4</Name>		
+		<EntryCondition>MARL_FINAL_DONE</EntryCondition>		
+		<Dialogue>
+			<Page>(SLATE_FINAL_5) As I said, you better ask Hornfels.</Page>						
+		</Dialogue>		
+	</DialogueNode>
+</DialogueTree>

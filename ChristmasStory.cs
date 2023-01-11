@@ -395,29 +395,35 @@ namespace ChrismasStory
 		}	
 
 		public void CharactersReplacement()
-		{
-			try
-			{
-				// Marl
-				var Marl_Character = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl");
-				Marl_Character.transform.localPosition = new Vector3(8.3747f, 7.4018f, -8.3346f);
-				Marl_Character.transform.localRotation = new Quaternion(-0.02323f, -0.8668f, 0.0022f, 0.4982f);
-
-
-				var Marl_Look = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Villager_HEA_Marl_ANIM_StareDwn").GetComponent<CharacterAnimController>();
-				Marl_Look.lookOnlyWhenTalking = false;
-				Marl_Look._currentLookTarget = new Vector3(8.96f, -6.2049f, 186.7599f);
+        {
+            try
+            {
+                // Marl
+                var Marl_Character = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl");
+                Marl_Character.transform.localPosition = new Vector3(8.3747f, 7.4018f, -8.3346f);
+                Marl_Character.transform.localRotation = new Quaternion(-0.02323f, -0.8668f, 0.0022f, 0.4982f);
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/ConversationZone").SetActive(false);
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Marl_Dialogue_Final").SetActive(false);
 
 				// Tephra
 				var Tephra_Character = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Kids_PreGame/Villager_HEA_Tephra");
-				Tephra_Character.transform.localPosition = new Vector3(-5.9785f, 8.7614f, -1.742f);
-				Tephra_Character.transform.localRotation = new Quaternion(0.0245f, 0.5553f, 0.0357f, 0.8305f);
+                Tephra_Character.transform.localPosition = new Vector3(-5.9785f, 8.7614f, -1.742f);
+                Tephra_Character.transform.localRotation = new Quaternion(0.0245f, 0.5553f, 0.0357f, 0.8305f);
 
-				// Galena
-				var Galena_Character = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Kids_PreGame/Villager_HEA_Galena");
-				Galena_Character.transform.localPosition = new Vector3(1.2199f, 7.7457f, -2.38f);
+                // Galena
+                var Galena_Character = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Kids_PreGame/Villager_HEA_Galena");
+                Galena_Character.transform.localPosition = new Vector3(1.2199f, 7.7457f, -2.38f);
+
+				// Hal
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Characters_Observatory/Character_HEA_Hal_Museum").SetActive(false);
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Characters_Village/Villager_HEA_Hal_Outside").SetActive(false);
+
+				SearchUtilities.Find("TimberHearth_Body/Hal_Village/Hal_Dialogue_2").SetActive(false);
+				SearchUtilities.Find("TimberHearth_Body/Hal_Village/ConversationTrigger").SetActive(false);
+
+
 			}
-			catch (Exception ex)
+            catch (Exception ex)
 			{
 				WriteError(ex.ToString());
 			}

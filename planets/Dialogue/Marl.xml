@@ -1,0 +1,33 @@
+<DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
+	<NameField>Marl</NameField>
+
+	<DialogueNode>
+		<Name>Start</Name>		
+		<EntryCondition>DEFAULT</EntryCondition>		
+		<Dialogue>
+			<Page>(MARL_START_1) Heya! You see that tree? It's my job. Impressive, huh?</Page>			
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>			   
+				<Text>(MARL_START_3) Yes, this tree is very impressive.</Text>
+				<DialogueTarget>2</DialogueTarget>
+				<ConditionToSet>MARL_START_DONE</ConditionToSet>
+			</DialogueOption>			
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>2</Name>
+		<Dialogue>
+			<Page>(MARL_START_4) That's what I'm talking about! Good luck in space!</Page>					
+		</Dialogue>		
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>4</Name>		
+		<EntryCondition>MARL_START_DONE</EntryCondition>		
+		<Dialogue>
+			<Page>(SLATE_FINAL_5) Good luck in Flight. We waiting your mission to be complete.</Page>						
+		</Dialogue>		
+	</DialogueNode>
+</DialogueTree>

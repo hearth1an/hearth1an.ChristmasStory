@@ -1,0 +1,98 @@
+<DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
+	<NameField>Hornfels</NameField>
+
+	<DialogueNode>
+		<Name>Start</Name>		
+		<EntryCondition>DEFAULT</EntryCondition>		
+		<Dialogue>
+			<Page>(SLATE_FINAL_1) You did very good, hatchling!</Page>
+			<Page>(SLATE_FINAL_2) All travellers are back, I already can feel the Christmas magic!</Page>			
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>			   
+				<Text>(SLATE_FINAL_3) I glad all friends are here.</Text>
+				<DialogueTarget>2</DialogueTarget>
+				<ConditionToSet>SLATE_FINAL_DONE</ConditionToSet>
+			</DialogueOption>
+			<DialogueOption>				
+				<Text>(SLATE_START_4) What do I do next?</Text>
+				<DialogueTarget>3</DialogueTarget>
+			</DialogueOption>			
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>Start</Name>		
+		<EntryCondition>DEFAULT</EntryCondition>		
+		<Dialogue>
+			<Page>(SLATE_FINAL_1) You did very good, hatchling!</Page>
+			<Page>(SLATE_FINAL_2) All travellers are back, I already can feel the Christmas magic!</Page>			
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>			   
+				<Text>(SLATE_FINAL_3) I glad all friends are here.</Text>
+				<DialogueTarget>2</DialogueTarget>				
+			</DialogueOption>
+			<DialogueOption>				
+				<Text>(SLATE_START_4) What do I do next?</Text>
+				<DialogueTarget>3</DialogueTarget>
+				<ConditionToSet>SLATE_FINAL_DONE</ConditionToSet>
+			</DialogueOption>			
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>2</Name>
+		<Dialogue>
+			<Page>(SLATE_FINAL_5) Sure! This probably will never happen without your help. </Page>						
+		</Dialogue>
+		<DialogueOptionsList>			
+			<DialogueOption>				
+				<Text>(SLATE_START_4) What do I do next?</Text>
+				<DialogueTarget>3</DialogueTarget>
+				<ConditionToSet>SLATE_FINAL_DONE</ConditionToSet>
+			</DialogueOption>		
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>2</Name>
+		<Dialogue>
+			<Page>(SLATE_FINAL_5) You better ask Hornfels, but I'm pretty sure we're almost ready.</Page>						
+		</Dialogue>
+		<DialogueOptionsList>			
+			<DialogueOption>				
+				<Text>(SLATE_START_6) Alright.</Text>
+				<DialogueTarget>END</DialogueTarget>				
+			</DialogueOption>		
+		</DialogueOptionsList>
+	</DialogueNode>
+	
+	<DialogueNode>
+		<Name>END</Name>
+		<Dialogue>
+			<Page>(SLATE_FINAL_8) See ya!</Page>						
+		</Dialogue>		
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>4</Name>		
+		<EntryCondition>SLATE_FINAL_DONE</EntryCondition>		
+		<Dialogue>
+			<Page>(SLATE_FINAL_9) Huh?</Page>						
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>				
+				<Text>(SLATE_START_4) What do I do next?</Text>
+				<DialogueTarget>3</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>				
+				<Text>(SLATE_START_7) Nothing.</Text>
+				<DialogueTarget>END</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+
+
+</DialogueTree>

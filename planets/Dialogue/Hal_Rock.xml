@@ -1,0 +1,59 @@
+<DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
+	<NameField>Hal</NameField>
+
+	<DialogueNode>
+		<Name>Start</Name>		
+		<EntryCondition>DEFAULT</EntryCondition>		
+		<Dialogue>
+			<Page>(HAL_ROCK_1) Alright, here you go.</Page>
+			<Page>(HAL_ROCK_2) I know the writing is not perfect, but who knows... maybe I am the last person alive who knows this language.</Page>		
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>			   
+				<Text>(HAL_ROCK_3) Thank you! Bye!</Text>
+				<DialogueTarget>4</DialogueTarget>
+				<ConditionToSet>HAL_ROCK_DONE_2</ConditionToSet>
+			</DialogueOption>					
+		</DialogueOptionsList>
+	</DialogueNode>
+	
+
+	<DialogueNode>
+		<Name>6</Name>
+		<EntryCondition>HAL_ROCK_DONE_2</EntryCondition>
+		<Dialogue>
+			<Page>(MARL_START_4) So, what you gonna do with that rock? I'm very curious.</Page>										
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>			   
+				<Text>(HAL_START_3) Hmm, maybe I'll show it to the real nomai.</Text>
+				<DialogueTarget>5</DialogueTarget>
+				<ConditionToSet>HAL_ROCK_DONE_3</ConditionToSet>
+			</DialogueOption>				
+		</DialogueOptionsList>	
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>5</Name>		
+		<Dialogue>
+			<Page>(MARL_START_4) Ha-ha-ha. Ha-haha-ha.</Page>
+			<Page>(MARL_START_4) Very funny.</Page>										
+		</Dialogue>		
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>5</Name>
+		<EntryCondition>HAL_ROCK_DONE_3</EntryCondition>	
+		<Dialogue>
+			<Page>(MARL_START_4) Sorry, I can't talk with you right now.</Page>
+			<Page>(MARL_START_4) Your joke was too good.</Page>												
+		</Dialogue>		
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>4</Name>
+		<Dialogue>
+			<Page>(MARL_START_4) Good luck in space, friend!</Page>						
+		</Dialogue>		
+	</DialogueNode>
+</DialogueTree>

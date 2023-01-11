@@ -1,0 +1,80 @@
+<DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
+	<NameField>Hal</NameField>
+
+	<DialogueNode>
+		<Name>Start</Name>		
+		<EntryCondition>DEFAULT</EntryCondition>		
+		<Dialogue>
+			<Page>(HAL_START_1) Hey! Feel nervous about first launch? I know that feeling! I'm nervous about it too!</Page>
+			<Page>(HAL_START_2) You'll be the first astronaut with nomai translator, I'm so exited about this!</Page>		
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>			   
+				<Text>(HAL_START_3) I think I'm good, Hal. I gotta go.</Text>
+				<DialogueTarget>2</DialogueTarget>
+				<ConditionToSet>HAL_START_DONE</ConditionToSet>
+			</DialogueOption>
+			<DialogueOption>
+				<CancelledPersistentCondition>HAL_ROCK_TOLD</CancelledPersistentCondition>		   
+				<Text>(HAL_START_4) What are you doing with this rock?</Text>
+				<DialogueTarget>3</DialogueTarget>				
+			</DialogueOption>
+			<DialogueOption>
+			    <RequiredPersistentCondition>HAL_ROCK_TOLD</RequiredPersistentCondition> 		   
+				<Text>(HAL_START_4) Hal, can you write a custom nomai text for me?</Text>
+				<DialogueTarget>5</DialogueTarget>				
+			</DialogueOption>			
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>2</Name>
+		<Dialogue>
+			<Page>(MARL_START_4) That's what I'm talking about! Good luck in space!</Page>					
+		</Dialogue>		
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>3</Name>
+		<Dialogue>
+			<Page>(MARL_START_4) Just doing little practice in nomai writings. Since I made a nomai translator, I should be able to write nomaish</Page>
+			<Page>(MARL_START_4) I don't know actually how to call their language. Whatever.. no one could read it anyway.</Page>					
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>			   
+				<Text>(HAL_START_3) True. Good luck with it.</Text>
+				<DialogueTarget>4</DialogueTarget>
+				<ConditionToSet>HAL_START_DONE</ConditionToSet>
+			</DialogueOption>				
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>5</Name>
+		<Dialogue>
+			<Page>(MARL_START_4) Sure, as you see, I'm already doing practice. So is it for translator testing, right?</Page>								
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>			   
+				<Text>(HAL_START_3) Sure! Please wright: "Dear Solanum, I'm inviting you to Village to celebrate Christmas!"</Text>
+				<DialogueTarget>6</DialogueTarget>				
+			</DialogueOption>				
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>6</Name>
+		<SetCondition>HAL_ROCK_DONE</SetCondition>
+		<Dialogue>
+			<Page>(MARL_START_4) That's a very specific text. Are we celebrating something? Ah, actually neverming.</Page>
+			<Page>(MARL_START_4) Let's see if I can do this...</Page>								
+		</Dialogue>		
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>4</Name>
+		<Dialogue>
+			<Page>Good luck in space, friend!</Page>						
+		</Dialogue>		
+	</DialogueNode>
+</DialogueTree>
