@@ -115,7 +115,13 @@ namespace ChrismasStory.Components
 				Locator.GetToolModeSwapper().GetItemCarryTool().PickUpItemInstantly(lantern);
 			}
 		}
+
+		public static void GivePlayerInviteStone()
+		{
+			var inviteStone = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Invite_Stone").GetComponent<SharedStone>();
+			Locator.GetToolModeSwapper().GetItemCarryTool().PickUpItemInstantly(inviteStone);
+		}
 		#endregion
-		
+
 	}
 }

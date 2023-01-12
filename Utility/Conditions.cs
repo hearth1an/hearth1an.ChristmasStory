@@ -44,31 +44,45 @@ namespace ChristmasStory.Utility
             RIEBECK_START_DONE,
             RIEBECK_SHIP_DONE,
 
-			// Solanum
-			SOLANUM_START,
-			SOLANUM_START_DONE,
-			HOLDING_INVITE_STONE,
+            // Solanum
+            SOLANUM_START,
+            SOLANUM_START_DONE,
+            HOLDING_INVITE_STONE,
 
             // Prisoner
-
             PRISONER_START,
             PRISONER_START_DONE,
-            HOLDING_PRISONER_ARTIFACT
+            HOLDING_PRISONER_ARTIFACT,
+
+            // Hal
+            HAL_ROCK_DONE,
+
+
+            // Hornfels
+
+            // Ernesto
+
+
         }
 
         public enum PERSISTENT
         {
             CHERT_DONE,
-			CHERT_PHRASE_TOLD,
-			CHERT_PHRASE_KNOWN_NEXT_LOOP,
+            CHERT_PHRASE_TOLD,
+            CHERT_PHRASE_KNOWN_NEXT_LOOP,
 
-			ESKER_DONE,
+            ESKER_DONE,
             FELDSPAR_DONE,
             GABBRO_DONE,
-            SELF_DONE,
             RIEBECK_DONE,
             SOLANUM_DONE,
-            PRISONER_DONE
+            PRISONER_DONE,
+            SELF_DONE,
+
+            ALL_TRAVELLERS_DONE,
+
+            HAL_ROCK_TOLD,
+
         }
 
         public static bool Get(PERSISTENT condition) => PlayerData.GetPersistentCondition(condition.ToString());

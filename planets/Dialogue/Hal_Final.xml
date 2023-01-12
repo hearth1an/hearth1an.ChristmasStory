@@ -17,7 +17,7 @@
 			<DialogueOption>
 			    <CancelledPersistentCondition>SOLANUM_DONE</CancelledPersistentCondition>
 				<Text>(HAL_FINAL_2) Yep. It's very cool.</Text>
-				<DialogueTarget>3</DialogueTarget>
+				<DialogueTarget>4</DialogueTarget>
 				<ConditionToSet>HAL_FINAL_DONE</ConditionToSet>
 			</DialogueOption>						
 		</DialogueOptionsList>
@@ -28,7 +28,9 @@
 		<Dialogue>
 			<Page>(HAL_FINAL_4) UNBELIVABLE! Wait, stop, maybe it is illusion?</Page>
 			<Page>(HAL_FINAL_4) Or it's just me dreaming? This it too good to be truth!</Page>					
-		</Dialogue>		
+		</Dialogue>
+		<DialogueOptionsList>
+		</DialogueOptionsList>		
 	</DialogueNode>
 
 	<DialogueNode>
@@ -36,14 +38,18 @@
 		<EntryCondition>HAL_FINAL_DONE</EntryCondition>		
 		<Dialogue>
 			<Page>(HAL_FINAL_5) What do we do next? Maybe ask Hornfels?</Page>						
-		</Dialogue>		
+		</Dialogue>
+		<DialogueOptionsList>
+		</DialogueOptionsList>		
 	</DialogueNode>
 
 	<DialogueNode>
-		<Name>4</Name>		
+		<Name>5</Name>		
 		<EntryCondition>HAL_FINAL_DONE_2</EntryCondition>		
 		<Dialogue>
 			<Page>(HAL_FINAL_5) S-s-sorry. I'm literally speachless.</Page>						
-		</Dialogue>		
+		</Dialogue>
+		<DialogueOptionsList>
+		</DialogueOptionsList>	
 	</DialogueNode>
 </DialogueTree>

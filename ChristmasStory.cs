@@ -86,6 +86,9 @@ namespace ChrismasStory
 			characterControllers.AddComponent<PlayerNPCCharacterController>();
 			characterControllers.AddComponent<SolanumCharacterController>();
 			characterControllers.AddComponent<PrisonerCharacterController>();
+			characterControllers.AddComponent<HalCharacterController>();
+
+			// characterControllers.AddComponent<HornfelsCharacterController>(); characterControllers.AddComponent<ErnestoCharacterController>();
 
 			if (Conditions.Get(Conditions.PERSISTENT.CHERT_PHRASE_TOLD))
 			{
@@ -148,13 +151,7 @@ namespace ChrismasStory
 				SearchUtilities.Find("Probe_Body/ProbeGravity/Props_NOM_GravityCrystal_Base").transform.localScale = new Vector3(0.16f, 0.16f, 0.16f);
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Center_Barrel").transform.localScale = new Vector3(7f, 4.5f, 7f);
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Center_Barrel").AddComponent<OWCapsuleCollider>();
-
-				//var playerCamera = Locator.GetPlayerBody();
-				//var slateWatch = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village/Villager_HEA_Slate_ANIM_LogSit").GetComponent<CharacterAnimController>();
-
-				//slateWatch._currentLookTarget = playerCamera.transform.position;
-				//SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village").AddComponent<OWCapsuleCollider>();
-				//SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village").GetComponent<CapsuleCollider>().radius = 0.05f;
+								
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village/ConversationZone").transform.localPosition = new Vector3(0, 2f, 0);
 								
 				var prisonerArtifact = SearchUtilities.Find("Prisoner_Artifact").GetComponent<DreamLanternController>();
@@ -416,12 +413,11 @@ namespace ChrismasStory
 
 				// Hal
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Characters_Observatory/Character_HEA_Hal_Museum").SetActive(false);
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Characters_Village/Villager_HEA_Hal_Outside").SetActive(false);
-
+				
 				SearchUtilities.Find("TimberHearth_Body/Hal_Village/Hal_Dialogue_2").SetActive(false);
-				SearchUtilities.Find("TimberHearth_Body/Hal_Village/ConversationTrigger").SetActive(false);
+				SearchUtilities.Find("TimberHearth_Body/Hal_Village/Hal_Dialogue_2_ConversationTrigger").SetActive(false);
 
-
+				// SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Characters_Village/Villager_HEA_Hal_Outside").SetActive(false);
 			}
             catch (Exception ex)
 			{

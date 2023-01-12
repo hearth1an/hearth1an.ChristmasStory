@@ -19,27 +19,7 @@
 				<DialogueTarget>3</DialogueTarget>
 			</DialogueOption>			
 		</DialogueOptionsList>
-	</DialogueNode>
-
-	<DialogueNode>
-		<Name>Start</Name>		
-		<EntryCondition>DEFAULT</EntryCondition>		
-		<Dialogue>
-			<Page>(SLATE_FINAL_1) You did very good, hatchling!</Page>
-			<Page>(SLATE_FINAL_2) All travellers are back, I already can feel the Christmas magic!</Page>			
-		</Dialogue>
-		<DialogueOptionsList>
-			<DialogueOption>			   
-				<Text>(SLATE_FINAL_3) I glad all friends are here.</Text>
-				<DialogueTarget>2</DialogueTarget>				
-			</DialogueOption>
-			<DialogueOption>				
-				<Text>(SLATE_START_4) What do I do next?</Text>
-				<DialogueTarget>3</DialogueTarget>
-				<ConditionToSet>SLATE_FINAL_DONE</ConditionToSet>
-			</DialogueOption>			
-		</DialogueOptionsList>
-	</DialogueNode>
+	</DialogueNode>	
 
 	<DialogueNode>
 		<Name>2</Name>

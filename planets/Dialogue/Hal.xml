@@ -9,6 +9,11 @@
 			<Page>(HAL_START_2) You'll be the first astronaut with nomai translator, I'm so exited about this!</Page>		
 		</Dialogue>
 		<DialogueOptionsList>
+		    <DialogueOption>
+			    <RequiredPersistentCondition>HAL_ROCK_TOLD</RequiredPersistentCondition> 		   
+				<Text>(HAL_START_4) Hal, can you write a custom nomai text for me?</Text>
+				<DialogueTarget>5</DialogueTarget>				
+			</DialogueOption>			
 			<DialogueOption>			   
 				<Text>(HAL_START_3) I think I'm good, Hal. I gotta go.</Text>
 				<DialogueTarget>2</DialogueTarget>
@@ -18,11 +23,6 @@
 				<CancelledPersistentCondition>HAL_ROCK_TOLD</CancelledPersistentCondition>		   
 				<Text>(HAL_START_4) What are you doing with this rock?</Text>
 				<DialogueTarget>3</DialogueTarget>				
-			</DialogueOption>
-			<DialogueOption>
-			    <RequiredPersistentCondition>HAL_ROCK_TOLD</RequiredPersistentCondition> 		   
-				<Text>(HAL_START_4) Hal, can you write a custom nomai text for me?</Text>
-				<DialogueTarget>5</DialogueTarget>				
 			</DialogueOption>			
 		</DialogueOptionsList>
 	</DialogueNode>
@@ -36,6 +36,9 @@
 
 	<DialogueNode>
 		<Name>3</Name>
+		<SetCondition>HAL_ROCK_TOLD</SetCondition>
+		
+		<SetPersistentCondition>HAL_ROCK_TOLD</SetPersistentCondition>
 		<Dialogue>
 			<Page>(MARL_START_4) Just doing little practice in nomai writings. Since I made a nomai translator, I should be able to write nomaish</Page>
 			<Page>(MARL_START_4) I don't know actually how to call their language. Whatever.. no one could read it anyway.</Page>					
@@ -44,7 +47,6 @@
 			<DialogueOption>			   
 				<Text>(HAL_START_3) True. Good luck with it.</Text>
 				<DialogueTarget>4</DialogueTarget>
-				<ConditionToSet>HAL_START_DONE</ConditionToSet>
 			</DialogueOption>				
 		</DialogueOptionsList>
 	</DialogueNode>
@@ -52,7 +54,7 @@
 	<DialogueNode>
 		<Name>5</Name>
 		<Dialogue>
-			<Page>(MARL_START_4) Sure, as you see, I'm already doing practice. So is it for translator testing, right?</Page>								
+			<Page>(MARL_START_4) Sure! As you see, I'm already doing practice. So is it for translator testing, right?</Page>								
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>			   
@@ -73,8 +75,22 @@
 
 	<DialogueNode>
 		<Name>4</Name>
+		<SetCondition>HAL_START_DONE</SetCondition>
+		<EntryCondition>HAL_START_DONE</EntryCondition>
 		<Dialogue>
 			<Page>Good luck in space, friend!</Page>						
-		</Dialogue>		
+		</Dialogue>
+		<DialogueOptionsList>
+	    <DialogueOption>
+			<CancelledCondition>HAL_ROCK_TOLD</CancelledCondition>		   
+			<Text>(HAL_START_4) What are you doing with this rock?</Text>
+			<DialogueTarget>3</DialogueTarget>				
+	    </DialogueOption>
+		<DialogueOption>
+			    <RequiredPersistentCondition>HAL_ROCK_TOLD</RequiredPersistentCondition> 		   
+				<Text>(HAL_START_4) Hal, can you write a custom nomai text for me?</Text>
+				<DialogueTarget>5</DialogueTarget>				
+			</DialogueOption>
+		</DialogueOptionsList>	
 	</DialogueNode>
 </DialogueTree>
