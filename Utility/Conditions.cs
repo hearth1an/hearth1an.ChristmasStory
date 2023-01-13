@@ -57,11 +57,11 @@ namespace ChristmasStory.Utility
             // Hal
             HAL_ROCK_DONE,
 
-
             // Hornfels
+            HORNFELS_FISH_TOLD,
 
-            // Ernesto
-
+            // End Event
+            START_END_EVENT
 
         }
 
@@ -82,7 +82,8 @@ namespace ChristmasStory.Utility
             ALL_TRAVELLERS_DONE,
 
             HAL_ROCK_TOLD,
-
+            HORNFELS_FISH_TOLD,
+            ERNESTO_DONE
         }
 
         public static bool Get(PERSISTENT condition) => PlayerData.GetPersistentCondition(condition.ToString());

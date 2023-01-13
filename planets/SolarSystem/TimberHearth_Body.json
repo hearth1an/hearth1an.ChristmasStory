@@ -242,35 +242,83 @@
 			},
 			{
 				"assetBundle": "planets/assetbundle/hearthians",
-				"path": "Assets/Prefabs/Villager_HEA_Hal_Outside.prefab",
-				"rename": "Hal_Village",
+				"path": "Assets/Prefabs/Villager_HEA_Slate.prefab",
+				"rename": "Slate_Village_Final",
 				"position": {
-					"x": 10.9599,
-					"y": -6.2049,
-					"z": 190.7598
+					"x": 6.9864,
+					"y": -4.1452,
+					"z": 186.9844
 				},
 				"rotation": {
-					"x": 0.5943,
-					"y": 92.4013,
-					"z": 91.7782
+					"x": 38.5978,
+					"y": 271.1526,
+					"z": 268.4409
 				},
 				"scale": 1
 			},
 			{
 				"assetBundle": "planets/assetbundle/hearthians",
-				"path": "Assets/Prefabs/Props_HEA_NomaiCable.prefab",
-				"rename": "Nomai_Cable",
+				"path": "Assets/Prefabs/Villager_HEA_Hal_Outside.prefab",
+				"rename": "Hal_Village",
 				"position": {
-					"x": 10.9599,
-					"y": -6.2049,
-					"z": 190.7598
+					"x": -70.3564,
+					"y": 25.4014,
+					"z": 213.2121
 				},
 				"rotation": {
-					"x": 0.5943,
-					"y": 92.4013,
-					"z": 91.7782
+					"x": 0.4749,
+					"y": 75.3385,
+					"z": 90
 				},
-				"scale": 2
+				"scale": 1
+			},
+			{
+				"path": "TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Characters_Observatory/Character_HEA_Hal_Museum",
+				"rename": "Hal_Village_Final",
+				"removeChildren": [ "ConversationZone" ],
+				"position": {
+					"x": 3.264,
+					"y": -7.4731,
+					"z": 186.9835
+				},
+				"rotation": {
+					"x": 13.5248,
+					"y": 270.3766,
+					"z": 267.5398
+				},
+				"scale": 1
+			},
+			{
+				"path": "TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Characters_Observatory/Villager_HEA_Hornfels (1)",
+				"rename": "Hornfels_Village_Final",
+				"removeChildren": [ "ConversationZone_Hornfels" ],
+				"position": {
+					"x": 2.3853,
+					"y": -4.9922,
+					"z": 187.0795
+				},
+				"rotation": {
+					"x": 38.5978,
+					"y": 271.1526,
+					"z": 268.4409
+				},
+				"scale": 1
+			},
+			{
+				"assetBundle": "planets/assetbundle/hearthians",
+				"path": "Assets/Prefabs/Beast_Anglerfish.prefab",
+				"rename": "Ernesto",
+				"position": {
+					"x": -9.0528,
+					"y": -8.5831,
+					"z": 218.2807
+				},
+				"rotation": {
+					"x": 0,
+					"y": 90,
+					"z": 90
+				},
+				"scale": 0.01
 			},
 			{
 				"path": "CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Interactables_Lakebed/Traveller_HEA_Chert/Traveller_HEA_Chert_ANIM_Chatter_Chipper",
@@ -460,6 +508,94 @@
 
 			},
 			{
+				"parentPath": "Sector_TH/Hal_Village",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 0,
+					"y": 1.5,
+					"z": 0
+				},
+				"xmlFile": "planets/Dialogue/Hal.xml",
+				"lookAtRadius": 2,
+				"radius": 1,
+				"rename": "Hal_Dialogue",
+				"range": 1
+
+			},
+			{
+				"parentPath": "Sector_TH/Hal_Village",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 0,
+					"y": 1.5,
+					"z": 0
+				},
+				"xmlFile": "planets/Dialogue/Hal_Rock.xml",
+				"lookAtRadius": 2,
+				"radius": 1,
+				"rename": "Hal_Dialogue_2",
+				"remoteTriggerRadius": 2,
+				"range": 2
+			},
+			{
+				"parentPath": "Sector_TH/Hal_Village_Final",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 0,
+					"y": 1.5,
+					"z": 0
+				},
+				"xmlFile": "planets/Dialogue/Hal_Final.xml",
+				"lookAtRadius": 2,
+				"radius": 1,
+				"rename": "Hal_Dialogue_Final",
+				"range": 2
+			},
+			{
+				"parentPath": "Sector_TH/Hornfels_Village_Final",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 0,
+					"y": 1.5,
+					"z": 0
+				},
+				"xmlFile": "planets/Dialogue/Hornfels_Final.xml",
+				"pathToAnimController": "Sector_TH/Hornfels_Village_Final/Villager_HEA_Hornfels_ANIM_Working",
+				"radius": 1,
+				"rename": "Hornfels_Dialogue_Final",
+				"range": 2
+			},
+
+			{
+				"parentPath": "Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 0,
+					"y": 1.5,
+					"z": 0
+				},
+				"xmlFile": "planets/Dialogue/Marl.xml",
+				"radius": 2,
+				"rename": "Marl_Dialogue",
+				"pathToAnimController": "Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Villager_HEA_Marl_ANIM_StareDwn",
+				"lookAtRadius": 0,
+				"range": 1
+			},
+			{
+				"parentPath": "Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 0,
+					"y": 1.5,
+					"z": 0
+				},
+				"xmlFile": "planets/Dialogue/Marl_Final.xml",
+				"rename": "Marl_Dialogue_Final",
+				"radius": 2,
+				"range": 2
+			},
+
+			{
 				"parentPath": "Sector_TH/Villager_HEA_Esker_ANIM_Rocking",
 				"isRelativeToParent": true,
 				"position": {
@@ -467,7 +603,7 @@
 					"y": 1.5,
 					"z": 0
 				},
-				"xmlFile": "planets/Dialogue/Esker_Tree.xml",				
+				"xmlFile": "planets/Dialogue/Esker_Tree.xml",
 				"lookAtRadius": 3,
 				"radius": 1
 			},
@@ -517,7 +653,7 @@
 				"xmlFile": "planets/Dialogue/Slate.xml",
 				"parentPath": "Sector_TH/Slate_Village",
 				"isRelativeToParent": false,
-				"pathToAnimController": "Sector_TH/Slate_Village",
+				"pathToAnimController": "Sector_TH/Slate_Village/Villager_HEA_Slate_ANIM_LogSit",
 				"remoteTriggerRadius": 3,
 				"remoteTriggerPosition": {
 					"x": 8.9599,
@@ -526,7 +662,21 @@
 				},
 				"radius": 1,
 				"range": 2
+			},
+			{
+				"parentPath": "Sector_TH/Slate_Village_Final",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 0,
+					"y": 1.5,
+					"z": 0
+				},
+				"xmlFile": "planets/Dialogue/Slate_Final.xml",
+				"pathToAnimController": "Sector_TH/Slate_Village_Final/Villager_HEA_Slate_ANIM_LogSit",
+				"radius": 1,
+				"range": 2
 			}
+
 		],
 		"remotes": [
 			{

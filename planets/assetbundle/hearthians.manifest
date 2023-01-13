@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 1419886929
+CRC: 2707442948
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 7493a1733b9109142c88387f2123d176
+    Hash: 8d834c3f0f1c00f58b32a83f3c64bcfa
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 343c46c9589a2e98089bd2f1d18fa766
+    Hash: e6959e779b2b5b5ee1306cd039eafff2
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -25,6 +25,8 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 48
   Script: {instanceID: 0}
+- Class: 64
+  Script: {instanceID: 0}
 - Class: 74
   Script: {instanceID: 0}
 - Class: 90
@@ -32,6 +34,8 @@ ClassTypes:
 - Class: 91
   Script: {instanceID: 0}
 - Class: 95
+  Script: {instanceID: 0}
+- Class: 108
   Script: {instanceID: 0}
 - Class: 114
   Script: {fileID: 11500000, guid: 1dcbefa0a1fd4004cbf5a5e8f20d7fc0, type: 3}
@@ -42,7 +46,9 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: 840ab63696e59254eb425242136805dd, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: 6dde42d6c99f1fa4f8b563f99158aa92, type: 3}
+  Script: {fileID: 11500000, guid: f759dc47c386fa945981cf08c8c961a0, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: ed8fc5f762e145548bdf96e593ba30a2, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 6e08224a0c172cf49b787f8bc8d72094, type: 3}
 - Class: 114
@@ -68,6 +74,10 @@ Assets:
 - Assets/Prefabs/Villager_HEA_Hal_Outside.prefab
 - Assets/Prefabs/Villager_HEA_Slate.prefab
 - Assets/Prefabs/Props_HEA_NomaiCable.prefab
+- Assets/Prefabs/Beast_Anglerfish.prefab
 Dependencies:
+- E:/Outer Wilds modding/Template x2/TEMPLATE3/darkbramble/meshes/characters
+- E:/Outer Wilds modding/Template x2/TEMPLATE3/darkbramble/textures/anglerfish
 - E:/Outer Wilds modding/Template x2/TEMPLATE3/timberhearth/meshes/characters
+- E:/Outer Wilds modding/Template x2/TEMPLATE3/timberhearth/meshes/props
 - E:/Outer Wilds modding/Template x2/TEMPLATE3/timberhearth/textures/villagers

@@ -36,7 +36,7 @@
 	</DialogueNode>
 
 	<DialogueNode>
-		<Name>2</Name>
+		<Name>3</Name>
 		<Dialogue>
 			<Page>(SLATE_FINAL_5) You better ask Hornfels, but I'm pretty sure we're almost ready.</Page>						
 		</Dialogue>
