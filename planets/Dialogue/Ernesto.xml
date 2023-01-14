@@ -23,8 +23,7 @@
 		<DialogueOptionsList>
 			<DialogueOption>			   
 				<Text>(ERNESTO_START_4) We need your lights to finally start!</Text>
-				<DialogueTarget>3</DialogueTarget>
-				<
+				<DialogueTarget>3</DialogueTarget>				
 			</DialogueOption>			
 		</DialogueOptionsList>	
 	</DialogueNode>

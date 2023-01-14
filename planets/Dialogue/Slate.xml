@@ -149,7 +149,7 @@
 		</Dialogue>
 		<DialogueOptionsList>
 		<DialogueOption>
-			    <RequiredPersistentCondition>TRAVELLERS_AT_HOME</RequiredPersistentCondition>
+			    <RequiredPersistentCondition>ALL_TRAVELLERS_DONE</RequiredPersistentCondition>
 				<Text>(SLATE_START_31) All travellers are here!</Text>
 				<DialogueTarget>100</DialogueTarget>
 		</DialogueOption>	
@@ -213,8 +213,7 @@
 	</DialogueNode>
 
 	<DialogueNode>
-		<Name>100</Name>
-		<EntryCondition>SLATE_START_TRAVELLERS_DONE</EntryCondition>
+		<Name>100</Name>		
 		<Dialogue>
 			<Page>(SLATE_START_25) Alright! You did good job, hatchling! I glad all friends are here and music is playing.</Page>
 			<Page>(SLATE_START_25) So, are you we ready to tell Hornfels and Hal? Don't you want to invite someone else?</Page>
@@ -223,7 +222,7 @@
 		<DialogueOption>
 				<Text>(SLATE_START_26) You know, actually I'll invite someone else.</Text>
 				<DialogueTarget>11</DialogueTarget>
-				<ConditionToSet>SLATE_START_TRAVELLERS_DONE_2</ConditionToSet>
+				<ConditionToSet>SLATE_TRAVELLERS_DONE_2</ConditionToSet>
 		</DialogueOption>
 		<DialogueOption>
 				<Text>(SLATE_START_26) Yes, let's start.</Text>
@@ -252,7 +251,7 @@
 
 	<DialogueNode>
 		<Name>102</Name>
-		<EntryCondition>SLATE_START_TRAVELLERS_DONE_2</EntryCondition>
+		<EntryCondition>SLATE_TRAVELLERS_DONE_2</EntryCondition>
 		<Dialogue>			
 			<Page>(SLATE_START_25) So, are you we ready to tell Hornfels and Hal? Are you done with other "invites?"</Page>
 		</Dialogue>
@@ -269,7 +268,8 @@
 	</DialogueNode>
 
 	<DialogueNode>
-		<Name>103</Name>		
+		<Name>103</Name>
+		<SetPersistentCondition>SLATE_START_DONE</SetPersistentCondition>
 		<Dialogue>			
 			<Page>(SLATE_START_25) Perfect! I'll go for Hornfels and Hal.</Page>
 			<Page>(SLATE_START_25) Merry Christmas!</Page>

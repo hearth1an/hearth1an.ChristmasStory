@@ -1,6 +1,7 @@
 ﻿using ChrismasStory.Components;
 using ChristmasStory.Utility;
 using NewHorizons.Utility;
+using OWML.ModHelper;
 using UnityEngine;
 
 namespace ChrismasStory.Characters.Travelers
@@ -35,7 +36,12 @@ namespace ChrismasStory.Characters.Travelers
 
 			dialogue.OnSelectDialogueOption += Dialogue_OnSelectDialogueOption;
 
+			var phraseTold = Conditions.Get(Conditions.PERSISTENT.CHERT_PHRASE_TOLD);
+			var coreDone = Conditions.Get(Conditions.CONDITION.CHERT_CORE_DONE);
+			var dlcDone = Conditions.Get(Conditions.CONDITION.CHERT_DLC_ITEM_DONE);
+
 			base.Start();
+			ValidateAllDone();
 		}
 
 		public override void OnDestroy()
@@ -50,8 +56,10 @@ namespace ChrismasStory.Characters.Travelers
 		}
 
 		protected override void Dialogue_OnStartConversation()
-		{
-			var holdingWarpCore = HeldItemHandler.IsPlayerHoldingWarpCore();
+        {
+            ValidateAllDone();
+
+            var holdingWarpCore = HeldItemHandler.IsPlayerHoldingWarpCore();
 			var holdingStrangerArtifact = HeldItemHandler.IsPlayerHoldingStrangerArtifact();
 			var holdingJunkItem = HeldItemHandler.IsPlayerHoldingJunk();
 
@@ -66,24 +74,25 @@ namespace ChrismasStory.Characters.Travelers
 			Conditions.Set(Conditions.CONDITION.HOLDING_CORE, holdingWarpCore);
 			Conditions.Set(Conditions.CONDITION.HOLDING_DLC_ITEM, holdingStrangerArtifact);
 			Conditions.Set(Conditions.CONDITION.HOLDING_JUNK_ITEM, holdingJunkItem);
-
-			ValidateAllDone();
+			
 		}
 
 		private void ValidateAllDone()
-		{
+		{	
 			var phraseTold = Conditions.Get(Conditions.PERSISTENT.CHERT_PHRASE_TOLD);
 			var coreDone = Conditions.Get(Conditions.CONDITION.CHERT_CORE_DONE);
-			var dlcDone = Conditions.Get(Conditions.CONDITION.CHERT_DLC_ITEM_DONE);
+			var dlcDone = Conditions.Get(Conditions.CONDITION.CHERT_DLC_ITEM_DONE);			
 
-			if (phraseTold && coreDone && dlcDone)
-			{
-				Conditions.Set(Conditions.CONDITION.CHERT_ALL_DONE, true);
-			}
+			ChristmasStory.Instance.ModHelper.Events.Unity.RunWhen(() => phraseTold && coreDone && dlcDone, () =>
+            {
+                Conditions.Set(Conditions.CONDITION.CHERT_ALL_DONE, true);
+				
+            });
 		}
 
 		protected override void Dialogue_OnEndConversation()
 		{
+			ValidateAllDone();
 			switch (State)
 			{
 				case STATE.ORIGINAL:
@@ -104,5 +113,7 @@ namespace ChrismasStory.Characters.Travelers
 			// The drum signal is separate from chert's game object
 			_originalDrums?.SetActive(newState == STATE.ORIGINAL);
 		}
-	}
+
+		
+    }
 }

@@ -33,6 +33,8 @@ namespace ChrismasStory.Characters.Travelers
 			var prisonerArtifact = SearchUtilities.Find("Prisoner_Artifact").GetComponent<DreamLanternController>();
 			HeldItemHandler.Instance.ItemDropped.AddListener(OnItemDropped);
 
+			originalCharacter.SetActive(true);
+
 			base.Start();
 		}
 		protected override void Dialogue_OnStartConversation()
@@ -55,7 +57,7 @@ namespace ChrismasStory.Characters.Travelers
 		}
 		private void OnItemDropped(OWItem item)
 		{
-			if (item == HeldItemHandler.Instance.PrisonerLantern)
+			if (item == HeldItemHandler.Instance.PrisonerLanternItem)
 			{
 				var distance = 100f;
 				var lit = HeldItemHandler.Instance.PrisonerLantern._lit == true;

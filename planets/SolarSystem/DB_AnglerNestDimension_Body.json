@@ -26,7 +26,7 @@
 					"y": -10,
 					"z": -25
 				},
-				"scale": 0.25,
+				"scale": 0.1,
 				"rename": "Ernando"
 			},
 			{
@@ -38,7 +38,7 @@
 					"y": -10,
 					"z": -25
 				},
-				"scale": 0.4,
+				"scale": 0.12,
 				"rename": "Gustavo"
 			},
 			{
@@ -50,7 +50,7 @@
 					"y": -10,
 					"z": -25
 				},
-				"scale": 0.3,
+				"scale": 0.08,
 				"rename": "Rudolfo"
 			}
 		],

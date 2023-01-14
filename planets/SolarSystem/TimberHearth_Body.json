@@ -481,6 +481,19 @@
 				"radius": 1
 			},
 			{
+				"parentPath": "Sector_TH/Sector_Village/Sector_Observatory/Interactables_Observatory/AnglerFishExhibit/AnglerFishTankPivot/Beast_Anglerfish",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 0,
+					"y": 1.5,
+					"z": 0
+				},
+				"xmlFile": "planets/Dialogue/Ernesto.xml",
+				"pathToAnimController": "Sector_TH/Sector_Village/Sector_Observatory/Interactables_Observatory/AnglerFishExhibit/AnglerFishTankPivot/Beast_Anglerfish/B_angler_root",
+				"rename": "Ernesto_Dialogue",
+				"radius": 2
+			},
+			{
 				"parentPath": "Sector_TH/Traveller_HEA_Feldspar",
 				"isRelativeToParent": true,
 				"position": {
@@ -503,7 +516,7 @@
 				},
 				"xmlFile": "planets/Dialogue/Porphy.xml",
 				"pathToAnimController": "Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Porphy/Villager_HEA_Porphy_ANIM_Taste",
-				"lookAtRadius": 2,
+				"lookAtRadius": 0,
 				"radius": 1
 
 			},
@@ -575,10 +588,10 @@
 					"z": 0
 				},
 				"xmlFile": "planets/Dialogue/Marl.xml",
-				"radius": 2,
+				"radius": 1,
 				"rename": "Marl_Dialogue",
-				"pathToAnimController": "Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Villager_HEA_Marl_ANIM_StareDwn",
-				"lookAtRadius": 0,
+				"pathToAnimController": "Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Villager_HEA_Marl_ANIM_StareDwn/Marl_Skin_01:Marl_Mesh:Villager_HEA_Marl",
+				"lookAtRadius": 2,
 				"range": 1
 			},
 			{

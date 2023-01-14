@@ -23,10 +23,11 @@
 			{
 				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Characters_Crossroads/Traveller_HEA_Riebeck",
 				"rename": "Ship_Riebeck",
+				"isRelativeToParent": true,
 				"removeChildren": [ "ConversationZone_Riebeck" ],
 				"position": {
-					"x": -2.4309,
-					"y": 0.4255,
+					"x": 0,
+					"y": 1.7,
 					"z": 0
 				},
 				"rotation": {

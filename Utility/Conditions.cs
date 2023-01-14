@@ -69,6 +69,7 @@ namespace ChristmasStory.Utility
         {
             CHERT_DONE,
             CHERT_PHRASE_TOLD,
+            CHERT_PHRASE_KNOWN,
             CHERT_PHRASE_KNOWN_NEXT_LOOP,
 
             ESKER_DONE,
@@ -81,6 +82,7 @@ namespace ChristmasStory.Utility
 
             ALL_TRAVELLERS_DONE,
 
+            SLATE_START_DONE,
             HAL_ROCK_TOLD,
             HORNFELS_FISH_TOLD,
             ERNESTO_DONE

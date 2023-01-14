@@ -90,7 +90,7 @@ namespace ChrismasStory
 
 			// characterControllers.AddComponent<HornfelsCharacterController>(); characterControllers.AddComponent<ErnestoCharacterController>();
 
-			if (Conditions.Get(Conditions.PERSISTENT.CHERT_PHRASE_TOLD))
+			if (Conditions.Get(Conditions.PERSISTENT.CHERT_PHRASE_KNOWN))
 			{
 				Conditions.Set(Conditions.PERSISTENT.CHERT_PHRASE_KNOWN_NEXT_LOOP, true);
 				WriteLine("Chert phrase known.");
@@ -192,10 +192,9 @@ namespace ChrismasStory
                 SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner/Ghostbird_IP_ANIM/Ghostbird_Skin_01:Ghostbird_Rig_V01:Base/Ghostbird_Skin_01:Ghostbird_Rig_V01:Root/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine01/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine02/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine03/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine04/Ghostbird_Skin_01:Ghostbird_Rig_V01:Neck01/Ghostbird_Skin_01:Ghostbird_Rig_V01:Neck02/Ghostbird_Skin_01:Ghostbird_Rig_V01:Head/PrisonerHeadDetector").SetActive(false);
                 SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner/Ghostbird_IP_ANIM/Ghostbird_Skin_01:Ghostbird_Rig_V01:Base/Ghostbird_Skin_01:Ghostbird_Rig_V01:Root/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine01/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine02/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine03/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine04/Ghostbird_Skin_01:Ghostbird_Rig_V01:Neck01/Ghostbird_Skin_01:Ghostbird_Rig_V01:Neck02/Ghostbird_Skin_01:Ghostbird_Rig_V01:Head/LightSensor_GhostHead").SetActive(false);
 
-
-				SearchUtilities.Find("Ernando/AudioController/LoopSource").GetComponent<AudioSource>().pitch = 2f;
-				SearchUtilities.Find("Gustavo/AudioController/LoopSource").GetComponent<AudioSource>().pitch = 3f;
-				SearchUtilities.Find("Rudolfo/AudioController/LoopSource").GetComponent<AudioSource>().pitch = 1.5f;
+				SearchUtilities.Find("Ernando/AudioController/LoopSource").GetComponent<AudioSource>().pitch = 1.3f;
+				SearchUtilities.Find("Gustavo/AudioController/LoopSource").GetComponent<AudioSource>().pitch = 0.5f;
+				SearchUtilities.Find("Rudolfo/AudioController/LoopSource").GetComponent<AudioSource>().pitch = 1f;
 
 				SearchUtilities.Find("Ernando").SetActive(false);
 				SearchUtilities.Find("Gustavo").SetActive(false);
@@ -399,11 +398,12 @@ namespace ChrismasStory
                 var Marl_Character = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl");
                 Marl_Character.transform.localPosition = new Vector3(8.3747f, 7.4018f, -8.3346f);
                 Marl_Character.transform.localRotation = new Quaternion(-0.02323f, -0.8668f, 0.0022f, 0.4982f);
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/ConversationZone").SetActive(false);
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Marl_Dialogue_Final").SetActive(false);
+                SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/ConversationZone").SetActive(false);
+                SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Marl_Dialogue_Final").SetActive(false);
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Villager_HEA_Marl_ANIM_StareDwn").GetComponent<CharacterAnimController>().lookOnlyWhenTalking = false;
 
-				// Tephra
-				var Tephra_Character = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Kids_PreGame/Villager_HEA_Tephra");
+                // Tephra
+                var Tephra_Character = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Kids_PreGame/Villager_HEA_Tephra");
                 Tephra_Character.transform.localPosition = new Vector3(-5.9785f, 8.7614f, -1.742f);
                 Tephra_Character.transform.localRotation = new Quaternion(0.0245f, 0.5553f, 0.0357f, 0.8305f);
 
@@ -411,13 +411,21 @@ namespace ChrismasStory
                 var Galena_Character = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Kids_PreGame/Villager_HEA_Galena");
                 Galena_Character.transform.localPosition = new Vector3(1.2199f, 7.7457f, -2.38f);
 
-				// Hal
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Characters_Observatory/Character_HEA_Hal_Museum").SetActive(false);
-				
-				SearchUtilities.Find("TimberHearth_Body/Hal_Village/Hal_Dialogue_2").SetActive(false);
-				SearchUtilities.Find("TimberHearth_Body/Hal_Village/Hal_Dialogue_2_ConversationTrigger").SetActive(false);
+                // Hal
+                SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Characters_Observatory/Character_HEA_Hal_Museum").SetActive(false);
+
+                SearchUtilities.Find("TimberHearth_Body/Hal_Village/Hal_Dialogue_2").SetActive(false);
+                SearchUtilities.Find("TimberHearth_Body/Hal_Village/Hal_Dialogue_2_ConversationTrigger").SetActive(false);
 
 				// SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Characters_Village/Villager_HEA_Hal_Outside").SetActive(false);
+
+				// Endgame event things disabling on start 
+
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village_Final").SetActive(false);
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hornfels_Village_Final").SetActive(false);
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village_Final").SetActive(false);
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Interactables_Observatory/AnglerFishExhibit/Ernesto_Dialogue").SetActive(false);
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Ernesto").SetActive(false);
 			}
             catch (Exception ex)
 			{

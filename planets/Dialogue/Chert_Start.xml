@@ -123,6 +123,7 @@
 				<DialogueTarget>15.1</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
+			    <CancelledPersistentCondition>CHERT_PHRASE_KNOWN_NEXT_LOOP</CancelledPersistentCondition>
 				<Text>(CHERT_START_19) Alright! How do we do this?</Text>
 				<DialogueTarget>9</DialogueTarget>
 			</DialogueOption>
@@ -162,7 +163,7 @@
 	</DialogueNode>
 
 	<DialogueNode>
-		<Name>10.1</Name>
+		<Name>10.1</Name>		
 		<Dialogue>
 			<Page>(CHERT_START_25) No, since you're saying you are mr 'I know everything', I'm asking you to bring on the table something new.</Page>
 			<Page>(CHERT_START_26) I mean, any Nomai unknown technology and don't you dare take anything from the museum!</Page>
@@ -225,23 +226,21 @@
 		<DialogueOptionsList>
 			<DialogueOption>
 				<RequiredPersistentCondition>CHERT_PHRASE_KNOWN_NEXT_LOOP</RequiredPersistentCondition>
-				<Text>(CHERT_START_29) Chert, I know that only you know who is Jumbo marshmallow creator.</Text>
-				<CancelledCondition>CHERT_PHRASE_TOLD</CancelledCondition>
-				<ConditionToSet>CHERT_PHRASE_TOLD</ConditionToSet>
+				<Text>(CHERT_START_29) Chert, I know that only you know who is Jumbo marshmallow creator.</Text>				
+				<CancelledCondition>CHERT_PHRASE_TOLD</CancelledCondition>				
 				<DialogueTarget>16</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
 				<RequiredCondition>HOLDING_CORE</RequiredCondition>
 				<Text>(CHERT_START_35) Here's the nomai warp core. They used it to enable time loop machine.</Text>
-				<ConditionToSet>CHERT_CORE_DONE</ConditionToSet>
+				
 				<CancelledCondition>CHERT_CORE_DONE</CancelledCondition>
 				<DialogueTarget>17</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
 				<RequiredCondition>HOLDING_DLC_ITEM</RequiredCondition>
-				<Text>(CHERT_START_36) Here's the strangers tech.</Text>
-				<CancelledCondition>CHERT_DLC_ITEM_DONE</CancelledCondition>
-				<ConditionToSet>CHERT_DLC_ITEM_DONE</ConditionToSet>
+				<Text>(CHERT_START_36) Here's the strangers tech.</Text>				
+				<CancelledCondition>CHERT_DLC_ITEM_DONE</CancelledCondition>				
 				<DialogueTarget>19</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
@@ -251,12 +250,12 @@
 			</DialogueOption>
 			<DialogueOption>
 				<RequiredCondition>CHERT_ALL_DONE</RequiredCondition>
-				<Text>(CHERT_START_37) So, I've done everything you asked for. Let's go home to celebrate?</Text>
-				<ConditionToSet>CHERT_START_DONE</ConditionToSet>
+				<Text>(CHERT_START_37) So, I've done everything you asked for. Let's go home to celebrate?</Text>				
 				<DialogueTarget>20</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
 				<Text>(CHERT_START_80) I'll be right back.</Text>
+				<CancelledCondition>CHERT_ALL_DONE</CancelledCondition>	
 			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
@@ -275,6 +274,7 @@
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
+			    <ConditionToSet>CHERT_PHRASE_TOLD</ConditionToSet>
 				<Text>(CHERT_START_39) Sure! I'll proof everything.</Text>
 				<DialogueTarget>15</DialogueTarget>
 			</DialogueOption>
@@ -289,6 +289,7 @@
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
+			    <ConditionToSet>CHERT_CORE_DONE</ConditionToSet>
 				<Text>(CHERT_START_42) Oh, don't be mad Chert. I'll figure it out. Calm down!</Text>
 				<DialogueTarget>18</DialogueTarget>
 			</DialogueOption>
@@ -299,6 +300,7 @@
 	<DialogueNode>
 		<Name>18</Name>
 		<Dialogue>
+		
 			<Page>(CHERT_START_43) Uh.. easy to say! Okay, breath deep... breath..</Page>
 		</Dialogue>
 		<DialogueOptionsList>
@@ -316,6 +318,7 @@
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
+			    <ConditionToSet>CHERT_DLC_ITEM_DONE</ConditionToSet>
 				<Text>(CHERT_START_45) Yes. They were all about flames and lights.</Text>
 				<DialogueTarget>15</DialogueTarget>
 			</DialogueOption>
@@ -324,6 +327,7 @@
 
 	<DialogueNode>
 		<Name>20</Name>
+		<SetCondition>CHERT_START_DONE</SetCondition>
 		<Dialogue>
 			<Page>(CHERT_START_46) Okay.. you won. I don't feel like I'm doing something important here so... We can go celebrate Christmas!</Page>
 		</Dialogue>

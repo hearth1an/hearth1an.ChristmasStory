@@ -31,12 +31,7 @@ namespace ChrismasStory.Characters.Travelers
 		{
 			if (Conditions.Get(Conditions.CONDITION.HORNFELS_FISH_TOLD))
 			{
-				// Enabling ernesto
-				/* 
-				PlayerEffectController.Blink(2f);
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Dialogue").SetActive(false);
-				Invoke("SwapDialogue", 2f);
-				*/
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Interactables_Observatory/AnglerFishExhibit/Ernesto_Dialogue").SetActive(true);
 			}
 			else if (Conditions.Get(Conditions.CONDITION.START_END_EVENT))
             {
@@ -46,11 +41,6 @@ namespace ChrismasStory.Characters.Travelers
 
 		private void SwapDialogue()
         {
-			PlayerEffectController.PlayAudioOneShot(AudioType.ToolItemSharedStonePickUp, 1f);
-			HeldItemHandler.GivePlayerInviteStone();			
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Dialogue_2_ConversationTrigger").SetActive(true);
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Dialogue_2").SetActive(true);
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Dialogue_2_ConversationTrigger").transform.localPosition = new UnityEngine.Vector3(0, 0, 0);
 			
 		}
 		protected override void OnChangeState(STATE oldState, STATE newState) { }

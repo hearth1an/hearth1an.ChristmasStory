@@ -49,10 +49,7 @@ namespace ChrismasStory.Characters.Travelers
 					if (Conditions.Get(Conditions.CONDITION.FELDSPAR_START_DONE))
 					{
 						ChangeState(STATE.ON_SHIP);
-
-						SearchUtilities.Find("Ernando").SetActive(true);
-						SearchUtilities.Find("Gustavo").SetActive(true); 
-						SearchUtilities.Find("Rudolfo").SetActive(true);
+						Invoke("SpawnAnglers", 4f);
 						SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Interactables_ImpactCrater/BrambleSeed/InnerWarp_ToPioneer (1)/Signal_Harmonica").SetActive(false);
 					}
 					break;
@@ -63,6 +60,17 @@ namespace ChrismasStory.Characters.Travelers
 					}
 					break;
 			}
+		}
+		private void SpawnAnglers()
+        {
+			SearchUtilities.Find("Ernando").transform.localPosition = new UnityEngine.Vector3(5f, -5f, -30f);
+			SearchUtilities.Find("Ernando").SetActive(true);
+
+			SearchUtilities.Find("Gustavo").SetActive(true);
+			SearchUtilities.Find("Gustavo").transform.localPosition = new UnityEngine.Vector3(9f, -3f, -20f);
+
+			SearchUtilities.Find("Rudolfo").transform.localPosition = new UnityEngine.Vector3(3f, -7f, -19f);
+			SearchUtilities.Find("Rudolfo").SetActive(true);
 		}
 
 		protected override void OnChangeState(STATE oldState, STATE newState)
