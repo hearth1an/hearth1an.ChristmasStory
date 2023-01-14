@@ -92,7 +92,7 @@ namespace ChrismasStory.Characters.Travelers
 
 		protected override void Dialogue_OnEndConversation()
 		{
-			ValidateAllDone();
+			
 			switch (State)
 			{
 				case STATE.ORIGINAL:
