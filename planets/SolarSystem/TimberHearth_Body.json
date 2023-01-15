@@ -558,6 +558,7 @@
 				},
 				"xmlFile": "planets/Dialogue/Hal.xml",
 				"lookAtRadius": 2,
+				"remoteTriggerRadius": 2,
 				"radius": 1,
 				"rename": "Hal_Dialogue",
 				"range": 1
@@ -719,6 +720,7 @@
 			}
 
 		],
+
 		"remotes": [
 			{
 				"id": "Hal's",
@@ -726,9 +728,9 @@
 				"stones": [
 					{
 						"position": {
-							"x": 9.3314,
-							"y": -14.9432,
-							"z": 186.3129
+							"x": 0,
+							"y": 0,
+							"z": 0
 						},
 						"rotation": {
 							"x": 338.7445,
@@ -740,5 +742,6 @@
 				]
 			}
 		]
+		
 	}
 }

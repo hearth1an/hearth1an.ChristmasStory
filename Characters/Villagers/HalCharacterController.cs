@@ -29,7 +29,7 @@ namespace ChrismasStory.Characters.Travelers
 
 		protected override void Dialogue_OnEndConversation()
 		{
-			if (Conditions.Get(Conditions.CONDITION.HAL_ROCK_DONE))
+			if (Conditions.Get(Conditions.CONDITION.HAL_ROCK_DONE) && PlayerData.GetPersistentCondition("LOOP_COUNT_GOE_2"))
 			{
 				PlayerEffectController.Blink(2f);
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Dialogue").SetActive(false);

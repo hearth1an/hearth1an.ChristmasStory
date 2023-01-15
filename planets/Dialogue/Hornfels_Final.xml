@@ -119,7 +119,7 @@
 		<DialogueOptionsList>
 		    <DialogueOption>				 	
 				<Text>(HORNFELS_START_4) Yes, I am ready.</Text>
-				<DialogueTarget>6</DialogueTarget>				
+				<DialogueTarget>6</DialogueTarget>							
 			</DialogueOption>
 			<DialogueOption>			    	
 				<Text>(HORNFELS_START_4) No, I  give me a minute.</Text>

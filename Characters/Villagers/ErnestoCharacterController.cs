@@ -15,8 +15,9 @@ namespace ChrismasStory.Characters.Travelers
 
 		public override void Start()
 		{
-			dialogue = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Interactables_Observatory/AnglerFishExhibit/Ernesto_Dialogue").GetComponent<CharacterDialogueTree>();			
+			dialogue = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Interactables_Observatory/AnglerFishExhibit/Ernesto_Dialogue").GetComponent<CharacterDialogueTree>();
 
+			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Ernesto").SetActive(false);
 			//originalCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village");			
 
 			base.Start();
@@ -45,7 +46,7 @@ namespace ChrismasStory.Characters.Travelers
 			PlayerEffectController.PlayAudioOneShot(AudioType.DBAnglerfishChasing_LP, 1f);
 
 			var ernestoLight = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Ernesto/B_angler_root/B_angler_body01/B_angler_body02/B_angler_antenna01/B_angler_antenna02/B_angler_antenna03/B_angler_antenna04/B_angler_antenna05/B_angler_antenna06/B_angler_antenna07/B_angler_antenna08/B_angler_antenna09/B_angler_antenna10/B_angler_antenna11/B_angler_antenna12_end/Props_HEA_WallLamp_Pulsing 1/Ernesto_Light").GetComponent<PulsingLight>();
-			ernestoLight._initLightRange = 50f;
+			ernestoLight._initLightRange = 20f;
 			
 
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Ernesto").SetActive(true);

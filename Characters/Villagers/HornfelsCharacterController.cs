@@ -62,6 +62,9 @@ namespace ChrismasStory.Characters.Travelers
 			ernestoLight._initLightRange = 300f;
 			SearchUtilities.Find("Sun_Body/Sector_SUN/Effects_SUN/Supernova").GetComponent<SupernovaEffectController>().enabled = true;
 			ChristmasStory.Instance.ModHelper.Console.WriteLine("Starting supernova");
+
+			// custom death in 9 sec
+
 		}
 		protected override void OnChangeState(STATE oldState, STATE newState) { }
 	}

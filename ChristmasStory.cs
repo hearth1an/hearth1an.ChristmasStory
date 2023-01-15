@@ -19,8 +19,7 @@ namespace ChrismasStory
 	{
 		public static INewHorizons newHorizonsAPI;
 		public static ChristmasStory Instance;
-		public static PrisonerBehavior behaviour;
-		public FluidDetector FluidDetector;
+		public static PrisonerBehavior behaviour;		
 
 		public Material grassMaterial;
 
@@ -41,9 +40,9 @@ namespace ChrismasStory
 		public static void WriteDebug(string line)
 		{
 #if DEBUG
-			Instance.ModHelper.Console.WriteLine("Debug: " + line, MessageType.Info);
+            Instance.ModHelper.Console.WriteLine("Debug: " + line, MessageType.Info);
 #endif
-		}
+        }
 		public static void WriteLine(string line) => WriteLine(line, MessageType.Info);
 		public static void WriteError(string line) => WriteLine(line, MessageType.Error);
 		public static void WriteLine(string line, MessageType type) => Instance.ModHelper.Console.WriteLine($"{type}: " + line, type);
@@ -90,8 +89,7 @@ namespace ChrismasStory
 			characterControllers.AddComponent<SlateCharacterController>();
 			characterControllers.AddComponent<HornfelsCharacterController>();
 			characterControllers.AddComponent<ErnestoCharacterController>();
-
-			// characterControllers.AddComponent<HornfelsCharacterController>(); characterControllers.AddComponent<ErnestoCharacterController>();
+			
 
 			if (Conditions.Get(Conditions.PERSISTENT.CHERT_PHRASE_KNOWN))
 			{
@@ -106,6 +104,13 @@ namespace ChrismasStory
             {
 				Conditions.Set(Conditions.PERSISTENT.ALL_TRAVELLERS_DONE, true);
 				WriteLine("All travellers done.");
+			}
+			if (PlayerData.GetPersistentCondition("LAUNCH_CODES_GIVEN") && !PlayerData.GetPersistentCondition("LOOP_COUNT_GOE_2"))
+            {
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Characters_Village/Villager_HEA_Hal_Outside").SetActive(false);
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Dialogue_2").SetActive(false);
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Dialogue_2_ConversationTrigger").SetActive(false);
+				WriteLine("Trying skip loading Hal outside");
 			}
 			
 
