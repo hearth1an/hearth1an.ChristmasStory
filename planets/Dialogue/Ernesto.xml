@@ -10,23 +10,10 @@
 		<DialogueOptionsList>
 			<DialogueOption>			   
 				<Text>(ERNESTO_START_3) Oh, Ernesto, you shine so bright!</Text>
-				<DialogueTarget>2</DialogueTarget>
+				<DialogueTarget>3</DialogueTarget>
 			</DialogueOption>			
 		</DialogueOptionsList>
-	</DialogueNode>
-
-	<DialogueNode>
-		<Name>2</Name>
-		<Dialogue>
-			<Page>(ERNESTO_START_1) ...</Page>					
-		</Dialogue>
-		<DialogueOptionsList>
-			<DialogueOption>			   
-				<Text>(ERNESTO_START_4) We need your lights to finally start!</Text>
-				<DialogueTarget>3</DialogueTarget>				
-			</DialogueOption>			
-		</DialogueOptionsList>	
-	</DialogueNode>
+	</DialogueNode>	
 
 	<DialogueNode>
 		<Name>3</Name>

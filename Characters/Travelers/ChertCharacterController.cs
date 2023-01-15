@@ -16,8 +16,6 @@ namespace ChrismasStory.Characters.Travelers
 
 	internal class ChertCharacterController : TravelerCharacterController
 	{
-
-
 		private GameObject _emberTwinShip, _timberHearthShip, _originalDrums;
 
 		public override Conditions.PERSISTENT DoneCondition => Conditions.PERSISTENT.CHERT_DONE;
@@ -36,12 +34,7 @@ namespace ChrismasStory.Characters.Travelers
 
 			dialogue.OnSelectDialogueOption += Dialogue_OnSelectDialogueOption;
 
-			var phraseTold = Conditions.Get(Conditions.PERSISTENT.CHERT_PHRASE_TOLD);
-			var coreDone = Conditions.Get(Conditions.CONDITION.CHERT_CORE_DONE);
-			var dlcDone = Conditions.Get(Conditions.CONDITION.CHERT_DLC_ITEM_DONE);
-
-			base.Start();
-			ValidateAllDone();
+			base.Start();			
 		}
 
 		public override void OnDestroy()
@@ -53,41 +46,40 @@ namespace ChrismasStory.Characters.Travelers
 		private void Dialogue_OnSelectDialogueOption()
 		{
 			ValidateAllDone();
-		}
+        }
 
-		protected override void Dialogue_OnStartConversation()
+        protected override void Dialogue_OnStartConversation()
         {
-            ValidateAllDone();
-
             var holdingWarpCore = HeldItemHandler.IsPlayerHoldingWarpCore();
-			var holdingStrangerArtifact = HeldItemHandler.IsPlayerHoldingStrangerArtifact();
-			var holdingJunkItem = HeldItemHandler.IsPlayerHoldingJunk();
+            var holdingStrangerArtifact = HeldItemHandler.IsPlayerHoldingStrangerArtifact();
+            var holdingJunkItem = HeldItemHandler.IsPlayerHoldingJunk();
 
-			var shipDestroyed = ShipHandler.HasShipExploded();
+            var shipDestroyed = ShipHandler.HasShipExploded();
 
-			var shipNearChert = ShipHandler.IsCharacterNearShip(originalCharacter.gameObject, 100f) && !shipDestroyed;
-			var shipFar = !shipNearChert && !shipDestroyed;
+            var shipNearChert = ShipHandler.IsCharacterNearShip(originalCharacter.gameObject, 100f) && !shipDestroyed;
+            var shipFar = !shipNearChert && !shipDestroyed;
 
-			Conditions.Set(Conditions.CONDITION.CHERT_SHIP_NEAR, shipNearChert);
-			Conditions.Set(Conditions.CONDITION.CHERT_SHIP_FAR, shipFar);
+            Conditions.Set(Conditions.CONDITION.CHERT_SHIP_NEAR, shipNearChert);
+            Conditions.Set(Conditions.CONDITION.CHERT_SHIP_FAR, shipFar);
 
-			Conditions.Set(Conditions.CONDITION.HOLDING_CORE, holdingWarpCore);
-			Conditions.Set(Conditions.CONDITION.HOLDING_DLC_ITEM, holdingStrangerArtifact);
-			Conditions.Set(Conditions.CONDITION.HOLDING_JUNK_ITEM, holdingJunkItem);
-			
+            Conditions.Set(Conditions.CONDITION.HOLDING_CORE, holdingWarpCore);
+            Conditions.Set(Conditions.CONDITION.HOLDING_DLC_ITEM, holdingStrangerArtifact);
+            Conditions.Set(Conditions.CONDITION.HOLDING_JUNK_ITEM, holdingJunkItem);
+
+        	Delay.FireOnNextUpdate(ValidateAllDone);			
 		}
 
 		private void ValidateAllDone()
-		{	
-			var phraseTold = Conditions.Get(Conditions.PERSISTENT.CHERT_PHRASE_TOLD);
+		{
+			var phraseTold = Conditions.Get(Conditions.CONDITION.CHERT_PHRASE_TOLD);
 			var coreDone = Conditions.Get(Conditions.CONDITION.CHERT_CORE_DONE);
-			var dlcDone = Conditions.Get(Conditions.CONDITION.CHERT_DLC_ITEM_DONE);			
+			var dlcDone = Conditions.Get(Conditions.CONDITION.CHERT_DLC_ITEM_DONE);
 
-			ChristmasStory.Instance.ModHelper.Events.Unity.RunWhen(() => phraseTold && coreDone && dlcDone, () =>
-            {
-                Conditions.Set(Conditions.CONDITION.CHERT_ALL_DONE, true);
-				
-            });
+			if (phraseTold && coreDone && dlcDone)
+			{
+				Conditions.Set(Conditions.CONDITION.CHERT_ALL_DONE, true);
+				ChristmasStory.Instance.ModHelper.Console.WriteLine("Chert conditions done!");
+			}
 		}
 
 		protected override void Dialogue_OnEndConversation()

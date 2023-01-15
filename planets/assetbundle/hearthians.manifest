@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 2707442948
+CRC: 2758579575
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 8d834c3f0f1c00f58b32a83f3c64bcfa
+    Hash: cbbabb3e851b63e7474d44cfb47fd83b
   TypeTreeHash:
     serializedVersion: 2
-    Hash: e6959e779b2b5b5ee1306cd039eafff2
+    Hash: 920c0a0da43f9e1e7cbd5d7a636a571b
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -29,6 +29,8 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 74
   Script: {instanceID: 0}
+- Class: 82
+  Script: {instanceID: 0}
 - Class: 90
   Script: {instanceID: 0}
 - Class: 91
@@ -37,6 +39,8 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 108
   Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 64960e60016b9174392f7e903dd3f38e, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 1dcbefa0a1fd4004cbf5a5e8f20d7fc0, type: 3}
 - Class: 114
@@ -53,6 +57,8 @@ ClassTypes:
   Script: {fileID: 11500000, guid: 6e08224a0c172cf49b787f8bc8d72094, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 0697417d0b4243b48a036bfb10342726, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 034b758dcb27c9746a7640cdb345b333, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 0afb808ebdc9697409339cb1d53688b5, type: 3}
 - Class: 114
@@ -73,8 +79,10 @@ SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/Prefabs/Villager_HEA_Hal_Outside.prefab
 - Assets/Prefabs/Villager_HEA_Slate.prefab
+- Assets/Prefabs/Signal_Nomai.prefab
 - Assets/Prefabs/Props_HEA_NomaiCable.prefab
 - Assets/Prefabs/Beast_Anglerfish.prefab
+- Assets/Prefabs/Signal_Prisoner.prefab
 Dependencies:
 - E:/Outer Wilds modding/Template x2/TEMPLATE3/darkbramble/meshes/characters
 - E:/Outer Wilds modding/Template x2/TEMPLATE3/darkbramble/textures/anglerfish

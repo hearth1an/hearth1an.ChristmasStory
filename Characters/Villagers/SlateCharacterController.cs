@@ -16,12 +16,13 @@ namespace ChrismasStory.Characters.Travelers
 
 		public override void Start()
 		{
+
 			dialogue = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village/ConversationZone").GetComponent<CharacterDialogueTree>();			
 
 			
-			//originalCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village");			
-
-			base.Start();
+			originalCharacter = SearchUtilities.Find("TimberHearth_Body/Slate_Village");
+			treeCharacter = SearchUtilities.Find("TimberHearth_Body/Slate_Village_Final");
+			base.Start();			
 		}
 
 		protected override void Dialogue_OnStartConversation()
@@ -33,7 +34,7 @@ namespace ChrismasStory.Characters.Travelers
 		{
 			if (Conditions.Get(Conditions.PERSISTENT.SLATE_START_DONE))
 			{				
-				PlayerEffectController.Blink(2f);
+				PlayerEffectController.Blink(4f);
 				PlayerEffectController.PlayAudioOneShot(AudioType.PlayerGasp_Light, 1f);
 				Invoke("SpawnEndGameProps", 2f);
             }
@@ -42,9 +43,9 @@ namespace ChrismasStory.Characters.Travelers
 
         private void SpawnEndGameProps()
         {
-            SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village").SetActive(false);
-            SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Characters_Observatory/Villager_HEA_Hornfels (1)").SetActive(false);
-            SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village").SetActive(false);
+			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village").SetActive(false);
+			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Characters_Observatory/Villager_HEA_Hornfels (1)").SetActive(false);
+			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village").SetActive(false);
 
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village_Final").SetActive(true);
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hornfels_Village_Final").SetActive(true);
@@ -54,6 +55,9 @@ namespace ChrismasStory.Characters.Travelers
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Marl_Dialogue_Final").SetActive(true);
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Marl_Dialogue").SetActive(false);
 		}
-        protected override void OnChangeState(STATE oldState, STATE newState) { }
+        protected override void OnChangeState(STATE oldState, STATE newState) 
+		{ 
+
+		}
 	}
 }

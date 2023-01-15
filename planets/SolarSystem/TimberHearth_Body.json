@@ -4,6 +4,10 @@
 	"Base": {
 		"surfaceSize": 200
 	},
+	"Atmosphere": {
+		"hasSnow": true,
+		"size": 300
+	},
 	"Props": {
 		"details": [
 			{
@@ -426,14 +430,14 @@
 					"FoundShipTrigger"
 				],
 				"position": {
-					"x": 33.8095245,
-					"y": 78.29883,
-					"z": 242.81424
+					"x": 3.8,
+					"y": -111.9158,
+					"z": 232.0497
 				},
 				"rotation": {
-					"x": 80.99431,
-					"y": 19.8350887,
-					"z": 22.1955814
+					"x": 324.9021,
+					"y": 191.5648,
+					"z": 34.6601
 				}
 			},
 			{
@@ -467,6 +471,30 @@
 				"scale": 5,
 				"parentPath": "Sector_TH/Nomai_ANIM_SkyWatching_Idle/Nomai_Rig_v01:TrajectorySHJnt/Nomai_Rig_v01:ROOTSHJnt/Nomai_Rig_v01:Spine_01SHJnt/Nomai_Rig_v01:Spine_02SHJnt/Nomai_Rig_v01:Spine_TopSHJnt/Nomai_Rig_v01:Neck_01SHJnt",
 				"isRelativeToParent": true
+			},
+			{
+				"assetBundle": "planets/assetbundle/hearthians",
+				"path": "Assets/Prefabs/Signal_Nomai.prefab",
+				"parentPath": "Sector_TH/Nomai_ANIM_SkyWatching_Idle",
+				"isRelativeToParent": true,
+				"rename": "Signal_Nomai",
+				"position": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				}
+			},
+			{
+				"assetBundle": "planets/assetbundle/hearthians",
+				"path": "Assets/Prefabs/Signal_Prisoner.prefab",
+				"parentPath": "Sector_TH/GhostBird",
+				"isRelativeToParent": true,
+				"rename": "Signal_Prisoner",
+				"position": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				}
 			}
 		],
 		"dialogue": [
@@ -711,44 +739,6 @@
 					}
 				]
 			}
-		],
-		"signals": [
-			{
-				"audio": "planets/Content/solanum.ogg",
-				"detectionRadius": 0,
-				"frequency": "Quantum Consciousness",
-				"identificationRadius": 0,
-				"name": "Solanum",
-				"onlyAudibleToScope": false,
-				"position": {
-					"x": 0,
-					"y": 0,
-					"z": -4
-				},
-				"sourceRadius": 2,
-				"parentPath": "Sector_TH/Nomai_ANIM_SkyWatching_Idle",
-				"isRelativeToParent": true
-			},
-			{
-				"audio": "planets/Content/prisoner.ogg",
-				"detectionRadius": 10,
-				"frequency": "Unidentified",
-				"identificationRadius": 1,
-				"name": "Prisoner",
-				"onlyAudibleToScope": false,				
-				"position": {
-					"x": 0,
-					"y": 0,
-					"z": -5
-				},
-				"sourceRadius": 3,
-				"parentPath": "Sector_TH/GhostBird",
-				"isRelativeToParent": true
-			}
 		]
-	},
-	"Atmosphere": {
-		"hasSnow": true,
-		"size": 300
 	}
 }

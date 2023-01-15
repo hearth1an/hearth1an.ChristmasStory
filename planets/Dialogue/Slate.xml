@@ -8,7 +8,13 @@
 			<Page>(SLATE_START_1) Hey-hey! There’s our pilot!</Page>			
 		</Dialogue>
 		<DialogueOptionsList>
+		    <DialogueOption>
+			    <RequiredPersistentCondition>ALL_TRAVELLERS_DONE</RequiredPersistentCondition>
+				<Text>(SLATE_START_31) All travellers are here!</Text>
+				<DialogueTarget>100</DialogueTarget>
+		    </DialogueOption>	
 			<DialogueOption>
+			
 			    <CancelledPersistentCondition>SLATE_FIRST_LOOP_DONE</CancelledPersistentCondition>
 				<CancelledCondition>SLATE_TOLD_PLAN</CancelledCondition>				
 				<Text>(SLATE_START_3) Yes! I'm ready for my first Voyage.</Text>
@@ -16,13 +22,14 @@
 				<ConditionToSet>SLATE_START_TRAVELLERS_DONE</ConditionToSet>
 			</DialogueOption>
 			<DialogueOption>
+			    <CancelledPersistentCondition>ALL_TRAVELLERS_DONE</CancelledPersistentCondition>
 				<RequiredCondition>LOOP_COUNT_GOE_2</RequiredCondition>
 				<Text>(SLATE_START_21) Could you repeat, what your plan is?</Text>
 				<DialogueTarget>7.2</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
 				<CancelledCondition>SLATE_TOLD_PLAN</CancelledCondition>
-				<CancelledPersistentCondition></CancelledPersistentCondition>
+				<CancelledPersistentCondition>ALL_TRAVELLERS_DONE</CancelledPersistentCondition>
 				<Text>(SLATE_START_4) Is it winter here or something?</Text>
 				<DialogueTarget>3</DialogueTarget>			
 		</DialogueOption>
@@ -220,13 +227,13 @@
 		</Dialogue>
 		<DialogueOptionsList>
 		<DialogueOption>
-				<Text>(SLATE_START_26) You know, actually I'll invite someone else.</Text>
+				<Text>(SLATE_START_26) You know, actually I need more time to invite someone else.</Text>
 				<DialogueTarget>11</DialogueTarget>
 				<ConditionToSet>SLATE_TRAVELLERS_DONE_2</ConditionToSet>
 		</DialogueOption>
 		<DialogueOption>
 				<Text>(SLATE_START_26) Yes, let's start.</Text>
-				<DialogueTarget>102</DialogueTarget>
+				<DialogueTarget>103</DialogueTarget>
 		</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>

@@ -232,8 +232,7 @@
 			</DialogueOption>
 			<DialogueOption>
 				<RequiredCondition>HOLDING_CORE</RequiredCondition>
-				<Text>(CHERT_START_35) Here's the nomai warp core. They used it to enable time loop machine.</Text>
-				
+				<Text>(CHERT_START_35) Here's the nomai warp core. They used it to enable time loop machine.</Text>				
 				<CancelledCondition>CHERT_CORE_DONE</CancelledCondition>
 				<DialogueTarget>17</DialogueTarget>
 			</DialogueOption>
@@ -327,6 +326,7 @@
 
 	<DialogueNode>
 		<Name>20</Name>
+		<EntryCondition>CHERT_ALL_DONE</EntryCondition>
 		<SetCondition>CHERT_START_DONE</SetCondition>
 		<Dialogue>
 			<Page>(CHERT_START_46) Okay.. you won. I don't feel like I'm doing something important here so... We can go celebrate Christmas!</Page>

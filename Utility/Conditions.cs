@@ -19,6 +19,7 @@ namespace ChristmasStory.Utility
             CHERT_DLC_ITEM_DONE,
             CHERT_ALL_DONE,
             CHERT_START_DONE,
+            CHERT_PHRASE_TOLD,
 
             // Esker
             ESKER_SHIP_NEAR,
@@ -67,8 +68,7 @@ namespace ChristmasStory.Utility
 
         public enum PERSISTENT
         {
-            CHERT_DONE,
-            CHERT_PHRASE_TOLD,
+            CHERT_DONE,            
             CHERT_PHRASE_KNOWN,
             CHERT_PHRASE_KNOWN_NEXT_LOOP,
 

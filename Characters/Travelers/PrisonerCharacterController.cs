@@ -22,6 +22,7 @@ namespace ChrismasStory.Characters.Travelers
 			treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/GhostBird");
 			originalCharacter = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner/Ghostbird_IP_ANIM");
 			_lantern = SearchUtilities.Find("Village_Lantern");
+
 			var controller = _lantern.GetComponent<DreamLanternController>();
 			controller.enabled = true;
 			controller.SetLit(true);
@@ -31,7 +32,7 @@ namespace ChrismasStory.Characters.Travelers
 			controller.GetComponent<DreamLanternItem>().EnableInteraction(false);
 			Delay.FireOnNextUpdate(() => controller.transform.Find("Spotlight_Lantern").GetComponent<OWLight2>()._intensityScale = 0.2f);
 			var prisonerArtifact = SearchUtilities.Find("Prisoner_Artifact").GetComponent<DreamLanternController>();
-			HeldItemHandler.Instance.ItemDropped.AddListener(OnItemDropped);
+			HeldItemHandler.Instance.ItemDropped.AddListener(OnItemDropped); 
 
 			originalCharacter.SetActive(true);
 
