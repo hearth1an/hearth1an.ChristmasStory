@@ -5,19 +5,19 @@
 		<Name>Start</Name>
 		<EntryCondition>DEFAULT</EntryCondition>
 		<Dialogue>
-			<Page>(GABBRO_START_1) Hey it's you! Congrats on first launch.</Page>
-			<Page>(GABBRO_START_2) I dunno why, but I'm dying repeatedly. Sounds weird, huh?</Page>
+			<Page>GABBRO_START_1</Page>
+			<Page>GABBRO_START_2</Page>
 		</Dialogue>
 
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(GABBRO_START_38) Yes, we already had this conversation.</Text>
+				<Text>GABBRO_START_3</Text>
 				<RequiredPersistentCondition>GABBRO_START_PERSISTENT</RequiredPersistentCondition>
 				<DialogueTarget>2.3</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
 				<CancelledPersistentCondition>GABBRO_START_PERSISTENT</CancelledPersistentCondition>
-				<Text>(GABBRO_START_28) Yeah, me too. We're in a time loop. Just me and you.</Text>
+				<Text>GABBRO_START_4</Text>
 				<DialogueTarget>2</DialogueTarget>
 			</DialogueOption>
 		</DialogueOptionsList>
@@ -27,11 +27,11 @@
 		<Name>2.3</Name>
 		<SetCondition>GABBRO_START_MET</SetCondition>
 		<Dialogue>
-			<Page>(GABBRO_START_39) Oh, yes, I remember. So.. something went wrong, right?</Page>
+			<Page>GABBRO_START_5</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(GABBRO_START_40) Yes. Let's try again.</Text>
+				<Text>GABBRO_START_6</Text>
 				<DialogueTarget>7</DialogueTarget>
 			</DialogueOption>
 		</DialogueOptionsList>
@@ -40,11 +40,11 @@
 	<DialogueNode>
 		<Name>2</Name>
 		<Dialogue>
-			<Page>(GABBRO_START_6) Ummm... makes sense. Hornfels didn't believe me that I'm dying every time.</Page>
+			<Page>GABBRO_START_7</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(GABBRO_START_7) You seem comfortable here. By the way, we are celebrating Christmas in the Village, wanna join?</Text>
+				<Text>GABBRO_START_8</Text>
 				<DialogueTarget>2.1</DialogueTarget>
 			</DialogueOption>
 		</DialogueOptionsList>
@@ -54,15 +54,14 @@
 		<Name>2.1</Name>
 		<SetPersistentCondition>GABBRO_START_PERSISTENT</SetPersistentCondition>
 		<Dialogue>
-			<Page>(GABBRO_START_8) M-m-m... I don't know. I feel bored here to be honest.</Page>
-			<Page>(GABBRO_START_9) All this depressive and rainy stuff, you know.</Page>
-			<Page>(GABBRO_START_10) But on the oher hand... I'm also too bored to fly anywhere. Or getting in your ship.</Page>
-			<Page>(GABBRO_START_11) Let's do what, can you explode your ship so we both can die and iniciate first loop? I'll be in the ship on loop start and will fly to Timber Heart.</Page>
-
+			<Page>GABBRO_START_9</Page>
+			<Page>GABBRO_START_10</Page>
+			<Page>GABBRO_START_11</Page>
+			<Page>GABBRO_START_12</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(GABBRO_START_13) I've never realized you're such lazy person before.</Text>
+				<Text>GABBRO_START_13</Text>
 				<DialogueTarget>2.2</DialogueTarget>
 			</DialogueOption>
 		</DialogueOptionsList>
@@ -72,7 +71,7 @@
 		<Name>2.2</Name>
 		<SetCondition>GABBRO_START_MET</SetCondition>
 		<Dialogue>
-			<Page>(GABBRO_START_14) Haha yep! That's me.</Page>
+			<Page>GABBRO_START_14</Page>
 		</Dialogue>
 	</DialogueNode>
 
@@ -81,36 +80,33 @@
 		<Name>7</Name>
 		<EntryCondition>GABBRO_START_MET</EntryCondition>
 		<Dialogue>
-			<Page>(GABBRO_START_15) So... I'm wating for ship explosion so I we can die and start new loop.</Page>
+			<Page>GABBRO_START_15</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
 				<RequiredCondition>SHIP_DESTROYED</RequiredCondition>
-				<Text>(GABBRO_START_40) Um. The thing is... my ship is destroyed already.</Text>
+				<Text>GABBRO_START_16</Text>
 				<DialogueTarget>9.1</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
 				<CancelledCondition>SHIP_DESTROYED</CancelledCondition>
-				<Text>(GABBRO_START_16) Sure. I'm working on it.</Text>
+				<Text>GABBRO_START_17</Text>
 				<DialogueTarget>9</DialogueTarget>
 			</DialogueOption>
 
 		</DialogueOptionsList>
 	</DialogueNode>
-
 	<DialogueNode>
 		<Name>9.1</Name>
 		<Dialogue>
-			<Page>(GABBRO_START_41) No luck then. Try to not screw this up next loop!</Page>
+			<Page>GABBRO_START_18</Page>
 			<ConditionToSet>GABBRO_START_FAILED</ConditionToSet>
 		</Dialogue>
 	</DialogueNode>
-
 	<DialogueNode>
 		<Name>9</Name>
 		<Dialogue>
-			<Page>(GABBRO_START_11) Gotcha! I will be here.</Page>
+			<Page>GABBRO_START_19</Page>
 		</Dialogue>
 	</DialogueNode>
-
 </DialogueTree>

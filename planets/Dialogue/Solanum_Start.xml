@@ -5,16 +5,16 @@
 		<Name>Start</Name>
 		<EntryCondition>DEFAULT</EntryCondition>
 		<Dialogue>
-			<Page>(SOLANUM_START_1) ...</Page>
+			<Page>SOLANUM_START_1</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
 				<RequiredCondition>HOLDING_INVITE_STONE</RequiredCondition>
-				<Text>(SOLANUM_START_3) Hey! I got something for you.</Text>
+				<Text>SOLANUM_START_2</Text>
 				<ConditionToSet>SOLANUM_START</ConditionToSet>
 			</DialogueOption>
 			<DialogueOption>
-				<Text>(SOLANUM_START_1) ...</Text>
+				<Text>SOLANUM_START_1</Text>
 			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
@@ -23,7 +23,7 @@
 		<Name>3</Name>
 		<EntryCondition>SOLANUM_START_DONE</EntryCondition>
 		<Dialogue>
-			<Page>(SOLANUM_START_1) ...</Page>
+			<Page>SOLANUM_START_1</Page>
 		</Dialogue>
 	</DialogueNode>
 </DialogueTree>

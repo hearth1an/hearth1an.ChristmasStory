@@ -23,6 +23,7 @@ namespace ChrismasStory.Utilities.ModAPIs
 
         GameObject SpawnObject(GameObject planet, Sector sector, string propToCopyPath, Vector3 position, Vector3 eulerAngles, float scale, bool alignWithNormal);
 
+        
 
     }
     public interface IMenuAPI

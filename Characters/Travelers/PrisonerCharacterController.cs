@@ -30,13 +30,19 @@ namespace ChrismasStory.Characters.Travelers
 			controller._flameStrength = 100f;
 			controller.UpdateVisuals();
 			controller.GetComponent<DreamLanternItem>().EnableInteraction(false);
-			Delay.FireOnNextUpdate(() => controller.transform.Find("Spotlight_Lantern").GetComponent<OWLight2>()._intensityScale = 0.2f);
+			
+			//Delay.FireOnNextUpdate(() => controller.transform.Find("Spotlight_Lantern").GetComponent<OWLight2>()._intensityScale = 0.2f);
 			var prisonerArtifact = SearchUtilities.Find("Prisoner_Artifact").GetComponent<DreamLanternController>();
-			HeldItemHandler.Instance.ItemDropped.AddListener(OnItemDropped); 
+			HeldItemHandler.Instance.ItemDropped.AddListener(OnItemDropped);
 
-			originalCharacter.SetActive(true);
+			ChristmasStory.Instance.ModHelper.Events.Unity.FireOnNextUpdate(() =>
+			{
+				originalCharacter.SetActive(true);
+			});
+			
 
 			base.Start();
+
 		}
 		protected override void Dialogue_OnStartConversation()
 		{
@@ -46,6 +52,7 @@ namespace ChrismasStory.Characters.Travelers
 		{
 			if (Conditions.Get(Conditions.CONDITION.PRISONER_START))
 			{
+
 				PrisonerAnimationController.Instance.PlayLightsUp();
 
 				Conditions.Set(Conditions.CONDITION.PRISONER_START, false);

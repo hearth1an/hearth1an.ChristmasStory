@@ -646,6 +646,7 @@
 					"z": 0
 				},
 				"xmlFile": "planets/Dialogue/Esker_Tree.xml",
+				"pathToAnimController": "Sector_TH/Villager_HEA_Esker_ANIM_Rocking",
 				"lookAtRadius": 3,
 				"radius": 1
 			},
@@ -703,7 +704,9 @@
 					"z": 186.9598
 				},
 				"radius": 1,
-				"range": 2
+				"range": 2,
+				"rename": "Slate_Conversation",
+				"blockAfterPersistentCondition": "SLATE_START_DONE"
 			},
 			{
 				"parentPath": "Sector_TH/Slate_Village_Final",

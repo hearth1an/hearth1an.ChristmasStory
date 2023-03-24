@@ -5,11 +5,11 @@
 		<Name>Start</Name>
 		<EntryCondition>DEFAULT</EntryCondition>
 		<Dialogue>
-			<Page>(FELDSPAR_TREE_1) Merry Christmas! I was missing the Village to be honest.</Page>
+			<Page>FELDSPAR_TREE_1</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(FELDSPAR_TREE_2) Glad you here, Feldpar.</Text>
+				<Text>FELDSPAR_TREE_2</Text>
 				<DialogueTarget>2</DialogueTarget>
 			</DialogueOption>
 		</DialogueOptionsList>
@@ -18,7 +18,7 @@
 	<DialogueNode>
 		<Name>2</Name>
 		<Dialogue>
-			<Page>(FELDSPAR_TREE_4) Yeah. Me too. Space can wait for sure.</Page>
+			<Page>FELDSPAR_TREE_4</Page>
 		</Dialogue>
 	</DialogueNode>
 
@@ -27,19 +27,19 @@
 		<Name>Start_PlayerNPC</Name>
 		<EntryCondition>PLAYERNPC_DONE</EntryCondition>
 		<Dialogue>
-			<Page>(FELDSPAR_TREE_5) Who's that? That guy looks EXACTLY like you.</Page>
+			<Page>FELDSPAR_TREE_5</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(FELDSPAR_TREE_6) Well, this is literally me. From past.</Text>
+				<Text>FELDSPAR_TREE_6</Text>
 				<DialogueTarget>3</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
-				<Text>(FELDSPAR_TREE_7) It's my brother.</Text>
+				<Text>FELDSPAR_TREE_7</Text>
 				<DialogueTarget>4</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
-				<Text>(FELDSPAR_TREE_8) Ummm I don't know actually.</Text>
+				<Text>FELDSPAR_TREE_8</Text>
 				<DialogueTarget>5</DialogueTarget>
 			</DialogueOption>
 		</DialogueOptionsList>
@@ -48,19 +48,19 @@
 	<DialogueNode>
 		<Name>3</Name>
 		<Dialogue>
-			<Page>(FELDSPAR_TREE_9) Ha-ha-ha. Very funny. VERY.</Page>
+			<Page>FELDSPAR_TREE_9</Page>
 		</Dialogue>
 	</DialogueNode>
 	<DialogueNode>
 		<Name>4</Name>
 		<Dialogue>
-			<Page>(FELDSPAR_TREE_10) Really? I never saw him. Seems like time works different in Dark Bramble if I missed that.</Page>
+			<Page>FELDSPAR_TREE_10</Page>
 		</Dialogue>
 	</DialogueNode>
 	<DialogueNode>
 		<Name>5</Name>
 		<Dialogue>
-			<Page>(FELDSPAR_TREE_11) Ok! But it's weird.</Page>
+			<Page>FELDSPAR_TREE_11</Page>
 		</Dialogue>
 	</DialogueNode>
 

@@ -5,20 +5,20 @@
 		<Name>Start</Name>
 		<EntryCondition>DEFAULT</EntryCondition>
 		<Dialogue>
-			<Page>(PORPHY_TREE_1) Heyo, hatchling! </Page>
-			<Page>(PORPHY_TREE_1) How do you feel before the launch?</Page>
+			<Page>PORPHY_TREE_1</Page>
+			<Page>PORPHY_TREE_2</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>			    
-				<Text>(PORPHY_TREE_2) Hey! I'm good.</Text>
+				<Text>PORPHY_TREE_3</Text>
 				<DialogueTarget>2</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
-				<Text>(PORPHY_TREE_3) What is this barrel in the center?</Text>
+				<Text>PORPHY_TREE_4</Text>
 				<DialogueTarget>3</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
-				<Text>(PORPHY_TREE_3) Are you happy with snow?</Text>
+				<Text>PORPHY_TREE_5</Text>
 				<DialogueTarget>3.1</DialogueTarget>
 			</DialogueOption>
 		</DialogueOptionsList>
@@ -27,12 +27,12 @@
 	<DialogueNode>
 		<Name>3.1</Name>		
 		<Dialogue>
-			<Page>(PORPHY_TREE_4) Well, I personally prefer the previous climat.</Page>
-			<Page>(PORPHY_TREE_4) But honestly such temperature is better for wine in barrels.</Page>			
+			<Page>PORPHY_TREE_6</Page>
+			<Page>PORPHY_TREE_7</Page>			
 		</Dialogue>		
 		<DialogueOptionsList>			
 			<DialogueOption>
-				<Text>(PORPHY_TREE_7) Okay, got it. I gotta go.</Text>
+				<Text>PORPHY_TREE_8</Text>
 				<ConditionToSet>START_2</ConditionToSet>
 				<DialogueTarget>END</DialogueTarget>
 			</DialogueOption>
@@ -42,11 +42,11 @@
 	<DialogueNode>
 		<Name>2</Name>		
 		<Dialogue>
-			<Page>(PORPHY_TREE_4) Glad to hear it! You know how importaint our space program is, we believe in you, Hornfels especially.</Page>
+			<Page>PORPHY_TREE_9</Page>
 		</Dialogue>		
 		<DialogueOptionsList>			
 			<DialogueOption>
-				<Text>(PORPHY_TREE_19) Sure! What is this barrel in the center by the way?</Text>
+				<Text>PORPHY_TREE_10</Text>
 				<DialogueTarget>3</DialogueTarget>
 			</DialogueOption>
 		</DialogueOptionsList>
@@ -55,13 +55,13 @@
 	<DialogueNode>
 		<Name>3</Name>		
 		<Dialogue>
-			<Page>(PORPHY_TREE_5) Oh, yes, it's the biggest one from my colletction. You like it?</Page>
-			<Page>(PORPHY_TREE_6) Seems like this geyser is not functiouning and we had to block it's hole for safety. We'll see if wine in it will have different taste.</Page>
-			<Page>(PORPHY_TREE_9) Anyway, I feel like with this tree and flares it was totally worth it.</Page>		
+			<Page>PORPHY_TREE_11</Page>
+			<Page>PORPHY_TREE_12</Page>
+			<Page>PORPHY_TREE_13</Page>		
 		</Dialogue>		
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(PORPHY_TREE_7) Okay, got it. I gotta go.</Text>
+				<Text>PORPHY_TREE_8</Text>
 				<ConditionToSet>START_2</ConditionToSet>
 				<DialogueTarget>END</DialogueTarget>
 			</DialogueOption>
@@ -71,17 +71,17 @@
 	<DialogueNode>
 		<Name>END</Name>
 		<Dialogue>
-			<Page>(PORPHY_TREE_10) Bye!</Page>
-			<Page>(PORPHY_TREE_18) And good luck!</Page>		
+			<Page>PORPHY_TREE_15</Page>
+			<Page>PORPHY_TREE_16</Page>		
 		</Dialogue>		
 	</DialogueNode>
 	<DialogueNode>
 
 		<Name>END2</Name>
 		<Dialogue>
-			<Page>(PORPHY_TREE_10) Bye!</Page>
-			<Page>(PORPHY_TREE_18) And good luck!</Page>
-			<Page>(PORPHY_TREE_19) Again.</Page>
+			<Page>PORPHY_TREE_15</Page>
+			<Page>PORPHY_TREE_16</Page>
+			<Page>PORPHY_TREE_17</Page>
 		</Dialogue>		
 	</DialogueNode>
 	
@@ -90,20 +90,20 @@
 		<Name>Start2</Name>
 		<EntryCondition>START_2</EntryCondition>
 		<Dialogue>
-			<Page>(PORPHY_TREE_15) It's you again!</Page>
-			<Page>(PORPHY_TREE_16) What I can help you with?</Page>
+			<Page>PORPHY_TREE_18</Page>
+			<Page>PORPHY_TREE_19</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>			    
-				<Text>(PORPHY_TREE_17) Nothing actually.</Text>
+				<Text>PORPHY_TREE_20</Text>
 				<DialogueTarget>END2</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
-				<Text>(PORPHY_TREE_3) Are you happy with snow?</Text>
+				<Text>PORPHY_TREE_21</Text>
 				<DialogueTarget>3.1</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
-				<Text>(PORPHY_TREE_17)Remind me, what is this barrel in the center?</Text>
+				<Text>PORPHY_TREE_22</Text>
 			<DialogueTarget>3</DialogueTarget>
 			</DialogueOption>
 		</DialogueOptionsList>

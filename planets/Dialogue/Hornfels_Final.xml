@@ -5,17 +5,17 @@
 		<Name>Start</Name>		
 		<EntryCondition>DEFAULT</EntryCondition>		
 		<Dialogue>
-			<Page>(HORNFELS_FINAL_1) What a beautiful tree! And everyone is here!</Page>
-			<Page>(HORNFELS_FINAL_2) Thank you for such surprise, thank you a lot.</Page>			
+			<Page>HORNFELS_FINAL_1</Page>
+			<Page>HORNFELS_FINAL_2</Page>			
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>			   
-				<Text>(HORNFELS_FINAL_3) I glad all friends are here.</Text>
+				<Text>HORNFELS_FINAL_3</Text>
 				<DialogueTarget>2</DialogueTarget>
 				<ConditionToSet>HORNFELS_FINAL_DONE</ConditionToSet>
 			</DialogueOption>
 			<DialogueOption>				
-				<Text>(HORNFELS_START_4) So what's next?</Text>
+				<Text>HORNFELS_FINAL_4</Text>
 				<DialogueTarget>3</DialogueTarget>
 				<ConditionToSet>HORNFELS_FINAL_DONE</ConditionToSet>
 			</DialogueOption>			
@@ -25,11 +25,11 @@
 	<DialogueNode>
 		<Name>2</Name>
 		<Dialogue>
-			<Page>(HORNFELS_FINAL_5) Yes, I don't remember the last time we had such meeting. All together.</Page>						
+			<Page>HORNFELS_FINAL_5</Page>						
 		</Dialogue>
 		<DialogueOptionsList>			
 			<DialogueOption>				
-				<Text>(HORNFELS_START_4) So what's next?</Text>
+				<Text>HORNFELS_FINAL_6</Text>
 				<DialogueTarget>3</DialogueTarget>
 				<ConditionToSet>HORNFELS_FINAL_DONE</ConditionToSet>
 			</DialogueOption>		
@@ -40,13 +40,13 @@
 		<Name>3</Name>		
 		<SetPersistentCondition>HORNFELS_FISH_TOLD</SetPersistentCondition>
 		<Dialogue>
-			<Page>(HORNFELS_FINAL_6) Lights are very nice, but I think we are missing the main detail on the top.</Page>
-			<Page>(HORNFELS_FINAL_7) We need something bright and shiny to put in on the top of the tree.</Page>
-			<Page>(HORNFELS_FINAL_8) Can you bring something like that from observatory?</Page>						
+			<Page>HORNFELS_FINAL_7</Page>
+			<Page>HORNFELS_FINAL_8</Page>
+			<Page>HORNFELS_FINAL_9</Page>						
 		</Dialogue>
 		<DialogueOptionsList>			
 			<DialogueOption>				
-				<Text>(HORNFELS_START_9) Sure, on my way.</Text>
+				<Text>HORNFELS_FINAL_10</Text>
 				<DialogueTarget>END</DialogueTarget>				
 			</DialogueOption>		
 		</DialogueOptionsList>
@@ -55,11 +55,11 @@
 	<DialogueNode>
 		<Name>3.1</Name>
 		<Dialogue>			
-			<Page>(HORNFELS_FINAL_7) We need something bright and shiny to put in on the top of the tree. Bring something like that from observatory.</Page>									
+			<Page>HORNFELS_FINAL_11</Page>									
 		</Dialogue>
 		<DialogueOptionsList>			
 			<DialogueOption>				
-				<Text>(HORNFELS_START_9) Sure, on my way.</Text>
+				<Text>HORNFELS_FINAL_10</Text>
 				<DialogueTarget>END2</DialogueTarget>				
 			</DialogueOption>		
 		</DialogueOptionsList>
@@ -68,22 +68,22 @@
 	<DialogueNode>
 		<Name>END</Name>
 		<Dialogue>
-			<Page>(HORNFELS_FINAL_8) Thanks.</Page>						
+			<Page>HORNFELS_FINAL_13</Page>						
 		</Dialogue>		
 	</DialogueNode>
 
 	<DialogueNode>
 		<Name>END2</Name>
 		<Dialogue>			
-			<Page>(HORNFELS_FINAL_8) I'll be here if needed.</Page>						
+			<Page>HORNFELS_FINAL_14</Page>						
 		</Dialogue>		
 	</DialogueNode>
 
 	<DialogueNode>
 		<Name>END3</Name>
 		<Dialogue>
-		    <Page>(HORNFELS_FINAL_8) It should be something in the observatory.</Page>			
-			<Page>(HORNFELS_FINAL_8) I'll be here if needed.</Page>						
+		    <Page>HORNFELS_FINAL_15</Page>			
+			<Page>HORNFELS_FINAL_14</Page>						
 		</Dialogue>		
 	</DialogueNode>
 
@@ -91,20 +91,20 @@
 		<Name>4</Name>		
 		<EntryCondition>HORNFELS_FINAL_DONE</EntryCondition>		
 		<Dialogue>			
-			<Page>(HORNFELS_FINAL_9) So, did you found something?</Page>				
+			<Page>HORNFELS_FINAL_17</Page>				
 		</Dialogue>
 		<DialogueOptionsList>
 		    <DialogueOption>
 				<RequiredPersistentCondition>ERNESTO_DONE</RequiredPersistentCondition>	    	
-				<Text>(HORNFELS_START_4) Yes, take a look at the top!</Text>
+				<Text>HORNFELS_FINAL_18</Text>
 				<DialogueTarget>5</DialogueTarget>				
 			</DialogueOption>
 			<DialogueOption>			    	
-				<Text>(HORNFELS_START_4) What exactly we need?</Text>
+				<Text>HORNFELS_FINAL_19</Text>
 				<DialogueTarget>3.1</DialogueTarget>				
 			</DialogueOption>
 			<DialogueOption>				
-				<Text>(HORNFELS_FINAL_7) Nope, not yet.</Text>
+				<Text>HORNFELS_FINAL_20</Text>
 				<DialogueTarget>END3</DialogueTarget>
 			</DialogueOption>
 		</DialogueOptionsList>
@@ -113,16 +113,16 @@
 	<DialogueNode>
 		<Name>5</Name>
 		<Dialogue>			
-			<Page>(HORNFELS_FINAL_9) Woah! That's exactly what we needed.</Page>
-			<Page>(HORNFELS_FINAL_9) So are we ready to celebrate?</Page>				
+			<Page>HORNFELS_FINAL_21</Page>
+			<Page>HORNFELS_FINAL_22</Page>				
 		</Dialogue>
 		<DialogueOptionsList>
 		    <DialogueOption>				 	
-				<Text>(HORNFELS_START_4) Yes, I am ready.</Text>
+				<Text>HORNFELS_FINAL_23</Text>
 				<DialogueTarget>6</DialogueTarget>							
 			</DialogueOption>
-			<DialogueOption>			    	
-				<Text>(HORNFELS_START_4) No, I  give me a minute.</Text>
+			<DialogueOption>
+				<Text>HORNFELS_FINAL_24</Text>
 				<DialogueTarget>END2</DialogueTarget>			
 			</DialogueOption>			
 		</DialogueOptionsList>
@@ -132,8 +132,8 @@
 		<Name>6</Name>
 		<SetCondition>START_END_EVENT</SetCondition>
 		<Dialogue>			
-			<Page>(HORNFELS_FINAL_9) Alright. Merry Crhristmas!</Page>
-			<Page>(HORNFELS_FINAL_9) Thank you for everything you done, friend.</Page>				
+			<Page>HORNFELS_FINAL_25</Page>
+			<Page>HORNFELS_FINAL_26</Page>				
 		</Dialogue>		
 	</DialogueNode>
 </DialogueTree>

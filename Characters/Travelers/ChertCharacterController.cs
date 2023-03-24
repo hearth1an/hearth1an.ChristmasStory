@@ -66,7 +66,9 @@ namespace ChrismasStory.Characters.Travelers
             Conditions.Set(Conditions.CONDITION.HOLDING_DLC_ITEM, holdingStrangerArtifact);
             Conditions.Set(Conditions.CONDITION.HOLDING_JUNK_ITEM, holdingJunkItem);
 
-        	Delay.FireOnNextUpdate(ValidateAllDone);			
+			ValidateAllDone();
+
+			// Delay.FireOnNextUpdate(ValidateAllDone);			
 		}
 
 		private void ValidateAllDone()

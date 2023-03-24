@@ -5,32 +5,32 @@
 		<Name>Start</Name>		
 		<EntryCondition>DEFAULT</EntryCondition>		
 		<Dialogue>
-			<Page>(SLATE_START_1) Hey-hey! There’s our pilot!</Page>			
+			<Page>SLATE_START_1</Page>			
 		</Dialogue>
 		<DialogueOptionsList>
 		    <DialogueOption>
 			    <RequiredPersistentCondition>ALL_TRAVELLERS_DONE</RequiredPersistentCondition>
-				<Text>(SLATE_START_31) All travellers are here!</Text>
+				<Text>SLATE_START_2</Text>
 				<DialogueTarget>100</DialogueTarget>
 		    </DialogueOption>	
 			<DialogueOption>
 			
 			    <CancelledPersistentCondition>SLATE_FIRST_LOOP_DONE</CancelledPersistentCondition>
 				<CancelledCondition>SLATE_TOLD_PLAN</CancelledCondition>				
-				<Text>(SLATE_START_3) Yes! I'm ready for my first Voyage.</Text>
+				<Text>SLATE_START_3</Text>
 				<DialogueTarget>2</DialogueTarget>
 				<ConditionToSet>SLATE_START_TRAVELLERS_DONE</ConditionToSet>
 			</DialogueOption>
 			<DialogueOption>
 			    <CancelledPersistentCondition>ALL_TRAVELLERS_DONE</CancelledPersistentCondition>
 				<RequiredCondition>LOOP_COUNT_GOE_2</RequiredCondition>
-				<Text>(SLATE_START_21) Could you repeat, what your plan is?</Text>
+				<Text>SLATE_START_4</Text>
 				<DialogueTarget>7.2</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
 				<CancelledCondition>SLATE_TOLD_PLAN</CancelledCondition>
 				<CancelledPersistentCondition>ALL_TRAVELLERS_DONE</CancelledPersistentCondition>
-				<Text>(SLATE_START_4) Is it winter here or something?</Text>
+				<Text>SLATE_START_5</Text>
 				<DialogueTarget>3</DialogueTarget>			
 		</DialogueOption>
 		</DialogueOptionsList>
@@ -39,16 +39,16 @@
 	<DialogueNode>
 		<Name>2</Name>
 		<Dialogue>
-			<Page>(SLATE_START_7) Alright, you’ll need to get the <![CDATA[<color=orange>launch codes from Hornfels at the observatory</color>]]>, but listen me out: as you can see, winter came to our Village, that means we are going to celebrate Christmas!</Page>
-			<Page>(SLATE_START_8) We had to remove inactive geysers completely to have some space for such glorious tree and our celebration plans. We even found strange nomai wires there.</Page>
+			<Page>SLATE_START_6</Page>
+			<Page>SLATE_START_7</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(SLATE_START_9) Celebration plan?</Text>				
+				<Text>SLATE_START_8</Text>				
 				<DialogueTarget>7</DialogueTarget>				
 			</DialogueOption>
 			<DialogueOption>
-				<Text>(SLATE_START_10) But not all geysers were inactive, aren't they?</Text>
+				<Text>SLATE_START_9</Text>
 				<DialogueTarget>8</DialogueTarget>				
 			</DialogueOption>
 		</DialogueOptionsList>
@@ -57,19 +57,19 @@
 	<DialogueNode>
 		<Name>3</Name>
 		<Dialogue>
-			<Page>(SLATE_START_27) Yes, kind of. It's snowin' a bit. Marl chopped this beautiful tree, I made the lights but...</Page>
-			<Page>(SLATE_START_28) ...sometimes the blue ones are shining too bright like it's ovedriven with energy. Weird.</Page>
-			<Page>(SLATE_START_29) Anyway, seems like everyone is happy with winter, go ask them before liftoff.</Page>
+			<Page>SLATE_START_10</Page>
+			<Page>SLATE_START_11</Page>
+			<Page>SLATE_START_12</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
 			    <CancelledPersistentCondition>SLATE_FIRST_LOOP_DONE</CancelledPersistentCondition>
-				<Text>(SLATE_START_30) Sure. Can't wait to begin space adventure!</Text>
+				<Text>SLATE_START_13</Text>
 				<DialogueTarget>2</DialogueTarget>				
 			</DialogueOption>
 			<DialogueOption>
 				<RequiredPersistentCondition>SLATE_FIRST_LOOP_DONE</RequiredPersistentCondition>
-				<Text>(SLATE_START_35) Okay, thanks for reminding.</Text>
+				<Text>SLATE_START_14</Text>
 				<DialogueTarget>11.1</DialogueTarget>
 			</DialogueOption>		
 		</DialogueOptionsList>
@@ -78,11 +78,11 @@
 	<DialogueNode>
 		<Name>8</Name>
 		<Dialogue>
-			<Page>(SLATE_START_11) Umm I'm not sure, you can ask Porphy about this.</Page>			
+			<Page>SLATE_START_15</Page>			
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(SLATE_START_9) So, what's the celebration plan?</Text>
+				<Text>SLATE_START_16</Text>
 				<DialogueTarget>7</DialogueTarget>				
 			</DialogueOption>			
 		</DialogueOptionsList>
@@ -91,15 +91,15 @@
 <DialogueNode>
 		<Name>7</Name>
 		<Dialogue>
-			<Page>(SLATE_START_12) About celebration. We need to take all trevellers back at home. I actually asked Esker few times to help, but he's keep forgetting it every time like we never had this conversation!</Page>
-			<Page>(SLATE_START_13) Since it's your launch day and there's no other pilots here, you'll need to take all travellers back. I'd say it will be your mission.</Page>
-			<Page>(SLATE_START_14) And please don't tell anything to Hornfels, let's surprise them. Let me know when everyone will be here so we can tell them, ok?</Page>
+			<Page>SLATE_START_17</Page>
+			<Page>SLATE_START_18</Page>
+			<Page>SLATE_START_19</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 		<DialogueOption>
 		        <CancelledPersistentCondition>SLATE_FIRST_LOOP_DONE</CancelledPersistentCondition>
 			    <ConditionToSet>SLATE_TOLD_PLAN</ConditionToSet>
-				<Text>(SLATE_START_15) Great plan, can't wait to get em all back!</Text>
+				<Text>SLATE_START_20</Text>
 				<DialogueTarget>9</DialogueTarget>
 		</DialogueOption>	
 		</DialogueOptionsList>
@@ -108,19 +108,19 @@
 	<DialogueNode>
 		<Name>7.2</Name>
 		<Dialogue>
-			<Page>(SLATE_START_100) I want you to take all trevellers back at home. I mean, you need to find them, tell them about celebration and bring them here.</Page>			
-			<Page>(SLATE_START_101) Hornfels shouldn't know about this. We will start celebrate whenever all be here.</Page>
+			<Page>SLATE_START_21</Page>			
+			<Page>SLATE_START_22</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
 				<CancelledPersistentCondition>SLATE_FIRST_LOOP_DONE</CancelledPersistentCondition>
 				<ConditionToSet>SLATE_TOLD_PLAN</ConditionToSet>
-				<Text>(SLATE_START_15) Great plan, can't wait to get em all back!</Text>
+				<Text>SLATE_START_20</Text>
 				<DialogueTarget>9</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
 				<RequiredPersistentCondition>SLATE_FIRST_LOOP_DONE</RequiredPersistentCondition>
-				<Text>(SLATE_START_35) Okay, thanks for reminding.</Text>
+				<Text>SLATE_START_24</Text>
 				<DialogueTarget>11.1</DialogueTarget>
 			</DialogueOption>
 		</DialogueOptionsList>
@@ -129,18 +129,18 @@
 	<DialogueNode>
 		<Name>9</Name>
 		<Dialogue>
-			<Page>(SLATE_START_17) Yes, me too! Listen, it's too quiet here. We need their music or Christmas magic will never happen. So...</Page>
-			<Page>(SLATE_START_18) Any questions left?</Page>			
+			<Page>SLATE_START_25</Page>
+			<Page>SLATE_START_26</Page>			
 		</Dialogue>
 		<DialogueOptionsList>
 		<DialogueOption>
 			    <CancelledPersistentCondition>SLATE_TOLD_SCOUT</CancelledPersistentCondition>
-				<Text>(SLATE_START_16) Is it a little scout?</Text>
+				<Text>SLATE_START_27</Text>
 			    <ConditionToSet>SLATE_START_VILLAGE</ConditionToSet>
 				<DialogueTarget>10</DialogueTarget>
 		</DialogueOption>		
 		<DialogueOption>
-				<Text>(SLATE_START_19) Nope, everyhing is clear to me.</Text>
+				<Text>SLATE_START_28</Text>
 				<DialogueTarget>11</DialogueTarget>
 				<ConditionToSet>SLATE_START_VILLAGE</ConditionToSet>
 		</DialogueOption>			
@@ -152,25 +152,25 @@
 		<EntryCondition>SLATE_START_VILLAGE</EntryCondition>
 		<SetPersistentCondition>SLATE_FIRST_LOOP_DONE</SetPersistentCondition>
 		<Dialogue>			
-			<Page>(SLATE_START_18) So.. any questions?</Page>			
+			<Page>SLATE_START_26</Page>			
 		</Dialogue>
 		<DialogueOptionsList>
 		<DialogueOption>
 			    <RequiredPersistentCondition>ALL_TRAVELLERS_DONE</RequiredPersistentCondition>
-				<Text>(SLATE_START_31) All travellers are here!</Text>
+				<Text>SLATE_START_2</Text>
 				<DialogueTarget>100</DialogueTarget>
 		</DialogueOption>	
 		<DialogueOption>
 			    <CancelledPersistentCondition>SLATE_TOLD_SCOUT</CancelledPersistentCondition>
-				<Text>(SLATE_START_16) Is it a little scout?</Text>
+				<Text>SLATE_START_27</Text>
 				<DialogueTarget>10</DialogueTarget>
 		</DialogueOption>
 		<DialogueOption>
-				<Text>(SLATE_START_21) Could you repeat, what your plan is?</Text>
+				<Text>SLATE_START_4</Text>
 				<DialogueTarget>7.2</DialogueTarget>
 		</DialogueOption>	
 		<DialogueOption>
-				<Text>(SLATE_START_19) Nope, everyhing is clear to me.</Text>
+				<Text>SLATE_START_28</Text>
 				<DialogueTarget>11</DialogueTarget>
 		</DialogueOption>		
 					
@@ -180,14 +180,14 @@
 	<DialogueNode>
 		<Name>11</Name>
 		<Dialogue>
-			<Page>(SLATE_START_20) Good. I'll be here if needed.</Page>
+			<Page>SLATE_START_31</Page>
 		</Dialogue>
 	</DialogueNode>
 
 	<DialogueNode>
 		<Name>11.1</Name>
 		<Dialogue>
-			<Page>(SLATE_START_36) Sure. I'll be here if needed!</Page>
+			<Page>SLATE_START_32</Page>
 		</Dialogue>
 	</DialogueNode>
 
@@ -196,11 +196,11 @@
 		<Name>10</Name>
 		<SetPersistentCondition>SLATE_TOLD_SCOUT</SetPersistentCondition>
 		<Dialogue>			
-			<Page>(SLATE_START_22) Yeah, I made an upgrade for your scout. Now it has little nomai gravity crystal on it! You can launch it to the wall and literally stay horisontally. It's neat, you should give it a try.</Page>
+			<Page>SLATE_START_33</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 		<DialogueOption>
-				<Text>(SLATE_START_24) Sounds good.</Text>
+				<Text>SLATE_START_34</Text>
 		<DialogueTarget>13</DialogueTarget>
 		</DialogueOption>		
 		</DialogueOptionsList>
@@ -209,11 +209,11 @@
 	<DialogueNode>
 		<Name>13</Name>
 		<Dialogue>
-			<Page>(SLATE_START_25) Just be careful anyway. You can use it in places where you're not suppose to stand. That makes it more dangerous to fall, keep that in mind.</Page>
+			<Page>SLATE_START_35</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 		<DialogueOption>
-				<Text>(SLATE_START_26) Good point. Thanks.</Text>
+				<Text>SLATE_START_36</Text>
 				<DialogueTarget>12</DialogueTarget>
 		</DialogueOption>	
 		</DialogueOptionsList>
@@ -222,17 +222,20 @@
 	<DialogueNode>
 		<Name>100</Name>		
 		<Dialogue>
-			<Page>(SLATE_START_25) Alright! You did good job, hatchling! I glad all friends are here and music is playing.</Page>
-			<Page>(SLATE_START_25) So, are you we ready to tell Hornfels and Hal? Don't you want to invite someone else?</Page>
+			<Page>SLATE_START_37</Page>
+			<Page>SLATE_START_38</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 		<DialogueOption>
-				<Text>(SLATE_START_26) You know, actually I need more time to invite someone else.</Text>
+		<CancelledPersistentCondition>SOLANUM_DONE</CancelledPersistentCondition>
+		<CancelledPersistentCondition>PRISONER_DONE</CancelledPersistentCondition>
+		<CancelledPersistentCondition>SELF_DONE</CancelledPersistentCondition>
+				<Text>SLATE_START_39</Text>
 				<DialogueTarget>11</DialogueTarget>
 				<ConditionToSet>SLATE_TRAVELLERS_DONE_2</ConditionToSet>
 		</DialogueOption>
 		<DialogueOption>
-				<Text>(SLATE_START_26) Yes, let's start.</Text>
+				<Text>SLATE_START_40</Text>
 				<DialogueTarget>103</DialogueTarget>
 		</DialogueOption>
 		</DialogueOptionsList>
@@ -241,16 +244,16 @@
 	<DialogueNode>
 		<Name>101</Name>
 		<Dialogue>
-			<Page>(SLATE_START_25) I was kidding. All travellers are here already, who else you want to invite?</Page>
-			<Page>(SLATE_START_25) Actually, nevermind. Just tell me whenever we ready to start.</Page>			
+			<Page>SLATE_START_41</Page>
+			<Page>SLATE_START_42</Page>			
 		</Dialogue>
 		<DialogueOptionsList>
 		<DialogueOption>
-				<Text>(SLATE_START_26) Yes, I'll let you know.</Text>
+				<Text>SLATE_START_43</Text>
 				<DialogueTarget>11.1</DialogueTarget>
 		</DialogueOption>
 		<DialogueOption>
-				<Text>(SLATE_START_26) Yes, let's start.</Text>
+				<Text>SLATE_START_44</Text>
 				<DialogueTarget>103</DialogueTarget>
 		</DialogueOption>
 		</DialogueOptionsList>
@@ -260,15 +263,15 @@
 		<Name>102</Name>
 		<EntryCondition>SLATE_TRAVELLERS_DONE_2</EntryCondition>
 		<Dialogue>			
-			<Page>(SLATE_START_25) So, are you we ready to tell Hornfels and Hal? Are you done with other "invites?"</Page>
+			<Page>SLATE_START_45</Page>
 		</Dialogue>
 		<DialogueOptionsList>		
 		<DialogueOption>
-				<Text>(SLATE_START_26) No, not yet. I'll let you know.</Text>
+				<Text>SLATE_START_46</Text>
 				<DialogueTarget>11.1</DialogueTarget>				
 		</DialogueOption>
 		<DialogueOption>
-				<Text>(SLATE_START_26) Yes, let's start.</Text>
+				<Text>SLATE_START_47</Text>
 				<DialogueTarget>103</DialogueTarget>				
 		</DialogueOption>
 		</DialogueOptionsList>
@@ -278,8 +281,8 @@
 		<Name>103</Name>
 		<SetPersistentCondition>SLATE_START_DONE</SetPersistentCondition>
 		<Dialogue>			
-			<Page>(SLATE_START_25) Perfect! I'll go for Hornfels and Hal.</Page>
-			<Page>(SLATE_START_25) Merry Christmas!</Page>
+			<Page>SLATE_START_48</Page>
+			<Page>SLATE_START_49</Page>
 		</Dialogue>		
 	</DialogueNode>
 

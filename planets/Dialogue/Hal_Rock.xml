@@ -5,12 +5,12 @@
 		<Name>Start</Name>		
 		<EntryCondition>DEFAULT</EntryCondition>		
 		<Dialogue>
-			<Page>(HAL_ROCK_1) Alright, here you go.</Page>
-			<Page>(HAL_ROCK_2) I know the writing is not perfect, but who knows... maybe I am the last person alive who knows this language.</Page>		
+			<Page>HAL_ROCK_1</Page>
+			<Page>HAL_ROCK_2</Page>		
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>			   
-				<Text>(HAL_ROCK_3) Thank you! Bye!</Text>
+				<Text>HAL_ROCK_3</Text>
 				<DialogueTarget>4</DialogueTarget>
 				<ConditionToSet>HAL_ROCK_DONE_2</ConditionToSet>
 			</DialogueOption>					
@@ -22,11 +22,11 @@
 		<Name>6</Name>
 		<EntryCondition>HAL_ROCK_DONE_2</EntryCondition>
 		<Dialogue>
-			<Page>(MARL_START_4) So, what you gonna do with that rock? I'm very curious.</Page>										
+			<Page>HAL_ROCK_4</Page>										
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>			   
-				<Text>(HAL_START_3) Hmm, maybe I'll show it to the real nomai.</Text>
+				<Text>HAL_ROCK_5</Text>
 				<DialogueTarget>5</DialogueTarget>
 				<ConditionToSet>HAL_ROCK_DONE_3</ConditionToSet>
 			</DialogueOption>				
@@ -36,8 +36,8 @@
 	<DialogueNode>
 		<Name>5</Name>		
 		<Dialogue>
-			<Page>(MARL_START_4) Ha-ha-ha. Ha-haha-ha.</Page>
-			<Page>(MARL_START_4) Very funny.</Page>										
+			<Page>HAL_ROCK_6</Page>
+			<Page>HAL_ROCK_7</Page>										
 		</Dialogue>
 		<DialogueOptionsList>
 		</DialogueOptionsList>	
@@ -47,8 +47,8 @@
 		<Name>5.1</Name>
 		<EntryCondition>HAL_ROCK_DONE_3</EntryCondition>	
 		<Dialogue>
-			<Page>(MARL_START_4) Sorry, I can't talk with you right now.</Page>
-			<Page>(MARL_START_4) Your joke was too good.</Page>												
+			<Page>HAL_ROCK_8</Page>
+			<Page>HAL_ROCK_9</Page>												
 		</Dialogue>
 		<DialogueOptionsList>
 		</DialogueOptionsList>	
@@ -57,7 +57,7 @@
 	<DialogueNode>
 		<Name>4</Name>
 		<Dialogue>
-			<Page>(MARL_START_4) Good luck in space, friend!</Page>						
+			<Page>HAL_ROCK_10</Page>						
 		</Dialogue>	
 		<DialogueOptionsList>
 		</DialogueOptionsList>		

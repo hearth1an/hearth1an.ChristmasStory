@@ -5,11 +5,11 @@
 		<Name>Start</Name>		
 		<EntryCondition>DEFAULT</EntryCondition>		
 		<Dialogue>
-			<Page>(MARL_FINAL_1) No way! Everyone is here, woah. Thank you for bringing em back!</Page>			
+			<Page>MARL_FINAL_1</Page>			
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>			   
-				<Text>(MARL_FINAL_2) Sure! That was fun.</Text>
+				<Text>MARL_FINAL_2</Text>
 				<DialogueTarget>2</DialogueTarget>
 				<ConditionToSet>MARL_FINAL_DONE</ConditionToSet>
 			</DialogueOption>			
@@ -19,7 +19,7 @@
 	<DialogueNode>
 		<Name>2</Name>
 		<Dialogue>
-			<Page>(MARL_FINAL_4) I can imagine. Ask Hornfels what we are doing next.</Page>					
+			<Page>MARL_FINAL_3</Page>					
 		</Dialogue>		
 	</DialogueNode>
 
@@ -27,7 +27,7 @@
 		<Name>4</Name>		
 		<EntryCondition>MARL_FINAL_DONE</EntryCondition>		
 		<Dialogue>
-			<Page>(SLATE_FINAL_5) As I said, you better ask Hornfels.</Page>						
+			<Page>MARL_FINAL_4</Page>						
 		</Dialogue>		
 	</DialogueNode>
 </DialogueTree>

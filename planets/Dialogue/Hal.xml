@@ -5,23 +5,23 @@
 		<Name>Start</Name>		
 		<EntryCondition>DEFAULT</EntryCondition>		
 		<Dialogue>
-			<Page>(HAL_START_1) Hey! Feel nervous about first launch? I know that feeling! I'm nervous about it too!</Page>
-			<Page>(HAL_START_2) You'll be the first astronaut with nomai translator, I'm so exited about this!</Page>		
+			<Page>HAL_START_1</Page>
+			<Page>HAL_START_2</Page>		
 		</Dialogue>
 		<DialogueOptionsList>
 		    <DialogueOption>
 			    <RequiredPersistentCondition>HAL_ROCK_TOLD</RequiredPersistentCondition> 		   
-				<Text>(HAL_START_4) Hal, can you write a custom nomai text for me?</Text>
+				<Text>HAL_START_3</Text>
 				<DialogueTarget>5</DialogueTarget>				
 			</DialogueOption>			
 			<DialogueOption>			   
-				<Text>(HAL_START_3) I think I'm good, Hal. I gotta go.</Text>
+				<Text>HAL_START_4</Text>
 				<DialogueTarget>2</DialogueTarget>
 				<ConditionToSet>HAL_START_DONE</ConditionToSet>
 			</DialogueOption>
 			<DialogueOption>
 				<CancelledPersistentCondition>HAL_ROCK_TOLD</CancelledPersistentCondition>		   
-				<Text>(HAL_START_4) What are you doing with this rock?</Text>
+				<Text>HAL_START_5</Text>
 				<DialogueTarget>3</DialogueTarget>				
 			</DialogueOption>			
 		</DialogueOptionsList>
@@ -30,7 +30,7 @@
 	<DialogueNode>
 		<Name>2</Name>
 		<Dialogue>
-			<Page>(MARL_START_4) That's what I'm talking about! Good luck in space!</Page>					
+			<Page>HAL_START_6</Page>					
 		</Dialogue>		
 	</DialogueNode>
 
@@ -39,12 +39,12 @@
 		<SetCondition>HAL_ROCK_TOLD</SetCondition>		
 		<SetPersistentCondition>HAL_ROCK_TOLD</SetPersistentCondition>
 		<Dialogue>
-			<Page>(MARL_START_4) Just doing little practice in nomai writings. Since I made a nomai translator, I should be able to write nomaish</Page>
-			<Page>(MARL_START_4) I don't know actually how to call their language. Whatever.. no one could read it anyway.</Page>					
+			<Page>HAL_START_7</Page>
+			<Page>HAL_START_8</Page>					
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>			   
-				<Text>(HAL_START_3) True. Good luck with it.</Text>
+				<Text>HAL_START_9</Text>
 				<DialogueTarget>4</DialogueTarget>
 			</DialogueOption>				
 		</DialogueOptionsList>
@@ -53,11 +53,11 @@
 	<DialogueNode>
 		<Name>5</Name>
 		<Dialogue>
-			<Page>(MARL_START_4) Sure! As you see, I'm already doing practice. So is it for translator testing, right?</Page>								
+			<Page>HAL_START_10</Page>								
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>			   
-				<Text>(HAL_START_3) Sure! Please wright: "Dear Solanum, I'm inviting you to Village to celebrate Christmas!"</Text>
+				<Text>HAL_START_11</Text>
 				<DialogueTarget>6</DialogueTarget>				
 			</DialogueOption>				
 		</DialogueOptionsList>
@@ -67,8 +67,8 @@
 		<Name>6</Name>
 		<SetCondition>HAL_ROCK_DONE</SetCondition>
 		<Dialogue>
-			<Page>(MARL_START_4) That's a very specific text. Are we celebrating something? Ah, actually neverming.</Page>
-			<Page>(MARL_START_4) Let's see if I can do this...</Page>								
+			<Page>HAL_START_12</Page>
+			<Page>HAL_START_13</Page>								
 		</Dialogue>		
 	</DialogueNode>
 
@@ -77,12 +77,12 @@
 		<SetCondition>HAL_START_DONE</SetCondition>
 		<EntryCondition>HAL_START_DONE</EntryCondition>
 		<Dialogue>
-			<Page>Good luck in space, friend!</Page>						
+			<Page>HAL_START_14</Page>						
 		</Dialogue>
 		<DialogueOptionsList>
 	    <DialogueOption>
 			<CancelledPersistentCondition>HAL_ROCK_TOLD</CancelledPersistentCondition>		   
-			<Text>(HAL_START_4) What are you doing with this rock?</Text>
+			<Text>HAL_START_5</Text>
 			<DialogueTarget>3</DialogueTarget>				
 	    </DialogueOption>		
 		</DialogueOptionsList>	

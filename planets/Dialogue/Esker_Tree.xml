@@ -5,15 +5,15 @@
 		<Name>Start</Name>
 		<EntryCondition>DEFAULT</EntryCondition>
 		<Dialogue>
-			<Page>(ESKER_TREE_1) Merry Christmas! You're good pilot by the way.</Page>
+			<Page>ESKER_TREE_1</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(ESKER_TREE_2) Thanks! I know I'm pretty good at it.</Text>
+				<Text>ESKER_TREE_2</Text>
 				<DialogueTarget>2</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
-				<Text>(ESKER_TREE_3) Do you know anything about Jumbo?</Text>
+				<Text>ESKER_TREE_3</Text>
 				<DialogueTarget>3</DialogueTarget>
 			</DialogueOption>
 		</DialogueOptionsList>
@@ -22,18 +22,18 @@
 	<DialogueNode>
 		<Name>2</Name>
 		<Dialogue>
-			<Page>(ESKER_TREE_4) Yes, you're also very modest.</Page>
+			<Page>ESKER_TREE_4</Page>
 		</Dialogue>
 	</DialogueNode>
 
 	<DialogueNode>
 		<Name>3</Name>
 		<Dialogue>
-			<Page>(ESKER_TREE_5) WHO?.</Page>
+			<Page>ESKER_TREE_5</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(ESKER_TREE_6) Actually... nevermind...</Text>
+				<Text>ESKER_TREE_6</Text>
 			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>

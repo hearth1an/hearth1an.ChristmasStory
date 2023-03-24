@@ -5,30 +5,30 @@
 		<Name>Start</Name>
 		<EntryCondition>DEFAULT</EntryCondition>
 		<Dialogue>
-			<Page>(FELDSPAR_START_1) Hey bud! I glad you found me. Any help?</Page>
+			<Page>FELDSPAR_START_1</Page>
 		</Dialogue>
 
 
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(FELDSPAR_START_2) Why did you leave? It was safe there!</Text>
+				<Text>FELDSPAR_START_2</Text>
 				<DialogueTarget>2</DialogueTarget>
 
 			</DialogueOption>
 			<DialogueOption>
 				<RequiredCondition>FELDSPAR_SHIP_NEAR</RequiredCondition>
-				<Text>(FELDSPAR_START_3) Sure! Let's go. (IF SHIP IS CLOSE ENOUGH AND NOT DESTROYED)</Text>
+				<Text>FELDSPAR_START_3</Text>
 				<ConditionToSet>FELDSPAR_START_DONE</ConditionToSet>
 			</DialogueOption>
 			<DialogueOption>
 				<RequiredCondition>FELDSPAR_SHIP_FAR</RequiredCondition>
-				<Text>(FELDSPAR_START_4) Don't go anywhere, I'll take ship closer. (IF SHIP IS NOT CLOSE ENOUGH)</Text>
+				<Text>FELDSPAR_START_4</Text>
 				<ConditionToSet>FELDSPAR_START_MET</ConditionToSet>
 				<DialogueTarget>4</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
 				<RequiredCondition>SHIP_DESTROYED</RequiredCondition>
-				<Text>(FELDSPAR_START_5) I'm so sorry... but ship is not functioning... we stuck here (IF SHIP IS DESTROYED)</Text>
+				<Text>FELDSPAR_START_5</Text>
 				<ConditionToSet>FELDSPAR_START_FAILED</ConditionToSet>
 				<DialogueTarget>8</DialogueTarget>
 			</DialogueOption>
@@ -38,11 +38,12 @@
 	<DialogueNode>
 		<Name>2</Name>
 		<Dialogue>
-			<Page>(FELDSPAR_START_6) It's was boring there. I saw little anglerfish and thought it could help me fly away from bramble so I followed and... pure luck I was such scared that I was not able to move, seems like anglers react only on movement! Ha-ha, another mystery I solved!</Page>
+			<Page>FELDSPAR_START_6</Page>
+			<Page>FELDSPAR_START_7</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(FELDSPAR_START_7) Yes! This is pure luck.</Text>
+				<Text>FELDSPAR_START_8</Text>
 				<DialogueTarget>7</DialogueTarget>
 			</DialogueOption>
 		</DialogueOptionsList>
@@ -53,22 +54,22 @@
 		<Name>7</Name>
 		<EntryCondition>FELDSPAR_START_MET</EntryCondition>
 		<Dialogue>
-			<Page>(FELDSPAR_START_10) So... any help?</Page>
+			<Page>FELDSPAR_START_9</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
 				<RequiredCondition>FELDSPAR_SHIP_NEAR</RequiredCondition>
-				<Text>(FELDSPAR_START_3) Sure! Let's go.</Text>
+				<Text>FELDSPAR_START_3</Text>
 				<ConditionToSet>FELDSPAR_START_DONE</ConditionToSet>
 			</DialogueOption>
 			<DialogueOption>
 				<RequiredCondition>FELDSPAR_SHIP_FAR</RequiredCondition>
-				<Text>(FELDSPAR_START_4) Don't go anywhere, I'll take ship closer.</Text>
+				<Text>FELDSPAR_START_4</Text>
 				<DialogueTarget>4</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
 				<RequiredCondition>SHIP_DESTROYED</RequiredCondition>
-				<Text>(FELDSPAR_START_5) I'm so sorry... but ship is not functioning... we stuck here.</Text>
+				<Text>FELDSPAR_START_5</Text>
 				<ConditionToSet>FELDSPAR_START_FAILED</ConditionToSet>
 				<DialogueTarget>8</DialogueTarget>
 			</DialogueOption>
@@ -78,7 +79,7 @@
 	<DialogueNode>
 		<Name>4</Name>
 		<Dialogue>
-			<Page>(FELDSPAR_START_8) Sure! Just be careful here.</Page>
+			<Page>FELDSPAR_START_10) Don't go anywhere? Ha-ha.</Page>
 		</Dialogue>
 	</DialogueNode>
 
@@ -87,7 +88,7 @@
 		<Name>8</Name>
 		<EntryCondition>FELDSPAR_START_FAILED</EntryCondition>
 		<Dialogue>
-			<Page>(FELDSPAR_START_9) Oh boy.. what we gotta do...</Page>
+			<Page>FELDSPAR_START_11) Oh boy... what we gonna do?</Page>
 		</Dialogue>
 	</DialogueNode>
 </DialogueTree>

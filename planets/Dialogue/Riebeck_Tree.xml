@@ -5,11 +5,11 @@
 		<Name>Start</Name>
 		<EntryCondition>DEFAULT</EntryCondition>
 		<Dialogue>
-			<Page>(RIEBECK_TREE_1) Merry Christmas! We finally at home.</Page>
+			<Page>RIEBECK_TREE_1</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(RIEBECK_TREE_2) We were missing you.</Text>
+				<Text>RIEBECK_TREE_2</Text>
 				<DialogueTarget>2</DialogueTarget>
 			</DialogueOption>
 		</DialogueOptionsList>
@@ -18,8 +18,7 @@
 	<DialogueNode>
 		<Name>2</Name>
 		<Dialogue>
-			<Page>(RIEBECK_TREE_4) Ahh I really like this tree decorations</Page>
-			<Page>(RIEBECK_TREE_8)  ... and barrel.</Page>
+			<Page>RIEBECK_TREE_3</Page>		
 		</Dialogue>
 	</DialogueNode>
 
@@ -28,15 +27,15 @@
 		<Name>Start_Solanum</Name>
 		<EntryCondition>SOLANUM_DONE</EntryCondition>
 		<Dialogue>
-			<Page>(RIEBECK_TREE_5) WAIT IS THAT REAL NOMAI???</Page>
+			<Page>RIEBECK_TREE_4</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(RIEBECK_TREE_6) Yes, her name is Solanum. She's from Quantum Moon.</Text>
+				<Text>RIEBECK_TREE_5</Text>
 				<DialogueTarget>3</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
-				<Text>(RIEBECK_TREE_7) Ha-ha! It's just a costume. Not a real nomai. They all died, you remember?</Text>
+				<Text>RIEBECK_TREE_6</Text>
 				<DialogueTarget>4</DialogueTarget>
 			</DialogueOption>
 		</DialogueOptionsList>
@@ -45,13 +44,13 @@
 	<DialogueNode>
 		<Name>3</Name>
 		<Dialogue>
-			<Page>(RIEBECK_TREE_9) WOAH! Fantastic, living Nomai from Quantum Moon! COOL!</Page>
+			<Page>RIEBECK_TREE_7</Page>
 		</Dialogue>
 	</DialogueNode>
 	<DialogueNode>
 		<Name>4</Name>
 		<Dialogue>
-			<Page>(RIEBECK_TREE_10) This is very good costume, I'd say! But yeah, you're right...</Page>
+			<Page>RIEBECK_TREE_8</Page>
 		</Dialogue>
 	</DialogueNode>
 

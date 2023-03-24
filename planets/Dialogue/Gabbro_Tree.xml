@@ -5,46 +5,69 @@
 		<Name>Start</Name>
 		<EntryCondition>DEFAULT</EntryCondition>
 		<Dialogue>
-			<Page>(CHERT_TREE_1) Hey! How do you know live with all your knowledge?</Page>
+			<Page>GABBRO_TREE_1</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(CHERT_TREE_2) I'm ok, Chert.</Text>
+				<Text>GABBRO_TREE_2</Text>
 				<DialogueTarget>2</DialogueTarget>
 			</DialogueOption>
+			<DialogueOption>
+				<Text>GABBRO_TREE_3</Text>
+				<DialogueTarget>3</DialogueTarget>
+			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
 
 	<DialogueNode>
+	<SetCondition>GABBRO_TREE_START_2</SetCondition>
 		<Name>2</Name>
 		<Dialogue>
-			<Page>(CHERT_TREE_3) I can imagine...</Page>
+			<Page>GABBRO_TREE_4</Page>
 		</Dialogue>
 	</DialogueNode>
 
-	<DialogueNode>
-		<Name>Start_Prisoner</Name>
-		<EntryCondition>PRISONER_DONE</EntryCondition>
+	<DialogueNode>	
+		<EntryCondition>GABBRO_TREE_START_2</EntryCondition>
 		<Dialogue>
-			<Page>(CHERT_TREE_5) Oh, is it how that strangers were look like?</Page>
+			<Page>GABBRO_TREE_5</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(RIEBECK_TREE_6) Yes, exactly.</Text>
-				<DialogueTarget>3</DialogueTarget>
+                <CancelledPersistentCondition>GABBRO_TREE_QUESTION</CancelledPersistentCondition>
+				<Text>GABBRO_TREE_6</Text>
+				<DialogueTarget>4</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
-				<Text>(RIEBECK_TREE_7) They're little creepy and had just TWO EYES!</Text>
-				<DialogueTarget>3</DialogueTarget>
+				<Text>GABBRO_TREE_7</Text>
+				<DialogueTarget>5</DialogueTarget>
 			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
 
 	<DialogueNode>
-		<Name>3</Name>
+	<SetPersistentCondition>GABBRO_TREE_QUESTION</SetPersistentCondition>
+		<Name>4</Name>
 		<Dialogue>
-			<Page>(CHERT_TREE_8) Yeah, they were very different and little kreepy..</Page>
+			<Page>GABBRO_TREE_8</Page>
+			<Page>GABBRO_TREE_9</Page>
 		</Dialogue>
 	</DialogueNode>
 
+	<DialogueNode>	
+		<Name>5</Name>
+		<Dialogue>
+			<Page>GABBRO_TREE_10</Page>			
+		</Dialogue>
+	</DialogueNode>
+
+
+
+	<DialogueNode>
+	<SetCondition>GABBRO_TREE_START_2</SetCondition>
+		<Name>3</Name>
+		<Dialogue>
+			<Page>GABBRO_TREE_11</Page>
+		</Dialogue>
+	</DialogueNode>
 </DialogueTree>

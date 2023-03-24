@@ -5,17 +5,17 @@
 		<Name>Start</Name>
 		<EntryCondition>DEFAULT</EntryCondition>
 		<Dialogue>
-			<Page>(FELDSPAR_SHIP_1) Nice ship, captain! I'd ask Slate to make the similar one for me! Let me know when we will land near the Village, ok?</Page>
+			<Page>FELDSPAR_SHIP_1</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
 				<RequiredCondition>SHIP_NEAR_VILLAGE</RequiredCondition>
-				<Text>(FELDSPAR_SHIP_2) We are at home already, welcome back!</Text>
+				<Text>FELDSPAR_SHIP_2</Text>
 				<DialogueTarget>2</DialogueTarget>
 				<RequiredCondition>FELDSPAR_SHIP_DONE</RequiredCondition>
 			</DialogueOption>
 			<DialogueOption>
-				<Text>(FELDSPAR_SHIP_3) Sure! I'll let you know.</Text>
+				<Text>FELDSPAR_SHIP_3</Text>
 				<ConditionToSet>FELDSPAR_SHIP_MET</ConditionToSet>
 			</DialogueOption>
 		</DialogueOptionsList>
@@ -24,7 +24,7 @@
 	<DialogueNode>
 		<Name>2</Name>
 		<Dialogue>
-			<Page>(FELDSPAR_SHIP_4) Yay! Thanks for the ride. Let's go!</Page>
+			<Page>FELDSPAR_SHIP_4</Page>
 		</Dialogue>
 		<SetPersistentCondition>FELDSPAR_SHIP_DONE</SetPersistentCondition>
 	</DialogueNode>
@@ -34,15 +34,15 @@
 		<Name>3</Name>
 		<EntryCondition>FELDSPAR_SHIP_MET</EntryCondition>
 		<Dialogue>
-			<Page>(FELDSPAR_SHIP_5) Are we at home, Hatchling?</Page>
+			<Page>FELDSPAR_SHIP_5</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(FELDSPAR_SHIP_6) Nope, not yet. I'll let you know.</Text>
+				<Text>FELDSPAR_SHIP_6</Text>
 			</DialogueOption>
 			<DialogueOption>
 				<RequiredCondition>SHIP_NEAR_VILLAGE</RequiredCondition>
-				<Text>(FELDSPAR_SHIP_2) We are at home already, welcome back!</Text>
+				<Text>FELDSPAR_SHIP_2</Text>
 				<DialogueTarget>2</DialogueTarget>
 				<RequiredCondition>FELDSPAR_SHIP_DONE</RequiredCondition>
 			</DialogueOption>

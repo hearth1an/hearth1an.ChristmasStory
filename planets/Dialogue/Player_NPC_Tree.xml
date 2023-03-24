@@ -5,15 +5,15 @@
 		<Name>Start</Name>
 		<EntryCondition>DEFAULT</EntryCondition>
 		<Dialogue>
-			<Page>(NPC_PLAYER_TREE_1) ..Merry Christmas! To me.</Page>
+			<Page>NPC_PLAYER_TREE_1</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(NPC_PLAYER_TREE_2) Yes, and to me.</Text>
+				<Text>NPC_PLAYER_TREE_2</Text>
 				<DialogueTarget>2</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
-				<Text>(NPC_PLAYER_TREE_14) Yep. Bye.</Text>
+				<Text>NPC_PLAYER_TREE_3</Text>
 				<DialogueTarget>2</DialogueTarget>
 			</DialogueOption>
 		</DialogueOptionsList>
@@ -22,12 +22,12 @@
 	<DialogueNode>
 		<Name>2</Name>
 		<Dialogue>
-			<Page>(NPC_PLAYER_TREE_4) Thanks.</Page>
-			<Page>(NPC_PLAYER_TREE_8) Don't you worry about time traveling stuff?</Page>
+			<Page>NPC_PLAYER_TREE_4</Page>
+			<Page>NPC_PLAYER_TREE_5</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(NPC_PLAYER_TREE_11) What do you mean?</Text>
+				<Text>NPC_PLAYER_TREE_6</Text>
 				<DialogueTarget>5</DialogueTarget>
 			</DialogueOption>
 		</DialogueOptionsList>
@@ -37,11 +37,11 @@
 	<DialogueNode>
 		<Name>5</Name>
 		<Dialogue>
-			<Page>(NPC_PLAYERK_TREE_5) Well, that things about others seeing us both at the same time..</Page>
+			<Page>NPC_PLAYER_TREE_7</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(NPC_PLAYER_TREE_6) I can't se anything explodes.</Text>
+				<Text>NPC_PLAYER_TREE_8</Text>
 				<DialogueTarget>3</DialogueTarget>
 			</DialogueOption>
 		</DialogueOptionsList>
@@ -50,12 +50,12 @@
 	<DialogueNode>
 		<Name>3</Name>
 		<Dialogue>
-			<Page>(NPC_PLAYER_TREE_9) Yes, that's what I would say too.</Page>
-			<Page>(NPC_PLAYER_TREE_12) You also could say it's someone in very good costume.</Page>
+			<Page>NPC_PLAYER_TREE_9</Page>
+			<Page>NPC_PLAYER_TREE_10</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(NPC_PLAYER_TREE_13) My exact thought.</Text>
+				<Text>NPC_PLAYER_TREE_11</Text>
 			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>

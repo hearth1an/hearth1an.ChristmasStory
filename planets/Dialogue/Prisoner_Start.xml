@@ -5,11 +5,11 @@
 		<Name>Start</Name>
 		<EntryCondition>DEFAULT</EntryCondition>
 		<Dialogue>
-			<Page>(PRISONER_START_1) ...</Page>
+			<Page>PRISONER_START_1</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>				
-				<Text>(PRISONER_START_1) ...</Text>
+				<Text>PRISONER_START_1</Text>
 				<ConditionToSet>PRISONER_START</ConditionToSet>
 			</DialogueOption>			
 		</DialogueOptionsList>
@@ -19,7 +19,7 @@
 		<Name>3</Name>
 		<EntryCondition>PRISONER_START_DONE</EntryCondition>
 		<Dialogue>
-			<Page>(PRISONER_START_1) ...</Page>
+			<Page>PRISONER_START_1</Page>
 		</Dialogue>
 	</DialogueNode>
 </DialogueTree>

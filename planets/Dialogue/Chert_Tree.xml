@@ -5,11 +5,11 @@
 		<Name>Start</Name>
 		<EntryCondition>DEFAULT</EntryCondition>
 		<Dialogue>
-			<Page>(CHERT_TREE_1) Hey! How do you know live with all your knowledge?</Page>
+			<Page>CHERT_TREE_1</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(CHERT_TREE_2) I'm ok, Chert.</Text>
+				<Text>CHERT_TREE_2</Text>
 				<DialogueTarget>2</DialogueTarget>
 			</DialogueOption>
 		</DialogueOptionsList>
@@ -18,7 +18,7 @@
 	<DialogueNode>
 		<Name>2</Name>
 		<Dialogue>
-			<Page>(CHERT_TREE_3) I can imagine...</Page>
+			<Page>CHERT_TREE_3</Page>
 		</Dialogue>
 	</DialogueNode>
 
@@ -26,15 +26,15 @@
 		<Name>Start_Prisoner</Name>
 		<EntryCondition>PRISONER_DONE</EntryCondition>
 		<Dialogue>
-			<Page>(CHERT_TREE_5) Oh, is it how that strangers were look like?</Page>
+			<Page>CHERT_TREE_4</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(RIEBECK_TREE_6) Yes, exactly.</Text>
+				<Text>CHERT_TREE_5</Text>
 				<DialogueTarget>3</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
-				<Text>(RIEBECK_TREE_7) They're little creepy and had just TWO EYES!</Text>
+				<Text>CHERT_TREE_6</Text>
 				<DialogueTarget>3</DialogueTarget>
 			</DialogueOption>
 		</DialogueOptionsList>
@@ -43,7 +43,7 @@
 	<DialogueNode>
 		<Name>3</Name>
 		<Dialogue>
-			<Page>(CHERT_TREE_8) Yeah, they were very different and little kreepy..</Page>
+			<Page>CHERT_TREE_7</Page>
 		</Dialogue>
 	</DialogueNode>
 

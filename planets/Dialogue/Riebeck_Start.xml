@@ -5,30 +5,27 @@
 		<Name>Start</Name>
 		<EntryCondition>DEFAULT</EntryCondition>
 		<Dialogue>
-			<Page>(RIEBECK_START_1) Oh, hello! Are you here to help?</Page>
+			<Page>RIEBECK_START_1</Page>
 		</Dialogue>
-
-
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(RIEBECK_START_2) Just... how? I mean... how you are here?</Text>
+				<Text>RIEBECK_START_2</Text>
 				<DialogueTarget>2</DialogueTarget>
-
 			</DialogueOption>
 			<DialogueOption>
 				<RequiredCondition>RIEBECK_SHIP_NEAR</RequiredCondition>
-				<Text>(RIEBECK_START_3) Yep, my ship should be near, let's get in.</Text>
+				<Text>RIEBECK_START_3</Text>
 				<ConditionToSet>RIEBECK_START_DONE</ConditionToSet>
 			</DialogueOption>
 			<DialogueOption>
 				<RequiredCondition>RIEBECK_SHIP_FAR</RequiredCondition>
-				<Text>(RIEBECK_START_4) Hold on, I'll take ship little closer.</Text>
+				<Text>RIEBECK_START_4</Text>
 				<ConditionToSet>RIEBECK_START_MET</ConditionToSet>
 				<DialogueTarget>4</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
 				<RequiredCondition>SHIP_DESTROYED</RequiredCondition>
-				<Text>(RIEBECK_START_5) I'm so sorry... but ship is not functioning... Unfortunately I can't help.</Text>
+				<Text>RIEBECK_START_5</Text>
 				<ConditionToSet>RIEBECK_START_FAILED</ConditionToSet>
 				<DialogueTarget>8</DialogueTarget>
 			</DialogueOption>
@@ -38,13 +35,13 @@
 	<DialogueNode>
 		<Name>2</Name>
 		<Dialogue>
-			<Page>(RIEBECK_START_6) Well, I'd see how you react if piece of planet will fall right behind you!</Page>
-			<Page>(RIEBECK_START_7) I had no time to react so I took all gravity crystals I have and found safe place. Logically, from this side I will not fall DOWN. </Page>
-			<Page>(RIEBECK_START_11) You got it? Ha-ha!. </Page>
+			<Page>RIEBECK_START_6</Page>
+			<Page>RIEBECK_START_7</Page>
+			<Page>RIEBECK_START_8</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(RIEBECK_START_7) I got you, Riebeck glad to see you're alive and... safe. Kind of.</Text>
+				<Text>RIEBECK_START_9</Text>
 				<DialogueTarget>7</DialogueTarget>
 			</DialogueOption>
 		</DialogueOptionsList>
@@ -55,23 +52,23 @@
 		<Name>7</Name>
 		<EntryCondition>RIEBECK_START_MET</EntryCondition>
 		<Dialogue>
-			<Page>(RIEBECK_START_10) So... can you help me then?</Page>
+			<Page>RIEBECK_START_10</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
 				<RequiredCondition>RIEBECK_SHIP_NEAR</RequiredCondition>
-				<Text>(RIEBECK_START_3) Sure! Let's go.</Text>
+				<Text>RIEBECK_START_3</Text>
 				<ConditionToSet>RIEBECK_START_DONE</ConditionToSet>
 			</DialogueOption>
 			<DialogueOption>
 				<RequiredCondition>RIEBECK_SHIP_FAR</RequiredCondition>
-				<Text>(RIEBECK_START_4) Don't go anywhere, I'll take ship closer.</Text>
+				<Text>RIEBECK_START_4</Text>
 				<ConditionToSet>RIEBECK_START_MET</ConditionToSet>
 				<DialogueTarget>4</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
 				<RequiredCondition>SHIP_DESTROYED</RequiredCondition>
-				<Text>(RIEBECK_START_5) I'm so sorry... but ship is not functioning... Unfortunately I can't help.</Text>
+				<Text>RIEBECK_START_5</Text>
 				<ConditionToSet>RIEBECK_START_FAILED</ConditionToSet>
 				<DialogueTarget>8</DialogueTarget>
 			</DialogueOption>
@@ -81,7 +78,7 @@
 	<DialogueNode>
 		<Name>4</Name>
 		<Dialogue>
-			<Page>(RIEBECK_START_8) Of course! Just be careful here.</Page>
+			<Page>RIEBECK_START_11</Page>
 		</Dialogue>
 	</DialogueNode>
 
@@ -90,7 +87,7 @@
 		<Name>8</Name>
 		<EntryCondition>RIEBECK_START_FAILED</EntryCondition>
 		<Dialogue>
-			<Page>(RIEBECK_START_9) Damn it.. I guess I'll stay here for a while then...</Page>
+			<Page>RIEBECK_START_12</Page>
 		</Dialogue>
 	</DialogueNode>
 </DialogueTree>

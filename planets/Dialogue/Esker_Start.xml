@@ -5,13 +5,13 @@
 		<Name>Start</Name>
 		<EntryCondition>DEFAULT</EntryCondition>
 		<Dialogue>
-			<Page>(ESKER_START_1) Hey-hey! So we are going at home, right? </Page>
+			<Page>ESKER_START_1</Page>
 		</Dialogue>
 
 
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(ESKER_START_2) Wait, what? How did you know?</Text>
+				<Text>ESKER_START_2</Text>
 				<DialogueTarget>2</DialogueTarget>
 			</DialogueOption>
 		</DialogueOptionsList>
@@ -20,11 +20,11 @@
 	<DialogueNode>
 		<Name>2</Name>
 		<Dialogue>
-			<Page>(ESKER_START_6) Well.. I use signalscope a lot. I just heard your dialogue with Slate.</Page>
+			<Page>ESKER_START_3</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(ESKER_START_7) Oh, I see... You got me scared sometimes, Esker.</Text>
+				<Text>ESKER_START_4</Text>
 				<DialogueTarget>7</DialogueTarget>
 				<ConditionToSet>ESKER_START_MET</ConditionToSet>
 			</DialogueOption>
@@ -36,28 +36,28 @@
 		<Name>7</Name>
 		<EntryCondition>ESKER_START_MET</EntryCondition>
 		<Dialogue>
-			<Page>(ESKER_START_10) So... what's next? Are we going home?</Page>
+			<Page>ESKER_START_5</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
 				<RequiredCondition>ESKER_SHIP_NEAR</RequiredCondition>
-				<Text>(ESKER_START_3) Yes! I need you to celebrate Christmas. Let's go! (IF SHIP IS CLOSE ENOUGH AND NOT DESTROYED)</Text>
+				<Text>ESKER_START_6</Text>
 				<ConditionToSet>ESKER_START_DONE</ConditionToSet>
 			</DialogueOption>
 			<DialogueOption>
 				<RequiredCondition>ESKER_SHIP_FAR</RequiredCondition>
-				<Text>(ESKER_START_4) Yes, but don't go anywhere, I need to take ship closer. (IF SHIP IS NOT CLOSE ENOUGH)</Text>
+				<Text>ESKER_START_7</Text>
 				<ConditionToSet>ESKER_START_MET</ConditionToSet>
 				<DialogueTarget>4</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
 				<RequiredCondition>SHIP_DESTROYED</RequiredCondition>
-				<Text>(ESKER_START_5) I'm sorry, Esker, but it seems like my ship is not working anymore. Sorry. (IF SHIP IS DESTROYED)</Text>
+				<Text>ESKER_START_8</Text>
 				<ConditionToSet>ESKER_START_FAILED</ConditionToSet>
 				<DialogueTarget>8</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
-				<Text>(ESKER_START_10) Hold on, I need to do something first.</Text>
+				<Text>ESKER_START_9</Text>
 				<DialogueTarget>9</DialogueTarget>
 			</DialogueOption>
 		</DialogueOptionsList>
@@ -66,7 +66,7 @@
 	<DialogueNode>
 		<Name>4</Name>
 		<Dialogue>
-			<Page>(ESKER_START_8) Alright, I'll wait for ya!</Page>
+			<Page>ESKER_START_10</Page>
 		</Dialogue>
 	</DialogueNode>
 
@@ -74,14 +74,14 @@
 	<DialogueNode>
 		<Name>8</Name>
 		<Dialogue>
-			<Page>(ESKER_START_9) No celebration then? Sad... We can still sit here with campfire, you know..</Page>
+			<Page>ESKER_START_11</Page>
 		</Dialogue>
 	</DialogueNode>
 
 	<DialogueNode>
 		<Name>9</Name>
 		<Dialogue>
-			<Page>(ESKER_START_11) Gotcha! I'll wait then.</Page>
+			<Page>ESKER_START_12</Page>
 		</Dialogue>
 	</DialogueNode>
 </DialogueTree>

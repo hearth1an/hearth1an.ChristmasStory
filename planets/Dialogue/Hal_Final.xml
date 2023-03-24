@@ -5,18 +5,18 @@
 		<Name>Start</Name>		
 		<EntryCondition>DEFAULT</EntryCondition>		
 		<Dialogue>
-			<Page>(HAL_FINAL_1) Woah, I see now what did you mean by saying about celebrating!</Page>			
+			<Page>HAL_FINAL_1</Page>			
 		</Dialogue>
 		<DialogueOptionsList>	
 		    <DialogueOption>
 				<RequiredPersistentCondition>SOLANUM_DONE</RequiredPersistentCondition>	   
-				<Text>(HAL_FINAL_2) Sure, and see what I did with your rock! I invited a living Nomai!</Text>
+				<Text>HAL_FINAL_2</Text>
 				<DialogueTarget>2</DialogueTarget>
 				<ConditionToSet>HAL_FINAL_DONE_2</ConditionToSet>
 			</DialogueOption>
 			<DialogueOption>
 			    <CancelledPersistentCondition>SOLANUM_DONE</CancelledPersistentCondition>
-				<Text>(HAL_FINAL_2) Yep. It's very cool.</Text>
+				<Text>HAL_FINAL_3</Text>
 				<DialogueTarget>4</DialogueTarget>
 				<ConditionToSet>HAL_FINAL_DONE</ConditionToSet>
 			</DialogueOption>						
@@ -26,8 +26,8 @@
 	<DialogueNode>
 		<Name>2</Name>
 		<Dialogue>
-			<Page>(HAL_FINAL_4) UNBELIVABLE! Wait, stop, maybe it is illusion?</Page>
-			<Page>(HAL_FINAL_4) Or it's just me dreaming? This it too good to be truth!</Page>					
+			<Page>HAL_FINAL_4</Page>
+			<Page>HAL_FINAL_5</Page>					
 		</Dialogue>
 		<DialogueOptionsList>
 		</DialogueOptionsList>		
@@ -37,7 +37,7 @@
 		<Name>4</Name>		
 		<EntryCondition>HAL_FINAL_DONE</EntryCondition>		
 		<Dialogue>
-			<Page>(HAL_FINAL_5) What do we do next? Maybe ask Hornfels?</Page>						
+			<Page>HAL_FINAL_6</Page>						
 		</Dialogue>
 		<DialogueOptionsList>
 		</DialogueOptionsList>		
@@ -47,7 +47,7 @@
 		<Name>5</Name>		
 		<EntryCondition>HAL_FINAL_DONE_2</EntryCondition>		
 		<Dialogue>
-			<Page>(HAL_FINAL_5) S-s-sorry. I'm literally speachless.</Page>						
+			<Page>HAL_FINAL_7</Page>						
 		</Dialogue>
 		<DialogueOptionsList>
 		</DialogueOptionsList>	

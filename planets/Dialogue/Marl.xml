@@ -5,11 +5,11 @@
 		<Name>Start</Name>		
 		<EntryCondition>DEFAULT</EntryCondition>		
 		<Dialogue>
-			<Page>(MARL_START_1) Heya! You see that tree? It's my job. Impressive, huh?</Page>			
+			<Page>MARL_START_1</Page>			
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>			   
-				<Text>(MARL_START_3) Yes, this tree is very impressive.</Text>
+				<Text>MARL_START_2</Text>
 				<DialogueTarget>2</DialogueTarget>
 				<ConditionToSet>MARL_START_DONE</ConditionToSet>
 			</DialogueOption>			
@@ -19,7 +19,7 @@
 	<DialogueNode>
 		<Name>2</Name>
 		<Dialogue>
-			<Page>(MARL_START_4) That's what I'm talking about! Good luck in space!</Page>					
+			<Page>MARL_START_3</Page>					
 		</Dialogue>		
 	</DialogueNode>
 
@@ -27,7 +27,27 @@
 		<Name>4</Name>		
 		<EntryCondition>MARL_START_DONE</EntryCondition>		
 		<Dialogue>
-			<Page>(SLATE_FINAL_5) Good luck in Flight. We waiting your mission to be complete.</Page>						
+			<Page>MARL_START_4</Page>						
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+			<RequiredPersistentCondition>TEKTITE_QUEST_START</RequiredPersistentCondition>			   
+				<Text>MARL_START_5</Text>
+				<DialogueTarget>3</DialogueTarget>
+				<ConditionToSet>TEKTITE_ASK_MARL</ConditionToSet>
+			</DialogueOption>			
+		</DialogueOptionsList>		
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>2</Name>
+		<SetPersistentCondition></SetPersistentCondition>
+		<SetCondition></SetCondition>
+		<Dialogue>
+			<Page>MARL_START_6</Page>
+			<Page>MARL_START_7</Page>					
 		</Dialogue>		
 	</DialogueNode>
+
+
 </DialogueTree>

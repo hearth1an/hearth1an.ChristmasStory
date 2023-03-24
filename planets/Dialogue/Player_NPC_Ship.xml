@@ -5,16 +5,16 @@
 		<Name>Start</Name>
 		<EntryCondition>DEFAULT</EntryCondition>
 		<Dialogue>
-			<Page>(NPC_PLAYER_SHIP_1) Let me see you drive. Are you better at it or not?</Page>
+			<Page>NPC_PLAYER_SHIP_1</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
 				<RequiredCondition>SHIP_NEAR_VILLAGE</RequiredCondition>
-				<Text>(NPC_PLAYER_SHIP_2) Oh, we're at home already.</Text>
+				<Text>NPC_PLAYER_SHIP_2</Text>
 				<DialogueTarget>2</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
-				<Text>(NPC_PLAYER_SHIP_3) We'll go home soon. Just wait a bit.</Text>
+				<Text>NPC_PLAYER_SHIP_3</Text>
 				<ConditionToSet>NPC_PLAYER_SHIP_MET</ConditionToSet>
 			</DialogueOption>
 		</DialogueOptionsList>
@@ -23,7 +23,7 @@
 	<DialogueNode>
 		<Name>2</Name>
 		<Dialogue>
-			<Page>(NPC_PLAYER_SHIP_4) Oh, that was fast!</Page>
+			<Page>NPC_PLAYER_SHIP_4</Page>
 		</Dialogue>
 		<SetPersistentCondition>NPC_PLAYER_SHIP_DONE</SetPersistentCondition>
 	</DialogueNode>
@@ -33,15 +33,15 @@
 		<Name>3</Name>
 		<EntryCondition>NPC_PLAYER_SHIP_MET</EntryCondition>
 		<Dialogue>
-			<Page>(NPC_PLAYER_SHIP_5) So, are you the best at driving?</Page>
+			<Page>NPC_PLAYER_SHIP_5</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(NPC_PLAYER_SHIP_3) We'll go home soon. Just wait a bit.</Text>
+				<Text>NPC_PLAYER_SHIP_3</Text>
 			</DialogueOption>
 			<DialogueOption>
 				<RequiredCondition>SHIP_NEAR_VILLAGE</RequiredCondition>
-				<Text>(NPC_PLAYER_SHIP_2) Oh, we're at home already.</Text>
+				<Text>NPC_PLAYER_SHIP_2</Text>
 				<DialogueTarget>2</DialogueTarget>
 				<RequiredCondition>NPC_PLAYER_SHIP_DONE</RequiredCondition>
 			</DialogueOption>

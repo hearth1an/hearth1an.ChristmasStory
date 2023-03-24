@@ -5,27 +5,41 @@
 		<Name>Start</Name>
 		<EntryCondition>DEFAULT</EntryCondition>
 		<Dialogue>
-			<Page>(ESKER_SHIP_1) I don't remember when I was in spaceship last time...</Page>
+			<Page>ESKER_SHIP_1</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
 				<RequiredCondition>SHIP_NEAR_VILLAGE</RequiredCondition>
-				<Text>(ESKER_SHIP_2) Alright, we here! Let's go celebrate!</Text>
+				<Text>ESKER_SHIP_2</Text>
 				<DialogueTarget>2</DialogueTarget>
 				<ConditionToSet>ESKER_SHIP_DONE</ConditionToSet>
 			</DialogueOption>
 			<DialogueOption>
-				<Text>(ESKER_SHIP_3) I'll let you know when we land near the Village.</Text>
+				<Text>ESKER_SHIP_3</Text>
 				<ConditionToSet>ESKER_SHIP_MET</ConditionToSet>
 			</DialogueOption>
+			<DialogueOption>
+			<CancelledCondition>ESKER_SHIP_CHAIR</CancelledCondition>
+				<Text>ESKER_SHIP_8</Text>
+				<DialogueTarget>4</DialogueTarget>				
+			</DialogueOption>
 		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>		
+		<Name>4</Name>
+		<SetCondition>ESKER_SHIP_CHAIR</SetCondition>
+		<Dialogue>
+			<Page>ESKER_SHIP_9</Page>
+			<Page>ESKER_SHIP_10</Page>
+		</Dialogue>
 	</DialogueNode>
 
 	<DialogueNode>
 		<SetPersistentCondition>ESKER_SHIP_DONE</SetPersistentCondition>
 		<Name>2</Name>
 		<Dialogue>
-			<Page>(ESKER_SHIP_4) Let's go! Merry Christmas!</Page>
+			<Page>ESKER_SHIP_4</Page>
 		</Dialogue>
 	</DialogueNode>
 
@@ -34,16 +48,21 @@
 		<Name>3</Name>
 		<EntryCondition>ESKER_SHIP_MET</EntryCondition>
 		<Dialogue>
-			<Page>(ESKER_SHIP_5) So, the flight is over?</Page>
+			<Page>ESKER_SHIP_5</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
 				<RequiredCondition>SHIP_NEAR_VILLAGE</RequiredCondition>
-				<Text>(ESKER_SHIP_7) Yes, we here! Let's go celebrate!</Text>
+				<Text>ESKER_SHIP_7</Text>
 				<DialogueTarget>2</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
-				<Text>(ESKER_SHIP_6) No, but I'll tell you when.</Text>
+				<Text>ESKER_SHIP_6</Text>
+			</DialogueOption>
+			<DialogueOption>
+			<CancelledCondition>ESKER_SHIP_CHAIR</CancelledCondition>
+				<Text>ESKER_SHIP_8</Text>
+				<DialogueTarget>4</DialogueTarget>				
 			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>

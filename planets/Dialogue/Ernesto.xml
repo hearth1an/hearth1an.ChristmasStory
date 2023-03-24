@@ -5,11 +5,11 @@
 		<Name>Start</Name>		
 		<EntryCondition>DEFAULT</EntryCondition>		
 		<Dialogue>
-			<Page>(ERNESTO_START_1) ...</Page>			
+			<Page>ERNESTO_START_1</Page>			
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>			   
-				<Text>(ERNESTO_START_3) Oh, Ernesto, you shine so bright!</Text>
+				<Text>ERNESTO_START_2</Text>
 				<DialogueTarget>3</DialogueTarget>
 			</DialogueOption>			
 		</DialogueOptionsList>
@@ -19,11 +19,11 @@
 		<Name>3</Name>
 		<SetPersistentCondition>ERNESTO_DONE</SetPersistentCondition>
 		<Dialogue>
-			<Page>(ERNESTO_START_1) ...</Page>					
+			<Page>ERNESTO_START_1</Page>					
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>			   
-				<Text>(ERNESTO_START_4) We need your lights to finally start!</Text>				
+				<Text>ERNESTO_START_3</Text>				
 				<ConditionToSet>START_END_EVENT</ConditionToSet>
 			</DialogueOption>			
 		</DialogueOptionsList>	

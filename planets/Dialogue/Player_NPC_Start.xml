@@ -5,13 +5,13 @@
 		<Name>Start</Name>
 		<EntryCondition>DEFAULT</EntryCondition>
 		<Dialogue>
-			<Page>(NPC_PLAYER_START_1)..Whoa?</Page>
+			<Page>NPC_PLAYER_START_1</Page>
 		</Dialogue>
 
 
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(NPC_PLAYER_START_2) May I invite you to...</Text>
+				<Text>NPC_PLAYER_START_2</Text>
 				<DialogueTarget>2</DialogueTarget>
 			</DialogueOption>
 		</DialogueOptionsList>
@@ -20,15 +20,15 @@
 	<DialogueNode>
 		<Name>2</Name>
 		<Dialogue>
-			<Page>(NPC_PLAYER_START_6) You?!</Page>
-			<Page>(NPC_PLAYER_START_6) Me?! You mean invite yourself?</Page>
-			<Page>(NPC_PLAYER_START_6) You mean invite yourself?</Page>
-			<Page>(NPC_PLAYER_START_7) To the Christmas party, huh?</Page>
-			<Page>(NPC_PLAYER_START_11) I have same memories as you, except for this loop, you know.</Page>
+			<Page>NPC_PLAYER_START_3</Page>
+			<Page>NPC_PLAYER_START_4</Page>
+			<Page>NPC_PLAYER_START_5</Page>
+			<Page>NPC_PLAYER_START_6</Page>
+			<Page>NPC_PLAYER_START_7</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>(NPC_PLAYER_START_12) I just had an idea. It's crazy but .. why not?</Text>
+				<Text>NPC_PLAYER_START_8</Text>
 				<DialogueTarget>7</DialogueTarget>
 			</DialogueOption>
 		</DialogueOptionsList>
@@ -39,29 +39,29 @@
 		<Name>7</Name>
 		<EntryCondition>NPC_PLAYER_START_MET</EntryCondition>
 		<Dialogue>
-			<Page>(NPC_PLAYER_START_10) ...Okay.. I guess.. are we going home?</Page>
+			<Page>NPC_PLAYER_START_9</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
 				<RequiredCondition>NPC_PLAYER_SHIP_NEAR</RequiredCondition>
-				<Text>(NPC_PLAYER_START_3) Let's get into the ship then.</Text>
+				<Text>NPC_PLAYER_START_10</Text>
 				<ConditionToSet>NPC_PLAYER_START_DONE</ConditionToSet>
 				<DialogueTarget>5</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
 				<RequiredCondition>NPC_PLAYER_SHIP_FAR</RequiredCondition>
-				<Text>(NPC_PLAYER_START_4) Just don't go anywhere, I'll take my ship closer.</Text>
+				<Text>NPC_PLAYER_START_11</Text>
 				<ConditionToSet>NPC_PLAYER_START_MET</ConditionToSet>
 				<DialogueTarget>4</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
 				<RequiredCondition>SHIP_DESTROYED</RequiredCondition>
-				<Text>(NPC_PLAYER_START_5) I'm so sorry... but ship is not functioning... Unfortunately I can't help.</Text>
+				<Text>NPC_PLAYER_START_12</Text>
 				<ConditionToSet>NPC_PLAYER_START_FAILED</ConditionToSet>
 				<DialogueTarget>8</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
-				<Text>(NPC_PLAYER_START_20) I'll be right back.</Text>
+				<Text>NPC_PLAYER_START_13</Text>
 			</DialogueOption>
 
 		</DialogueOptionsList>
@@ -70,7 +70,7 @@
 	<DialogueNode>
 		<Name>4</Name>
 		<Dialogue>
-			<Page>(NPC_PLAYER_START_8) See ya!</Page>
+			<Page>NPC_PLAYER_START_14</Page>
 		</Dialogue>
 	</DialogueNode>
 
@@ -78,8 +78,8 @@
 		<Name>5</Name>
 		<SetCondition>NPC_PLAYER_START_DONE</SetCondition>
 		<Dialogue>
-			<Page>(NPC_PLAYER_START_21) Cool, I'll wait you in my..</Page>
-			<Page>(NPC_PLAYER_START_21) ..your ship.</Page>
+			<Page>NPC_PLAYER_START_15</Page>
+			<Page>NPC_PLAYER_START_16</Page>
 		</Dialogue>
 	</DialogueNode>
 
@@ -88,8 +88,8 @@
 		<Name>8</Name>
 		<EntryCondition>NPC_PLAYER_START_FAILED</EntryCondition>
 		<Dialogue>
-			<Page>(NPC_PLAYER_START_9) I was wondering which version of us was better...</Page>
-			<Page>(NPC_PLAYER_START_10) Now I know! I'm definitely better pilot than you!</Page>
+			<Page>NPC_PLAYER_START_17</Page>
+			<Page>NPC_PLAYER_START_18</Page>
 
 		</Dialogue>
 	</DialogueNode>

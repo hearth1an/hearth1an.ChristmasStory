@@ -5,17 +5,17 @@
 		<Name>Start</Name>		
 		<EntryCondition>DEFAULT</EntryCondition>		
 		<Dialogue>
-			<Page>(SLATE_FINAL_1) You did very good, hatchling!</Page>
-			<Page>(SLATE_FINAL_2) All travellers are back, I already can feel the Christmas magic!</Page>			
+			<Page>SLATE_FINAL_1</Page>
+			<Page>SLATE_FINAL_2</Page>			
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>			   
-				<Text>(SLATE_FINAL_3) I glad all friends are here.</Text>
+				<Text>SLATE_FINAL_3</Text>
 				<DialogueTarget>2</DialogueTarget>
 				<ConditionToSet>SLATE_FINAL_DONE</ConditionToSet>
 			</DialogueOption>
 			<DialogueOption>				
-				<Text>(SLATE_START_4) What do I do next?</Text>
+				<Text>SLATE_FINAL_4</Text>
 				<DialogueTarget>3</DialogueTarget>
 			</DialogueOption>			
 		</DialogueOptionsList>
@@ -24,11 +24,11 @@
 	<DialogueNode>
 		<Name>2</Name>
 		<Dialogue>
-			<Page>(SLATE_FINAL_5) Sure! This probably will never happen without your help. </Page>						
+			<Page>SLATE_FINAL_5</Page>						
 		</Dialogue>
 		<DialogueOptionsList>			
 			<DialogueOption>				
-				<Text>(SLATE_START_4) What do I do next?</Text>
+				<Text>SLATE_FINAL_4</Text>
 				<DialogueTarget>3</DialogueTarget>
 				<ConditionToSet>SLATE_FINAL_DONE</ConditionToSet>
 			</DialogueOption>		
@@ -38,11 +38,11 @@
 	<DialogueNode>
 		<Name>3</Name>
 		<Dialogue>
-			<Page>(SLATE_FINAL_5) You better ask Hornfels, but I'm pretty sure we're almost ready.</Page>						
+			<Page>SLATE_FINAL_6</Page>						
 		</Dialogue>
 		<DialogueOptionsList>			
 			<DialogueOption>				
-				<Text>(SLATE_START_6) Alright.</Text>
+				<Text>SLATE_FINAL_7</Text>
 				<DialogueTarget>END</DialogueTarget>				
 			</DialogueOption>		
 		</DialogueOptionsList>
@@ -51,7 +51,7 @@
 	<DialogueNode>
 		<Name>END</Name>
 		<Dialogue>
-			<Page>(SLATE_FINAL_8) See ya!</Page>						
+			<Page>SLATE_FINAL_8</Page>						
 		</Dialogue>		
 	</DialogueNode>
 
@@ -59,15 +59,15 @@
 		<Name>4</Name>		
 		<EntryCondition>SLATE_FINAL_DONE</EntryCondition>		
 		<Dialogue>
-			<Page>(SLATE_FINAL_9) Huh?</Page>						
+			<Page>SLATE_FINAL_9</Page>						
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>				
-				<Text>(SLATE_START_4) What do I do next?</Text>
+				<Text>SLATE_FINAL_4</Text>
 				<DialogueTarget>3</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>				
-				<Text>(SLATE_START_7) Nothing.</Text>
+				<Text>SLATE_FINAL_10</Text>
 				<DialogueTarget>END</DialogueTarget>
 			</DialogueOption>
 		</DialogueOptionsList>

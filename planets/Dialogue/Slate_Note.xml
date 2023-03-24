@@ -5,7 +5,7 @@
     <Name>Start</Name>
     <EntryCondition>DEFAULT</EntryCondition>
     <Dialogue>
-      <Page>(SLATE_NOTE_1_) Hey, sleepyhead! Find me in Village when you wake up, we need to talk. <![CDATA[<Pause>]]> Slate.</Page>
+      <Page>SLATE_NOTE_1</Page>
     </Dialogue>
   </DialogueNode>
 </DialogueTree>

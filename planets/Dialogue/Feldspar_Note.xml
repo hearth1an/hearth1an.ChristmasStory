@@ -5,7 +5,7 @@
 		<Name>Start</Name>
 		<EntryCondition>DEFAULT</EntryCondition>
 		<Dialogue>
-			<Page>Feldspar_Note</Page>
+			<Page>FELDSPAR_NOTE</Page>
 		</Dialogue>
 		<SetPersistentCondition>FELDSPAR_START_ENTRY</SetPersistentCondition>
 	</DialogueNode>
