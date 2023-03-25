@@ -185,6 +185,17 @@ namespace ChrismasStory
 
 				SearchUtilities.Find("DB_AnglerNestDimension_Body/Sector_AnglerNestDimension/Traveller_HEA_Feldspar").SetActive(false);
 
+				//var goodTorch = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Prisoner_Vision_Torch");
+				var badTorch = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Bad_Vision_Torch");
+
+				/*
+				goodTorch.transform.parent = badTorch.transform.parent;
+				goodTorch.transform.localPosition = badTorch.transform.localPosition;
+				goodTorch.transform.localRotation = badTorch.transform.localRotation;
+				*/
+				
+			
+
 				/*
 				var text = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Text");
 				var stone = SearchUtilities.Find("TimberHearth_Body/Invite_Stone/AnimRoot");
@@ -344,8 +355,8 @@ namespace ChrismasStory
                 SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Sector_PrisonInterior/Interactibles_PrisonInterior/Prefab_IP_Sarcophagus/Prefab_IP_SleepingMummy_v2 (PRISONER)/Mummy_IP_ArtifactAnim").SetActive(false);
                 SearchUtilities.Find("Prisoner_Dialogue").SetActive(false);
                 SearchUtilities.Find("Prisoner_Clone").SetActive(false);
-                SearchUtilities.Find("Prisoner_Vision_Torch").SetActive(false);
-                SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Prisoner_Vision_Torch/VisionBeam").SetActive(true);
+                SearchUtilities.Find("New_Vision_Torch").SetActive(false);
+                //SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Prisoner_Vision_Torch/VisionBeam").SetActive(true);
                 SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Effects_IP_SIM_VisionTorch").SetActive(false);
                 SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/Prefab_IP_VisionTorchProjector").transform.localPosition = new Vector3(-5f, -2f, -35f);
                 SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Volumes_PrisonCell/ElevatorLightsOutTrigger").SetActive(false);

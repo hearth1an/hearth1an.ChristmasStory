@@ -25,7 +25,7 @@ namespace ChristmasStory.Components.Animation
             Instance._animator.PlayTurnOnLightsAnimation();
             SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Interactibles_PrisonCell/PrisonerSequence/VisionTorchWallSocket/Prefab_IP_VisionTorchItem").GetComponent<VisionTorchItem>()._interactable = true;
             var prisonersOriginalTorch = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/Prefab_IP_VisionTorchProjector");
-            var prisonersTorch = SearchUtilities.Find("Prisoner_Vision_Torch");
+            var prisonersTorch = SearchUtilities.Find("New_Vision_Torch");
             SearchUtilities.Find("Prisoner_Clone").SetActive(true);
             SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Effects_IP_SIM_VisionTorch").SetActive(true);
             prisonersTorch.SetActive(true);           

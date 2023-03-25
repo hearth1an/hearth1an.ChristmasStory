@@ -1,8 +1,71 @@
 {
 	"$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
-	"name": "Dream World",	
+	"name": "Dream World",
 	"Props": {
+		"slideShows": [
+			{
+				"position": {
+					"x": -6.7623,
+					"y": -293.5659,
+					"z": 676.644
+				},
+				"rotation": {
+					"x": 348.0272,
+					"y": 95.5138,
+					"z": 348.0083
+				},
+				"type": "standingVisionTorch",
+				"slides": [
+					{ "imagePath": "planets/Content/visions/Slide (2).png" },
+					{ "imagePath": "planets/Content/visions/Slide (3).png" },
+					{ "imagePath": "planets/Content/visions/Slide (4).png" },
+					{ "imagePath": "planets/Content/visions/Slide (5).png" },
+					{ "imagePath": "planets/Content/visions/Slide (6).png" },
+					{ "imagePath": "planets/Content/visions/Slide (7).png" },
+					{ "imagePath": "planets/Content/visions/Slide (8).png" },
+					{ "imagePath": "planets/Content/visions/Slide (9).png" },
+					{ "imagePath": "planets/Content/visions/Slide (10).png" }
+				],
+				"rename": "New_Vision_Torch"
+			},
+			{
+				"position": {
+					"y": 2.92,
+					"z": 0.369
+				},
+				"type": "visionTorchTarget",
+				"rotation": {},
+				"slides": [
+					{ "imagePath": "planets/Content/visions/Slide (2).png" },
+					{ "imagePath": "planets/Content/visions/Slide (3).png" },
+					{ "imagePath": "planets/Content/visions/Slide (4).png" },
+					{ "imagePath": "planets/Content/visions/Slide (5).png" },
+					{ "imagePath": "planets/Content/visions/Slide (6).png" },
+					{ "imagePath": "planets/Content/visions/Slide (7).png" },
+					{ "imagePath": "planets/Content/visions/Slide (8).png" },
+					{ "imagePath": "planets/Content/visions/Slide (9).png" },
+					{ "imagePath": "planets/Content/visions/Slide (10).png" }
+				],
+				"parentPath": "Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner/Ghostbird_IP_ANIM/Ghostbird_Skin_01:Ghostbird_Rig_V01:Base/Ghostbird_Skin_01:Ghostbird_Rig_V01:Root/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine01/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine02/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine03/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine04/Ghostbird_Skin_01:Ghostbird_Rig_V01:Neck01/Ghostbird_Skin_01:Ghostbird_Rig_V01:Neck02/Ghostbird_Skin_01:Ghostbird_Rig_V01:Head",
+				"isRelativeToParent": true,
+				"rename": "Prisoner_Vision"
+			}
+
+		],
 		"details": [
+			{
+				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/Prefab_IP_VisionTorchProjector/Effects_IP_SIM_VisionTorch",				
+				"position": {
+					"x": -6.762108,
+					"y": -293.5659,
+					"z": 676.5439
+				},
+				"rotation": {
+					"x": 11.8544,
+					"y": 263.7103,
+					"z": 6.17269945
+				}
+			},
 			{
 				"rename": "Prisoner_Clone",
 				"assetBundle": "planets/assetbundle/prisoner",
@@ -15,21 +78,6 @@
 				"rotation": {
 					"y": 81.6854
 				}
-			},
-			{
-				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/Prefab_IP_VisionTorchProjector/Effects_IP_SIM_VisionTorch",
-				"position": {
-					"x": -6.762108,
-					"y": -293.5659,
-					"z": 676.5439
-				},
-				"rotation": {
-					"x": 11.8544,
-					"y": 263.7103,
-					"z": 6.17269945
-				},
-				"parentPath": "Sector_DreamWorld/Prisoner_Vision_Torch",
-				"isRelativeToParent": true
 			},
 			{
 				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_DreamZone_3/Sector_Hotel/Ghosts_Hotel/GhostNodeMap_Depths/Prefab_IP_GhostBird_Bou/Ghostbird_IP_ANIM",
@@ -411,55 +459,8 @@
 				"isRelativeToParent": true,
 				"rename": "Prisoner_Dialogue"
 			}
-		],
-		"slideShows": [
-			{
-				"position": {
-					"y": 2.92,
-					"z": 0.369
-				},
-				"type": "visionTorchTarget",
-				"rotation": {},
-				"slides": [
-					{ "imagePath": "planets/Content/visions/Slide (2).png" },
-					{ "imagePath": "planets/Content/visions/Slide (3).png" },
-					{ "imagePath": "planets/Content/visions/Slide (4).png" },
-					{ "imagePath": "planets/Content/visions/Slide (5).png" },
-					{ "imagePath": "planets/Content/visions/Slide (6).png" },
-					{ "imagePath": "planets/Content/visions/Slide (7).png" },
-					{ "imagePath": "planets/Content/visions/Slide (8).png" },
-					{ "imagePath": "planets/Content/visions/Slide (9).png" },
-					{ "imagePath": "planets/Content/visions/Slide (10).png" }
-				],
-				"parentPath": "Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner/Ghostbird_IP_ANIM/Ghostbird_Skin_01:Ghostbird_Rig_V01:Base/Ghostbird_Skin_01:Ghostbird_Rig_V01:Root/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine01/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine02/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine03/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine04/Ghostbird_Skin_01:Ghostbird_Rig_V01:Neck01/Ghostbird_Skin_01:Ghostbird_Rig_V01:Neck02/Ghostbird_Skin_01:Ghostbird_Rig_V01:Head",
-				"isRelativeToParent": true,
-				"rename": "Prisoner_Vision"
-			},
-			{
-
-
-				"position": {
-					"x": -6.7623,
-					"y": -293.5659,
-					"z": 676.644
-				},
-				"rotation": {
-					"x": 348.0272,
-					"y": 95.5138,
-					"z": 348.0083
-				},
-				"type": "standingVisionTorch",
-
-				"slides": [
-					{
-						"imagePath": "planets/Content/visions/HearthianFlushed.png",
-						"blackFrameDuration": 5
-
-					}
-				],
-				"rename": "Prisoner_Vision_Torch"
-			}
 		]
+
 	},
 	"ReferenceFrame": {},
 	"ShipLog": {},
