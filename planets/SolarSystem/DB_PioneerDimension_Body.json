@@ -35,9 +35,9 @@
 				"name": "Signal_Harmonica",
 				"frequency": "Traveler",
 				"position": {
-					"x": 264.429779,
-					"y": -195.167542,
-					"z": -262.286377
+					"x": -239.5789,
+					"y": -285.2732,
+					"z": -609.4159
 				},
 				"audio": "TravelerFeldspar",
 				"detectionRadius": 50,

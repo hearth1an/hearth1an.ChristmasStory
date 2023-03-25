@@ -46,6 +46,7 @@ namespace ChrismasStory.Components
 			SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Prisoner_Clone/Ghostbird_IP_ANIM").SetActive(false);
 			SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Prisoner_Clone/Prisoner_Lantern").SetActive(false);
 			SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Prisoner_Clone/Ghostbird_Skin_01:Ghostbird_v004:Ghostbird_IP").SetActive(false);
+			SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Prisoner_Clone/Ghostbird_Skin_01:Ghostbird_Rig_V01:Base").SetActive(false);
 			SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Interactibles_PrisonCell/PrisonerSequence/LanternTableSocket").SetActive(false);
 			SearchUtilities.Find("Prefab_IP_GhostBird_Prisoner").SetActive(false);
 			SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostDirector_Prisoner/PrisonerTrigger_Emerge").SetActive(false);

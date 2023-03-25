@@ -77,17 +77,25 @@
 
 	<DialogueNode>
 		<Name>4</Name>
-		<SetCondition>HAL_START_DONE</SetCondition>
-		<EntryCondition>HAL_START_DONE</EntryCondition>
+		<SetCondition>HAL_START_DONE</SetCondition>	
+		<EntryCondition>HAL_START_DONE</EntryCondition>		
 		<Dialogue>
 			<Page>HAL_START_14</Page>						
 		</Dialogue>
-		<DialogueOptionsList>
-	    <DialogueOption>
+		<DialogueOptionsList>	    
+		<DialogueOption>
+			    <RequiredPersistentCondition>HAL_ROCK_TOLD</RequiredPersistentCondition>
+				<RequiredPersistentCondition>LOOP_COUNT_GOE_1</RequiredPersistentCondition>				
+				<CancelledPersistentCondition>SOLANUM_DONE</CancelledPersistentCondition>		   
+				<Text>HAL_START_3</Text>
+				<DialogueTarget>5</DialogueTarget>				
+		</DialogueOption>
+		<DialogueOption>
 			<CancelledPersistentCondition>HAL_ROCK_TOLD</CancelledPersistentCondition>		   
 			<Text>HAL_START_5</Text>
 			<DialogueTarget>3</DialogueTarget>				
 	    </DialogueOption>		
 		</DialogueOptionsList>	
 	</DialogueNode>
+	
 </DialogueTree>

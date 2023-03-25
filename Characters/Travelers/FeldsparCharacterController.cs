@@ -23,7 +23,32 @@ namespace ChrismasStory.Characters.Travelers
 			shipCharacter = SearchUtilities.Find("Ship_Body/ShipSector/Ship_Feldspar");
             treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Feldspar");
 
+			SearchUtilities.Find("DB_PioneerDimension_Body/Sector_PioneerDimension/Interactables_PioneerDimension/SeedWarp_ToPioneer (1)/Signal_Harmonica").SetActive(false);
+
+			var signalNest = SearchUtilities.Find("");
+			var signalPioneer = SearchUtilities.Find("DB_PioneerDimension_Body/Sector_PioneerDimension/Interactables_PioneerDimension/SeedWarp_ToPioneer (1)/Signal_Harmonica");
+			var signalHub = SearchUtilities.Find("DB_HubDimension_Body/Sector_HubDimension/Signal_Signal_Harmonica");
+
+			signalHub.SetActive(false);
+			signalPioneer.SetActive(false);
+			originalCharacter.SetActive(false);			
+
+			ChristmasStory.Instance.ModHelper.Events.Unity.RunWhen(() => Conditions.Get(Conditions.PERSISTENT.FELDSPAR_START_ENTRY), () =>
+            {
+
+                // Regular Feldspar props
+                SearchUtilities.Find("DB_ClusterDimension_Body/Sector_ClusterDimension/Interactables_ClusterDimension/InnerWarp_ToPioneer/").SetActive(false);
+                SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Interactables_ImpactCrater/BrambleSeed/InnerWarp_ToPioneer (1)/Signal_Harmonica").SetActive(false);
+                SearchUtilities.Find("DB_HubDimension_Body/Sector_HubDimension/Signal_Signal_Harmonica_2").SetActive(false);
+
+				// New Feldpar
+				signalHub.SetActive(true);
+				signalPioneer.SetActive(true);
+				originalCharacter.SetActive(true);
+
+			});
 			
+
 
 			base.Start();
 		}
@@ -49,14 +74,18 @@ namespace ChrismasStory.Characters.Travelers
 					if (Conditions.Get(Conditions.CONDITION.FELDSPAR_START_DONE))
 					{
 						ChangeState(STATE.ON_SHIP);
-						Invoke("SpawnAnglers", 4f);
+						Invoke("SpawnAnglers", 5f);
+						
+						SearchUtilities.Find("DarkBramble_Body/Sector_DB/Interactables_DB/EntranceWarp_ToHub/Signal_Harmonica").SetActive(false);
+						SearchUtilities.Find("DB_PioneerDimension_Body/Sector_PioneerDimension/Interactables_PioneerDimension/SeedWarp_ToPioneer (1)/Signal_Harmonica").SetActive(false);
+						SearchUtilities.Find("DB_HubDimension_Body/Sector_HubDimension/Signal_Signal_Harmonica").SetActive(false);
 						SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Interactables_ImpactCrater/BrambleSeed/InnerWarp_ToPioneer (1)/Signal_Harmonica").SetActive(false);
 					}
 					break;
 				case STATE.ON_SHIP:
 					if (Conditions.Get(Conditions.CONDITION.FELDSPAR_SHIP_DONE))
 					{
-						ChangeState(STATE.AT_TREE);
+						ChangeState(STATE.AT_TREE);	
 					}
 					break;
 			}

@@ -13,7 +13,7 @@ namespace ChrismasStory.Characters.Travelers
 	{
 		public override Conditions.PERSISTENT DoneCondition => Conditions.PERSISTENT.PRISONER_DONE;
 		public static PrisonerCharacterController Instance;
-		private GameObject _lantern;
+		private GameObject _lantern;		
 
 		public override void Start()
 		{
@@ -27,10 +27,18 @@ namespace ChrismasStory.Characters.Travelers
 			controller.enabled = true;
 			controller.SetLit(true);
 			controller.SetHeldByPlayer(false);
-			controller._flameStrength = 100f;
+			//controller._flameStrength = 100f;
 			controller.UpdateVisuals();
 			controller.GetComponent<DreamLanternItem>().EnableInteraction(false);
-			
+
+			ChristmasStory.Instance.ModHelper.Events.Unity.RunWhen(() => Locator.GetRingWorldController()._damBroken, () =>
+			{
+				SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Sector_PrisonInterior/Volumes_PrisonInterior/UnderwaterAudioVolume_Prison").SetActive(false);
+				SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Structures_PrisonDocks/Prison_Zone4/Geo_Prison/Effects_IP_PrisonWater").SetActive(false);
+				SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Structures_PrisonDocks/Prison_Zone4/Effects_Prison").SetActive(false);
+				SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Sector_PrisonInterior/Volumes_PrisonInterior/WaterVolume_Prison").SetActive(false);
+			});
+
 			//Delay.FireOnNextUpdate(() => controller.transform.Find("Spotlight_Lantern").GetComponent<OWLight2>()._intensityScale = 0.2f);
 			var prisonerArtifact = SearchUtilities.Find("Prisoner_Artifact").GetComponent<DreamLanternController>();
 			HeldItemHandler.Instance.ItemDropped.AddListener(OnItemDropped);
@@ -38,6 +46,15 @@ namespace ChrismasStory.Characters.Travelers
 			ChristmasStory.Instance.ModHelper.Events.Unity.FireOnNextUpdate(() =>
 			{
 				originalCharacter.SetActive(true);
+				if (Conditions.Get(Conditions.PERSISTENT.PRISONER_DONE))
+				{
+					SearchUtilities.Find("Prisoner_Artifact").SetActive(false);
+					SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner").SetActive(false); ;
+					SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostDirector_Prisoner").SetActive(false); 
+					SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Interactibles_PrisonCell/PrisonerSequence/LanternTableSocket").SetActive(false);
+					SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Effects_PrisonCell/DarknessPlane").SetActive(false);
+					ChristmasStory.WriteLine("Prisoner is done, disabling them in DreamWorld");
+				}
 			});
 			
 
@@ -48,6 +65,8 @@ namespace ChrismasStory.Characters.Travelers
 		{
 
 		}
+
+		
 		protected override void Dialogue_OnEndConversation()
 		{
 			if (Conditions.Get(Conditions.CONDITION.PRISONER_START))

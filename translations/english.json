@@ -201,6 +201,7 @@
         "HAL_START_12": "That’s a very specific text. Are we celebrating something? Ah, actually nevermind.",
         "HAL_START_13": "Let’s see if I can do this...",
         "HAL_START_14": "Good luck in space, friend!",
+        "HAL_START_15": "Thanks! I gotta go.",
 
         // Hal final
         "HAL_FINAL_1": "Whoa, I see now what you meant about celebrating!",
@@ -329,6 +330,7 @@
 
         // Prisoner start
         "PRISONER_START_1": "...",
+        "PRISONER_START_2": "Um... Hello!",
 
         // Riebeck ship
         "RIEBECK_SHIP_1": "I like your ship! It’s very cozy. Please let me know when we will land near the village.",
@@ -426,12 +428,11 @@
         "SLATE_NOTE_1": "Hey, sleepyhead! Find me in Village when you wake up, we need to talk. <![CDATA[<Pause>]]> Slate.",
 
         // Solanum response
-
         "SOLANUM_WALL_TEXT": "SOLANUM: This encounter feels special. I'm not sure but let's try this: take stone that looks like my mask to the place needed. I'll do my best.",
 
         // Solanum start
         "SOLANUM_START_1": "...",
-        "SOLANUM_START_2": "Hey! I got something for you."
+        "SOLANUM_START_2": "Hey! Can you read this please? I can drop it down for better view."
 
 
     },

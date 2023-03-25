@@ -8,8 +8,59 @@
 		"hasSnow": true,
 		"size": 300
 	},
+
 	"Props": {
+		"remotes": [
+			{
+				"id": "Hal's",
+				"decalPath": "planets/Content/writing.png",
+				
+				"stones": [
+					{
+						"position": {
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						"rotation": {
+							"x": 338.7445,
+							"y": 274.6205,
+							"z": 265.6711
+						},
+						"rename": "Invite_Stone",
+						"parentPath": "Sector_TH"
+					}
+				]
+			}
+		],
+		"nomaiText": [
+			{
+				"arcInfo": [
+					{
+						"position": {
+							"x": 0.4,
+							"y": 0.5
+						},
+						"type": "adult",
+						"variation": 28,
+						"zRotation": 93.0
+					}
+				],
+				"position": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+
+				"seed": 42,
+				"type": "wall",
+				"location": "unspecified",
+				"xmlFile": "planets/Text/Hal_Text.xml",				
+				"rename": "Hal_Text"
+			}
+		],
 		"details": [
+
 			{
 				"assetBundle": "planets/assetbundle/meshasset",
 				"path": "Assets/Prefabs/Collider_Geometry_LowerVillage_0_Fixed.prefab",
@@ -274,7 +325,7 @@
 					"y": 75.3385,
 					"z": 90
 				},
-				"scale": 1,
+				"scale": 1
 
 			},
 			{
@@ -498,6 +549,7 @@
 				}
 			}
 		],
+
 		"dialogue": [
 			{
 				"position": {
@@ -564,7 +616,7 @@
 					"x": 0,
 					"y": 1.5,
 					"z": 0
-				},				
+				},
 				"radius": 1,
 				"rename": "Hal_Dialogue",
 				"range": 1
@@ -712,7 +764,7 @@
 					"x": 0,
 					"y": 2,
 					"z": 0
-				},				
+				},
 				"rename": "Slate_Trigger",
 				"lookAtRadius": 6,
 				"radius": 1,
@@ -747,29 +799,10 @@
 				"range": 2
 			}
 
-		],
-
-		"remotes": [
-			{
-				"id": "Hal's",
-				"decalPath": "planets/Content/writing.png",
-				"stones": [
-					{
-						"position": {
-							"x": 0,
-							"y": 0,
-							"z": 0
-						},
-						"rotation": {
-							"x": 338.7445,
-							"y": 274.6205,
-							"z": 265.6711
-						},
-						"rename": "Invite_Stone"
-					}
-				]
-			}
 		]
-		
+
+
+
+
 	}
 }

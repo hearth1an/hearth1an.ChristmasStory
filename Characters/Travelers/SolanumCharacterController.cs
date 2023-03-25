@@ -65,7 +65,9 @@ namespace ChrismasStory.Characters.Travelers
 		protected override IEnumerator DirectToTree(STATE state)
 		{
 			// Plays for 15.33s
+			PlayerEffectController.PlayAudioOneShot(AudioType.MemoryUplink_Start, 1f);
 			PlayerEffectController.PlayAudioOneShot(AudioType.EYE_QuantumFoamApproach, 1f);
+
 
 			yield return new WaitForSeconds(15f);
 

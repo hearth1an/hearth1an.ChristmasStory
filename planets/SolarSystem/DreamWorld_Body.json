@@ -437,7 +437,7 @@
 			},
 			{
 
-				"rename": "Prisoner_Vision_Torch",
+
 				"position": {
 					"x": -6.7623,
 					"y": -293.5659,
@@ -449,18 +449,15 @@
 					"z": 348.0083
 				},
 				"type": "standingVisionTorch",
-				"slides": [
-					{ "imagePath": "planets/Content/visions/Slide (2).png" },
-					{ "imagePath": "planets/Content/visions/Slide (3).png" },
-					{ "imagePath": "planets/Content/visions/Slide (4).png" },
-					{ "imagePath": "planets/Content/visions/Slide (5).png" },
-					{ "imagePath": "planets/Content/visions/Slide (6).png" },
-					{ "imagePath": "planets/Content/visions/Slide (7).png" },
-					{ "imagePath": "planets/Content/visions/Slide (8).png" },
-					{ "imagePath": "planets/Content/visions/Slide (9).png" },
-					{ "imagePath": "planets/Content/visions/Slide (10).png" }
-				]
 
+				"slides": [
+					{
+						"imagePath": "planets/Content/visions/HearthianFlushed.png",
+						"blackFrameDuration": 5
+
+					}
+				],
+				"rename": "Prisoner_Vision_Torch"
 			}
 		]
 	},

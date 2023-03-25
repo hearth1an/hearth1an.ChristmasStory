@@ -12,10 +12,7 @@
 				<RequiredCondition>HOLDING_INVITE_STONE</RequiredCondition>
 				<Text>SOLANUM_START_2</Text>
 				<ConditionToSet>SOLANUM_START</ConditionToSet>
-			</DialogueOption>
-			<DialogueOption>
-				<Text>SOLANUM_START_1</Text>
-			</DialogueOption>
+			</DialogueOption>			
 		</DialogueOptionsList>
 	</DialogueNode>
 

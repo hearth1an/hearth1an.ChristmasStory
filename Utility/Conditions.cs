@@ -74,6 +74,7 @@ namespace ChristmasStory.Utility
 
             ESKER_DONE,
             FELDSPAR_DONE,
+            FELDSPAR_START_ENTRY,
             GABBRO_DONE,
             RIEBECK_DONE,
             SOLANUM_DONE,

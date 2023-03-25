@@ -9,7 +9,7 @@
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>				
-				<Text>PRISONER_START_1</Text>
+				<Text>PRISONER_START_2</Text>
 				<ConditionToSet>PRISONER_START</ConditionToSet>
 			</DialogueOption>			
 		</DialogueOptionsList>

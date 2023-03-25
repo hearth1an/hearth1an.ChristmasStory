@@ -18,6 +18,25 @@
 				}
 			},
 			{
+				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Interactables_Crossroads/VisibleFrom_BH/GravityCrystals/OtherComponentsGroup/Prefab_NOM_GravityCrystal",
+				"parentPath": "Sector_AnglerNestDimension/Traveller_HEA_Feldspar",
+				"removeChildren": [ "AudioSource_GravityCrystal", "Light_NOM_GravityCrystal" ],
+				"rename": "Feldspar_Gravity",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 1.3,
+					"y": -0.1,
+					"z": -0.5
+				},
+				"rotation": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"scale": 0.6
+			},
+
+			{
 				"path": "DB_HubDimension_Body/Sector_HubDimension/Interactables_HubDimension/Anglerfish_Body",
 				"removeChildren": [ "Beast_Anglerfish/B_angler_root/B_angler_body01/B_angler_body02/B_angler_antenna01/B_angler_antenna02/B_angler_antenna03/B_angler_antenna04/B_angler_antenna05/B_angler_antenna06/B_angler_antenna07/B_angler_antenna08/B_angler_antenna09/B_angler_antenna10/B_angler_antenna11/B_angler_antenna12_end/Lure_FogGlow" ],
 				"isRelativeToParent": true,
@@ -32,7 +51,7 @@
 			{
 				"path": "DB_HubDimension_Body/Sector_HubDimension/Interactables_HubDimension/Anglerfish_Body",
 				"removeChildren": [ "Beast_Anglerfish/B_angler_root/B_angler_body01/B_angler_body02/B_angler_antenna01/B_angler_antenna02/B_angler_antenna03/B_angler_antenna04/B_angler_antenna05/B_angler_antenna06/B_angler_antenna07/B_angler_antenna08/B_angler_antenna09/B_angler_antenna10/B_angler_antenna11/B_angler_antenna12_end/Lure_FogGlow" ],
-				"isRelativeToParent": true,				
+				"isRelativeToParent": true,
 				"position": {
 					"x": 9,
 					"y": -10,

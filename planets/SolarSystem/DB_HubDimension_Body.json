@@ -14,6 +14,18 @@
 				"audio": "TravelerFeldspar",
 				"detectionRadius": 50,
 				"identificationRadius": 5
+			},
+			{
+				"name": "Signal_Harmonica_2",
+				"frequency": "Traveler",
+				"position": {
+					"x": 80.71191,
+					"y": -672.782,
+					"z": -15.61366
+				},
+				"audio": "TravelerFeldspar",
+				"detectionRadius": 50,
+				"identificationRadius": 5
 			}
 		]
 	}

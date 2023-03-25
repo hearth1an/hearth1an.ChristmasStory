@@ -95,12 +95,13 @@ namespace ChrismasStory
 			{
 				Conditions.Set(Conditions.PERSISTENT.CHERT_PHRASE_KNOWN_NEXT_LOOP, true);
 				WriteLine("Chert phrase known.");
-			}
+			}			
 			if (Conditions.Get(Conditions.PERSISTENT.SOLANUM_DONE))
 			{
 				ModHelper.Console.WriteLine("Solanum event completed.");
 			}
-			if (Conditions.Get(Conditions.PERSISTENT.CHERT_DONE) && Conditions.Get(Conditions.PERSISTENT.ESKER_DONE) && Conditions.Get(Conditions.PERSISTENT.FELDSPAR_DONE) && Conditions.Get(Conditions.PERSISTENT.GABBRO_DONE) && Conditions.Get(Conditions.PERSISTENT.RIEBECK_DONE))
+			
+            if (Conditions.Get(Conditions.PERSISTENT.CHERT_DONE) && Conditions.Get(Conditions.PERSISTENT.ESKER_DONE) && Conditions.Get(Conditions.PERSISTENT.FELDSPAR_DONE) && Conditions.Get(Conditions.PERSISTENT.GABBRO_DONE) && Conditions.Get(Conditions.PERSISTENT.RIEBECK_DONE))
             {
 				Conditions.Set(Conditions.PERSISTENT.ALL_TRAVELLERS_DONE, true);
 				WriteLine("All travellers done.");
@@ -156,6 +157,7 @@ namespace ChrismasStory
 				SearchUtilities.Find("DB_HubDimension_Body/Sector_HubDimension/Interactables_HubDimension/InnerWarp_ToCluster/Signal_Harmonica").SetActive(false);
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_StartingCamp/Characters_StartingCamp/Villager_HEA_Slate").SetActive(false);
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Porphy/ConversationZone").SetActive(false);
+
 			}
 			catch (Exception ex)
 			{
@@ -172,7 +174,8 @@ namespace ChrismasStory
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Center_Barrel").transform.localScale = new Vector3(7f, 4.5f, 7f);
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Center_Barrel").AddComponent<OWCapsuleCollider>();
 
-				SearchUtilities.Find("Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/").AddComponent<OWCapsuleCollider>();
+				SearchUtilities.Find("Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl").AddComponent<OWCapsuleCollider>();
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Dialogue").SetActive(true);
 
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village/ConversationZone").transform.localPosition = new Vector3(0, 2f, 0);
 
@@ -180,7 +183,19 @@ namespace ChrismasStory
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Dialogue_ConversationTrigger").transform.localPosition = new Vector3(0, 0f, 0);				
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Dialogue_2_ConversationTrigger").transform.localPosition = new Vector3(0, 0f, 0);
 
+				SearchUtilities.Find("DB_AnglerNestDimension_Body/Sector_AnglerNestDimension/Traveller_HEA_Feldspar").SetActive(false);
 
+				/*
+				var text = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Text");
+				var stone = SearchUtilities.Find("TimberHearth_Body/Invite_Stone/AnimRoot");
+
+				text.transform.parent = stone.transform.parent;
+				text.transform.localPosition = new Vector3(0, 0, 0);
+				text.DestroyAllComponents<BoxCollider>();
+				text.DestroyAllComponents<OWCollider>();
+				*/ 
+
+				/*
 				var prisonerArtifact = SearchUtilities.Find("Prisoner_Artifact").GetComponent<DreamLanternController>();
 
 				prisonerArtifact.enabled = true;
@@ -193,7 +208,8 @@ namespace ChrismasStory
 					prisonerArtifact.SetLit(true);
 					prisonerArtifact.UpdateVisuals();
 				});
-				
+				*/
+
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Christmas_Tree").AddComponent<OWCapsuleCollider>();
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Christmas_Tree").GetComponent<CapsuleCollider>().radius = 0.5f;
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Prefab_HEA_ChertShip").AddComponent<OWCapsuleCollider>();
@@ -528,14 +544,16 @@ namespace ChrismasStory
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Marl_Dialogue_Final").SetActive(true);
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Marl_Dialogue").SetActive(false);
 			}
-			var alpine = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Prefab_TH_Alpine").GetComponent<Renderer>();			
-				
-			// Snow on ground
-			var thTerrain = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/OtherComponentsGroup/ControlledByProxy_Base/VillageCraterFloors/BatchedGroup/BatchedMeshRenderers_0").GetComponent<Renderer>();
-			var snowTerrain = SearchUtilities.Find("QuantumMoon_Body/Sector_QuantumMoon/State_BH/Geometry_BHState/BatchedGroup/BatchedMeshRenderers_3").GetComponent<Renderer>();
+			var alpine = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Prefab_TH_Alpine").GetComponent<Renderer>();
 
+			// Snow on ground	
+			var thTerrain = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/OtherComponentsGroup/ControlledByProxy_Base/VillageCraterFloors/BatchedGroup/BatchedMeshRenderers_0").GetComponent<Renderer>();
+			var snowTerrain = SearchUtilities.Find("QuantumMoon_Body/Sector_QuantumMoon/State_BH/Geometry_BHState/BatchedGroup/BatchedMeshRenderers_3").GetComponent<Renderer>();			
+			
 			thTerrain.material.shader = snowTerrain.material.shader;
 			thTerrain.materials = snowTerrain.materials;
+			
+			
 			
 
 			// Snow on grass
