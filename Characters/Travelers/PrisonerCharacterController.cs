@@ -55,6 +55,8 @@ namespace ChrismasStory.Characters.Travelers
 
 				PrisonerAnimationController.Instance.PlayLightsUp();
 
+				SearchUtilities.Find("Prisoner_Dialogue").SetActive(false);
+
 				Conditions.Set(Conditions.CONDITION.PRISONER_START, false);
 				Conditions.Set(Conditions.CONDITION.PRISONER_START_DONE, true);
 			}

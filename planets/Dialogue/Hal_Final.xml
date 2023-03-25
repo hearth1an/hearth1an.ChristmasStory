@@ -29,8 +29,7 @@
 			<Page>HAL_FINAL_4</Page>
 			<Page>HAL_FINAL_5</Page>					
 		</Dialogue>
-		<DialogueOptionsList>
-		</DialogueOptionsList>		
+		
 	</DialogueNode>
 
 	<DialogueNode>
@@ -39,8 +38,7 @@
 		<Dialogue>
 			<Page>HAL_FINAL_6</Page>						
 		</Dialogue>
-		<DialogueOptionsList>
-		</DialogueOptionsList>		
+		
 	</DialogueNode>
 
 	<DialogueNode>
@@ -48,8 +46,6 @@
 		<EntryCondition>HAL_FINAL_DONE_2</EntryCondition>		
 		<Dialogue>
 			<Page>HAL_FINAL_7</Page>						
-		</Dialogue>
-		<DialogueOptionsList>
-		</DialogueOptionsList>	
+		</Dialogue>		
 	</DialogueNode>
 </DialogueTree>

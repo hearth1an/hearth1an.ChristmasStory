@@ -231,7 +231,8 @@
 			</DialogueOption>
 			<DialogueOption>
 				<RequiredCondition>HOLDING_CORE</RequiredCondition>
-				<Text>CHERT_START_43
+				<CancelledCondition>CHERT_CORE_DONE</CancelledCondition>
+				<Text>CHERT_START_43</Text>
 				<DialogueTarget>17</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>

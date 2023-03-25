@@ -10,7 +10,8 @@
 		</Dialogue>
 		<DialogueOptionsList>
 		    <DialogueOption>
-			    <RequiredPersistentCondition>HAL_ROCK_TOLD</RequiredPersistentCondition> 		   
+			    <RequiredPersistentCondition>HAL_ROCK_TOLD</RequiredPersistentCondition>
+				<CancelledPersistentCondition>SOLANUM_DONE</CancelledPersistentCondition>		   
 				<Text>HAL_START_3</Text>
 				<DialogueTarget>5</DialogueTarget>				
 			</DialogueOption>			
@@ -52,11 +53,13 @@
 
 	<DialogueNode>
 		<Name>5</Name>
+		<SetCondition>HAL_ROCK_DONE</SetCondition>
 		<Dialogue>
 			<Page>HAL_START_10</Page>								
 		</Dialogue>
 		<DialogueOptionsList>
-			<DialogueOption>			   
+			<DialogueOption>
+			<ConditionToSet>HAL_ROCK_DONE</ConditionToSet>
 				<Text>HAL_START_11</Text>
 				<DialogueTarget>6</DialogueTarget>				
 			</DialogueOption>				
@@ -65,7 +68,7 @@
 
 	<DialogueNode>
 		<Name>6</Name>
-		<SetCondition>HAL_ROCK_DONE</SetCondition>
+		<SetCondition>HAL_ROCK_DONE</SetCondition>		
 		<Dialogue>
 			<Page>HAL_START_12</Page>
 			<Page>HAL_START_13</Page>								

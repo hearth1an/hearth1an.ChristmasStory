@@ -38,9 +38,7 @@
 		<Dialogue>
 			<Page>HAL_ROCK_6</Page>
 			<Page>HAL_ROCK_7</Page>										
-		</Dialogue>
-		<DialogueOptionsList>
-		</DialogueOptionsList>	
+		</Dialogue>		
 	</DialogueNode>
 
 	<DialogueNode>
@@ -50,16 +48,13 @@
 			<Page>HAL_ROCK_8</Page>
 			<Page>HAL_ROCK_9</Page>												
 		</Dialogue>
-		<DialogueOptionsList>
-		</DialogueOptionsList>	
+		
 	</DialogueNode>
 
 	<DialogueNode>
 		<Name>4</Name>
 		<Dialogue>
 			<Page>HAL_ROCK_10</Page>						
-		</Dialogue>	
-		<DialogueOptionsList>
-		</DialogueOptionsList>		
+		</Dialogue>				
 	</DialogueNode>
 </DialogueTree>

@@ -33,6 +33,12 @@
 				<Text>SLATE_START_5</Text>
 				<DialogueTarget>3</DialogueTarget>			
 		</DialogueOption>
+			<DialogueOption>
+				<Text>SLATE_START_50</Text>
+				<RequiredPersistentCondition>SLATE_FIRST_LOOP_DONE</RequiredPersistentCondition>
+				<DialogueTarget>11</DialogueTarget>
+				<ConditionToSet>SLATE_START_VILLAGE</ConditionToSet>
+			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
 

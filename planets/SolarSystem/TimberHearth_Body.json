@@ -274,7 +274,8 @@
 					"y": 75.3385,
 					"z": 90
 				},
-				"scale": 1
+				"scale": 1,
+
 			},
 			{
 				"path": "TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Characters_Observatory/Character_HEA_Hal_Museum",
@@ -557,12 +558,16 @@
 					"z": 0
 				},
 				"xmlFile": "planets/Dialogue/Hal.xml",
-				"lookAtRadius": 2,
-				"remoteTriggerRadius": 2,
+				"lookAtRadius": 6,
+				"remoteTriggerRadius": 1,
+				"remoteTriggerPosition": {
+					"x": 0,
+					"y": 1.5,
+					"z": 0
+				},				
 				"radius": 1,
 				"rename": "Hal_Dialogue",
 				"range": 1
-
 			},
 			{
 				"parentPath": "Sector_TH/Hal_Village",
@@ -573,10 +578,15 @@
 					"z": 0
 				},
 				"xmlFile": "planets/Dialogue/Hal_Rock.xml",
-				"lookAtRadius": 2,
+				"lookAtRadius": 6,
 				"radius": 1,
 				"rename": "Hal_Dialogue_2",
-				"remoteTriggerRadius": 2,
+				"remoteTriggerRadius": 3,
+				"remoteTriggerPosition": {
+					"x": 0,
+					"y": 1.5,
+					"z": 0
+				},
 				"range": 2
 			},
 			{
@@ -689,24 +699,39 @@
 			},
 			{
 				"position": {
-					"x": 8.9599,
-					"y": -6.2049,
-					"z": 186.9598
+					"x": 0,
+					"y": 2,
+					"z": 0
 				},
 				"xmlFile": "planets/Dialogue/Slate.xml",
 				"parentPath": "Sector_TH/Slate_Village",
-				"isRelativeToParent": false,
+				"isRelativeToParent": true,
 				"pathToAnimController": "Sector_TH/Slate_Village/Villager_HEA_Slate_ANIM_LogSit",
 				"remoteTriggerRadius": 3,
 				"remoteTriggerPosition": {
-					"x": 8.9599,
-					"y": -6.2049,
-					"z": 186.9598
-				},
+					"x": 0,
+					"y": 2,
+					"z": 0
+				},				
+				"rename": "Slate_Trigger",
+				"lookAtRadius": 6,
 				"radius": 1,
-				"range": 2,
-				"rename": "Slate_Conversation",
-				"blockAfterPersistentCondition": "SLATE_START_DONE"
+				"range": 2
+			},
+			{
+				"position": {
+					"x": 0,
+					"y": 2,
+					"z": 0
+				},
+				"xmlFile": "planets/Dialogue/Slate.xml",
+				"parentPath": "Sector_TH/Slate_Village",
+				"isRelativeToParent": true,
+				"pathToAnimController": "Sector_TH/Slate_Village/Villager_HEA_Slate_ANIM_LogSit",
+				"lookAtRadius": 6,
+				"radius": 1,
+				"range": 2
+
 			},
 			{
 				"parentPath": "Sector_TH/Slate_Village_Final",

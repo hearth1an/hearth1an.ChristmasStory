@@ -362,7 +362,7 @@
         "RIEBECK_TREE_8": "This is a really good costume, I would say! But yeah, you’re right...",
 
         // Slate
-        "SLATE_START_1": "Hey-hey! There’s our pilot",
+        "SLATE_START_1": "Hey-hey! There’s our pilot!",
         "SLATE_START_2": "All travellers are here!",
         "SLATE_START_3": "Yes, I’m ready for my first voyage.",
         "SLATE_START_4": "Could you repeat, what your plan is?",
@@ -385,7 +385,7 @@
         "SLATE_START_21": "You need to find the travellers, tell them about the celebration, and bring them here.",
         "SLATE_START_22": "Hornfels should be kept in the dark about this until everyone is here.",
         "SLATE_START_24": "Okay, thanks for reminding.",
-        "SLATE_START_25": "I agree, it’s too quiet here. We need their music, or Christmas magic will never happen. So...",
+        "SLATE_START_25": "Yes! It’s too quiet here. We need their music, or Christmas magic will never happen. So...",
         "SLATE_START_26": "Do you have any questions left?",
         "SLATE_START_27": "Is it a little scout?",
         "SLATE_START_28": "Nope, everyhing is clear to me.",
@@ -393,7 +393,7 @@
         "SLATE_START_32": "Sure. I’ll be here.",
         "SLATE_START_33": "Yeah, I made an upgrade for your scout. Now it has a little Nomai gravity crystal on it! You can launch it onto the wall and literally stay horizontally. It’s neat, you should give it a try.",
         "SLATE_START_34": "Sounds good!",
-        "SLATE_START_35": "Just be careful, anyway. You shouldn’t use it in places where you’re not supposed to stand. That makes it more dangerous to fall, so keep that in mind.",
+        "SLATE_START_35": "Just be careful using it in places where you’re not supposed to stand. That makes it more dangerous to fall, so keep that in mind.",
         "SLATE_START_36": "Good point. Thanks.",
         "SLATE_START_37": "Great job, hatchling! I’m glad all our friends are here and the music is playing.",
         "SLATE_START_38": "Are we ready to tell Hornfels and Hal? Do you want to invite anyone else?",
@@ -408,6 +408,7 @@
         "SLATE_START_47": "Yes, let’s start.",
         "SLATE_START_48": "Okay, I’ll go get Hornfels and Hal.",
         "SLATE_START_49": "Merry Christmas!",
+        "SLATE_START_50": "Actually, nevermind.",
 
         // Slate final
         "SLATE_FINAL_1": "You did very well, hatchling!",

@@ -67,20 +67,20 @@
 			{
 				"rename": "Footprint_1",
 				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
-				"position": {
-					"x": -0.5239,
-					"y": 0.3876,
-					"z": 3.8218
-				},
-				"rotation": {
-					"x": 4.0747,
-					"y": 160.7124,
-					"z": 17.3829
-				},
-				"scale": 0.6,
 				"parentPath": "Sector_DreamWorld/Prisoner_Clone",
 				"isRelativeToParent": true,
-				"alignToNormal": true
+				"position": {
+					"x": -0.5239,
+					"y": 0.3586,
+					"z": 3.7054
+				},
+				"rotation": {
+					"x": 16.0973,
+					"y": 142.6183,
+					"z": 17.3829
+				},
+				"scale": 0.6
+
 			},
 			{
 				"rename": "Footprint_2",
@@ -418,83 +418,49 @@
 					"y": 2.92,
 					"z": 0.369
 				},
+				"type": "visionTorchTarget",
 				"rotation": {},
 				"slides": [
-					{
-						"imagePath": "planets/Content/visions/Slide (2).png"
-					},
-					{
-						"imagePath": "planets/Content/visions/Slide (3).png"
-					},
-					{
-						"imagePath": "planets/Content/visions/Slide (4).png"
-					},
-					{
-						"imagePath": "planets/Content/visions/Slide (5).png"
-					},
-					{
-						"imagePath": "planets/Content/visions/Slide (6).png"
-					},
-					{
-						"imagePath": "planets/Content/visions/Slide (7).png"
-					},
-					{
-						"imagePath": "planets/Content/visions/Slide (8).png"
-					},
-					{
-						"imagePath": "planets/Content/visions/Slide (9).png"
-					},
-					{
-						"imagePath": "planets/Content/visions/Slide (10).png"
-					}
+					{ "imagePath": "planets/Content/visions/Slide (2).png" },
+					{ "imagePath": "planets/Content/visions/Slide (3).png" },
+					{ "imagePath": "planets/Content/visions/Slide (4).png" },
+					{ "imagePath": "planets/Content/visions/Slide (5).png" },
+					{ "imagePath": "planets/Content/visions/Slide (6).png" },
+					{ "imagePath": "planets/Content/visions/Slide (7).png" },
+					{ "imagePath": "planets/Content/visions/Slide (8).png" },
+					{ "imagePath": "planets/Content/visions/Slide (9).png" },
+					{ "imagePath": "planets/Content/visions/Slide (10).png" }
 				],
-				"type": "visionTorchTarget",
 				"parentPath": "Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner/Ghostbird_IP_ANIM/Ghostbird_Skin_01:Ghostbird_Rig_V01:Base/Ghostbird_Skin_01:Ghostbird_Rig_V01:Root/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine01/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine02/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine03/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine04/Ghostbird_Skin_01:Ghostbird_Rig_V01:Neck01/Ghostbird_Skin_01:Ghostbird_Rig_V01:Neck02/Ghostbird_Skin_01:Ghostbird_Rig_V01:Head",
 				"isRelativeToParent": true,
 				"rename": "Prisoner_Vision"
 			},
 			{
+
+				"rename": "Prisoner_Vision_Torch",
 				"position": {
-					"x": -6.7621,
+					"x": -6.7623,
 					"y": -293.5659,
-					"z": 676.6439
+					"z": 676.644
 				},
 				"rotation": {
-					"x": 343.4101,
-					"y": 84.9805,
-					"z": 339.7789
+					"x": 348.0272,
+					"y": 95.5138,
+					"z": 348.0083
 				},
-				"slides": [
-					{
-						"imagePath": "planets/Content/visions/Slide (2).png"
-					},
-					{
-						"imagePath": "planets/Content/visions/Slide (3).png"
-					},
-					{
-						"imagePath": "planets/Content/visions/Slide (4).png"
-					},
-					{
-						"imagePath": "planets/Content/visions/Slide (5).png"
-					},
-					{
-						"imagePath": "planets/Content/visions/Slide (6).png"
-					},
-					{
-						"imagePath": "planets/Content/visions/Slide (7).png"
-					},
-					{
-						"imagePath": "planets/Content/visions/Slide (8).png"
-					},
-					{
-						"imagePath": "planets/Content/visions/Slide (9).png"
-					},
-					{
-						"imagePath": "planets/Content/visions/Slide (10).png"
-					}
-				],
 				"type": "standingVisionTorch",
-				"rename": "Prisoner_Vision_Torch"
+				"slides": [
+					{ "imagePath": "planets/Content/visions/Slide (2).png" },
+					{ "imagePath": "planets/Content/visions/Slide (3).png" },
+					{ "imagePath": "planets/Content/visions/Slide (4).png" },
+					{ "imagePath": "planets/Content/visions/Slide (5).png" },
+					{ "imagePath": "planets/Content/visions/Slide (6).png" },
+					{ "imagePath": "planets/Content/visions/Slide (7).png" },
+					{ "imagePath": "planets/Content/visions/Slide (8).png" },
+					{ "imagePath": "planets/Content/visions/Slide (9).png" },
+					{ "imagePath": "planets/Content/visions/Slide (10).png" }
+				]
+
 			}
 		]
 	},
