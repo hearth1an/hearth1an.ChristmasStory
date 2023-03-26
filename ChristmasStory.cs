@@ -100,8 +100,14 @@ namespace ChrismasStory
 			{
 				ModHelper.Console.WriteLine("Solanum event completed.");
 			}
-			
-            if (Conditions.Get(Conditions.PERSISTENT.CHERT_DONE) && Conditions.Get(Conditions.PERSISTENT.ESKER_DONE) && Conditions.Get(Conditions.PERSISTENT.FELDSPAR_DONE) && Conditions.Get(Conditions.PERSISTENT.GABBRO_DONE) && Conditions.Get(Conditions.PERSISTENT.RIEBECK_DONE))
+
+			ModHelper.Events.Unity.RunWhen(() => Conditions.Get(Conditions.PERSISTENT.CHERT_DONE) && Conditions.Get(Conditions.PERSISTENT.ESKER_DONE) && Conditions.Get(Conditions.PERSISTENT.FELDSPAR_DONE) && Conditions.Get(Conditions.PERSISTENT.GABBRO_DONE) && Conditions.Get(Conditions.PERSISTENT.RIEBECK_DONE), () =>
+			{
+				Conditions.Set(Conditions.PERSISTENT.ALL_TRAVELLERS_DONE, true);
+				WriteLine("All travellers done.");
+			});
+
+			if (Conditions.Get(Conditions.PERSISTENT.CHERT_DONE) && Conditions.Get(Conditions.PERSISTENT.ESKER_DONE) && Conditions.Get(Conditions.PERSISTENT.FELDSPAR_DONE) && Conditions.Get(Conditions.PERSISTENT.GABBRO_DONE) && Conditions.Get(Conditions.PERSISTENT.RIEBECK_DONE))
             {
 				Conditions.Set(Conditions.PERSISTENT.ALL_TRAVELLERS_DONE, true);
 				WriteLine("All travellers done.");

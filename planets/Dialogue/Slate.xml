@@ -232,10 +232,7 @@
 			<Page>SLATE_START_38</Page>
 		</Dialogue>
 		<DialogueOptionsList>
-		<DialogueOption>
-		<CancelledPersistentCondition>SOLANUM_DONE</CancelledPersistentCondition>
-		<CancelledPersistentCondition>PRISONER_DONE</CancelledPersistentCondition>
-		<CancelledPersistentCondition>SELF_DONE</CancelledPersistentCondition>
+		<DialogueOption>		
 				<Text>SLATE_START_39</Text>
 				<DialogueTarget>11</DialogueTarget>
 				<ConditionToSet>SLATE_TRAVELLERS_DONE_2</ConditionToSet>

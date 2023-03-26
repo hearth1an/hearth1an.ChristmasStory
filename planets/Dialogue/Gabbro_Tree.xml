@@ -44,7 +44,6 @@
 			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
-
 	<DialogueNode>
 	<SetPersistentCondition>GABBRO_TREE_QUESTION</SetPersistentCondition>
 		<Name>4</Name>

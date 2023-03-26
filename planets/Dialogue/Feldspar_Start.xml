@@ -77,7 +77,9 @@
 	</DialogueNode>
 
 	<DialogueNode>
+	
 		<Name>4</Name>
+		<SetCondition>FELDSPAR_START_MET</SetCondition>
 		<Dialogue>
 			<Page>FELDSPAR_START_10</Page>
 		</Dialogue>

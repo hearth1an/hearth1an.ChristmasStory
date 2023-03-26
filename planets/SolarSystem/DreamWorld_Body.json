@@ -16,15 +16,16 @@
 				},
 				"type": "standingVisionTorch",
 				"slides": [
-					{ "imagePath": "planets/Content/visions/vslide1.png" },
-					{ "imagePath": "planets/Content/visions/vslide2.png" },
-					{ "imagePath": "planets/Content/visions/vslide2.png" },
-					{ "imagePath": "planets/Content/visions/vslide3.png" },
-					{ "imagePath": "planets/Content/visions/vslide3.png" },
-					{ "imagePath": "planets/Content/visions/vslide4.png" },
-					{ "imagePath": "planets/Content/visions/vslide4.png" },
-					{ "imagePath": "planets/Content/visions/vslide5.png" },
-					{ "imagePath": "planets/Content/visions/vslide5.png" }
+					{ "imagePath": "planets/Content/visions/vslide6.png" },
+					{ "imagePath": "planets/Content/visions/vslide6.png" },
+					{ "imagePath": "planets/Content/visions/vslide7.png" },
+					{ "imagePath": "planets/Content/visions/vslide7.png" },
+					{ "imagePath": "planets/Content/visions/vslide8.png" },
+					{ "imagePath": "planets/Content/visions/vslide8.png" },
+					{ "imagePath": "planets/Content/visions/vslide9.png" },
+					{ "imagePath": "planets/Content/visions/vslide9.png" },
+					{ "imagePath": "planets/Content/visions/vslide10.png" },
+					{ "imagePath": "planets/Content/visions/vslide10.png" }
 				],
 				"rename": "New_Vision_Torch"
 			},
