@@ -40,7 +40,7 @@
 	</DialogueNode>
 
 	<DialogueNode>
-		<Name>2</Name>
+		<Name>3</Name>
 		<SetPersistentCondition></SetPersistentCondition>
 		<SetCondition></SetCondition>
 		<Dialogue>

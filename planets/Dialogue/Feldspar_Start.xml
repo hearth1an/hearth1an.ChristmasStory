@@ -79,7 +79,7 @@
 	<DialogueNode>
 		<Name>4</Name>
 		<Dialogue>
-			<Page>FELDSPAR_START_10) Don't go anywhere? Ha-ha.</Page>
+			<Page>FELDSPAR_START_10</Page>
 		</Dialogue>
 	</DialogueNode>
 
@@ -88,7 +88,7 @@
 		<Name>8</Name>
 		<EntryCondition>FELDSPAR_START_FAILED</EntryCondition>
 		<Dialogue>
-			<Page>FELDSPAR_START_11) Oh boy... what we gonna do?</Page>
+			<Page>FELDSPAR_START_11</Page>
 		</Dialogue>
 	</DialogueNode>
 </DialogueTree>

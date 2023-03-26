@@ -23,6 +23,10 @@ namespace ChrismasStory.Characters.Travelers
 			originalCharacter = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner/Ghostbird_IP_ANIM");
 			_lantern = SearchUtilities.Find("Village_Lantern");
 
+			
+
+			//SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/New_Vision_Torch/VisionBeam").SetActive(true);
+
 			var controller = _lantern.GetComponent<DreamLanternController>();
 			controller.enabled = true;
 			controller.SetLit(true);
@@ -40,7 +44,8 @@ namespace ChrismasStory.Characters.Travelers
 			});
 
 			//Delay.FireOnNextUpdate(() => controller.transform.Find("Spotlight_Lantern").GetComponent<OWLight2>()._intensityScale = 0.2f);
-			var prisonerArtifact = SearchUtilities.Find("Prisoner_Artifact").GetComponent<DreamLanternController>();
+			
+
 			HeldItemHandler.Instance.ItemDropped.AddListener(OnItemDropped);
 
 			ChristmasStory.Instance.ModHelper.Events.Unity.FireOnNextUpdate(() =>

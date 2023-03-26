@@ -108,11 +108,12 @@ namespace ChrismasStory
 			}
 			if (PlayerData.GetPersistentCondition("LAUNCH_CODES_GIVEN") && !PlayerData.GetPersistentCondition("LOOP_COUNT_GOE_2"))
             {
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Dialogue_ConversationTrigger").SetActive(false);
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village/Slate_Trigger_ConversationTrigger").SetActive(false);
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Trigger").SetActive(false);
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Trigger_2").SetActive(false);
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village/Slate_Trigger").SetActive(false);
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Characters_Village/Villager_HEA_Hal_Outside").SetActive(false);
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Dialogue_2").SetActive(false);
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Dialogue_2_ConversationTrigger").SetActive(false);
+				SearchUtilities.Find("TimberHearth_Body/Sector_THHal_Village/Hal_Dialogue_3").SetActive(false);
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Trigger_2").SetActive(false);
 				WriteLine("Trying skip loading Hal outside");
 			}
 			
@@ -176,23 +177,12 @@ namespace ChrismasStory
 
 				SearchUtilities.Find("Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl").AddComponent<OWCapsuleCollider>();
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Dialogue").SetActive(true);
-
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village/ConversationZone").transform.localPosition = new Vector3(0, 2f, 0);
-
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village/Slate_Trigger_ConversationTrigger").transform.localPosition = new Vector3(0, 2f, 0);
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Dialogue_ConversationTrigger").transform.localPosition = new Vector3(0, 0f, 0);				
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Dialogue_2_ConversationTrigger").transform.localPosition = new Vector3(0, 0f, 0);
-
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village/ConversationZone_RSci").DestroyAllComponents<InteractReceiver>();
+				
 				SearchUtilities.Find("DB_AnglerNestDimension_Body/Sector_AnglerNestDimension/Traveller_HEA_Feldspar").SetActive(false);
 
-				//var goodTorch = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Prisoner_Vision_Torch");
-				var badTorch = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Bad_Vision_Torch");
-
-				/*
-				goodTorch.transform.parent = badTorch.transform.parent;
-				goodTorch.transform.localPosition = badTorch.transform.localPosition;
-				goodTorch.transform.localRotation = badTorch.transform.localRotation;
-				*/
+				
 				
 			
 
@@ -206,20 +196,18 @@ namespace ChrismasStory
 				text.DestroyAllComponents<OWCollider>();
 				*/ 
 
-				/*
-				var prisonerArtifact = SearchUtilities.Find("Prisoner_Artifact").GetComponent<DreamLanternController>();
-
-				prisonerArtifact.enabled = true;
-				prisonerArtifact.SetLit(true);
-				prisonerArtifact.UpdateVisuals();
+				
+				var prisonerArtifact = SearchUtilities.Find("Prisoner_Artifact").GetComponent<DreamLanternController>();				
 
 				Instance.ModHelper.Events.Unity.FireOnNextUpdate(() =>
 				{
 					prisonerArtifact.enabled = true;
 					prisonerArtifact.SetLit(true);
+					prisonerArtifact._flameStrength = 3f;
+					prisonerArtifact.SetHeldByPlayer(false);
 					prisonerArtifact.UpdateVisuals();
 				});
-				*/
+				
 
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Christmas_Tree").AddComponent<OWCapsuleCollider>();
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Christmas_Tree").GetComponent<CapsuleCollider>().radius = 0.5f;
@@ -355,7 +343,8 @@ namespace ChrismasStory
                 SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Sector_PrisonInterior/Interactibles_PrisonInterior/Prefab_IP_Sarcophagus/Prefab_IP_SleepingMummy_v2 (PRISONER)/Mummy_IP_ArtifactAnim").SetActive(false);
                 SearchUtilities.Find("Prisoner_Dialogue").SetActive(false);
                 SearchUtilities.Find("Prisoner_Clone").SetActive(false);
-                SearchUtilities.Find("New_Vision_Torch").SetActive(false);
+
+                //SearchUtilities.Find("New_Vision_Torch").SetActive(false);
                 //SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Prisoner_Vision_Torch/VisionBeam").SetActive(true);
                 SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Effects_IP_SIM_VisionTorch").SetActive(false);
                 SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/Prefab_IP_VisionTorchProjector").transform.localPosition = new Vector3(-5f, -2f, -35f);
@@ -463,6 +452,7 @@ namespace ChrismasStory
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/ConversationZone").SetActive(false);
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Marl_Dialogue_Final").SetActive(false);
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Villager_HEA_Marl_ANIM_StareDwn").GetComponent<CharacterAnimController>().lookOnlyWhenTalking = false;
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village/Slate_Dialogue").SetActive(false);
 
                 // Tephra
                 var Tephra_Character = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Kids_PreGame/Villager_HEA_Tephra");
@@ -475,10 +465,10 @@ namespace ChrismasStory
 
                 // Hal
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Characters_Observatory/Character_HEA_Hal_Museum").SetActive(false);
+               
+				//SearchUtilities.Find("TimberHearth_Body/Hal_Village/Hal_Dialogue_2_ConversationTrigger").SetActive(false);
+				//SearchUtilities.Find("TimberHearth_Body/Hal_Village/Hal_Dialogue").SetActive(true);
 
-                SearchUtilities.Find("TimberHearth_Body/Hal_Village/Hal_Dialogue_2").SetActive(false);
-                SearchUtilities.Find("TimberHearth_Body/Hal_Village/Hal_Dialogue_2_ConversationTrigger").SetActive(false);
-				SearchUtilities.Find("TimberHearth_Body/Hal_Village/Hal_Dialogue").SetActive(true);
 
 				// SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Characters_Village/Villager_HEA_Hal_Outside").SetActive(false);
 

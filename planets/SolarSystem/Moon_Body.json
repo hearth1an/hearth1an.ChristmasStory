@@ -12,7 +12,7 @@
 				"isRelativeToParent": true,
 				"xmlFile": "planets/Dialogue/Esker_Start.xml",
 				"parentPath": "Sector_THM/Characters_THM/Villager_HEA_Esker",
-				"pathToAnimController": "Sector_THM/Characters_THM/Villager_HEA_Esker",
+				"pathToAnimController": "Sector_THM/Characters_THM/Villager_HEA_Esker/Villager_HEA_Esker_ANIM_Rocking",
 				"lookAtRadius": 3,
 				"radius": 1,
 				"rename": "Esker_Start_Dialogue"

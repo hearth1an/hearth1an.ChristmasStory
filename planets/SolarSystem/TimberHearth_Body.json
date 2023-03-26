@@ -9,35 +9,7 @@
 		"size": 300
 	},
 
-	"Props": {
-		"slideShows": [
-			{
-				"position": {
-					"x": 16.9945,
-					"y": -40.7713,
-					"z": 185.9359
-				},
-				"rotation": {
-					"x": 348.0272,
-					"y": 95.5138,
-					"z": 348.0083
-				},
-				"type": "standingVisionTorch",
-				"slides": [
-					{ "imagePath": "planets/Content/visions/Slide (2).png" },
-					{ "imagePath": "planets/Content/visions/Slide (3).png" },
-					{ "imagePath": "planets/Content/visions/Slide (4).png" },
-					{ "imagePath": "planets/Content/visions/Slide (5).png" },
-					{ "imagePath": "planets/Content/visions/Slide (6).png" },
-					{ "imagePath": "planets/Content/visions/Slide (7).png" },
-					{ "imagePath": "planets/Content/visions/Slide (8).png" },
-					{ "imagePath": "planets/Content/visions/Slide (9).png" },
-					{ "imagePath": "planets/Content/visions/Slide (10).png" }
-				],
-				"rename": "Prisoner_Vision_Torch"
-			}			
-
-		],
+	"Props": {		
 		"remotes": [
 			{
 				"id": "Hal's",
@@ -374,7 +346,6 @@
 			},
 			{
 				"path": "TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Characters_Observatory/Villager_HEA_Hornfels (1)",
-				"rename": "Hornfels_Village_Final",
 				"removeChildren": [ "ConversationZone_Hornfels" ],
 				"position": {
 					"x": 2.3853,
@@ -386,7 +357,8 @@
 					"y": 271.1526,
 					"z": 268.4409
 				},
-				"scale": 1
+				"scale": 1,
+				"rename": "Hornfels_Village_Final"
 			},
 			{
 				"assetBundle": "planets/assetbundle/hearthians",
@@ -639,14 +611,32 @@
 				},
 				"xmlFile": "planets/Dialogue/Hal.xml",
 				"lookAtRadius": 6,
-				"remoteTriggerRadius": 1,
-				"remoteTriggerPosition": {
+				"radius": 1,
+				"rename": "Hal_Dialogue",
+				"range": 1
+			},
+			{
+				"parentPath": "Sector_TH/Hal_Village",
+				"isRelativeToParent": true,
+				"position": {
 					"x": 0,
 					"y": 1.5,
 					"z": 0
 				},
+				"xmlFile": "planets/Dialogue/Hal.xml",
+				"lookAtRadius": 6,
+				"remoteTrigger": {
+					"radius": 1,
+					"parentPath": "Sector_TH/Hal_Village",
+					"isRelativeToParent": true,
+					"position": {
+						"x": 0,
+						"y": 1.5,
+						"z": 0
+					},
+					"rename": "Hal_Trigger"
+				},
 				"radius": 1,
-				"rename": "Hal_Dialogue",
 				"range": 1
 			},
 			{
@@ -661,13 +651,30 @@
 				"lookAtRadius": 6,
 				"radius": 1,
 				"rename": "Hal_Dialogue_2",
-				"remoteTriggerRadius": 3,
-				"remoteTriggerPosition": {
+				"remoteTrigger": {
+					"radius": 2,
+					"parentPath": "Sector_TH/Hal_Village",
+					"isRelativeToParent": true,
+					"position": {
+						"x": 0,
+						"y": 1.5,
+						"z": 0
+					},
+					"rename": "Hal_Trigger_2"
+				}
+			},
+			{
+				"parentPath": "Sector_TH/Hal_Village",
+				"isRelativeToParent": true,
+				"position": {
 					"x": 0,
 					"y": 1.5,
 					"z": 0
 				},
-				"range": 2
+				"xmlFile": "planets/Dialogue/Hal_Rock.xml",
+				"lookAtRadius": 6,
+				"radius": 1,
+				"rename": "Hal_Dialogue_3"				
 			},
 			{
 				"parentPath": "Sector_TH/Hal_Village_Final",
@@ -787,13 +794,18 @@
 				"parentPath": "Sector_TH/Slate_Village",
 				"isRelativeToParent": true,
 				"pathToAnimController": "Sector_TH/Slate_Village/Villager_HEA_Slate_ANIM_LogSit",
-				"remoteTriggerRadius": 3,
-				"remoteTriggerPosition": {
-					"x": 0,
-					"y": 2,
-					"z": 0
+				"remoteTrigger": {
+					"radius": 2,
+					"parentPath": "Sector_TH/Slate_Village",
+					"isRelativeToParent": true,
+					"position": {
+						"x": 0,
+						"y": 1.5,
+						"z": 0
+					},
+					"rename": "Slate_Trigger"
 				},
-				"rename": "Slate_Trigger",
+				"rename": "Slate_Dialogue",
 				"lookAtRadius": 6,
 				"radius": 1,
 				"range": 2

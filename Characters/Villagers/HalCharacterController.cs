@@ -16,7 +16,10 @@ namespace ChrismasStory.Characters.Travelers
 		public override void Start()
 		{
 			dialogue = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Dialogue").GetComponent<CharacterDialogueTree>();			
-
+			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/ConversationZone").SetActive(false);
+			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Dialogue_2").SetActive(false);
+			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Trigger_2").SetActive(false);
+			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Dialogue_3").SetActive(false);
 			//originalCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village");			
 
 			base.Start();
@@ -42,10 +45,13 @@ namespace ChrismasStory.Characters.Travelers
         {
 			PlayerEffectController.PlayAudioOneShot(AudioType.ToolItemSharedStonePickUp, 1f);
 			HeldItemHandler.GivePlayerInviteStone();			
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Dialogue_2_ConversationTrigger").SetActive(true);
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Dialogue_2").SetActive(true);
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Dialogue_2_ConversationTrigger").transform.localPosition = new UnityEngine.Vector3(0, 0, 0);
-			
+			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Trigger_2").SetActive(true);
+			Invoke("EnableDialogue3", 3f);
+		}
+
+		private void EnableDialogue3()
+        {
+			SearchUtilities.Find("TimberHearth_Body/Sector_THHal_Village/Hal_Dialogue_3").SetActive(true);
 		}
 		protected override void OnChangeState(STATE oldState, STATE newState) { }
 	}
