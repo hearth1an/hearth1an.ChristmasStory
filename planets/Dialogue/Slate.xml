@@ -216,6 +216,7 @@
 		<Name>13</Name>
 		<Dialogue>
 			<Page>SLATE_START_35</Page>
+			<Page>SLATE_START_35.1</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 		<DialogueOption>

@@ -89,7 +89,8 @@ namespace ChrismasStory
 			characterControllers.AddComponent<SlateCharacterController>();
 			characterControllers.AddComponent<HornfelsCharacterController>();
 			characterControllers.AddComponent<ErnestoCharacterController>();
-			
+			characterControllers.AddComponent<EndGameController>();
+
 
 			if (Conditions.Get(Conditions.PERSISTENT.CHERT_PHRASE_KNOWN))
 			{
@@ -246,12 +247,7 @@ namespace ChrismasStory
                 SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner/Ghostbird_IP_ANIM/Ghostbird_Skin_01:Ghostbird_Rig_V01:Base/Ghostbird_Skin_01:Ghostbird_Rig_V01:Root/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine01/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine02/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine03/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine04/Ghostbird_Skin_01:Ghostbird_Rig_V01:Neck01/Ghostbird_Skin_01:Ghostbird_Rig_V01:Neck02/Ghostbird_Skin_01:Ghostbird_Rig_V01:Head/LightSensor_GhostHead").SetActive(false);
 				
 
-				SearchUtilities.Find("Ernando/AudioController/LoopSource").GetComponent<AudioSource>().pitch = 1.3f;
-				SearchUtilities.Find("Gustavo/AudioController/LoopSource").GetComponent<AudioSource>().pitch = 0.5f;
-				SearchUtilities.Find("Rudolfo/AudioController/LoopSource").GetComponent<AudioSource>().pitch = 1f;
-
-				SearchUtilities.Find("Ernando").SetActive(false);
-				SearchUtilities.Find("Gustavo").SetActive(false);
+				SearchUtilities.Find("Rudolfo/AudioController/LoopSource").GetComponent<AudioSource>().volume = 0.3f;				
 				SearchUtilities.Find("Rudolfo").SetActive(false);
 
 

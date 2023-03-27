@@ -1,6 +1,9 @@
-﻿using ChrismasStory.Components;
+﻿using System.Collections;
+using UnityEngine;
+using ChrismasStory.Components;
 using ChristmasStory.Utility;
 using NewHorizons.Utility;
+
 
 namespace ChrismasStory.Characters.Travelers
 {
@@ -34,14 +37,31 @@ namespace ChrismasStory.Characters.Travelers
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Interactables_Observatory/AnglerFishExhibit/Ernesto_Dialogue").SetActive(true);
 			}
 			if (Conditions.Get(Conditions.CONDITION.START_END_EVENT))
-
             {
-				PlayerEffectController.CloseEyes(2f);
-				Invoke("AddShine_1", 10f);
-				Invoke("AddShine_2", 19f);
-				Invoke("AddShine_3", 35f);
+				/*
+				EndGameController.Instance.Invoke("EndGameEvent", 2f);
+				
+				Invoke("AddShine_1", 15f);
+				Invoke("AddShine_2", 35f);
+				Invoke("AddShine_3", 50f);
+				*/
+				//NOT WORKING COROUTINE
+
+				PlayerEffectController.Blink(1f);
+
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/GhostBird/Signal_Prisoner").SetActive(false);
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Feldspar/Signal_Harmonica").SetActive(false);
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Riebeck/Signal_Banjo").SetActive(false);
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Villager_HEA_Esker_ANIM_Rocking/Signal_Whistling").SetActive(false);
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Chert_ANIM_Chatter_Chipper/Signal_Drums").SetActive(false);
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Gabbro/Signal_Flute").SetActive(false);
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Nomai_ANIM_SkyWatching_Idle/Signal_Nomai").SetActive(false);
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hornfels_Village_Final/Hornfels_Dialogue_Final").SetActive(false);
+
+				EndGameController.Instance.Invoke("StartErnestoShine", 2f);					
+				
 			}
-		}
+		}	
 
 		private void AddShine_1()
         {
@@ -62,9 +82,8 @@ namespace ChrismasStory.Characters.Travelers
 			ernestoLight._initLightRange = 300f;
 			SearchUtilities.Find("Sun_Body/Sector_SUN/Effects_SUN/Supernova").GetComponent<SupernovaEffectController>().enabled = true;
 			ChristmasStory.Instance.ModHelper.Console.WriteLine("Starting supernova");
-
+			
 			// custom death in 9 sec
-
 		}
 		protected override void OnChangeState(STATE oldState, STATE newState) { }
 	}

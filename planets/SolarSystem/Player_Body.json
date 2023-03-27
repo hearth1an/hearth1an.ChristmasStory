@@ -1,0 +1,82 @@
+{
+    "$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
+    "name": "Player",
+    "Props": {
+        "signals": [
+            {
+                "audio": "planets/Content/music/music_all.mp3",
+                "frequency": "Christmas Spirit",
+                "isRelativeToParent": true,
+                "name": "music_all",
+                "onlyAudibleToScope": false,
+                "rename": "music_all",
+                "position": {
+                    "y": -100
+                },
+                "sourceRadius": 5
+
+            },
+            {
+                "audio": "planets/Content/music/music_no_bird.mp3",
+                "frequency": "Christmas Spirit",
+                "isRelativeToParent": true,
+                "name": "music_no_bird",
+                "onlyAudibleToScope": false,
+                "rename": "music_no_bird",
+                "position": {
+                    "y": -100
+                },
+                "sourceRadius": 5
+
+            },
+            {
+                "audio": "planets/Content/music/music_no_sol.mp3",
+                "frequency": "Christmas Spirit",
+                "isRelativeToParent": true,
+                "name": "music_no_sol",
+                "onlyAudibleToScope": false,
+                "rename": "music_no_sol",
+                "position": {
+                    "y": -100
+                },
+                "sourceRadius": 5
+
+            },
+            {
+                "audio": "planets/Content/music/music_no_sol_no_bird.mp3",
+                "frequency": "Christmas Spirit",
+                "isRelativeToParent": true,
+                "name": "music_no_sol_no_bird",
+                "onlyAudibleToScope": false,
+                "rename": "music_no_sol_no_bird",
+                "position": {
+                    "y": -100
+                },
+                "sourceRadius": 5
+
+            }
+        ]
+    },
+    "Volumes": {
+        "creditsVolume": [
+            {
+                "deathType": "bigBang",
+                "creditsType": "fast",
+                "gameOverText": "ENDING_TEXT",
+                "radius": 10,
+                "isRelativeToParent": true,
+                "position": {
+                    "y":-100
+                },
+                "rename": "Ending_Trigger"
+            }
+        ]
+    },
+    "removeChildren": [
+        "Ending_Trigger",
+        "music_no_sol_no_bird",
+        "music_no_sol",
+        "music_no_bird",
+        "music_all"        
+    ]
+}
