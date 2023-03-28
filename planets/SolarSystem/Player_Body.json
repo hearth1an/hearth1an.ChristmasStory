@@ -7,7 +7,7 @@
                 "audio": "planets/Content/music/music_all.mp3",
                 "frequency": "Christmas Spirit",
                 "isRelativeToParent": true,
-                "name": "music_all",
+                "name": "Outer Wilds Ventures ft. Solanum and Prisoner",
                 "onlyAudibleToScope": false,
                 "rename": "music_all",
                 "position": {
@@ -20,7 +20,7 @@
                 "audio": "planets/Content/music/music_no_bird.mp3",
                 "frequency": "Christmas Spirit",
                 "isRelativeToParent": true,
-                "name": "music_no_bird",
+                "name": "Outer Wilds Ventures ft. Solanum",
                 "onlyAudibleToScope": false,
                 "rename": "music_no_bird",
                 "position": {
@@ -33,7 +33,7 @@
                 "audio": "planets/Content/music/music_no_sol.mp3",
                 "frequency": "Christmas Spirit",
                 "isRelativeToParent": true,
-                "name": "music_no_sol",
+                "name": "Outer Wilds Ventures ft. Prisoner",
                 "onlyAudibleToScope": false,
                 "rename": "music_no_sol",
                 "position": {
@@ -46,7 +46,7 @@
                 "audio": "planets/Content/music/music_no_sol_no_bird.mp3",
                 "frequency": "Christmas Spirit",
                 "isRelativeToParent": true,
-                "name": "music_no_sol_no_bird",
+                "name": "Outer Wilds Ventures",
                 "onlyAudibleToScope": false,
                 "rename": "music_no_sol_no_bird",
                 "position": {
