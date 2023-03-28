@@ -21,6 +21,7 @@ namespace ChrismasStory.Characters.Travelers
 			originalCharacter = SearchUtilities.Find("BrittleHollow_Body/Sector_BH/Traveller_HEA_Riebeck");
 			shipCharacter = SearchUtilities.Find("Ship_Body/ShipSector/Ship_Riebeck");
 			treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Riebeck");
+			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Riebeck/Signal_Banjo").transform.localPosition = new UnityEngine.Vector3(0, 2f, 0);
 
 			base.Start();
 		}

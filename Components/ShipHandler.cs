@@ -85,12 +85,11 @@ namespace ChrismasStory.Components
             {
                 probeGrav.SetActive(false);
             }
-			if (IsCharacterNearShip(probeLaunch.gameObject, 10) && !Instance._shipDamageController._exploded && !probeGrav.activeSelf && !shipModule.isActiveAndEnabled && probeLaunch.IsLaunched())
+			else if (IsCharacterNearShip(probeLaunch.gameObject, 10) && !Instance._shipDamageController._exploded && !probeGrav.activeSelf && !shipModule.isActiveAndEnabled && probeLaunch.IsLaunched())
 			{
 				BlowUpShip();
 			}
-
-			if (playerState == shipBody && Instance._shipDamageController._exploded != true && probeGrav.activeSelf)
+			else if (playerState == shipBody && Instance._shipDamageController._exploded != true && probeGrav.activeSelf)
 			{
 				probeGrav.SetActive(false);
 			}

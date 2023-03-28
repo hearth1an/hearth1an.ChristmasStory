@@ -179,22 +179,7 @@
 					"y": 275.270721,
 					"z": 262.375244
 				}
-			},
-			{
-				"path": "DB_PioneerDimension_Body/Sector_PioneerDimension/Interactables_PioneerDimension/Pioneer_Characters/Signal_Harmonica",
-				"parentPath": "Sector_TH/Traveller_HEA_Feldspar",
-				"isRelativeToParent": true,
-				"position": {
-					"x": 0,
-					"y": 0,
-					"z": 0
-				},
-				"rotation": {
-					"x": 0,
-					"y": 0,
-					"z": 0
-				}
-			},
+			},			
 			{
 				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Characters_Crossroads/Traveller_HEA_Riebeck",
 				"removeChildren": [ "ConversationZone_Riebeck" ],
@@ -333,7 +318,7 @@
 			},
 			{
 				"path": "TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Characters_Observatory/Character_HEA_Hal_Museum",
-				"rename": "Hal_Village_Final",				
+				"rename": "Hal_Village_Final",
 				"position": {
 					"x": 3.264,
 					"y": -7.4731,
@@ -581,7 +566,7 @@
 				"isRelativeToParent": true,
 				"position": {
 					"x": 0,
-					"y": 1,
+					"y": 0,
 					"z": 0
 				},
 				"xmlFile": "planets/Dialogue/Feldspar_Tree.xml",
@@ -754,7 +739,7 @@
 				"isRelativeToParent": true,
 				"position": {
 					"x": 0,
-					"y": 1,
+					"y": 2,
 					"z": 0
 				},
 				"xmlFile": "planets/Dialogue/Riebeck_Tree.xml",
@@ -767,7 +752,7 @@
 				"isRelativeToParent": true,
 				"position": {
 					"x": 0,
-					"y": 1,
+					"y": 0.5,
 					"z": 0
 				},
 				"xmlFile": "planets/Dialogue/Chert_Tree.xml",
@@ -839,8 +824,40 @@
 				"pathToAnimController": "Sector_TH/Slate_Village_Final/Villager_HEA_Slate_ANIM_LogSit",
 				"radius": 1,
 				"range": 2
+			},
+			{
+				"parentPath": "Sector_TH/Traveller_HEA_Gabbro",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 0,
+					"y": 1.5,
+					"z": 0
+				},
+				"xmlFile": "planets/Dialogue/Gabbro_Tree.xml",
+				"rename": "Gabbro_Dialogue_Tree",
+				"radius": 1,
+				"range": 2
 			}
 
+
+		],
+		"signals": [
+			{
+				"name": "Signal Harmonica",
+				"frequency": "Traveler",
+				"isRelativeToParent": true,
+				"parentPath": "Sector_TH/Traveller_HEA_Feldspar",
+				"position": {
+					"x": 0,
+					"y": 1,
+					"z": 0
+				},
+				"audio": "TravelerFeldspar",
+				"rename": "Signal_Signal_Harmonica",
+				"onlyAudibleToScope": false,
+				"detectionRadius": 50,
+				"identificationRadius": 5
+			}
 		]
 
 

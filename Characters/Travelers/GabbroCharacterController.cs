@@ -29,11 +29,15 @@ namespace ChrismasStory.Characters.Travelers
 			
 			treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Gabbro"); // Will need to change the model since he don't have any static animation. Probably the best way is to rip from Eye Scene
 
+			
 			_gdShip = SearchUtilities.Find("GabbroShip_Body");
 			_thShip = SearchUtilities.Find("TimberHearth_Body/Sector_TH/GabbroShip");
 
-			base.Start();
+			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Gabbro/Signal_Flute").transform.localPosition = new Vector3(0,1,0);
 
+            base.Start();
+
+            
 			ShipHandler.Instance.ShipExplosion.AddListener(ShipHandler_ShipExplosion);
 		}
 

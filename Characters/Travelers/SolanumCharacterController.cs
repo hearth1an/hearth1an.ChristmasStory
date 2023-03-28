@@ -25,6 +25,9 @@ namespace ChrismasStory.Characters.Travelers
 			treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Nomai_ANIM_SkyWatching_Idle");
 			originalCharacter = SearchUtilities.Find("QuantumMoon_Body/Sector_QuantumMoon/State_EYE/Interactables_EYEState/ConversationPivot/Character_NOM_Solanum");
 
+			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Nomai_ANIM_SkyWatching_Idle/Signal_Nomai").transform.localPosition = new Vector3(0, 2, 0);
+
+
 			HeldItemHandler.Instance.ItemDropped.AddListener(OnItemDropped);
 
 			base.Start();

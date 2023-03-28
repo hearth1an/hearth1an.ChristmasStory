@@ -72,6 +72,7 @@
 		<SetCondition>GABBRO_START_MET</SetCondition>
 		<Dialogue>
 			<Page>GABBRO_START_14</Page>
+			<Page>GABBRO_START_14.1</Page>
 		</Dialogue>
 	</DialogueNode>
 

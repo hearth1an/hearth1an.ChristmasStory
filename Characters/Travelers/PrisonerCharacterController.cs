@@ -21,11 +21,9 @@ namespace ChrismasStory.Characters.Travelers
 			dialogue = SearchUtilities.Find("Prisoner_Dialogue").GetComponent<CharacterDialogueTree>();
 			treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/GhostBird");
 			originalCharacter = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner/Ghostbird_IP_ANIM");
-			_lantern = SearchUtilities.Find("Village_Lantern");
+			_lantern = SearchUtilities.Find("Village_Lantern");			
 
-			
-
-			//SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/New_Vision_Torch/VisionBeam").SetActive(true);
+			SearchUtilities.Find("TimberHearth_Body/Sector_TH/GhostBird/Signal_Prisoner").transform.localPosition = new Vector3 (0,2,0);
 
 			var controller = _lantern.GetComponent<DreamLanternController>();
 			controller.enabled = true;

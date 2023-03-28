@@ -201,12 +201,7 @@ namespace ChrismasStory
 				SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner/InteractReceiver").SetActive(false);
 				SearchUtilities.Find("Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/ConversationZone").DestroyAllComponents<InteractReceiver>();
 
-				// SearchUtilities.Find("DB_AnglerNestDimension_Body/Sector_AnglerNestDimension/Traveller_HEA_Feldspar").SetActive(false);
-
-				PlayerData.AddNewlyRevealedFactID("IP_ZONE_3_ENTRANCE");
-				PlayerData.AddNewlyRevealedFactID("IP_RING_WORLD_X1");
-
-				Locator.GetShipLogManager().RevealFact("IP_RING_WORLD_X1");
+				// SearchUtilities.Find("DB_AnglerNestDimension_Body/Sector_AnglerNestDimension/Traveller_HEA_Feldspar").SetActive(false);			
 
 
 				/*

@@ -1,5 +1,5 @@
 <DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
-	<NameField>Chert</NameField>
+	<NameField>Gabbro</NameField>
 
 	<DialogueNode>
 		<Name>Start</Name>
@@ -16,6 +16,17 @@
 				<Text>GABBRO_TREE_3</Text>
 				<DialogueTarget>3</DialogueTarget>
 			</DialogueOption>
+			<DialogueOption>			
+			<CancelledPersistentCondition>GABBRO_SECRET_TOLD</CancelledPersistentCondition>
+				<Text>GABBRO_TREE_12</Text>
+				<DialogueTarget>Secret</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+			<RequiredPersistentCondition>GABBRO_SECRET_CANCELED</RequiredPersistentCondition>
+			<CancelledPersistentCondition>GABBRO_SECRET_AGREE</CancelledPersistentCondition>
+				<Text>GABBRO_TREE_20</Text>
+				<DialogueTarget>Secret_Agree</DialogueTarget>
+			</DialogueOption>			
 		</DialogueOptionsList>
 	</DialogueNode>
 
@@ -29,6 +40,7 @@
 
 	<DialogueNode>	
 		<EntryCondition>GABBRO_TREE_START_2</EntryCondition>
+		<Name>Start_2</Name>
 		<Dialogue>
 			<Page>GABBRO_TREE_5</Page>
 		</Dialogue>
@@ -42,6 +54,17 @@
 				<Text>GABBRO_TREE_7</Text>
 				<DialogueTarget>5</DialogueTarget>
 			</DialogueOption>
+			<DialogueOption>			
+			<CancelledPersistentCondition>GABBRO_SECRET_TOLD</CancelledPersistentCondition>
+				<Text>GABBRO_TREE_12</Text>
+				<DialogueTarget>Secret</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+			<RequiredPersistentCondition>GABBRO_SECRET_CANCELED</RequiredPersistentCondition>
+			<CancelledPersistentCondition>GABBRO_SECRET_AGREE</CancelledPersistentCondition>
+				<Text>GABBRO_TREE_20</Text>
+				<DialogueTarget>Secret_Agree</DialogueTarget>
+			</DialogueOption>			
 		</DialogueOptionsList>
 	</DialogueNode>
 	<DialogueNode>
@@ -60,6 +83,42 @@
 		</Dialogue>
 	</DialogueNode>
 
+	<DialogueNode>
+	<SetPersistentCondition>GABBRO_SECRET_TOLD</SetPersistentCondition>
+		<Name>Secret</Name>
+		<Dialogue>
+			<Page>GABBRO_TREE_13</Page>
+			<Page>GABBRO_TREE_14</Page>
+			<Page>GABBRO_TREE_15</Page>
+		</Dialogue>	
+	<DialogueOptionsList>
+			<DialogueOption> 			             
+				<Text>GABBRO_TREE_16</Text>
+				<DialogueTarget>Secret_Agree</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>						
+				<Text>GABBRO_TREE_17</Text>
+				<DialogueTarget>Secret_Cancel</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+    </DialogueNode>
+
+	<DialogueNode>	
+		<Name>Secret_Cancel</Name>
+		<SetPersistentCondition>GABBRO_SECRET_CANCELED</SetPersistentCondition>
+		<Dialogue>
+			<Page>GABBRO_TREE_18</Page>			
+		</Dialogue>
+	</DialogueNode>
+
+	<DialogueNode>
+	<RevealFacts>IP_RING_WORLD_X1</RevealFacts>		
+		<Name>Secret_Agree</Name>
+		<SetPersistentCondition>GABBRO_SECRET_AGREE</SetPersistentCondition>
+		<Dialogue>
+			<Page>GABBRO_TREE_19</Page>			
+		</Dialogue>
+	</DialogueNode>
 
 
 	<DialogueNode>

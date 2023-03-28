@@ -5,6 +5,7 @@
 		<Name>Start</Name>
 		<EntryCondition>DEFAULT</EntryCondition>
 		<Dialogue>
+		    <Page>FELDSPAR_SHIP_1.1</Page>
 			<Page>FELDSPAR_SHIP_1</Page>
 		</Dialogue>
 		<DialogueOptionsList>

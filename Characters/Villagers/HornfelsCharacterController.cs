@@ -52,7 +52,7 @@ namespace ChrismasStory.Characters.Travelers
 				PlayerEffectController.OpenEyes(4);
 
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/GhostBird/Signal_Prisoner").SetActive(false);
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Feldspar/Signal_Harmonica").SetActive(false);
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Feldspar/Signal_Signal_Harmonica").SetActive(false);
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Riebeck/Signal_Banjo").SetActive(false);
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Villager_HEA_Esker_ANIM_Rocking/Signal_Whistling").SetActive(false);
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Chert_ANIM_Chatter_Chipper/Signal_Drums").SetActive(false);
