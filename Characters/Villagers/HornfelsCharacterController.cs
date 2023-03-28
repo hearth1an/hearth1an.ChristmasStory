@@ -35,6 +35,7 @@ namespace ChrismasStory.Characters.Travelers
 			if (Conditions.Get(Conditions.CONDITION.HORNFELS_FISH_TOLD))
 			{
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Interactables_Observatory/AnglerFishExhibit/Ernesto_Dialogue").SetActive(true);
+				
 			}
 			if (Conditions.Get(Conditions.CONDITION.START_END_EVENT))
             {
@@ -47,7 +48,8 @@ namespace ChrismasStory.Characters.Travelers
 				*/
 				//NOT WORKING COROUTINE
 
-				PlayerEffectController.Blink(1f);
+				PlayerEffectController.CloseEyes(3);
+				PlayerEffectController.OpenEyes(4);
 
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/GhostBird/Signal_Prisoner").SetActive(false);
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Feldspar/Signal_Harmonica").SetActive(false);

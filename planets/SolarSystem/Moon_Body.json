@@ -18,5 +18,9 @@
 				"rename": "Esker_Start_Dialogue"
 			}
 		]
-	}
+
+	},
+	"removeChildren": [
+		"Sector_THM/Characters_THM/Villager_HEA_Esker/ConversationZone_Esker"		
+	]
 }

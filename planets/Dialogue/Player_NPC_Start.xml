@@ -37,9 +37,41 @@
 
 	<DialogueNode>
 		<Name>7</Name>
-		<EntryCondition>NPC_PLAYER_START_MET</EntryCondition>
+		<SetCondition>NPC_PLAYER_START_MET</SetCondition>
 		<Dialogue>
 			<Page>NPC_PLAYER_START_9</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<RequiredCondition>NPC_PLAYER_SHIP_NEAR</RequiredCondition>
+				<Text>NPC_PLAYER_START_10</Text>
+				<ConditionToSet>NPC_PLAYER_START_DONE</ConditionToSet>
+				<DialogueTarget>5</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<RequiredCondition>NPC_PLAYER_SHIP_FAR</RequiredCondition>
+				<Text>NPC_PLAYER_START_11</Text>
+				<ConditionToSet>NPC_PLAYER_START_MET</ConditionToSet>
+				<DialogueTarget>4</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<RequiredCondition>SHIP_DESTROYED</RequiredCondition>
+				<Text>NPC_PLAYER_START_12</Text>
+				<ConditionToSet>NPC_PLAYER_START_FAILED</ConditionToSet>
+				<DialogueTarget>8</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>NPC_PLAYER_START_13</Text>
+			</DialogueOption>
+
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>START_2</Name>
+		<EntryCondition>NPC_PLAYER_START_MET</EntryCondition>
+		<Dialogue>
+			<Page>NPC_PLAYER_START_19</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>

@@ -36,7 +36,7 @@
 				"scale": 0.6
 			},
 			{
-				"path": "DB_HubDimension_Body/Sector_HubDimension/Interactables_HubDimension/Anglerfish_Body",
+				"path": "Anglerfish_Body",
 				"removeChildren": [ "Beast_Anglerfish/B_angler_root/B_angler_body01/B_angler_body02/B_angler_antenna01/B_angler_antenna02/B_angler_antenna03/B_angler_antenna04/B_angler_antenna05/B_angler_antenna06/B_angler_antenna07/B_angler_antenna08/B_angler_antenna09/B_angler_antenna10/B_angler_antenna11/B_angler_antenna12_end/Lure_FogGlow" ],
 				"isRelativeToParent": true,
 				"position": {
@@ -80,5 +80,8 @@
 				"onlyAudibleToScope": false
 			}
 		]
-	}
+	},
+	"removeChildren": [
+		"Sector_AnglerNestDimension/Traveller_HEA_Feldspar"
+	]
 }

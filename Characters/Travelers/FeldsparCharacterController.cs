@@ -23,32 +23,28 @@ namespace ChrismasStory.Characters.Travelers
 			shipCharacter = SearchUtilities.Find("Ship_Body/ShipSector/Ship_Feldspar");
             treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Feldspar");
 
-			SearchUtilities.Find("DB_PioneerDimension_Body/Sector_PioneerDimension/Interactables_PioneerDimension/SeedWarp_ToPioneer (1)/Signal_Harmonica").SetActive(false);
-
-			var signalNest = SearchUtilities.Find("");
+			//SearchUtilities.Find("DB_PioneerDimension_Body/Sector_PioneerDimension/Interactables_PioneerDimension/SeedWarp_ToPioneer (1)/Signal_Harmonica").SetActive(false);
+						
 			var signalPioneer = SearchUtilities.Find("DB_PioneerDimension_Body/Sector_PioneerDimension/Interactables_PioneerDimension/SeedWarp_ToPioneer (1)/Signal_Harmonica");
-			var signalHub = SearchUtilities.Find("DB_HubDimension_Body/Sector_HubDimension/Signal_Signal_Harmonica");
-
-			signalHub.SetActive(false);
-			signalPioneer.SetActive(false);
-			originalCharacter.SetActive(false);			
+			var signalHub = SearchUtilities.Find("DB_HubDimension_Body/Sector_HubDimension/Signal_Signal_Harmonica");	
 
 			ChristmasStory.Instance.ModHelper.Events.Unity.RunWhen(() => Conditions.Get(Conditions.PERSISTENT.FELDSPAR_START_ENTRY), () =>
             {
-
                 // Regular Feldspar props
                 SearchUtilities.Find("DB_ClusterDimension_Body/Sector_ClusterDimension/Interactables_ClusterDimension/InnerWarp_ToPioneer/").SetActive(false);
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Interactables_ImpactCrater/BrambleSeed/InnerWarp_ToPioneer (1)/Signal_Harmonica").SetActive(false);
                 SearchUtilities.Find("DB_HubDimension_Body/Sector_HubDimension/Signal_Signal_Harmonica_2").SetActive(false);
+				SearchUtilities.Find("DB_ClusterDimension_Body/Sector_ClusterDimension/Interactables_ClusterDimension/InnerWarp_ToPioneer/Signal_Harmonica").SetActive(false);
+				SearchUtilities.Find("DB_ClusterDimension_Body/Sector_ClusterDimension/Interactables_ClusterDimension/InnerWarp_ToPioneer/Signal_Harmonica").SetActive(false);
+                SearchUtilities.Find("DB_ClusterDimension_Body/Sector_ClusterDimension/Interactables_ClusterDimension/SeedWarp_ToPioneer/Signal_Harmonica").SetActive(false);
 
-				// New Feldpar
-				signalHub.SetActive(true);
+
+                // New Feldpar
+                signalHub.SetActive(true);
 				signalPioneer.SetActive(true);
 				originalCharacter.SetActive(true);
 
 			});
-			
-
 
 			base.Start();
 		}
@@ -91,9 +87,12 @@ namespace ChrismasStory.Characters.Travelers
 			}
 		}
 		private void SpawnAngler()
-        {	
-			SearchUtilities.Find("Rudolfo").transform.localPosition = new UnityEngine.Vector3(3f, -7f, -19f);
-			SearchUtilities.Find("Rudolfo").SetActive(true);
+        {
+			var rudolfoFish = SearchUtilities.Find("Rudolfo");
+			rudolfoFish.transform.localPosition = new UnityEngine.Vector3(3f, -7f, -19f);
+			SearchUtilities.Find("Rudolfo/AudioController/LoopSource").GetComponent<OWAudioSource>().pitch = 2f;
+			rudolfoFish.SetActive(true);
+			
 		}
 
 		protected override void OnChangeState(STATE oldState, STATE newState)

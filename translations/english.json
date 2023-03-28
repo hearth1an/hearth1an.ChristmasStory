@@ -42,7 +42,7 @@
         "CHERT_START_38": "Chert, I know that only you know who the Jumbo Marshmallow creator is.",
         "CHERT_START_39": "Good luck, lad!",
         "CHERT_START_40": "Ha-ha.",
-        "CHERT_START_41": "So, I’m waiting for all the proofs.",
+        "CHERT_START_41": "So, what you gonna tell me?",
         "CHERT_START_43": "Here’s the Nomai warp core. They used it to enable the time loop machine.",
         "CHERT_START_44": "Here’s the strangers tech.",
         "CHERT_START_45": "Take a look at this item.",
@@ -285,12 +285,13 @@
         "NPC_PLAYER_START_10": "Let’s get into the ship then.",
         "NPC_PLAYER_START_11": "Just don’t go anywhere, I’ll take my ship closer.",
         "NPC_PLAYER_START_12": "I’m so sorry... but my ship is not functioning... Unfortunately, I can’t help.",
-        "NPC_PLAYER_START_13": "I’ll be right back.",
+        "NPC_PLAYER_START_13": "I’ll be right back, my ship is too far.",
         "NPC_PLAYER_START_14": "See ya!",
         "NPC_PLAYER_START_15": "Cool, I’ll wait you in my...",
         "NPC_PLAYER_START_16": "...your ship.",
         "NPC_PLAYER_START_17": "I was wondering which version of us was better...",
         "NPC_PLAYER_START_18": "Now I know! I’m definitely a better pilot than you!",
+        "NPC_PLAYER_START_19": "So, should we go?",
 
         // Player NPC tree
         "NPC_PLAYER_TREE_1": "Merry Christmas! To me.",

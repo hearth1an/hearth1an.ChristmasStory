@@ -17,5 +17,8 @@
 				"radius": 1
 			}
 		]
-	}
+	},
+	"removeChildren": [
+		"Characters_TimeLoopRing/NPC_Player/ConversationZone_NPC_Player"
+	]
 }

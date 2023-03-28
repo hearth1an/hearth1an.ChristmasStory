@@ -25,6 +25,17 @@ namespace ChrismasStory.Characters.Travelers
 			shipCharacter = SearchUtilities.Find("Ship_Body/ShipSector/Ship_Player");
 			treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/NPC_Player");
 
+			var loopCoreController = SearchUtilities.Find("TowerTwin_Body/Sector_TowerTwin/Sector_TimeLoopInterior/Interactables_TimeLoopInterior/CoreCasingController").GetComponent<TimeLoopCoreController>();
+
+			ChristmasStory.Instance.ModHelper.Events.Unity.FireOnNextUpdate(() =>
+			{
+				if (!loopCoreController._playerEnteredCoreCurrentLoop)
+				{
+					originalCharacter.SetActive(false);
+				}
+			});
+			
+
 			base.Start();
 		}
 

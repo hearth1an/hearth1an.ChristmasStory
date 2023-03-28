@@ -67,6 +67,7 @@
 				"path": "DB_PioneerDimension_Body/Sector_PioneerDimension/Interactables_PioneerDimension/Pioneer_Characters/Traveller_HEA_Feldspar",
 				"removeChildren": [ "ConversationZone_Feldspar" ],
 				"rename": "Ship_Feldspar",
+
 				"position": {
 					"x": 0.8201,
 					"y": 1.1342,
@@ -91,8 +92,8 @@
 				"xmlFile": "planets/Dialogue/Feldspar_Ship.xml",
 				"parentPath": "ShipSector/Ship_Feldspar",
 				"pathToAnimController": "ShipSector/Ship_Feldspar",
-				"position": { "y": 0.5 },
 				"isRelativeToParent": true,
+				"position": { "x": 0, "y": 1, "z": 0 },
 				"radius": 1,
 				"lookAtRadius": 1,
 				"range": 1
@@ -101,8 +102,9 @@
 				"xmlFile": "planets/Dialogue/Player_NPC_Ship.xml",
 				"parentPath": "ShipSector/Ship_Player",
 				"pathToAnimController": "ShipSector/Ship_Player",
-				"position": { "y": 0.5 },
 				"isRelativeToParent": true,
+				"position": { "y": 0.5 },
+
 				"radius": 1,
 				"lookAtRadius": 1,
 				"range": 1

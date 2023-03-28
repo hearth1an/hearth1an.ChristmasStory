@@ -28,6 +28,9 @@ namespace ChrismasStory.Components
 			_shipDamageController = gameObject.GetComponent<ShipDamageController>();
 			_shipBody = Locator.GetShipBody().gameObject;
 			_villageSector = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Villager_HEA_Esker_ANIM_Rocking");
+
+			
+			
 		}
 
 		/// <summary>
@@ -47,6 +50,7 @@ namespace ChrismasStory.Components
 		}
 
 		public static bool HasShipExploded() => Instance._shipDamageController._hullBreach;
+		
 
 		/// <summary>
 		/// For testing!
@@ -67,6 +71,40 @@ namespace ChrismasStory.Components
 			ChristmasStory.WriteDebug("Explosion event");
 			Conditions.Set(Conditions.CONDITION.SHIP_DESTROYED, true);
 			Instance.ShipExplosion?.Invoke();
+        }
+
+        public void Update()
+        {
+			var playerState = Locator.GetPlayerController()._groundBody;
+			var probeGrav = SearchUtilities.Find("Probe_Body/ProbeGravity/CapsuleVolume_NOM_GravityCrystal");
+			var probeLaunch = Locator.GetProbe();
+			var shipBody = Locator.GetShipBody();
+			var shipModule = shipBody.GetComponent<ShipThrusterController>();
+
+            if (IsCharacterNearShip(probeLaunch.gameObject, 10) && !Instance._shipDamageController._exploded && probeGrav.activeSelf && shipModule.isActiveAndEnabled == true)
+            {
+                probeGrav.SetActive(false);
+            }
+			if (IsCharacterNearShip(probeLaunch.gameObject, 10) && !Instance._shipDamageController._exploded && !probeGrav.activeSelf && !shipModule.isActiveAndEnabled && probeLaunch.IsLaunched())
+			{
+				BlowUpShip();
+			}
+
+			if (playerState == shipBody && Instance._shipDamageController._exploded != true && probeGrav.activeSelf)
+			{
+				probeGrav.SetActive(false);
+			}
+			else if (playerState == shipBody && probeLaunch.IsLaunched() && !probeGrav.activeSelf)
+			{
+				BlowUpShip();				
+			}
+			else if (playerState != shipBody && !probeGrav.activeSelf)
+			{
+				probeGrav.SetActive(true);
+			}
+			else return;
 		}
-	}
+
+
+    }
 }

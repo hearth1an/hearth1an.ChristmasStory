@@ -43,8 +43,7 @@ namespace ChrismasStory.Characters.Travelers
 				SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Sector_PrisonInterior/Volumes_PrisonInterior/WaterVolume_Prison").SetActive(false);
 			});
 
-			//Delay.FireOnNextUpdate(() => controller.transform.Find("Spotlight_Lantern").GetComponent<OWLight2>()._intensityScale = 0.2f);
-			
+			//Delay.FireOnNextUpdate(() => controller.transform.Find("Spotlight_Lantern").GetComponent<OWLight2>()._intensityScale = 0.2f);			
 
 			HeldItemHandler.Instance.ItemDropped.AddListener(OnItemDropped);
 

@@ -53,5 +53,9 @@
 				"radius": 1
 			}
 		]
-	}
+	},
+	"removeChildren": [
+		"Sector_QuantumMoon/State_EYE/Interactables_EYEState/ConversationPivot/Character_NOM_Solanum/ConversationZone",
+		"Sector_QuantumMoon/State_EYE/Interactables_EYEState/ConversationPivot/Character_NOM_Solanum/WatchZone"		
+	]
 }

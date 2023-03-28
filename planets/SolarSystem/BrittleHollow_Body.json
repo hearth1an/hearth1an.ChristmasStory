@@ -236,5 +236,9 @@
 				"radius": 2
 			}
 		]
-	}
+	},
+	"removeChildren": [
+		"Sector_BH/Sector_Crossroads/Characters_Crossroads/Traveller_HEA_Riebeck",
+		"Sector_BH/Sector_Crossroads/Characters_Crossroads/Signal_Banjo"
+	]
 }

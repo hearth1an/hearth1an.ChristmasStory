@@ -28,5 +28,8 @@
 				"identificationRadius": 5
 			}
 		]
-	}
+	},
+	"removeChildren": [
+		"Sector_HubDimension/Interactables_HubDimension/InnerWarp_ToCluster/Signal_Signal_Harmonica"
+	]
 }

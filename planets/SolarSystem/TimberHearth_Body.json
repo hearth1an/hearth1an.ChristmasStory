@@ -9,7 +9,7 @@
 		"size": 300
 	},
 
-	"Props": {		
+	"Props": {
 		"remotes": [
 			{
 				"id": "Hal's",
@@ -60,7 +60,7 @@
 			}
 		],
 		"details": [
-			
+
 			{
 				"assetBundle": "planets/assetbundle/meshasset",
 				"path": "Assets/Prefabs/Collider_Geometry_LowerVillage_0_Fixed.prefab",
@@ -183,10 +183,11 @@
 			{
 				"path": "DB_PioneerDimension_Body/Sector_PioneerDimension/Interactables_PioneerDimension/Pioneer_Characters/Signal_Harmonica",
 				"parentPath": "Sector_TH/Traveller_HEA_Feldspar",
+				"isRelativeToParent": true,
 				"position": {
-					"x": -0.2,
-					"y": -0.1,
-					"z": -1.1
+					"x": 0,
+					"y": 0,
+					"z": 0
 				},
 				"rotation": {
 					"x": 0,
@@ -241,10 +242,11 @@
 			{
 				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Characters_Crossroads/Signal_Banjo",
 				"parentPath": "Sector_TH/Traveller_HEA_Riebeck",
+				"isRelativeToParent": true,
 				"position": {
-					"x": -0.2,
-					"y": -0.1,
-					"z": -1.1
+					"x": 0,
+					"y": 1,
+					"z": 0
 				},
 				"rotation": {
 					"x": 0,
@@ -268,10 +270,11 @@
 			{
 				"path": "Moon_Body/Sector_THM/Characters_THM/Villager_HEA_Esker/Signal_Whistling",
 				"parentPath": "Sector_TH/Villager_HEA_Esker_ANIM_Rocking",
+				"isRelativeToParent": true,
 				"position": {
-					"x": -0.2,
-					"y": -0.1,
-					"z": -1.1
+					"x": 0,
+					"y": 1,
+					"z": 0
 				},
 				"rotation": {
 					"x": 0,
@@ -330,8 +333,7 @@
 			},
 			{
 				"path": "TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Characters_Observatory/Character_HEA_Hal_Museum",
-				"rename": "Hal_Village_Final",
-				"removeChildren": [ "ConversationZone" ],
+				"rename": "Hal_Village_Final",				
 				"position": {
 					"x": 3.264,
 					"y": -7.4731,
@@ -482,14 +484,14 @@
 					"FoundShipTrigger"
 				],
 				"position": {
-					"x": 3.8,
-					"y": -111.9158,
-					"z": 232.0497
+					"x": 6.2146,
+					"y": -113.1721,
+					"z": 231.55
 				},
 				"rotation": {
-					"x": 324.9021,
-					"y": 191.5648,
-					"z": 34.6601
+					"x": 28.4168,
+					"y": 232.5569,
+					"z": 183.4288
 				}
 			},
 			{
@@ -674,7 +676,7 @@
 				"xmlFile": "planets/Dialogue/Hal_Rock.xml",
 				"lookAtRadius": 6,
 				"radius": 1,
-				"rename": "Hal_Dialogue_3"				
+				"rename": "Hal_Dialogue_3"
 			},
 			{
 				"parentPath": "Sector_TH/Hal_Village_Final",
@@ -696,12 +698,12 @@
 				"position": {
 					"x": 0,
 					"y": 1.5,
-					"z": 0					
+					"z": 0
 				},
 				"xmlFile": "planets/Dialogue/Hornfels_Final.xml",
 				"pathToAnimController": "Sector_TH/Hornfels_Village_Final/Villager_HEA_Hornfels_ANIM_Working",
 				"radius": 1,
-				"rename": "Hornfels_Dialogue_Final",				
+				"rename": "Hornfels_Dialogue_Final",
 				"range": 2
 			},
 
@@ -844,5 +846,28 @@
 
 
 
-	}
+	},
+	"removeChildren": [
+		"Sector_TH/Sector_Village/Interactables_Village/LaunchTower/Launch_Tower/2ndLoopConversation_Trigger",
+		"Sector_TH/Interactables_TH/Geysers/Geyser_Village",
+		"Sector_TH/Interactables_TH/Geysers/Geyser_TutorialLand",
+		"Sector_TH/Geometry_TH/Terrain_TH_Water_v3/Village_Lower_Water",
+		"Sector_TH/Sector_Village/Sector_LowerVillage/Geometry_LowerVillage/OtherComponentsGroup/ControlledByProxy_Structures/Terrain_TH_VillageGeyser",
+		"Sector_TH/Sector_Village/Sector_LowerVillage/Lighting_LowerVillage/OtherComponentsGroup/LowerVillage/GeyserPlatform_Low",
+		"Sector_TH/Sector_Village/Sector_LowerVillage/Lighting_LowerVillage/OtherComponentsGroup/LowerVillage/GeyserPlatform_Mid",
+		"Sector_TH/Sector_Village/Interactables_Village/GeyserBoards_Flags",
+		"Sector_TH/Sector_Village/Sector_LowerVillage/Lighting_LowerVillage/OtherComponentsGroup/LowerVillage/Props_HEA_Lantern (11)",
+		"Sector_TH/Sector_Village/Volumes_Village/MusicVolume_Village",
+		"Sector_TH/Sector_Village/Sector_StartingCamp/Characters_StartingCamp/Villager_HEA_Slate",
+		"Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Porphy/ConversationZone",
+		"Sector_TH/Sector_Village/Sector_Observatory/Interactables_Observatory/AnglerFishExhibit/AnglerFishTankPivot/Beast_Anglerfish/Ernesto_Dialogue",
+		
+		"Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Marl_Dialogue_Final",		
+		"Sector_TH/Slate_Village/Slate_Dialogue",
+		"Sector_TH/Sector_Village/Sector_Observatory/Characters_Observatory/Character_HEA_Hal_Museum",
+		"Sector_TH/Hal_Village_Final",
+		"Sector_TH/Hornfels_Village_Final",
+		"Sector_TH/Slate_Village_Final",
+		"Sector_TH/Sector_Village/Sector_Observatory/Characters_Observatory/Villager_HEA_Hornfels (1)"
+	]
 }

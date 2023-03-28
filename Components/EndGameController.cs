@@ -21,20 +21,7 @@ namespace ChrismasStory.Components
         public void Start()
         {
             Instance = this;
-            // Hornfels, Hal, Slate
-            SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village_Final").SetActive(true);
-            SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hornfels_Village_Final").SetActive(true);
-
-            SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Characters_Observatory/Villager_HEA_Hornfels (1)").SetActive(false);
-            SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village").SetActive(false);
-
-            SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village_Final").SetActive(false);
-            SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village").SetActive(false);
-
-            // Marl
-            SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl").transform.localRotation = new Quaternion(-0.0104f, -0.0329f, 0.0209f, 0.9992f);
-            SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Marl_Dialogue_Final").SetActive(true);
-            SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Marl_Dialogue").SetActive(false);
+            
         }
 
         public void StartErnestoShine()
@@ -54,7 +41,7 @@ namespace ChrismasStory.Components
             for (int i = 0; i < maxLight; i++)
             {
                 ChristmasStory.WriteLine("Coroutine started, light level is" + ernestoLight._initLightRange);
-                ernestoLight._initLightRange += 1f;                
+                ernestoLight._initLightRange += 2f;                
                 
                 yield return new WaitForSeconds(0.3f);
             }
@@ -87,10 +74,11 @@ namespace ChrismasStory.Components
             }
         }
         public void EndingTrigger()
-        {     
+        {
+            PlayerEffectController.Blink(3);
             SearchUtilities.Find("Ending_Trigger").transform.localPosition = new Vector3(0, 0, 0);
             SearchUtilities.Find("Ending_Trigger").SetActive(true);
-
+            PlayerEffectController.OpenEyes(3);
             /*
             SearchUtilities.Find("music_no_sol_no_bird").SetActive(false);
             SearchUtilities.Find("music_no_bird").SetActive(false);            
@@ -103,6 +91,11 @@ namespace ChrismasStory.Components
         {
             SearchUtilities.Find("Sun_Body/Sector_SUN/Effects_SUN/Supernova").GetComponent<SupernovaEffectController>().enabled = true;
             ChristmasStory.Instance.ModHelper.Console.WriteLine("Starting supernova");
+        }
+
+        public void DisableProps()
+        {
+            
         }
 
     

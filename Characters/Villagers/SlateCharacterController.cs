@@ -21,8 +21,13 @@ namespace ChrismasStory.Characters.Travelers
 
 			
 			originalCharacter = SearchUtilities.Find("TimberHearth_Body/Slate_Village");
+			originalCharacter.SetActive(true);
 			treeCharacter = SearchUtilities.Find("TimberHearth_Body/Slate_Village_Final");
-			base.Start();			
+			base.Start();
+
+			// For restarting from save
+				
+
 		}
 
 		protected override void Dialogue_OnStartConversation()
@@ -34,26 +39,27 @@ namespace ChrismasStory.Characters.Travelers
 		{
 			if (Conditions.Get(Conditions.PERSISTENT.SLATE_START_DONE))
 			{				
-				PlayerEffectController.Blink(4f);
+				PlayerEffectController.Blink(5f);
 				PlayerEffectController.PlayAudioOneShot(AudioType.PlayerGasp_Light, 1f);
 				Invoke("SpawnEndGameProps", 2f);
             }
 
         }
 
-        private void SpawnEndGameProps()
+        public void SpawnEndGameProps()
         {
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village").SetActive(false);
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Characters_Observatory/Villager_HEA_Hornfels (1)").SetActive(false);
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village").SetActive(false);
+            SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village").SetActive(false);
+            SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Characters_Observatory/Villager_HEA_Hornfels (1)").SetActive(false);
+            SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village").SetActive(false);
 
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village_Final").SetActive(true);
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hornfels_Village_Final").SetActive(true);
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village_Final").SetActive(true);
+            SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village_Final").SetActive(true);
+            SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hornfels_Village_Final").SetActive(true);
+            SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village_Final").SetActive(true);
 
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl").transform.localRotation = new Quaternion(-0.0104f, -0.0329f, 0.0209f, 0.9992f);
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Marl_Dialogue_Final").SetActive(true);
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Marl_Dialogue").SetActive(false);
+            SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl").transform.localRotation = new Quaternion(-0.0104f, -0.0329f, 0.0209f, 0.9992f);
+            SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Marl_Dialogue_Final").SetActive(true);
+            SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Marl_Dialogue").SetActive(false);
+			
 		}
         protected override void OnChangeState(STATE oldState, STATE newState) 
 		{ 

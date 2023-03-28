@@ -17,5 +17,8 @@
 				"radius": 1
 			}
 		]
-	}
+	},
+	"removeChildren": [
+		"Sector_GabbroIsland/Interactables_GabbroIsland/Traveller_HEA_Gabbro/ConversationZone_Gabbro"
+	]
 }

@@ -17,5 +17,8 @@
 				"radius": 1
 			}
 		]
-	}
+	},
+	"removeChildren": [
+		"Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Interactables_Lakebed/Traveller_HEA_Chert/ConversationZone_Chert"
+	]
 }

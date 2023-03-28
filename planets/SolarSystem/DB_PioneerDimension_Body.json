@@ -44,5 +44,9 @@
 				"identificationRadius": 5
 			}
 		]
-	}
+	},
+	"removeChildren": [
+		"Sector_PioneerDimension/Interactables_PioneerDimension/Pioneer_Characters",
+		"Sector_PioneerDimension/Interactables_PioneerDimension/SeedWarp_ToPioneer (1)/Signal_Harmonica"
+	]
 }
