@@ -1,10 +1,8 @@
 ﻿using HarmonyLib;
 using NewHorizons.Utility;
-using OWML.ModHelper;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.InputSystem.XR;
 
 namespace ChrismasStory.Components
 {
@@ -12,12 +10,11 @@ namespace ChrismasStory.Components
 	internal class HeldItemHandler : MonoBehaviour
 	{
 		private ToolModeSwapper _toolModeSwapper;
-		private static HeldItemHandler _instance;
 		private ItemTool _itemTool;
 		public SharedStone _sharedStone;
 		private GameObject _villageSector;
 		public DreamLanternController PrisonerLantern { get; private set; }
-		public DreamLanternItem PrisonerLanternItem { get; private set; }		
+		public DreamLanternItem PrisonerLanternItem { get; private set; }
 
 		public class ItemEvent : UnityEvent<OWItem> { }
 		public ItemEvent ItemDropped = new();
@@ -28,15 +25,14 @@ namespace ChrismasStory.Components
 		{
 			Instance = this;
 			_toolModeSwapper = GameObject.FindObjectOfType<ToolModeSwapper>();
-			_instance = this;
 			_itemTool = GameObject.FindObjectOfType<ItemTool>();
 			_sharedStone = GameObject.FindObjectsOfType<SharedStone>().First(x => x.name == "Invite_Stone");
 
 			_villageSector = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Nomai_ANIM_SkyWatching_Idle");
-			
+
 			// Fix prisoner lantern
 			PrisonerLantern = SearchUtilities.Find("Prisoner_Artifact").GetComponent<DreamLanternController>();
-			PrisonerLanternItem = PrisonerLantern.GetComponent<DreamLanternItem>();			
+			PrisonerLanternItem = PrisonerLantern.GetComponent<DreamLanternItem>();
 		}
 		public void PrisonerFailed()
 		{
@@ -55,8 +51,7 @@ namespace ChrismasStory.Components
 			PlayerEffectController.PlayAudioOneShot(AudioType.Ghost_DeathSingle, 2f);
 			ChristmasStory.WriteDebug("Prisoner failed. Try next loop.");
 		}
-		public static OWItem GetHeldItem() => _instance._toolModeSwapper.GetItemCarryTool().GetHeldItem();
-		public static OWItem GetNullItem() => _instance._itemTool._heldItem = null;
+		public static OWItem GetHeldItem() => Instance._toolModeSwapper.GetItemCarryTool().GetHeldItem();
 
 		/// <summary>
 		/// Returns true if it is the functioning warp core from the ATP
@@ -68,9 +63,9 @@ namespace ChrismasStory.Components
 
 		public static bool IsPlayerHoldingPrisonerArtifact() => GetHeldItem()?.name == "Prisoner_Artifact";
 
-		public static bool IsPlayerHoldingJunk() => GetHeldItem() is not WarpCoreItem or DreamLanternItem && GetNullItem();
+		public static bool IsPlayerHoldingJunk() => GetHeldItem() is not WarpCoreItem or DreamLanternItem or VisionTorchItem or null;
 
-		public static bool IsPlayerHoldingInviteStone() => GetHeldItem() == _instance._sharedStone;
+		public static bool IsPlayerHoldingInviteStone() => GetHeldItem() == Instance._sharedStone;
 
 		private void Update()
 		{
@@ -79,9 +74,9 @@ namespace ChrismasStory.Components
 				if (PlayerState._isCameraUnderwater == true)
 				{
 					PrisonerFailed();
-				}				
-			} 
-			else return;			
+				}
+			}
+			else return;
 		}
 
 		[HarmonyPrefix]
@@ -89,7 +84,7 @@ namespace ChrismasStory.Components
 		private static void OWItem_DropItem()
 		{
 			Instance?.ItemDropped?.Invoke(GetHeldItem());
-		}		
+		}
 
 		[HarmonyPrefix]
 		[HarmonyPatch(typeof(DreamLanternItem), nameof(DreamLanternItem.OnEnterDreamWorld))]

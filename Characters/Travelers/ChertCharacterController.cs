@@ -2,6 +2,7 @@
 using ChristmasStory.Utility;
 using NewHorizons.Utility;
 using OWML.ModHelper;
+using System.Linq;
 using UnityEngine;
 
 namespace ChrismasStory.Characters.Travelers
@@ -19,7 +20,6 @@ namespace ChrismasStory.Characters.Travelers
 		private GameObject _emberTwinShip, _timberHearthShip, _originalDrums;
 
 		public override Conditions.PERSISTENT DoneCondition => Conditions.PERSISTENT.CHERT_DONE;
-		public bool isArtifactDestroyed;
 
 		public override void Start()
 		{
@@ -33,9 +33,9 @@ namespace ChrismasStory.Characters.Travelers
 			originalCharacter = SearchUtilities.Find("CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Interactables_Lakebed/Traveller_HEA_Chert");
 			treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Chert_ANIM_Chatter_Chipper");
 
-            dialogue.OnSelectDialogueOption += Dialogue_OnSelectDialogueOption;			
+			dialogue.OnSelectDialogueOption += Dialogue_OnSelectDialogueOption;
 
-			base.Start();			
+			base.Start();
 		}
 
 		public override void OnDestroy()
@@ -47,28 +47,26 @@ namespace ChrismasStory.Characters.Travelers
 		private void Dialogue_OnSelectDialogueOption()
 		{
 			ValidateAllDone();
-        }
+		}
 
-        protected override void Dialogue_OnStartConversation()
-        {
-            var holdingWarpCore = HeldItemHandler.IsPlayerHoldingWarpCore();
-            var holdingStrangerArtifact = HeldItemHandler.IsPlayerHoldingStrangerArtifact();
-            var holdingJunkItem = HeldItemHandler.IsPlayerHoldingJunk();
+		protected override void Dialogue_OnStartConversation()
+		{
+			var holdingWarpCore = HeldItemHandler.IsPlayerHoldingWarpCore();
+			var holdingStrangerArtifact = HeldItemHandler.IsPlayerHoldingStrangerArtifact();
+			var holdingJunkItem = HeldItemHandler.IsPlayerHoldingJunk();
 
-            var shipDestroyed = ShipHandler.HasShipExploded();
+			var shipDestroyed = ShipHandler.HasShipExploded();
 
-            var shipNearChert = ShipHandler.IsCharacterNearShip(originalCharacter.gameObject, 100f) && !shipDestroyed;
-            var shipFar = !shipNearChert && !shipDestroyed;
+			var shipNearChert = ShipHandler.IsCharacterNearShip(originalCharacter.gameObject, 100f) && !shipDestroyed;
+			var shipFar = !shipNearChert && !shipDestroyed;
 
-			
+			Conditions.Set(Conditions.CONDITION.CHERT_SHIP_NEAR, shipNearChert);
+			Conditions.Set(Conditions.CONDITION.CHERT_SHIP_FAR, shipFar);
 
-            Conditions.Set(Conditions.CONDITION.CHERT_SHIP_NEAR, shipNearChert);
-            Conditions.Set(Conditions.CONDITION.CHERT_SHIP_FAR, shipFar);
-
-            Conditions.Set(Conditions.CONDITION.HOLDING_CORE, holdingWarpCore);
+			Conditions.Set(Conditions.CONDITION.HOLDING_CORE, holdingWarpCore);
 			Conditions.Set(Conditions.CONDITION.HOLDING_DLC_ITEM, holdingStrangerArtifact);
 
-            Conditions.Set(Conditions.CONDITION.HOLDING_JUNK_ITEM, holdingJunkItem);
+			Conditions.Set(Conditions.CONDITION.HOLDING_JUNK_ITEM, holdingJunkItem);
 
 			ValidateAllDone();
 
@@ -89,17 +87,8 @@ namespace ChrismasStory.Characters.Travelers
 		}
 
 		protected override void Dialogue_OnEndConversation()
-        {
-			var toDestroy = SearchUtilities.Find("Player_Body/PlayerCamera/ItemCarryTool/DreamLanternSocket").GetAllChildren();
-
-			if (Conditions.Get(Conditions.CONDITION.CHERT_DLC_ITEM_DONE) && !isArtifactDestroyed)
-            {
-				GameObject.Destroy(toDestroy[0]);
-				isArtifactDestroyed = true;
-			}
-                //SearchUtilities.Find("Player_Body/PlayerCamera/ItemCarryTool").GetComponent<ItemTool>().enabled = true;
-
-                switch (State)
+		{
+			switch (State)
 			{
 				case STATE.ORIGINAL:
 					if (Conditions.Get(Conditions.CONDITION.CHERT_START_DONE))
@@ -119,7 +108,5 @@ namespace ChrismasStory.Characters.Travelers
 			// The drum signal is separate from chert's game object
 			_originalDrums?.SetActive(newState == STATE.ORIGINAL);
 		}
-
-		
-    }
+	}
 }
