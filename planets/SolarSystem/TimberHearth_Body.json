@@ -414,7 +414,7 @@
 					"z": 0
 				},
 				"scale": 0.15,
-				"rename": "ProbeGravity"
+				"rename": "Probe__Gravity"
 			},
 			{
 				"assetBundle": "planets/assetbundle/ghostbird",

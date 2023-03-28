@@ -62,46 +62,64 @@ namespace ChrismasStory.Components
 			Instance._shipDamageController.TriggerReactorCritical(true);
 			Instance._shipDamageController.TriggerHullBreach(true);
 			Instance._shipDamageController.Explode(true);
-		}
-
-		[HarmonyPrefix]
-		[HarmonyPatch(typeof(ShipDamageController), nameof(ShipDamageController.Explode))]
-		private static void ShipDamageController_Explode()
-		{
-			ChristmasStory.WriteDebug("Explosion event");
-			Conditions.Set(Conditions.CONDITION.SHIP_DESTROYED, true);
-			Instance.ShipExplosion?.Invoke();
         }
 
-        public void Update()
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(ShipDamageController), nameof(ShipDamageController.Explode))]
+        private static void ShipDamageController_Explode()
         {
+            ChristmasStory.WriteDebug("Explosion event");
+            Conditions.Set(Conditions.CONDITION.SHIP_DESTROYED, true);
+            Instance.ShipExplosion?.Invoke();
+        }
+
+		private void OnSectorOccupantsUpdated()
+		{
+			var probeGrav = SearchUtilities.Find("Probe_Body/ProbeGravity/CapsuleVolume_NOM_GravityCrystal");
+			var shipSector = SearchUtilities.Find("Ship_Body/ShipSector").GetComponent<Sector>();
+
+			if (shipSector.ContainsAnyOccupants(DynamicOccupant.Probe) && !Instance._shipDamageController._exploded)
+			{
+				probeGrav.SetActive(false);
+				BlowUpShip();
+			};
+		}
+
+		
+		public void Update()
+        {
+			OnSectorOccupantsUpdated();
+			/*
 			var playerState = Locator.GetPlayerController()._groundBody;
 			var probeGrav = SearchUtilities.Find("Probe_Body/ProbeGravity/CapsuleVolume_NOM_GravityCrystal");
 			var probeLaunch = Locator.GetProbe();
 			var shipBody = Locator.GetShipBody();
 			var shipModule = shipBody.GetComponent<ShipThrusterController>();
 
-            if (IsCharacterNearShip(probeLaunch.gameObject, 10) && !Instance._shipDamageController._exploded && probeGrav.activeSelf && shipModule.isActiveAndEnabled == true)
+            if (IsCharacterNearShip(probeLaunch.gameObject, 30) == true && !Instance._shipDamageController._exploded && probeGrav.activeSelf && shipModule.isActiveAndEnabled == true)
             {
                 probeGrav.SetActive(false);
             }
-			else if (IsCharacterNearShip(probeLaunch.gameObject, 10) && !Instance._shipDamageController._exploded && !probeGrav.activeSelf && !shipModule.isActiveAndEnabled && probeLaunch.IsLaunched())
+			if (IsCharacterNearShip(probeLaunch.gameObject, 30) == true && !Instance._shipDamageController._exploded && !probeGrav.activeSelf && !shipModule.isActiveAndEnabled && probeLaunch.IsLaunched())
 			{
 				BlowUpShip();
 			}
-			else if (playerState == shipBody && Instance._shipDamageController._exploded != true && probeGrav.activeSelf)
+			if (playerState == shipBody && Instance._shipDamageController._exploded != true && probeGrav.activeSelf)
 			{
 				probeGrav.SetActive(false);
 			}
-			else if (playerState == shipBody && probeLaunch.IsLaunched() && !probeGrav.activeSelf)
+			if (playerState == shipBody && probeLaunch.IsLaunched() && !probeGrav.activeSelf)
 			{
-				BlowUpShip();				
-			}
-			else if (playerState != shipBody && !probeGrav.activeSelf)
-			{
-				probeGrav.SetActive(true);
-			}
-			else return;
+				BlowUpShip();
+            }
+            if (playerState != shipBody && !probeGrav.activeSelf)
+            {
+                probeGrav.SetActive(true);
+            }
+
+
+            else return;
+			*/
 		}
 
 

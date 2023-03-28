@@ -112,7 +112,9 @@
 	</DialogueNode>
 
 	<DialogueNode>
-	<RevealFacts>IP_RING_WORLD_X1</RevealFacts>		
+	<RevealFacts>
+            <FactID>IP_RING_WORLD_X1</FactID>
+    </RevealFacts>		
 		<Name>Secret_Agree</Name>
 		<SetPersistentCondition>GABBRO_SECRET_AGREE</SetPersistentCondition>
 		<Dialogue>
