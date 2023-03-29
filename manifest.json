@@ -1,10 +1,11 @@
 {
-    "$schema": "https://raw.githubusercontent.com/amazingalek/owml/master/schemas/manifest_schema.json",
-    "filename": "ChristmasStory.dll",
-    "author": "hearth1an & xen",
-    "name": "Christmas Story",
-    "uniqueName": "hearth1an.ChristmasStory",
-    "version": "0.0.4",
-    "owmlVersion": "2.9.0",
-    "dependencies": [ "xen.NewHorizons" ]
+	"$schema": "https://raw.githubusercontent.com/amazingalek/owml/master/schemas/manifest_schema.json",
+	"filename": "ChristmasStory.dll",
+	"author": "hearth1an & xen",
+	"name": "Christmas Story",
+	"uniqueName": "hearth1an.ChristmasStory",
+	"version": "0.0.4",
+	"owmlVersion": "2.9.0",
+	"dependencies": [ "xen.NewHorizons" ],
+	"conflicts": [ "Classic.CozyShip" ]
 }
