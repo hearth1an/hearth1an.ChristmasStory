@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine.InputSystem;
 using UnityEngine;
+using System.IO;
+using OWML.Common;
+using OWML.ModHelper;
+
 
 namespace ChristmasStory.Utility
 {
@@ -14,7 +14,7 @@ namespace ChristmasStory.Utility
 		{
 			Enum.TryParse(key.ToString().Replace("Digit", "Alpha").Replace("Numpad", "Alpha"), out KeyCode keyCode);
 
-			return AddPrompt(text, position, keyCode);
+			return AddPrompt(text, position, keyCode);			
 		}
 
 		public static ScreenPrompt AddPrompt(string text, PromptPosition position, KeyCode keyCode)
@@ -28,5 +28,21 @@ namespace ChristmasStory.Utility
 
 			return prompt;
 		}
+
+		public static ScreenPrompt AddTexturePrompt(string text, PromptPosition position, Texture2D texture)
+		{
+			var addTexture = texture;
+			var sprite = Sprite.Create(addTexture, new Rect(0, 0, addTexture.width, addTexture.height), new Vector2(0.5f, 0.5f), 70, 0, SpriteMeshType.FullRect, Vector4.zero, false);
+			sprite.name = addTexture.name;
+
+			var prompt = new ScreenPrompt(text, sprite);
+			Locator.GetPromptManager().AddScreenPrompt(prompt, position, true);
+			Locator.GetPromptManager().TriggerVisibilityRefresh(prompt);
+
+			return prompt;
+		}
+
+
+
 	}
 }

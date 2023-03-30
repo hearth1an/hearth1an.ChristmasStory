@@ -138,6 +138,12 @@ namespace ChrismasStory
         {
             try
             {
+
+
+				var promtTexture = Instance.ModHelper.Assets.GetTexture("planets/Content/other/promt.png");
+				PromptUtils.AddTexturePrompt("Code:", PromptPosition.LowerLeft, promtTexture);
+
+
 				SearchUtilities.Find("BrittleHollow_Body/Sector_BH/Sector Quantum Pole Path/Fragment QuantumPolePath 5").GetComponent<FragmentIntegrity>().enabled = false;
 				SearchUtilities.Find("Probe_Body/ProbeGravity/Props_NOM_GravityCrystal").transform.localScale = new Vector3(0.16f, 0.16f, 0.16f);
 				SearchUtilities.Find("Probe_Body/ProbeGravity/Props_NOM_GravityCrystal_Base").transform.localScale = new Vector3(0.16f, 0.16f, 0.16f);
