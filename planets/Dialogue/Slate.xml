@@ -26,13 +26,7 @@
 				<RequiredCondition>LOOP_COUNT_GOE_2</RequiredCondition>
 				<Text>SLATE_START_4</Text>
 				<DialogueTarget>7.2</DialogueTarget>
-			</DialogueOption>
-			<DialogueOption>
-				<CancelledCondition>SLATE_TOLD_PLAN</CancelledCondition>
-				<CancelledPersistentCondition>ALL_TRAVELLERS_DONE</CancelledPersistentCondition>
-				<Text>SLATE_START_5</Text>
-				<DialogueTarget>3</DialogueTarget>			
-		</DialogueOption>
+			</DialogueOption>			
 			<DialogueOption>
 				<Text>SLATE_START_50</Text>
 				<RequiredPersistentCondition>SLATE_FIRST_LOOP_DONE</RequiredPersistentCondition>
@@ -138,7 +132,7 @@
 			<Page>SLATE_START_25</Page>
 			<Page>SLATE_START_26</Page>			
 		</Dialogue>
-		<DialogueOptionsList>
+		<DialogueOptionsList>		
 		<DialogueOption>
 			    <CancelledPersistentCondition>SLATE_TOLD_SCOUT</CancelledPersistentCondition>
 				<Text>SLATE_START_27</Text>
@@ -165,8 +159,14 @@
 			    <RequiredPersistentCondition>ALL_TRAVELLERS_DONE</RequiredPersistentCondition>
 				<Text>SLATE_START_2</Text>
 				<DialogueTarget>100</DialogueTarget>
-		</DialogueOption>	
-		<DialogueOption>
+		</DialogueOption>
+			<DialogueOption>
+				<RequiredPersistentCondition>SLATE_TOLD_SCOUT</RequiredPersistentCondition>
+				<Text>SLATE_START_5</Text>
+				<ConditionToSet>SLATE_START_VILLAGE</ConditionToSet>
+				<DialogueTarget>10.1</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
 			    <CancelledPersistentCondition>SLATE_TOLD_SCOUT</CancelledPersistentCondition>
 				<Text>SLATE_START_27</Text>
 				<DialogueTarget>10</DialogueTarget>
@@ -210,6 +210,27 @@
 		<DialogueTarget>13</DialogueTarget>
 		</DialogueOption>		
 		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>10.1</Name>
+		<SetPersistentCondition>SLATE_TOLD_SCOUT</SetPersistentCondition>
+		<Dialogue>
+			<Page>SLATE_START_5.1</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>SLATE_START_14</Text>
+				<DialogueTarget>13.1</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>13.1</Name>
+		<Dialogue>
+			<Page>SLATE_START_51</Page>			
+		</Dialogue>		
 	</DialogueNode>
 
 	<DialogueNode>

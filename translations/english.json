@@ -381,7 +381,8 @@
 		"SLATE_START_2": "All the travelers are here!",
 		"SLATE_START_3": "Yes, I'm ready for my first voyage.",
 		"SLATE_START_4": "Could you repeat what the plan is?",
-		"SLATE_START_5": "Is it already winter?",
+		"SLATE_START_5": "Please, remind me about the new scout upgrade.",
+		"SLATE_START_5.1": "Sure! You now have a little Nomai gravity crystal on it. You can launch it anywhere to create an artificial gravity field. Just.. don't launch it inside your ship - it's not safe.",
 		"SLATE_START_6": "Alright, you'll need to get the launch codes from Hornfels at the observatory! But first, as you can see winter has come to our Village, which means we're going to celebrate Christmas!",
 		"SLATE_START_7": "We had to block off some inactive geysers to make space for a beautiful tree and the rest of our celebration plan. We even found some Nomai wires lying around to light it up with!",
 		"SLATE_START_8": "Celebration plan?",
@@ -425,6 +426,7 @@
 		"SLATE_START_48": "Okay, I'll go get Hornfels and Hal.",
 		"SLATE_START_49": "Merry Christmas!",
 		"SLATE_START_50": "Actually, nevermind.",
+		"SLATE_START_51": "Sure, good luck with it!",
 
 		// Slate final
 		"SLATE_FINAL_1": "You did very well, hatchling!",
