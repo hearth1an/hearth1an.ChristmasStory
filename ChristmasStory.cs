@@ -61,7 +61,13 @@ namespace ChristmasStory
 			var ship = SearchUtilities.Find("Ship_Body");
 			ship.AddComponent<ShipHandler>();
 
-			TotemCodePromptVolume.Create(SearchUtilities.Find("TimberHearth_Body"), new Vector3(13.5f, -51f, 183.5f), 2f);
+			// HEY HEARTH1AN!!!!!!!!!!!!!
+			// Once you add the condition for if they should see the prompt, trigger this on here
+			var showTotemPrompt = true;
+			if (showTotemPrompt)
+			{
+				TotemCodePromptVolume.Create(SearchUtilities.Find("DreamWorld_Body"), new Vector3(-17.9f, -289.6f, 681.9f), 6f);
+			}
 
 			// Handles collecting each character
 			var characterControllers = new GameObject("ChristmasCharacterControllers");

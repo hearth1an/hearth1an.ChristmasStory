@@ -1,9 +1,7 @@
-﻿using ChristmasStory.Characters;
-using ChristmasStory.Components;
+﻿using ChristmasStory.Components;
 using ChristmasStory.Components.Animation;
 using ChristmasStory.Utility;
 using NewHorizons.Utility;
-using System;
 using System.Collections;
 using UnityEngine;
 

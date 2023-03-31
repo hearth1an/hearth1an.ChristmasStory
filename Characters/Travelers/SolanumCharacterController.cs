@@ -1,5 +1,4 @@
-﻿using ChristmasStory.Characters;
-using ChristmasStory.Components;
+﻿using ChristmasStory.Components;
 using ChristmasStory.Components.Animation;
 using ChristmasStory.Utility;
 using NewHorizons.Utility;

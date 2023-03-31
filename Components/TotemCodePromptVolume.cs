@@ -6,20 +6,23 @@ namespace ChristmasStory.Components
 	internal class TotemCodePromptVolume : MonoBehaviour
 	{
 		private ScreenPrompt _codePrompt;
+		private bool _visible;
+
+		private Texture2D _promptTexture;
 
 		public void Start()
 		{
-			var promtTexture = ChristmasStory.Instance.ModHelper.Assets.GetTexture("planets/Content/other/promt.png");
-			_codePrompt = PromptUtils.AddTexturePrompt("Code: <CMD>", PromptPosition.LowerLeft, promtTexture);
-			ShowPrompt(false);
+			_promptTexture = ChristmasStory.Instance.ModHelper.Assets.GetTexture("planets/Content/other/promt.png");
+			_visible = false;
 		}
 
 		public void OnTriggerEnter(Collider hitCollider)
 		{
 			if (hitCollider.attachedRigidbody == Locator.GetPlayerBody()._rigidbody)
 			{
-				ChristmasStory.Instance.ModHelper.Console.WriteLine("Entered totem prompt volume");
-				ShowPrompt(true);
+				WriteUtil.WriteLine("Entered totem prompt volume");
+				_codePrompt ??= PromptUtils.AddTexturePrompt("Code: <CMD>", PromptPosition.LowerLeft, _promptTexture);
+				_visible = true;
 			}
 		}
 
@@ -27,14 +30,14 @@ namespace ChristmasStory.Components
 		{
 			if (hitCollider.attachedRigidbody == Locator.GetPlayerBody()._rigidbody)
 			{
-				ChristmasStory.Instance.ModHelper.Console.WriteLine("Exited totem prompt volume");
-				ShowPrompt(false);
+				WriteUtil.WriteLine("Exited totem prompt volume");
+				_visible = false;
 			}
 		}
 
-		private void ShowPrompt(bool visible)
+		public void Update()
 		{
-			_codePrompt.SetVisibility(visible);
+			_codePrompt?.SetVisibility(_visible);
 		}
 
 		public static TotemCodePromptVolume Create(GameObject parent, Vector3 position, float radius)

@@ -1,9 +1,6 @@
-﻿using ChristmasStory.Characters;
-using ChristmasStory.Components;
+﻿using ChristmasStory.Components;
 using ChristmasStory.Utility;
 using NewHorizons.Utility;
-using OWML.ModHelper;
-using System.Linq;
 using UnityEngine;
 
 namespace ChristmasStory.Characters.Travelers
