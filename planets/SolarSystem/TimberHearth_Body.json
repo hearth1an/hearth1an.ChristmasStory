@@ -179,7 +179,7 @@
 					"y": 275.270721,
 					"z": 262.375244
 				}
-			},			
+			},
 			{
 				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Characters_Crossroads/Traveller_HEA_Riebeck",
 				"removeChildren": [ "ConversationZone_Riebeck" ],
@@ -863,7 +863,7 @@
 
 
 
-	},
+	},	
 	"removeChildren": [
 		"Sector_TH/Sector_Village/Interactables_Village/LaunchTower/Launch_Tower/2ndLoopConversation_Trigger",
 		"Sector_TH/Interactables_TH/Geysers/Geyser_Village",

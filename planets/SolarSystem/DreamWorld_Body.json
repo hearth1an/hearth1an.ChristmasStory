@@ -38,6 +38,7 @@
 				"rotation": {},
 				"slides": [
 					{ "imagePath": "planets/Content/visions/vslide1.png" },
+					{ "imagePath": "planets/Content/visions/vslide1.png" },
 					{ "imagePath": "planets/Content/visions/vslide2.png" },
 					{ "imagePath": "planets/Content/visions/vslide2.png" },
 					{ "imagePath": "planets/Content/visions/vslide3.png" },

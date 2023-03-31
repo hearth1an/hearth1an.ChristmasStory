@@ -1,5 +1,6 @@
 ﻿using ChristmasStory.Utility;
 using UnityEngine;
+using NewHorizons.Handlers;
 
 namespace ChristmasStory.Components
 {
@@ -21,7 +22,9 @@ namespace ChristmasStory.Components
 			if (hitCollider.attachedRigidbody == Locator.GetPlayerBody()._rigidbody)
 			{
 				WriteUtil.WriteLine("Entered totem prompt volume");
-				_codePrompt ??= PromptUtils.AddTexturePrompt("Code: <CMD>", PromptPosition.LowerLeft, _promptTexture);
+				PlayerData.SetPersistentCondition("TOTEM_KNOWN", true);
+				string promtText = TranslationHandler.GetTranslation("TOTEM_CODE", TranslationHandler.TextType.UI);
+				_codePrompt ??= PromptUtils.AddTexturePrompt(promtText + " <CMD>", PromptPosition.LowerLeft, _promptTexture);
 				_visible = true;
 			}
 		}
@@ -29,8 +32,7 @@ namespace ChristmasStory.Components
 		public void OnTriggerExit(Collider hitCollider)
 		{
 			if (hitCollider.attachedRigidbody == Locator.GetPlayerBody()._rigidbody)
-			{
-				WriteUtil.WriteLine("Exited totem prompt volume");
+			{				
 				_visible = false;
 			}
 		}

@@ -2,15 +2,20 @@
     "$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/addon_manifest_schema.json",
 
     "credits": [
-        " ",
-        "hearth1an & xen#Mod Authors",       
-        " ",        
-        " ",
-        " ",
-        " ",
-        " ",
-        " ",
-        "Thank you for playing \"Christmas Story\"!"
+        "",
+        "hearth1an#Mod Author",
+        "xen#Mod Author",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Thank you for playing Christmas Story!",
+        ""
     ],
     "popupMessage": "MOD_POPUP"
 }

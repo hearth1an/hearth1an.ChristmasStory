@@ -6,26 +6,27 @@ using UnityEngine.UI;
 
 namespace ChristmasStory
 {
-	public interface INewHorizons
-	{
-		void Create(Dictionary<string, object> config, IModBehaviour mod);
+    public interface INewHorizons
+    {
+        void Create(Dictionary<string, object> config, IModBehaviour mod);
 
-		void LoadConfigs(IModBehaviour mod);
+        void LoadConfigs(IModBehaviour mod);
 
-		GameObject GetPlanet(string name);
+        GameObject GetPlanet(string name);
 
-		string GetCurrentStarSystem();
+        string GetCurrentStarSystem();
 
-		UnityEvent<string> GetChangeStarSystemEvent();
+        UnityEvent<string> GetChangeStarSystemEvent();
 
-		UnityEvent<string> GetStarSystemLoadedEvent();
+        UnityEvent<string> GetStarSystemLoadedEvent();
 
-		GameObject SpawnObject(GameObject planet, Sector sector, string propToCopyPath, Vector3 position, Vector3 eulerAngles, float scale, bool alignWithNormal);
+        GameObject SpawnObject(GameObject planet, Sector sector, string propToCopyPath, Vector3 position, Vector3 eulerAngles, float scale, bool alignWithNormal);
+
+		
 
 
-
-	}
-	public interface IMenuAPI
+    }
+    public interface IMenuAPI
 	{
 		GameObject TitleScreen_MakeMenuOpenButton(string name, int index, Menu menuToOpen);
 		GameObject TitleScreen_MakeSceneLoadButton(string name, int index, SubmitActionLoadScene.LoadableScenes sceneToLoad, PopupMenu confirmPopup = null);
@@ -37,6 +38,7 @@ namespace ChristmasStory
 		PopupMenu MakeTwoChoicePopup(string message, string confirmText, string cancelText);
 		PopupInputMenu MakeInputFieldPopup(string message, string placeholderMessage, string confirmText, string cancelText);
 		PopupMenu MakeInfoPopup(string message, string continueButtonText);
+		
 		void RegisterStartupPopup(string message);
 	}
 }

@@ -455,7 +455,8 @@
 	"UIDictionary": {
 
 		"MOD_POPUP": "Thanks for installing Christmas Story! This mod contains major spoilers for classic Outer Wilds and DLC! We recommend for you to create a new profile for a better experience.",
-		"ENDING_TEXT": "THE END"
+		"ENDING_TEXT": "THE END",
+		"TOTEM_CODE": "Code:"
 
 	},
 	"ShipLogDictionary": {

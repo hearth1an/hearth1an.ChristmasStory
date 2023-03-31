@@ -5,11 +5,13 @@ using ChristmasStory.Components.Animation;
 using ChristmasStory.Utility;
 using HarmonyLib;
 using NewHorizons.Utility;
+using NewHorizons.Handlers;
 using OWML.Common;
 using OWML.ModHelper;
 using System;
 using System.Reflection;
 using UnityEngine;
+
 
 namespace ChristmasStory
 {
@@ -31,6 +33,22 @@ namespace ChristmasStory
 			newHorizonsAPI.LoadConfigs(this);
 			newHorizonsAPI.GetStarSystemLoadedEvent().AddListener(OnStarSystemLoaded);
 			ModHelper.Console.WriteLine($"{nameof(ChristmasStory)} is loaded!", MessageType.Success);
+
+			// for first launch
+			TitleScreenChanges();
+
+			LoadManager.OnCompleteSceneLoad += (scene, loadScene) =>
+			{	
+				if (loadScene == OWScene.TitleScreen)
+                {
+					// for swithcing scene
+					TitleScreenChanges();
+				}
+				if (loadScene == OWScene.Credits_Fast)
+				{
+					CreditsMusic();
+				}
+			};
 		}
 
 		private void OnStarSystemLoaded(string systemName)
@@ -59,15 +77,7 @@ namespace ChristmasStory
 			player.AddComponent<PrisonerAnimationController>();
 
 			var ship = SearchUtilities.Find("Ship_Body");
-			ship.AddComponent<ShipHandler>();
-
-			// HEY HEARTH1AN!!!!!!!!!!!!!
-			// Once you add the condition for if they should see the prompt, trigger this on here
-			var showTotemPrompt = true;
-			if (showTotemPrompt)
-			{
-				TotemCodePromptVolume.Create(SearchUtilities.Find("DreamWorld_Body"), new Vector3(-17.9f, -289.6f, 681.9f), 6f);
-			}
+			ship.AddComponent<ShipHandler>();			
 
 			// Handles collecting each character
 			var characterControllers = new GameObject("ChristmasCharacterControllers");
@@ -131,6 +141,7 @@ namespace ChristmasStory
 		{
 			TransformThings();
 			TransformOnTimberHearth();
+			TransformVillagers();
 		}
 		public void TransformThings()
 		{
@@ -337,29 +348,9 @@ namespace ChristmasStory
 				WriteUtil.WriteError(ex.ToString());
 			}
 		}
-		public void TransformOnTimberHearth()
-		{
-			Instance.ModHelper.Events.Unity.FireOnNextUpdate(() =>
-			{
-				if (Conditions.Get(Conditions.PERSISTENT.SLATE_START_DONE))
-				{
-					// SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village").SetActive(false);
-					SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Characters_Observatory/Villager_HEA_Hornfels (1)").SetActive(false);
-					SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village").SetActive(false);
 
-					SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village_Final").SetActive(true);
-					SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hornfels_Village_Final").SetActive(true);
-					SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village_Final").SetActive(true);
-
-					Conditions.Set(Conditions.CONDITION.HORNFELS_FISH_TOLD, false);
-					WriteUtil.WriteLine("Spawning endgame props!");
-
-					SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl").transform.localRotation = new Quaternion(-0.0104f, -0.0329f, 0.0209f, 0.9992f);
-					SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Marl_Dialogue_Final").SetActive(true);
-					SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Marl_Dialogue").SetActive(false);
-				}
-			});
-
+		public void TransformVillagers ()
+        {
 			// Marl
 			var Marl_Character = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl");
 			Marl_Character.transform.localPosition = new Vector3(8.3747f, 7.4018f, -8.3346f);
@@ -373,109 +364,185 @@ namespace ChristmasStory
 			// Galena
 			var Galena_Character = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Kids_PreGame/Villager_HEA_Galena");
 			Galena_Character.transform.localPosition = new Vector3(1.2199f, 7.7457f, -2.38f);
-
-			var alpine = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Prefab_TH_Alpine").GetComponent<Renderer>();
-
-			// Snow on ground	
-			var thTerrain = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/OtherComponentsGroup/ControlledByProxy_Base/VillageCraterFloors/BatchedGroup/BatchedMeshRenderers_0").GetComponent<Renderer>();
-			var snowTerrain = SearchUtilities.Find("QuantumMoon_Body/Sector_QuantumMoon/State_BH/Geometry_BHState/BatchedGroup/BatchedMeshRenderers_3").GetComponent<Renderer>();
-
-			thTerrain.material.shader = snowTerrain.material.shader;
-			thTerrain.materials = snowTerrain.materials;
-
-			// Snow on grass
-			var snowyGrassMaterial = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/DetailPatches_LowerVillage/LandingGeyserVillageArea/Foliage_TH_GrassPatch (2)").GetComponent<Renderer>().materials[0];
-			var snowyWoodMaterial = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Props_LowerVillage/OtherComponentsGroup/Architecture_LowerVillage/BatchedGroup/BatchedMeshRenderers_0").GetComponent<Renderer>().materials[0];
-			var snowyTreesMaterial = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Props_LowerVillage/OtherComponentsGroup/Trees_LowerVillage/BatchedGroup/BatchedMeshRenderers_0").GetComponent<Renderer>().materials[0];
-			var observatoryMaterial = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Geometry_Observatory/Structure_HEA_Observatory_v3/ObservatoryPivot/Observatory_Interior/Interior_Planks").GetComponent<Renderer>().materials[0];
-			var snowyStructureMaterial = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Geometry_LowerVillage/OtherComponentsGroup/ControlledByProxy_Structures/Architecture_LowerVillage/BatchedGroup/BatchedMeshRenderers_1").GetComponent<Renderer>().materials[0];
-			var snowySequoiaMaterial = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/OtherComponentsGroup/ControlledByProxy_Terrain/Tree_TH_Sequoia/Prefab_TH_Sequoia_V2/Leaves_1").GetComponent<Renderer>().materials[0];
-
-			var mainTreeTexture = Instance.ModHelper.Assets.GetTexture("planets/Content/Textures/Foliage_TH_Main_Tree_Snow.png");
-			var snowGrassTexture = Instance.ModHelper.Assets.GetTexture("planets/Content/Textures/Foliage_TH_Snow.png");
-			var snowWoodTexture = Instance.ModHelper.Assets.GetTexture("planets/Content/Textures/Foliage_TH_Crater_Snow_Wood.png");
-			var woodTextureClean = Instance.ModHelper.Assets.GetTexture("planets/Content/Textures/Foliage_TH_Crater_Wood_Clean.png");
-			var snowTreeTexture = Instance.ModHelper.Assets.GetTexture("planets/Content/Textures/Foliage_TH_Snow_Tree.png");
-			var snowStructureTexture = Instance.ModHelper.Assets.GetTexture("planets/Content/Textures/Structure_HEA_VillageCabin_Snow.png");
-			var sequoiaSnowLeavesTexture = Instance.ModHelper.Assets.GetTexture("planets/Content/Textures/Tree_TH_SequoiaLeaves_snow.png");
-
-			alpine.material.mainTexture = mainTreeTexture;
-
-			snowyTreesMaterial.mainTexture = snowTreeTexture;
-			snowyWoodMaterial.mainTexture = snowWoodTexture;
-			snowyGrassMaterial.mainTexture = snowGrassTexture;
-			snowyStructureMaterial.mainTexture = snowStructureTexture;
-			observatoryMaterial.mainTexture = woodTextureClean;
-			snowySequoiaMaterial.mainTexture = sequoiaSnowLeavesTexture;
-
-			var thMeshRenderers = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village").GetComponentsInChildren<Renderer>();
-			var thMeshRenderers_2 = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Props_TH/OtherComponentsGroup/ControlledByProxy_Terrain/Village").GetComponentsInChildren<Renderer>();
-			var thExcludedSector = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Geometry_Observatory/Structure_HEA_Observatory_v3/ObservatoryPivot/Observatory_Interior").GetComponentsInChildren<Renderer>();
-			var thExcludedSector_2 = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Interactables_Observatory").GetComponentsInChildren<Renderer>();
-			var sequoiaTreeLeaves = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/OtherComponentsGroup/ControlledByProxy_Terrain/Tree_TH_Sequoia/Prefab_TH_Sequoia_V2").GetComponentsInChildren<Renderer>();
-
-
-			foreach (var meshRenderer in thMeshRenderers)
-			{
-				if (meshRenderer.name.Contains("Foliage_TH"))
+		}
+        public void TransformOnTimberHearth()
+		{			
+			try
+            {
+				Instance.ModHelper.Events.Unity.FireOnNextUpdate(() =>
 				{
-					meshRenderer.sharedMaterial = snowyGrassMaterial;
+					if (Conditions.Get(Conditions.PERSISTENT.SLATE_START_DONE))
+					{
+						// SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village").SetActive(false);
+						SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Characters_Observatory/Villager_HEA_Hornfels (1)").SetActive(false);
+						SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village").SetActive(false);
+
+						SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village_Final").SetActive(true);
+						SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hornfels_Village_Final").SetActive(true);
+						SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village_Final").SetActive(true);
+
+						Conditions.Set(Conditions.CONDITION.HORNFELS_FISH_TOLD, false);
+						WriteUtil.WriteLine("Spawning endgame props!");
+
+						SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl").transform.localRotation = new Quaternion(-0.0104f, -0.0329f, 0.0209f, 0.9992f);
+						SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Marl_Dialogue_Final").SetActive(true);
+						SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Marl_Dialogue").SetActive(false);
+					}
+				});
+
+				
+
+				var alpine = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Prefab_TH_Alpine").GetComponent<Renderer>();
+
+				// Snow on ground	
+				var thTerrain = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/OtherComponentsGroup/ControlledByProxy_Base/VillageCraterFloors/BatchedGroup/BatchedMeshRenderers_0").GetComponent<Renderer>();
+				var snowTerrain = SearchUtilities.Find("QuantumMoon_Body/Sector_QuantumMoon/State_BH/Geometry_BHState/BatchedGroup/BatchedMeshRenderers_3").GetComponent<Renderer>();
+
+				thTerrain.material.shader = snowTerrain.material.shader;
+				thTerrain.materials = snowTerrain.materials;
+
+				// Snow on grass
+				var snowyGrassMaterial = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/DetailPatches_LowerVillage/LandingGeyserVillageArea/Foliage_TH_GrassPatch (2)").GetComponent<Renderer>().materials[0];
+				var snowyWoodMaterial = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Props_LowerVillage/OtherComponentsGroup/Architecture_LowerVillage/BatchedGroup/BatchedMeshRenderers_0").GetComponent<Renderer>().materials[0];
+				var snowyTreesMaterial = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Props_LowerVillage/OtherComponentsGroup/Trees_LowerVillage/BatchedGroup/BatchedMeshRenderers_0").GetComponent<Renderer>().materials[0];
+				var observatoryMaterial = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Geometry_Observatory/Structure_HEA_Observatory_v3/ObservatoryPivot/Observatory_Interior/Interior_Planks").GetComponent<Renderer>().materials[0];
+				var snowyStructureMaterial = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Geometry_LowerVillage/OtherComponentsGroup/ControlledByProxy_Structures/Architecture_LowerVillage/BatchedGroup/BatchedMeshRenderers_1").GetComponent<Renderer>().materials[0];
+				var snowySequoiaMaterial = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/OtherComponentsGroup/ControlledByProxy_Terrain/Tree_TH_Sequoia/Prefab_TH_Sequoia_V2/Leaves_1").GetComponent<Renderer>().materials[0];
+
+				var mainTreeTexture = Instance.ModHelper.Assets.GetTexture("planets/Content/Textures/Foliage_TH_Main_Tree_Snow.png");
+				var snowGrassTexture = Instance.ModHelper.Assets.GetTexture("planets/Content/Textures/Foliage_TH_Snow.png");
+				var snowWoodTexture = Instance.ModHelper.Assets.GetTexture("planets/Content/Textures/Foliage_TH_Crater_Snow_Wood.png");
+				var woodTextureClean = Instance.ModHelper.Assets.GetTexture("planets/Content/Textures/Foliage_TH_Crater_Wood_Clean.png");
+				var snowTreeTexture = Instance.ModHelper.Assets.GetTexture("planets/Content/Textures/Foliage_TH_Snow_Tree.png");
+				var snowStructureTexture = Instance.ModHelper.Assets.GetTexture("planets/Content/Textures/Structure_HEA_VillageCabin_Snow.png");
+				var sequoiaSnowLeavesTexture = Instance.ModHelper.Assets.GetTexture("planets/Content/Textures/Tree_TH_SequoiaLeaves_snow.png");
+
+				alpine.material.mainTexture = mainTreeTexture;
+
+				snowyTreesMaterial.mainTexture = snowTreeTexture;
+				snowyWoodMaterial.mainTexture = snowWoodTexture;
+				snowyGrassMaterial.mainTexture = snowGrassTexture;
+				snowyStructureMaterial.mainTexture = snowStructureTexture;
+				observatoryMaterial.mainTexture = woodTextureClean;
+				snowySequoiaMaterial.mainTexture = sequoiaSnowLeavesTexture;
+
+				var thMeshRenderers = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village").GetComponentsInChildren<Renderer>();
+				var thMeshRenderers_2 = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Props_TH/OtherComponentsGroup/ControlledByProxy_Terrain/Village").GetComponentsInChildren<Renderer>();
+				var thExcludedSector = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Geometry_Observatory/Structure_HEA_Observatory_v3/ObservatoryPivot/Observatory_Interior").GetComponentsInChildren<Renderer>();
+				var thExcludedSector_2 = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Interactables_Observatory").GetComponentsInChildren<Renderer>();
+				var sequoiaTreeLeaves = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/OtherComponentsGroup/ControlledByProxy_Terrain/Tree_TH_Sequoia/Prefab_TH_Sequoia_V2").GetComponentsInChildren<Renderer>();
+
+				foreach (var meshRenderer in thMeshRenderers)
+				{
+					if (meshRenderer.name.Contains("Foliage_TH"))
+					{
+						meshRenderer.sharedMaterial = snowyGrassMaterial;
+					}
+					else if (meshRenderer.material.name.Contains("Terrain_TH_THSurface_mat"))
+					{
+						meshRenderer.sharedMaterial = snowTerrain.material;
+					}
+					else if (meshRenderer.material.name.Contains("Foliage_TH"))
+					{
+						meshRenderer.sharedMaterial = snowTerrain.material;
+					}
+					else if (meshRenderer.material.name.Contains("VillagePlanks_mat"))
+					{
+						meshRenderer.sharedMaterial = snowyWoodMaterial;
+					}
+					else if (meshRenderer.material.name.Contains("Tree_TH_RedwoodLeaves"))
+					{
+						meshRenderer.sharedMaterial = snowyTreesMaterial;
+						snowyTreesMaterial.color = new Color(1f, 1f, 1f, 1f);
+					}
+					else if (meshRenderer.material.name.Contains("Tree_TH_RedwoodLeaves_mat (Instance)"))
+					{
+						meshRenderer.sharedMaterial = snowyTreesMaterial;
+					}
+					else if (meshRenderer.material.name.Contains("Structure_HEA_VillageCabin"))
+					{
+						meshRenderer.sharedMaterial = snowyStructureMaterial;
+					}
 				}
-				else if (meshRenderer.material.name.Contains("Terrain_TH_THSurface_mat"))
+				foreach (var meshRenderer in thMeshRenderers_2)
 				{
-					meshRenderer.sharedMaterial = snowTerrain.material;
+					if (meshRenderer.material.name.Contains("Tree_TH_RedwoodLeaves"))
+					{
+						meshRenderer.sharedMaterial = snowyTreesMaterial;
+						snowyTreesMaterial.color = new Color(1f, 1f, 1f, 1f);
+					}
 				}
-				else if (meshRenderer.material.name.Contains("Foliage_TH"))
+				foreach (var meshRenderer in thExcludedSector)
 				{
-					meshRenderer.sharedMaterial = snowTerrain.material;
+					if (meshRenderer.material.name.Contains("Structure_HEA_VillagePlanks"))
+					{
+						meshRenderer.sharedMaterial = observatoryMaterial;
+					}
 				}
-				else if (meshRenderer.material.name.Contains("VillagePlanks_mat"))
+				foreach (var meshRenderer in thExcludedSector_2)
 				{
-					meshRenderer.sharedMaterial = snowyWoodMaterial;
+					if (meshRenderer.material.name.Contains("Structure_HEA_VillagePlanks"))
+					{
+						meshRenderer.sharedMaterial = observatoryMaterial;
+					}
 				}
-				else if (meshRenderer.material.name.Contains("Tree_TH_RedwoodLeaves"))
+				foreach (var meshRenderer in sequoiaTreeLeaves)
 				{
-					meshRenderer.sharedMaterial = snowyTreesMaterial;
-					snowyTreesMaterial.color = new Color(1f, 1f, 1f, 1f);
-				}
-				else if (meshRenderer.material.name.Contains("Tree_TH_RedwoodLeaves_mat (Instance)"))
-				{
-					meshRenderer.sharedMaterial = snowyTreesMaterial;
-				}
-				else if (meshRenderer.material.name.Contains("Structure_HEA_VillageCabin"))
-				{
-					meshRenderer.sharedMaterial = snowyStructureMaterial;
+					if (meshRenderer.material.name.Contains("Tree_TH_SequoiaLeaves_mat (Instance)"))
+					{
+						meshRenderer.sharedMaterial = snowySequoiaMaterial;
+					}
 				}
 			}
-			foreach (var meshRenderer in thMeshRenderers_2)
+			catch (Exception ex)
 			{
-				if (meshRenderer.material.name.Contains("Tree_TH_RedwoodLeaves"))
-				{
-					meshRenderer.sharedMaterial = snowyTreesMaterial;
-					snowyTreesMaterial.color = new Color(1f, 1f, 1f, 1f);
-				}
-			}
-			foreach (var meshRenderer in thExcludedSector)
-			{
-				if (meshRenderer.material.name.Contains("Structure_HEA_VillagePlanks"))
-				{
-					meshRenderer.sharedMaterial = observatoryMaterial;
-				}
-			}
-			foreach (var meshRenderer in thExcludedSector_2)
-			{
-				if (meshRenderer.material.name.Contains("Structure_HEA_VillagePlanks"))
-				{
-					meshRenderer.sharedMaterial = observatoryMaterial;
-				}
-			}
-			foreach (var meshRenderer in sequoiaTreeLeaves)
-			{
-				if (meshRenderer.material.name.Contains("Tree_TH_SequoiaLeaves_mat (Instance)"))
-				{
-					meshRenderer.sharedMaterial = snowySequoiaMaterial;
-				}
+				WriteUtil.WriteError($"{ex}");
 			}
 		}
+
+		private void CreditsMusic()
+        {
+			var addMusic = GameObject.Find("AudioSource").GetComponent<OWAudioSource>();			
+			var newMusic = Instance.ModHelper.Assets.GetAudio("planets/Content/music/Christmas_Instrument.mp3");
+			addMusic._audioLibraryClip = AudioType.None;			
+			addMusic.clip = newMusic;
+			addMusic.Play();
+
+			
+		}		
+		public void TitleScreenChanges()
+		{
+			var snowTreeTexture = Instance.ModHelper.Assets.GetTexture("planets/Content/Textures/Foliage_TH_Snow_Tree_NEW.png");
+			var snowTerrainTexture = Instance.ModHelper.Assets.GetTexture("planets/Content/Textures/Terrain_BH_SnowTransition_d.png");
+			var snowFoliageTexture = Instance.ModHelper.Assets.GetTexture("planets/Content/Textures/Foliage_TH_Crater_Snow.png");
+			var leavesMaterial = GameObject.Find("Scene/Background/PlanetPivot/PlanetRoot/Trees/Tree_TH_SaplingSequoia (1)/Redwood_Leaves_1").GetComponent<MeshRenderer>().materials[0];
+			var foliageMaterial = GameObject.Find("Scene/Background/PlanetPivot/PlanetRoot/Props/Foliage/Foliage_TH_CraterGrass (3)").GetComponent<MeshRenderer>().materials[0];
+			var trees = GameObject.Find("Scene/Background/PlanetPivot/PlanetRoot/Trees").GetComponentsInChildren<Renderer>();
+			var terrain = GameObject.Find("Scene/Background/PlanetPivot/PlanetRoot/Terrain_THM_TitleScreen").GetComponent<MeshRenderer>();
+			var foliage = GameObject.Find("Scene/Background/PlanetPivot/PlanetRoot/Props/Foliage").GetComponentsInChildren<Renderer>();
+
+			leavesMaterial.mainTexture = snowTreeTexture;
+			
+			foliageMaterial.mainTexture = snowFoliageTexture;
+			terrain.material.color = Color.white;			
+			
+			foreach (MeshRenderer meshRenderer in trees)
+            {				
+				if (meshRenderer.material.name.Contains("Tree_TS_RedwoodLeaves_mat (Instance)"))
+				{					
+					meshRenderer.sharedMaterial = leavesMaterial;
+					leavesMaterial.color = Color.white;
+				}				
+            }
+			foreach (MeshRenderer meshRenderer in foliage)
+			{				
+				if (meshRenderer.material.name.Contains("Foliage_TS_Grass (Instance)"))
+				{
+					meshRenderer.sharedMaterial = foliageMaterial;
+				}
+			}			
+
+		}
 	}
+
 }
