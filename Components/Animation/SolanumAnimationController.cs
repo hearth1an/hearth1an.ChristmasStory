@@ -1,11 +1,10 @@
-﻿using ChrismasStory.Components;
-using NewHorizons.Handlers;
+﻿using NewHorizons.Handlers;
 using NewHorizons.Utility;
 using UnityEngine;
 
 namespace ChristmasStory.Components.Animation
 {
-    internal class SolanumAnimationController : MonoBehaviour
+	internal class SolanumAnimationController : MonoBehaviour
     {
         private SolanumAnimController _animator;
         private NomaiConversationStone _conversationStone;

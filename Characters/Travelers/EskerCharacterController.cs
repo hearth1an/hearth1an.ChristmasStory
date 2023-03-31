@@ -1,8 +1,9 @@
-﻿using ChrismasStory.Components;
+﻿using ChristmasStory.Characters;
+using ChristmasStory.Components;
 using ChristmasStory.Utility;
 using NewHorizons.Utility;
 
-namespace ChrismasStory.Characters.Travelers
+namespace ChristmasStory.Characters.Travelers
 {
 	/* 
 	 * Visit Esker > He will say that he already knows everything bc he is listening to signalscope (he will be weirdo like always) >

@@ -1,9 +1,9 @@
-﻿using ChrismasStory.Components;
+﻿using ChristmasStory.Components;
 using ChristmasStory.Utility;
 using System.Collections;
 using UnityEngine;
 
-namespace ChrismasStory.Characters
+namespace ChristmasStory.Characters
 {
 	internal abstract class BaseCharacterController : MonoBehaviour
 	{

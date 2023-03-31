@@ -1,8 +1,9 @@
-﻿using ChrismasStory.Components;
+﻿using ChristmasStory.Characters;
+using ChristmasStory.Components;
 using ChristmasStory.Utility;
 using NewHorizons.Utility;
 
-namespace ChrismasStory.Characters.Travelers
+namespace ChristmasStory.Characters.Travelers
 {
 	/*
 	 * (OPTIONAL)
@@ -34,7 +35,7 @@ namespace ChrismasStory.Characters.Travelers
 					originalCharacter.SetActive(false);
 				}
 			});
-			
+
 
 			base.Start();
 		}

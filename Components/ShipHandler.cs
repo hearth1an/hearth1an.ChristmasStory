@@ -4,7 +4,7 @@ using HarmonyLib;
 using UnityEngine.Events;
 using ChristmasStory.Utility;
 
-namespace ChrismasStory.Components
+namespace ChristmasStory.Components
 {
 	[HarmonyPatch]
 	internal class ShipHandler : MonoBehaviour
@@ -24,13 +24,13 @@ namespace ChrismasStory.Components
 
 			ShipExplosion = new();
 
-			_shipCockpitController = GameObject.FindObjectOfType<ShipCockpitController>();
+			_shipCockpitController = FindObjectOfType<ShipCockpitController>();
 			_shipDamageController = gameObject.GetComponent<ShipDamageController>();
 			_shipBody = Locator.GetShipBody().gameObject;
 			_villageSector = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Villager_HEA_Esker_ANIM_Rocking");
 
-			
-			
+
+
 		}
 
 		/// <summary>
@@ -50,7 +50,7 @@ namespace ChrismasStory.Components
 		}
 
 		public static bool HasShipExploded() => Instance._shipDamageController._hullBreach;
-		
+
 
 		/// <summary>
 		/// For testing!
@@ -62,16 +62,16 @@ namespace ChrismasStory.Components
 			Instance._shipDamageController.TriggerReactorCritical(true);
 			Instance._shipDamageController.TriggerHullBreach(true);
 			Instance._shipDamageController.Explode(true);
-        }
+		}
 
-        [HarmonyPrefix]
-        [HarmonyPatch(typeof(ShipDamageController), nameof(ShipDamageController.Explode))]
-        private static void ShipDamageController_Explode()
-        {
-            ChristmasStory.WriteDebug("Explosion event");
-            Conditions.Set(Conditions.CONDITION.SHIP_DESTROYED, true);
-            Instance.ShipExplosion?.Invoke();
-        }
+		[HarmonyPrefix]
+		[HarmonyPatch(typeof(ShipDamageController), nameof(ShipDamageController.Explode))]
+		private static void ShipDamageController_Explode()
+		{
+			WriteUtil.WriteDebug("Explosion event");
+			Conditions.Set(Conditions.CONDITION.SHIP_DESTROYED, true);
+			Instance.ShipExplosion?.Invoke();
+		}
 
 		private void OnSectorOccupantsUpdated()
 		{
@@ -85,9 +85,9 @@ namespace ChrismasStory.Components
 			};
 		}
 
-		
+
 		public void Update()
-        {
+		{
 			OnSectorOccupantsUpdated();
 			/*
 			var playerState = Locator.GetPlayerController()._groundBody;
@@ -123,5 +123,5 @@ namespace ChrismasStory.Components
 		}
 
 
-    }
+	}
 }

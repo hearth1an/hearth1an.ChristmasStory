@@ -1,11 +1,12 @@
-﻿using ChrismasStory.Components;
+﻿using ChristmasStory.Characters;
+using ChristmasStory.Components;
 using ChristmasStory.Components.Animation;
 using ChristmasStory.Utility;
 using NewHorizons.Utility;
 using System.Collections;
 using UnityEngine;
 
-namespace ChrismasStory.Characters.Travelers
+namespace ChristmasStory.Characters.Travelers
 {
 	/* 
 	At the start of the game when player will have a conversation with Hal. He will say that he happy about translator and he also can do nomai writings on stones and he 
@@ -41,7 +42,7 @@ namespace ChrismasStory.Characters.Travelers
 
 		protected override void Dialogue_OnEndConversation()
 		{
-			if (Conditions.Get(Conditions.CONDITION.SOLANUM_START)) 
+			if (Conditions.Get(Conditions.CONDITION.SOLANUM_START))
 			{
 				SolanumAnimationController.Instance.SolanumAnimEvent();
 

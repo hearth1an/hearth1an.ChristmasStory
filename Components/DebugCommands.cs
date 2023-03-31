@@ -1,6 +1,4 @@
-﻿using ChrismasStory.Components;
-using ChristmasStory.Utility;
-using NewHorizons.Utility;
+﻿using ChristmasStory.Utility;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -41,6 +39,7 @@ namespace ChristmasStory.Components
 			RegisterDebugWarpCommand(Key.Numpad5, WarpUtils.WarpToFeldspar, "Warp to Feldspar");
 			RegisterDebugWarpCommand(Key.Numpad6, WarpUtils.WarpToSixthLocation, "Warp to Solanum");
 			RegisterDebugWarpCommand(Key.Numpad7, WarpUtils.WarpToLetranger, "Warp to Letranger");
+			RegisterDebugWarpCommand(Key.Numpad8, WarpUtils.WarpToDreamTown, "Warp to Dream Town");
 		}
 
 		public void Update()

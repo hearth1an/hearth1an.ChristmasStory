@@ -1,4 +1,6 @@
 ﻿using NewHorizons.Utility;
+using System.Collections;
+using System.Linq;
 using UnityEngine;
 
 namespace ChristmasStory.Utility
@@ -74,6 +76,29 @@ namespace ChristmasStory.Utility
 			Locator.GetPlayerSectorDetector().RemoveFromAllSectors();
 			ringworldSector.GetTriggerVolume().AddObjectToVolume(Locator.GetPlayerDetector());
 			Locator.GetRingWorldController()._insideRingWorldVolume.AddObjectToVolume(Locator.GetPlayerDetector());
+		}
+
+		public static void WarpToDreamTown() => ChristmasStory.Instance.StartCoroutine(WarpToDreamTown_Routine());
+
+		private static IEnumerator WarpToDreamTown_Routine()
+		{
+			// Stolen from QSB who stole it from DayDream
+			var relativeLocation = new RelativeLocationData(Vector3.up * 2 + Vector3.forward * 2, Quaternion.identity, Vector3.zero);
+
+			var location = DreamArrivalPoint.Location.Zone4;
+			var arrivalPoint = Locator.GetDreamArrivalPoint(location);
+			var dreamCampfire = Locator.GetDreamCampfire(location);
+			if (Locator.GetToolModeSwapper().GetItemCarryTool().GetHeldItemType() != ItemType.DreamLantern)
+			{
+				var dreamLanternItem = GameObject.FindObjectsOfType<DreamLanternItem>().First(x => x._lanternType == DreamLanternType.Functioning && !x._lanternController.IsLit());
+				Locator.GetToolModeSwapper().GetItemCarryTool().PickUpItemInstantly(dreamLanternItem);
+			}
+
+			Locator.GetDreamWorldController().EnterDreamWorld(dreamCampfire, arrivalPoint, relativeLocation);
+
+			yield return new WaitForSeconds(0.5f);
+
+			WarpToPlanet(AstroObject.Name.DreamWorld, new Vector3(-2.5f, -290.5f, 685.8f));
 		}
 	}
 }

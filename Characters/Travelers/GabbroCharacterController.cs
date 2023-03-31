@@ -1,10 +1,11 @@
-﻿using ChrismasStory.Components;
+﻿using ChristmasStory.Characters;
+using ChristmasStory.Components;
 using ChristmasStory.Utility;
 using NewHorizons.Utility;
 using System.Collections;
 using UnityEngine;
 
-namespace ChrismasStory.Characters.Travelers
+namespace ChristmasStory.Characters.Travelers
 {
 	/*
 	 * Visit Gabbro
@@ -26,18 +27,18 @@ namespace ChrismasStory.Characters.Travelers
 			_signal = SearchUtilities.Find("GabbroIsland_Body/Sector_GabbroIsland/Interactables_GabbroIsland/Signal_Flute");
 
 			originalCharacter = SearchUtilities.Find("GabbroIsland_Body/Sector_GabbroIsland/Interactables_GabbroIsland/Traveller_HEA_Gabbro/Traveller_HEA_Gabbro_ANIM_IdleFlute");
-			
+
 			treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Gabbro"); // Will need to change the model since he don't have any static animation. Probably the best way is to rip from Eye Scene
 
-			
+
 			_gdShip = SearchUtilities.Find("GabbroShip_Body");
 			_thShip = SearchUtilities.Find("TimberHearth_Body/Sector_TH/GabbroShip");
 
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Gabbro/Signal_Flute").transform.localPosition = new Vector3(0,1,0);
+			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Gabbro/Signal_Flute").transform.localPosition = new Vector3(0, 1, 0);
 
-            base.Start();
+			base.Start();
 
-            
+
 			ShipHandler.Instance.ShipExplosion.AddListener(ShipHandler_ShipExplosion);
 		}
 
@@ -51,7 +52,7 @@ namespace ChrismasStory.Characters.Travelers
 		{
 			if (ShipHandler.IsCharacterNearShip(originalCharacter, 30f))
 			{
-				ChristmasStory.WriteDebug("Kaboom!");
+				WriteUtil.WriteDebug("Kaboom!");
 				Conditions.Set(DoneCondition, true);
 				StartCoroutine(KillGabbro());
 			}
@@ -69,7 +70,7 @@ namespace ChrismasStory.Characters.Travelers
 
 		protected override void Dialogue_OnStartConversation() { }
 		protected override void Dialogue_OnEndConversation() { }
-		protected override void OnChangeState(STATE oldState, STATE newState) 
+		protected override void OnChangeState(STATE oldState, STATE newState)
 		{
 			_gdShip?.SetActive(newState == STATE.ORIGINAL);
 			_thShip?.SetActive(newState == STATE.AT_TREE);

@@ -1,10 +1,11 @@
-﻿using HarmonyLib;
+﻿using ChristmasStory.Utility;
+using HarmonyLib;
 using NewHorizons.Utility;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace ChrismasStory.Components
+namespace ChristmasStory.Components
 {
 	[HarmonyPatch]
 	internal class HeldItemHandler : MonoBehaviour
@@ -24,9 +25,9 @@ namespace ChrismasStory.Components
 		public void Start()
 		{
 			Instance = this;
-			_toolModeSwapper = GameObject.FindObjectOfType<ToolModeSwapper>();
-			_itemTool = GameObject.FindObjectOfType<ItemTool>();
-			_sharedStone = GameObject.FindObjectsOfType<SharedStone>().First(x => x.name == "Invite_Stone");
+			_toolModeSwapper = FindObjectOfType<ToolModeSwapper>();
+			_itemTool = FindObjectOfType<ItemTool>();
+			_sharedStone = FindObjectsOfType<SharedStone>().First(x => x.name == "Invite_Stone");
 
 			_villageSector = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Nomai_ANIM_SkyWatching_Idle");
 
@@ -49,7 +50,7 @@ namespace ChrismasStory.Components
 
 			PlayerEffectController.PlayAudioOneShot(AudioType.Artifact_Extinguish, 1f);
 			PlayerEffectController.PlayAudioOneShot(AudioType.Ghost_DeathSingle, 2f);
-			ChristmasStory.WriteDebug("Prisoner failed. Try next loop.");
+			WriteUtil.WriteDebug("Prisoner failed. Try next loop.");
 		}
 		public static OWItem GetHeldItem() => Instance._toolModeSwapper.GetItemCarryTool().GetHeldItem();
 

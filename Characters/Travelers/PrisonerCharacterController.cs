@@ -1,4 +1,5 @@
-﻿using ChrismasStory.Components;
+﻿using ChristmasStory.Characters;
+using ChristmasStory.Components;
 using ChristmasStory.Components.Animation;
 using ChristmasStory.Utility;
 using NewHorizons.Utility;
@@ -6,14 +7,14 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-namespace ChrismasStory.Characters.Travelers
+namespace ChristmasStory.Characters.Travelers
 {
 
 	internal class PrisonerCharacterController : TravelerCharacterController
 	{
 		public override Conditions.PERSISTENT DoneCondition => Conditions.PERSISTENT.PRISONER_DONE;
 		public static PrisonerCharacterController Instance;
-		private GameObject _lantern;		
+		private GameObject _lantern;
 
 		public override void Start()
 		{
@@ -21,9 +22,9 @@ namespace ChrismasStory.Characters.Travelers
 			dialogue = SearchUtilities.Find("Prisoner_Dialogue").GetComponent<CharacterDialogueTree>();
 			treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/GhostBird");
 			originalCharacter = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner/Ghostbird_IP_ANIM");
-			_lantern = SearchUtilities.Find("Village_Lantern");			
+			_lantern = SearchUtilities.Find("Village_Lantern");
 
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/GhostBird/Signal_Prisoner").transform.localPosition = new Vector3 (0,2,0);
+			SearchUtilities.Find("TimberHearth_Body/Sector_TH/GhostBird/Signal_Prisoner").transform.localPosition = new Vector3(0, 2, 0);
 
 			var controller = _lantern.GetComponent<DreamLanternController>();
 			controller.enabled = true;
@@ -52,13 +53,13 @@ namespace ChrismasStory.Characters.Travelers
 				{
 					SearchUtilities.Find("Prisoner_Artifact").SetActive(false);
 					SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner").SetActive(false); ;
-					SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostDirector_Prisoner").SetActive(false); 
+					SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostDirector_Prisoner").SetActive(false);
 					SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Interactibles_PrisonCell/PrisonerSequence/LanternTableSocket").SetActive(false);
 					SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Effects_PrisonCell/DarknessPlane").SetActive(false);
-					ChristmasStory.WriteLine("Prisoner is done, disabling them in DreamWorld");
+					WriteUtil.WriteLine("Prisoner is done, disabling them in DreamWorld");
 				}
 			});
-			
+
 
 			base.Start();
 
@@ -68,7 +69,7 @@ namespace ChrismasStory.Characters.Travelers
 
 		}
 
-		
+
 		protected override void Dialogue_OnEndConversation()
 		{
 			if (Conditions.Get(Conditions.CONDITION.PRISONER_START))
@@ -98,7 +99,7 @@ namespace ChrismasStory.Characters.Travelers
 					ChangeState(STATE.AT_TREE);
 				}
 			}
-		}		
+		}
 
 		protected override IEnumerator DirectToTree(STATE state)
 		{
@@ -123,7 +124,7 @@ namespace ChrismasStory.Characters.Travelers
 
 			OWInput.ChangeInputMode(oldInputMode);
 			Locator.GetPauseCommandListener().RemovePauseCommandLock();
-		}		
+		}
 	}
 }
 

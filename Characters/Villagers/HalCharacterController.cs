@@ -1,8 +1,9 @@
-﻿using ChrismasStory.Components;
+﻿using ChristmasStory.Characters;
+using ChristmasStory.Components;
 using ChristmasStory.Utility;
 using NewHorizons.Utility;
 
-namespace ChrismasStory.Characters.Travelers
+namespace ChristmasStory.Characters.Villagers
 {
 	/* 
 	 * Visit Esker > He will say that he already knows everything bc he is listening to signalscope (he will be weirdo like always) >
@@ -15,13 +16,13 @@ namespace ChrismasStory.Characters.Travelers
 
 		public override void Start()
 		{
-			dialogue = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Dialogue").GetComponent<CharacterDialogueTree>();			
+			dialogue = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Dialogue").GetComponent<CharacterDialogueTree>();
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/ConversationZone").SetActive(false);
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Dialogue_2").SetActive(false);
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Trigger_2").SetActive(false);
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Dialogue_3").SetActive(false);
 
-			
+
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village_Final/ConversationZone").DestroyAllComponents<InteractReceiver>();
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/ConversationZone").DestroyAllComponents<InteractReceiver>();
 
@@ -32,7 +33,7 @@ namespace ChrismasStory.Characters.Travelers
 
 		protected override void Dialogue_OnStartConversation()
 		{
-			
+
 		}
 
 		protected override void Dialogue_OnEndConversation()
@@ -42,20 +43,20 @@ namespace ChrismasStory.Characters.Travelers
 				PlayerEffectController.Blink(2f);
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Dialogue").SetActive(false);
 				Invoke("SwapDialogue", 2f);
-				ChristmasStory.WriteLine("Hal dialogue swapping!");
-			}			
+				WriteUtil.WriteLine("Hal dialogue swapping!");
+			}
 		}
 
 		private void SwapDialogue()
-        {
+		{
 			PlayerEffectController.PlayAudioOneShot(AudioType.ToolItemSharedStonePickUp, 1f);
-			HeldItemHandler.GivePlayerInviteStone();			
+			HeldItemHandler.GivePlayerInviteStone();
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Trigger_2").SetActive(true);
 			Invoke("EnableDialogue3", 3f);
 		}
 
 		private void EnableDialogue3()
-        {
+		{
 			SearchUtilities.Find("TimberHearth_Body/Sector_THHal_Village/Hal_Dialogue_3").SetActive(true);
 		}
 		protected override void OnChangeState(STATE oldState, STATE newState) { }
