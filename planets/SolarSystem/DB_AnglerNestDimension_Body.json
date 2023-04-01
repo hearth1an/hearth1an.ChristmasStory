@@ -80,8 +80,5 @@
 				"onlyAudibleToScope": false
 			}
 		]
-	},
-	"removeChildren": [
-		"Sector_AnglerNestDimension/Traveller_HEA_Feldspar"
-	]
+	}	
 }
