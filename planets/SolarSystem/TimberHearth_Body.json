@@ -215,8 +215,8 @@
 				}
 			},
 			{
-				"assetBundle": "planets/assetbundle/ghostbird",
-				"path": "Assets/Prefabs/Alpine_with_lights.prefab",
+				"assetBundle": "planets/assetbundle/prison_new",
+				"path": "Assets/Prefabs/alpine.prefab",
 				"rename": "Christmas_Tree",
 				"position": {
 					"x": -7.968107,

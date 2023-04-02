@@ -162,9 +162,8 @@ namespace ChristmasStory
 				SearchUtilities.Find("Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/ConversationZone").DestroyAllComponents<InteractReceiver>();
 
 				SearchUtilities.Find("Ship_Body/ShipSector/Ship_Esker").AddComponent<CapsuleCollider>().transform.localPosition = new Vector3 (0, 1, 0);
-				SearchUtilities.Find("Ship_Body/ShipSector/Ship_Feldspar").AddComponent<CapsuleCollider>().transform.localPosition = new Vector3(0, 1, 0);
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Christmas_Tree").AddComponent<CapsuleCollider>();
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Christmas_Tree").GetComponent<CapsuleCollider>().radius = 0.5f;
+				SearchUtilities.Find("Ship_Body/ShipSector/Ship_Feldspar").AddComponent<CapsuleCollider>().transform.localPosition = new Vector3(0, 1, 0);				
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Christmas_Tree").GetComponent<CapsuleCollider>().radius = 1f;
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Prefab_HEA_ChertShip").AddComponent<CapsuleCollider>();
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Prefab_HEA_ChertShip").GetComponent<CapsuleCollider>().radius = 7f;
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Chert_ANIM_Chatter_Chipper").AddComponent<CapsuleCollider>();
@@ -187,6 +186,8 @@ namespace ChristmasStory
 				// Transform prison sector
 
 				SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4").transform.localPosition = new Vector3(-19f, 0, 0);
+				SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Geometry_RingInterior/Terrain_Ringworld_Root/BatchedGroup/BatchedMeshColliders_0").transform.localPosition = new Vector3(-19f, 0, 0);
+				SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Geometry_RingInterior/Terrain_Ringworld_Root/OtherComponentsGroup/Terrain_Ringworld_Floorbed/Terrain_Ringworld_Z4_Floorbed").transform.localPosition = new Vector3(-19f, 0, 0);
 
 				var prisonerArtifact = SearchUtilities.Find("Prisoner_Artifact").GetComponent<DreamLanternController>();
 
@@ -216,6 +217,10 @@ namespace ChristmasStory
 
 				prisonBodyExt.SetActive(false);
 				prisonBodyInt.SetActive(false);
+
+
+                prisonBodyExtFixed.GetComponent<MeshRenderer>().sharedMaterials = prisonBodyExt.GetComponent<MeshRenderer>().sharedMaterials;
+                // prisonBodyExtFixed.GetComponent<MeshRenderer>().materials[4].shader = prisonBodyExt.GetComponent<MeshRenderer>().materials[4].shader;
 
 				var prisonLigthBeam = SearchUtilities.Find("RingWorld_Body/Sector_RingWorld/Prison_Light");
 				var prisonLight = SearchUtilities.Find("RingWorld_Body/Sector_RingWorld/Prison_Light2");
@@ -380,7 +385,8 @@ namespace ChristmasStory
 
 						SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village_Final").SetActive(true);
 						SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hornfels_Village_Final").SetActive(true);
-						SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village_Final").SetActive(true);
+						SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village_Final").SetActive(true);						
+
 
 						Conditions.Set(Conditions.CONDITION.HORNFELS_FISH_TOLD, false);
 						WriteUtil.WriteLine("Spawning endgame props!");
@@ -391,7 +397,12 @@ namespace ChristmasStory
 					}
 				});
 
-				
+				var water = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Geometry_TH/Terrain_TH_Water_v3/Village_Lower_Water");
+				var ice = SearchUtilities.Find("Comet_Body/Sector_CO/Sector_CometInterior/Geometry_CometInterior/Terrain_CO_Interior_Ice/OtherComponentsGroup/IceChute_3").GetComponent<MeshRenderer>();
+				water.SetActive(true);
+				water.GetComponent<MeshRenderer>().sharedMaterials = ice.sharedMaterials;
+				water.GetComponent<MeshRenderer>().materials = ice.materials;
+				water.GetComponent<MeshRenderer>().material.shader = ice.material.shader;
 
 				var alpine = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Prefab_TH_Alpine").GetComponent<Renderer>();
 

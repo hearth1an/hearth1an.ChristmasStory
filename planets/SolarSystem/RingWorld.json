@@ -18,8 +18,8 @@
 				}
 			},
 			{
-				"assetBundle": "planets/assetbundle/prison",
-				"path": "Assets/Prefabs/prison_body_ext_fixed.prefab",
+				"assetBundle": "planets/assetbundle/prison_new",
+				"path": "Assets/Prefabs/prison_ext.prefab",
 				"rename": "Prison_Exterior_Fixed",
 				"position": {
 					"x": -0.1,
