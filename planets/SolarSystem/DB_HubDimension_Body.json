@@ -4,7 +4,7 @@
 	"Props": {
 		"signals": [
 			{
-				"name": "Signal_Harmonica",
+				"name": "Feldspar",
 				"frequency": "Traveler",
 				"position": {
 					"x": 264.429779,
@@ -12,11 +12,12 @@
 					"z": -262.286377
 				},
 				"audio": "TravelerFeldspar",
+				"rename": "Feldspar_Hub_1",
 				"detectionRadius": 50,
 				"identificationRadius": 5
 			},
 			{
-				"name": "Signal_Harmonica_2",
+				"name": "Feldspar",
 				"frequency": "Traveler",
 				"position": {
 					"x": 80.71191,
@@ -24,12 +25,11 @@
 					"z": -15.61366
 				},
 				"audio": "TravelerFeldspar",
+				"rename": "Feldspar_Hub_2",
 				"detectionRadius": 50,
 				"identificationRadius": 5
 			}
 		]
-	},
-	"removeChildren": [
-		"Sector_HubDimension/Interactables_HubDimension/InnerWarp_ToCluster/Signal_Signal_Harmonica"
-	]
+	}
+	
 }

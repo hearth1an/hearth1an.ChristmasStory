@@ -51,9 +51,9 @@
 		"dialogue": [
 			{
 				"position": {
-					"x": 0.01,
-					"y": 0.01,
-					"z": 0.01
+					"x": -0.4,
+					"y": 0.7,
+					"z": 0
 				},
 				"xmlFile": "planets/Dialogue/Feldspar_Start.xml",
 				"parentPath": "Sector_AnglerNestDimension/Traveller_HEA_Feldspar",
@@ -65,7 +65,7 @@
 		],
 		"signals": [
 			{
-				"name": "Signal_Harmonica",
+				"name": "Feldspar",
 				"frequency": "Traveler",
 				"parentPath": "Sector_AnglerNestDimension/Traveller_HEA_Feldspar",
 				"isRelativeToParent": true,
@@ -74,7 +74,7 @@
 					"y": 0.01,
 					"z": 0.01
 				},
-				"audio": "TravelerFeldspar",
+				"audio": "TravelerFeldspar",				
 				"detectionRadius": 50,
 				"identificationRadius": 5,
 				"onlyAudibleToScope": false

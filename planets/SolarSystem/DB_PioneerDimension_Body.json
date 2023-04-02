@@ -32,14 +32,15 @@
 		],
 		"signals": [
 			{
-				"name": "Signal_Harmonica",
+				"name": "Feldspar",
 				"frequency": "Traveler",
 				"position": {
-					"x": -239.5789,
-					"y": -285.2732,
-					"z": -609.4159
+					"x": -286.0533,
+					"y": -302.3936,
+					"z": -755.764
 				},
 				"audio": "TravelerFeldspar",
+				"rename": "Feldspar_Pioneer",
 				"detectionRadius": 50,
 				"identificationRadius": 5
 			}

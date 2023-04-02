@@ -27,10 +27,30 @@
 							"y": 274.6205,
 							"z": 265.6711
 						},
+
 						"rename": "Invite_Stone",
 						"parentPath": "Sector_TH"
 					}
-				]
+
+				],
+				"whiteboard": {
+					"nomaiText": [
+						{
+							"id": "Hal's",
+							"xmlFile": "planets/Text/Hal_Text.xml",
+							"seed": 1,
+							"arcInfo": [
+								{
+									"type": "child"
+
+								}
+							]
+
+						}
+
+					],
+					"disableWall": true
+				}
 			}
 		],
 		"nomaiText": [
@@ -585,6 +605,7 @@
 				"xmlFile": "planets/Dialogue/Porphy.xml",
 				"pathToAnimController": "Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Porphy/Villager_HEA_Porphy_ANIM_Taste",
 				"lookAtRadius": 0,
+				"rename": "PorphyDialogue",
 				"radius": 1
 
 			},
@@ -703,7 +724,7 @@
 				"xmlFile": "planets/Dialogue/Marl.xml",
 				"radius": 1,
 				"rename": "Marl_Dialogue",
-				"pathToAnimController": "Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Villager_HEA_Marl_ANIM_StareDwn/Marl_Skin_01:Marl_Mesh:Villager_HEA_Marl",
+				"pathToAnimController": "Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Villager_HEA_Marl_ANIM_StareDwn",
 				"lookAtRadius": 2,
 				"range": 1
 			},
@@ -843,7 +864,7 @@
 		],
 		"signals": [
 			{
-				"name": "Signal Harmonica",
+				"name": "Feldspar",
 				"frequency": "Traveler",
 				"isRelativeToParent": true,
 				"parentPath": "Sector_TH/Traveller_HEA_Feldspar",

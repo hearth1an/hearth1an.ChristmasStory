@@ -78,6 +78,11 @@ namespace ChristmasStory.Components
 			var probeGrav = SearchUtilities.Find("Probe_Body/ProbeGravity/CapsuleVolume_NOM_GravityCrystal");
 			var shipSector = SearchUtilities.Find("Ship_Body/ShipSector").GetComponent<Sector>();
 
+			if (PlayerState._insideShip && probeGrav.activeSelf)
+            {
+				probeGrav.SetActive(false);
+			}
+
 			if (shipSector.ContainsAnyOccupants(DynamicOccupant.Probe) && !Instance._shipDamageController._exploded)
 			{
 				probeGrav.SetActive(false);
