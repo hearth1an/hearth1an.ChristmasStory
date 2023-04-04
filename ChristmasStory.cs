@@ -394,32 +394,52 @@ namespace ChristmasStory
 						SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl").transform.localRotation = new Quaternion(-0.0104f, -0.0329f, 0.0209f, 0.9992f);
 						SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Marl_Dialogue_Final").SetActive(true);
 						SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Marl_Dialogue").SetActive(false);
+												
 					}
 				});
 
+
+				SearchUtilities.Find("Nomai_wire").transform.localScale = new Vector3(1f, 1.7818f, 1f);
 				var water = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Geometry_TH/Terrain_TH_Water_v3/Village_Lower_Water");
-				var ice = SearchUtilities.Find("Comet_Body/Sector_CO/Sector_CometInterior/Geometry_CometInterior/Terrain_CO_Interior_Ice/OtherComponentsGroup/IceChute_3").GetComponent<MeshRenderer>();
+				var ice = SearchUtilities.Find("Comet_Body/Sector_CO/Geometry_CO/Frictionless_Batched/OtherComponentsGroup/Terrain_CO_Surface_Ice").GetComponent<MeshRenderer>();
+				var iceSurface = SearchUtilities.Find("Comet_Body/Sector_CO/Geometry_CO/Frictionless_Batched/BatchedGroup/BatchedMeshColliders_0").GetComponent<BatchedMaterialLookup>();
 				water.SetActive(true);
 				water.GetComponent<MeshRenderer>().sharedMaterials = ice.sharedMaterials;
 				water.GetComponent<MeshRenderer>().materials = ice.materials;
-				water.GetComponent<MeshRenderer>().material.shader = ice.material.shader;
+				water.GetComponent<MeshRenderer>().sharedMaterial.shader = ice.sharedMaterial.shader;
+				water.AddComponent<MeshCollider>();
+				water.AddComponent<OWCollider>();
+
+				SearchUtilities.Find("TH_NEW_RIVER").AddComponent<BatchedMaterialLookup>();
+
+				SearchUtilities.Find("TH_NEW_RIVER").GetComponent<BatchedMaterialLookup>().materials = iceSurface.materials;
 
 				var alpine = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Prefab_TH_Alpine").GetComponent<Renderer>();
 
 				// Snow on ground	
-				var thTerrain = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/OtherComponentsGroup/ControlledByProxy_Base/VillageCraterFloors/BatchedGroup/BatchedMeshRenderers_0").GetComponent<Renderer>();
-				var snowTerrain = SearchUtilities.Find("QuantumMoon_Body/Sector_QuantumMoon/State_BH/Geometry_BHState/BatchedGroup/BatchedMeshRenderers_3").GetComponent<Renderer>();
+				var thTerrain = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/OtherComponentsGroup/ControlledByProxy_Base/VillageCraterFloors/BatchedGroup/BatchedMeshRenderers_0").GetComponent<MeshRenderer>();
 
-				thTerrain.material.shader = snowTerrain.material.shader;
-				thTerrain.materials = snowTerrain.materials;
-
-
-
-				var surfaceManager = Locator.GetSurfaceManager();				
-				surfaceManager._lookupTable.Add(thTerrain.material, SurfaceType.Snow);
+				var snowTerrain = SearchUtilities.Find("QuantumMoon_Body/Sector_QuantumMoon/State_BH/Geometry_BHState/BatchedGroup/BatchedMeshRenderers_3").GetComponent<Renderer>();				
+				thTerrain.sharedMaterials = snowTerrain.sharedMaterials;
 				
+				var snowMat = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_NomaiCrater/Geometry_NomaiCrater/BatchedGroup/BatchedMeshColliders_2").GetComponent<BatchedMaterialLookup>();
 				
-
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/BatchedGroup/BatchedMeshColliders_0").GetComponent<BatchedMaterialLookup>().materials[0] = snowMat.materials[1];
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/BatchedGroup/BatchedMeshColliders_1").GetComponent<BatchedMaterialLookup>().materials[0] = snowMat.materials[1];
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/BatchedGroup/BatchedMeshColliders_1").GetComponent<BatchedMaterialLookup>().materials[1] = snowMat.materials[1];
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/BatchedGroup/BatchedMeshColliders_2").GetComponent<BatchedMaterialLookup>().materials[0] = snowMat.materials[1];
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/BatchedGroup/BatchedMeshColliders_2").GetComponent<BatchedMaterialLookup>().materials[1] = snowMat.materials[1];
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/BatchedGroup/BatchedMeshColliders_3").GetComponent<BatchedMaterialLookup>().materials[0] = snowMat.materials[1];
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/BatchedGroup/BatchedMeshColliders_3").GetComponent<BatchedMaterialLookup>().materials[1] = snowMat.materials[1];
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/BatchedGroup/BatchedMeshColliders_4").GetComponent<BatchedMaterialLookup>().materials[0] = snowMat.materials[1];
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/BatchedGroup/BatchedMeshColliders_4").GetComponent<BatchedMaterialLookup>().materials[2] = snowMat.materials[1];
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/BatchedGroup/BatchedMeshColliders_5").GetComponent<BatchedMaterialLookup>().materials[0] = snowMat.materials[1];
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/BatchedGroup/BatchedMeshColliders_5").GetComponent<BatchedMaterialLookup>().materials[3] = snowMat.materials[1];
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/BatchedGroup/BatchedMeshColliders_6").GetComponent<BatchedMaterialLookup>().materials[0] = snowMat.materials[1];
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/BatchedGroup/BatchedMeshColliders_8").GetComponent<BatchedMaterialLookup>().materials[0] = snowMat.materials[1];
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/BatchedGroup/BatchedMeshColliders_9").GetComponent<BatchedMaterialLookup>().materials[0] = snowMat.materials[1];
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/BatchedGroup/BatchedMeshColliders_10").GetComponent<BatchedMaterialLookup>().materials[0] = snowMat.materials[1];
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/BatchedGroup/BatchedMeshColliders_11").GetComponent<BatchedMaterialLookup>().materials[0] = snowMat.materials[1];
 
 				// Snow on grass
 				var snowyGrassMaterial = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/DetailPatches_LowerVillage/LandingGeyserVillageArea/Foliage_TH_GrassPatch (2)").GetComponent<Renderer>().materials[0];

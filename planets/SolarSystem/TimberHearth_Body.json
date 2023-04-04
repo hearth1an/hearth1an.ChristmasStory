@@ -97,6 +97,36 @@
 				}
 			},
 			{
+
+				"path": "BrittleHollow_Body/Sector_BH/Sector_EscapePodCrashSite/Sector_CrashFragment/Interactables_CrashFragment/VisibleFrom_BH/Structure_NOM_escapePod_Cable_BH",
+				"rename": "Nomai_wire",
+				"position": {
+					"x": -14.8777,
+					"y": 366.1692,
+					"z": 166.0568
+				},
+				"rotation": {
+					"x": 289.4729,
+					"y": 96.1124,
+					"z": 145.3796
+				}
+			},
+			{
+				"assetBundle": "planets/assetbundle/new_terrain",
+				"path": "Assets/PREFABS/ice_river.prefab",
+				"rename": "TH_NEW_RIVER",
+				"position": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"rotation": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				}
+			},
+			{
 				"assetBundle": "planets/assetbundle/ghostbird",
 				"path": "Assets/Prefabs/Ghostbird_IP_ANIM.prefab",
 				"rename": "GhostBird",
@@ -889,7 +919,7 @@
 		"Sector_TH/Sector_Village/Interactables_Village/LaunchTower/Launch_Tower/2ndLoopConversation_Trigger",
 		"Sector_TH/Interactables_TH/Geysers/Geyser_Village",
 		"Sector_TH/Interactables_TH/Geysers/Geyser_TutorialLand",
-		"Sector_TH/Geometry_TH/Terrain_TH_Water_v3/Village_Lower_Water",
+		
 		"Sector_TH/Sector_Village/Sector_LowerVillage/Geometry_LowerVillage/OtherComponentsGroup/ControlledByProxy_Structures/Terrain_TH_VillageGeyser",
 		"Sector_TH/Sector_Village/Sector_LowerVillage/Lighting_LowerVillage/OtherComponentsGroup/LowerVillage/GeyserPlatform_Low",
 		"Sector_TH/Sector_Village/Sector_LowerVillage/Lighting_LowerVillage/OtherComponentsGroup/LowerVillage/GeyserPlatform_Mid",

@@ -29,7 +29,7 @@ namespace ChristmasStory.Components
 			_shipBody = Locator.GetShipBody().gameObject;
 			_villageSector = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Villager_HEA_Esker_ANIM_Rocking");
 
-
+			SearchUtilities.Find("ProbeBroken").SetActive(false);
 
 		}
 
@@ -86,6 +86,8 @@ namespace ChristmasStory.Components
 			if (shipSector.ContainsAnyOccupants(DynamicOccupant.Probe) && !Instance._shipDamageController._exploded)
 			{
 				probeGrav.SetActive(false);
+				SearchUtilities.Find("ProbeBroken").SetActive(true);
+				SearchUtilities.Find("Probe_Body/ProbeGravity/AudioSource_GravityCrystal").SetActive(false);
 				BlowUpShip();
 			};
 		}

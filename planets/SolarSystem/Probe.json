@@ -2,22 +2,37 @@
   "$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
   "name": "Probe",
   "Props": {    
-    "details": [      
-      {
-        "path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Interactables_Crossroads/VisibleFrom_BH/GravityCrystals/OtherComponentsGroup/Prefab_NOM_GravityCrystal",
-        "position": {
-          "x": 0,
-          "y": 0,
-          "z": -0.7
+    "details": [
+        {
+            "path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Interactables_Crossroads/VisibleFrom_BH/GravityCrystals/OtherComponentsGroup/Prefab_NOM_GravityCrystal",
+            "position": {
+                "x": 0,
+                "y": 0,
+                "z": -0.7
+            },
+            "rotation": {
+                "x": 270,
+                "y": 356,
+                "z": 0
+            },
+            "scale": 1,
+            "rename": "ProbeGravity"
         },
-        "rotation": {
-          "x": 270,
-          "y": 356,
-          "z": 0
-        },
-        "scale": 1,
-        "rename": "ProbeGravity"
-      }     
+        {
+            "path": "BrittleHollow_Body/Sector_BH/Sector_OldSettlement/Fragment OldSettlement 3/Core_OldSettlement 3/Interactables_Core_OldSettlement3/Prefab_NOM_GravityCrystal_Cracked/Props_NOM_GravityCrystal_Decal",
+            "position": {
+                "x": 0,
+                "y": 0,
+                "z": -0.7
+            },
+            "rotation": {
+                "x": 270,
+                "y": 356,
+                "z": 0
+            },
+            "scale": 0.16,
+            "rename": "ProbeBroken"
+        }     
     ]
   }
 }
