@@ -21,6 +21,58 @@
 				"keepLoaded": true
 			},
 			{
+				"path": "TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Interactables_ImpactCrater/ControlledByProxy_Structures/Terrain_DB_BrambleSphere_Seed_V2",
+				"rename": "Toy_Seed",
+				"position": {
+					"x": 1.3195,
+					"y": 0.4,
+					"z": 5.88
+				},
+				"rotation": {
+					"x": 16.76,
+					"y": 309.4206,
+					"z": 345.3898
+				},
+				"scale": 0.06,
+				"keepLoaded": true
+			},
+			{
+				"path": "TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Interactables_ImpactCrater/BrambleSeed/VolumetricFogSphere",
+				"isRelativeToParent": true,
+				"parentPath": "ShipSector/Toy_Seed",
+				"position": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"scale": 8,
+				"keepLoaded": true
+			},
+			{
+				"path": "TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Interactables_ImpactCrater/BrambleSeed/VolumetricFogSphere (2)",
+				"isRelativeToParent": true,
+				"parentPath": "ShipSector/Toy_Seed",
+				"position": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"scale": 8,
+				"keepLoaded": true
+			},
+			{
+				"path": "TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Interactables_ImpactCrater/BrambleSeed/Point light",
+				"isRelativeToParent": true,
+				"parentPath": "ShipSector/Toy_Seed",
+				"position": {
+					"x": -17.58,
+					"y": 27,
+					"z": 19
+				},
+				"scale": 1,
+				"keepLoaded": true
+			},
+			{
 				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Characters_Crossroads/Traveller_HEA_Riebeck",
 				"rename": "Ship_Riebeck",
 				"isRelativeToParent": true,
@@ -34,7 +86,7 @@
 					"x": 0,
 					"y": 90,
 					"z": 0
-				},				
+				},
 				"keepLoaded": true
 			},
 			{

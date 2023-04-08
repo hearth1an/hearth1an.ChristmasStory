@@ -152,6 +152,8 @@ namespace ChristmasStory
 				SearchUtilities.Find("Probe_Body/ProbeGravity/Props_NOM_GravityCrystal_Base").transform.localScale = new Vector3(0.16f, 0.16f, 0.16f);
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Center_Barrel").transform.localScale = new Vector3(7f, 4.5f, 7f);
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Center_Barrel").AddComponent<CapsuleCollider>();
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Snowman_Cairn/Props_TH_ClutterLarge").DestroyAllComponents<MeshRenderer>();
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Snowman_Cairn/Props_TH_ClutterSmall").DestroyAllComponents<MeshRenderer>();
 
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Dialogue").SetActive(true);
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village/ConversationZone").transform.localPosition = new Vector3(0, 2f, 0);
@@ -352,24 +354,99 @@ namespace ChristmasStory
 			catch (Exception ex)
 			{
 				WriteUtil.WriteError(ex.ToString());
-			}
-		}
+            }
+        }
 
-		public void TransformVillagers ()
+        public void TransformVillagers()
         {
-			// Marl
-			var Marl_Character = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl");
-			Marl_Character.transform.localPosition = new Vector3(8.3747f, 7.4018f, -8.3346f);
-			Marl_Character.transform.localRotation = new Quaternion(-0.02323f, -0.8668f, 0.0022f, 0.4982f);
+            // Marl
+            var Marl_Character = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl");
+            Marl_Character.transform.localPosition = new Vector3(8.3747f, 7.4018f, -8.3346f);
+            Marl_Character.transform.localRotation = new Quaternion(-0.02323f, -0.8668f, 0.0022f, 0.4982f);
 
-			// Tephra
-			var Tephra_Character = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Kids_PreGame/Villager_HEA_Tephra");
-			Tephra_Character.transform.localPosition = new Vector3(-5.9785f, 8.7614f, -1.742f);
-			Tephra_Character.transform.localRotation = new Quaternion(0.0245f, 0.5553f, 0.0357f, 0.8305f);
+            // Tephra
+            var Tephra_Character = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Kids_PreGame/Villager_HEA_Tephra");
+            Tephra_Character.transform.localPosition = new Vector3(-5.9785f, 8.7614f, -1.742f);
+            Tephra_Character.transform.localRotation = new Quaternion(0.0245f, 0.5553f, 0.0357f, 0.8305f);
 
-			// Galena
-			var Galena_Character = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Kids_PreGame/Villager_HEA_Galena");
-			Galena_Character.transform.localPosition = new Vector3(1.2199f, 7.7457f, -2.38f);
+            // Galena
+            var Galena_Character = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Kids_PreGame/Villager_HEA_Galena");
+            Galena_Character.transform.localPosition = new Vector3(1.2199f, 7.7457f, -2.38f);
+
+            var Tuff = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ZeroGCave/Characters_ZeroGCave/Villager_HEA_Tuff/Villager_HEA_Tuff_ANIM_Mine").GetComponent<CharacterAnimController>();
+            var Marl = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Villager_HEA_Marl_ANIM_StareDwn").GetComponent<CharacterAnimController>();
+
+			
+			var rockMoraine = SearchUtilities.Find("Rock_Body 2/Detector_Rock").GetComponent<ConstantForceDetector>();
+			var rockArkose = SearchUtilities.Find("Rock_Body 3/Detector_Rock").GetComponent<ConstantForceDetector>();
+			var field = SearchUtilities.Find("TimberHearth_Body/FieldDetector_TH").GetComponent<ConstantForceDetector>();
+			var gravity = SearchUtilities.Find("TimberHearth_Body/GravityWell_TH").GetComponent<GravityVolume>();
+
+			rockMoraine._detectableFields[0] = gravity;
+			rockMoraine._activeVolumes[0] = gravity;
+			rockMoraine._activeInheritedDetector = field;
+
+			rockArkose._detectableFields[0] = gravity;
+			rockArkose._activeVolumes[0] = gravity;
+			rockArkose._activeInheritedDetector = field;
+
+			/*
+			
+			var rockArkose = SearchUtilities.Find("Rock_Body 3/Detector_Rock").GetComponent<ConstantForceDetector>();
+			rockMoraine._detectableFields[0] = gravity;
+			rockArkose._detectableFields[0] = gravity;
+
+
+			{
+				"assetBundle": "planets/assetbundle/village",
+				"path": "Assets/PREFABS/moraine.prefab",
+				"rename": "New_Moraine",
+				"position": {
+					"x": 24.9,
+					"y": -41.12,
+					"z": 184.7
+				},
+				"rotation": {
+					"x": 73,
+					"y": 187,
+					"z": 177
+				}
+			},
+			
+			{
+				"assetBundle": "planets/assetbundle/village",
+				"path": "Assets/PREFABS/arkose.prefab",
+				"rename": "New_Arkose",
+				"position": {
+					"x": 23.9,
+					"y": -45.36,
+					"z": 184
+				},
+				"rotation": {
+					"x": 250,
+					"y": 13,
+					"z": 180
+				}
+			},
+
+			*/
+
+			var snowmanTop = SearchUtilities.Find("snowman_top");
+			var cairnTop = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Snowman_Cairn/Props_TH_ClutterSmall");
+			snowmanTop.transform.SetParent(cairnTop.transform);
+			snowmanTop.transform.localPosition = new Vector3(0, 0.1f, 0);
+			snowmanTop.transform.localRotation = new Quaternion(0, 0, 0, 0);
+
+			var snowmanMiddle = SearchUtilities.Find("snowman_middle");
+			var cairnMiddle = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Snowman_Cairn/Props_TH_ClutterSmall2");
+			snowmanMiddle.transform.SetParent(cairnMiddle.transform);
+			snowmanMiddle.transform.localPosition = new Vector3(0, 0f, 0);
+			snowmanMiddle.transform.localRotation = new Quaternion(0.1791f, -0.7297f, 0.1573f, -0.6408f);
+
+			var snowmanBottom = SearchUtilities.Find("snowman_bottom");
+			var cairnBottom = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Snowman_Cairn/Props_TH_ClutterLarge2");
+			snowmanBottom.transform.SetParent(cairnBottom.transform);
+			snowmanBottom.transform.localPosition = new Vector3(0, -0.4f, 0);
 		}
         public void TransformOnTimberHearth()
 		{			
@@ -401,7 +478,8 @@ namespace ChristmasStory
 
 				SearchUtilities.Find("Nomai_wire").transform.localScale = new Vector3(1f, 1.7818f, 1f);
 				var water = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Geometry_TH/Terrain_TH_Water_v3/Village_Lower_Water");
-				var ice = SearchUtilities.Find("Comet_Body/Sector_CO/Geometry_CO/Frictionless_Batched/OtherComponentsGroup/Terrain_CO_Surface_Ice").GetComponent<MeshRenderer>();
+				// var ice = SearchUtilities.Find("Comet_Body/Sector_CO/Geometry_CO/Frictionless_Batched/OtherComponentsGroup/Terrain_CO_Surface_Ice").GetComponent<MeshRenderer>();
+				var ice = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Geo_ImpactCrater/OtherComponentsGroup/ImpactCrater_IceShards/BatchedGroup/BatchedMeshRenderers_0").GetComponent<MeshRenderer>();
 				var iceSurface = SearchUtilities.Find("Comet_Body/Sector_CO/Geometry_CO/Frictionless_Batched/BatchedGroup/BatchedMeshColliders_0").GetComponent<BatchedMaterialLookup>();
 				water.SetActive(true);
 				water.GetComponent<MeshRenderer>().sharedMaterials = ice.sharedMaterials;
@@ -423,16 +501,16 @@ namespace ChristmasStory
 				thTerrain.sharedMaterials = snowTerrain.sharedMaterials;
 				
 				var snowMat = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_NomaiCrater/Geometry_NomaiCrater/BatchedGroup/BatchedMeshColliders_2").GetComponent<BatchedMaterialLookup>();
-				
+			
+
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/BatchedGroup/BatchedMeshColliders_0").GetComponent<BatchedMaterialLookup>().materials[0] = snowMat.materials[1];
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/BatchedGroup/BatchedMeshColliders_1").GetComponent<BatchedMaterialLookup>().materials[0] = snowMat.materials[1];
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/BatchedGroup/BatchedMeshColliders_1").GetComponent<BatchedMaterialLookup>().materials[1] = snowMat.materials[1];
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/BatchedGroup/BatchedMeshColliders_2").GetComponent<BatchedMaterialLookup>().materials[0] = snowMat.materials[1];
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/BatchedGroup/BatchedMeshColliders_1").GetComponent<BatchedMaterialLookup>().materials[1] = snowMat.materials[1];				
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/BatchedGroup/BatchedMeshColliders_2").GetComponent<BatchedMaterialLookup>().materials[1] = snowMat.materials[1];
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/BatchedGroup/BatchedMeshColliders_3").GetComponent<BatchedMaterialLookup>().materials[0] = snowMat.materials[1];
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/BatchedGroup/BatchedMeshColliders_3").GetComponent<BatchedMaterialLookup>().materials[1] = snowMat.materials[1];
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/BatchedGroup/BatchedMeshColliders_4").GetComponent<BatchedMaterialLookup>().materials[0] = snowMat.materials[1];
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/BatchedGroup/BatchedMeshColliders_4").GetComponent<BatchedMaterialLookup>().materials[2] = snowMat.materials[1];
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/BatchedGroup/BatchedMeshColliders_4").GetComponent<BatchedMaterialLookup>().materials[2] = snowMat.materials[1];	
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/BatchedGroup/BatchedMeshColliders_5").GetComponent<BatchedMaterialLookup>().materials[0] = snowMat.materials[1];
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/BatchedGroup/BatchedMeshColliders_5").GetComponent<BatchedMaterialLookup>().materials[3] = snowMat.materials[1];
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/BatchedGroup/BatchedMeshColliders_6").GetComponent<BatchedMaterialLookup>().materials[0] = snowMat.materials[1];

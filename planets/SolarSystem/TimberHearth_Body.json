@@ -9,7 +9,26 @@
 		"size": 300
 	},
 
+
 	"Props": {
+		"translatorText": [
+			{
+				"position": {
+					"x": -0.4198,
+					"y": -1.233,
+					"z": 188
+				},
+				"rotation": {
+					"x": 319.86,
+					"y": 275.91,
+					"z": 264.42
+
+				},
+				"xmlFile": "planets/Text/Cairn.xml",
+				"type": "cairn",				
+				"rename": "Snowman_Cairn"
+			}
+		],
 		"remotes": [
 			{
 				"id": "Hal's",
@@ -80,7 +99,114 @@
 			}
 		],
 		"details": [
-
+			{
+				"assetBundle": "planets/assetbundle/village",
+				"path": "Assets/PREFABS/snowman_top.prefab",
+				"position": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"rotation": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"scale": 10,
+				"rename": "snowman_top"
+			},
+			{
+				"assetBundle": "planets/assetbundle/village",
+				"path": "Assets/PREFABS/snowman_middle.prefab",
+				"rename": "snowman_middle",
+				"position": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"rotation": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"scale": 15
+			},
+			{
+				"assetBundle": "planets/assetbundle/village",
+				"path": "Assets/PREFABS/snowman_bottom.prefab",
+				"rename": "snowman_bottom",
+				"position": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"rotation": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"scale": 20
+			},
+			{
+				"assetBundle": "planets/assetbundle/village",
+				"path": "Assets/PREFABS/moraine.prefab",
+				"rename": "New_Moraine",
+				"position": {
+					"x": -1.5,
+					"y": 17.55,
+					"z": 191.9
+				},
+				"rotation": {
+					"x": 277,
+					"y": 180,
+					"z": 0
+				}
+			},
+			{
+				"assetBundle": "planets/assetbundle/village",
+				"path": "Assets/PREFABS/arkose.prefab",
+				"rename": "New_Arkose",
+				"position": {
+					"x": -1.8927,
+					"y": 25.5369,
+					"z": 191
+				},
+				"rotation": {
+					"x": 90,
+					"y": 357.2,
+					"z": 0
+				}
+			},
+			{
+				"assetBundle": "planets/assetbundle/village",
+				"path": "Assets/PREFABS/marl.prefab",
+				"rename": "New_Marl",
+				"position": {
+					"x": 79.57,
+					"y": 167.1522,
+					"z": 19.8755
+				},
+				"rotation": {
+					"x": 0.6,
+					"y": 175.274,
+					"z": 23.1397
+				}
+			},
+			{
+				"assetBundle": "planets/assetbundle/village",
+				"path": "Assets/PREFABS/tuff.prefab",
+				"rename": "New_Tuff",
+				"position": {
+					"x": -23.5225,
+					"y": -16.1904,
+					"z": 185
+				},
+				"rotation": {
+					"x": 326.4476,
+					"y": 82.5223,
+					"z": 94.3231
+				}
+			},			
 			{
 				"assetBundle": "planets/assetbundle/meshasset",
 				"path": "Assets/Prefabs/Collider_Geometry_LowerVillage_0_Fixed.prefab",
@@ -908,18 +1034,32 @@
 				"onlyAudibleToScope": false,
 				"detectionRadius": 50,
 				"identificationRadius": 5
+			}			
+		],
+		"audioSources": [
+			{
+				"audio": "planets/Content/music/marl_axe.mp3",
+				"isRelativeToParent": true,
+				"parentPath": "Sector_TH/New_Marl",
+				"position": {
+					"x": 0,
+					"y": 1,
+					"z": 0
+				},
+				"volume": 2,
+				"rename": "Axe"
 			}
 		]
 
 
 
 
-	},	
+	},
 	"removeChildren": [
 		"Sector_TH/Sector_Village/Interactables_Village/LaunchTower/Launch_Tower/2ndLoopConversation_Trigger",
 		"Sector_TH/Interactables_TH/Geysers/Geyser_Village",
 		"Sector_TH/Interactables_TH/Geysers/Geyser_TutorialLand",
-		
+
 		"Sector_TH/Sector_Village/Sector_LowerVillage/Geometry_LowerVillage/OtherComponentsGroup/ControlledByProxy_Structures/Terrain_TH_VillageGeyser",
 		"Sector_TH/Sector_Village/Sector_LowerVillage/Lighting_LowerVillage/OtherComponentsGroup/LowerVillage/GeyserPlatform_Low",
 		"Sector_TH/Sector_Village/Sector_LowerVillage/Lighting_LowerVillage/OtherComponentsGroup/LowerVillage/GeyserPlatform_Mid",
@@ -930,7 +1070,7 @@
 		"Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Porphy/ConversationZone",
 		"Sector_TH/Sector_Village/Sector_Observatory/Interactables_Observatory/AnglerFishExhibit/AnglerFishTankPivot/Beast_Anglerfish/Ernesto_Dialogue",
 		
-		"Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Marl_Dialogue_Final",		
+		"Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Marl_Dialogue_Final",
 		"Sector_TH/Slate_Village/Slate_Dialogue",
 		"Sector_TH/Sector_Village/Sector_Observatory/Characters_Observatory/Character_HEA_Hal_Museum",
 		"Sector_TH/Hal_Village_Final",

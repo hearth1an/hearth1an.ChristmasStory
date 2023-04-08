@@ -1,0 +1,107 @@
+ManifestFileVersion: 0
+CRC: 3106018750
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: baed63d0ac82d9db92cef45739da83c4
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c236761aa208245473df70e4497ae4c1
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 54
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 82
+  Script: {instanceID: 0}
+- Class: 83
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 108
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 58a347005f3d3754393262e06ec39cdc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4cb38ba149e96c049b5f40d9418c6050, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: e86c4d725e011e54c8705eb669fa623b, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 2b4e65d5e0af61f47b5f621a31da2070, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 90be5dd5ce31c134b870605b32723347, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4ba3ebe6fcce8ea4cbd7e5a5ed5cea97, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 542a532758b33264cac233592251ef7e, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 79958969e7aad924091a25afd5375fa7, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: bbdd999951a951840a7833da5cd0382a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 1798c0a913308ba4bae0f09ac0c0587e, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 3329301ad62f04448829e8c819050fa3, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: e9aab15a366d8b24caa5a97a3cd1a302, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: df6e520b6d6bf964ab7a70cc4db550e0, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 7bbd7c3bf84027b4190f03a0779d2169, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 2979dbbbb43de204ba6b9efd64c60411, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 93c194fc9f83e7940b2491c6dc857eb9, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 2f01e69d03ca3a5449578ecd8b96bed2, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f30a69dd7f27f9a48872765421b91ee5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0afb808ebdc9697409339cb1d53688b5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: e89e919e8713be1448036c382bef88c3, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: fcd3af0fcfe9d7e4ca8faec39e25b42c, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 1eb8ef8f0c205c14c984ce95564c4d0e, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 136
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Prefabs/characters/Villager_HEA_Arkose.prefab
+- Assets/Prefabs/characters/Villager_HEA_Moraine.prefab
+- Assets/Prefabs/characters/Villager_HEA_Tuff.prefab
+- Assets/Prefabs/characters/Villager_HEA_Marl.prefab
+Dependencies:
+- E:/Outer Wilds modding/Template x2/Template/ASSETBUNDLES/timberhearth/meshes/characters

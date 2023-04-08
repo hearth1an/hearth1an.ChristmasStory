@@ -1,0 +1,123 @@
+ManifestFileVersion: 0
+CRC: 503574490
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: ad92938126cf6d05f2e7463b24c03a54
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 867efe8cee6696b0089955236face2b2
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 49
+  Script: {instanceID: 0}
+- Class: 54
+  Script: {instanceID: 0}
+- Class: 64
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 82
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 108
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: fbb2498122f7e23a2e87544333cb528f, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: b446aa63b809cb3da1921800cd416866, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 080fd57337ba036bac50db3c89b1be74, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: b409018305dd6f6cfaa650800ebec19a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: d3e77ae3309b6f323de07b456da83fb0, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 441dee14925eff2e81cbc554282f1bc1, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: a223d69493f03f4a8e6bda998c52d250, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: d0b46f87957d67cf3ace514870d9c92c, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: a2adb6a7c0b6f38b89302bd508f68a0d, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f913c288c393f80a7e923fc1c775f4fb, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 892a6b987a18588fe03a5937388e4a4d, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0053d129d589d30957bcc3b1958fc878, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 25b7e56961bf1df33ed31b8c786ab1c3, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 1705947949ad4856b01f494b45a65a9f, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 2145ed3a866d4bd5a94d98ee05d0fa4f, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 7aba6c2ce49844631cfc871c69533e25, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0439374de7aa5c9cadcc76f4256d44a9, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: bda4e78dbfc9198a165897d3deca78b8, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4d37ab8d4d1e425918e8172c84cb8288, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5aa5719dc9ac831291a3caa9c12596a3, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f1207ecdc9977473579b57e1e274dc71, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 135
+  Script: {instanceID: 0}
+- Class: 136
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/PREFABS/tuff.prefab
+- Assets/PREFABS/snowman_middle.prefab
+- Assets/Material/Villager_HEA_Arkose_Clothes_mat.mat
+- Assets/PREFABS/moraine.prefab
+- Assets/PREFABS/textures/arkose/Villager_HEA_Arkose_Skin_d.png
+- Assets/PREFABS/GravityWell_TH.prefab
+- Assets/PREFABS/marl.prefab
+- Assets/PREFABS/arkose.prefab
+- Assets/PREFABS/textures/arkose/Villager_HEA_Arkose_Clothes_ao.png
+- Assets/PREFABS/snowman_top.prefab
+- Assets/Material/Villager_HEA_Moraine_Clothes_mat.mat
+- Assets/PREFABS/textures/arkose/Villager_HEA_Arkose_Skin_n.png
+- Assets/PREFABS/snowman.prefab
+- Assets/PREFABS/snowman_bottom.prefab
+- Assets/PREFABS/textures/arkose/Villager_HEA_Arkose_Clothes_n.png
+- Assets/PREFABS/textures/arkose/Villager_HEA_Arkose_Clothes_d.png
+- Assets/PREFABS/textures/arkose/Villager_HEA_Arkose_Clothes_s.png
+Dependencies:
+- E:/Outer Wilds modding/OW RIPPED 2023/exported/timberhearth/meshes/characters
+- E:/Outer Wilds modding/OW RIPPED 2023/exported/timberhearth/meshes/props
