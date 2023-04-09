@@ -1,0 +1,98 @@
+<DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
+	<NameField>Gossan</NameField>
+
+	<DialogueNode>
+		<Name>Start</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>Good luck in space! Feeling nervous about the launch?</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>Kind of. Slate gave me an importaint misson to get all travellers back.</Text>
+				<DialogueTarget>2</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>Yep. Just wanted to say good bye.</Text>
+				<DialogueTarget>END</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>2</Name>		
+		<Dialogue>
+			<Page>Oh really?</Page>
+			<Page>But why?</Page>			
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>We are going to celebrate Christmas. Please don't tell anything to Hal or Hornfels, we wanna surprise them.</Text>
+				<DialogueTarget>3</DialogueTarget>
+			</DialogueOption>			
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>3</Name>
+		<SetCondition>WAIT_TUFF</SetCondition>
+		<Dialogue>			
+			<Page>I wont. Since everyone is gonna be there, can you get down to the cave and call for Tuff? I would be very grateful.</Page>			
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>Sure, I'll we will be here in few minutes.</Text>
+				<ConditionToCancel>NEW_ENTRY</ConditionToCancel>
+				<DialogueTarget>WAIT_ENDING</DialogueTarget>
+			</DialogueOption>			
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>WAIT_TUFF</Name>
+		<EntryCondition>WAIT_TUFF</EntryCondition>
+		<Dialogue>			
+			<Page>So, did you had a minute to visit Tuff?</Page>			
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>Sorry, not yet. On my way.</Text>
+				<DialogueTarget>WAIT_ENDING</DialogueTarget>				
+			</DialogueOption>			
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>WAIT_ENDING</Name>		
+		<Dialogue>			
+			<Page>Sure, I'll wait here.</Page>			
+		</Dialogue>		
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>START_2</Name>
+		<EntryCondition>NEW_ENTRY</EntryCondition>		
+		<Dialogue>
+			<Page>Oh, you are still here? Is everything alright?</Page>			
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>Yes. Slate gave me an importaint misson to get all travellers back.</Text>
+				<DialogueTarget>2</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>Yep. Just wanted to say good bye.</Text>
+				<DialogueTarget>END</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>END</Name>
+		<SetCondition>NEW_ENTRY</SetCondition>
+		<Dialogue>
+			<Page>Good bye then!</Page>
+			<Page>Just be careful there.</Page>			
+		</Dialogue>
+	</DialogueNode>
+</DialogueTree>

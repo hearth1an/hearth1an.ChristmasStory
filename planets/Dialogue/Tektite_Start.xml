@@ -1,0 +1,57 @@
+<DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
+	<NameField>Tektite</NameField>
+
+	<DialogueNode>
+		<Name>Start</Name>
+		<EntryCondition>DEFAULT</EntryCondition>			
+		<Dialogue>
+			<Page>Thank you! Marl is here already. </Page>
+			<Page>I think we got it. We just need to give him few time.</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>Alright, let's wait.</Text>
+				<ConditionToSet>NEW_ENTRY</ConditionToSet>
+			</DialogueOption>			
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>2</Name>		
+		<Dialogue>			
+			<Page>Yeah, thank you for help. Look, I found this tiny seed here.</Page>
+			<Page>Seems like it's not growing at all, maybe it's dead, but I think you should take it as a trophy!</Page>		
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>Okay okay, let's go.</Text>
+				<DialogueTarget>3</DialogueTarget>
+			</DialogueOption>			
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>3</Name>
+		<SetPersistentCondition>TEKTITE_DONE</SetPersistentCondition>
+		<Dialogue>			
+			<Page>I will put it into your ship, looks just like toy!</Page>
+			<Page>Alright alrigh, on my way.</Page>			
+		</Dialogue>		
+	</DialogueNode>	
+
+	<DialogueNode>
+		<Name>START_2</Name>
+		<EntryCondition>NEW_ENTRY</EntryCondition>		
+		<Dialogue>
+			<Page>Finally, we did it! Now we can go celebrate.</Page>
+			<Page>Marl already went back.</Page>		
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>Let's go then!</Text>
+				<DialogueTarget>2</DialogueTarget>
+			</DialogueOption>			
+		</DialogueOptionsList>
+	</DialogueNode>
+	
+</DialogueTree>

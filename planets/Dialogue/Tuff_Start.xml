@@ -1,0 +1,28 @@
+<DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
+	<NameField>Tuff</NameField>
+
+	<DialogueNode>
+		<Name>Start</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>Hey there! Shouldn't you lift off already?</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>Yeah. On my way. Actually Gossan asked me to call you up and...</Text>
+				<DialogueTarget>2</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>2</Name>
+		<SetPersistentCondition>TUFF_DONE</SetPersistentCondition>
+		<Dialogue>
+			<Page>Me?</Page>
+			<Page>Up?</Page>
+			<Page>Finally!</Page>
+			<Page>See ya around!</Page>
+		</Dialogue>
+	</DialogueNode>
+</DialogueTree>

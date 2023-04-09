@@ -1,0 +1,118 @@
+<DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
+	<NameField>Radio</NameField>
+
+	<DialogueNode>
+		<Name>Start</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>Gossan: Hey Tuff! How is it going?</Page>
+			<Page>Tuff: Uh, I'm tired. I hate that cave already.</Page>
+			<Page>Tuff: What is going on? Why there's snow everywhere?</Page>			
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>			   
+				<Text>Guys, guys!</Text>
+				<DialogueTarget>1</DialogueTarget>
+			</DialogueOption>			
+		</DialogueOptionsList>
+	</DialogueNode>	
+
+	<DialogueNode>
+		<Name>1</Name>		
+		<Dialogue>
+			<Page>Gossan: Haven't you seen it? Oh, sure, there's no snow in that cave...</Page>
+			<Page>Tuff: Of course. Let's get in the central street and open up a bottle of the Good Stuff?</Page>					
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>			   
+				<Text>Guys, can you hear me???</Text>
+				<DialogueTarget>2</DialogueTarget>
+			</DialogueOption>			
+		</DialogueOptionsList>	
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>2</Name>		
+		<Dialogue>
+			<Page>Gossan: Sure, let's go!</Page>
+			<Page>...</Page>					
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>			   
+				<Text>HELLO???</Text>
+				<DialogueTarget>3</DialogueTarget>			
+				
+			</DialogueOption>			
+		</DialogueOptionsList>	
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>3</Name>		
+		<Dialogue>			
+			<Page>...</Page>
+			<Page>...</Page>					
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>			   
+				<Text>I'm stuck here!!!</Text>
+				<DialogueTarget>4</DialogueTarget>
+			</DialogueOption>			
+		</DialogueOptionsList>	
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>4</Name>		
+		<Dialogue>			
+			<Page>...</Page>
+			<Page>...</Page>					
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>			   
+				<Text>Anyone...</Text>
+				<DialogueTarget>5</DialogueTarget>
+			</DialogueOption>			
+		</DialogueOptionsList>	
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>5</Name>
+		
+		<Dialogue>			
+			<Page>...</Page>
+			<Page>(small letters) Hold on, I heard something.</Page>					
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>			   
+				<Text>HELP!!! I'm here in radio!</Text>
+				<DialogueTarget>6</DialogueTarget>
+			</DialogueOption>			
+		</DialogueOptionsList>	
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>6</Name>		
+		<Dialogue>
+			<Page>Hatchling? What are you doing there?!</Page>					
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>			   
+				<Text>I think Tuff forgot about me. Can you call the elevator down here?</Text>
+				<DialogueTarget>7</DialogueTarget>	
+			</DialogueOption>			
+		</DialogueOptionsList>	
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>7</Name>		
+		<Dialogue>
+			<Page>Sure, I'm calling the elevator now. We will wait you in the center of the Village. Kirk out.</Page>					
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>			   
+				<Text>Thank you, Gossan!</Text>							
+				<ConditionToSet>ELEVATOR_DONE</ConditionToSet>
+			</DialogueOption>			
+		</DialogueOptionsList>	
+	</DialogueNode>
+
+</DialogueTree>

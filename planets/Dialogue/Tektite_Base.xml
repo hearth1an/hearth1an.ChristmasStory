@@ -1,0 +1,95 @@
+<DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
+	<NameField>Tektite</NameField>
+
+	<DialogueNode>
+		<Name>Start</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>Heyo, hatchling! Thought you should be in space today - why are you still here?</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>Yes, I also have an importaint mission. Don't you want to join us and celebrate Christmas in the Village?</Text>
+				<DialogueTarget>2</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<Text>I just wanted to say good bye.</Text>
+				<DialogueTarget>END</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>2</Name>		
+		<Dialogue>			
+			<Page>Uh, sure, but do you see this... thing? I don't like it's roots.</Page>
+			<Page>It's growing too fast! I need Marl here to cut this thing off first.</Page>		
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>You know, I can go ask Marl to help here.</Text>
+				<DialogueTarget>3</DialogueTarget>
+			</DialogueOption>			
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>3</Name>
+		<SetCondition>WAIT_MARL</SetCondition>
+		<SetPersistentCondition>TEKTITE_QUEST_START</SetPersistentCondition>
+		<Dialogue>			
+			<Page>That would be nice. Thank you. I think we can go celebrate after that.</Page>			
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>Alright, don't go anywhere.</Text>
+				<ConditionToCancel>NEW_ENTRY</ConditionToCancel>
+				<DialogueTarget>WAIT_ENDING</DialogueTarget>
+			</DialogueOption>			
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>WAIT_MARL</Name>
+		<EntryCondition>WAIT_MARL</EntryCondition>
+		<Dialogue>			
+			<Page>It's still growing, look! Where's Marl?!</Page>			
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>Hold on, I'll call him as soon as possible.</Text>
+				<DialogueTarget>WAIT_ENDING</DialogueTarget>				
+			</DialogueOption>			
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>WAIT_ENDING</Name>		
+		<Dialogue>			
+			<Page>Hurry up, hatchling!</Page>
+		</Dialogue>		
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>START_2</Name>
+		<EntryCondition>NEW_ENTRY</EntryCondition>		
+		<Dialogue>
+			<Page>Oh, you are still here? Are you sure everything is alright?</Page>			
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>Yes, I also have an importaint mission. Don't you want to join us and celebrate Christmas in the Village?</Text>
+				<DialogueTarget>2</DialogueTarget>
+			</DialogueOption>			
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>END</Name>
+		<SetCondition>NEW_ENTRY</SetCondition>
+		<Dialogue>
+			<Page>Good bye then!</Page>
+			<Page>Just be careful there.</Page>			
+		</Dialogue>
+	</DialogueNode>
+</DialogueTree>

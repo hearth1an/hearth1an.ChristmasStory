@@ -197,16 +197,16 @@
 				"path": "Assets/PREFABS/tuff.prefab",
 				"rename": "New_Tuff",
 				"position": {
-					"x": -23.5225,
-					"y": -16.1904,
-					"z": 185
+					"x": -21.1,
+					"y": 10.38,
+					"z": 188.4
 				},
 				"rotation": {
-					"x": 326.4476,
-					"y": 82.5223,
-					"z": 94.3231
+					"x": 18,
+					"y": 90,
+					"z": 90
 				}
-			},			
+			},
 			{
 				"assetBundle": "planets/assetbundle/meshasset",
 				"path": "Assets/Prefabs/Collider_Geometry_LowerVillage_0_Fixed.prefab",
@@ -266,6 +266,20 @@
 					"y": 181.4356,
 					"z": 0
 				}
+			},
+			{
+				"path": "Moon_Body/Sector_THM/Interactables_THM/Props_HEA_Pickaxe",
+				"position": {
+					"x": 48.0984,
+					"y": 52.5411,
+					"z": 64.1242
+				},
+				"rotation": {
+					"x": 0.6479,
+					"y": 305.6657,
+					"z": 299.9301
+				},
+				"rename": "Tuff_Pickaxe"
 			},
 			{
 				"path": "TimberHearth_Body/Sector_TH/Sector_RadioTower/RadioTower_DLC/Interactibles_RadioTower/Hornfels'GrovePivot/Prefab_HEA_Journal",
@@ -540,6 +554,62 @@
 				"scale": 0.01
 			},
 			{
+				"path": "TimberHearth_Body/Sector_TH/Sector_Village/Sector_UpperVillage/Characters_UpperVillage/Villager_HEA_Gossan",
+				"position": {
+					"x": -18.8,
+					"y": 11.74,
+					"z": 188.6
+				},
+				"rotation": {
+					"x": 56.95,
+					"y": 85.81,
+					"z": 89.6656
+				},
+				"rename": "New_Gossan"
+			},
+			{
+				"path": "TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2",
+				"position": {
+					"x": -25.2323,
+					"y": -17.4718,
+					"z": 184.62
+				},
+				"rotation": {
+					"x": 324.5581,
+					"y": 78.46,
+					"z": 96.58
+				},
+				"rename": "New_Tektite"
+			},
+			{
+				"path": "TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Kids_Hidden/Prefab_HideAndSeekRadio/Props_HEA_Radio",
+				"position": {
+					"x": 22.76,
+					"y": 71.6336,
+					"z": 220.6971
+				},
+				"rotation": {
+					"x": 50.2695,
+					"y": 82.1425,
+					"z": 62.0778
+				},
+				"rename": "Gossan_Radio"
+			},
+			{
+				"path": "TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Kids_Hidden/Prefab_HideAndSeekRadio/Props_HEA_Radio",
+				"position": {
+					"x": 17.868,
+					"y": 37.3528,
+					"z": 78.399
+				},
+				"rotation": {
+					"x": 58.55,
+					"y": 58.39,
+					"z": 39.52
+				},
+				"rename": "Tuff_Radio"
+			},
+			{
 				"path": "CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Interactables_Lakebed/Traveller_HEA_Chert/Traveller_HEA_Chert_ANIM_Chatter_Chipper",
 				"position": {
 					"x": 3.4593,
@@ -721,7 +791,18 @@
 					"z": 185.9359
 				},
 				"xmlFile": "planets/Dialogue/Slate_Note.xml",
-				"lookAtRadius": 3,
+				"radius": 1
+			},
+			{
+				"parentPath": "Sector_TH/Tuff_Radio",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 0,
+					"y": 1,
+					"z": 0
+				},
+				"xmlFile": "planets/Dialogue/Elevator_Radio.xml",
+				"rename": "Elevator_Dialogue",
 				"radius": 1
 			},
 			{
@@ -763,7 +844,74 @@
 				"lookAtRadius": 0,
 				"rename": "PorphyDialogue",
 				"radius": 1
+			},
+			{
+				"parentPath": "Sector_TH/Sector_ZeroGCave/Characters_ZeroGCave/Villager_HEA_Tuff",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 0,
+					"y": 1.5,
+					"z": 0
+				},
+				"xmlFile": "planets/Dialogue/Tuff_Start.xml",
+				"pathToAnimController": "Sector_TH/Sector_ZeroGCave/Characters_ZeroGCave/Villager_HEA_Tuff/Villager_HEA_Tuff_ANIM_Mine",
+				"lookAtRadius": 0,
+				"rename": "Tuff_Dialogue",
+				"radius": 1
+			},
+			{
+				"parentPath": "Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 0,
+					"y": 1.5,
+					"z": 0
+				},
+				"remoteTrigger": {
+					"isRelativeToParent": true,
+					"position": {
+						"x": 0,
+						"y": 1.5,
+						"z": 0
+					},
+					"parentPath": "Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2",
+					"rename": "Tektite_Trigger",
+					"radius": 5
+				},
+				"xmlFile": "planets/Dialogue/Tektite_Start.xml",
+				"pathToAnimController": "Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2/Villager_HEA_Tektite_ANIM_Idle",
+				"lookAtRadius": 0,
+				"rename": "Tektite_Dialogue",
+				"radius": 1
+			},
+			{
+				"parentPath": "Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 0,
+					"y": 1.5,
+					"z": 0
+				},				
+				"xmlFile": "planets/Dialogue/Tektite_Base.xml",
+				"pathToAnimController": "Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2/Villager_HEA_Tektite_ANIM_Idle",
+				"lookAtRadius": 0,
+				"rename": "Tektite_Base",
+				"radius": 1
+			},
 
+			{
+				"parentPath": "Sector_TH/Sector_Village/Sector_UpperVillage/Characters_UpperVillage/Villager_HEA_Gossan",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 0,
+					"y": 1.5,
+					"z": 0
+				},
+				"xmlFile": "planets/Dialogue/Gossan_Start.xml",
+				"pathToAnimController": "Sector_TH/Sector_Village/Sector_UpperVillage/Characters_UpperVillage/Villager_HEA_Gossan/Villager_HEA_Gossan_ANIM_Polish",
+				"lookAtRadius": 3,
+				"rename": "Gossan_Dialogue",
+				"radius": 1
 			},
 			{
 				"parentPath": "Sector_TH/Hal_Village",
@@ -1034,7 +1182,23 @@
 				"onlyAudibleToScope": false,
 				"detectionRadius": 50,
 				"identificationRadius": 5
-			}			
+			},
+			{
+				"name": "Linked Radio",
+				"frequency": "Radio",
+				"isRelativeToParent": true,
+				"parentPath": "Sector_TH/Tuff_Radio/Elevator_Dialogue",
+				"position": {
+					"x": 0,
+					"y": 1,
+					"z": 0
+				},
+				"audio": "planets/Content/music/radio_loop.mp3",
+				"rename": "Signal_Radio",
+				"onlyAudibleToScope": false,				
+				"detectionRadius": 50,
+				"identificationRadius": 50
+			}		
 		],
 		"audioSources": [
 			{
@@ -1049,6 +1213,7 @@
 				"volume": 2,
 				"rename": "Axe"
 			}
+			
 		]
 
 

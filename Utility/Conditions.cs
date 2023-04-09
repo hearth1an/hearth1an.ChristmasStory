@@ -58,11 +58,20 @@ namespace ChristmasStory.Utility
             // Hal
             HAL_ROCK_DONE,
 
+            // Elevator
+            ELEVATOR_DONE,
+            NEW_ENTRY,
+
+            // Marl
+            TEKTITE_ASK_MARL,
+
             // Hornfels
             HORNFELS_FISH_TOLD,
 
             // End Event
-            START_END_EVENT
+            START_END_EVENT,
+
+            
 
         }
 
@@ -86,7 +95,11 @@ namespace ChristmasStory.Utility
             SLATE_START_DONE,
             HAL_ROCK_TOLD,
             HORNFELS_FISH_TOLD,
-            ERNESTO_DONE
+            ERNESTO_DONE,
+            TUFF_DONE,
+            MARL_DONE,
+            TEKTITE_PRE_DONE,
+            TEKTITE_DONE
         }
 
         public static bool Get(PERSISTENT condition) => PlayerData.GetPersistentCondition(condition.ToString());
