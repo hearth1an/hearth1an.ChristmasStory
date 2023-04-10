@@ -5,12 +5,12 @@
 		<Name>Start</Name>
 		<EntryCondition>DEFAULT</EntryCondition>			
 		<Dialogue>
-			<Page>Thank you! Marl is here already.</Page>
-			<Page>I think we got it. We just need to give them few time.</Page>
+			<Page>TEKTITE_START_14</Page>
+			<Page>TEKTITE_START_15</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>Alright, let's wait.</Text>
+				<Text>TEKTITE_START_16</Text>
 				<ConditionToSet>NEW_ENTRY</ConditionToSet>
 			</DialogueOption>			
 		</DialogueOptionsList>
@@ -19,12 +19,12 @@
 	<DialogueNode>
 		<Name>2</Name>		
 		<Dialogue>			
-			<Page>Yeah, thank you for help. Look, I found this tiny seed here.</Page>
-			<Page>Seems like it's not growing at all, maybe it's dead, but I think you should take it as a trophy!</Page>		
+			<Page>TEKTITE_START_17</Page>
+			<Page>TEKTITE_START_18</Page>		
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>Are you sure it's safe?</Text>
+				<Text>TEKTITE_START_19</Text>
 				<DialogueTarget>3</DialogueTarget>
 			</DialogueOption>			
 		</DialogueOptionsList>
@@ -34,8 +34,8 @@
 		<Name>3</Name>
 		<SetPersistentCondition>TEKTITE_DONE</SetPersistentCondition>
 		<Dialogue>			
-			<Page>I will put it into your ship, looks just like toy!</Page>
-			<Page>I'll be in the Village then.</Page>			
+			<Page>TEKTITE_START_20</Page>
+			<Page>TEKTITE_START_21</Page>			
 		</Dialogue>		
 	</DialogueNode>	
 
@@ -43,12 +43,12 @@
 		<Name>START_2</Name>
 		<EntryCondition>NEW_ENTRY</EntryCondition>		
 		<Dialogue>
-			<Page>Finally, we did it! Now we can go celebrate.</Page>
-			<Page>Marl already went back.</Page>		
+			<Page>TEKTITE_START_22</Page>
+			<Page>TEKTITE_START_23</Page>		
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>Let's go then!</Text>
+				<Text>TEKTITE_START_24</Text>
 				<DialogueTarget>2</DialogueTarget>
 			</DialogueOption>			
 		</DialogueOptionsList>

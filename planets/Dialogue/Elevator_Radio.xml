@@ -5,13 +5,13 @@
 		<Name>Start</Name>
 		<EntryCondition>DEFAULT</EntryCondition>
 		<Dialogue>
-			<Page>Gossan: Hey Tuff! How is it going?</Page>
-			<Page>Tuff: Uh, I'm tired. I hate that cave already.</Page>
-			<Page>Tuff: What is going on? Why there's snow everywhere?</Page>			
+			<Page>RADIO_START_1</Page>
+			<Page>RADIO_START_2</Page>
+			<Page>RADIO_START_3</Page>			
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>			   
-				<Text>Guys, guys!</Text>
+				<Text>RADIO_START_4</Text>
 				<DialogueTarget>1</DialogueTarget>
 			</DialogueOption>			
 		</DialogueOptionsList>
@@ -20,12 +20,12 @@
 	<DialogueNode>
 		<Name>1</Name>		
 		<Dialogue>
-			<Page>Gossan: Haven't you seen it? Oh, sure, there's no snow in that cave...</Page>
-			<Page>Tuff: Of course. Let's get in the central street and open up a bottle of the Good Stuff?</Page>					
+			<Page>RADIO_START_5</Page>
+			<Page>RADIO_START_6</Page>					
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>			   
-				<Text>Guys, can you hear me???</Text>
+				<Text>RADIO_START_7</Text>
 				<DialogueTarget>2</DialogueTarget>
 			</DialogueOption>			
 		</DialogueOptionsList>	
@@ -34,12 +34,12 @@
 	<DialogueNode>
 		<Name>2</Name>		
 		<Dialogue>
-			<Page>Gossan: Sure, let's go!</Page>
-			<Page>...</Page>					
+			<Page>RADIO_START_8</Page>
+			<Page>RADIO_START_9</Page>					
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>			   
-				<Text>HELLO???</Text>
+				<Text>RADIO_START_10</Text>
 				<DialogueTarget>3</DialogueTarget>			
 				
 			</DialogueOption>			
@@ -49,12 +49,12 @@
 	<DialogueNode>
 		<Name>3</Name>		
 		<Dialogue>			
-			<Page>...</Page>
-			<Page>...</Page>					
+			<Page>RADIO_START_9</Page>
+			<Page>RADIO_START_9</Page>					
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>			   
-				<Text>I'm stuck here!!!</Text>
+				<Text>RADIO_START_11</Text>
 				<DialogueTarget>4</DialogueTarget>
 			</DialogueOption>			
 		</DialogueOptionsList>	
@@ -63,12 +63,12 @@
 	<DialogueNode>
 		<Name>4</Name>		
 		<Dialogue>			
-			<Page>...</Page>
-			<Page>...</Page>					
+			<Page>RADIO_START_9</Page>
+			<Page>RADIO_START_9</Page>					
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>			   
-				<Text>Anyone...</Text>
+				<Text>RADIO_START_12</Text>
 				<DialogueTarget>5</DialogueTarget>
 			</DialogueOption>			
 		</DialogueOptionsList>	
@@ -78,12 +78,12 @@
 		<Name>5</Name>
 		
 		<Dialogue>			
-			<Page>...</Page>
-			<Page>(small letters) Hold on, I heard something.</Page>					
+			<Page>RADIO_START_9</Page>
+			<Page>RADIO_START_13</Page>					
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>			   
-				<Text>HELP!!! I'm here in radio!</Text>
+				<Text>RADIO_START_14</Text>
 				<DialogueTarget>6</DialogueTarget>
 			</DialogueOption>			
 		</DialogueOptionsList>	
@@ -92,11 +92,11 @@
 	<DialogueNode>
 		<Name>6</Name>		
 		<Dialogue>
-			<Page>Hatchling? What are you doing there?!</Page>					
+			<Page>RADIO_START_15</Page>					
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>			   
-				<Text>I think Tuff forgot about me. Can you call the elevator down here?</Text>
+				<Text>RADIO_START_16</Text>
 				<DialogueTarget>7</DialogueTarget>	
 			</DialogueOption>			
 		</DialogueOptionsList>	
@@ -105,12 +105,12 @@
 	<DialogueNode>
 		<Name>7</Name>		
 		<Dialogue>
-			<Page>Sure, I'm calling the elevator now. We will wait you in the center of the Village.</Page>
-			<Page>Kirk out.</Page>						
+			<Page>RADIO_START_17</Page>
+			<Page>RADIO_START_18</Page>						
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>			   
-				<Text>Thank you, Gossan!</Text>							
+				<Text>RADIO_START_19</Text>							
 				<ConditionToSet>ELEVATOR_DONE</ConditionToSet>
 			</DialogueOption>			
 		</DialogueOptionsList>	

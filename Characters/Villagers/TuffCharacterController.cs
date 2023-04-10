@@ -1,6 +1,7 @@
 ﻿using ChristmasStory.Components;
 using ChristmasStory.Utility;
 using NewHorizons.Utility;
+using NewHorizons.Handlers;
 
 namespace ChristmasStory.Characters.Villagers
 {
@@ -93,7 +94,7 @@ namespace ChristmasStory.Characters.Villagers
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ZeroGCave/Characters_ZeroGCave/Villager_HEA_Tuff").SetActive(false);
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_UpperVillage/Characters_UpperVillage/Villager_HEA_Gossan").SetActive(false);
 
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Tuff_Radio/Elevator_Dialogue").GetComponent<InteractReceiver>().ChangePrompt("Listen to the radio");
+			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Tuff_Radio/Elevator_Dialogue").GetComponent<InteractReceiver>().ChangePrompt(TranslationHandler.GetTranslation("RADIO_PROMT", TranslationHandler.TextType.UI));
 
 
 
