@@ -27,5 +27,8 @@ namespace ChristmasStory.Components
 		}
 
 		public static void PlayAudioOneShot(AudioType audio, float volume = 1f) => Locator.GetPlayerAudioController()._oneShotExternalSource.PlayOneShot(audio, volume);
+		public static void PlayAudioExternalOneShot(AudioClip audio, float volume = 2f) => Locator.GetPlayerAudioController()._oneShotExternalSource.PlayOneShot(audio, volume);
+
+
 	}
 }

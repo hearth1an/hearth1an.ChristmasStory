@@ -105,7 +105,8 @@
 	<DialogueNode>
 		<Name>7</Name>		
 		<Dialogue>
-			<Page>Sure, I'm calling the elevator now. We will wait you in the center of the Village. Kirk out.</Page>					
+			<Page>Sure, I'm calling the elevator now. We will wait you in the center of the Village.</Page>
+			<Page>Kirk out.</Page>						
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>			   

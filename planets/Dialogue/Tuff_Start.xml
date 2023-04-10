@@ -5,13 +5,37 @@
 		<Name>Start</Name>
 		<EntryCondition>DEFAULT</EntryCondition>
 		<Dialogue>
-			<Page>Hey there! Shouldn't you lift off already?</Page>
+			<Page>TUFF_START_1</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>Yeah. On my way. Actually Gossan asked me to call you up and...</Text>
+			<RequiredPersistentCondition>WAIT_TUFF</RequiredPersistentCondition>
+				<Text>TUFF_START_2</Text>
 				<DialogueTarget>2</DialogueTarget>
 			</DialogueOption>
+			<DialogueOption>
+				<Text>GOSSAN_START_3</Text>
+				<DialogueTarget>END</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>Start</Name>
+		<EntryCondition>NEW_ENTRY</EntryCondition>
+		<Dialogue>
+			<Page>TUFF_START_3</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+			<RequiredPersistentCondition>WAIT_TUFF</RequiredPersistentCondition>
+				<Text>TUFF_START_4</Text>
+				<DialogueTarget>2</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>		
+				<Text>SLATE_FINAL_10</Text>
+				<DialogueTarget>2</DialogueTarget>
+			</DialogueOption>				
 		</DialogueOptionsList>
 	</DialogueNode>
 
@@ -19,10 +43,16 @@
 		<Name>2</Name>
 		<SetPersistentCondition>TUFF_DONE</SetPersistentCondition>
 		<Dialogue>
-			<Page>Me?</Page>
-			<Page>Up?</Page>
-			<Page>Finally!</Page>
-			<Page>See ya around!</Page>
+			<Page>TUFF_START_5</Page>			
+			<Page>TUFF_START_6</Page>			
+		</Dialogue>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>END</Name>
+		<SetCondition>NEW_ENTRY</SetCondition>
+		<Dialogue>
+			<Page>GOSSAN_START_14</Page>					
 		</Dialogue>
 	</DialogueNode>
 </DialogueTree>

@@ -18,8 +18,7 @@ namespace ChristmasStory.Characters.Villagers
 			dialogue = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2/Tektite_Dialogue").GetComponent<CharacterDialogueTree>();
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2/Tektite_Dialogue").SetActive(false);
 
-			var tektite = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2");
-			tektite.AddComponent<FacePlayerWhenTalking>();
+			var tektite = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2");			
 			
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/New_Marl").SetActive(false);
 			SearchUtilities.Find("Tektite_Trigger").SetActive(false);
@@ -47,27 +46,52 @@ namespace ChristmasStory.Characters.Villagers
 
 		protected override void Dialogue_OnEndConversation()
 		{
-			if (Conditions.Get(Conditions.CONDITION.NEW_ENTRY))
+			if (Conditions.Get(Conditions.CONDITION.NEW_ENTRY) && !Conditions.Get(Conditions.PERSISTENT.TEKTITE_DONE))
 			{				
-				PlayerEffectController.Blink(4f);
+				PlayerEffectController.CloseEyes(1f);
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2/Tektite_Dialogue").SetActive(false);
 				Invoke("DonePreparation", 2f);
+				Invoke("OpenEyes", 12f);
+				Invoke("InvokeTrigger", 14f);
+				var sfx = ChristmasStory.Instance.ModHelper.Assets.GetAudio("planets/Content/music/bye_bye_seed.mp3");
+				PlayerEffectController.PlayAudioExternalOneShot(sfx, 2f);
 			}
-			if (Conditions.Get(Conditions.PERSISTENT.TEKTITE_DONE))
+			else if (Conditions.Get(Conditions.PERSISTENT.TEKTITE_DONE))
 			{
-				PlayerEffectController.Blink(4f);
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2").SetActive(false);
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/New_Tektite").SetActive(true);
+				PlayerEffectController.Blink(2f);
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2/Tektite_Dialogue").SetActive(false);				
+				Invoke("DoneThings", 1f);
+
 			}			
 
 		}
 
 		private void DonePreparation()
-		{
-			SearchUtilities.Find("Tektite_Trigger").SetActive(true);
+		{		
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/New_Marl").SetActive(false);
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Interactables_ImpactCrater").SetActive(false);
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ImpactCrater/DetailPatches_ImpactCrater/ImpactCrater_Clutter").SetActive(false);
 		}
-		protected override void OnChangeState(STATE oldState, STATE newState) { }
+
+		private void DoneThings()
+		{
+			var sfx = ChristmasStory.Instance.ModHelper.Assets.GetAudio("planets/Content/music/tektite_go.mp3");
+			PlayerEffectController.PlayAudioExternalOneShot(sfx, 3f);
+			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl").SetActive(true);
+			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2").SetActive(false);
+			SearchUtilities.Find("TimberHearth_Body/Sector_TH/New_Tektite").SetActive(true);
+		}
+
+		private void OpenEyes() => PlayerEffectController.OpenEyes(1f);
+        private void InvokeTrigger()
+        {
+			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2/Tektite_Dialogue").SetActive(true);
+			SearchUtilities.Find("Tektite_Trigger").SetActive(true);
+			SearchUtilities.Find("Tektite_Trigger").GetComponent<UnityEngine.SphereCollider>().enabled = false;
+			SearchUtilities.Find("Tektite_Trigger").GetComponent<UnityEngine.SphereCollider>().enabled = true;
+		}
+
+
+        protected override void OnChangeState(STATE oldState, STATE newState) { }
 	}
 }

@@ -5,8 +5,8 @@
 		<Name>Start</Name>
 		<EntryCondition>DEFAULT</EntryCondition>			
 		<Dialogue>
-			<Page>Thank you! Marl is here already. </Page>
-			<Page>I think we got it. We just need to give him few time.</Page>
+			<Page>Thank you! Marl is here already.</Page>
+			<Page>I think we got it. We just need to give them few time.</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
@@ -24,7 +24,7 @@
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>Okay okay, let's go.</Text>
+				<Text>Are you sure it's safe?</Text>
 				<DialogueTarget>3</DialogueTarget>
 			</DialogueOption>			
 		</DialogueOptionsList>
@@ -35,7 +35,7 @@
 		<SetPersistentCondition>TEKTITE_DONE</SetPersistentCondition>
 		<Dialogue>			
 			<Page>I will put it into your ship, looks just like toy!</Page>
-			<Page>Alright alrigh, on my way.</Page>			
+			<Page>I'll be in the Village then.</Page>			
 		</Dialogue>		
 	</DialogueNode>	
 

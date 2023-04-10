@@ -11,8 +11,16 @@
 			<DialogueOption>			   
 				<Text>MARL_START_2</Text>
 				<DialogueTarget>2</DialogueTarget>
+				<ConditionToSet>MARL_START_DONE</ConditionToSet>				
+			</DialogueOption>
+			<DialogueOption>
+				<RequiredPersistentCondition>TEKTITE_QUEST_START</RequiredPersistentCondition>
+				<CancelledPersistentCondition>TEKTITE_DONE</CancelledPersistentCondition>
+				<Text>MARL_START_5</Text>
+				<DialogueTarget>3</DialogueTarget>
+				<ConditionToSet>TEKTITE_ASK_MARL</ConditionToSet>
 				<ConditionToSet>MARL_START_DONE</ConditionToSet>
-			</DialogueOption>			
+			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
 

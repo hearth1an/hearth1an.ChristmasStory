@@ -5,15 +5,15 @@
 		<Name>Start</Name>
 		<EntryCondition>DEFAULT</EntryCondition>
 		<Dialogue>
-			<Page>Good luck in space! Feeling nervous about the launch?</Page>
+			<Page>GOSSAN_START_1</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>Kind of. Slate gave me an importaint misson to get all travellers back.</Text>
+				<Text>GOSSAN_START_2</Text>
 				<DialogueTarget>2</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
-				<Text>Yep. Just wanted to say good bye.</Text>
+				<Text>GOSSAN_START_3</Text>
 				<DialogueTarget>END</DialogueTarget>
 			</DialogueOption>
 		</DialogueOptionsList>
@@ -22,12 +22,12 @@
 	<DialogueNode>
 		<Name>2</Name>		
 		<Dialogue>
-			<Page>Oh really?</Page>
-			<Page>But why?</Page>			
+			<Page>GOSSAN_START_4</Page>
+			<Page>GOSSAN_START_5</Page>			
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>We are going to celebrate Christmas. Please don't tell anything to Hal or Hornfels, we wanna surprise them.</Text>
+				<Text>GOSSAN_START_6</Text>
 				<DialogueTarget>3</DialogueTarget>
 			</DialogueOption>			
 		</DialogueOptionsList>
@@ -35,13 +35,14 @@
 
 	<DialogueNode>
 		<Name>3</Name>
+		<SetPersistentCondition>WAIT_TUFF</SetPersistentCondition>
 		<SetCondition>WAIT_TUFF</SetCondition>
 		<Dialogue>			
-			<Page>I wont. Since everyone is gonna be there, can you get down to the cave and call for Tuff? I would be very grateful.</Page>			
+			<Page>GOSSAN_START_7</Page>			
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>Sure, I'll we will be here in few minutes.</Text>
+				<Text>GOSSAN_START_8</Text>
 				<ConditionToCancel>NEW_ENTRY</ConditionToCancel>
 				<DialogueTarget>WAIT_ENDING</DialogueTarget>
 			</DialogueOption>			
@@ -52,11 +53,11 @@
 		<Name>WAIT_TUFF</Name>
 		<EntryCondition>WAIT_TUFF</EntryCondition>
 		<Dialogue>			
-			<Page>So, did you had a minute to visit Tuff?</Page>			
+			<Page>GOSSAN_START_9</Page>			
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>Sorry, not yet. On my way.</Text>
+				<Text>GOSSAN_START_10</Text>
 				<DialogueTarget>WAIT_ENDING</DialogueTarget>				
 			</DialogueOption>			
 		</DialogueOptionsList>
@@ -65,7 +66,7 @@
 	<DialogueNode>
 		<Name>WAIT_ENDING</Name>		
 		<Dialogue>			
-			<Page>Sure, I'll wait here.</Page>			
+			<Page>GOSSAN_START_11</Page>			
 		</Dialogue>		
 	</DialogueNode>
 
@@ -73,15 +74,15 @@
 		<Name>START_2</Name>
 		<EntryCondition>NEW_ENTRY</EntryCondition>		
 		<Dialogue>
-			<Page>Oh, you are still here? Is everything alright?</Page>			
+			<Page>GOSSAN_START_12</Page>			
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>Yes. Slate gave me an importaint misson to get all travellers back.</Text>
+				<Text>GOSSAN_START_13</Text>
 				<DialogueTarget>2</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
-				<Text>Yep. Just wanted to say good bye.</Text>
+				<Text>GOSSAN_START_3</Text>
 				<DialogueTarget>END</DialogueTarget>
 			</DialogueOption>
 		</DialogueOptionsList>
@@ -91,8 +92,8 @@
 		<Name>END</Name>
 		<SetCondition>NEW_ENTRY</SetCondition>
 		<Dialogue>
-			<Page>Good bye then!</Page>
-			<Page>Just be careful there.</Page>			
+			<Page>GOSSAN_START_14</Page>
+			<Page>GOSSAN_START_15</Page>			
 		</Dialogue>
 	</DialogueNode>
 </DialogueTree>

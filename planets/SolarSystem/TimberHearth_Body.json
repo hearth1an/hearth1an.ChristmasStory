@@ -853,9 +853,8 @@
 					"y": 1.5,
 					"z": 0
 				},
-				"xmlFile": "planets/Dialogue/Tuff_Start.xml",
-				"pathToAnimController": "Sector_TH/Sector_ZeroGCave/Characters_ZeroGCave/Villager_HEA_Tuff/Villager_HEA_Tuff_ANIM_Mine",
-				"lookAtRadius": 0,
+				"xmlFile": "planets/Dialogue/Tuff_Start.xml",				
+				"lookAtRadius": 3,
 				"rename": "Tuff_Dialogue",
 				"radius": 1
 			},
@@ -868,22 +867,24 @@
 					"z": 0
 				},
 				"remoteTrigger": {
+					"parentPath": "Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2",
 					"isRelativeToParent": true,
 					"position": {
 						"x": 0,
 						"y": 1.5,
 						"z": 0
 					},
-					"parentPath": "Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2",
 					"rename": "Tektite_Trigger",
-					"radius": 5
+					"radius": 50
 				},
+
 				"xmlFile": "planets/Dialogue/Tektite_Start.xml",
-				"pathToAnimController": "Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2/Villager_HEA_Tektite_ANIM_Idle",
-				"lookAtRadius": 0,
+				"pathToAnimController": "Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2",
+				"lookAtRadius": 3,
 				"rename": "Tektite_Dialogue",
 				"radius": 1
-			},
+			},			
+
 			{
 				"parentPath": "Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2",
 				"isRelativeToParent": true,
@@ -891,10 +892,10 @@
 					"x": 0,
 					"y": 1.5,
 					"z": 0
-				},				
+				},
 				"xmlFile": "planets/Dialogue/Tektite_Base.xml",
-				"pathToAnimController": "Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2/Villager_HEA_Tektite_ANIM_Idle",
-				"lookAtRadius": 0,
+				"pathToAnimController": "Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2",
+				"lookAtRadius": 3,
 				"rename": "Tektite_Base",
 				"radius": 1
 			},
@@ -907,10 +908,37 @@
 					"y": 1.5,
 					"z": 0
 				},
+
 				"xmlFile": "planets/Dialogue/Gossan_Start.xml",
 				"pathToAnimController": "Sector_TH/Sector_Village/Sector_UpperVillage/Characters_UpperVillage/Villager_HEA_Gossan/Villager_HEA_Gossan_ANIM_Polish",
 				"lookAtRadius": 3,
 				"rename": "Gossan_Dialogue",
+				"radius": 1,
+				"remoteTrigger": {
+					"parentPath": "Sector_TH/Sector_Village/Sector_UpperVillage/Characters_UpperVillage/Villager_HEA_Gossan",
+					"isRelativeToParent": true,
+					"position": {
+						"x": 0,
+						"y": 1.5,
+						"z": 0
+					},
+					"radius": 2,
+					"rename": "Gossan_Trigger"
+				}
+			},
+			{
+				"parentPath": "Sector_TH/Sector_Village/Sector_UpperVillage/Characters_UpperVillage/Villager_HEA_Gossan",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 0,
+					"y": 1.5,
+					"z": 0
+				},
+
+				"xmlFile": "planets/Dialogue/Gossan_Start.xml",
+				"pathToAnimController": "Sector_TH/Sector_Village/Sector_UpperVillage/Characters_UpperVillage/Villager_HEA_Gossan/Villager_HEA_Gossan_ANIM_Polish",
+				"lookAtRadius": 3,
+				"rename": "Gossan_Dialogue_2",
 				"radius": 1
 			},
 			{
@@ -1021,8 +1049,8 @@
 				"parentPath": "Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl",
 				"isRelativeToParent": true,
 				"position": {
-					"x": 0,
-					"y": 1.5,
+					"x": -0.1,
+					"y": 1.7,
 					"z": 0
 				},
 				"xmlFile": "planets/Dialogue/Marl.xml",

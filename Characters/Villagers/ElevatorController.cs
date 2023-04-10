@@ -26,14 +26,20 @@ namespace ChristmasStory.Characters.Villagers
 		}
 
 		protected override void Dialogue_OnEndConversation()
-		{			
-			if (Conditions.Get(Conditions.CONDITION.ELEVATOR_DONE))
-			{
-				SearchUtilities.Find("Elevator_Dialogue").SetActive(false);
-				// For lift down
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Interactables_TH/MineShaft/MineElevator").GetComponent<Elevator>().AttachPlayerAndStartLift();
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Interactables_TH/MineShaft/MineElevator/AttachPoint_MineElevator").GetComponent<PlayerAttachPoint>().DetachPlayer();
-			}
+        {
+            if (Conditions.Get(Conditions.CONDITION.ELEVATOR_DONE))
+            {
+                SearchUtilities.Find("Elevator_Dialogue").SetActive(false);
+				PlayerEffectController.PlayAudioOneShot(AudioType.ShipCockpitHeadlightsOff, 1);
+
+				Invoke("CallElevatorDown", 5f);
+            }
+        }
+
+        private void CallElevatorDown()
+		{
+			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Interactables_TH/MineShaft/MineElevator").GetComponent<Elevator>().AttachPlayerAndStartLift();
+			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Interactables_TH/MineShaft/MineElevator/AttachPoint_MineElevator").GetComponent<PlayerAttachPoint>().DetachPlayer();
 		}
 
 
