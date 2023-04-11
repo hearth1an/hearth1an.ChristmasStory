@@ -80,6 +80,13 @@ namespace ChristmasStory.Characters.Villagers
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl").SetActive(true);
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2").SetActive(false);
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/New_Tektite").SetActive(true);
+			SearchUtilities.Find("Ship_Toy_Dialogue").SetActive(true);
+			SearchUtilities.Find("Toy_Snowman").SetActive(true);
+			SearchUtilities.Find("Toy_Seed").SetActive(true);
+
+			PlayerData.SetPersistentCondition("SEED_CURRENT_TOY", false);
+			PlayerData.SetPersistentCondition("SNOWMAN_CURRENT_TOY", true);
+
 		}
 
 		private void OpenEyes() => PlayerEffectController.OpenEyes(1f);

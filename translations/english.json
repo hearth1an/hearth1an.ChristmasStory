@@ -445,6 +445,20 @@
 		"GOSSAN_START_14": "Good bye then!",
 		"GOSSAN_START_15": "Just be careful there.",
 
+		// Gossan tree
+
+		"GOSSAN_TREE_1": "Hey! Tuff is very sorry about that. We almost locked you down in that cave!",
+		"GOSSAN_TREE_2": "Nah, nevermind. Good that you came back for me.",
+		"GOSSAN_TREE_3": "For you? Oh, to be honest I came back for my helmet.",
+		"GOSSAN_TREE_4": "...",
+		"GOSSAN_TREE_5": "S-sorry...",
+		"GOSSAN_TREE_6": "It was little awkward..",
+		"GOSSAN_TREE_7": "",
+		"GOSSAN_TREE_8": "",
+		"GOSSAN_TREE_9": "",
+		"GOSSAN_TREE_10": "",
+
+
 		// Tektite base
 
 		"TEKTITE_START_1": "Heyo, hatchling! Thought you should be in space today - why are you still here?",
@@ -472,6 +486,13 @@
 		"TEKTITE_START_22": "Finally, we did it! Now we can go celebrate.",
 		"TEKTITE_START_23": "Marl already went back.",
 		"TEKTITE_START_24": "Let's go then!",
+		"TEKTITE_START_25": "Thank you for your help in crater. Who knows how fast it would grow.",
+		"TEKTITE_START_26": "Sure! By the way, I like that toy you gave to me.",
+		"TEKTITE_START_27": "Sure! By the way, I hate that toy you gave to me.",
+		"TEKTITE_START_28": "I knew it. It is so cute an tiny! But still, be carefull with it.",
+		"TEKTITE_START_29": "Alright.",
+		"TEKTITE_START_30": "Wow, why so rude? Give it a chance. Anyway, you can remove it anytime.",
+
 
 		// Elevator radio
 		"RADIO_START_1": "Gossan: Hey Tuff! How is it going?",
@@ -493,7 +514,142 @@
 		"RADIO_START_17": "Sure, I'm calling the elevator now. We will wait you in the center of the Village.",
 		"RADIO_START_18": "Kirk out.",
 		"RADIO_START_19": "Thank you, Gossan!",
-		
+
+		// Galena
+
+		"GALENA_START_1": "So you are going to get all travellers back?",
+		"GALENA_START_2": "Yes, they all be here soon.",
+		"GALENA_START_3": "I'm sorry that I tried to destroy your snowman.",
+		"GALENA_START_4": "What is that snowman is made of?",
+		"GALENA_START_5": "It's unbreakable! Tephra found strange rocks inside removed geysers.",
+		"GALENA_START_6": "We stuck a snowman on top of the rocks and got this effect. It is soooo cool, isn't it?",
+		"GALENA_START_7": "It's very clever.",
+		"GALENA_START_8": "Good luck with it! We miss them so much.",
+		"GALENA_START_9": "Thank you!",
+		"GALENA_START_10": "Mica will never break it, but it is still funny to see his attempts.",
+
+		// Moraine
+
+		"MORAINE_START_1": "Hey! Watch out!",
+		"MORAINE_START_2": "Hey! Not listening to travellers anymore?",
+		"MORAINE_START_3": "Signal all the same! Always!",
+		"MORAINE_START_4": "Oh, I remember that I heard Riebeck signal not in usual position!",
+		"MORAINE_START_5": "Alright, I'll visit them.",
+		"MORAINE_START_6": "Watch out!",
+
+		// Spinel
+
+		"SPINEL_START_1": "Fishing song, fishing song... why it's ice it feels so wrong.",
+		"SPINEL_START_2": "How is it going, Spinel?",
+		"SPINEL_START_3": "How is it going? Are you kidding me? I can't get any fish like that!",
+		"SPINEL_START_4": "Why don't you stay closer to waterfall then?",
+		"SPINEL_START_5": "Wait, this is actually a good idea! Thank you!",
+		"SPINEL_START_6": "You're welcome. Do you want to come with us and celebrate Christmas?",
+		"SPINEL_START_7": "Oh, no, thanks, I'm good.",
+		"SPINEL_START_8": "Alright, I'll try to get closer to that waterfall.",
+		"SPINEL_START_9": "I'd bet everything will be fine with your flight!",
+		"SPINEL_START_10": "Wow! Much better now!",
+
+		// Tephra
+
+		"TEPHRA_START_1": "Hullo! Are you going to space today?",
+		"TEPHRA_START_2": "Yes, as planned.",
+		"TEPHRA_START_3": "Galena said that you found strange rocks for snowman.",
+		"TEPHRA_START_4": "Awww yeah. They were near that strange wires when Marl removed dead geysers.",
+		"TEPHRA_START_5": "It was my idea to make a snowman with it since Moraine and Arkose are \"too busy\"",
+		"TEPHRA_START_6": "What do you mean?",
+		"TEPHRA_START_7": "They are playing snowballs whole day! You will see them up.",
+		"TEPHRA_START_8": "Alrighе, I'll take a look. See you later!",
+		"TEPHRA_START_9": "I wish you the best luck, astronaut!",
+
+		// Arkose
+
+		"ARKOSE_START_1": "Watch out!",
+		"ARKOSE_START_2": "Hey! Having fun, huh?",
+		"ARKOSE_START_3": "Yeah! This is much better than ghost matter!",
+		"ARKOSE_START_4": "Indeed! See ya later.",
+
+		// Rutile
+
+		"RUTILE_START_1": "Gotta say I don't remember such snows on Timber Hearth.",
+		"RUTILE_START_2": "Yep, me neither.",
+		"RUTILE_START_3": "I like that to be honest. By the way, why don't you come see if everything is good with Tektite?",
+		"RUTILE_START_4": "They went to the crater near the Village. You can find it by big smoke.",
+		"RUTILE_START_5": "Sure, I'll visit them. Don't miss my launch!",
+		"RUTILE_START_6": "Sure. I'll be watching for your launch.",
+		"RUTILE_START_7": "Don't explode your ship! Especially with new little scout improvement.",
+
+		// Gneiss
+
+		"GNEISS_START_1": "Another Hearthian is leaving us for outer space! What can I do for you?",
+		"GNEISS_START_2": "I am going to get all travellers back to home.",
+		"GNEISS_START_3": "Yep. I just want to say good bye.",
+		"GNEISS_START_4": "Oh really? That's so nice! So our orchestra will play in full strength!",
+		"GNEISS_START_5": "It will.",
+		"GNEISS_START_6": "Alright, hatchling! Take care of yourself up in space!",
+		"GNEISS_START_7": "Please, take care of yourself up in space!",
+
+		// Tuff (cave)
+		"TUFF_START_1": "Hey there! Shouldn't you lift off already?",
+		"TUFF_START_2": "Yeah. On my way. Actually Gossan asked me to call you up and...",
+		"TUFF_START_3": "So, what's going on up there?",
+		"TUFF_START_4": "Gossan asked me to call you up and...",
+		"TUFF_START_5": "Me? Going up?",
+		"TUFF_START_6": "Finally! See ya around!",
+
+		// Tuff tree
+		"TUFF_TREE_1": "I am so sorry about that accident! I was too happy that I'm getting out of that cave that I forgot about you...",
+		"TUFF_TREE_2": "No worries. I am okay.",
+		"TUFF_TREE_3": "You sure? Alright then.",
+		"TUFF_TREE_4": "I'm still sorry!",
+		"TUFF_TREE_5": "It would be a terrible fate to stuck in that cave.",
+
+		// Mica
+		"MICA_START_1": "Oh, hey! It's you!",
+		"MICA_START_2": "I'm excited to see your launch today.",
+		"MICA_START_3": "Do you want to practice with the model ship before?",
+		"MICA_START_4": "No, thanks, I'm good.",
+		"MICA_START_5": "Hey, did you change your mind and want to try the ship model before?",
+		"MICA_START_6": "Yes, I have changed my mind.",
+		"MICA_START_7": "Nice! Look, since my boot's are not good for snow, I can't go down and play with others...",
+		"MICA_START_8": "Do you see that snowman? Let's destroy it with ship model!",
+		"MICA_START_9": "I've tried already. It's undestructable!",
+		"MICA_START_10": "Alright, I'll do this.",
+		"MICA_START_11": "I don't think I want to.",
+		"MICA_START_12": "Meh.. don't worry, just do it and you will see that it's not a regular snowman.",
+		"MICA_START_13": "I will be fun, ha-ha!",
+		"MICA_START_14": "Well... at least you have tried!",
+		"MICA_START_15": "You didn't told me it's undestructable.",
+		"MICA_START_16": "Yeah... I gotta go.",
+		"MICA_START_17": "That's okay. You can come back and give it a try anytime.",
+		"MICA_START_18": "Good luck in your flight!",
+		"MICA_START_19": "Ha-ha! Yes, I think Tephra and Galena made something special with it.",
+		"MICA_START_20": "Take this little snowman a consolation prize for your efforts. I'll put it in the cockpit of your ship.",
+		"MICA_START_21": "I'll keep my attempts to destroy it anyway.",
+		"MICA_START_22": "Well, I tried! It's undestructable.",
+
+		// Slate final
+		"SLATE_FINAL_1": "You did very well, hatchling!",
+		"SLATE_FINAL_2": "All the travelers are back, and I can already feel the magical Christmas spirit!",
+		"SLATE_FINAL_3": "I'm glad all our friends are here.",
+		"SLATE_FINAL_4": "What should I do next?",
+		"SLATE_FINAL_5": "Sure! This probably wouldn't have happened without your help.",
+		"SLATE_FINAL_6": "You should ask Hornfels, but I'm pretty sure we're almost ready.",
+		"SLATE_FINAL_7": "Alright.",
+		"SLATE_FINAL_8": "See ya!",
+		"SLATE_FINAL_9": "Huh?",
+		"SLATE_FINAL_10": "Nothing.",
+
+		// Slate note
+		"SLATE_NOTE_1": "Hey, sleepyhead! Find me in the Village when you wake up, we need to talk. <![CDATA[<Pause>]]> Slate.",
+
+		// Solanum response
+		"SOLANUM_WALL_TEXT": "SOLANUM: This encounter feels VERY special. I am not sure but let us try this: Take the stone that looks like my mask to the place where I am needed. With that done, I will do my best.",
+
+		// Solanum start
+		"SOLANUM_START_1": "...",
+		"SOLANUM_START_2": "Hey! Can you read this please? I can drop it for you to get a better view."
+
 		/*
 		"_START_1": "",
 		"_START_2": "",
@@ -528,36 +684,6 @@
 	*/
 
 
-		// Tuff (cave)
-		"TUFF_START_1": "Hey there! Shouldn't you lift off already?",
-		"TUFF_START_2": "Yeah. On my way. Actually Gossan asked me to call you up and...",
-		"TUFF_START_3": "So, what's going on up there?",
-		"TUFF_START_4": "Gossan asked me to call you up and...",
-		"TUFF_START_5": "Me? Going up?",
-		"TUFF_START_6": "Finally! See ya around!",
-
-
-		// Slate final
-		"SLATE_FINAL_1": "You did very well, hatchling!",
-		"SLATE_FINAL_2": "All the travelers are back, and I can already feel the magical Christmas spirit!",
-		"SLATE_FINAL_3": "I'm glad all our friends are here.",
-		"SLATE_FINAL_4": "What should I do next?",
-		"SLATE_FINAL_5": "Sure! This probably wouldn't have happened without your help.",
-		"SLATE_FINAL_6": "You should ask Hornfels, but I'm pretty sure we're almost ready.",
-		"SLATE_FINAL_7": "Alright.",
-		"SLATE_FINAL_8": "See ya!",
-		"SLATE_FINAL_9": "Huh?",
-		"SLATE_FINAL_10": "Nothing.",
-
-		// Slate note
-		"SLATE_NOTE_1": "Hey, sleepyhead! Find me in the Village when you wake up, we need to talk. <![CDATA[<Pause>]]> Slate.",
-
-		// Solanum response
-		"SOLANUM_WALL_TEXT": "SOLANUM: This encounter feels VERY special. I am not sure but let us try this: Take the stone that looks like my mask to the place where I am needed. With that done, I will do my best.",
-
-		// Solanum start
-		"SOLANUM_START_1": "...",
-		"SOLANUM_START_2": "Hey! Can you read this please? I can drop it for you to get a better view."
 
 	},
 
@@ -566,7 +692,8 @@
 		"MOD_POPUP": "Thanks for installing Christmas Story! This mod contains major spoilers for classic Outer Wilds and DLC! We recommend for you to create a new profile for a better experience.",
 		"ENDING_TEXT": "THE END",
 		"TOTEM_CODE": "Code:",
-		"RADIO_PROMT": "Listen to the radio"
+		"RADIO_PROMT": "Listen to the radio",
+		"SHIP_TOY_PROMT": "Manage the toy"
 
 	},
 	"ShipLogDictionary": {

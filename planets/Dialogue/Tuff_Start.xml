@@ -21,7 +21,7 @@
 	</DialogueNode>
 
 	<DialogueNode>
-		<Name>Start</Name>
+		<Name>Start_2</Name>
 		<EntryCondition>NEW_ENTRY</EntryCondition>
 		<Dialogue>
 			<Page>TUFF_START_3</Page>

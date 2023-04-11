@@ -1,0 +1,45 @@
+<DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
+	<NameField>Tektite</NameField>
+
+	<DialogueNode>
+		<Name>Start</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>TEKTITE_START_25</Page>
+		</Dialogue>
+		<DialogueOptionsList>			
+			<DialogueOption>
+			<CancelledPersistentCondition>LIKE_SEED</CancelledPersistentCondition>	
+				<Text>TEKTITE_START_26</Text>
+				<DialogueTarget>1</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+			<CancelledPersistentCondition>HATE_SEED</CancelledPersistentCondition>	
+				<Text>TEKTITE_START_27</Text>
+				<DialogueTarget>2</DialogueTarget>
+			</DialogueOption>			
+		</DialogueOptionsList>
+	</DialogueNode>	
+
+	<DialogueNode>
+		<Name>1</Name>
+		<SetPersistentCondition>LIKE_SEED</SetPersistentCondition>
+		<Dialogue>
+			<Page>TEKTITE_START_28</Page>									
+		</Dialogue>
+		<DialogueOptionsList>
+		   <DialogueOption>
+				<Text>TEKTITE_START_29</Text>							
+			</DialogueOption>						
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>2</Name>
+		<SetPersistentCondition>HATE_SEED</SetPersistentCondition>
+		<Dialogue>
+			<Page>TEKTITE_START_30</Page>								
+		</Dialogue>		
+	</DialogueNode>
+	
+</DialogueTree>

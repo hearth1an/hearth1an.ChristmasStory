@@ -1,0 +1,78 @@
+<DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
+	<NameField>Tephra</NameField>
+
+	<DialogueNode>
+		<Name>Start</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>TEPHRA_START_1</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>TEPHRA_START_2</Text>
+				<DialogueTarget>1</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+			<RequiredPersistentCondition>SORRY_GALENA</RequiredPersistentCondition>
+			<CancelledPersistentCondition>SNOWMAN_TEPHRA_TOLD</CancelledPersistentCondition>
+				<Text>TEPHRA_START_3</Text>
+				<DialogueTarget>2</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>2</Name>	
+		<SetPersistentCondition>SNOWMAN_TEPHRA_TOLD</SetPersistentCondition>	
+		<Dialogue>
+			<Page>TEPHRA_START_4</Page>
+			<Page>TEPHRA_START_5</Page>			
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>TEPHRA_START_6</Text>
+				<DialogueTarget>3</DialogueTarget>
+			</DialogueOption>			
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>3</Name>
+		<Dialogue>
+			<Page>TEPHRA_START_7</Page>						
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>TEPHRA_START_8</Text>
+				<DialogueTarget>1</DialogueTarget>
+			</DialogueOption>			
+		</DialogueOptionsList>
+	</DialogueNode>
+
+
+	<DialogueNode>
+		<Name>1</Name>	
+		<SetCondition>END</SetCondition>
+		<Dialogue>
+			<Page>TEPHRA_START_9</Page>						
+		</Dialogue>
+		<DialogueOptionsList>					
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>END</Name>	
+		<EntryCondition>END</EntryCondition>
+		<Dialogue>
+			<Page>TEPHRA_START_9</Page>						
+		</Dialogue>
+		<DialogueOptionsList>
+		<DialogueOption>
+			<RequiredPersistentCondition>SORRY_GALENA</RequiredPersistentCondition>
+			<CancelledPersistentCondition>SNOWMAN_TEPHRA_TOLD</CancelledPersistentCondition>
+				<Text>TEPHRA_START_3</Text>
+				<DialogueTarget>2</DialogueTarget>
+			</DialogueOption>					
+		</DialogueOptionsList>
+	</DialogueNode>
+</DialogueTree>

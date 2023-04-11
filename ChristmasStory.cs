@@ -96,8 +96,11 @@ namespace ChristmasStory
 			characterControllers.AddComponent<MarlCharacterController>();
 			characterControllers.AddComponent<TektiteCharacterController>();
 			characterControllers.AddComponent<ErnestoCharacterController>();
+			characterControllers.AddComponent<MicaCharacterController>();
+			characterControllers.AddComponent<SpinelCharacterController>();
 			characterControllers.AddComponent<EndGameController>();
-			characterControllers.AddComponent<ElevatorController>(); 
+			characterControllers.AddComponent<ElevatorController>();
+			characterControllers.AddComponent<ShipToyController>();
 
 			PlayerData.SetPersistentCondition("MARK_ON_HUD_TUTORIAL_COMPLETE", true);
 			PlayerData.SetPersistentCondition("COMPLETED_SHIPLOG_TUTORIAL", true);

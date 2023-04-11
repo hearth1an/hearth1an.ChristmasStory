@@ -4,6 +4,99 @@
 	"Props": {
 		"details": [
 			{
+				"assetBundle": "planets/assetbundle/village",
+				"path": "Assets/PREFABS/snowman_top.prefab",
+				"parentPath": "Module_Cockpit",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 1.295,
+					"y": 0.8,
+					"z": 5.78
+				},
+				"rotation": {
+					"x": 7.5168,
+					"y": 222.906,
+					"z": 11.3249
+				},
+				"scale": 3,
+				"keepLoaded": true,
+				"rename": "Toy_Snowman"
+			},
+			{
+				"assetBundle": "planets/assetbundle/village",
+				"path": "Assets/PREFABS/snowman_middle.prefab",
+				"parentPath": "Module_Cockpit/Toy_Snowman",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 0,
+					"y": -0.08,
+					"z": -0.01
+				},
+				"rotation": {
+					"x": 358.8236,
+					"y": 283.3533,
+					"z": 0
+				},
+				"scale": 1.5,
+				"keepLoaded": true,
+				"rename": "snowman_middle_ship"
+			},
+			{
+				"assetBundle": "planets/assetbundle/village",
+				"path": "Assets/PREFABS/snowman_bottom.prefab",
+				"parentPath": "Module_Cockpit/Toy_Snowman",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 0,
+					"y": -0.17,
+					"z": 0
+				},
+				"rotation": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"scale": 2,
+				"keepLoaded": true,
+				"rename": "snowman_bottom_ship"
+			},
+			{
+				"path": "TimberHearth_Body/Sector_TH/Tuff_Radio/Props_HEA_WoodenCrate_Radio",
+				"rename": "Toy_Box",
+				"parentPath": "Module_Cockpit",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 1.4,
+					"y": 1.8,
+					"z": 3.3927
+				},
+				"rotation": {
+					"x": 8.0733,
+					"y": 350.8469,
+					"z": 109.4142
+				},
+				"scale": 1,
+				"keepLoaded": true
+			},
+			{
+				"path": "TimberHearth_Body/Sector_TH/Tuff_Radio/Props_HEA_WoodenCrate_Radio",
+				"rename": "Toy_Box_2",
+				"parentPath": "Module_Cockpit/Toy_Box",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"rotation": {
+					"x": 7.8186,
+					"y": 338.0339,
+					"z": 0
+				},
+				"scale": 1,
+				"keepLoaded": true
+			},
+			{
 				"path": "TimeLoopRing_Body/Characters_TimeLoopRing/NPC_Player",
 				"rename": "Ship_Player",
 				"removeChildren": [ "ConversationZone_NPC_Player", "Traveller_Mesh_v01:Props_HEA_Jetpack", "Props_HEA_Lantern" ],
@@ -61,7 +154,7 @@
 				},
 				"scale": 8,
 				"keepLoaded": true
-			},			
+			},
 			{
 				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Characters_Crossroads/Traveller_HEA_Riebeck",
 				"rename": "Ship_Riebeck",
@@ -131,15 +224,33 @@
 		],
 		"dialogue": [
 			{
+				"xmlFile": "planets/Dialogue/Ship_Toy_Dialogue.xml",
+				"parentPath": "Module_Cockpit/Toy_Box",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"rename": "Ship_Toy_Dialogue",
+				"radius": 1,
+				"range": 1
+			},
+			{
 				"xmlFile": "planets/Dialogue/Feldspar_Ship.xml",
 				"parentPath": "ShipSector/Ship_Feldspar",
 				"pathToAnimController": "ShipSector/Ship_Feldspar",
 				"isRelativeToParent": true,
-				"position": { "x": 0, "y": 0.5, "z": -0.4 },
+				"position": {
+					"x": 0,
+					"y": 0.5,
+					"z": -0.4
+				},
 				"radius": 1,
 				"lookAtRadius": 1,
 				"range": 1
 			},
+
 			{
 				"xmlFile": "planets/Dialogue/Player_NPC_Ship.xml",
 				"parentPath": "ShipSector/Ship_Player",
@@ -155,11 +266,14 @@
 				"xmlFile": "planets/Dialogue/Riebeck_Ship.xml",
 				"parentPath": "ShipSector/Ship_Riebeck",
 				"pathToAnimController": "ShipSector/Ship_Riebeck",
-				"position": { "x":-0.1, "y":  1.9 },
+				"position": {
+					"x": -0.1,
+					"y": 1.9
+				},
 				"isRelativeToParent": true,
 				"radius": 1,
 				"range": 1
-				
+
 			},
 			{
 				"xmlFile": "planets/Dialogue/Esker_Ship.xml",

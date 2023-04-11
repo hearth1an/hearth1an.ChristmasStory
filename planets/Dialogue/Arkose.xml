@@ -1,0 +1,40 @@
+<DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
+	<NameField>Arkose</NameField>
+
+	<DialogueNode>
+		<Name>Start</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>ARKOSE_START_1</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>ARKOSE_START_2</Text>
+				<DialogueTarget>1</DialogueTarget>
+			</DialogueOption>			
+		</DialogueOptionsList>
+	</DialogueNode>	
+
+	<DialogueNode>
+		<Name>1</Name>	
+		<SetCondition>END_ARKOSE</SetCondition>
+		<Dialogue>
+			<Page>ARKOSE_START_3</Page>						
+		</Dialogue>
+		<DialogueOptionsList>
+		<DialogueOption>
+				<Text>ARKOSE_START_4</Text>				
+			</DialogueOption>						
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>END</Name>	
+		<EntryCondition>END_ARKOSE</EntryCondition>
+		<Dialogue>
+			<Page>ARKOSE_START_1</Page>						
+		</Dialogue>
+		<DialogueOptionsList>					
+		</DialogueOptionsList>
+	</DialogueNode>
+</DialogueTree>

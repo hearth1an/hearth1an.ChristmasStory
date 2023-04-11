@@ -1,0 +1,51 @@
+<DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
+	<NameField>Gneiss</NameField>
+
+	<DialogueNode>
+		<Name>Start</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>GNEISS_START_1</Page>
+		</Dialogue>
+		<DialogueOptionsList>				
+			<DialogueOption>
+			<CancelledPersistentCondition>ALL_TRAVELLERS_DONE</CancelledPersistentCondition>		
+				<Text>GNEISS_START_2</Text>
+				<DialogueTarget>1</DialogueTarget>				
+			</DialogueOption>
+			<DialogueOption>
+				<Text>GNEISS_START_3</Text>
+				<DialogueTarget>2</DialogueTarget>
+			</DialogueOption>			
+		</DialogueOptionsList>
+	</DialogueNode>	
+
+	<DialogueNode>
+		<Name>1</Name>
+		<Dialogue>
+			<Page>GNEISS_START_4</Page>									
+		</Dialogue>
+		<DialogueOptionsList>
+		   <DialogueOption>
+				<Text>GNEISS_START_5</Text>
+				<DialogueTarget>2</DialogueTarget>				
+			</DialogueOption>						
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>2</Name>	
+		<SetCondition>END_GNEISS</SetCondition>
+		<Dialogue>
+			<Page>GNEISS_START_6</Page>								
+		</Dialogue>		
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>END</Name>	
+		<EntryCondition>END_GNEISS</EntryCondition>
+		<Dialogue>
+			<Page>GNEISS_START_7</Page>						
+		</Dialogue>		
+	</DialogueNode>
+</DialogueTree>

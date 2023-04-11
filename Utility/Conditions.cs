@@ -9,6 +9,7 @@ namespace ChristmasStory.Utility
             SHIP_DESTROYED,
             SHIP_NEAR_VILLAGE,
 
+
             // Chert
             CHERT_SHIP_NEAR,
             CHERT_SHIP_FAR,
@@ -58,6 +59,9 @@ namespace ChristmasStory.Utility
             // Hal
             HAL_ROCK_DONE,
 
+            // Spinel
+            SPINEL_TOLD,           
+
             // Elevator
             ELEVATOR_DONE,
             NEW_ENTRY,
@@ -65,13 +69,20 @@ namespace ChristmasStory.Utility
             // Marl
             TEKTITE_ASK_MARL,
 
+            // Mica
+            MICA_ENTRY,
+
             // Hornfels
             HORNFELS_FISH_TOLD,
 
             // End Event
             START_END_EVENT,
 
-            
+            // Toys
+            SEED_CURRENT_TOY,
+            SNOWMAN_CURRENT_TOY,
+            TOYS_REMOVED
+
 
         }
 
@@ -100,6 +111,8 @@ namespace ChristmasStory.Utility
             MARL_DONE,
             TEKTITE_PRE_DONE,
             TEKTITE_DONE
+
+
         }
 
         public static bool Get(PERSISTENT condition) => PlayerData.GetPersistentCondition(condition.ToString());

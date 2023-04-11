@@ -1,0 +1,44 @@
+<DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
+	<NameField>Moraine</NameField>
+
+	<DialogueNode>
+		<Name>Start</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>MORAINE_START_1</Page>
+		</Dialogue>
+		<DialogueOptionsList>		
+			<DialogueOption>
+			<CancelledPersistentCondition>RIEBECK_DONE</CancelledPersistentCondition>
+				<Text>MORAINE_START_2</Text>
+				<DialogueTarget>1</DialogueTarget>
+			</DialogueOption>			
+		</DialogueOptionsList>
+	</DialogueNode>	
+
+	<DialogueNode>
+		<Name>1</Name>	
+		<SetCondition>END_MORAINE</SetCondition>
+		<Dialogue>
+			<Page>MORAINE_START_3</Page>
+			<Page>MORAINE_START_4</Page>						
+		</Dialogue>
+		<DialogueOptionsList>
+		<DialogueOption>
+				<Text>MORAINE_START_5</Text>	
+				<DialogueTarget>END</DialogueTarget>			
+			</DialogueOption>
+								
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>END</Name>	
+		<EntryCondition>END_MORAINE</EntryCondition>
+		<Dialogue>
+			<Page>MORAINE_START_6</Page>						
+		</Dialogue>
+		<DialogueOptionsList>					
+		</DialogueOptionsList>
+	</DialogueNode>
+</DialogueTree>

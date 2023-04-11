@@ -17,7 +17,8 @@
 	</DialogueNode>
 
 	<DialogueNode>
-		<Name>2</Name>		
+		<Name>2</Name>
+		<SetPersistentCondition>SEED_TOY_GIVEN</SetPersistentCondition>	
 		<Dialogue>			
 			<Page>TEKTITE_START_17</Page>
 			<Page>TEKTITE_START_18</Page>		

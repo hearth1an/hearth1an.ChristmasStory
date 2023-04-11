@@ -610,6 +610,20 @@
 				"rename": "Tuff_Radio"
 			},
 			{
+				"path": "TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Spinel",
+				"position": {
+					"x": -34.3254,
+					"y": 41.4132,
+					"z": 187.6438
+				},
+				"rotation": {
+					"x": 54.1233,
+					"y": 72.8662,
+					"z": 74.3536
+				},
+				"rename": "New_Spinel"
+			},
+			{
 				"path": "CaveTwin_Body/Sector_CaveTwin/Sector_NorthHemisphere/Sector_NorthSurface/Sector_Lakebed/Interactables_Lakebed/Traveller_HEA_Chert/Traveller_HEA_Chert_ANIM_Chatter_Chipper",
 				"position": {
 					"x": 3.4593,
@@ -853,7 +867,7 @@
 					"y": 1.5,
 					"z": 0
 				},
-				"xmlFile": "planets/Dialogue/Tuff_Start.xml",				
+				"xmlFile": "planets/Dialogue/Tuff_Start.xml",
 				"lookAtRadius": 3,
 				"rename": "Tuff_Dialogue",
 				"radius": 1
@@ -883,7 +897,7 @@
 				"lookAtRadius": 3,
 				"rename": "Tektite_Dialogue",
 				"radius": 1
-			},			
+			},
 
 			{
 				"parentPath": "Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2",
@@ -1163,8 +1177,8 @@
 				"lookAtRadius": 6,
 				"radius": 1,
 				"range": 2
-
 			},
+
 			{
 				"parentPath": "Sector_TH/Slate_Village_Final",
 				"isRelativeToParent": true,
@@ -1179,6 +1193,20 @@
 				"range": 2
 			},
 			{
+				"parentPath": "Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Mica",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 0,
+					"y": 1,
+					"z": 0
+				},
+				"xmlFile": "planets/Dialogue/Mica.xml",
+				"pathToAnimController": "Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Mica/Villager_HEA_Mica_ANIM",
+				"rename": "Mica_Dialogue",
+				"radius": 1,
+				"range": 2
+			},
+			{
 				"parentPath": "Sector_TH/Traveller_HEA_Gabbro",
 				"isRelativeToParent": true,
 				"position": {
@@ -1188,6 +1216,169 @@
 				},
 				"xmlFile": "planets/Dialogue/Gabbro_Tree.xml",
 				"rename": "Gabbro_Dialogue_Tree",
+				"radius": 1,
+				"range": 2
+			},
+			{
+				"parentPath": "Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Spinel",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 0,
+					"y": 1,
+					"z": 0
+				},
+				"xmlFile": "planets/Dialogue/Spinel.xml",
+				"rename": "Spinel_Dialogue",
+				"pathToAnimController": "Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Spinel/Villager_HEA_Spinel_ANIM_Fishing",
+				"lookAtRadius": 3,
+				"radius": 1,
+				"range": 2
+			},
+			{
+				"parentPath": "Sector_TH/New_Spinel",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 0,
+					"y": 1,
+					"z": 0
+				},
+				"xmlFile": "planets/Dialogue/Spinel_Waterfall.xml",
+				"rename": "Spinel_Dialogue_2",
+				"pathToAnimController": "Sector_TH/New_Spinel/Villager_HEA_Spinel_ANIM_Fishing",
+				"lookAtRadius": 3,
+				"radius": 1,
+				"range": 2
+			},
+			{
+				"parentPath": "Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Kids_PreGame/Villager_HEA_Galena",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 0,
+					"y": 1,
+					"z": 0
+				},
+				"xmlFile": "planets/Dialogue/Galena.xml",
+				"rename": "Galena_Dialogue",
+				"pathToAnimController": "Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Kids_PreGame/Villager_HEA_Galena/Villager_HEA_Galena_ANIM_Idle",
+				"lookAtRadius": 3,
+				"radius": 1,
+				"range": 2
+			},
+			{
+				"parentPath": "Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Kids_PreGame/Villager_HEA_Tephra",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"xmlFile": "planets/Dialogue/Tephra.xml",
+				"rename": "Tephra_Dialogue",
+				"pathToAnimController": "Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Kids_PreGame/Villager_HEA_Tephra/Villager_HEA_Tephra",
+				"lookAtRadius": 3,
+				"radius": 2,
+				"range": 2
+			},
+			{
+				"parentPath": "Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Gneiss",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 0,
+					"y": 1,
+					"z": 0
+				},
+				"xmlFile": "planets/Dialogue/Gneiss.xml",
+				"rename": "Gneiss_Dialogue",
+				"pathToAnimController": "Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Gneiss/Villager_HEA_Gneiss_ANIM_Tuning",
+				"lookAtRadius": 3,
+				"radius": 1,
+				"range": 2
+			},
+			{
+				"parentPath": "Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Rutile",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 0,
+					"y": 1,
+					"z": 0
+				},
+				"xmlFile": "planets/Dialogue/Rutile.xml",
+				"rename": "Rutile_Dialogue",
+				"pathToAnimController": "Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Rutile/Villager_HEA_Rutile_ANIM_Rocking",
+				"lookAtRadius": 3,
+				"radius": 2,
+				"range": 2
+			},
+			{
+				"parentPath": "Sector_TH/New_Moraine/Villager_HEA_Moraine_ANIM_Idle/Child_Rig_V01:Trajectory_Jnt/Child_Rig_V01:ROOT_Jnt/Child_Rig_V01:Spine_01_Jnt/Child_Rig_V01:Spine_02_Jnt/Child_Rig_V01:Spine_Top_Jnt",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"xmlFile": "planets/Dialogue/Moraine.xml",
+				"rename": "Moraine_Dialogue",
+				"lookAtRadius": 3,
+				"radius": 2,
+				"range": 2
+			},
+			{
+				"parentPath": "Sector_TH/New_Arkose/Villager_HEA_Arkose_ANIM_RockThrow/Arkose_Skin_01:Child_Rig_V01:Trajectory_Jnt/Arkose_Skin_01:Child_Rig_V01:ROOT_Jnt/Arkose_Skin_01:Child_Rig_V01:Spine_01_Jnt/Arkose_Skin_01:Child_Rig_V01:Spine_02_Jnt/Arkose_Skin_01:Child_Rig_V01:Spine_Top_Jnt",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"xmlFile": "planets/Dialogue/Arkose.xml",
+				"rename": "Arkose_Dialogue",
+				"lookAtRadius": 3,
+				"radius": 2,
+				"range": 2
+			},
+			{
+				"parentPath": "Sector_TH/New_Tektite",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 0,
+					"y": 1.5,
+					"z": 0
+				},
+				"xmlFile": "planets/Dialogue/Tektite_Tree.xml",
+				"pathToAnimController": "Sector_TH/New_Tektite/Villager_HEA_Tektite_ANIM_Idle",
+				"rename": "Tektite_Tree_Dialogue",
+				"lookAtRadius": 3,
+				"radius": 1,
+				"range": 2
+			},
+			{
+				"parentPath": "Sector_TH/New_Tuff",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 0,
+					"y": 1.5,
+					"z": 0
+				},
+				"xmlFile": "planets/Dialogue/Tuff_Tree.xml",
+				"pathToAnimController": "Sector_TH/New_Tuff/Villager_HEA_Tuff_ANIM_Mine",
+				"rename": "Tuff_Tree_Dialogue",
+				"lookAtRadius": 3,
+				"radius": 1,
+				"range": 2
+			},
+			{
+				"parentPath": "Sector_TH/New_Gossan",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 0,
+					"y": 1.5,
+					"z": 0
+				},
+				"xmlFile": "planets/Dialogue/Gossan_Tree.xml",
+				"pathToAnimController": "Sector_TH/New_Gossan/Villager_HEA_Gossan_ANIM_Polish/",
+				"rename": "Gossan_Tree_Dialogue",
+				"lookAtRadius": 3,
 				"radius": 1,
 				"range": 2
 			}
@@ -1252,7 +1443,8 @@
 		"Sector_TH/Sector_Village/Interactables_Village/LaunchTower/Launch_Tower/2ndLoopConversation_Trigger",
 		"Sector_TH/Interactables_TH/Geysers/Geyser_Village",
 		"Sector_TH/Interactables_TH/Geysers/Geyser_TutorialLand",
-
+		"Sector_TH/Sector_Village/Sector_UpperVillage/Characters_UpperVillage/Villager_HEA_Arkose_GhostMatter",
+		"Sector_TH/Sector_Village/Sector_UpperVillage/Characters_UpperVillage/Villager_HEA_Moraine",
 		"Sector_TH/Sector_Village/Sector_LowerVillage/Geometry_LowerVillage/OtherComponentsGroup/ControlledByProxy_Structures/Terrain_TH_VillageGeyser",
 		"Sector_TH/Sector_Village/Sector_LowerVillage/Lighting_LowerVillage/OtherComponentsGroup/LowerVillage/GeyserPlatform_Low",
 		"Sector_TH/Sector_Village/Sector_LowerVillage/Lighting_LowerVillage/OtherComponentsGroup/LowerVillage/GeyserPlatform_Mid",
@@ -1262,7 +1454,7 @@
 		"Sector_TH/Sector_Village/Sector_StartingCamp/Characters_StartingCamp/Villager_HEA_Slate",
 		"Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Porphy/ConversationZone",
 		"Sector_TH/Sector_Village/Sector_Observatory/Interactables_Observatory/AnglerFishExhibit/AnglerFishTankPivot/Beast_Anglerfish/Ernesto_Dialogue",
-		
+
 		"Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Marl_Dialogue_Final",
 		"Sector_TH/Slate_Village/Slate_Dialogue",
 		"Sector_TH/Sector_Village/Sector_Observatory/Characters_Observatory/Character_HEA_Hal_Museum",

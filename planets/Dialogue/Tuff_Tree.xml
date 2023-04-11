@@ -1,0 +1,34 @@
+<DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
+	<NameField>Tuff</NameField>
+
+	<DialogueNode>
+		<Name>Start</Name>
+		<EntryCondition>DEFAULT</EntryCondition>
+		<Dialogue>
+			<Page>TUFF_TREE_1</Page>
+		</Dialogue>
+		<DialogueOptionsList>			
+			<DialogueOption>			
+				<Text>TUFF_TREE_2</Text>
+				<DialogueTarget>1</DialogueTarget>
+			</DialogueOption>				
+		</DialogueOptionsList>
+	</DialogueNode>	
+
+	<DialogueNode>
+		<Name>1</Name>
+		<ConditionToSet>END_TUFF</ConditionToSet>	
+		<Dialogue>
+			<Page>TUFF_TREE_3</Page>									
+		</Dialogue>		
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>END</Name>
+		<EntryCondition>END_TUFF</EntryCondition>		
+		<Dialogue>
+			<Page>TUFF_TREE_4</Page>
+			<Page>TUFF_TREE_5</Page>					
+		</Dialogue>		
+	</DialogueNode>	
+</DialogueTree>
