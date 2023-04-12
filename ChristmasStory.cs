@@ -130,11 +130,9 @@ namespace ChristmasStory
 			{
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Trigger").SetActive(false);
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Trigger_2").SetActive(false);
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village/Slate_Trigger").SetActive(false);
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Characters_Village/Villager_HEA_Hal_Outside").SetActive(false);
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village/Slate_Trigger").SetActive(false);				
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Dialogue_3").SetActive(false);
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Trigger_2").SetActive(false);
-				WriteUtil.WriteLine("Trying skip loading Hal outside");
 			}
 #if DEBUG
 			player.AddComponent<DebugCommands>();
@@ -364,6 +362,19 @@ namespace ChristmasStory
             }
         }
 
+		public void TransformDynamicVillagers()
+        {
+			try
+			{
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Kids_PreGame").SetActive(false);
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Characters_Village").SetActive(false);
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_VillageCemetery/Characters_VillageCemetery").SetActive(false);
+			}
+			catch (Exception ex)
+			{
+				WriteUtil.WriteError($"{ex}");
+			}
+		}
         public void TransformVillagers()
         {
             // Marl
@@ -371,19 +382,10 @@ namespace ChristmasStory
             Marl_Character.transform.localPosition = new Vector3(8.3747f, 7.4018f, -8.3346f);
             Marl_Character.transform.localRotation = new Quaternion(-0.02323f, -0.8668f, 0.0022f, 0.4982f);
 
-            // Tephra
-            var Tephra_Character = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Kids_PreGame/Villager_HEA_Tephra");
-            Tephra_Character.transform.localPosition = new Vector3(-5.9785f, 8.7614f, -1.742f);
-            Tephra_Character.transform.localRotation = new Quaternion(0.0245f, 0.5553f, 0.0357f, 0.8305f);
+			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Kids_PreGame").SetActive(false);
+			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Characters_Village").SetActive(false);
+			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_VillageCemetery/Characters_VillageCemetery").SetActive(false);
 
-            // Galena
-            var Galena_Character = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Kids_PreGame/Villager_HEA_Galena");
-            Galena_Character.transform.localPosition = new Vector3(1.2199f, 7.7457f, -2.38f);
-
-            var Tuff = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ZeroGCave/Characters_ZeroGCave/Villager_HEA_Tuff/Villager_HEA_Tuff_ANIM_Mine").GetComponent<CharacterAnimController>();
-            var Marl = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Villager_HEA_Marl_ANIM_StareDwn").GetComponent<CharacterAnimController>();
-
-			
 			var rockMoraine = SearchUtilities.Find("Rock_Body 2/Detector_Rock").GetComponent<ConstantForceDetector>();
 			var rockArkose = SearchUtilities.Find("Rock_Body 3/Detector_Rock").GetComponent<ConstantForceDetector>();
 			var field = SearchUtilities.Find("TimberHearth_Body/FieldDetector_TH").GetComponent<ConstantForceDetector>();

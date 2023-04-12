@@ -81,6 +81,7 @@ namespace ChristmasStory.Utility
             // Toys
             SEED_CURRENT_TOY,
             SNOWMAN_CURRENT_TOY,
+            TOY_PLACED,
             TOYS_REMOVED
 
 

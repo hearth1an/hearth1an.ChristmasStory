@@ -179,6 +179,36 @@
 			},
 			{
 				"assetBundle": "planets/assetbundle/village",
+				"path": "Assets/PREFABS/galena.prefab",
+				"rename": "New_Galena",
+				"position": {
+					"x": 2.6428,
+					"y": -0.969,
+					"z": 187.15
+				},
+				"rotation": {
+					"x": 90,
+					"y": 357.2,
+					"z": 0
+				}
+			},
+			{
+				"assetBundle": "planets/assetbundle/village",
+				"path": "Assets/PREFABS/tephra.prefab",
+				"rename": "New_Tephra",
+				"position": {
+					"x": 2.4758,
+					"y": 6.0539,
+					"z": 188.1966
+				},
+				"rotation": {
+					"x": 90,
+					"y": 0,
+					"z": 0
+				}
+			},
+			{
+				"assetBundle": "planets/assetbundle/village",
 				"path": "Assets/PREFABS/marl.prefab",
 				"rename": "New_Marl",
 				"position": {
@@ -280,6 +310,20 @@
 					"z": 299.9301
 				},
 				"rename": "Tuff_Pickaxe"
+			},
+			{
+				"path": "TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Kids_PreGame/Villager_HEA_Galena",
+				"position": {
+					"x": 48.0984,
+					"y": 52.5411,
+					"z": 64.1242
+				},
+				"rotation": {
+					"x": 0.6479,
+					"y": 305.6657,
+					"z": 299.9301
+				},
+				"rename": "New_Galena"
 			},
 			{
 				"path": "TimberHearth_Body/Sector_TH/Sector_RadioTower/RadioTower_DLC/Interactibles_RadioTower/Hornfels'GrovePivot/Prefab_HEA_Journal",
@@ -1250,7 +1294,7 @@
 				"range": 2
 			},
 			{
-				"parentPath": "Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Kids_PreGame/Villager_HEA_Galena",
+				"parentPath": "Sector_TH/New_Galena",
 				"isRelativeToParent": true,
 				"position": {
 					"x": 0,
@@ -1259,13 +1303,13 @@
 				},
 				"xmlFile": "planets/Dialogue/Galena.xml",
 				"rename": "Galena_Dialogue",
-				"pathToAnimController": "Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Kids_PreGame/Villager_HEA_Galena/Villager_HEA_Galena_ANIM_Idle",
+				"pathToAnimController": "Sector_TH/Sector_TH/New_Galena/Villager_HEA_Galena_ANIM_Idle",
 				"lookAtRadius": 3,
 				"radius": 1,
-				"range": 2
+				"range": 1
 			},
 			{
-				"parentPath": "Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Kids_PreGame/Villager_HEA_Tephra",
+				"parentPath": "Sector_TH/New_Tephra",
 				"isRelativeToParent": true,
 				"position": {
 					"x": 0,
@@ -1274,10 +1318,10 @@
 				},
 				"xmlFile": "planets/Dialogue/Tephra.xml",
 				"rename": "Tephra_Dialogue",
-				"pathToAnimController": "Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Kids_PreGame/Villager_HEA_Tephra/Villager_HEA_Tephra",
+				"pathToAnimController": "Sector_TH/New_Tephra/Villager_HEA_Tephra_ANIM_SitIdle",
 				"lookAtRadius": 3,
-				"radius": 2,
-				"range": 2
+				"radius": 1,
+				"range": 1
 			},
 			{
 				"parentPath": "Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Gneiss",
@@ -1289,7 +1333,7 @@
 				},
 				"xmlFile": "planets/Dialogue/Gneiss.xml",
 				"rename": "Gneiss_Dialogue",
-				"pathToAnimController": "Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Gneiss/Villager_HEA_Gneiss_ANIM_Tuning",
+				"pathToAnimController": "Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Gneiss/Villager_HEA_Gneiss_ANIM_Tuning",
 				"lookAtRadius": 3,
 				"radius": 1,
 				"range": 2
@@ -1304,7 +1348,7 @@
 				},
 				"xmlFile": "planets/Dialogue/Rutile.xml",
 				"rename": "Rutile_Dialogue",
-				"pathToAnimController": "Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Rutile/Villager_HEA_Rutile_ANIM_Rocking",
+				"pathToAnimController": "Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Rutile/Villager_HEA_Rutile_ANIM_Rocking",
 				"lookAtRadius": 3,
 				"radius": 2,
 				"range": 2

@@ -648,7 +648,14 @@
 
 		// Solanum start
 		"SOLANUM_START_1": "...",
-		"SOLANUM_START_2": "Hey! Can you read this please? I can drop it for you to get a better view."
+		"SOLANUM_START_2": "Hey! Can you read this please? I can drop it for you to get a better view.",
+
+		// Toys management
+		"SHIP_TOY_1": "Hmm... ",
+		"SHIP_TOY_2": "Put seed toy.",
+		"SHIP_TOY_3": "Put snowman toy.",
+		"SHIP_TOY_4": "Remove toy.",
+		"SHIP_TOY_5": "Nevermind."
 
 		/*
 		"_START_1": "",

@@ -114,45 +114,89 @@
 				"keepLoaded": true
 			},
 			{
-				"path": "TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Interactables_ImpactCrater/ControlledByProxy_Structures/Terrain_DB_BrambleSphere_Seed_V2",
+				"path": "DB_ClusterDimension_Body/Sector_ClusterDimension/Interactables_ClusterDimension/SeedWarp_ToPioneer",
 				"parentPath": "Module_Cockpit",
+				"removeChildren": [ "PointLight_DB_FogLight" ],
 				"isRelativeToParent": true,
 				"rename": "Toy_Seed",
 				"position": {
-					"x": 1.3195,
-					"y": 0.4,
-					"z": 5.88
+					"x": 1.2195,
+					"y": 0.5,
+					"z": 5.78
 				},
 				"rotation": {
 					"x": 16.76,
 					"y": 309.4206,
 					"z": 345.3898
 				},
-				"scale": 0.06,
+				"scale": 0.05,
 				"keepLoaded": true
 			},
 			{
-				"path": "TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Interactables_ImpactCrater/BrambleSeed/VolumetricFogSphere",
+				"path": "DB_VesselDimension_Body/Sector_VesselDimension/Geometry_VesselDimension/OtherComponentsGroup/Vines/Terrain_DB_Vine 2 (3)",
 				"isRelativeToParent": true,
 				"parentPath": "Module_Cockpit/Toy_Seed",
 				"position": {
-					"x": 0,
-					"y": 0,
-					"z": 0
+					"x": -0.5055,
+					"y": 2.4489,
+					"z": -1.7927
 				},
-				"scale": 8,
+				"rotation": {
+					"x": 2.9383,
+					"y": 256.4211,
+					"z": 74.6708
+				},
+				"scale": 0.02,
+				"rename": "Toy_Vine_1",
 				"keepLoaded": true
 			},
 			{
-				"path": "TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Interactables_ImpactCrater/BrambleSeed/VolumetricFogSphere (2)",
+				"path": "DB_VesselDimension_Body/Sector_VesselDimension/Geometry_VesselDimension/OtherComponentsGroup/Vines/Terrain_DB_Vine 2 (4)",
 				"isRelativeToParent": true,
 				"parentPath": "Module_Cockpit/Toy_Seed",
 				"position": {
-					"x": 0,
-					"y": 0,
-					"z": 0
+					"x": -2.6928,
+					"y": 2.2945,
+					"z": 0.2653
 				},
-				"scale": 8,
+				"rotation": {
+					"x": 0,
+					"y": 292.2453,
+					"z": 180.6874
+				},
+				"scale": 0.05,
+				"rename": "Toy_Vine_2",
+				"keepLoaded": true
+			},
+			{
+				"path": "DB_VesselDimension_Body/Sector_VesselDimension/Geometry_VesselDimension/OtherComponentsGroup/Vines/Terrain_DB_Vine (6)",
+				"isRelativeToParent": true,
+				"parentPath": "Module_Cockpit/Toy_Seed",
+				"position": {
+					"x": 5.74,
+					"y": -4.0999,
+					"z": 1.7946
+				},
+				"rotation": {
+					"x": 290,
+					"y": 249.1218,
+					"z": 180
+				},
+				"scale": 0.07,
+				"rename": "Toy_Vine_3",
+				"keepLoaded": true
+			},
+			{
+				"path": "BrittleHollow_Body/Sector_BH/Sector_NorthHemisphere/Sector_NorthPole/Sector_HangingCity/Sector_HangingCity_District1/Props_HangingCity_District1/OtherComponentsGroup/Props_HangingCity_Building_10/Prefab_NOM_VaseThin",
+				"isRelativeToParent": true,
+				"removeComponents": true,
+				"position": {
+					"x": -0.0274,
+					"y": 1.5,
+					"z": 3.3
+				},				
+				"scale": 5,
+				"rename": "Vine_Collider",
 				"keepLoaded": true
 			},
 			{
@@ -196,7 +240,13 @@
 			{
 				"path": "Moon_Body/Sector_THM/Characters_THM/Villager_HEA_Esker/Signal_Whistling",
 				"parentPath": "ShipSector/Ship_Esker",
-				"isRelativeToParent": true
+				"isRelativeToParent": true,
+				"position": {
+					"x": 0,
+					"y": 1,
+					"z": 0
+				},
+				"keepLoaded": true
 			},
 			{
 				"path": "DB_PioneerDimension_Body/Sector_PioneerDimension/Interactables_PioneerDimension/Pioneer_Characters/Traveller_HEA_Feldspar",

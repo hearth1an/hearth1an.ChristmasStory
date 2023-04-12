@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 503574490
+CRC: 3052140962
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: ad92938126cf6d05f2e7463b24c03a54
+    Hash: 851beec8ea506556012f514907168750
   TypeTreeHash:
     serializedVersion: 2
     Hash: 867efe8cee6696b0089955236face2b2
@@ -101,23 +101,37 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
+- Assets/PREFABS/textures/tephra/Villager_HEA_Tephra_Skin_n.png
 - Assets/PREFABS/tuff.prefab
 - Assets/PREFABS/snowman_middle.prefab
 - Assets/Material/Villager_HEA_Arkose_Clothes_mat.mat
+- Assets/PREFABS/textures/galena/Villager_HEA_Galena_Skin_d.png
+- Assets/PREFABS/textures/tephra/Villager_HEA_Tephra_Clothes_ao.png
 - Assets/PREFABS/moraine.prefab
 - Assets/PREFABS/textures/arkose/Villager_HEA_Arkose_Skin_d.png
 - Assets/PREFABS/GravityWell_TH.prefab
 - Assets/PREFABS/marl.prefab
+- Assets/PREFABS/textures/tephra/Villager_HEA_Tephra_Skin_d.png
 - Assets/PREFABS/arkose.prefab
 - Assets/PREFABS/textures/arkose/Villager_HEA_Arkose_Clothes_ao.png
+- Assets/PREFABS/textures/galena/Villager_HEA_Galena_Skin_n.png
+- Assets/PREFABS/galena.prefab
+- Assets/PREFABS/tephra.prefab
 - Assets/PREFABS/snowman_top.prefab
 - Assets/Material/Villager_HEA_Moraine_Clothes_mat.mat
 - Assets/PREFABS/textures/arkose/Villager_HEA_Arkose_Skin_n.png
 - Assets/PREFABS/snowman.prefab
 - Assets/PREFABS/snowman_bottom.prefab
+- Assets/PREFABS/textures/galena/Villager_HEA_Galena_Clothes_s.png
+- Assets/PREFABS/textures/galena/Villager_HEA_Galena_Clothes_d.png
 - Assets/PREFABS/textures/arkose/Villager_HEA_Arkose_Clothes_n.png
 - Assets/PREFABS/textures/arkose/Villager_HEA_Arkose_Clothes_d.png
+- Assets/PREFABS/textures/galena/Villager_HEA_Galena_Clothes_n.png
+- Assets/PREFABS/textures/tephra/Villager_HEA_Tephra_Clothes_d.png
+- Assets/PREFABS/textures/galena/Villager_HEA_Galena_Clothes_ao.png
+- Assets/PREFABS/textures/tephra/Villager_HEA_Tephra_Clothes_s.png
 - Assets/PREFABS/textures/arkose/Villager_HEA_Arkose_Clothes_s.png
+- Assets/PREFABS/textures/tephra/Villager_HEA_Tephra_Clothes_n.png
 Dependencies:
 - E:/Outer Wilds modding/OW RIPPED 2023/exported/timberhearth/meshes/characters
 - E:/Outer Wilds modding/OW RIPPED 2023/exported/timberhearth/meshes/props

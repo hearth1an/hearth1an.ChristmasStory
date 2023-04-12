@@ -43,7 +43,7 @@ namespace ChristmasStory.Characters.Villagers
 			var shipModelTriggered = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Interactables_Village/ModelRocket_Station/ModelRocketStation_AttachPoint").GetComponent<RemoteFlightConsole>().enabled;
 			var rockAnimationActive = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Snowman_Cairn/Props_TH_ClutterSmall").GetComponent<NomaiCairnRock>().enabled;
             var micaDialogue = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Mica/Mica_Dialogue");
-			var shipDialogue = SearchUtilities.Find("Ship_Toy_Dialogue");
+			var shipDialogue = SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Box/Ship_Toy_Dialogue");
 
 			if (shipModelTriggered && rockAnimationActive && !PlayerData.GetPersistentCondition("SNOWMAN_DESTROYED_EARLY") && micaDialogue.activeSelf)
             {
@@ -70,10 +70,10 @@ namespace ChristmasStory.Characters.Villagers
 				shipDialogue.SetActive(true);
 
 				PlayerData.SetPersistentCondition("SEED_CURRENT_TOY", false);
-				PlayerData.SetPersistentCondition("SNOWMAN_CURRENT_TOY", true);                
+				PlayerData.SetPersistentCondition("SNOWMAN_CURRENT_TOY", true);
 
-                SearchUtilities.Find("Toy_Snowman").SetActive(true);
-				SearchUtilities.Find("Toy_Seed").SetActive(false);
+				SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Snowman").SetActive(true);
+				SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Seed").SetActive(false);
 			}
 
 		}

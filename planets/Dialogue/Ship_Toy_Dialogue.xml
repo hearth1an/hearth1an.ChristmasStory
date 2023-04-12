@@ -5,34 +5,35 @@
 		<Name>Start</Name>
 		<EntryCondition>DEFAULT</EntryCondition>
 		<Dialogue>
-			<Page>Hmm... </Page>
+			<Page>SHIP_TOY_1</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
 			<RequiredPersistentCondition>SEED_TOY_GIVEN</RequiredPersistentCondition>
-			<CancelledPersistentCondition>SEED_CURRENT_TOY</CancelledPersistentCondition>
-				<Text>Put seed toy.</Text>
-				<ConditionToSet>SEED_CURRENT_TOY</ConditionToSet>
+				<CancelledCondition>SEED_CURRENT_TOY</CancelledCondition>
+				<Text>SHIP_TOY_2</Text>
+				<ConditionToSet>SEED_CURRENT_TOY</ConditionToSet>				
 				<ConditionToCancel>SNOWMAN_CURRENT_TOY</ConditionToCancel>
 				<ConditionToCancel>TOYS_REMOVED</ConditionToCancel>			
 			</DialogueOption>
 			<DialogueOption>
 			<RequiredPersistentCondition>SNOWMAN_TOY_GIVEN</RequiredPersistentCondition>
-			<CancelledPersistentCondition>SNOWMAN_CURRENT_TOY</CancelledPersistentCondition>
-				<Text>Put snowman toy.</Text>
-				<ConditionToSet>SNOWMAN_CURRENT_TOY</ConditionToSet>
+			    <CancelledCondition>SNOWMAN_CURRENT_TOY</CancelledCondition>
+			 	<Text>SHIP_TOY_3</Text>
+				<ConditionToSet>SNOWMAN_CURRENT_TOY</ConditionToSet>				
 				<ConditionToCancel>SEED_CURRENT_TOY</ConditionToCancel>
 				<ConditionToCancel>TOYS_REMOVED</ConditionToCancel>			
 			</DialogueOption>
 			<DialogueOption>
-			<CancelledPersistentCondition>TOYS_REMOVED</CancelledPersistentCondition>
-				<Text>Remove toy.</Text>
+				<RequiredCondition>TOY_PLACED</RequiredCondition>
+				<CancelledCondition>TOYS_REMOVED</CancelledCondition>
+				<Text>SHIP_TOY_4</Text>
 				<ConditionToSet>TOYS_REMOVED</ConditionToSet>
 				<ConditionToCancel>SEED_CURRENT_TOY</ConditionToCancel>
-				<ConditionToCancel>SNOWMAN_CURRENT_TOY</ConditionToCancel>						
+				<ConditionToCancel>SNOWMAN_CURRENT_TOY</ConditionToCancel>				
 			</DialogueOption>
 			<DialogueOption>			
-				<Text>Nevermind.</Text>				
+				<Text>SHIP_TOY_5</Text>				
 			</DialogueOption>					
 		</DialogueOptionsList>
 	</DialogueNode>

@@ -33,13 +33,19 @@ namespace ChristmasStory.Characters.Villagers
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Kids_PreGame/Villager_HEA_Tephra/ConversationZone").DestroyAllComponents<CharacterDialogueTree>();
 
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/New_Moraine/ConversationZone").DestroyAllComponents<InteractReceiver>();
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/New_Moraine/ConversationZone").DestroyAllComponents<CharacterDialogueTree>();
+			//SearchUtilities.Find("TimberHearth_Body/Sector_TH/New_Moraine/ConversationZone").DestroyAllComponents<CharacterDialogueTree>();
 
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/New_Arkose/ConversationZone").DestroyAllComponents<InteractReceiver>();
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/New_Arkose/ConversationZone").DestroyAllComponents<CharacterDialogueTree>();
+			//SearchUtilities.Find("TimberHearth_Body/Sector_TH/New_Arkose/ConversationZone").DestroyAllComponents<CharacterDialogueTree>();
 
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/New_Tuff/ConversationZone").DestroyAllComponents<InteractReceiver>();
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/New_Tuff/ConversationZone").DestroyAllComponents<CharacterDialogueTree>();
+
+			SearchUtilities.Find("TimberHearth_Body/Sector_TH/New_Tephra/ConversationZone").DestroyAllComponents<InteractReceiver>();
+			SearchUtilities.Find("TimberHearth_Body/Sector_TH/New_Tephra/ConversationZone").DestroyAllComponents<CharacterDialogueTree>();
+
+			SearchUtilities.Find("TimberHearth_Body/Sector_TH/New_Galena/ConversationZone").DestroyAllComponents<InteractReceiver>();
+			SearchUtilities.Find("TimberHearth_Body/Sector_TH/New_Galena/ConversationZone").DestroyAllComponents<CharacterDialogueTree>();
 
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/New_Gossan/ConversationZone").DestroyAllComponents<InteractReceiver>();
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/New_Gossan/ConversationZone").DestroyAllComponents<CharacterDialogueTree>();
