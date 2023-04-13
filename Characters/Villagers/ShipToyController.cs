@@ -16,7 +16,7 @@ namespace ChristmasStory.Characters.Villagers
 
 		public override void Start()
         {
-            dialogue = SearchUtilities.Find("Ship_Toy_Dialogue").GetComponent<CharacterDialogueTree>();
+            dialogue = SearchUtilities.Find("Ship_Toy_Dialogue").GetComponent<CharacterDialogueTree>();			
 
 			var vineCollider = SearchUtilities.Find("Ship_Body/ShipSector/Vine_Collider");
 			vineCollider.AddComponent<OWCapsuleCollider>();			
@@ -24,10 +24,7 @@ namespace ChristmasStory.Characters.Villagers
 			vineCollider.transform.parent = SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Seed/Toy_Vine_3/Terrain_DB_Vine_v2").transform.parent;
 
 			var shipDialogue = SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Box/Ship_Toy_Dialogue");
-			shipDialogue.GetComponent<InteractReceiver>().ChangePrompt(TranslationHandler.GetTranslation("SHIP_TOY_PROMT", TranslationHandler.TextType.UI));
-
-			shipDialogue.GetComponent<InteractReceiver>()._usableInShip = true;
-			
+			shipDialogue.GetComponent<InteractReceiver>()._usableInShip = true;			
 			shipDialogue.SetActive(false);
 
 			SearchUtilities.Find("Toy_Box").AddComponent<OWCapsuleCollider>();

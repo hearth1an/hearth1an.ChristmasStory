@@ -22,6 +22,11 @@ namespace ChristmasStory.Characters.Travelers
 			shipCharacter = SearchUtilities.Find("Ship_Body/ShipSector/Ship_Esker");
 			treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Villager_HEA_Esker_ANIM_Rocking");
 
+			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Villager_HEA_Esker_ANIM_Rocking/ConversationZone_Esker").DestroyAllComponents<InteractReceiver>();
+			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Villager_HEA_Esker_ANIM_Rocking/ConversationZone_Esker").DestroyAllComponents<CharacterDialogueTree>();
+
+			shipCharacter.transform.localPosition = new UnityEngine.Vector3(0.8f, 2f, 1.8f);
+
 			base.Start();
 		}
 

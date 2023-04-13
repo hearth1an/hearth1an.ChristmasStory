@@ -62,19 +62,12 @@ namespace ChristmasStory.Characters.Villagers
 			{
 				PlayerEffectController.CloseEyes(1f);				
 				SearchUtilities.Find("Elevator_Dialogue").SetActive(false);
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ZeroGCave/Characters_ZeroGCave/Villager_HEA_Tuff/Tuff_Dialogue").SetActive(false);				
 
-				/*
-				
-				var playExternalOneshot = Locator.GetPlayerAudioController().GetComponent<OWAudioSource>();
-				playExternalOneshot._audioLibraryClip = AudioType.None;
-				playExternalOneshot.clip = sfx;
-				playExternalOneshot.PlayOneShot();
-				*/
-				
 
 				Invoke("AfterDialogue", 2f);
 				Invoke("OpenEyesDelayed", 4f);
-				Invoke("RunElevator", 10f);
+				Invoke("RunElevator", 12f);
 				Invoke("DelayRadio", 35f);
 			}
 			if (Conditions.Get(Conditions.CONDITION.ELEVATOR_DONE))

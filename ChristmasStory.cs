@@ -158,7 +158,15 @@ namespace ChristmasStory
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Center_Barrel").transform.localScale = new Vector3(7f, 4.5f, 7f);
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Center_Barrel").AddComponent<CapsuleCollider>();
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Snowman_Cairn/Props_TH_ClutterLarge").DestroyAllComponents<MeshRenderer>();
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Snowman_Cairn/Props_TH_ClutterSmall").DestroyAllComponents<MeshRenderer>();
+				// SearchUtilities.Find("TimberHearth_Body/Sector_TH/Snowman_Cairn/Props_TH_ClutterSmall").DestroyAllComponents<MeshRenderer>();
+
+				SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Box/Ship_Toy_Dialogue").GetComponent<InteractReceiver>().ChangePrompt(TranslationHandler.GetTranslation("SHIP_TOY_PROMT", TranslationHandler.TextType.UI));
+
+				var nomCable = SearchUtilities.Find("CaveTwin_Body/Sector_CaveTwin/Lighting_CaveTwin/Structure_NOM_TLECable").GetComponent<MeshRenderer>();
+				var villageCable = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Nomai_wire").GetComponent<MeshRenderer>();
+
+				villageCable.sharedMaterials = nomCable.sharedMaterials;
+
 
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Dialogue").SetActive(true);
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village/ConversationZone").transform.localPosition = new Vector3(0, 2f, 0);
@@ -168,13 +176,11 @@ namespace ChristmasStory
 				SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner/InteractReceiver").SetActive(false);
 				SearchUtilities.Find("Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/ConversationZone").DestroyAllComponents<InteractReceiver>();
 
-				SearchUtilities.Find("Ship_Body/ShipSector/Ship_Esker").AddComponent<CapsuleCollider>().transform.localPosition = new Vector3 (0, 1, 0);
-				SearchUtilities.Find("Ship_Body/ShipSector/Ship_Feldspar").AddComponent<CapsuleCollider>().transform.localPosition = new Vector3(0, 1, 0);				
+				SearchUtilities.Find("Ship_Body/ShipSector/Ship_Esker").AddComponent<CapsuleCollider>();
+				SearchUtilities.Find("Ship_Body/ShipSector/Ship_Feldspar").AddComponent<CapsuleCollider>();			
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Christmas_Tree").GetComponent<CapsuleCollider>().radius = 1f;
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Prefab_HEA_ChertShip").AddComponent<CapsuleCollider>();
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Prefab_HEA_ChertShip").GetComponent<CapsuleCollider>().radius = 7f;
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Chert_ANIM_Chatter_Chipper").AddComponent<CapsuleCollider>();
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Villager_HEA_Esker_ANIM_Rocking").AddComponent<CapsuleCollider>();
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Prefab_HEA_ChertShip").AddComponent<CapsuleCollider>().radius = 7f;				
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Chert_ANIM_Chatter_Chipper").AddComponent<CapsuleCollider>();				
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Feldspar").AddComponent<CapsuleCollider>();
 
 				SearchUtilities.Find("Ship_Body/ShipSector/Ship_Feldspar/ConversationZone").GetComponent<InteractReceiver>()._usableInShip = true;
@@ -397,48 +403,7 @@ namespace ChristmasStory
 
 			rockArkose._detectableFields[0] = gravity;
 			rockArkose._activeVolumes[0] = gravity;
-			rockArkose._activeInheritedDetector = field;
-
-			/*
-			
-			var rockArkose = SearchUtilities.Find("Rock_Body 3/Detector_Rock").GetComponent<ConstantForceDetector>();
-			rockMoraine._detectableFields[0] = gravity;
-			rockArkose._detectableFields[0] = gravity;
-
-
-			{
-				"assetBundle": "planets/assetbundle/village",
-				"path": "Assets/PREFABS/moraine.prefab",
-				"rename": "New_Moraine",
-				"position": {
-					"x": 24.9,
-					"y": -41.12,
-					"z": 184.7
-				},
-				"rotation": {
-					"x": 73,
-					"y": 187,
-					"z": 177
-				}
-			},
-			
-			{
-				"assetBundle": "planets/assetbundle/village",
-				"path": "Assets/PREFABS/arkose.prefab",
-				"rename": "New_Arkose",
-				"position": {
-					"x": 23.9,
-					"y": -45.36,
-					"z": 184
-				},
-				"rotation": {
-					"x": 250,
-					"y": 13,
-					"z": 180
-				}
-			},
-
-			*/
+			rockArkose._activeInheritedDetector = field;			
 
 			var snowmanTop = SearchUtilities.Find("snowman_top");
 			var cairnTop = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Snowman_Cairn/Props_TH_ClutterSmall");
@@ -464,31 +429,29 @@ namespace ChristmasStory
 				Instance.ModHelper.Events.Unity.FireOnNextUpdate(() =>
 				{
 					if (Conditions.Get(Conditions.PERSISTENT.SLATE_START_DONE))
-					{
-						// SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village").SetActive(false);
+					{						
 						SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Characters_Observatory/Villager_HEA_Hornfels (1)").SetActive(false);
 						SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village").SetActive(false);
 
 						SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village_Final").SetActive(true);
 						SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hornfels_Village_Final").SetActive(true);
-						SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village_Final").SetActive(true);						
-
+						SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village_Final").SetActive(true);
 
 						Conditions.Set(Conditions.CONDITION.HORNFELS_FISH_TOLD, false);
 						WriteUtil.WriteLine("Spawning endgame props!");
 
 						SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl").transform.localRotation = new Quaternion(-0.0104f, -0.0329f, 0.0209f, 0.9992f);
 						SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Marl_Dialogue_Final").SetActive(true);
-						SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Marl_Dialogue").SetActive(false);
-												
+						SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Marl_Dialogue").SetActive(false);												
 					}
 				});
-
 
 				SearchUtilities.Find("Nomai_wire").transform.localScale = new Vector3(1f, 1.7818f, 1f);
 				var water = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Geometry_TH/Terrain_TH_Water_v3/Village_Lower_Water");
 				// var ice = SearchUtilities.Find("Comet_Body/Sector_CO/Geometry_CO/Frictionless_Batched/OtherComponentsGroup/Terrain_CO_Surface_Ice").GetComponent<MeshRenderer>();
-				var ice = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Geo_ImpactCrater/OtherComponentsGroup/ImpactCrater_IceShards/BatchedGroup/BatchedMeshRenderers_0").GetComponent<MeshRenderer>();
+				// var ice = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Geo_ImpactCrater/OtherComponentsGroup/ImpactCrater_IceShards/BatchedGroup/BatchedMeshRenderers_0").GetComponent<MeshRenderer>();
+				var ice = SearchUtilities.Find("Moon_Body/Sector_THM/Props_THM/OtherComponentsGroup/ControlledByProxy_Structures/THM_IceShards/BatchedGroup/BatchedMeshRenderers_1").GetComponent<MeshRenderer>();
+
 				var iceSurface = SearchUtilities.Find("Comet_Body/Sector_CO/Geometry_CO/Frictionless_Batched/BatchedGroup/BatchedMeshColliders_0").GetComponent<BatchedMaterialLookup>();
 				water.SetActive(true);
 				water.GetComponent<MeshRenderer>().sharedMaterials = ice.sharedMaterials;
@@ -498,7 +461,6 @@ namespace ChristmasStory
 				water.AddComponent<OWCollider>();
 
 				SearchUtilities.Find("TH_NEW_RIVER").AddComponent<BatchedMaterialLookup>();
-
 				SearchUtilities.Find("TH_NEW_RIVER").GetComponent<BatchedMaterialLookup>().materials = iceSurface.materials;
 
 				var alpine = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Prefab_TH_Alpine").GetComponent<Renderer>();
@@ -511,7 +473,6 @@ namespace ChristmasStory
 				
 				var snowMat = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_NomaiCrater/Geometry_NomaiCrater/BatchedGroup/BatchedMeshColliders_2").GetComponent<BatchedMaterialLookup>();
 			
-
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/BatchedGroup/BatchedMeshColliders_0").GetComponent<BatchedMaterialLookup>().materials[0] = snowMat.materials[1];
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/BatchedGroup/BatchedMeshColliders_1").GetComponent<BatchedMaterialLookup>().materials[0] = snowMat.materials[1];
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/BatchedGroup/BatchedMeshColliders_1").GetComponent<BatchedMaterialLookup>().materials[1] = snowMat.materials[1];				
@@ -559,7 +520,6 @@ namespace ChristmasStory
 				var thExcludedSector_2 = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Interactables_Observatory").GetComponentsInChildren<Renderer>();
 				var sequoiaTreeLeaves = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/OtherComponentsGroup/ControlledByProxy_Terrain/Tree_TH_Sequoia/Prefab_TH_Sequoia_V2").GetComponentsInChildren<Renderer>();
 				//var skipZone = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Geometry_Observatory/Structure_HEA_Observatory_v3/ObservatoryPivot/Observatory_Interior/Interior_Exhibits")
-
 
 				foreach (var meshRenderer in thMeshRenderers)
 				{
@@ -628,16 +588,13 @@ namespace ChristmasStory
 				WriteUtil.WriteError($"{ex}");
 			}
 		}
-
 		private void CreditsMusic()
         {
 			var addMusic = GameObject.Find("AudioSource").GetComponent<OWAudioSource>();			
 			var newMusic = Instance.ModHelper.Assets.GetAudio("planets/Content/music/Christmas_Instrument.mp3");
 			addMusic._audioLibraryClip = AudioType.None;			
 			addMusic.clip = newMusic;
-			addMusic.Play();
-
-			
+			addMusic.Play();			
 		}		
 		public void TitleScreenChanges()
 		{

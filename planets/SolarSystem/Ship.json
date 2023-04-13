@@ -215,19 +215,16 @@
 					"z": 0
 				},
 				"keepLoaded": true
-			},
+			},			
 			{
-				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Characters_Crossroads/Signal_Banjo",
-				"parentPath": "ShipSector/Ship_Riebeck",
-				"isRelativeToParent": true
-			},
-			{
-				"path": "Moon_Body/Sector_THM/Characters_THM/Villager_HEA_Esker/Villager_HEA_Esker_ANIM_Rocking",
+				"path": "Moon_Body/Sector_THM/Characters_THM/Villager_HEA_Esker",
 				"rename": "Ship_Esker",
+				"removeChildren": [ "Signal_Whistling", "ConversationZone_Esker" ],
+				"isRelativeToParent": true,
 				"position": {
-					"x": 0.7364,
-					"y": 0.5087,
-					"z": 1.589
+					"x": 0.9,
+					"y": 2,
+					"z": 1.8
 				},
 				"rotation": {
 					"x": 0,
@@ -236,27 +233,16 @@
 				},
 				"scale": 1,
 				"keepLoaded": true
-			},
-			{
-				"path": "Moon_Body/Sector_THM/Characters_THM/Villager_HEA_Esker/Signal_Whistling",
-				"parentPath": "ShipSector/Ship_Esker",
-				"isRelativeToParent": true,
-				"position": {
-					"x": 0,
-					"y": 1,
-					"z": 0
-				},
-				"keepLoaded": true
-			},
+			},			
 			{
 				"path": "DB_PioneerDimension_Body/Sector_PioneerDimension/Interactables_PioneerDimension/Pioneer_Characters/Traveller_HEA_Feldspar",
-				"removeChildren": [ "ConversationZone_Feldspar" ],
 				"rename": "Ship_Feldspar",
-
+				"removeChildren": [ "ConversationZone_Feldspar" ],
+				"isRelativeToParent": true,
 				"position": {
-					"x": 0.8545,
-					"y": 1.1342,
-					"z": -2.6491
+					"x": 0.4,
+					"y": 1.2,
+					"z": -2.6
 				},
 				"rotation": {
 					"x": 0,
@@ -265,12 +251,7 @@
 				},
 				"scale": 1.1,
 				"keepLoaded": true
-			},
-			{
-				"path": "DB_PioneerDimension_Body/Sector_PioneerDimension/Interactables_PioneerDimension/Pioneer_Characters/Signal_Harmonica",
-				"parentPath": "ShipSector/Ship_Feldspar",
-				"isRelativeToParent": true
-			}
+			},			
 		],
 		"dialogue": [
 			{
@@ -329,12 +310,33 @@
 				"xmlFile": "planets/Dialogue/Esker_Ship.xml",
 				"parentPath": "ShipSector/Ship_Esker",
 				"pathToAnimController": "ShipSector/Ship_Esker",
-				"position": { "y": 1.2 },
 				"isRelativeToParent": true,
-				"radius": 1,
+				"position": {"y": 0},
+				"radius": 1.2,
 				"lookAtRadius": 1,
 				"range": 1
 			}
+		],
+		"audioSources": [
+			{
+				"audio": "TravelerFeldspar",
+				"parentPath": "ShipSector/Ship_Feldspar",
+				"isRelativeToParent": true,
+				"rename": "Signal_Feldspar"
+			},
+			{
+				"audio": "TravelerEsker",
+				"parentPath": "ShipSector/Ship_Esker",
+				"isRelativeToParent": true,
+				"rename": "Signal_Esker"
+			},
+			{
+				"audio": "TravelerRiebeck",
+				"parentPath": "ShipSector/Ship_Riebeck",
+				"isRelativeToParent": true,
+				"rename": "Signal_Esker"
+			}
+
 		]
 	}
 }

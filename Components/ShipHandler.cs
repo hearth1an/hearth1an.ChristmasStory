@@ -29,9 +29,11 @@ namespace ChristmasStory.Components
 			_shipBody = Locator.GetShipBody().gameObject;
 			_villageSector = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Villager_HEA_Esker_ANIM_Rocking");
 
-			SearchUtilities.Find("ProbeBroken").SetActive(false);
-
+			SearchUtilities.Find("ProbeBroken").SetActive(false);		
+			
 		}
+
+		
 
 		/// <summary>
 		/// Checks if a character (give their game object) is within a specific distance of the ship
@@ -71,6 +73,7 @@ namespace ChristmasStory.Components
 			WriteUtil.WriteDebug("Explosion event");
 			Conditions.Set(Conditions.CONDITION.SHIP_DESTROYED, true);
 			Instance.ShipExplosion?.Invoke();
+			SearchUtilities.Find("Ship_Body/ShipSector").SetActive(false);			
 		}
 
 		private void OnSectorOccupantsUpdated()
@@ -95,38 +98,7 @@ namespace ChristmasStory.Components
 
 		public void Update()
 		{
-			OnSectorOccupantsUpdated();
-			/*
-			var playerState = Locator.GetPlayerController()._groundBody;
-			var probeGrav = SearchUtilities.Find("Probe_Body/ProbeGravity/CapsuleVolume_NOM_GravityCrystal");
-			var probeLaunch = Locator.GetProbe();
-			var shipBody = Locator.GetShipBody();
-			var shipModule = shipBody.GetComponent<ShipThrusterController>();
-
-            if (IsCharacterNearShip(probeLaunch.gameObject, 30) == true && !Instance._shipDamageController._exploded && probeGrav.activeSelf && shipModule.isActiveAndEnabled == true)
-            {
-                probeGrav.SetActive(false);
-            }
-			if (IsCharacterNearShip(probeLaunch.gameObject, 30) == true && !Instance._shipDamageController._exploded && !probeGrav.activeSelf && !shipModule.isActiveAndEnabled && probeLaunch.IsLaunched())
-			{
-				BlowUpShip();
-			}
-			if (playerState == shipBody && Instance._shipDamageController._exploded != true && probeGrav.activeSelf)
-			{
-				probeGrav.SetActive(false);
-			}
-			if (playerState == shipBody && probeLaunch.IsLaunched() && !probeGrav.activeSelf)
-			{
-				BlowUpShip();
-            }
-            if (playerState != shipBody && !probeGrav.activeSelf)
-            {
-                probeGrav.SetActive(true);
-            }
-
-
-            else return;
-			*/
+			OnSectorOccupantsUpdated();			
 		}
 
 

@@ -51,25 +51,7 @@
 						"parentPath": "Sector_TH"
 					}
 
-				],
-				"whiteboard": {
-					"nomaiText": [
-						{
-							"id": "Hal's",
-							"xmlFile": "planets/Text/Hal_Text.xml",
-							"seed": 1,
-							"arcInfo": [
-								{
-									"type": "child"
-
-								}
-							]
-
-						}
-
-					],
-					"disableWall": true
-				}
+				]
 			}
 		],
 		"nomaiText": [
@@ -310,21 +292,7 @@
 					"z": 299.9301
 				},
 				"rename": "Tuff_Pickaxe"
-			},
-			{
-				"path": "TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Kids_PreGame/Villager_HEA_Galena",
-				"position": {
-					"x": 48.0984,
-					"y": 52.5411,
-					"z": 64.1242
-				},
-				"rotation": {
-					"x": 0.6479,
-					"y": 305.6657,
-					"z": 299.9301
-				},
-				"rename": "New_Galena"
-			},
+			},			
 			{
 				"path": "TimberHearth_Body/Sector_TH/Sector_RadioTower/RadioTower_DLC/Interactibles_RadioTower/Hornfels'GrovePivot/Prefab_HEA_Journal",
 				"position": {
@@ -474,7 +442,8 @@
 				}
 			},
 			{
-				"path": "Moon_Body/Sector_THM/Characters_THM/Villager_HEA_Esker/Villager_HEA_Esker_ANIM_Rocking",
+				"path": "Moon_Body/Sector_THM/Characters_THM/Villager_HEA_Esker",
+				"removeChildren": [ "ConversationZone_Esker" ],
 				"position": {
 					"x": -2.521743,
 					"y": -23.3085938,
@@ -485,22 +454,7 @@
 					"y": 284.302,
 					"z": 253.170258
 				}
-			},
-			{
-				"path": "Moon_Body/Sector_THM/Characters_THM/Villager_HEA_Esker/Signal_Whistling",
-				"parentPath": "Sector_TH/Villager_HEA_Esker_ANIM_Rocking",
-				"isRelativeToParent": true,
-				"position": {
-					"x": 0,
-					"y": 1,
-					"z": 0
-				},
-				"rotation": {
-					"x": 0,
-					"y": 0,
-					"z": 0
-				}
-			},
+			},			
 			{
 				"assetBundle": "planets/assetbundle/hearthians",
 				"path": "Assets/Prefabs/Villager_HEA_Slate.prefab",
@@ -912,7 +866,7 @@
 					"z": 0
 				},
 				"xmlFile": "planets/Dialogue/Tuff_Start.xml",
-				"lookAtRadius": 3,
+				"lookAtRadius": 2,
 				"rename": "Tuff_Dialogue",
 				"radius": 1
 			},
@@ -938,7 +892,7 @@
 
 				"xmlFile": "planets/Dialogue/Tektite_Start.xml",
 				"pathToAnimController": "Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2",
-				"lookAtRadius": 3,
+				"lookAtRadius": 2,
 				"rename": "Tektite_Dialogue",
 				"radius": 1
 			},
@@ -953,7 +907,7 @@
 				},
 				"xmlFile": "planets/Dialogue/Tektite_Base.xml",
 				"pathToAnimController": "Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2",
-				"lookAtRadius": 3,
+				"lookAtRadius": 2,
 				"rename": "Tektite_Base",
 				"radius": 1
 			},
@@ -995,7 +949,7 @@
 
 				"xmlFile": "planets/Dialogue/Gossan_Start.xml",
 				"pathToAnimController": "Sector_TH/Sector_Village/Sector_UpperVillage/Characters_UpperVillage/Villager_HEA_Gossan/Villager_HEA_Gossan_ANIM_Polish",
-				"lookAtRadius": 3,
+				"lookAtRadius": 2,
 				"rename": "Gossan_Dialogue_2",
 				"radius": 1
 			},
@@ -1142,7 +1096,7 @@
 				},
 				"xmlFile": "planets/Dialogue/Esker_Tree.xml",
 				"pathToAnimController": "Sector_TH/Villager_HEA_Esker_ANIM_Rocking",
-				"lookAtRadius": 3,
+				"lookAtRadius": 2,
 				"radius": 1
 			},
 			{
@@ -1274,7 +1228,7 @@
 				"xmlFile": "planets/Dialogue/Spinel.xml",
 				"rename": "Spinel_Dialogue",
 				"pathToAnimController": "Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Spinel/Villager_HEA_Spinel_ANIM_Fishing",
-				"lookAtRadius": 3,
+				"lookAtRadius": 2,
 				"radius": 1,
 				"range": 2
 			},
@@ -1289,7 +1243,7 @@
 				"xmlFile": "planets/Dialogue/Spinel_Waterfall.xml",
 				"rename": "Spinel_Dialogue_2",
 				"pathToAnimController": "Sector_TH/New_Spinel/Villager_HEA_Spinel_ANIM_Fishing",
-				"lookAtRadius": 3,
+				"lookAtRadius": 2,
 				"radius": 1,
 				"range": 2
 			},
@@ -1303,8 +1257,8 @@
 				},
 				"xmlFile": "planets/Dialogue/Galena.xml",
 				"rename": "Galena_Dialogue",
-				"pathToAnimController": "Sector_TH/Sector_TH/New_Galena/Villager_HEA_Galena_ANIM_Idle",
-				"lookAtRadius": 3,
+				"pathToAnimController": "Sector_TH/New_Galena/Villager_HEA_Galena_ANIM_Idle",
+				"lookAtRadius": 2,
 				"radius": 1,
 				"range": 1
 			},
@@ -1319,7 +1273,7 @@
 				"xmlFile": "planets/Dialogue/Tephra.xml",
 				"rename": "Tephra_Dialogue",
 				"pathToAnimController": "Sector_TH/New_Tephra/Villager_HEA_Tephra_ANIM_SitIdle",
-				"lookAtRadius": 3,
+				"lookAtRadius": 2,
 				"radius": 1,
 				"range": 1
 			},
@@ -1334,7 +1288,7 @@
 				"xmlFile": "planets/Dialogue/Gneiss.xml",
 				"rename": "Gneiss_Dialogue",
 				"pathToAnimController": "Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Gneiss/Villager_HEA_Gneiss_ANIM_Tuning",
-				"lookAtRadius": 3,
+				"lookAtRadius": 2,
 				"radius": 1,
 				"range": 2
 			},
@@ -1349,7 +1303,7 @@
 				"xmlFile": "planets/Dialogue/Rutile.xml",
 				"rename": "Rutile_Dialogue",
 				"pathToAnimController": "Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Rutile/Villager_HEA_Rutile_ANIM_Rocking",
-				"lookAtRadius": 3,
+				"lookAtRadius": 2,
 				"radius": 2,
 				"range": 2
 			},
@@ -1363,7 +1317,7 @@
 				},
 				"xmlFile": "planets/Dialogue/Moraine.xml",
 				"rename": "Moraine_Dialogue",
-				"lookAtRadius": 3,
+				"lookAtRadius": 2,
 				"radius": 2,
 				"range": 2
 			},
@@ -1377,7 +1331,7 @@
 				},
 				"xmlFile": "planets/Dialogue/Arkose.xml",
 				"rename": "Arkose_Dialogue",
-				"lookAtRadius": 3,
+				"lookAtRadius": 2,
 				"radius": 2,
 				"range": 2
 			},
@@ -1392,7 +1346,7 @@
 				"xmlFile": "planets/Dialogue/Tektite_Tree.xml",
 				"pathToAnimController": "Sector_TH/New_Tektite/Villager_HEA_Tektite_ANIM_Idle",
 				"rename": "Tektite_Tree_Dialogue",
-				"lookAtRadius": 3,
+				"lookAtRadius": 2,
 				"radius": 1,
 				"range": 2
 			},
@@ -1407,7 +1361,7 @@
 				"xmlFile": "planets/Dialogue/Tuff_Tree.xml",
 				"pathToAnimController": "Sector_TH/New_Tuff/Villager_HEA_Tuff_ANIM_Mine",
 				"rename": "Tuff_Tree_Dialogue",
-				"lookAtRadius": 3,
+				"lookAtRadius": 2,
 				"radius": 1,
 				"range": 2
 			},
@@ -1422,7 +1376,7 @@
 				"xmlFile": "planets/Dialogue/Gossan_Tree.xml",
 				"pathToAnimController": "Sector_TH/New_Gossan/Villager_HEA_Gossan_ANIM_Polish/",
 				"rename": "Gossan_Tree_Dialogue",
-				"lookAtRadius": 3,
+				"lookAtRadius": 2,
 				"radius": 1,
 				"range": 2
 			}
@@ -1444,7 +1398,7 @@
 				"rename": "Signal_Signal_Harmonica",
 				"onlyAudibleToScope": false,
 				"detectionRadius": 50,
-				"identificationRadius": 5
+				"identificationRadius": 50
 			},
 			{
 				"name": "Linked Radio",

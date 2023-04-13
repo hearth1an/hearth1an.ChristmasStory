@@ -26,7 +26,7 @@
 					"z": -0.4492
 				},
 				"xmlFile": "planets/Dialogue/Feldspar_Note.xml",
-				"lookAtRadius": 3,
+				"lookAtRadius": 2,
 				"radius": 1
 			}
 		],
