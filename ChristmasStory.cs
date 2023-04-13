@@ -160,6 +160,13 @@ namespace ChristmasStory
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Snowman_Cairn/Props_TH_ClutterLarge").DestroyAllComponents<MeshRenderer>();
 				// SearchUtilities.Find("TimberHearth_Body/Sector_TH/Snowman_Cairn/Props_TH_ClutterSmall").DestroyAllComponents<MeshRenderer>();
 
+				
+                SearchUtilities.Find("TimberHearth_Body/Sector_TH/Villager_HEA_Esker_ANIM_Rocking/Esker_Dialogue").AddComponent<CapsuleCollider>().height = 4f;
+
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Villager_HEA_Esker_ANIM_Rocking").transform.localPosition = new Vector3(-2.52f, -23.30f, 185.66f);
+				//SearchUtilities.Find("Moon_Body/Sector_THM/Characters_THM/Villager_HEA_Esker/Esker_Start_Dialogue").AddComponent<CapsuleCollider>().height = 4f;
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Villager_HEA_Esker_ANIM_Rocking/Signal_Esker").AddComponent<CapsuleCollider>().height = 2f;
+
 				SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Box/Ship_Toy_Dialogue").GetComponent<InteractReceiver>().ChangePrompt(TranslationHandler.GetTranslation("SHIP_TOY_PROMT", TranslationHandler.TextType.UI));
 
 				var nomCable = SearchUtilities.Find("CaveTwin_Body/Sector_CaveTwin/Lighting_CaveTwin/Structure_NOM_TLECable").GetComponent<MeshRenderer>();

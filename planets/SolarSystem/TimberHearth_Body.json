@@ -442,18 +442,18 @@
 				}
 			},
 			{
-				"path": "Moon_Body/Sector_THM/Characters_THM/Villager_HEA_Esker",
-				"removeChildren": [ "ConversationZone_Esker" ],
+				"path": "Moon_Body/Sector_THM/Characters_THM/Villager_HEA_Esker/Villager_HEA_Esker_ANIM_Rocking",				
 				"position": {
-					"x": -2.521743,
+					"x": -2.5218,
 					"y": -23.3085938,
-					"z": 185.682617
+					"z": 187.07
 				},
 				"rotation": {
 					"x": 296.0581,
 					"y": 284.302,
 					"z": 253.170258
-				}
+				}			
+				
 			},			
 			{
 				"assetBundle": "planets/assetbundle/hearthians",
@@ -1091,12 +1091,13 @@
 				"isRelativeToParent": true,
 				"position": {
 					"x": 0,
-					"y": 1.5,
+					"y": 1,
 					"z": 0
 				},
 				"xmlFile": "planets/Dialogue/Esker_Tree.xml",
 				"pathToAnimController": "Sector_TH/Villager_HEA_Esker_ANIM_Rocking",
 				"lookAtRadius": 2,
+				"rename": "Esker_Dialogue",
 				"radius": 1
 			},
 			{
@@ -1401,6 +1402,22 @@
 				"identificationRadius": 50
 			},
 			{
+				"name": "Esker",
+				"frequency": "Traveler",
+				"isRelativeToParent": true,
+				"parentPath": "Sector_TH/Villager_HEA_Esker_ANIM_Rocking",
+				"position": {
+					"x": 0,
+					"y": 1,
+					"z": 0
+				},
+				"audio": "TravelerEsker",
+				"rename": "Signal_Esker",
+				"onlyAudibleToScope": false,
+				"detectionRadius": 50,
+				"identificationRadius": 50
+			},
+			{
 				"name": "Linked Radio",
 				"frequency": "Radio",
 				"isRelativeToParent": true,
@@ -1412,10 +1429,10 @@
 				},
 				"audio": "planets/Content/music/radio_loop.mp3",
 				"rename": "Signal_Radio",
-				"onlyAudibleToScope": false,				
+				"onlyAudibleToScope": false,
 				"detectionRadius": 50,
 				"identificationRadius": 50
-			}		
+			}
 		],
 		"audioSources": [
 			{

@@ -194,7 +194,7 @@
 					"x": -0.0274,
 					"y": 1.5,
 					"z": 3.3
-				},				
+				},
 				"scale": 5,
 				"rename": "Vine_Collider",
 				"keepLoaded": true
@@ -215,16 +215,14 @@
 					"z": 0
 				},
 				"keepLoaded": true
-			},			
+			},
 			{
-				"path": "Moon_Body/Sector_THM/Characters_THM/Villager_HEA_Esker",
+				"path": "Moon_Body/Sector_THM/Characters_THM/Villager_HEA_Esker/Villager_HEA_Esker_ANIM_Rocking",
 				"rename": "Ship_Esker",
-				"removeChildren": [ "Signal_Whistling", "ConversationZone_Esker" ],
-				"isRelativeToParent": true,
 				"position": {
-					"x": 0.9,
-					"y": 2,
-					"z": 1.8
+					"x": 0.7364,
+					"y": 0.5087,
+					"z": 1.589
 				},
 				"rotation": {
 					"x": 0,
@@ -233,7 +231,7 @@
 				},
 				"scale": 1,
 				"keepLoaded": true
-			},			
+			},
 			{
 				"path": "DB_PioneerDimension_Body/Sector_PioneerDimension/Interactables_PioneerDimension/Pioneer_Characters/Traveller_HEA_Feldspar",
 				"rename": "Ship_Feldspar",
@@ -251,7 +249,7 @@
 				},
 				"scale": 1.1,
 				"keepLoaded": true
-			},			
+			}
 		],
 		"dialogue": [
 			{
@@ -310,9 +308,9 @@
 				"xmlFile": "planets/Dialogue/Esker_Ship.xml",
 				"parentPath": "ShipSector/Ship_Esker",
 				"pathToAnimController": "ShipSector/Ship_Esker",
+				"position": { "y": 1.2 },
 				"isRelativeToParent": true,
-				"position": {"y": 0},
-				"radius": 1.2,
+				"radius": 1,
 				"lookAtRadius": 1,
 				"range": 1
 			}
