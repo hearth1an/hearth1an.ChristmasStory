@@ -81,6 +81,11 @@ namespace ChristmasStory.Characters.Travelers
 			});
 
 			base.Start();
+
+			if (State == STATE.AT_TREE && !Conditions.Get(Conditions.PERSISTENT.FELDSPAR_LOOP_DIALOGUE_COMPLETE))
+			{
+				Conditions.Set(Conditions.CONDITION.FELDSPAR_SHOW_LOOP_DIALOGUE, true);
+			}
 		}
 
 		protected override void Dialogue_OnStartConversation()
@@ -136,6 +141,8 @@ namespace ChristmasStory.Characters.Travelers
 					}
 					break;
 			}
+
+			Conditions.Set(Conditions.CONDITION.FELDSPAR_SHOW_LOOP_DIALOGUE, false);
 		}
 		
 		private void SpawnAngler()

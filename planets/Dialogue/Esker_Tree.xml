@@ -38,4 +38,27 @@
 		</DialogueOptionsList>
 	</DialogueNode>
 
+	<DialogueNode>
+		<Name>One_Loop_Complete</Name>
+		<EntryCondition>ESKER_SHOW_LOOP_DIALOGUE</EntryCondition>
+		<Dialogue>
+			<Page>ESKER_ONE_LOOP_START</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>ESKER_ONE_LOOP_RESPONSE</Text>
+				<DialogueTarget>One_Loop_Complete_2</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>One_Loop_Complete_2</Name>
+		<Dialogue>
+			<Page>ESKER_ONE_LOOP_DONE</Page>
+		</Dialogue>
+		<SetPersistentCondition>ESKER_LOOP_DIALOGUE_COMPLETE</SetPersistentCondition>
+		<DialogueTarget>Start</DialogueTarget>
+	</DialogueNode>
+
 </DialogueTree>

@@ -64,4 +64,27 @@
 		</Dialogue>
 	</DialogueNode>
 
+	<DialogueNode>
+		<Name>One_Loop_Complete</Name>
+		<EntryCondition>FELDSPAR_SHOW_LOOP_DIALOGUE</EntryCondition>
+		<Dialogue>
+			<Page>FELDSPAR_ONE_LOOP_START</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>FELDSPAR_ONE_LOOP_RESPONSE</Text>
+				<DialogueTarget>One_Loop_Complete_2</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>One_Loop_Complete_2</Name>
+		<Dialogue>
+			<Page>FELDSPAR_ONE_LOOP_DONE</Page>
+		</Dialogue>
+		<DialogueTarget>Start</DialogueTarget>
+		<SetPersistentCondition>FELDSPAR_LOOP_DIALOGUE_COMPLETE</SetPersistentCondition>
+	</DialogueNode>
+
 </DialogueTree>

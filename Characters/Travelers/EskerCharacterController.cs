@@ -25,6 +25,11 @@ namespace ChristmasStory.Characters.Travelers
 			originalCharacter.SetActive(true);
 
 			base.Start();
+
+			if (State == STATE.AT_TREE && !Conditions.Get(Conditions.PERSISTENT.ESKER_LOOP_DIALOGUE_COMPLETE))
+			{
+				Conditions.Set(Conditions.CONDITION.ESKER_SHOW_LOOP_DIALOGUE, true);
+			}
 		}
 
 		protected override void Dialogue_OnStartConversation()
@@ -57,6 +62,8 @@ namespace ChristmasStory.Characters.Travelers
 					}
 					break;
 			}
+
+			Conditions.Set(Conditions.CONDITION.ESKER_SHOW_LOOP_DIALOGUE, false);
 		}
 
 		protected override void OnChangeState(STATE oldState, STATE newState) { }

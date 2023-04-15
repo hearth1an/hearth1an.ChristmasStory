@@ -24,6 +24,11 @@ namespace ChristmasStory.Characters.Travelers
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Riebeck/Signal_Banjo").transform.localPosition = new UnityEngine.Vector3(0, 2f, 0);
 
 			base.Start();
+
+			if (State == STATE.AT_TREE && !Conditions.Get(Conditions.PERSISTENT.RIEBECK_LOOP_DIALOGUE_COMPLETE))
+			{
+				Conditions.Set(Conditions.CONDITION.RIEBECK_SHOW_LOOP_DIALOGUE, true);
+			}
 		}
 
 		protected override void Dialogue_OnStartConversation()
@@ -57,6 +62,8 @@ namespace ChristmasStory.Characters.Travelers
 					}
 					break;
 			}
+
+			Conditions.Set(Conditions.CONDITION.RIEBECK_SHOW_LOOP_DIALOGUE, false);
 		}
 
 		protected override void OnChangeState(STATE oldState, STATE newState) { }

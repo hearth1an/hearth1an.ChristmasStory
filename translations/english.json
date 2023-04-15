@@ -657,7 +657,7 @@
 		"SHIP_TOY_4": "Remove toy.",
 		"SHIP_TOY_5": "Nevermind.",
 
-		"CAIRN_1": "<![CDATA[<color=orange>Ash Twin Project</color>]]> experimental interplanetary data transmission. \n(10m)"
+		"CAIRN_1": "<![CDATA[<color=orange>Ash Twin Project</color>]]> experimental interplanetary data transmission. \n(10m)",
 
 		/*
 		"_START_1": "",
@@ -692,8 +692,22 @@
 		"_START_30": "",
 	*/
 
+		// TRAVELERS SECOND LOOP AT THE TREE -> Aware of time loop!
+		"CHERT_ONE_LOOP_START": "Seems you were right after all about the time loop. The sun exploded and I found myself here again at the tree.",
+		"CHERT_ONE_LOOP_RESPONSE": "I told you!",
+		"CHERT_ONE_LOOP_DONE": "You did. What a unique opportunity to study a supernova up close! But why am I only aware of it now? It's quite strange.",
 
+		"ESKER_ONE_LOOP_START": "Merry Christmas hatchling!",
+		"ESKER_ONE_LOOP_RESPONSE": "Hey Esker, you notice anything out of the ordinary?",
+		"ESKER_ONE_LOOP_DONE": "No, why? Sorry, I've been too busy talking to the other villagers to pay attention to anything else!",
 
+		"FELDSPAR_ONE_LOOP_START": "What was that big flash in the sky earlier? Seems like a call to adventure.",
+		"FELDSPAR_ONE_LOOP_RESPONSE": "Don't worry about it. We can deal with that after Christmas.",
+		"FELDSPAR_ONE_LOOP_DONE": "Yes you're right, there will always be more time, right?",
+
+		"RIEBECK_ONE_LOOP_START": "DID THE SUN EXPLODE? WHAT WAS THAT!",
+		"RIEBECK_ONE_LOOP_RESPONSE": "Yes it did, but try not to worry about it, we're safe here.",
+		"RIEBECK_ONE_LOOP_DONE": "I find that hard to believe! But if the sun exploded and we're still alive then I guess you're right. I think."
 	},
 
 	"UIDictionary": {

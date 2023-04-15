@@ -54,4 +54,27 @@
 		</Dialogue>
 	</DialogueNode>
 
+	<DialogueNode>
+		<Name>One_Loop_Complete</Name>
+		<EntryCondition>RIEBECK_SHOW_LOOP_DIALOGUE</EntryCondition>
+		<Dialogue>
+			<Page>RIEBECK_ONE_LOOP_START</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>RIEBECK_ONE_LOOP_RESPONSE</Text>
+				<DialogueTarget>One_Loop_Complete_2</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>One_Loop_Complete_2</Name>
+		<Dialogue>
+			<Page>RIEBECK_ONE_LOOP_DONE</Page>
+		</Dialogue>
+		<DialogueTarget>Start</DialogueTarget>
+		<SetPersistentCondition>RIEBECK_LOOP_DIALOGUE_COMPLETE</SetPersistentCondition>
+	</DialogueNode>
+
 </DialogueTree>

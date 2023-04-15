@@ -34,6 +34,11 @@ namespace ChristmasStory.Characters.Travelers
 			dialogue.OnSelectDialogueOption += Dialogue_OnSelectDialogueOption;
 
 			base.Start();
+
+			if (State == STATE.AT_TREE && !Conditions.Get(Conditions.PERSISTENT.CHERT_LOOP_DIALOGUE_COMPLETE))
+			{
+				Conditions.Set(Conditions.CONDITION.CHERT_SHOW_LOOP_DIALOGUE, true);
+			}
 		}
 
 		public override void OnDestroy()
@@ -95,6 +100,8 @@ namespace ChristmasStory.Characters.Travelers
 					}
 					break;
 			}
+
+			Conditions.Set(Conditions.CONDITION.CHERT_SHOW_LOOP_DIALOGUE, false);
 		}
 
 		protected override void OnChangeState(STATE oldState, STATE newState)
