@@ -468,12 +468,15 @@ namespace ChristmasStory
 				water.AddComponent<OWCollider>();
 
 				// Trying to make Hal's rock not associated with working projection stone
-				
-			   var rockMat = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ZeroGCave/Geometry_ZeroGCave/BatchedGroup/BatchedMeshRenderers_0").GetComponent<MeshRenderer>();
-			   var invStoneMat = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Invite_Stone/AnimRoot/Props_NOM_SharedStone(Clone)").GetComponent<MeshRenderer>();
-			   var invStoneMat2 = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Villager_HEA_Hal_ANIM_Museum/hal_skin:player_rig_v01:Traveller_Trajectory_Jnt/hal_skin:player_rig_v01:Traveller_ROOT_Jnt/hal_skin:player_rig_v01:Traveller_Spine_01_Jnt/hal_skin:player_rig_v01:Traveller_Spine_02_Jnt/hal_skin:player_rig_v01:Traveller_Spine_Top_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Clavicle_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Shoulder_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Elbow_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Wrist_Jnt/Props_HEA_RoastingStick/Prefab_NOM_SharedStone").GetComponent<MeshRenderer>();
-                invStoneMat2.material = rockMat.material;
-                invStoneMat2.sharedMaterials[2] = invStoneMat.material;
+
+				//var invStoneMat2 = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Villager_HEA_Hal_ANIM_Museum/hal_skin:player_rig_v01:Traveller_Trajectory_Jnt/hal_skin:player_rig_v01:Traveller_ROOT_Jnt/hal_skin:player_rig_v01:Traveller_Spine_01_Jnt/hal_skin:player_rig_v01:Traveller_Spine_02_Jnt/hal_skin:player_rig_v01:Traveller_Spine_Top_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Clavicle_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Shoulder_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Elbow_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Wrist_Jnt/Props_HEA_RoastingStick/Prefab_NOM_SharedStone").GetComponent<MeshRenderer>();
+
+				var rockMat = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ZeroGCave/Geometry_ZeroGCave/BatchedGroup/BatchedMeshRenderers_0").GetComponent<MeshRenderer>();
+				var invStoneMat = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Invite_Stone/AnimRoot/Props_NOM_SharedStone(Clone)").GetComponent<MeshRenderer>();
+
+                invStoneMat.materials[2] = rockMat.material;
+
+                invStoneMat.sharedMaterials[2] = invStoneMat.material;
 
 				invStoneMat.materials[1] = rockMat.material;
 				invStoneMat.materials[2] = rockMat.material;

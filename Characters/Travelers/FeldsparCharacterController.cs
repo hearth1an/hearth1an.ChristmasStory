@@ -23,9 +23,6 @@ namespace ChristmasStory.Characters.Travelers
 			shipCharacter = SearchUtilities.Find("Ship_Body/ShipSector/Ship_Feldspar");
 			treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Feldspar");
 
-			
-
-			originalCharacter.SetActive(false);
 
 			//SearchUtilities.Find("DB_PioneerDimension_Body/Sector_PioneerDimension/Interactables_PioneerDimension/SeedWarp_ToPioneer (1)/Signal_Harmonica").SetActive(false);
 
@@ -33,16 +30,6 @@ namespace ChristmasStory.Characters.Travelers
 			var signalPioneer = SearchUtilities.Find("DB_PioneerDimension_Body/Sector_PioneerDimension/Interactables_PioneerDimension/SeedWarp_ToPioneer (1)/Signal_Harmonica");
 			var signalHub = SearchUtilities.Find("DB_HubDimension_Body/Sector_HubDimension/Feldspar_Hub_1");
 			var signalHub2 = SearchUtilities.Find("DB_HubDimension_Body/Sector_HubDimension/AudioSource");
-			signalHub2.SetActive(false);
-					
-			
-			
-
-			
-			
-
-			
-
 
 			// After done
 			SearchUtilities.Find("DarkBramble_Body/Sector_DB/Interactables_DB/EntranceWarp_ToHub/Signal_Harmonica").SetActive(false);
@@ -81,6 +68,8 @@ namespace ChristmasStory.Characters.Travelers
 			});
 
 			base.Start();
+
+			originalCharacter.SetActive(false);
 
 			if (State == STATE.AT_TREE && !Conditions.Get(Conditions.PERSISTENT.FELDSPAR_LOOP_DIALOGUE_COMPLETE))
 			{
