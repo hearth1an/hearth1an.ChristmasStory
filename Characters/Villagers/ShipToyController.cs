@@ -49,6 +49,7 @@ namespace ChristmasStory.Characters.Villagers
             }
 
 			base.Start();
+			SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Box/Ship_Toy_Dialogue").GetComponent<InteractReceiver>().ChangePrompt(TranslationHandler.GetTranslation("SHIP_TOY_PROMT", TranslationHandler.TextType.UI));
 		}
 
 		protected override void Dialogue_OnStartConversation()
@@ -112,6 +113,8 @@ namespace ChristmasStory.Characters.Villagers
 				WriteUtil.WriteLine("Snowman toy");
 
 				PlayerData.SetPersistentCondition(("SEED_CURRENT_TOY_1_LOOP"), false);
+				PlayerData.SetPersistentCondition(("SEED_CURRENT_TOY_2_LOOP"), false);
+				PlayerData.SetPersistentCondition(("SEED_CURRENT_TOY_3_LOOP"), false);
 
 				SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Seed/Toy_Vine_1").SetActive(false);
 				SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Seed/Toy_Vine_2").SetActive(false);
@@ -134,6 +137,8 @@ namespace ChristmasStory.Characters.Villagers
 				WriteUtil.WriteLine("Toys removed");
 
 				PlayerData.SetPersistentCondition(("SEED_CURRENT_TOY_1_LOOP"), false);
+				PlayerData.SetPersistentCondition(("SEED_CURRENT_TOY_2_LOOP"), false);
+				PlayerData.SetPersistentCondition(("SEED_CURRENT_TOY_3_LOOP"), false);
 
 				SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Seed/Toy_Vine_1").SetActive(false);
 				SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Seed/Toy_Vine_2").SetActive(false);

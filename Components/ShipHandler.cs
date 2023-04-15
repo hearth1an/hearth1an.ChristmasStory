@@ -13,7 +13,7 @@ namespace ChristmasStory.Components
 		private GameObject _shipBody;
 		private ShipDamageController _shipDamageController;
 		private GameObject _villageSector;
-
+		private bool shipExplodedByProbe = false;
 		public UnityEvent ShipExplosion { get; private set; }
 
 		public static ShipHandler Instance;
@@ -85,12 +85,17 @@ namespace ChristmasStory.Components
             {
 				probeGrav.SetActive(false);
 			}
+            if (!PlayerState._insideShip && !shipExplodedByProbe && !probeGrav.activeSelf )
+            {
+				probeGrav.SetActive(true);
+            }
 
 			if (shipSector.ContainsAnyOccupants(DynamicOccupant.Probe) && !Instance._shipDamageController._exploded)
 			{
 				probeGrav.SetActive(false);
 				SearchUtilities.Find("ProbeBroken").SetActive(true);
 				SearchUtilities.Find("Probe_Body/ProbeGravity/AudioSource_GravityCrystal").SetActive(false);
+				shipExplodedByProbe = true;
 				BlowUpShip();
 			};
 		}

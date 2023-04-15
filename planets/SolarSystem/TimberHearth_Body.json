@@ -25,8 +25,24 @@
 
 				},
 				"xmlFile": "planets/Text/Cairn.xml",
-				"type": "cairn",				
+				"type": "cairn",
 				"rename": "Snowman_Cairn"
+			},
+			{
+				"position": {
+					"x": -47.0098,
+					"y": -29.6153,
+					"z": 177.8797
+				},
+				"rotation": {
+					"x": 22.384,
+					"y": 79.643,
+					"z": 100.2255
+
+				},
+				"xmlFile": "planets/Text/Nomai_Recorder.xml",
+				"type": "recorder",
+				"rename": "Nomai_Recorder"
 			}
 		],
 		"remotes": [
@@ -54,32 +70,7 @@
 				]
 			}
 		],
-		"nomaiText": [
-			{
-				"arcInfo": [
-					{
-						"position": {
-							"x": 0.4,
-							"y": 0.5
-						},
-						"type": "adult",
-						"variation": 28,
-						"zRotation": 93.0
-					}
-				],
-				"position": {
-					"x": 0,
-					"y": 0,
-					"z": 0
-				},
-
-				"seed": 42,
-				"type": "wall",
-				"location": "unspecified",
-				"xmlFile": "planets/Text/Hal_Text.xml",
-				"rename": "Hal_Text"
-			}
-		],
+		
 		"details": [
 			{
 				"assetBundle": "planets/assetbundle/village",
@@ -1259,9 +1250,9 @@
 				"xmlFile": "planets/Dialogue/Galena.xml",
 				"rename": "Galena_Dialogue",
 				"pathToAnimController": "Sector_TH/New_Galena/Villager_HEA_Galena_ANIM_Idle",
-				"lookAtRadius": 2,
+				"lookAtRadius": 3,
 				"radius": 1,
-				"range": 1
+				"range": 2
 			},
 			{
 				"parentPath": "Sector_TH/New_Tephra",
@@ -1273,7 +1264,7 @@
 				},
 				"xmlFile": "planets/Dialogue/Tephra.xml",
 				"rename": "Tephra_Dialogue",
-				"pathToAnimController": "Sector_TH/New_Tephra/Villager_HEA_Tephra_ANIM_SitIdle",
+				"pathToAnimController": "Sector_TH/New_Tephra",
 				"lookAtRadius": 2,
 				"radius": 1,
 				"range": 1

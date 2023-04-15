@@ -167,7 +167,7 @@ namespace ChristmasStory
 				//SearchUtilities.Find("Moon_Body/Sector_THM/Characters_THM/Villager_HEA_Esker/Esker_Start_Dialogue").AddComponent<CapsuleCollider>().height = 4f;
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Villager_HEA_Esker_ANIM_Rocking/Signal_Esker").AddComponent<CapsuleCollider>().height = 2f;
 
-				SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Box/Ship_Toy_Dialogue").GetComponent<InteractReceiver>().ChangePrompt(TranslationHandler.GetTranslation("SHIP_TOY_PROMT", TranslationHandler.TextType.UI));
+				
 
 				var nomCable = SearchUtilities.Find("CaveTwin_Body/Sector_CaveTwin/Lighting_CaveTwin/Structure_NOM_TLECable").GetComponent<MeshRenderer>();
 				var villageCable = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Nomai_wire").GetComponent<MeshRenderer>();
@@ -247,7 +247,7 @@ namespace ChristmasStory
 
 				prisonLigthBeam.transform.localPosition = new Vector3(202.1948f, -71.4272f, -140.7394f);
 				prisonLigthBeam.transform.localRotation = new Quaternion(-0.616f, 0.3204f, -0.3022f, -0.6531f);
-				prisonLigthBeam.transform.localScale = new Vector3(0.3f, 1 / 2f, 0.3f);
+				prisonLigthBeam.transform.localScale = new Vector3(0.3f, 1.9f, 0.3f);
 
 				prisonLight.transform.localPosition = new Vector3(196.7155f, -70.8414f, -136.5985f);
 				prisonLight.transform.localRotation = new Quaternion(-0.0191f, 0.8858f, 0.183f, -0.426f);
@@ -437,7 +437,7 @@ namespace ChristmasStory
 				{
 					if (Conditions.Get(Conditions.PERSISTENT.SLATE_START_DONE))
 					{						
-						SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Characters_Observatory/Villager_HEA_Hornfels (1)").SetActive(false);
+						SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Characters_Observatory/Villager_HEA_Hornfels (1).").SetActive(false);
 						SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village").SetActive(false);
 
 						SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village_Final").SetActive(true);
@@ -466,6 +466,29 @@ namespace ChristmasStory
 				water.GetComponent<MeshRenderer>().sharedMaterial.shader = ice.sharedMaterial.shader;
 				water.AddComponent<MeshCollider>();
 				water.AddComponent<OWCollider>();
+
+				// Trying to make Hal's rock not associated with working projection stone
+				
+			   var rockMat = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ZeroGCave/Geometry_ZeroGCave/BatchedGroup/BatchedMeshRenderers_0").GetComponent<MeshRenderer>();
+			   var invStoneMat = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Invite_Stone/AnimRoot/Props_NOM_SharedStone(Clone)").GetComponent<MeshRenderer>();
+			   var invStoneMat2 = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Villager_HEA_Hal_ANIM_Museum/hal_skin:player_rig_v01:Traveller_Trajectory_Jnt/hal_skin:player_rig_v01:Traveller_ROOT_Jnt/hal_skin:player_rig_v01:Traveller_Spine_01_Jnt/hal_skin:player_rig_v01:Traveller_Spine_02_Jnt/hal_skin:player_rig_v01:Traveller_Spine_Top_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Clavicle_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Shoulder_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Elbow_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Wrist_Jnt/Props_HEA_RoastingStick/Prefab_NOM_SharedStone").GetComponent<MeshRenderer>();
+                invStoneMat2.material = rockMat.material;
+                invStoneMat2.sharedMaterials[2] = invStoneMat.material;
+
+				invStoneMat.materials[1] = rockMat.material;
+				invStoneMat.materials[2] = rockMat.material;
+
+				
+				/*
+			   invStoneMat.sharedMaterials[0] = rockMat.sharedMaterials[0];
+			   invStoneMat.sharedMaterials[1] = rockMat.sharedMaterials[0];
+			   invStoneMat.sharedMaterials[2] = rockMat.sharedMaterials[0];
+
+				invStoneMat.material = rockMat.material;
+				invStoneMat2.sharedMaterials[0] = rockMat.sharedMaterials[0];
+				invStoneMat2.sharedMaterials[1] = rockMat.sharedMaterials[0];
+				invStoneMat2.sharedMaterials[2] = rockMat.sharedMaterials[0];
+				*/
 
 				SearchUtilities.Find("TH_NEW_RIVER").AddComponent<BatchedMaterialLookup>();
 				SearchUtilities.Find("TH_NEW_RIVER").GetComponent<BatchedMaterialLookup>().materials = iceSurface.materials;

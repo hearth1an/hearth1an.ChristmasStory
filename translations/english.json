@@ -533,22 +533,22 @@
 		"MORAINE_START_1": "Hey! Watch out!",
 		"MORAINE_START_2": "Hey! Not listening to travellers anymore?",
 		"MORAINE_START_3": "Signal all the same! Always!",
-		"MORAINE_START_4": "Oh, I remember that I heard Riebeck signal not in usual position during the last signals scanning!",
-		"MORAINE_START_5": "Alright, I'll visit them.",
+		"MORAINE_START_4": "Oh, I remember that I heard Riebeck signal was interrupted for few minutes!",
+		"MORAINE_START_5": "Alright, I'll visit them to see if anything happened.",
 		"MORAINE_START_6": "Watch out!",
 
 		// Spinel
 
 		"SPINEL_START_1": "Fishing song, fishing song<![CDATA[<Pause=1>]]>.<![CDATA[<Pause=1>]]>.<![CDATA[<Pause=1>]]> why it's ice it feels so wrong.",
 		"SPINEL_START_2": "How is it going, Spinel?",
-		"SPINEL_START_3": "How is it going?<![CDATA[<Pause=2>]]> Are you kidding me?<![CDATA[<Pause=2>]]> I can't get any fish like that!<![CDATA[<Pause=2>]]>",
+		"SPINEL_START_3": "How is it going?<![CDATA[<Pause=2>]]> Are you kidding me?<![CDATA[<Pause=2>]]> I can't get any fish like that!",
 		"SPINEL_START_4": "Why don't you stay closer to waterfall then?",
 		"SPINEL_START_5": "Wait, this is actually a good idea! Thank you!",
 		"SPINEL_START_6": "You're welcome. Do you want to come with us and celebrate Christmas?",
 		"SPINEL_START_7": "Oh, no, thanks, I'm good.",
 		"SPINEL_START_8": "Alright, I'll try to get closer to that waterfall.",
 		"SPINEL_START_9": "I'd bet everything will be fine with your flight!",
-		"SPINEL_START_10": "Wow!Much better now!",
+		"SPINEL_START_10": "Wow! Much better now!",
 
 		// Tephra
 
@@ -644,7 +644,9 @@
 		"SLATE_NOTE_1": "Hey, sleepyhead! Find me in the Village when you wake up, we need to talk.<![CDATA[<Pause=2>]]> Slate.",
 
 		// Solanum response
-		"SOLANUM_WALL_TEXT": "SOLANUM: This encounter feels VERY special. I am not sure but let us try this: Take the stone that looks like my mask to the place where I am needed. With that done, I will do my best.",
+		"SOLANUM_1": "SOLANUM: This encounter feels VERY special.",
+		"SOLANUM_2": "SOLANUM: I am not sure but let us try this: Take the stone that looks like my mask to the place where I am needed.",
+		"SOLANUM_3": "SOLANUM:  With that done, I will do my best.",
 
 		// Solanum start
 		"SOLANUM_START_1": "...",

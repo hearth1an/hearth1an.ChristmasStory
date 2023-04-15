@@ -315,26 +315,33 @@
 				"range": 1
 			}
 		],
-		"audioSources": [
+		"signals": [
 			{
 				"audio": "TravelerFeldspar",
+				"frequency": "Traveler",
+				"name": "Feldspar",
 				"parentPath": "ShipSector/Ship_Feldspar",
 				"isRelativeToParent": true,
 				"rename": "Signal_Feldspar"
 			},
 			{
 				"audio": "TravelerEsker",
+				"frequency": "Traveler",
+				"name": "Esker",
 				"parentPath": "ShipSector/Ship_Esker",
 				"isRelativeToParent": true,
 				"rename": "Signal_Esker"
 			},
 			{
 				"audio": "TravelerRiebeck",
+				"frequency": "Traveler",
+				"name": "Riebeck",
 				"parentPath": "ShipSector/Ship_Riebeck",
 				"isRelativeToParent": true,
-				"rename": "Signal_Esker"
+				"rename": "Signal_Riebeck"
 			}
 
 		]
+		
 	}
 }

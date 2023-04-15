@@ -1,0 +1,26 @@
+<NomaiObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/text_schema.xsd">
+	<TextBlock>
+		<ID>1</ID>
+		<Text>OENO: Coleus, could you remind me what your idea is exactly?</Text>
+	</TextBlock>
+	<TextBlock>
+		<ID>2</ID>
+		<Text>COLEUS: Yes, of course. Imagine if the Ash Twin Project works as intended, why wouldn't we be able to have a remote connection to another planet?</Text>
+	</TextBlock>
+	<TextBlock>
+		<ID>3</ID>
+		<Text>OENO: That makes sense. We can also consider the Timber Hearth mines as a safe place.</Text>
+	</TextBlock>
+	<TextBlock>
+		<ID>4</ID>
+		<Text>COLEUS: Yes. I believe these wires will transmit data to the Ash Twin Project, but I am not sure exactly how it will work. I assume that data transmission will affect the nearest area from 10 to 20 meters.</Text>
+	</TextBlock>
+	<TextBlock>
+		<ID>5</ID>
+		<Text>YARROW: We don't have time for experiments, Coleus. We can only be sure after the Ash Twin Project works properly. Please don't waste your time on it right now.</Text>
+	</TextBlock>
+	<TextBlock>
+		<ID>6</ID>
+		<Text>COLEUS: You're probably right. We should focus more on our main mission. I will continue working on this technology after the Ash Twin Project succeeds.</Text>
+	</TextBlock>
+</NomaiObject>
