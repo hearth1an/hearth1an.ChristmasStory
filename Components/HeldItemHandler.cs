@@ -22,6 +22,8 @@ namespace ChristmasStory.Components
 		public ItemEvent ItemUnderWater = new();
 		public static HeldItemHandler Instance;
 
+		private bool isPrisonerFailed = false;
+
 		public void Start()
 		{
 			Instance = this;
@@ -34,6 +36,7 @@ namespace ChristmasStory.Components
 			// Fix prisoner lantern
 			PrisonerLantern = SearchUtilities.Find("Prisoner_Artifact").GetComponent<DreamLanternController>();
 			PrisonerLanternItem = PrisonerLantern.GetComponent<DreamLanternItem>();
+			
 		}
 		public void PrisonerFailed()
 		{
@@ -72,9 +75,10 @@ namespace ChristmasStory.Components
 		{
 			if (IsPlayerHoldingPrisonerArtifact() && PrisonerLantern._lit == true)
 			{
-				if (PlayerState._isCameraUnderwater == true)
+				if (PlayerState._isCameraUnderwater == true && !isPrisonerFailed)
 				{
 					PrisonerFailed();
+					isPrisonerFailed = true;
 				}
 			}
 			else return;

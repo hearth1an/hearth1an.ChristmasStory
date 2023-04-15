@@ -4,7 +4,8 @@
 	"Props": {
 		"details": [
 			{
-				"path": "RingWorld_Body/Sector_RingInterior/Sector_Zone1/Sector_ArtifactHouse_Zone1/Interactibles_ArtifactHouse_Zone1/Prefab_IP_DreamLanternItem_2",
+				"assetBundle": "planets/assetbundle/props",
+				"path": "Assets/PREFABS/Prisoner_Artifact.prefab",
 				"rename": "Prisoner_Artifact",
 				"position": {
 					"x": 214.3936,

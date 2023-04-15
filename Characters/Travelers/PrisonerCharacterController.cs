@@ -32,6 +32,15 @@ namespace ChristmasStory.Characters.Travelers
 			controller.UpdateVisuals();
 			controller.GetComponent<DreamLanternItem>().EnableInteraction(false);
 
+			// Making artifact unusable
+			SearchUtilities.Find("Prisoner_Artifact").GetComponent<DreamLanternItem>()._lanternType = DreamLanternType.Malfunctioning;
+
+			var dreamLantern = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Prisoner_Clone/Prisoner_Lantern").GetComponent<DreamLanternController>();
+			dreamLantern.enabled = true;
+			dreamLantern.SetHeldByPlayer(false);
+			dreamLantern.UpdateVisuals();
+			dreamLantern.GetComponent<DreamLanternItem>().EnableInteraction(false);
+
 			ChristmasStory.Instance.ModHelper.Events.Unity.RunWhen(() => Locator.GetRingWorldController()._damBroken, () =>
 			{
 				SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Sector_PrisonInterior/Volumes_PrisonInterior/UnderwaterAudioVolume_Prison").SetActive(false);

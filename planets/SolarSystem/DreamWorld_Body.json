@@ -99,7 +99,9 @@
 			},
 			{
 				"rename": "Prisoner_Lantern",
-				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_DreamZone_3/Sector_Hotel/Ghosts_Hotel/GhostNodeMap_Depths/Prefab_IP_GhostBird_Bou/Ghostbird_IP_ANIM/Ghostbird_Skin_01:Ghostbird_Rig_V01:Base/Ghostbird_Skin_01:Ghostbird_Rig_V01:Root/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine01/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine02/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine03/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine04/Ghostbird_Skin_01:Ghostbird_Rig_V01:ClavicleR/Ghostbird_Skin_01:Ghostbird_Rig_V01:ShoulderR/Ghostbird_Skin_01:Ghostbird_Rig_V01:ElbowR/Ghostbird_Skin_01:Ghostbird_Rig_V01:WristR/LanternCarrySocket/GhostLantern",
+				"assetBundle": "planets/assetbundle/props",
+				"path": "Assets/PREFABS/Prisoner_Artifact.prefab",
+				"removeChildren": [ "Props_IP_Artifact/LanternHood/Hood_Top" ],
 				"parentPath": "Sector_DreamWorld/Prisoner_Clone",
 				"isRelativeToParent": true,
 				"position": {

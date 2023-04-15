@@ -471,17 +471,28 @@ namespace ChristmasStory
 
 				//var invStoneMat2 = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Villager_HEA_Hal_ANIM_Museum/hal_skin:player_rig_v01:Traveller_Trajectory_Jnt/hal_skin:player_rig_v01:Traveller_ROOT_Jnt/hal_skin:player_rig_v01:Traveller_Spine_01_Jnt/hal_skin:player_rig_v01:Traveller_Spine_02_Jnt/hal_skin:player_rig_v01:Traveller_Spine_Top_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Clavicle_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Shoulder_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Elbow_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Wrist_Jnt/Props_HEA_RoastingStick/Prefab_NOM_SharedStone").GetComponent<MeshRenderer>();
 
-				var rockMat = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ZeroGCave/Geometry_ZeroGCave/BatchedGroup/BatchedMeshRenderers_0").GetComponent<MeshRenderer>();
-				var invStoneMat = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Invite_Stone/AnimRoot/Props_NOM_SharedStone(Clone)").GetComponent<MeshRenderer>();
-
-                invStoneMat.materials[2] = rockMat.material;
-
-                invStoneMat.sharedMaterials[2] = invStoneMat.material;
-
-				invStoneMat.materials[1] = rockMat.material;
-				invStoneMat.materials[2] = rockMat.material;
-
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Villager_HEA_Hal_ANIM_Museum/hal_skin:player_rig_v01:Traveller_Trajectory_Jnt/hal_skin:player_rig_v01:Traveller_ROOT_Jnt/hal_skin:player_rig_v01:Traveller_Spine_01_Jnt/hal_skin:player_rig_v01:Traveller_Spine_02_Jnt/hal_skin:player_rig_v01:Traveller_Spine_Top_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Clavicle_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Shoulder_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Elbow_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Wrist_Jnt/Props_HEA_RoastingStick/Prefab_NOM_SharedStone").SetActive(false);
 				
+				var origStone_1 = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Villager_HEA_Hal_ANIM_Museum/hal_skin:player_rig_v01:Traveller_Trajectory_Jnt/hal_skin:player_rig_v01:Traveller_ROOT_Jnt/hal_skin:player_rig_v01:Traveller_Spine_01_Jnt/hal_skin:player_rig_v01:Traveller_Spine_02_Jnt/hal_skin:player_rig_v01:Traveller_Spine_Top_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Clavicle_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Shoulder_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Elbow_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Wrist_Jnt/Props_HEA_RoastingStick/Prefab_NOM_SharedStone");
+                var origStone_2 = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Invite_Stone/AnimRoot/Props_NOM_SharedStone(Clone)");
+				var newStone_1 = SearchUtilities.Find("TimberHearth_Body/Sector_TH/new_stone_1");
+				var newStone_2 = SearchUtilities.Find("TimberHearth_Body/Sector_TH/new_stone_2");
+
+				newStone_1.transform.parent = origStone_1.transform.parent;
+				newStone_1.transform.localPosition = origStone_1.transform.localPosition;
+				newStone_1.transform.rotation = origStone_1.transform.rotation;
+				newStone_1.transform.localScale = origStone_1.transform.localScale;
+				origStone_1.SetActive(false);
+
+				newStone_2.transform.parent = origStone_2.transform.parent;
+				newStone_2.transform.localPosition = origStone_2.transform.localPosition;
+				newStone_2.transform.rotation = origStone_2.transform.rotation;
+				origStone_2.SetActive(false);
+
+
+				var toyDialogue = SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Box/Ship_Toy_Dialogue").GetComponent<InteractReceiver>();
+				toyDialogue._usableInShip = true;
+				toyDialogue.ChangePrompt(TranslationHandler.GetTranslation("SHIP_TOY_PROMT", TranslationHandler.TextType.UI));
 				/*
 			   invStoneMat.sharedMaterials[0] = rockMat.sharedMaterials[0];
 			   invStoneMat.sharedMaterials[1] = rockMat.sharedMaterials[0];

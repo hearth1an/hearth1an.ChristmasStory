@@ -49,7 +49,8 @@ namespace ChristmasStory.Characters.Villagers
             }
 
 			base.Start();
-			SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Box/Ship_Toy_Dialogue").GetComponent<InteractReceiver>().ChangePrompt(TranslationHandler.GetTranslation("SHIP_TOY_PROMT", TranslationHandler.TextType.UI));
+
+			
 		}
 
 		protected override void Dialogue_OnStartConversation()

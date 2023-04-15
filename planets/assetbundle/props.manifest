@@ -1,0 +1,68 @@
+ManifestFileVersion: 0
+CRC: 1326527230
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 755c406f1704d0cf60e55b6e5e39b5f6
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 23d7511856712581086067d33a11f88d
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 64
+  Script: {instanceID: 0}
+- Class: 82
+  Script: {instanceID: 0}
+- Class: 108
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: ec4067c0bf99a005810bda0b91096ae8, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 204df73272a0e21fb01668cafcf47a13, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 337b70057b4927524988bbd5bb99b34b, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 2c94440872a61048cae6eef2bf0a1a80, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f913c288c393f80a7e923fc1c775f4fb, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 25b7e56961bf1df33ed31b8c786ab1c3, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 2145ed3a866d4bd5a94d98ee05d0fa4f, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 3764d89beefddfb963f973f9a1e29bad, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4d37ab8d4d1e425918e8172c84cb8288, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 99ce521ec6f385a56ac74968a295f44f, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 62389b8e30976189aff1020795052659, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 121
+  Script: {instanceID: 0}
+- Class: 123
+  Script: {instanceID: 0}
+- Class: 135
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/PREFABS/Prisoner_Artifact.prefab
+- Assets/PREFABS/Stone_shared.prefab
+Dependencies: []

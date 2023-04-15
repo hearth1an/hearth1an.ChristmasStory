@@ -53,9 +53,9 @@
 				"stones": [
 					{
 						"position": {
-							"x": 0,
-							"y": 0,
-							"z": 0
+							"x": -70.29,
+							"y": 27.342,
+							"z": 204.7198
 						},
 						"rotation": {
 							"x": 338.7445,
@@ -70,8 +70,53 @@
 				]
 			}
 		],
-		
+
 		"details": [
+			{
+				"assetBundle": "planets/assetbundle/props",
+				"path": "Assets/PREFABS/Stone_shared.prefab",
+				"position": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"rotation": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},				
+				"rename": "new_stone_1"
+			},
+			{
+				"assetBundle": "planets/assetbundle/props",
+				"path": "Assets/PREFABS/Stone_shared.prefab",
+				"position": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"rotation": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"rename": "new_stone_2"
+			},
+			{
+				"assetBundle": "planets/assetbundle/props",
+				"path": "Assets/PREFABS/Prisoner_Artifact.prefab",
+				"position": {
+					"x": 2.6428,
+					"y": 2.969,
+					"z": 187.15
+				},
+				"rotation": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"rename": "new_artifact"
+			},
 			{
 				"assetBundle": "planets/assetbundle/village",
 				"path": "Assets/PREFABS/snowman_top.prefab",
@@ -283,7 +328,7 @@
 					"z": 299.9301
 				},
 				"rename": "Tuff_Pickaxe"
-			},			
+			},
 			{
 				"path": "TimberHearth_Body/Sector_TH/Sector_RadioTower/RadioTower_DLC/Interactibles_RadioTower/Hornfels'GrovePivot/Prefab_HEA_Journal",
 				"position": {
@@ -314,7 +359,8 @@
 				"scale": 1
 			},
 			{
-				"path": "RingWorld_Body/Sector_RingInterior/Sector_Zone1/Sector_ArtifactHouse_Zone1/Interactibles_ArtifactHouse_Zone1/Prefab_IP_DreamLanternItem_2",
+				"assetBundle": "planets/assetbundle/props",
+				"path": "Assets/PREFABS/Prisoner_Artifact.prefab",
 				"parentPath": "Sector_TH/GhostBird",
 				"position": {
 					"x": -3.4612,
@@ -433,7 +479,7 @@
 				}
 			},
 			{
-				"path": "Moon_Body/Sector_THM/Characters_THM/Villager_HEA_Esker/Villager_HEA_Esker_ANIM_Rocking",				
+				"path": "Moon_Body/Sector_THM/Characters_THM/Villager_HEA_Esker/Villager_HEA_Esker_ANIM_Rocking",
 				"position": {
 					"x": -2.5218,
 					"y": -23.3085938,
@@ -443,9 +489,9 @@
 					"x": 296.0581,
 					"y": 284.302,
 					"z": 253.170258
-				}			
-				
-			},			
+				}
+
+			},
 			{
 				"assetBundle": "planets/assetbundle/hearthians",
 				"path": "Assets/Prefabs/Villager_HEA_Slate.prefab",
