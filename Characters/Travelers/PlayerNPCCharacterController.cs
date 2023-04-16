@@ -17,7 +17,7 @@ namespace ChristmasStory.Characters.Travelers
 
 		public override void Start()
 		{
-			dialogue = SearchUtilities.Find("TimeLoopRing_Body/Characters_TimeLoopRing/NPC_Player").GetComponent<CharacterDialogueTree>();
+			dialogue = SearchUtilities.Find("TimeLoopRing_Body/Characters_TimeLoopRing/NPC_Player/ConversationZone").GetComponent<CharacterDialogueTree>();
 			dialogueShip = SearchUtilities.Find("Ship_Body/ShipSector/Ship_Player/ConversationZone").GetComponent<CharacterDialogueTree>();
 			dialogueVillage = SearchUtilities.Find("TimberHearth_Body/Sector_TH/NPC_Player/ConversationZone").GetComponent<CharacterDialogueTree>();
 
