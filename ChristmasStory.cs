@@ -178,11 +178,10 @@ namespace ChristmasStory
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Dialogue").SetActive(true);
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village/ConversationZone").transform.localPosition = new Vector3(0, 2f, 0);
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village/ConversationZone_RSci").DestroyAllComponents<InteractReceiver>();
-				SearchUtilities.Find("Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/ConversationZone").DestroyAllComponents<InteractReceiver>();
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/ConversationZone").DestroyAllComponents<InteractReceiver>();
 				SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner/Prisoner_Dialogue").SetActive(false);
 				SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner/InteractReceiver").SetActive(false);
-				SearchUtilities.Find("Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/ConversationZone").DestroyAllComponents<InteractReceiver>();
-
+				
 				SearchUtilities.Find("Ship_Body/ShipSector/Ship_Esker").AddComponent<CapsuleCollider>();
 				SearchUtilities.Find("Ship_Body/ShipSector/Ship_Feldspar").AddComponent<CapsuleCollider>();			
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Christmas_Tree").GetComponent<CapsuleCollider>().radius = 1f;
@@ -205,9 +204,50 @@ namespace ChristmasStory
 
 				// Transform prison sector
 
-				SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4").transform.localPosition = new Vector3(-19f, 0, 0);
-				SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Geometry_RingInterior/Terrain_Ringworld_Root/BatchedGroup/BatchedMeshColliders_0").transform.localPosition = new Vector3(-19f, 0, 0);
-				SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Geometry_RingInterior/Terrain_Ringworld_Root/OtherComponentsGroup/Terrain_Ringworld_Floorbed/Terrain_Ringworld_Z4_Floorbed").transform.localPosition = new Vector3(-19f, 0, 0);
+				/*
+				SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Structures_PrisonDocks").transform.localPosition = new Vector3(217.7503f, -75.8037f, -138.5118f);
+				SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Structures_PrisonDocks/Prison_Zone4/Proxy_Prison/Proxy_IP_Structure_Prison").transform.localPosition = new Vector3(0f, -15.5f, 0f);
+				SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Structures_PrisonDocks/Prison_Zone4/Geo_Prison/Structure_IP_Prison/chain_L_geo").transform.localScale = new Vector3(1f, 0.8f, 1f);
+				SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Structures_PrisonDocks/Prison_Zone4/Geo_Prison/Structure_IP_Prison/chain_m_col").transform.localScale = new Vector3(1f, 0.75f, 1f);
+				SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Structures_PrisonDocks/Prison_Zone4/Geo_Prison/Structure_IP_Prison/Chain_R_geo").transform.localScale = new Vector3(1f, 0.8f, 1f);
+				*/
+				/*
+				var prisonBodyExt = SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Structures_PrisonDocks/Prison_Zone4/Geo_Prison/Structure_IP_Prison/prison_body_ext");
+				var prisonBodyInt = SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Structures_PrisonDocks/Prison_Zone4/Geo_Prison/Structure_IP_Prison/Prison_Interior/Prison_Body_Interior");
+
+				var prisonBodyExtCollider = SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Structures_PrisonDocks/Prison_Zone4/Geo_Prison/Structure_IP_Prison/prison_body_ext/body_ext_col");
+				var prisonBodyIntCollider = SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Structures_PrisonDocks/Prison_Zone4/Geo_Prison/Structure_IP_Prison/Prison_Interior/Prison_Body_Interior/COL_Prison_Body_Interior");
+
+				var prisonBodyExtFixed = SearchUtilities.Find("RingWorld_Body/Sector_RingWorld/Prison_Exterior_Fixed");
+				var prisonBodyInteriorFixed = SearchUtilities.Find("RingWorld_Body/Sector_RingWorld/Prison_Interior_Fixed");
+
+				prisonBodyExtFixed.transform.position = prisonBodyInt.transform.position;
+				prisonBodyExtFixed.transform.rotation = prisonBodyInt.transform.rotation;
+
+				prisonBodyInteriorFixed.transform.position = prisonBodyExt.transform.position;
+				prisonBodyInteriorFixed.transform.rotation = prisonBodyExt.transform.rotation;
+
+				prisonBodyExt.SetActive(false);
+				prisonBodyInt.SetActive(false);
+
+				*/
+
+				// Sector trigger!!!!
+				//SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/SectorTrigger_PrisonDocks/SectorTrigger_PrisonDocks_2").transform.localPosition = new Vector3(202.7f, -90f, -88f);
+
+				// Fixing prison exterior, interior, trigger
+                SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Structures_PrisonDocks/Prison_Zone4").transform.localPosition = new Vector3(217.25f, -75.7f, -138.55f); 
+				SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Sector_PrisonInterior").transform.localPosition = new Vector3(217.25f, -75.7f, -138.55f); // 231,6003 -75,7 -147,7002
+				SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/SectorTrigger_PrisonDocks/SectorTrigger_PrisonDocks_2").transform.localPosition = new Vector3(245.35f, -90f, -79.5f); // 221,7 -90 -88
+				
+				// Fixing prison chains
+				SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Structures_PrisonDocks/Prison_Zone4/Geo_Prison/Structure_IP_Prison/chain_L_geo").transform.localScale = new Vector3(1f, 0.8f, 1f);
+				SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Structures_PrisonDocks/Prison_Zone4/Geo_Prison/Structure_IP_Prison/chain_m_col").transform.localScale = new Vector3(1f, 0.75f, 1f);
+				SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Structures_PrisonDocks/Prison_Zone4/Geo_Prison/Structure_IP_Prison/Chain_R_geo").transform.localScale = new Vector3(1f, 0.8f, 1f);
+
+				// Fixing prison proxy
+				SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Structures_PrisonDocks/Prison_Zone4/Proxy_Prison/Proxy_IP_Structure_Prison").transform.localScale = new Vector3(1f, 0.85f, 1f);
+				SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Structures_PrisonDocks/Prison_Zone4/Proxy_Prison/Proxy_IP_Structure_Prison").transform.localPosition = new Vector3(0f, -3.6f, 0f);
 
 				var prisonerArtifact = SearchUtilities.Find("Prisoner_Artifact").GetComponent<DreamLanternController>();
 
@@ -239,8 +279,59 @@ namespace ChristmasStory
 				prisonBodyInt.SetActive(false);
 
 
+				prisonBodyExtFixed.GetComponent<MeshRenderer>().sharedMaterials = prisonBodyExt.GetComponent<MeshRenderer>().sharedMaterials;
+
+
+				var prisonLigthBeam = SearchUtilities.Find("RingWorld_Body/Sector_RingWorld/Prison_Light");
+				var prisonLight = SearchUtilities.Find("RingWorld_Body/Sector_RingWorld/Prison_Light2");
+
+				prisonLigthBeam.transform.localPosition = new Vector3(212.7656f, -72.5982f, -135.8029f);
+				prisonLigthBeam.transform.localRotation = new Quaternion(0.6013f, -0.3345f, 0.3018f, 0.6599f);
+				prisonLigthBeam.transform.localScale = new Vector3(0.3f, 0.8f, 0.3f);
+
+				prisonLight.transform.localPosition = new Vector3(201.4169f, -70.8692f, -127.4167f);
+				prisonLight.transform.localRotation = new Quaternion(-0.0135f, 0.8952f, 0.1759f, -0.4093f);
+				prisonLight.transform.localScale = new Vector3(0.7f, 0.7f, 0.7f);
+
+
+				//SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks").transform.localPosition = new Vector3(-19f, 0, 0);
+				//SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Geometry_RingInterior/Terrain_Ringworld_Root/BatchedGroup/BatchedMeshColliders_0").transform.localPosition = new Vector3(-19f, 0, 0);
+				// SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Geometry_RingInterior/Terrain_Ringworld_Root/OtherComponentsGroup/Terrain_Ringworld_Floorbed/Terrain_Ringworld_Z4_Floorbed").transform.localPosition = new Vector3(-19f, 0, 0);
+
+				/*
+
+				var prisonerArtifact = SearchUtilities.Find("Prisoner_Artifact").GetComponent<DreamLanternController>();
+
+				Instance.ModHelper.Events.Unity.FireOnNextUpdate(() =>
+				{
+					prisonerArtifact.enabled = true;
+					prisonerArtifact.SetLit(true);
+					prisonerArtifact._flameStrength = 3f;
+					prisonerArtifact.SetHeldByPlayer(false);
+					prisonerArtifact.UpdateVisuals();
+				});
+
+				var prisonBodyExt = SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Structures_PrisonDocks/Prison_Zone4/Geo_Prison/Structure_IP_Prison/prison_body_ext");
+				var prisonBodyInt = SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Structures_PrisonDocks/Prison_Zone4/Geo_Prison/Structure_IP_Prison/Prison_Interior/Prison_Body_Interior");
+
+				var prisonBodyExtCollider = SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Structures_PrisonDocks/Prison_Zone4/Geo_Prison/Structure_IP_Prison/prison_body_ext/body_ext_col");
+				var prisonBodyIntCollider = SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Structures_PrisonDocks/Prison_Zone4/Geo_Prison/Structure_IP_Prison/Prison_Interior/Prison_Body_Interior/COL_Prison_Body_Interior");
+
+				var prisonBodyExtFixed = SearchUtilities.Find("RingWorld_Body/Sector_RingWorld/Prison_Exterior_Fixed");
+				var prisonBodyInteriorFixed = SearchUtilities.Find("RingWorld_Body/Sector_RingWorld/Prison_Interior_Fixed");
+
+				prisonBodyExtFixed.transform.position = prisonBodyInt.transform.position;
+				prisonBodyExtFixed.transform.rotation = prisonBodyInt.transform.rotation;
+
+				prisonBodyInteriorFixed.transform.position = prisonBodyExt.transform.position;
+				prisonBodyInteriorFixed.transform.rotation = prisonBodyExt.transform.rotation;
+
+				prisonBodyExt.SetActive(false);
+				prisonBodyInt.SetActive(false);
+
+				
                 prisonBodyExtFixed.GetComponent<MeshRenderer>().sharedMaterials = prisonBodyExt.GetComponent<MeshRenderer>().sharedMaterials;
-                // prisonBodyExtFixed.GetComponent<MeshRenderer>().materials[4].shader = prisonBodyExt.GetComponent<MeshRenderer>().materials[4].shader;
+               
 
 				var prisonLigthBeam = SearchUtilities.Find("RingWorld_Body/Sector_RingWorld/Prison_Light");
 				var prisonLight = SearchUtilities.Find("RingWorld_Body/Sector_RingWorld/Prison_Light2");
@@ -252,6 +343,8 @@ namespace ChristmasStory
 				prisonLight.transform.localPosition = new Vector3(196.7155f, -70.8414f, -136.5985f);
 				prisonLight.transform.localRotation = new Quaternion(-0.0191f, 0.8858f, 0.183f, -0.426f);
 				prisonLight.transform.localScale = new Vector3(0.7f, 0.7f, 0.7f);
+
+				*/
 
 				var thMesh = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Geometry_LowerVillage/BatchedGroup/BatchedMeshColliders_0");
 				var thMeshFixed = SearchUtilities.Find("TH_Fixed_Geometry");
