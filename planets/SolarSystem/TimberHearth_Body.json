@@ -30,14 +30,14 @@
 			},
 			{
 				"position": {
-					"x": -47.0098,
-					"y": -29.6153,
-					"z": 177.8797
+					"x": -47.4098,
+					"y": -29.9153,
+					"z": 177.5797
 				},
 				"rotation": {
-					"x": 22.384,
-					"y": 79.643,
-					"z": 100.2255
+					"x": 60,
+					"y": 55.6,
+					"z": 30
 
 				},
 				"xmlFile": "planets/Text/Nomai_Recorder.xml",
@@ -101,22 +101,7 @@
 					"z": 0
 				},
 				"rename": "new_stone_2"
-			},
-			{
-				"assetBundle": "planets/assetbundle/props",
-				"path": "Assets/PREFABS/Prisoner_Artifact.prefab",
-				"position": {
-					"x": 2.6428,
-					"y": 2.969,
-					"z": 187.15
-				},
-				"rotation": {
-					"x": 0,
-					"y": 0,
-					"z": 0
-				},
-				"rename": "new_artifact"
-			},
+			},			
 			{
 				"assetBundle": "planets/assetbundle/village",
 				"path": "Assets/PREFABS/snowman_top.prefab",

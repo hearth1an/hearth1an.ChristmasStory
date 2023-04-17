@@ -346,6 +346,16 @@ namespace ChristmasStory
 
 				*/
 
+				var bhFragment = SearchUtilities.Find("BrittleHollow_Body/Sector_BH/Sector Quantum Pole Path/Fragment QuantumPolePath 5");
+				//bhFragment.DestroyAllComponents<FragmentIntegrity>();
+				bhFragment.GetComponent<FragmentIntegrity>()._ignoreMeteorDamage = true;
+				//bhFragment.DestroyAllComponents<FragmentDragAnimator>();
+
+				//bhFragment.GetComponent<DetachableFragment>().StopAllCoroutines();
+
+				//bhFragment.DestroyAllComponents<FragmentEffects>();
+				
+
 				var thMesh = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Geometry_LowerVillage/BatchedGroup/BatchedMeshColliders_0");
 				var thMeshFixed = SearchUtilities.Find("TH_Fixed_Geometry");
 				thMeshFixed.transform.parent = thMesh.transform.parent;
@@ -546,6 +556,16 @@ namespace ChristmasStory
 					}
 				});
 
+				/*
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Interactables_Village/Structure_HEA_WaterWheel/Gears1").DestroyAllComponents<RotateTransform>();
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Interactables_Village/Structure_HEA_WaterWheel/Gears2").DestroyAllComponents<RotateTransform>();
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Interactables_Village/Structure_HEA_WaterWheel/Gears3").DestroyAllComponents<RotateTransform>();
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Interactables_Village/Structure_HEA_WaterWheel/GearsCable").DestroyAllComponents<TextureAnimator>();
+				*/
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Audio_Village/GeyserFlags").SetActive(false);
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Audio_Village/WaterWheel").SetActive(false);
+				
+
 				SearchUtilities.Find("Nomai_wire").transform.localScale = new Vector3(1f, 1.7818f, 1f);
 				var water = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Geometry_TH/Terrain_TH_Water_v3/Village_Lower_Water");
 				// var ice = SearchUtilities.Find("Comet_Body/Sector_CO/Geometry_CO/Frictionless_Batched/OtherComponentsGroup/Terrain_CO_Surface_Ice").GetComponent<MeshRenderer>();
@@ -565,9 +585,9 @@ namespace ChristmasStory
 				//var invStoneMat2 = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Villager_HEA_Hal_ANIM_Museum/hal_skin:player_rig_v01:Traveller_Trajectory_Jnt/hal_skin:player_rig_v01:Traveller_ROOT_Jnt/hal_skin:player_rig_v01:Traveller_Spine_01_Jnt/hal_skin:player_rig_v01:Traveller_Spine_02_Jnt/hal_skin:player_rig_v01:Traveller_Spine_Top_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Clavicle_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Shoulder_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Elbow_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Wrist_Jnt/Props_HEA_RoastingStick/Prefab_NOM_SharedStone").GetComponent<MeshRenderer>();
 
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Villager_HEA_Hal_ANIM_Museum/hal_skin:player_rig_v01:Traveller_Trajectory_Jnt/hal_skin:player_rig_v01:Traveller_ROOT_Jnt/hal_skin:player_rig_v01:Traveller_Spine_01_Jnt/hal_skin:player_rig_v01:Traveller_Spine_02_Jnt/hal_skin:player_rig_v01:Traveller_Spine_Top_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Clavicle_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Shoulder_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Elbow_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Wrist_Jnt/Props_HEA_RoastingStick/Prefab_NOM_SharedStone").SetActive(false);
-				
+
 				var origStone_1 = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Villager_HEA_Hal_ANIM_Museum/hal_skin:player_rig_v01:Traveller_Trajectory_Jnt/hal_skin:player_rig_v01:Traveller_ROOT_Jnt/hal_skin:player_rig_v01:Traveller_Spine_01_Jnt/hal_skin:player_rig_v01:Traveller_Spine_02_Jnt/hal_skin:player_rig_v01:Traveller_Spine_Top_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Clavicle_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Shoulder_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Elbow_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Wrist_Jnt/Props_HEA_RoastingStick/Prefab_NOM_SharedStone");
-                var origStone_2 = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Invite_Stone/AnimRoot/Props_NOM_SharedStone(Clone)");
+				var origStone_2 = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Invite_Stone/AnimRoot/Props_NOM_SharedStone(Clone)");
 				var newStone_1 = SearchUtilities.Find("TimberHearth_Body/Sector_TH/new_stone_1");
 				var newStone_2 = SearchUtilities.Find("TimberHearth_Body/Sector_TH/new_stone_2");
 
@@ -581,7 +601,6 @@ namespace ChristmasStory
 				newStone_2.transform.localPosition = origStone_2.transform.localPosition;
 				newStone_2.transform.rotation = origStone_2.transform.rotation;
 				origStone_2.SetActive(false);
-
 
 				var toyDialogue = SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Box/Ship_Toy_Dialogue").GetComponent<InteractReceiver>();
 				toyDialogue._usableInShip = true;
