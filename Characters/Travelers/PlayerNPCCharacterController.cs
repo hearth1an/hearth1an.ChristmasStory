@@ -17,7 +17,7 @@ namespace ChristmasStory.Characters.Travelers
 
 		public override void Start()
 		{
-			dialogue = SearchUtilities.Find("TimeLoopRing_Body/Characters_TimeLoopRing/NPC_Player/ConversationZone").GetComponent<CharacterDialogueTree>();
+			dialogue = SearchUtilities.Find("TimeLoopRing_Body/Characters_TimeLoopRing/NPC_Player/Player_Dialogue").GetComponent<CharacterDialogueTree>();
 			dialogueShip = SearchUtilities.Find("Ship_Body/ShipSector/Ship_Player/ConversationZone").GetComponent<CharacterDialogueTree>();
 			dialogueVillage = SearchUtilities.Find("TimberHearth_Body/Sector_TH/NPC_Player/ConversationZone").GetComponent<CharacterDialogueTree>();
 
@@ -25,7 +25,9 @@ namespace ChristmasStory.Characters.Travelers
 			shipCharacter = SearchUtilities.Find("Ship_Body/ShipSector/Ship_Player");
 			treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/NPC_Player");
 
-			var loopCoreController = SearchUtilities.Find("TowerTwin_Body/Sector_TowerTwin/Sector_TimeLoopInterior/Interactables_TimeLoopInterior/CoreCasingController").GetComponent<TimeLoopCoreController>();
+            SearchUtilities.Find("TimeLoopRing_Body/Characters_TimeLoopRing/NPC_Player/Traveller_HEA_Player_v2").DestroyAllComponents<FacePlayerWhenTalking>();
+
+            var loopCoreController = SearchUtilities.Find("TowerTwin_Body/Sector_TowerTwin/Sector_TimeLoopInterior/Interactables_TimeLoopInterior/CoreCasingController").GetComponent<TimeLoopCoreController>();
 
 			ChristmasStory.Instance.ModHelper.Events.Unity.FireOnNextUpdate(() =>
 			{

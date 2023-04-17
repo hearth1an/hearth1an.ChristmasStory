@@ -14,6 +14,7 @@
 				"isRelativeToParent": true,
 				"lookAtRadius": 2,
 				"pathToAnimController": "Characters_TimeLoopRing/NPC_Player/Traveller_HEA_Player_v2",
+				"rename": "Player_Dialogue",
 				"radius": 1
 			}
 		]
