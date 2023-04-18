@@ -123,7 +123,7 @@
 				},
 				"rename": "new_stone_2",
 				"keepLoaded": true
-			},			
+			},
 			{
 				"assetBundle": "planets/assetbundle/village",
 				"path": "Assets/PREFABS/snowman_top.prefab",
@@ -276,6 +276,40 @@
 					"y": 0,
 					"z": 0
 				}
+			},
+			{
+
+				"path": "TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Geometry_Observatory/Structure_HEA_Observatory_v3/ObservatoryPivot/Observatory_Interior/Interior_Exhibits/Exhibits_Pictures",
+				"rename": "Fixed_Pictures",
+				"isRelativeToParent": true,
+				//"parentPath": "Sector_TH/Sector_Village/Sector_Observatory/Geometry_Observatory/Structure_HEA_Observatory_v3/ObservatoryPivot/Observatory_Interior/Interior_Exhibits/",
+				"position": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"rotation": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				}				
+			},
+			{
+
+				"path": "TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Interactables_Observatory/MapSatelliteExhibit",
+				"rename": "Fixed_Pictures_DLC",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"rotation": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"keepLoaded": true
 			},
 			{
 

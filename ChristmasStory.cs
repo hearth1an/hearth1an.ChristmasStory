@@ -673,12 +673,19 @@ namespace ChristmasStory
 				observatoryMaterial.mainTexture = woodTextureClean;
 				snowySequoiaMaterial.mainTexture = sequoiaSnowLeavesTexture;
 
-				var thMeshRenderers = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village").GetComponentsInChildren<Renderer>();
+
+				
+				//skipPictures.GetAllChildren().
+
+
+				var thMeshRenderers = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village").GetComponentsInChildren<Renderer>();	
+
+
 				var thMeshRenderers_2 = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Props_TH/OtherComponentsGroup/ControlledByProxy_Terrain/Village").GetComponentsInChildren<Renderer>();
 				var thExcludedSector = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Geometry_Observatory/Structure_HEA_Observatory_v3/ObservatoryPivot/Observatory_Interior").GetComponentsInChildren<Renderer>();
 				var thExcludedSector_2 = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Interactables_Observatory").GetComponentsInChildren<Renderer>();
 				var sequoiaTreeLeaves = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/OtherComponentsGroup/ControlledByProxy_Terrain/Tree_TH_Sequoia/Prefab_TH_Sequoia_V2").GetComponentsInChildren<Renderer>();
-				//var skipZone = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Geometry_Observatory/Structure_HEA_Observatory_v3/ObservatoryPivot/Observatory_Interior/Interior_Exhibits")
+				var skipZone = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Geometry_Observatory/Structure_HEA_Observatory_v3/ObservatoryPivot/Observatory_Interior/Interior_Exhibits/Exhibits_Pictures");
 
 				foreach (var meshRenderer in thMeshRenderers)
 				{
@@ -720,6 +727,7 @@ namespace ChristmasStory
 						snowyTreesMaterial.color = new Color(1f, 1f, 1f, 1f);
 					}
 				}
+				
 				foreach (var meshRenderer in thExcludedSector)
 				{
 					if (meshRenderer.material.name.Contains("Structure_HEA_VillagePlanks"))
@@ -729,23 +737,46 @@ namespace ChristmasStory
 				}
 				foreach (var meshRenderer in thExcludedSector_2)
 				{
-					if (meshRenderer.material.name.Contains("Structure_HEA_VillagePlanks"))
+					if (meshRenderer.material.name.Contains("Structure_HEA_VillagePlanks") )
 					{
 						meshRenderer.sharedMaterial = observatoryMaterial;
 					}
 				}
 				foreach (var meshRenderer in sequoiaTreeLeaves)
 				{
-					if (meshRenderer.material.name.Contains("Tree_TH_SequoiaLeaves_mat (Instance)"))
+					if (meshRenderer.material.name.Contains("Tree_TH_SequoiaLeaves_mat (Instance)") )
 					{
 						meshRenderer.sharedMaterial = snowySequoiaMaterial;
 					}
 				}
+
+				// fixing pictures
+
+				var oldPictures = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Geometry_Observatory/Structure_HEA_Observatory_v3/ObservatoryPivot/Observatory_Interior/Interior_Exhibits/Exhibits_Pictures");
+				var newPictures = SearchUtilities.Find("Fixed_Pictures");
+
+				var oldExhibition = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Interactables_Observatory/MapSatelliteExhibit");
+				var newExhibition = SearchUtilities.Find("Fixed_Pictures_DLC");
+
+				newPictures.transform.parent = oldPictures.transform.parent;
+				newPictures.transform.localPosition = oldPictures.transform.localPosition;
+				newPictures.transform.localRotation = oldPictures.transform.localRotation;
+				oldPictures.SetActive(false);
+
+				newExhibition.transform.parent = oldExhibition.transform.parent;
+				newExhibition.transform.localPosition = oldExhibition.transform.localPosition;
+				newExhibition.transform.localRotation = oldExhibition.transform.localRotation;
+				oldExhibition.SetActive(false);
+
 			}
+
+			
 			catch (Exception ex)
 			{
 				WriteUtil.WriteError($"{ex}");
 			}
+
+			
 		}
 		private void CreditsMusic()
         {
