@@ -767,7 +767,6 @@ namespace ChristmasStory
 				newExhibition.transform.localPosition = oldExhibition.transform.localPosition;
 				newExhibition.transform.localRotation = oldExhibition.transform.localRotation;
 				oldExhibition.SetActive(false);
-
 			}
 
 			
