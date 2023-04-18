@@ -1,6 +1,7 @@
 ﻿using ChristmasStory.Components;
 using ChristmasStory.Utility;
 using NewHorizons.Utility;
+using NewHorizons.Handlers;
 
 namespace ChristmasStory.Characters.Villagers
 {
@@ -16,7 +17,6 @@ namespace ChristmasStory.Characters.Villagers
 		public override void Start()
 		{
 			dialogue = SearchUtilities.Find("Elevator_Dialogue").GetComponent<CharacterDialogueTree>();
-			
 			base.Start();
 		}
 

@@ -257,7 +257,8 @@ namespace ChristmasStory
 					prisonerArtifact.SetLit(true);
 					prisonerArtifact._flameStrength = 3f;
 					prisonerArtifact.SetHeldByPlayer(false);
-					prisonerArtifact.UpdateVisuals();
+					prisonerArtifact.UpdateVisuals();									
+
 				});
 
 				var prisonBodyExt = SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Structures_PrisonDocks/Prison_Zone4/Geo_Prison/Structure_IP_Prison/prison_body_ext");
@@ -594,17 +595,19 @@ namespace ChristmasStory
 				newStone_1.transform.parent = origStone_1.transform.parent;
 				newStone_1.transform.localPosition = origStone_1.transform.localPosition;
 				newStone_1.transform.rotation = origStone_1.transform.rotation;
-				newStone_1.transform.localScale = origStone_1.transform.localScale;
+				newStone_1.transform.localScale = origStone_1.transform.localScale;				
 				origStone_1.SetActive(false);
 
 				newStone_2.transform.parent = origStone_2.transform.parent;
 				newStone_2.transform.localPosition = origStone_2.transform.localPosition;
 				newStone_2.transform.rotation = origStone_2.transform.rotation;
+				//newStone_2.GetComponent<MeshRenderer>().
+				// newStone_2.GetComponent<OWRenderer>().CopyPropertiesFrom(origStone_2.GetComponent<OWRenderer>());
 				origStone_2.SetActive(false);
 
-				var toyDialogue = SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Box/Ship_Toy_Dialogue").GetComponent<InteractReceiver>();
-				toyDialogue._usableInShip = true;
-				toyDialogue.ChangePrompt(TranslationHandler.GetTranslation("SHIP_TOY_PROMT", TranslationHandler.TextType.UI));
+				
+				//
+
 				/*
 			   invStoneMat.sharedMaterials[0] = rockMat.sharedMaterials[0];
 			   invStoneMat.sharedMaterials[1] = rockMat.sharedMaterials[0];

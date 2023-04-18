@@ -726,7 +726,8 @@
 		"ENDING_TEXT": "THE END",
 		"TOTEM_CODE": "Code:",
 		"RADIO_PROMT": "Listen to the radio",
-		"SHIP_TOY_PROMT": "Manage the toy"
+		"SHIP_TOY_PROMT": "Manage the toy",
+		"INVITE_STONE_ITEM": "<![CDATA[<color=orange>Hal's</color>]]> Invite Stone"
 
 	},
 	"ShipLogDictionary": {

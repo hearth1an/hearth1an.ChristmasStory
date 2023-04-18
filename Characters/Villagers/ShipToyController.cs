@@ -23,10 +23,10 @@ namespace ChristmasStory.Characters.Villagers
 
 			vineCollider.transform.parent = SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Seed/Toy_Vine_3/Terrain_DB_Vine_v2").transform.parent;
 
-			var shipDialogue = SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Box/Ship_Toy_Dialogue");
-			shipDialogue.GetComponent<InteractReceiver>()._usableInShip = true;			
+			var shipDialogue = SearchUtilities.Find("Ship_Toy_Dialogue");			
+			shipDialogue.GetComponent<InteractReceiver>().ChangePrompt(TranslationHandler.GetTranslation("SHIP_TOY_PROMT", TranslationHandler.TextType.UI));
+			shipDialogue.GetComponent<InteractReceiver>()._usableInShip = true;
 			shipDialogue.SetActive(false);
-
 			SearchUtilities.Find("Toy_Box").AddComponent<OWCapsuleCollider>();
 
 			var seedToy = SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Seed");
@@ -47,10 +47,9 @@ namespace ChristmasStory.Characters.Villagers
             {
 				shipDialogue.SetActive(true);
             }
-
-			base.Start();
-
 			
+			base.Start();
+			Invoke("ChangePromt", 1f);
 		}
 
 		protected override void Dialogue_OnStartConversation()
@@ -69,10 +68,8 @@ namespace ChristmasStory.Characters.Villagers
 			{
 				Conditions.Set(Conditions.CONDITION.TOYS_REMOVED, true);
 				Conditions.Set(Conditions.CONDITION.TOY_PLACED, false);
-			}				
-
+			}	
 		}
-
 		protected override void Dialogue_OnEndConversation()
         {
 			var seedToy = SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Seed");
@@ -94,8 +91,7 @@ namespace ChristmasStory.Characters.Villagers
 
 				PlayerData.SetPersistentCondition(("SEED_CURRENT_TOY_1_LOOP"), true);
 
-				WriteUtil.WriteLine("Seed toy");
-				
+				WriteUtil.WriteLine("Seed toy");				
 			}
 			if (Conditions.Get(Conditions.CONDITION.SNOWMAN_CURRENT_TOY))
 			{
@@ -211,6 +207,11 @@ namespace ChristmasStory.Characters.Villagers
 		{
 			SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Seed").SetActive(false);
 			SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Snowman").SetActive(false);
+		}
+
+		private void ChangePromt()
+        {
+			SearchUtilities.Find("Ship_Toy_Dialogue").GetComponent<InteractReceiver>().ChangePrompt(TranslationHandler.GetTranslation("SHIP_TOY_PROMT", TranslationHandler.TextType.UI));
 		}
 
 		protected override void OnChangeState(STATE oldState, STATE newState) { }

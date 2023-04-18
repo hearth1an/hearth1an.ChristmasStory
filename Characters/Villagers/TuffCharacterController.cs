@@ -64,7 +64,6 @@ namespace ChristmasStory.Characters.Villagers
 				SearchUtilities.Find("Elevator_Dialogue").SetActive(false);
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ZeroGCave/Characters_ZeroGCave/Villager_HEA_Tuff/Tuff_Dialogue").SetActive(false);				
 
-
 				Invoke("AfterDialogue", 2f);
 				Invoke("OpenEyesDelayed", 4f);
 				Invoke("RunElevator", 12f);
@@ -72,16 +71,13 @@ namespace ChristmasStory.Characters.Villagers
 			}
 			if (Conditions.Get(Conditions.CONDITION.ELEVATOR_DONE))
 			{
-				SearchUtilities.Find("Elevator_Dialogue").SetActive(false);
-				// For lift down				
-				
+				SearchUtilities.Find("Elevator_Dialogue").SetActive(false);	
 			}
 
 		}
 
         private void AfterDialogue()
         {
-
 			var sfx = ChristmasStory.Instance.ModHelper.Assets.GetAudio("planets/Content/music/tuff_go.mp3");
 			PlayerEffectController.PlayAudioExternalOneShot(sfx, 1f);
 			
@@ -90,8 +86,7 @@ namespace ChristmasStory.Characters.Villagers
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_UpperVillage/Characters_UpperVillage/Villager_HEA_Gossan").SetActive(false);
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Tuff_Radio/Elevator_Dialogue").GetComponent<InteractReceiver>().ChangePrompt(TranslationHandler.GetTranslation("RADIO_PROMT", TranslationHandler.TextType.UI));
 			pickAxe.AddComponent<NewHorizons.Components.AddPhysics>();			
-			pickAxe.SetActive(true);
-						
+			pickAxe.SetActive(true);						
 		}
 
 		private void RunElevator() => SearchUtilities.Find("TimberHearth_Body/Sector_TH/Interactables_TH/MineShaft/MineElevator").GetComponent<Elevator>().ReturnToStart();

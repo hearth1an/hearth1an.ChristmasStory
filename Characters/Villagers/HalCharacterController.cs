@@ -1,6 +1,7 @@
 ﻿using ChristmasStory.Components;
 using ChristmasStory.Utility;
 using NewHorizons.Utility;
+using UnityEngine;
 
 namespace ChristmasStory.Characters.Villagers
 {
@@ -23,11 +24,12 @@ namespace ChristmasStory.Characters.Villagers
 
 
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village_Final/ConversationZone").DestroyAllComponents<InteractReceiver>();
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/ConversationZone").DestroyAllComponents<InteractReceiver>();
-
-			//originalCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village");			
+			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/ConversationZone").DestroyAllComponents<InteractReceiver>(); 						
+					
 
 			base.Start();
+
+			ChangeStoneItem();
 		}
 
 		protected override void Dialogue_OnStartConversation()
@@ -44,6 +46,23 @@ namespace ChristmasStory.Characters.Villagers
 				Invoke("SwapDialogue", 2f);
 				WriteUtil.WriteLine("Hal dialogue swapping!");
 			}
+		}
+
+		private void ChangeStoneItem()
+        {
+			var inviteStone = SearchUtilities.Find("Invite_Stone");
+			inviteStone.DestroyAllComponents<SharedStone>();
+			inviteStone.AddComponent<InviteStone>();
+
+			SearchUtilities.Find("Hal_Text").transform.parent = inviteStone.transform;
+			SearchUtilities.Find("Hal_Text").transform.localPosition = new Vector3(0, 0, 0);
+			var textArc = SearchUtilities.Find("TimberHearth_Body/Invite_Stone/Hal_Text/Arc 1 - Child of -1");
+			textArc.transform.localPosition = new Vector3(0.1f, -0.1f, 0.08f);
+			textArc.transform.localRotation = new Quaternion(0, 0, 0.6279f, 0.7783f);
+			textArc.GetComponent<NomaiTextLine>()._radius = 2;
+			textArc.GetComponent<NomaiTextLine>()._totalLength = 0.5f;
+			textArc.DestroyAllComponents<MeshRenderer>();
+
 		}
 
 		private void SwapDialogue()

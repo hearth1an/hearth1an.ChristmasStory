@@ -1,6 +1,0 @@
-<NomaiObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/text_schema.xsd">
-  <TextBlock>
-    <ID>1</ID>
-    <Text><![CDATA[<color=ERROR: ...></color><size=20><color=orange>Dear SoLaNum_, I|m invI_tinG youUu to T!mBerHeartH Vill@ge to celLebrAte Christmas!!!.</color></size>]]></Text>
-  </TextBlock>  
-</NomaiObject>
