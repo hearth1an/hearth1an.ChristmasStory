@@ -31,6 +31,7 @@ namespace ChristmasStory.Characters.Travelers
 			HeldItemHandler.Instance.ItemDropped.AddListener(OnItemDropped);
 
 			base.Start();
+			SearchUtilities.Find("QuantumMoon_Body/Sector_QuantumMoon/State_EYE/QMResponseText").GetComponent<NomaiWallText>().Hide(1);
 		}
 
 		protected override void Dialogue_OnStartConversation()
@@ -70,7 +71,7 @@ namespace ChristmasStory.Characters.Travelers
 			// Plays for 15.33s
 			PlayerEffectController.PlayAudioOneShot(AudioType.MemoryUplink_Start, 1f);
 			PlayerEffectController.PlayAudioOneShot(AudioType.EYE_QuantumFoamApproach, 1f);
-
+			Locator.GetActiveCamera().transform.Find("ScreenEffects/LightFlickerEffectBubble").GetComponent<LightFlickerController>().FlickerOffAndOn(15,2);
 
 			yield return new WaitForSeconds(15f);
 

@@ -557,14 +557,13 @@ namespace ChristmasStory
 					}
 				});
 
-				/*
+                /*
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Interactables_Village/Structure_HEA_WaterWheel/Gears1").DestroyAllComponents<RotateTransform>();
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Interactables_Village/Structure_HEA_WaterWheel/Gears2").DestroyAllComponents<RotateTransform>();
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Interactables_Village/Structure_HEA_WaterWheel/Gears3").DestroyAllComponents<RotateTransform>();
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Interactables_Village/Structure_HEA_WaterWheel/GearsCable").DestroyAllComponents<TextureAnimator>();
 				*/
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Audio_Village/GeyserFlags").SetActive(false);
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Audio_Village/WaterWheel").SetActive(false);
+				
 				
 
 				SearchUtilities.Find("Nomai_wire").transform.localScale = new Vector3(1f, 1.7818f, 1f);

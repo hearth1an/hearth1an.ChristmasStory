@@ -2,40 +2,28 @@
 	"$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
 	"name": "QuantumMoon",
 	"Props": {
-		"nomaiText": [
+		"translatorText": [
 			{
-				"arcInfo": [
-					{
-						"position": {
-							"x": 0.4,
-							"y": 0.5
-						},
-						"type": "adult",
-						"variation": 28,
-						"zRotation": 93.0
-					}
-				],
-				"normal": {
-					"x": -0.719040334,
-					"y": 0.0947849154,
-					"z": 0.688474655
-				},
 				"position": {
-					"x": -2.71077561,
-					"y": -70.5499,
-					"z": 1.55687451
+					"x": -3.1235,
+					"y": -70.2499,
+					"z": 1.1569
 				},
 				"rotation": {
-					"x": 356.639343,
-					"y": 314.3946,
-					"z": 86.70398
+					"x": 351.6835,
+					"y": 312.2075,
+					"z": 215.8149
 				},
-				"seed": 42,
-				"type": "wall",
-				"location": "unspecified",
+				"seed": 42,					
+				"type": "wall",				
 				"xmlFile": "planets/Text/QMresponse.xml",
 				"parentPath": "Sector_QuantumMoon/State_EYE",
-				"rename": "QMResponseText"
+				"rename": "QMResponseText",
+				"arcInfo": [
+					{"type": "adult"},
+					{"type": "adult"},
+					{"type": "adult"}
+				]
 			}
 		],
 		"dialogue": [

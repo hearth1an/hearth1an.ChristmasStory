@@ -292,7 +292,7 @@
 					"x": 0,
 					"y": 0,
 					"z": 0
-				}				
+				}
 			},
 			{
 
@@ -870,7 +870,217 @@
 					"y": 0,
 					"z": 0
 				}
+			},
+			{
+				"path": "TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Lighting_LowerVillage/OtherComponentsGroup/LowerVillage/Props_HEA_Lantern (16)",
+				"position": {
+					"x": 0,
+					"y": -25.075,
+					"z": 185.4682
+				},
+				"rotation": {
+					"x": 277.9,
+					"y": 4.3,
+					"z": 175.64
+				}
+			},
+			{
+				"path": "TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Lighting_LowerVillage/OtherComponentsGroup/LowerVillage/Props_HEA_Lantern (16)",
+				"position": {
+					"x": 6.4,
+					"y": -24.4442,
+					"z": 188.1381
+				},
+				"rotation": {
+					"x": 277.9,
+					"y": 335.21,
+					"z": 206.5318
+				}
+			},
+			{
+				"path": "TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Lighting_LowerVillage/OtherComponentsGroup/LowerVillage/Props_HEA_Lantern (16)",
+				"position": {
+					"x": 7.7,
+					"y": -18.76,
+					"z": 186.05
+				},
+				"rotation": {
+					"x": 342.3,
+					"y": 274.4421,
+					"z": 263.99
+				}
+			},
+			{
+				"path": "TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Lighting_LowerVillage/OtherComponentsGroup/LowerVillage/Props_HEA_Lantern (16)",
+				"position": {
+					"x": -3.0879,
+					"y": -18.94,
+					"z": 186.1518
+				},
+				"rotation": {
+					"x": 50.18,
+					"y": 92.182,
+					"z": 97.9067
+				}
+			},
+			{
+				"path": "TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Lighting_LowerVillage/OtherComponentsGroup/LowerVillage/Props_HEA_Lantern (16)",
+				"position": {
+					"x": 2.6,
+					"y": -28.22,
+					"z": 186.34
+				},
+				"rotation": {
+					"x": 16.4796,
+					"y": 268.1946,
+					"z": 260.9962
+				}
+			},
+			{
+				"path": "TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Lighting_LowerVillage/OtherComponentsGroup/LowerVillage/Props_HEA_Lantern (16)",
+				"position": {
+					"x": 10.033,
+					"y": -4.8095,
+					"z": 186.81
+				},
+				"rotation": {
+					"x": 41.95,
+					"y": 94.02,
+					"z": 92.23
+				}
+			},
+			{
+				"path": "TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Lighting_LowerVillage/OtherComponentsGroup/LowerVillage/Props_HEA_Lantern (16)",
+				"position": {
+					"x": 3.48,
+					"y": -10.9501,
+					"z": 186.78
+				},
+				"rotation": {
+					"x": 15.52,
+					"y": 91.71,
+					"z": 91.8144
+				}
+			},
+			{
+				"path": "TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Lighting_LowerVillage/OtherComponentsGroup/LowerVillage/Props_HEA_Lantern (16)",
+				"position": {
+					"x": 3.37,
+					"y": 6.13,
+					"z": 188.08
+				},
+				"rotation": {
+					"x": 60.66,
+					"y": 86.9674,
+					"z": 86.6083
+				}
+			},
+			{
+				"path": "TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Lighting_LowerVillage/OtherComponentsGroup/LowerVillage/Props_HEA_Lantern (16)",
+				"position": {
+					"x": -13.7161,
+					"y": 1.1906,
+					"z": 189.287
+				},
+				"rotation": {
+					"x": 334.5824,
+					"y": 86.0264,
+					"z": 89.7552
+				}
+			},
+			{
+				"path": "TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Lighting_LowerVillage/OtherComponentsGroup/LowerVillage/Props_HEA_Lantern (16)",
+				"position": {
+					"x": -19.26,
+					"y": -5.7523,
+					"z": 188.6604
+				},
+				"rotation": {
+					"x": 316.6584,
+					"y": 296.3335,
+					"z": 236.834
+				}
+			},
+			{
+				"path": "TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Lighting_LowerVillage/OtherComponentsGroup/LowerVillage/Props_HEA_Lantern (16)",
+				"position": {
+					"x": -19.9,
+					"y": -11.90,
+					"z": 186.04
+				},
+				"rotation": {
+					"x": 334.1687,
+					"y": 289.44,
+					"z": 242.75
+				}
+			},
+			{
+				"path": "TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Lighting_LowerVillage/OtherComponentsGroup/LowerVillage/Props_HEA_Lantern (16)",
+				"position": {
+					"x": -25.38,
+					"y": -15.40,
+					"z": 184.82
+				},
+				"rotation": {
+					"x": 7.02,
+					"y": 83.21,
+					"z": 97.33
+				}
+			},
+			{
+				"path": "TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Lighting_LowerVillage/OtherComponentsGroup/LowerVillage/Props_HEA_Lantern (16)",
+				"position": {
+					"x": 3.3255,
+					"y": -0.8421,
+					"z": 187.1299
+				},
+				"rotation": {
+					"x": 79.09,
+					"y": 91.89,
+					"z": 90.998
+				}
+			},
+			{
+				"path": "TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Lighting_LowerVillage/OtherComponentsGroup/LowerVillage/Props_HEA_Lantern (16)",
+				"position": {
+					"x": 2.6723,
+					"y": 26.8608,
+					"z": 190.8229
+				},
+				"rotation": {
+					"x": 279.32,
+					"y": 208.6188,
+					"z": 330.9345
+				}
+			},
+			{
+				"path": "TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Lighting_LowerVillage/OtherComponentsGroup/LowerVillage/Props_HEA_Lantern (16)",
+				"position": {
+					"x": -0.1097,
+					"y": 18.5531,
+					"z": 191.8271
+				},
+				"rotation": {
+					"x": 351.1137,
+					"y": 90.5939,
+					"z": 84.5962
+				}
+			},
+			{
+				"path": "TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Lighting_LowerVillage/OtherComponentsGroup/LowerVillage/Props_HEA_Lantern (16)",
+				"position": {
+					"x": -13.1771,
+					"y": -24.81,
+					"z": 185.0409
+				},
+				"rotation": {
+					"x": 78.93,
+					"y": 224.0646,
+					"z": 227.5087
+				}
 			}
+
+
 		],
 
 		"dialogue": [

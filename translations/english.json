@@ -645,7 +645,11 @@
 		"SLATE_NOTE_1": "Hey, sleepyhead! Find me in the Village when you wake up, we need to talk.<![CDATA[<Pause=2>]]> Slate.",
 
 		// Solanum response
-		"SOLANUM_WALL_TEXT": "SOLANUM: This encounter feels VERY special. I am not sure but let us try this: Take the stone that looks like my mask to the place where I am needed. With that done, I will do my best.",
+		"SOLANUM_WALL_1": "SOLANUM: This encounter feels VERY special.",
+		"SOLANUM_WALL_2": "SOLANUM: I am not sure but let us try this: Take the stone that looks like my mask to the place where I am needed.",
+		"SOLANUM_WALL_3": "SOLANUM: With that done, I will do my best.",
+
+
 
 		// Solanum start
 		"SOLANUM_START_1": "...",

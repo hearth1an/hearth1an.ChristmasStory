@@ -1,6 +1,19 @@
 <NomaiObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/text_schema.xsd">
   <TextBlock>
     <ID>1</ID>
-    <Text>SOLANUM_WALL_TEXT</Text>
-  </TextBlock>  
+    <LocationA />
+    <Text>SOLANUM_WALL_1</Text>
+  </TextBlock>
+  <TextBlock>
+		<ID>2</ID>
+		<ParentID>1</ParentID>
+		<LocationB />
+		<Text>SOLANUM_WALL_2</Text>
+	</TextBlock>
+	<TextBlock>
+		<ID>3</ID>
+		<ParentID>2</ParentID>
+		<LocationA />
+		<Text>SOLANUM_WALL_3</Text>
+	</TextBlock>
 </NomaiObject>

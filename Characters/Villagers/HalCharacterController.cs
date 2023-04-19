@@ -61,7 +61,7 @@ namespace ChristmasStory.Characters.Villagers
 			textArc.transform.localRotation = new Quaternion(0, 0, 0.6279f, 0.7783f);
 			textArc.GetComponent<NomaiTextLine>()._radius = 2;
 			textArc.GetComponent<NomaiTextLine>()._totalLength = 0.5f;
-			textArc.DestroyAllComponents<MeshRenderer>();
+			textArc.GetComponent<MeshRenderer>().forceRenderingOff = true;
 
 		}
 

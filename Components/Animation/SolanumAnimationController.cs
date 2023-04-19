@@ -10,7 +10,7 @@ namespace ChristmasStory.Components.Animation
         private NomaiConversationStone _conversationStone;
         private NomaiWallText _nomaiText;
         private OWAudioSource _audioSource;
-        private SharedStone _sharedStone;
+        private GameObject _sharedStone;
 
         public static SolanumAnimationController Instance;
         public void Start()
@@ -23,7 +23,7 @@ namespace ChristmasStory.Components.Animation
             _audioSource = SearchUtilities.Find("QuantumMoon_Body/Sector_QuantumMoon/State_EYE/Interactables_EYEState/Audio_Solanum/AudioSource_Symbols").GetComponent<OWAudioSource>();
             _sharedStone = HeldItemHandler.Instance._sharedStone;
 
-            _nomaiText.HideTextOnStart();
+            
 
             StreamingHandler.SetUpStreaming(_conversationStone.gameObject, null);
         }
@@ -46,12 +46,10 @@ namespace ChristmasStory.Components.Animation
         public void RevealStone()
         {
             Instance._conversationStone.Reveal();
-            Instance._audioSource.PlayOneShot(AudioType.SolanumSymbolReveal, 0.5f);
-        }
-        public void StopSound()
-        {
-            Instance._audioSource.Stop();
-        }
+            Instance._audioSource.PlayOneShot(AudioType.ToolItemSharedStoneInsert, 0.3f);
+            Instance._audioSource.PlayOneShot(AudioType.NomaiDoorStopBig, 1f);
+            Instance._audioSource.PlayOneShot(AudioType.MemoryUplink_Start, 0.5f);
+        }       
         public void TransformWatchingTarget()
         {
             Instance._animator.StartWatchingPlayer();
@@ -67,14 +65,13 @@ namespace ChristmasStory.Components.Animation
             Invoke("RevealWallText", 5f);
             Invoke("StopWriteWallText", 6f);
             Invoke("GestureToStone", 7f);
-            Invoke("RevealStone", 10.5f);
-            Invoke("StopSound", 11.4f);
+            Invoke("RevealStone", 10.5f);          
             Invoke("StopWatching", 20f);
         }
         public void SolanumAnimEvent()
         {
             Invoke("TransformWatchingTarget", 2f);
-            Invoke("PlayWholeAnimation", 2f);
+            Invoke("PlayWholeAnimation", 6f);
         }
 
 

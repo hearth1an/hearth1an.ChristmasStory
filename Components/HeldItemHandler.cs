@@ -12,7 +12,7 @@ namespace ChristmasStory.Components
 	{
 		private ToolModeSwapper _toolModeSwapper;
 		private ItemTool _itemTool;
-		public SharedStone _sharedStone;
+		public GameObject _sharedStone;
 		private GameObject _villageSector;
 		public DreamLanternController PrisonerLantern { get; private set; }
 		public DreamLanternItem PrisonerLanternItem { get; private set; }
@@ -29,7 +29,7 @@ namespace ChristmasStory.Components
 			Instance = this;
 			_toolModeSwapper = FindObjectOfType<ToolModeSwapper>();
 			_itemTool = FindObjectOfType<ItemTool>();
-			_sharedStone = FindObjectsOfType<SharedStone>().First(x => x.name == "Invite_Stone");
+			_sharedStone = SearchUtilities.Find("Invite_Stone");
 
 			_villageSector = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Nomai_ANIM_SkyWatching_Idle");
 
@@ -69,7 +69,7 @@ namespace ChristmasStory.Components
 
 		public static bool IsPlayerHoldingJunk() => GetHeldItem() is not WarpCoreItem or DreamLanternItem or VisionTorchItem or null;
 
-		public static bool IsPlayerHoldingInviteStone() => GetHeldItem() == Instance._sharedStone;
+		public static bool IsPlayerHoldingInviteStone() => GetHeldItem()?.name == "Invite_Stone";
 
 		private void Update()
 		{
