@@ -249,6 +249,23 @@
 				},
 				"scale": 1.1,
 				"keepLoaded": true
+			},
+			{
+				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Interactables_Crossroads/VisibleFrom_BH/GravityCrystals/OtherComponentsGroup/Prefab_NOM_GravityCrystal",
+				"parentPath": "Module_Supplies/Systems_Supplies/ExpeditionGear/EquipmentGeo/Props_HEA_Probe_STATIC",
+				"removeChildren": [ "CapsuleVolume_NOM_GravityCrystal", "AudioSource_GravityCrystal" ],
+				"position": {
+					"x": 0,
+					"y": 0.7,
+					"z": 0
+				},
+				"rotation": {
+					"x": 0,
+					"y": 90,
+					"z": 0
+				},
+				"scale": 0.16,
+				"rename": "ProbeGravity_Ship"
 			}
 		],
 		"dialogue": [

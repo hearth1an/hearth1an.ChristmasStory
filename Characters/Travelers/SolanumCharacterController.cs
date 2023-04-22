@@ -7,14 +7,6 @@ using UnityEngine;
 
 namespace ChristmasStory.Characters.Travelers
 {
-	/* 
-	At the start of the game when player will have a conversation with Hal. He will say that he happy about translator and he also can do nomai writings on stones and he 
-	wish if someone could read them one day. > Player will need to ask him if he could write something like "Merry Christmas, Solanum! Join us to celebration on Timber Hearth!" > closing eyes, stone with writing appears >
-	player brings it to Solanum > Drop it near her > Script checking the distance > she replying that she probably will be able to appear on TH, we just need to take Nomai rock to TH > player takes it and brings to TH.
-
-	> she appears there
-
-	*/
 	internal class SolanumCharacterController : TravelerCharacterController
 	{
 		public override Conditions.PERSISTENT DoneCondition => Conditions.PERSISTENT.SOLANUM_DONE;
@@ -26,8 +18,6 @@ namespace ChristmasStory.Characters.Travelers
 			originalCharacter = SearchUtilities.Find("QuantumMoon_Body/Sector_QuantumMoon/State_EYE/Interactables_EYEState/ConversationPivot/Character_NOM_Solanum");
 
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Nomai_ANIM_SkyWatching_Idle/Signal_Nomai").transform.localPosition = new Vector3(0, 2, 0);
-
-
 			HeldItemHandler.Instance.ItemDropped.AddListener(OnItemDropped);
 
 			base.Start();

@@ -3,12 +3,7 @@ using ChristmasStory.Utility;
 using NewHorizons.Utility;
 
 namespace ChristmasStory.Characters.Villagers
-{
-	/* 
-	 * Visit Esker > He will say that he already knows everything bc he is listening to signalscope (he will be weirdo like always) >
-	 * close eyes > he will appear in your ship > track if we are on Timber Hearth > talk to him > closing eyes > he will appear on TH always.
-	 */
-
+{	
 	internal class TektiteCharacterController : TravelerCharacterController
 	{
 		public override Conditions.PERSISTENT DoneCondition => Conditions.PERSISTENT.TEKTITE_DONE;
@@ -16,16 +11,7 @@ namespace ChristmasStory.Characters.Villagers
 		public override void Start()
 		{
 			dialogue = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2/Tektite_Dialogue").GetComponent<CharacterDialogueTree>();
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2/Tektite_Dialogue").SetActive(false);
-
-			var tektite = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2");			
-			
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/New_Marl").SetActive(false);
-			SearchUtilities.Find("Tektite_Trigger").SetActive(false);
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2/ConversationZone").DestroyAllComponents<InteractReceiver>();
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2/ConversationZone").DestroyAllComponents<CharacterDialogueTree>();
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/New_Tektite/ConversationZone").DestroyAllComponents<InteractReceiver>();
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/New_Tektite/ConversationZone").DestroyAllComponents<CharacterDialogueTree>();
+			var tektite = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2");		
 
 			if (Conditions.Get(Conditions.PERSISTENT.TEKTITE_DONE))
             {
@@ -61,9 +47,7 @@ namespace ChristmasStory.Characters.Villagers
 				PlayerEffectController.Blink(2f);
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2/Tektite_Dialogue").SetActive(false);				
 				Invoke("DoneThings", 1f);
-
-			}			
-
+			}
 		}
 
 		private void DonePreparation()
@@ -84,9 +68,11 @@ namespace ChristmasStory.Characters.Villagers
 			SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Snowman").SetActive(false);
 			SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Seed").SetActive(true);
 
-			PlayerData.SetPersistentCondition("SEED_CURRENT_TOY", false);
-			PlayerData.SetPersistentCondition("SNOWMAN_CURRENT_TOY", true);
-
+			
+			PlayerData.SetPersistentCondition("SEED_CURRENT_TOY", true);
+			PlayerData.SetPersistentCondition("SNOWMAN_CURRENT_TOY", false);
+			PlayerData.SetPersistentCondition("TOY_PLACED", true);
+			PlayerData.SetPersistentCondition("TOYS_REMOVED", false);
 		}
 
 		private void OpenEyes() => PlayerEffectController.OpenEyes(1f);

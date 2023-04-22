@@ -1,0 +1,37 @@
+ManifestFileVersion: 0
+CRC: 2394699070
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: d95533d82d16d482ac8b8e009479cc23
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 7b79d08771165b6c7f1d6d1b062ccb3e
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/PREFABS/Riebeck_meme.prefab
+Dependencies: []

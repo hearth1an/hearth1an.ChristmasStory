@@ -27,8 +27,7 @@ namespace ChristmasStory.Characters.Travelers
 			var controller = _lantern.GetComponent<DreamLanternController>();
 			controller.enabled = true;
 			controller.SetLit(true);
-			controller.SetHeldByPlayer(false);
-			//controller._flameStrength = 100f;
+			controller.SetHeldByPlayer(false);			
 			controller.UpdateVisuals();
 			controller.GetComponent<DreamLanternItem>().EnableInteraction(false);
 
@@ -48,9 +47,6 @@ namespace ChristmasStory.Characters.Travelers
 				SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Structures_PrisonDocks/Prison_Zone4/Effects_Prison").SetActive(false);
 				SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Sector_PrisonInterior/Volumes_PrisonInterior/WaterVolume_Prison").SetActive(false);
 			});
-
-			//Delay.FireOnNextUpdate(() => controller.transform.Find("Spotlight_Lantern").GetComponent<OWLight2>()._intensityScale = 0.2f);			
-
 			HeldItemHandler.Instance.ItemDropped.AddListener(OnItemDropped);
 
 			ChristmasStory.Instance.ModHelper.Events.Unity.FireOnNextUpdate(() =>
@@ -62,11 +58,12 @@ namespace ChristmasStory.Characters.Travelers
 					SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner").SetActive(false); ;
 					SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostDirector_Prisoner").SetActive(false);
 					SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Interactibles_PrisonCell/PrisonerSequence/LanternTableSocket").SetActive(false);
+					SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/Prefab_IP_Reel_TowerVision").SetActive(false);
 					SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Effects_PrisonCell/DarknessPlane").SetActive(false);
-					WriteUtil.WriteLine("Prisoner is done, disabling them in DreamWorld");
-				}
-			});
+                    WriteUtil.WriteLine("Prisoner is done, disabling them in DreamWorld");
 
+                }
+            });
 
 			base.Start();
 
@@ -75,13 +72,10 @@ namespace ChristmasStory.Characters.Travelers
 		{
 
 		}
-
-
 		protected override void Dialogue_OnEndConversation()
 		{
 			if (Conditions.Get(Conditions.CONDITION.PRISONER_START))
 			{
-
 				PrisonerAnimationController.Instance.PlayLightsUp();
 
 				SearchUtilities.Find("Prisoner_Dialogue").SetActive(false);

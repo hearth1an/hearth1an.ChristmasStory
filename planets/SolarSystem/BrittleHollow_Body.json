@@ -169,7 +169,7 @@
 					"y": 317.373779,
 					"z": 182.624268
 				}
-			},
+			},			
 			{
 				"path": "BrittleHollow_Body/Sector_BH/Sector Quantum Pole Path/Fragment QuantumPolePath 2/Interactables_QPP2/Prefab_NOM_GravityCrystal_Cracked",
 				"position": {
@@ -235,7 +235,7 @@
 				"lookAtRadius": 2,
 				"radius": 2
 			}
-		]
+		]		
 	},
 	"removeChildren": [
 		"Sector_BH/Sector_Crossroads/Characters_Crossroads/Traveller_HEA_Riebeck",

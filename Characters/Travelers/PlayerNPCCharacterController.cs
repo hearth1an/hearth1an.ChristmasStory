@@ -4,13 +4,7 @@ using NewHorizons.Utility;
 
 namespace ChristmasStory.Characters.Travelers
 {
-	/*
-	 * (OPTIONAL)
-	 * After jumping into ATP black hole the player NPC will appear
-	 * Can ask them to come to Christmas
-	 * They appear in ship
-	 * At TH talking to them puts them at the tree
-	 */
+	
 	internal class PlayerNPCCharacterController : TravelerCharacterController
 	{
 		public override Conditions.PERSISTENT DoneCondition => Conditions.PERSISTENT.SELF_DONE;
@@ -36,8 +30,6 @@ namespace ChristmasStory.Characters.Travelers
 					originalCharacter.SetActive(false);
 				}
 			});
-
-
 			base.Start();
 		}
 

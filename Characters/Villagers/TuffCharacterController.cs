@@ -4,12 +4,7 @@ using NewHorizons.Utility;
 using NewHorizons.Handlers;
 
 namespace ChristmasStory.Characters.Villagers
-{
-	/* 
-	 * Visit Esker > He will say that he already knows everything bc he is listening to signalscope (he will be weirdo like always) >
-	 * close eyes > he will appear in your ship > track if we are on Timber Hearth > talk to him > closing eyes > he will appear on TH always.
-	 */
-
+{	
 	internal class TuffCharacterController : TravelerCharacterController
 	{
 		public override Conditions.PERSISTENT DoneCondition => Conditions.PERSISTENT.TUFF_DONE;
@@ -73,9 +68,7 @@ namespace ChristmasStory.Characters.Villagers
 			{
 				SearchUtilities.Find("Elevator_Dialogue").SetActive(false);	
 			}
-
 		}
-
         private void AfterDialogue()
         {
 			var sfx = ChristmasStory.Instance.ModHelper.Assets.GetAudio("planets/Content/music/tuff_go.mp3");
@@ -92,14 +85,12 @@ namespace ChristmasStory.Characters.Villagers
 		private void RunElevator() => SearchUtilities.Find("TimberHearth_Body/Sector_TH/Interactables_TH/MineShaft/MineElevator").GetComponent<Elevator>().ReturnToStart();
 		private void OpenEyesDelayed() => PlayerEffectController.OpenEyes(1f);
 
-
 		private void DelayRadio()
         {
 			SearchUtilities.Find("Elevator_Dialogue").SetActive(true);
 			SearchUtilities.Find("Signal_Radio").SetActive(false);
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/New_Tuff").SetActive(true);
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/New_Gossan").SetActive(true);
-
 		}
 
 

@@ -4,11 +4,6 @@ using NewHorizons.Utility;
 
 namespace ChristmasStory.Characters.Travelers
 {
-	/* 
-	 * Visit Esker > He will say that he already knows everything bc he is listening to signalscope (he will be weirdo like always) >
-	 * close eyes > he will appear in your ship > track if we are on Timber Hearth > talk to him > closing eyes > he will appear on TH always.
-	 */
-
 	internal class EskerCharacterController : TravelerCharacterController
 	{
 		public override Conditions.PERSISTENT DoneCondition => Conditions.PERSISTENT.ESKER_DONE;

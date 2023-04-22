@@ -28,16 +28,13 @@ namespace ChristmasStory.Components
 		}
 
 		public IEnumerator IncreaseLightLevel()
-		{
-			WriteUtil.WriteLine("Coroutine is running");
+		{			
 			int maxLight = 300;
 			var ernestoLight = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Ernesto/B_angler_root/B_angler_body01/B_angler_body02/B_angler_antenna01/B_angler_antenna02/B_angler_antenna03/B_angler_antenna04/B_angler_antenna05/B_angler_antenna06/B_angler_antenna07/B_angler_antenna08/B_angler_antenna09/B_angler_antenna10/B_angler_antenna11/B_angler_antenna12_end/Props_HEA_WallLamp_Pulsing 1/Ernesto_Light").GetComponent<PulsingLight>();
 
 			for (int i = 0; i < maxLight; i++)
-			{
-				WriteUtil.WriteLine("Coroutine started, light level is" + ernestoLight._initLightRange);
+			{				
 				ernestoLight._initLightRange += 2f;
-
 				yield return new WaitForSeconds(0.3f);
 			}
 		}
@@ -73,13 +70,7 @@ namespace ChristmasStory.Components
 			PlayerEffectController.Blink(3);
 			SearchUtilities.Find("Ending_Trigger").transform.localPosition = new Vector3(0, 0, 0);
 			SearchUtilities.Find("Ending_Trigger").SetActive(true);
-			PlayerEffectController.OpenEyes(3);
-			/*
-            SearchUtilities.Find("music_no_sol_no_bird").SetActive(false);
-            SearchUtilities.Find("music_no_bird").SetActive(false);            
-            SearchUtilities.Find("music_no_sol").SetActive(false);
-            SearchUtilities.Find("music_all").SetActive(false);
-            */
+			PlayerEffectController.OpenEyes(3);			
 		}
 
 		public void BlowUpSun()
@@ -87,13 +78,5 @@ namespace ChristmasStory.Components
 			SearchUtilities.Find("Sun_Body/Sector_SUN/Effects_SUN/Supernova").GetComponent<SupernovaEffectController>().enabled = true;
 			ChristmasStory.Instance.ModHelper.Console.WriteLine("Starting supernova");
 		}
-
-		public void DisableProps()
-		{
-
-		}
-
-
-
 	}
 }

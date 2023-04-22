@@ -5,11 +5,7 @@ using UnityEngine;
 
 namespace ChristmasStory.Characters.Villagers
 {
-	/* 
-	 * Visit Esker > He will say that he already knows everything bc he is listening to signalscope (he will be weirdo like always) >
-	 * close eyes > he will appear in your ship > track if we are on Timber Hearth > talk to him > closing eyes > he will appear on TH always.
-	 */
-
+	
 	internal class HalCharacterController : TravelerCharacterController
 	{
 		public override Conditions.PERSISTENT DoneCondition => Conditions.PERSISTENT.HAL_ROCK_TOLD;
@@ -22,11 +18,9 @@ namespace ChristmasStory.Characters.Villagers
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Trigger_2").SetActive(false);
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Dialogue_3").SetActive(false);
 
-
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village_Final/ConversationZone").DestroyAllComponents<InteractReceiver>();
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/ConversationZone").DestroyAllComponents<InteractReceiver>(); 						
 					
-
 			base.Start();
 
 			ChangeStoneItem();
@@ -53,6 +47,7 @@ namespace ChristmasStory.Characters.Villagers
 			var inviteStone = SearchUtilities.Find("Invite_Stone");
 			inviteStone.DestroyAllComponents<SharedStone>();
 			inviteStone.AddComponent<InviteStone>();
+			
 
 			SearchUtilities.Find("Hal_Text").transform.parent = inviteStone.transform;
 			SearchUtilities.Find("Hal_Text").transform.localPosition = new Vector3(0, 0, 0);
@@ -62,7 +57,6 @@ namespace ChristmasStory.Characters.Villagers
 			textArc.GetComponent<NomaiTextLine>()._radius = 2;
 			textArc.GetComponent<NomaiTextLine>()._totalLength = 0.5f;
 			textArc.GetComponent<MeshRenderer>().forceRenderingOff = true;
-
 		}
 
 		private void SwapDialogue()

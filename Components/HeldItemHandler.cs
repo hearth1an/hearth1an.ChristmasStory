@@ -119,7 +119,7 @@ namespace ChristmasStory.Components
 
 		public static void GivePlayerInviteStone()
 		{
-			var inviteStone = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Invite_Stone").GetComponent<SharedStone>();
+			var inviteStone = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Invite_Stone").GetComponent<InviteStone>();
 			Locator.GetToolModeSwapper().GetItemCarryTool().PickUpItemInstantly(inviteStone);
 		}
 		#endregion

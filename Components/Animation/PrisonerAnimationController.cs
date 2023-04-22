@@ -29,7 +29,6 @@ namespace ChristmasStory.Components.Animation
                 totemPromt.SetActive(false);                                        
             }
 
-
         }
 
         public void PlayLightsUp()
@@ -52,6 +51,7 @@ namespace ChristmasStory.Components.Animation
             SearchUtilities.Find("Prisoner_Vision").SetActive(false);
             TransformTotemRings();
             SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Interactibles_PrisonCell/Elevator_Pivot/Floor_Bottom/Prefab_IP_DreamLibraryPedestal/PressurePlateRoot/DreamLanternSocket").SetActive(false);
+            Locator.GetPauseCommandListener().RemovePauseCommandLock();
 
             Invoke("EnableElevator", 50);
         }

@@ -4,15 +4,7 @@ using NewHorizons.Utility;
 using UnityEngine;
 
 namespace ChristmasStory.Characters.Travelers
-{
-	/* 
-	 * Find Chert > talk with him (he don't want to leave and you telling him that you know everything about nomai, supernova, stranger, time loop etc. He will laugh and ask to proof 3 things. 
-	 * 1st thing is timeloop. He will say the information only he knows, you will need to tell him it next loop. 
-	 * 2nd bring unknown nomai tech (Warp Core) and 3rd - strangers artifact. Since you have one loop to tell him everything, you need to bring both things. > 
-	 * There should be a script that will check distance between Chert and Warp Core, Chert and artifact. If it worked => RunWhen thing to explore the fact that will open the dialogue node to make Chert disappear
-	 * Closing eyes > he appears near the Christmas tree always. And he should be the only one Chert and signal. 
-	 */
-
+{	
 	internal class ChertCharacterController : TravelerCharacterController
 	{
 		private GameObject _emberTwinShip, _timberHearthShip, _originalDrums;
@@ -40,7 +32,6 @@ namespace ChristmasStory.Characters.Travelers
 				Conditions.Set(Conditions.CONDITION.CHERT_SHOW_LOOP_DIALOGUE, true);
 			}
 		}
-
 		public override void OnDestroy()
 		{
 			base.OnDestroy();
@@ -71,9 +62,7 @@ namespace ChristmasStory.Characters.Travelers
 
 			Conditions.Set(Conditions.CONDITION.HOLDING_JUNK_ITEM, holdingJunkItem);
 
-			ValidateAllDone();
-
-			// Delay.FireOnNextUpdate(ValidateAllDone);			
+			ValidateAllDone();			
 		}
 
 		private void ValidateAllDone()
