@@ -13,6 +13,7 @@
 				<DialogueTarget>2</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
+			<RequiredPersistentCondition>CHERT_PHRASE_KNOWN</RequiredPersistentCondition>
 				<Text>ESKER_TREE_3</Text>
 				<DialogueTarget>3</DialogueTarget>
 			</DialogueOption>
