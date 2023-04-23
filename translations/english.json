@@ -432,7 +432,7 @@
 
 		// Gossan (cave)
 		"GOSSAN_START_1": "Good luck in space! Feeling nervous about the launch?",
-		"GOSSAN_START_2": "Kind of. Slate gave me an importaint misson to bring all the travellers back home.",
+		"GOSSAN_START_2": "Kind of. Slate gave me an importaint misson to bring all the travelers back home.",
 		"GOSSAN_START_3": "Yep. Just wanted to say good bye.",
 		"GOSSAN_START_4": "Oh really?",
 		"GOSSAN_START_5": "But why?",
@@ -443,7 +443,7 @@
 		"GOSSAN_START_10": "Sorry, not yet. On my way.",
 		"GOSSAN_START_11": "Sure, I'll wait here.",
 		"GOSSAN_START_12": "Oh, you are still here? Is everything alright?",
-		"GOSSAN_START_13": "Yes. Slate gave me an importaint misson to bring all the travellers back home for Christmas.",
+		"GOSSAN_START_13": "Yes. Slate gave me an importaint misson to bring all the travelers back home for Christmas.",
 		"GOSSAN_START_14": "Good bye then!",
 		"GOSSAN_START_15": "Just be careful out there.",
 
@@ -519,7 +519,7 @@
 
 		// Galena
 
-		"GALENA_START_1": "So you are going to bring all the travellers back home?",
+		"GALENA_START_1": "So you are going to bring all the travelers back home?",
 		"GALENA_START_2": "Yes, they will all be here soon.",
 		"GALENA_START_3": "I'm sorry that I tried to destroy your snowian.",
 		"GALENA_START_4": "What is that snowian made of?",
@@ -533,7 +533,7 @@
 		// Moraine
 
 		"MORAINE_START_1": "Hey! Watch out!",
-		"MORAINE_START_2": "Hey! You're not listening to the travellers anymore?",
+		"MORAINE_START_2": "Hey! You're not listening to the travelers anymore?",
 		"MORAINE_START_3": "Signal all the same! Always!",
 		"MORAINE_START_4": "Oh yeah, I was listening to Riebeck and their signal was gone for a few minutes! I don't know what happened to them.",
 		"MORAINE_START_5": "Alright, I'll visit them to see what's up.",
@@ -584,8 +584,8 @@
 
 		// Gneiss
 
-		"GNEISS_START_1": "Another traveller is leaving us for outer space! What can I do for you?",
-		"GNEISS_START_2": "I'm actually going out to bring all the travellers back home.",
+		"GNEISS_START_1": "Another traveler is leaving us for outer space! What can I do for you?",
+		"GNEISS_START_2": "I'm actually going out to bring all the travelers back home.",
 		"GNEISS_START_3": "Yep. I just wanted to say good bye first.",
 		"GNEISS_START_4": "Oh really? That's so nice! Finally our orchestra will be playing at full strength!",
 		"GNEISS_START_5": "It will!",
