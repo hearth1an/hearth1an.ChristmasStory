@@ -29,6 +29,7 @@ namespace ChristmasStory.Characters.Villagers
 			if (Conditions.Get(Conditions.PERSISTENT.SLATE_START_DONE))
 			{
 				PlayerEffectController.Blink(5f);
+				PlayerEffectController.AddLock(5f);
 				PlayerEffectController.PlayAudioOneShot(AudioType.PlayerGasp_Light, 1f);
 				Invoke("SpawnEndGameProps", 2f);
 			}

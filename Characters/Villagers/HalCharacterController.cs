@@ -36,6 +36,7 @@ namespace ChristmasStory.Characters.Villagers
 			if (Conditions.Get(Conditions.CONDITION.HAL_ROCK_DONE)) // && PlayerData.GetPersistentCondition("LOOP_COUNT_GOE_2"))
 			{
 				PlayerEffectController.Blink(2f);
+				PlayerEffectController.AddLock(2f);
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Dialogue").SetActive(false);
 				Invoke("SwapDialogue", 2f);
 				WriteUtil.WriteLine("Hal dialogue swapping!");

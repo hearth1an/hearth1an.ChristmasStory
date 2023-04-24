@@ -22,9 +22,10 @@ namespace ChristmasStory.Characters.Villagers
 
 		protected override void Dialogue_OnEndConversation()
 		{
-			if (Conditions.Get(Conditions.CONDITION.TEKTITE_ASK_MARL))
+			if (Conditions.Get(Conditions.CONDITION.TEKTITE_ASK_MARL) && !Conditions.Get(Conditions.PERSISTENT.TEKTITE_DONE))
 			{				
 				PlayerEffectController.Blink(4f);
+				PlayerEffectController.AddLock(4f);
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Marl_Dialogue").SetActive(false);
 				Invoke("SwapCharacter", 2f);
 			}

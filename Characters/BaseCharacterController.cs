@@ -121,6 +121,8 @@ namespace ChristmasStory.Characters
 
 			// Play ship takeoff sound
 			PlayerEffectController.PlayAudioOneShot(AudioType.ShipThrustIgnition, 0.3f);
+			TransformController.ResetVillageSignals();
+
 			yield return new WaitForSeconds(1f);
 
 			// Open eyes
@@ -136,6 +138,7 @@ namespace ChristmasStory.Characters
 			Locator.GetPauseCommandListener().AddPauseCommandLock();
 
 			PlayerEffectController.Blink(2);
+			TransformController.ResetVillageSignals();
 
 			yield return new WaitForSeconds(wait);
 
@@ -151,5 +154,8 @@ namespace ChristmasStory.Characters
 			shipCharacter?.SetActive(state == STATE.ON_SHIP);
 			treeCharacter?.SetActive(state == STATE.AT_TREE);
 		}
+
+		
+
 	}
 }

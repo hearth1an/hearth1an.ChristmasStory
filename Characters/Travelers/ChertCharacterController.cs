@@ -85,7 +85,7 @@ namespace ChristmasStory.Characters.Travelers
 				case STATE.ORIGINAL:
 					if (Conditions.Get(Conditions.CONDITION.CHERT_START_DONE))
 					{
-						ChangeState(STATE.AT_TREE);
+						ChangeState(STATE.AT_TREE);						
 					}
 					break;
 			}

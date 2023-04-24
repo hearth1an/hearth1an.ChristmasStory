@@ -33,6 +33,7 @@
 				<ConditionToCancel>SNOWMAN_CURRENT_TOY</ConditionToCancel>
 			</DialogueOption>
 			<DialogueOption>
+				<ConditionToSet>SKIP_BLINK</ConditionToSet>
 				<Text>SHIP_TOY_5</Text>
 			</DialogueOption>
 		</DialogueOptionsList>

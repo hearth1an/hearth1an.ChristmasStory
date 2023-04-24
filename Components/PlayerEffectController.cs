@@ -18,16 +18,34 @@ namespace ChristmasStory.Components
 		public static void Blink(float length = 2) => _instance.StartCoroutine(_instance.BlinkCoroutine(length));
 		public static void CloseEyes(float length) => _instance._cameraEffectController.CloseEyes(length);
 		public static void OpenEyes(float length) => _instance._cameraEffectController.OpenEyes(length, false);
+		public static void AddLock(float length) => _instance.StartCoroutine(_instance.LockCoroutine(length));
 
 		private IEnumerator BlinkCoroutine(float length)
-		{
+		{		
 			CloseEyes(length / 2f);
 			yield return new WaitForSeconds(length / 2f);
-			OpenEyes(length / 2f);
+			OpenEyes(length / 2f);			
+		}
+		private IEnumerator LockCoroutine(float length)
+		{
+			OWInput.ChangeInputMode(InputMode.None);
+			Locator.GetPauseCommandListener().AddPauseCommandLock();
+
+			yield return new WaitForSeconds(length);
+
+			OWInput.ChangeInputMode(InputMode.Character);
+			Locator.GetPauseCommandListener().RemovePauseCommandLock();
+
+		}
+
+		private void DisableLock()
+		{
+			
 		}
 
 		public static void PlayAudioOneShot(AudioType audio, float volume = 1f) => Locator.GetPlayerAudioController()._oneShotExternalSource.PlayOneShot(audio, volume);
 		public static void PlayAudioExternalOneShot(AudioClip audio, float volume = 2f) => Locator.GetPlayerAudioController()._oneShotExternalSource.PlayOneShot(audio, volume);
+
 
 
 	}

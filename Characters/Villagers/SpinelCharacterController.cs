@@ -28,6 +28,7 @@ namespace ChristmasStory.Characters.Villagers
 			if (Conditions.Get(Conditions.CONDITION.SPINEL_TOLD))
             {
                 PlayerEffectController.CloseEyes(1f);
+				PlayerEffectController.AddLock(2f);
 
 				var sfx = ChristmasStory.Instance.ModHelper.Assets.GetAudio("planets/Content/music/jump.mp3");
                 PlayerEffectController.PlayAudioExternalOneShot(sfx, 3f);

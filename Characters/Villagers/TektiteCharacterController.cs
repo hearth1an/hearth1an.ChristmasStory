@@ -39,12 +39,14 @@ namespace ChristmasStory.Characters.Villagers
 				Invoke("DonePreparation", 2f);
 				Invoke("OpenEyes", 12f);
 				Invoke("InvokeTrigger", 14f);
+				PlayerEffectController.AddLock(15f);
 				var sfx = ChristmasStory.Instance.ModHelper.Assets.GetAudio("planets/Content/music/bye_bye_seed.mp3");
 				PlayerEffectController.PlayAudioExternalOneShot(sfx, 2f);
 			}
 			else if (Conditions.Get(Conditions.PERSISTENT.TEKTITE_DONE))
 			{
 				PlayerEffectController.Blink(2f);
+				PlayerEffectController.AddLock(2f);
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2/Tektite_Dialogue").SetActive(false);				
 				Invoke("DoneThings", 1f);
 			}

@@ -49,7 +49,8 @@ namespace ChristmasStory
 				}
 				if (loadScene == OWScene.Credits_Fast)
 				{
-					sceneTransformController.GetComponent<SceneTransformController>().CreditsMusic();
+					var creditsMusic = new GameObject("CreditsController");
+					creditsMusic.AddComponent<SceneTransformController>().CreditsMusic();
 				}
 			};
 		}

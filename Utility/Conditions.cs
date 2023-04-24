@@ -86,7 +86,8 @@ namespace ChristmasStory.Utility
 			SEED_CURRENT_TOY,
 			SNOWMAN_CURRENT_TOY,
 			TOY_PLACED,
-			TOYS_REMOVED
+			TOYS_REMOVED,			
+			SKIP_BLINK
 
 
 		}

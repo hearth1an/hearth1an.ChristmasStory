@@ -54,7 +54,6 @@ namespace ChristmasStory.Components
 				thMesh.SetActive(false);
 				thMeshFixed.DestroyAllComponents<MeshRenderer>();
 
-
 				// Timber Hearth transform
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Center_Barrel").transform.localScale = new Vector3(7f, 4.5f, 7f);
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Center_Barrel").AddComponent<CapsuleCollider>();
@@ -82,6 +81,8 @@ namespace ChristmasStory.Components
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Interactables_Village/Structure_HEA_WaterWheel/Gears2").DestroyAllComponents<RotateTransform>();
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Interactables_Village/Structure_HEA_WaterWheel/Gears3").DestroyAllComponents<RotateTransform>();
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Interactables_Village/Structure_HEA_WaterWheel/GearsCable").DestroyAllComponents<TextureAnimator>();
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Interactables_Village/Structure_HEA_WaterWheel/WaterWheel").DestroyAllComponents<TextureAnimator>();
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Audio_Village/WaterWheel").SetActive(false);
 
 				// Nomai wire
 				SearchUtilities.Find("Nomai_wire").transform.localScale = new Vector3(1f, 1.7818f, 1f);
@@ -586,7 +587,25 @@ namespace ChristmasStory.Components
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village/Slate_Trigger").SetActive(false);
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Dialogue_3").SetActive(false);
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Trigger_2").SetActive(false);
+        }
+
+        private static void ResetSignal(OWAudioSource audioSource)
+        {
+			audioSource.Stop();
+			audioSource.Play();
+        }
+
+		public static void ResetVillageSignals()
+        {
+			ResetSignal(SearchUtilities.Find("TimberHearth_Body/Sector_TH/GhostBird/Signal_Prisoner").GetComponent<OWAudioSource>());
+			ResetSignal(SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Feldspar/Signal_Signal_Harmonica").GetComponent<OWAudioSource>());
+			ResetSignal(SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Riebeck/Signal_Banjo").GetComponent<OWAudioSource>());
+			ResetSignal(SearchUtilities.Find("TimberHearth_Body/Sector_TH/Villager_HEA_Esker_ANIM_Rocking/Signal_Esker").GetComponent<OWAudioSource>());
+			ResetSignal(SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Chert_ANIM_Chatter_Chipper/Signal_Drums").GetComponent<OWAudioSource>());
+			ResetSignal(SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Gabbro/Signal_Flute").GetComponent<OWAudioSource>());
+			ResetSignal(SearchUtilities.Find("TimberHearth_Body/Sector_TH/Nomai_ANIM_SkyWatching_Idle/Signal_Nomai").GetComponent<OWAudioSource>());
 		}
 
-	}
+
+    }
 }

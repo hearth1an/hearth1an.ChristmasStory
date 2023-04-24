@@ -253,6 +253,7 @@
 			{
 				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Interactables_Crossroads/VisibleFrom_BH/GravityCrystals/OtherComponentsGroup/Prefab_NOM_GravityCrystal",
 				"parentPath": "Module_Supplies/Systems_Supplies/ExpeditionGear/EquipmentGeo/Props_HEA_Probe_STATIC",
+				"isRelativeToParent": true,
 				"removeChildren": [ "CapsuleVolume_NOM_GravityCrystal", "AudioSource_GravityCrystal" ],
 				"position": {
 					"x": 0,

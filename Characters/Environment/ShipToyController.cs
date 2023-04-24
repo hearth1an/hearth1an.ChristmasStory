@@ -54,92 +54,86 @@ namespace ChristmasStory.Characters.Villagers
 
 		protected override void Dialogue_OnStartConversation()
 		{
+			
 			if (PlayerData.GetPersistentCondition("SEED_CURRENT_TOY") == true)
 			{
-				Conditions.Set(Conditions.CONDITION.SEED_CURRENT_TOY, true);
+				Conditions.Set(Conditions.CONDITION.TOYS_REMOVED, false);
 				Conditions.Set(Conditions.CONDITION.TOY_PLACED, true);
+				Conditions.Set(Conditions.CONDITION.SNOWMAN_CURRENT_TOY, false);
+				Conditions.Set(Conditions.CONDITION.SEED_CURRENT_TOY, true);
 			}
 			if (PlayerData.GetPersistentCondition("SNOWMAN_CURRENT_TOY") == true)
 			{
-				Conditions.Set(Conditions.CONDITION.SNOWMAN_CURRENT_TOY, true);
+				Conditions.Set(Conditions.CONDITION.TOYS_REMOVED, false);
 				Conditions.Set(Conditions.CONDITION.TOY_PLACED, true);
+				Conditions.Set(Conditions.CONDITION.SNOWMAN_CURRENT_TOY, true);
+				Conditions.Set(Conditions.CONDITION.SEED_CURRENT_TOY, false);
 			}
 			if (PlayerData.GetPersistentCondition("TOYS_REMOVED") == true)
 			{
 				Conditions.Set(Conditions.CONDITION.TOYS_REMOVED, true);
 				Conditions.Set(Conditions.CONDITION.TOY_PLACED, false);
+				Conditions.Set(Conditions.CONDITION.SNOWMAN_CURRENT_TOY, false);
+				Conditions.Set(Conditions.CONDITION.SEED_CURRENT_TOY, false);
 			}
+			
 		}
 		protected override void Dialogue_OnEndConversation()
 		{
-			var seedToy = SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Seed");
-			var snowmanToy = SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Snowman");
+			if (Conditions.Get(Conditions.CONDITION.TOY_PLACED) == true)
+            {
+				WriteUtil.WriteLine("toy  placed");				
+				if (Conditions.Get(Conditions.CONDITION.SEED_CURRENT_TOY) && !Conditions.Get(Conditions.CONDITION.SKIP_BLINK))
+				{
+					PlayerEffectController.Blink(2); PlayerEffectController.AddLock(2);
+					Invoke("AddSeed", 1f);
+					WriteUtil.WriteLine("Seed toy");
+				}
 
-			if (Conditions.Get(Conditions.CONDITION.SEED_CURRENT_TOY))
-			{
-				Conditions.Set(Conditions.CONDITION.TOY_PLACED, true);
-				Conditions.Set(Conditions.CONDITION.SEED_CURRENT_TOY, true);
-				Conditions.Set(Conditions.CONDITION.SNOWMAN_CURRENT_TOY, false);
-				Conditions.Set(Conditions.CONDITION.TOYS_REMOVED, false);
-
-				PlayerEffectController.Blink(2);
-				Invoke("RemoveSeed", 1f);
-
-				PlayerData.SetPersistentCondition("SEED_CURRENT_TOY", true);
-				PlayerData.SetPersistentCondition("SNOWMAN_CURRENT_TOY", false);
-				PlayerData.SetPersistentCondition("TOYS_REMOVED", false);
-
-				PlayerData.SetPersistentCondition(("SEED_CURRENT_TOY_1_LOOP"), true);
-
-				WriteUtil.WriteLine("Seed toy");
+				if (Conditions.Get(Conditions.CONDITION.SNOWMAN_CURRENT_TOY) && !Conditions.Get(Conditions.CONDITION.SKIP_BLINK))
+				{
+					PlayerEffectController.Blink(2); PlayerEffectController.AddLock(2f);
+					Invoke("AddSnowman", 1f);
+					WriteUtil.WriteLine("Snowman toy");
+				}
+				if (Conditions.Get(Conditions.CONDITION.TOYS_REMOVED) && !Conditions.Get(Conditions.CONDITION.SKIP_BLINK))
+				{
+					PlayerEffectController.Blink(2); PlayerEffectController.AddLock(2);
+					Invoke("RemoveToys", 1f);
+					Conditions.Set(Conditions.CONDITION.TOYS_REMOVED, true);
+					WriteUtil.WriteLine("Toys removed");
+				}
+				if (Conditions.Get(Conditions.CONDITION.SKIP_BLINK))
+				{
+					WriteUtil.WriteLine("Skip, no blink");
+					Conditions.Set(Conditions.CONDITION.SKIP_BLINK, false);
+				}
 			}
-			if (Conditions.Get(Conditions.CONDITION.SNOWMAN_CURRENT_TOY))
-			{
-				Conditions.Set(Conditions.CONDITION.TOY_PLACED, true);
-				Conditions.Set(Conditions.CONDITION.SEED_CURRENT_TOY, false);
-				Conditions.Set(Conditions.CONDITION.SNOWMAN_CURRENT_TOY, true);
-				Conditions.Set(Conditions.CONDITION.TOYS_REMOVED, false);
 
-				PlayerEffectController.Blink(2);
-				Invoke("RemoveSnowman", 1f);
+			if (Conditions.Get(Conditions.CONDITION.TOY_PLACED) != true)
+            {
+				WriteUtil.WriteLine("toy not placed");
+				if (Conditions.Get(Conditions.CONDITION.SEED_CURRENT_TOY) && !Conditions.Get(Conditions.CONDITION.SKIP_BLINK))
+				{
+					PlayerEffectController.Blink(2); PlayerEffectController.AddLock(2);
+					Invoke("AddSeed", 1f);
+					Conditions.Set(Conditions.CONDITION.TOYS_REMOVED, false);
+					WriteUtil.WriteLine("Seed toy");
+				}
 
-				PlayerData.SetPersistentCondition("SNOWMAN_CURRENT_TOY", true);
-				PlayerData.SetPersistentCondition("SEED_CURRENT_TOY", false);
-				PlayerData.SetPersistentCondition("TOYS_REMOVED", false);
+				if (Conditions.Get(Conditions.CONDITION.SNOWMAN_CURRENT_TOY) && !Conditions.Get(Conditions.CONDITION.SKIP_BLINK))
+				{
+					PlayerEffectController.Blink(2); PlayerEffectController.AddLock(2f);
+					Invoke("AddSnowman", 1f);
+					Conditions.Set(Conditions.CONDITION.TOYS_REMOVED, false);
+					WriteUtil.WriteLine("Snowman toy");
+				}
 
-				WriteUtil.WriteLine("Snowman toy");
-
-				PlayerData.SetPersistentCondition(("SEED_CURRENT_TOY_1_LOOP"), false);
-				PlayerData.SetPersistentCondition(("SEED_CURRENT_TOY_2_LOOP"), false);
-				PlayerData.SetPersistentCondition(("SEED_CURRENT_TOY_3_LOOP"), false);
-
-				SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Seed/Toy_Vine_1").SetActive(false);
-				SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Seed/Toy_Vine_2").SetActive(false);
-				SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Seed/Toy_Vine_3").SetActive(false);
-			}
-			if (Conditions.Get(Conditions.CONDITION.TOYS_REMOVED))
-			{
-				Conditions.Set(Conditions.CONDITION.TOY_PLACED, false);
-				Conditions.Set(Conditions.CONDITION.SEED_CURRENT_TOY, false);
-				Conditions.Set(Conditions.CONDITION.SNOWMAN_CURRENT_TOY, false);
-				Conditions.Set(Conditions.CONDITION.TOYS_REMOVED, false);
-
-				PlayerEffectController.Blink(2);
-				Invoke("RemoveToys", 1f);
-
-				PlayerData.SetPersistentCondition("SEED_CURRENT_TOY", false);
-				PlayerData.SetPersistentCondition("SNOWMAN_CURRENT_TOY", false);
-				PlayerData.SetPersistentCondition("TOYS_REMOVED", true);
-
-				WriteUtil.WriteLine("Toys removed");
-
-				PlayerData.SetPersistentCondition(("SEED_CURRENT_TOY_1_LOOP"), false);
-				PlayerData.SetPersistentCondition(("SEED_CURRENT_TOY_2_LOOP"), false);
-				PlayerData.SetPersistentCondition(("SEED_CURRENT_TOY_3_LOOP"), false);
-
-				SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Seed/Toy_Vine_1").SetActive(false);
-				SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Seed/Toy_Vine_2").SetActive(false);
-				SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Seed/Toy_Vine_3").SetActive(false);
+				if (Conditions.Get(Conditions.CONDITION.SKIP_BLINK))
+				{
+					WriteUtil.WriteLine("Skip, no blink");
+					Conditions.Set(Conditions.CONDITION.SKIP_BLINK, false);
+				}
 			}
 		}
 
@@ -161,6 +155,17 @@ namespace ChristmasStory.Characters.Villagers
 				}
 				PlayerData.SetPersistentCondition("SEED_CURRENT_TOY_2_LOOP", true);
 			}
+		}
+
+		private void DestroyVines()
+        {
+			PlayerData.SetPersistentCondition(("SEED_CURRENT_TOY_1_LOOP"), false);
+			PlayerData.SetPersistentCondition(("SEED_CURRENT_TOY_2_LOOP"), false);
+			PlayerData.SetPersistentCondition(("SEED_CURRENT_TOY_3_LOOP"), false);
+
+			SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Seed/Toy_Vine_1").SetActive(false);
+			SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Seed/Toy_Vine_2").SetActive(false);
+			SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Seed/Toy_Vine_3").SetActive(false);
 		}
 
 		private void CheckLastToy()
@@ -193,20 +198,51 @@ namespace ChristmasStory.Characters.Villagers
 			}
 		}
 
-		private void RemoveSeed()
+		private void AddSeed()
 		{
+			Conditions.Set(Conditions.CONDITION.TOYS_REMOVED, false);
+			Conditions.Set(Conditions.CONDITION.TOY_PLACED, true);
+			Conditions.Set(Conditions.CONDITION.SNOWMAN_CURRENT_TOY, false);
+			
+
+			PlayerData.SetPersistentCondition("SEED_CURRENT_TOY", true);
+			PlayerData.SetPersistentCondition("SNOWMAN_CURRENT_TOY", false);
+			PlayerData.SetPersistentCondition("TOYS_REMOVED", false);
+			PlayerData.SetPersistentCondition(("SEED_CURRENT_TOY_1_LOOP"), true);
+
 			SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Seed").SetActive(true);
 			SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Snowman").SetActive(false);
 		}
-		private void RemoveSnowman()
+		private void AddSnowman()
 		{
+			Conditions.Set(Conditions.CONDITION.TOYS_REMOVED, false);
+			Conditions.Set(Conditions.CONDITION.TOY_PLACED, true);
+			Conditions.Set(Conditions.CONDITION.SEED_CURRENT_TOY, false);			
+
+			PlayerData.SetPersistentCondition("SNOWMAN_CURRENT_TOY", true);
+			PlayerData.SetPersistentCondition("SEED_CURRENT_TOY", false);
+			PlayerData.SetPersistentCondition("TOYS_REMOVED", false);
+
 			SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Seed").SetActive(false);
 			SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Snowman").SetActive(true);
+
+			DestroyVines();
 		}
 		private void RemoveToys()
 		{
+			Conditions.Set(Conditions.CONDITION.TOY_PLACED, false);
+			Conditions.Set(Conditions.CONDITION.SEED_CURRENT_TOY, false);
+			Conditions.Set(Conditions.CONDITION.SNOWMAN_CURRENT_TOY, false);			
+
+			PlayerData.SetPersistentCondition("SEED_CURRENT_TOY", false);
+			PlayerData.SetPersistentCondition("SNOWMAN_CURRENT_TOY", false);
+			PlayerData.SetPersistentCondition("TOYS_REMOVED", true);
+			
+
 			SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Seed").SetActive(false);
 			SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Snowman").SetActive(false);
+
+			DestroyVines();
 		}
 
 		private void ChangePromt()

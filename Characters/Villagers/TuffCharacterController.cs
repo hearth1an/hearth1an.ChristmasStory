@@ -55,7 +55,8 @@ namespace ChristmasStory.Characters.Villagers
 		{
 			if (Conditions.Get(Conditions.PERSISTENT.TUFF_DONE))
 			{
-				PlayerEffectController.CloseEyes(1f);				
+				PlayerEffectController.CloseEyes(1f);
+				PlayerEffectController.AddLock(2f);
 				SearchUtilities.Find("Elevator_Dialogue").SetActive(false);
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ZeroGCave/Characters_ZeroGCave/Villager_HEA_Tuff/Tuff_Dialogue").SetActive(false);				
 

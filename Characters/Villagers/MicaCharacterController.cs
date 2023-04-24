@@ -61,6 +61,7 @@ namespace ChristmasStory.Characters.Villagers
 			}
 			if (PlayerData.GetPersistentCondition("SNOWMAN_TOY_GIVEN") && !shipDialogue.activeSelf)
 			{
+				PlayerEffectController.AddLock(2f);
 				PlayerEffectController.Blink(2f);
 				shipDialogue.SetActive(true);
 
@@ -68,6 +69,8 @@ namespace ChristmasStory.Characters.Villagers
 				PlayerData.SetPersistentCondition("SNOWMAN_CURRENT_TOY", true);
 				PlayerData.SetPersistentCondition("TOY_PLACED", true);
 				PlayerData.SetPersistentCondition("TOYS_REMOVED", false);
+
+				WriteUtil.WriteLine("is this thing working");
 
 				SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Snowman").SetActive(true);
 				SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Seed").SetActive(false);
