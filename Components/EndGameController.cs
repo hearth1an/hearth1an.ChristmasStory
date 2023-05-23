@@ -64,12 +64,32 @@ namespace ChristmasStory.Components
 				SearchUtilities.Find("music_no_sol_no_bird").SetActive(true);
 				SearchUtilities.Find("music_no_sol_no_bird").transform.localPosition = new Vector3(0, 1, 0);
 			}
-		}
+		}		 
 		public void EndingTrigger()
 		{
 			PlayerEffectController.Blink(3);
-			SearchUtilities.Find("Ending_Trigger").transform.localPosition = new Vector3(0, 0, 0);
-			SearchUtilities.Find("Ending_Trigger").SetActive(true);
+
+			if (Conditions.Get(Conditions.PERSISTENT.ALL_TRAVELLERS_DONE) && !Conditions.Get(Conditions.PERSISTENT.SOLANUM_DONE) && !Conditions.Get(Conditions.PERSISTENT.PRISONER_DONE) && !Conditions.Get(Conditions.PERSISTENT.SELF_DONE))
+			{
+				SearchUtilities.Find("EndingTrigger_5").transform.localPosition = new Vector3(0, 0, 0);
+				SearchUtilities.Find("EndingTrigger_5").SetActive(true);
+			}
+			else if (Conditions.Get(Conditions.PERSISTENT.ALL_TRAVELLERS_DONE) && Conditions.Get(Conditions.PERSISTENT.SOLANUM_DONE) || Conditions.Get(Conditions.PERSISTENT.PRISONER_DONE) || Conditions.Get(Conditions.PERSISTENT.SELF_DONE))
+			{
+				SearchUtilities.Find("EndingTrigger_6").transform.localPosition = new Vector3(0, 0, 0);
+				SearchUtilities.Find("EndingTrigger_6").SetActive(true);
+			}
+			else if (Conditions.Get(Conditions.PERSISTENT.ALL_TRAVELLERS_DONE) && Conditions.Get(Conditions.PERSISTENT.SOLANUM_DONE) && Conditions.Get(Conditions.PERSISTENT.PRISONER_DONE) || Conditions.Get(Conditions.PERSISTENT.SELF_DONE))
+			{
+				SearchUtilities.Find("EndingTrigger_7").transform.localPosition = new Vector3(0, 0, 0);
+				SearchUtilities.Find("EndingTrigger_7").SetActive(true);
+			}
+			else if (Conditions.Get(Conditions.PERSISTENT.ALL_TRAVELLERS_DONE) && Conditions.Get(Conditions.PERSISTENT.SOLANUM_DONE) && Conditions.Get(Conditions.PERSISTENT.PRISONER_DONE) && Conditions.Get(Conditions.PERSISTENT.SELF_DONE))
+			{
+				SearchUtilities.Find("EndingTrigger_8").transform.localPosition = new Vector3(0, 0, 0);
+				SearchUtilities.Find("EndingTrigger_8").SetActive(true);
+			}
+
 			PlayerEffectController.OpenEyes(3);			
 		}
 

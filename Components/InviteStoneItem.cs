@@ -1,6 +1,7 @@
 ﻿using ChristmasStory.Utility;
 using UnityEngine;
 using NewHorizons.Handlers;
+using NewHorizons.Utility;
 
 namespace ChristmasStory.Components
 {
@@ -23,7 +24,7 @@ namespace ChristmasStory.Components
 		{
 			base.DropItem(position, normal, parent, sector, customDropTarget);
 			EnableInteraction(true);
-			SetColliderActivation(true);
+			SetColliderActivation(true);			
 			PlayerEffectController.PlayAudioOneShot(AudioType.ToolItemSharedStoneDrop);
 		}
 

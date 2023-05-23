@@ -54,6 +54,8 @@ namespace ChristmasStory.Components
 				thMesh.SetActive(false);
 				thMeshFixed.DestroyAllComponents<MeshRenderer>();
 
+				PlayerData.GetFreezeTimeWhileReadingConversations();
+
 				// Timber Hearth transform
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Center_Barrel").transform.localScale = new Vector3(7f, 4.5f, 7f);
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Center_Barrel").AddComponent<CapsuleCollider>();
@@ -73,7 +75,8 @@ namespace ChristmasStory.Components
 				// Prisoner near the tree
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/GhostBird/Ghostbird_Skin_01:Ghostbird_Rig_V01:Base/Ghostbird_Skin_01:Ghostbird_Rig_V01:Root/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine01/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine02/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine03/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine04/Ghostbird_Skin_01:Ghostbird_Rig_V01:ClavicleR/Ghostbird_Skin_01:Ghostbird_Rig_V01:ShoulderR/Ghostbird_Skin_01:Ghostbird_Rig_V01:ElbowR/Ghostbird_Skin_01:Ghostbird_Rig_V01:WristR/Ghostbird_Skin_01:Ghostbird_Rig_V01:HandAttachR/Props_IP_DW_GhostbirdInstrument_Bow").transform.localPosition = new Vector3(0.551f, -0.5451f, 0.2882f);
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/GhostBird/Ghostbird_Skin_01:Ghostbird_Rig_V01:Base/Ghostbird_Skin_01:Ghostbird_Rig_V01:Root/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine01/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine02/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine03/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine04/Ghostbird_Skin_01:Ghostbird_Rig_V01:ClavicleR/Ghostbird_Skin_01:Ghostbird_Rig_V01:ShoulderR/Ghostbird_Skin_01:Ghostbird_Rig_V01:ElbowR/Ghostbird_Skin_01:Ghostbird_Rig_V01:WristR/Ghostbird_Skin_01:Ghostbird_Rig_V01:HandAttachR/Props_IP_DW_GhostbirdInstrument_Bow").transform.localRotation = new Quaternion(0.8624f, 0.037f, -0.5042f, 0.0256f);
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Porphy/ConversationZone").SetActive(false);
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Porphy/ConversationZone").DestroyAllComponents<CharacterDialogueTree>();
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Porphy/ConversationZone").DestroyAllComponents<InteractReceiver>();
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Effects_IP_SarcophagusGlowCenter").transform.localScale = new Vector3(0.5f, 0.2f, 1f);
 
 				// Water wheel
@@ -82,6 +85,7 @@ namespace ChristmasStory.Components
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Interactables_Village/Structure_HEA_WaterWheel/Gears3").DestroyAllComponents<RotateTransform>();
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Interactables_Village/Structure_HEA_WaterWheel/GearsCable").DestroyAllComponents<TextureAnimator>();
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Interactables_Village/Structure_HEA_WaterWheel/WaterWheel").DestroyAllComponents<TextureAnimator>();
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Interactables_Village/Structure_HEA_WaterWheel/WaterWheel").DestroyAllComponents<RotateTransform>();
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Audio_Village/WaterWheel").SetActive(false);
 
 				// Nomai wire
@@ -317,6 +321,8 @@ namespace ChristmasStory.Components
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/New_Tektite/ConversationZone").DestroyAllComponents<InteractReceiver>();
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/New_Tektite/ConversationZone").DestroyAllComponents<CharacterDialogueTree>();
 
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Rutile/ConversationZone").DestroyAllComponents<InteractReceiver>();
+
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Spinel/ConversationZone").DestroyAllComponents<InteractReceiver>();
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Spinel/ConversationZone").DestroyAllComponents<CharacterDialogueTree>();
 
@@ -366,9 +372,10 @@ namespace ChristmasStory.Components
                 // Probe
                 SearchUtilities.Find("Probe_Body/ProbeGravity/Props_NOM_GravityCrystal").transform.localScale = new Vector3(0.16f, 0.16f, 0.16f);
                 SearchUtilities.Find("Probe_Body/ProbeGravity/Props_NOM_GravityCrystal_Base").transform.localScale = new Vector3(0.16f, 0.16f, 0.16f);
+				//SearchUtilities.Find("Probe_Body/ProbeGravity/CapsuleVolume_NOM_GravityCrystal").transform.localScale = new Vector3(2f, 2f, 2f);
 
-                // Rudolfo tiny fish
-                SearchUtilities.Find("Rudolfo/AudioController/LoopSource").GetComponent<AudioSource>().volume = 0.3f;
+				// Rudolfo tiny fish
+				SearchUtilities.Find("Rudolfo/AudioController/LoopSource").GetComponent<AudioSource>().volume = 0.3f;
                 SearchUtilities.Find("Rudolfo").SetActive(false);
 
 				// Riebeck transforms 
@@ -488,6 +495,15 @@ namespace ChristmasStory.Components
 				SearchUtilities.Find("RingWorld_Body/Sector_RingInterior/Sector_Zone4/Sector_PrisonDocks/Sector_PrisonInterior/Interactibles_PrisonInterior/Prefab_IP_Sarcophagus/Prefab_IP_SleepingMummy_v2 (PRISONER)/Mummy_IP_ArtifactAnim").SetActive(false);
 				SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/Prefab_IP_VisionTorchProjector").transform.localPosition = new Vector3(-5f, -2f, -35f);
 				SearchUtilities.Find("Prisoner_Lantern").GetComponent<DreamLanternController>()._lit = true;
+
+
+                var prisonerTotem = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/IslandsRoot/IslandPivot_C/Island_C/Interactibles_Island_C/Prefab_IP_DW_CodeTotem").GetComponent<EclipseCodeController4>();
+				int[] code = { 2, 1, 3, 1, 2 };
+				prisonerTotem._code = code;
+				prisonerTotem.CheckForCode();
+
+			    
+
 
 				var prisonerDialogue = SearchUtilities.Find("Prisoner_Dialogue");
 				var prisonerInteractReciever = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner/InteractReceiver");

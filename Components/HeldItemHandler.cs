@@ -16,12 +16,11 @@ namespace ChristmasStory.Components
 		private GameObject _villageSector;
 		public DreamLanternController PrisonerLantern { get; private set; }
 		public DreamLanternItem PrisonerLanternItem { get; private set; }
-
 		public class ItemEvent : UnityEvent<OWItem> { }
 		public ItemEvent ItemDropped = new();
 		public ItemEvent ItemUnderWater = new();
 		public static HeldItemHandler Instance;
-
+		
 		private bool isPrisonerFailed = false;
 
 		public void Start()
@@ -35,9 +34,10 @@ namespace ChristmasStory.Components
 
 			// Fix prisoner lantern
 			PrisonerLantern = SearchUtilities.Find("Prisoner_Artifact").GetComponent<DreamLanternController>();
-			PrisonerLanternItem = PrisonerLantern.GetComponent<DreamLanternItem>();
+			PrisonerLanternItem = PrisonerLantern.GetComponent<DreamLanternItem>();		
 			
 		}
+	
 		public void PrisonerFailed()
 		{
 			PrisonerLantern._lit = false;
@@ -56,20 +56,24 @@ namespace ChristmasStory.Components
 			WriteUtil.WriteDebug("Prisoner failed. Try next loop.");
 		}
 		public static OWItem GetHeldItem() => Instance._toolModeSwapper.GetItemCarryTool().GetHeldItem();
+		
+		
 
 		/// <summary>
 		/// Returns true if it is the functioning warp core from the ATP
 		/// </summary>
 		/// <returns></returns>
-		public static bool IsPlayerHoldingWarpCore() => GetHeldItem() is WarpCoreItem warpCore && warpCore._wcType == WarpCoreType.Vessel;
+		public static bool IsPlayerHoldingWarpCore() => GetHeldItem() is WarpCoreItem warpCoreItem && warpCoreItem._warpCoreType == WarpCoreType.Vessel;
 
 		public static bool IsPlayerHoldingStrangerArtifact() => GetHeldItem() is DreamLanternItem or VisionTorchItem;
 
 		public static bool IsPlayerHoldingPrisonerArtifact() => GetHeldItem()?.name == "Prisoner_Artifact";
 
-		public static bool IsPlayerHoldingJunk() => GetHeldItem() is not WarpCoreItem or DreamLanternItem or VisionTorchItem or null;
+		public static bool IsPlayerHoldingJunk() => GetHeldItem() is WarpCoreItem warpCoreItem && warpCoreItem._warpCoreType != WarpCoreType.Vessel && GetHeldItem() is not DreamLanternItem or VisionTorchItem;
 
-		public static bool IsPlayerHoldingInviteStone() => GetHeldItem()?.name == "Invite_Stone";
+		public static bool IsPlayerHoldingItem() => Instance._itemTool.enabled == true;
+
+		public static bool IsPlayerHoldingInviteStone() => GetHeldItem()?.name == "Invite_Stone";		
 
 		private void Update()
 		{

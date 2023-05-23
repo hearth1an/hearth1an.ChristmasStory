@@ -13,6 +13,14 @@
 		"CHERT_START_8": "Let's celebrate Christmas! I'm helping the travelers get home for the celebration.",
 		"CHERT_START_9": "Nothing. Have a nice day!",
 		"CHERT_START_10": "What do you mean? You want me to just leave here and interrupt such important work? Absolutely not.",
+
+		"CHERT_START_10.1": "By the way, is my friend Gabbro there already?",
+		"CHERT_START_10.2": "Nope, not yet.",
+		"CHERT_START_10.3": "Yep! You should join us too.",
+		"CHERT_START_10.4": "If Gabbro not there, me neither then. Ask them first, then I'll think about it.",
+		"CHERT_START_10.5": "Alright. Go on, continue telling me why should I leave this place and abandon my entire work.",
+		"CHERT_START_10.6": "So, is Gabbro there already?",
+
 		"CHERT_START_11": "Oh, the thing is, we're in a time loop, and the sun is about to go supernova. I've seen it happen many times now. Also, I've already explored everything, so you might as well go back home.",
 		"CHERT_START_12": "Ha-ha, you're very funny! Go on, tell me everything you know then.",
 		"CHERT_START_13": "The Eye of the Universe was found by species from a nearby solar system, and their cloaked ship is still here.",
@@ -40,7 +48,7 @@
 		"CHERT_START_36": "Oh, that was witty. Tell me that in the next loop in case you're not lying.",
 		"CHERT_START_37": "Okay, I will. Bye.",
 		"CHERT_START_38": "Chert, I know that only you know who the inventor of Jumbo Marshmallows is.",
-		"CHERT_START_39": "Good luck, lad!",
+		"CHERT_START_39": "Good luck with it!",
 		"CHERT_START_40": "Ha-ha.",
 		"CHERT_START_41": "So, I'm waiting for all the proof.",
 		"CHERT_START_43": "Here's the Nomai warp core. They used it to enable the time loop machine.",
@@ -55,9 +63,12 @@
 		"CHERT_START_52": "OH NO! PUT IT BACK! NOW!",
 		"CHERT_START_53": "Oh, don't be upset Chert. I'll fix it. Calm down!",
 		"CHERT_START_54": "Uh... easy for you to say! Okay, take a deep breath... inhale... exhale...",
-		"CHERT_START_55": "Anyway...",
+		// "CHERT_START_55": "Anyway...",
 		"CHERT_START_56": "What an interesting artifact! It seems like the main concept of their technology is some sort of light or flame, am I right? Good job!",
 		"CHERT_START_57": "Yes. They were all about flames and lights.",
+
+		"CHERT_START_57.1": "To be honest, this is mindblowing.. I was not expecting that...",
+
 		"CHERT_START_58": "Okay... you won. My world-view is shattered and I don't feel like I'm doing anything important here, so... let's go celebrate Christmas!",
 		"CHERT_START_59": "Yay! Let's go, my ship is nearby.",
 		"CHERT_START_60": "Wait a sec. I need to bring my ship closer.",
@@ -67,6 +78,14 @@
 		"CHERT_START_64": "Actually... yeah. That's what I was thinking too. Nice guess!",
 		"CHERT_START_65": "So, are you serious about all this?",
 		"CHERT_START_66": "Yes! Let's get down to business.",
+
+		"CHERT_START_67": "Could you remind me what's left?",
+		"CHERT_START_68": "Sure, let's see what's left...",
+		"CHERT_START_69": "You told me the phrase and now you need to bring some unknown Nomai tech and strangers tech, as you said.",
+		"CHERT_START_70": "Thanks for reminding, Chert. I'll be right back.",
+		"CHERT_START_71": "You told me the phrase and showed the Nomai warp core. Now you just need to bring some piece of strangers tech.",
+		"CHERT_START_72": "You told me the phrase and showed the strangers artifact. Now I'm waiting you to bring some unknown Nomai tech.",
+
 
 		// Chert tree
 		"CHERT_TREE_1": "Hey! I wanted to ask.. how do you cope with all your knowledge?",
@@ -171,7 +190,7 @@
 		"GABBRO_START_13": "I never realized you were such a lazy person before. And so morbid, too.",
 		"GABBRO_START_14": "Ha-ha, yep! That's me.",
 		"GABBRO_START_14.1": "By the way, remember the new exhibit at the observatory? There is a secret associated with it. But I will tell about it only on Timber Hearth.",
-		"GABBRO_START_15": "So... I'm waiting for ship explosion! Hurry up and kill me already so we can start a new loop.",
+		"GABBRO_START_15": "So... I'm waiting for ship explosion! Hurry up and kill me already so we can start a new loop... and tell you the secret!",
 		"GABBRO_START_16": "Um. The thing is... my ship is already destroyed.",
 		"GABBRO_START_17": "Sure. I'm working on it.",
 		"GABBRO_START_18": "No luck then. Try not to screw this up next loop!",
@@ -554,15 +573,24 @@
 
 		// Tephra
 
-		"TEPHRA_START_1": "Hullo! <![CDATA[<Pause=2>]]> Are you going to space today?",
+		"TEPHRA_START_1": "Hullo! Are you going to the space today?",
 		"TEPHRA_START_2": "Yes, as planned.",
 		"TEPHRA_START_3": "Galena said that you found some strange rocks for your snowian?",
 		"TEPHRA_START_4": "Awww yeah. They were near those strange wires when Marl cleared out the dead geysers.",
+
 		"TEPHRA_START_4.1": "There was also this other flickering thing with blue lights on it near the rocks, but it was carried away my the water! We couldn't find it after.",
+		"TEPHRA_START_4.2": "Maybe you will find somewhere in the river. I don't think it was carried away from the Village.",
+		"TEPHRA_START_4.3": "Could you remind me about \"flickering thing\" you saw?",
+		"TEPHRA_START_4.4": "Awww sure! It was carried away by the river, but I don't think it was carried away from the Village.",
+
+
 		"TEPHRA_START_5": "Then we decided to make a snowian with the leftover rocks since Moraine and Arkose are \"too busy\" to play with us.",
 		"TEPHRA_START_6": "What do you mean?",
 		"TEPHRA_START_7": "They've been throwing snowballs at each other all day! You can go up there and see.",
-		"TEPHRA_START_8": "Alright, I'll take a look. See you later!",
+		"TEPHRA_START_8": "No, I mean the thing thay you found with rocks. Where it could be?",
+		"TEPHRA_START_8.1": "It was carried away by the river, but I don't think it was carried away from the Village.",
+		"TEPHRA_START_8.2": "Okay, maybe I'll try to find it.",
+		"TEPHRA_START_8.3": "Thanks for reminding.",
 		"TEPHRA_START_9": "Good luck astronaut!",
 
 		// Arkose
@@ -730,7 +758,10 @@
 	"UIDictionary": {
 
 		"MOD_POPUP": "Thanks for installing Christmas Story! This mod contains major spoilers for classic Outer Wilds and the DLC! We recommend for you to create a new profile for a better experience.",
-		"ENDING_TEXT": "THE END",
+		"ENDING_TEXT_5": "THE END \n 5/8 travellers done",
+		"ENDING_TEXT_6": "THE END \n 6/8 travellers done",
+		"ENDING_TEXT_7": "THE END \n 7/8 travellers done",
+		"ENDING_TEXT_8": "THE END \n 8/8 travellers done",
 		"TOTEM_CODE": "Code:",
 		"RADIO_PROMT": "Listen to the radio",
 		"SHIP_TOY_PROMT": "Manage your dashboard toys",

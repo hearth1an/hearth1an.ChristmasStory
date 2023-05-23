@@ -58,9 +58,57 @@
 		<Name>4</Name>
 		<Dialogue>
 			<Page>CHERT_START_10</Page>
+			<Page>CHERT_START_10.1</Page>
 		</Dialogue>
-
 		<DialogueOptionsList>
+			<DialogueOption>
+				<CancelledPersistentCondition>GABBRO_DONE</CancelledPersistentCondition>
+				<Text>CHERT_START_10.2</Text>
+				<DialogueTarget>4.2</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<RequiredPersistentCondition>GABBRO_DONE</RequiredPersistentCondition>
+				<Text>CHERT_START_10.3</Text>
+				<DialogueTarget>4.1</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<SetCondition>WAITING_GABBRO_COMPLETE</SetCondition>
+		<Name>4.2</Name>
+		<Dialogue>
+			<Page>CHERT_START_10.4</Page>			
+		</Dialogue>		
+	</DialogueNode>
+
+	<DialogueNode>
+		<EntryCondition>WAITING_GABBRO_COMPLETE</EntryCondition>
+		<Name>4.3</Name>
+		<Dialogue>
+			<Page>CHERT_START_10.6</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<CancelledPersistentCondition>GABBRO_DONE</CancelledPersistentCondition>
+				<Text>CHERT_START_10.2</Text>
+				<DialogueTarget>4.2</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<RequiredPersistentCondition>GABBRO_DONE</RequiredPersistentCondition>
+				<Text>CHERT_START_10.3</Text>
+				<DialogueTarget>4.1</DialogueTarget>
+				<ConditionToCancel>WAITING_GABBRO_COMPLETE</ConditionToCancel>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>4.1</Name>
+		<Dialogue>
+			<Page>CHERT_START_10.5</Page>			
+		</Dialogue>
+		<DialogueOptionsList>			
 			<DialogueOption>
 				<Text>CHERT_START_11</Text>
 				<DialogueTarget>5</DialogueTarget>
@@ -255,8 +303,69 @@
 				<Text>CHERT_START_47</Text>
 				<CancelledCondition>CHERT_ALL_DONE</CancelledCondition>	
 			</DialogueOption>
+			<DialogueOption>			
+				<CancelledCondition>CHERT_ALL_DONE</CancelledCondition>
+				<Text>CHERT_START_67</Text>
+				<RequiredCondition>CHERT_PHRASE_SOLO</RequiredCondition>				
+				<DialogueTarget>VALIDATE_PHRASE</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>				
+				<CancelledCondition>CHERT_ALL_DONE</CancelledCondition>
+				<Text>CHERT_START_67</Text>				
+				<RequiredCondition>CHERT_PHRASE_AND_CORE</RequiredCondition>
+				<DialogueTarget>VALIDATE_PHRASE_AND_CORE</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>				
+				<CancelledCondition>CHERT_ALL_DONE</CancelledCondition>
+				<Text>CHERT_START_67</Text>
+				<RequiredCondition>CHERT_PHRASE_AND_DLC_ITEM</RequiredCondition>							
+				<DialogueTarget>VALIDATE_PHRASE_AND_DLC_ITEM</DialogueTarget>
+			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
+
+	<DialogueNode>
+		<Name>VALIDATE_PHRASE</Name>
+		<Dialogue>
+			<Page>CHERT_START_68</Page>
+			<Page>CHERT_START_69</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>				
+				<Text>CHERT_START_70</Text>
+				<DialogueTarget>13</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>		
+	</DialogueNode>
+	
+	<DialogueNode>
+		<Name>VALIDATE_PHRASE_AND_CORE</Name>
+		<Dialogue>
+			<Page>CHERT_START_68</Page>
+			<Page>CHERT_START_71</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>CHERT_START_70</Text>
+				<DialogueTarget>13</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>VALIDATE_PHRASE_AND_DLC_ITEM</Name>
+		<Dialogue>
+			<Page>CHERT_START_68</Page>
+			<Page>CHERT_START_72</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>CHERT_START_70</Text>
+				<DialogueTarget>13</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
 
 	<DialogueNode>
 		<Name>19.1</Name>
@@ -297,16 +406,9 @@
 
 	<DialogueNode>
 		<Name>18</Name>
-		<Dialogue>
-		
+		<Dialogue>		
 			<Page>CHERT_START_54</Page>
-		</Dialogue>
-		<DialogueOptionsList>
-			<DialogueOption>
-				<Text>CHERT_START_55</Text>
-				<DialogueTarget>15</DialogueTarget>
-			</DialogueOption>
-		</DialogueOptionsList>
+		</Dialogue>		
 	</DialogueNode>
 
 	<DialogueNode>
@@ -318,9 +420,16 @@
 			<DialogueOption>
 			    <ConditionToSet>CHERT_DLC_ITEM_DONE</ConditionToSet>
 				<Text>CHERT_START_57</Text>
-				<DialogueTarget>15</DialogueTarget>
+				<DialogueTarget>19.8</DialogueTarget>
 			</DialogueOption>
 		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>19.8</Name>
+		<Dialogue>
+			<Page>CHERT_START_57.1</Page>
+		</Dialogue>		
 	</DialogueNode>
 
 	<DialogueNode>

@@ -117,339 +117,354 @@
 
 			},
 			{
-				"rename": "Footprint_1",
-				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
-				"parentPath": "Sector_DreamWorld/Prisoner_Clone",
+				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_DreamZone_1/Ghosts_DreamZone_1/GhostNodeMap_Forest/Prefab_IP_GhostBird_Ebrietas/Ghostbird_IP_ANIM/Ghostbird_Skin_01:Ghostbird_Rig_V01:Base/Ghostbird_Skin_01:Ghostbird_Rig_V01:Root/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine01/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine02/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine03/Ghostbird_Skin_01:Ghostbird_Rig_V01:Spine04/Ghostbird_Skin_01:Ghostbird_Rig_V01:ClavicleR/Ghostbird_Skin_01:Ghostbird_Rig_V01:ShoulderR/Ghostbird_Skin_01:Ghostbird_Rig_V01:ElbowR/Ghostbird_Skin_01:Ghostbird_Rig_V01:WristR/LanternCarrySocket/GhostLantern/Effects_IP_SIM_Artifact",
+				"parentPath": "Sector_DreamWorld/Prisoner_Clone/Prisoner_Lantern",
 				"isRelativeToParent": true,
 				"position": {
-					"x": -0.5239,
-					"y": 0.3586,
-					"z": 3.7054
+					"x": 0,
+					"y": 0.4,
+					"z": 0
 				},
 				"rotation": {
-					"x": 16.0973,
-					"y": 142.6183,
-					"z": 17.3829
-				},
-				"scale": 0.6
+					"x": 0,
+					"y": 0,
+					"z": 0
+				}
+			},
+				{
+					"rename": "Footprint_1",
+					"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
+					"parentPath": "Sector_DreamWorld/Prisoner_Clone",
+					"isRelativeToParent": true,
+					"position": {
+						"x": -0.5239,
+						"y": 0.3586,
+						"z": 3.7054
+					},
+					"rotation": {
+						"x": 16.0973,
+						"y": 142.6183,
+						"z": 17.3829
+					},
+					"scale": 0.6
 
-			},
-			{
-				"rename": "Footprint_2",
-				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
-				"position": {
-					"x": -7.501358,
-					"y": -293.615723,
-					"z": 675.118042
 				},
-				"rotation": {
-					"x": 4.07460165,
-					"y": 256.659363,
-					"z": 17.3828564
+				{
+					"rename": "Footprint_2",
+					"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
+					"position": {
+						"x": -7.501358,
+						"y": -293.615723,
+						"z": 675.118042
+					},
+					"rotation": {
+						"x": 4.07460165,
+						"y": 256.659363,
+						"z": 17.3828564
+					},
+					"scale": 0.599999964,
+					"parentPath": "Sector_DreamWorld/Prisoner_Clone"
 				},
-				"scale": 0.599999964,
-				"parentPath": "Sector_DreamWorld/Prisoner_Clone"
-			},
-			{
-				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
-				"position": {
-					"x": -4.88645172,
-					"y": -290.705963,
-					"z": 689.649231
+				{
+					"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
+					"position": {
+						"x": -4.88645172,
+						"y": -290.705963,
+						"z": 689.649231
+					},
+					"rotation": {
+						"x": 359.662354,
+						"y": 254.474274,
+						"z": 2.76429152
+					},
+					"scale": 0.599999964,
+					"parentPath": "Sector_DreamWorld/Prisoner_Clone"
 				},
-				"rotation": {
-					"x": 359.662354,
-					"y": 254.474274,
-					"z": 2.76429152
+				{
+					"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
+					"position": {
+						"x": -6.395546,
+						"y": -290.746857,
+						"z": 688.155334
+					},
+					"rotation": {
+						"x": 1.36422622,
+						"y": 242.575378,
+						"z": 1.25911164
+					},
+					"scale": 0.599999964,
+					"parentPath": "Sector_DreamWorld/Prisoner_Clone"
 				},
-				"scale": 0.599999964,
-				"parentPath": "Sector_DreamWorld/Prisoner_Clone"
-			},
-			{
-				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
-				"position": {
-					"x": -6.395546,
-					"y": -290.746857,
-					"z": 688.155334
+				{
+					"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
+					"position": {
+						"x": -7.928505,
+						"y": -290.77417,
+						"z": 689.1417
+					},
+					"rotation": {
+						"x": 1.86374152,
+						"y": 266.7863,
+						"z": 0.17611666
+					},
+					"scale": 0.599999964,
+					"parentPath": "Sector_DreamWorld/Prisoner_Clone"
 				},
-				"rotation": {
-					"x": 1.36422622,
-					"y": 242.575378,
-					"z": 1.25911164
+				{
+					"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
+					"position": {
+						"x": -9.602997,
+						"y": -290.846344,
+						"z": 688.05
+					},
+					"rotation": {
+						"x": 2.70184565,
+						"y": 282.853882,
+						"z": 0.7015032
+					},
+					"scale": 0.599999964,
+					"parentPath": "Sector_DreamWorld/Prisoner_Clone"
 				},
-				"scale": 0.599999964,
-				"parentPath": "Sector_DreamWorld/Prisoner_Clone"
-			},
-			{
-				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
-				"position": {
-					"x": -7.928505,
-					"y": -290.77417,
-					"z": 689.1417
+				{
+					"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
+					"position": {
+						"x": -10.5004044,
+						"y": -290.887939,
+						"z": 689.5302
+					},
+					"rotation": {
+						"x": 2.75156879,
+						"y": 277.988,
+						"z": 0.469882339
+					},
+					"scale": 0.599999964,
+					"parentPath": "Sector_DreamWorld/Prisoner_Clone"
 				},
-				"rotation": {
-					"x": 1.86374152,
-					"y": 266.7863,
-					"z": 0.17611666
+				{
+					"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
+					"position": {
+						"x": -12.1159134,
+						"y": -290.938416,
+						"z": 688.346069
+					},
+					"rotation": {
+						"x": 0.400781751,
+						"y": 264.371429,
+						"z": 0.175888
+					},
+					"scale": 0.599999964,
+					"parentPath": "Sector_DreamWorld/Prisoner_Clone"
 				},
-				"scale": 0.599999964,
-				"parentPath": "Sector_DreamWorld/Prisoner_Clone"
-			},
-			{
-				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
-				"position": {
-					"x": -9.602997,
-					"y": -290.846344,
-					"z": 688.05
+				{
+					"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
+					"position": {
+						"x": -13.568161,
+						"y": -290.943634,
+						"z": 689.382263
+					},
+					"rotation": {
+						"x": 0.09786988,
+						"y": 264.8888,
+						"z": 0.0215742271
+					},
+					"scale": 0.599999964,
+					"parentPath": "Sector_DreamWorld/Prisoner_Clone"
 				},
-				"rotation": {
-					"x": 2.70184565,
-					"y": 282.853882,
-					"z": 0.7015032
+				{
+					"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
+					"position": {
+						"x": -14.3868484,
+						"y": -290.945923,
+						"z": 687.6228
+					},
+					"rotation": {
+						"x": 0.330845445,
+						"y": 248.958252,
+						"z": 0.347690582
+					},
+					"scale": 0.599999964,
+					"parentPath": "Sector_DreamWorld/Prisoner_Clone"
 				},
-				"scale": 0.599999964,
-				"parentPath": "Sector_DreamWorld/Prisoner_Clone"
-			},
-			{
-				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
-				"position": {
-					"x": -10.5004044,
-					"y": -290.887939,
-					"z": 689.5302
+				{
+					"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
+					"position": {
+						"x": -16.1951141,
+						"y": -290.933,
+						"z": 687.805
+					},
+					"rotation": {
+						"x": 359.6757,
+						"y": 222.342422,
+						"z": 0.304492176
+					},
+					"scale": 0.599999964,
+					"parentPath": "Sector_DreamWorld/Prisoner_Clone"
 				},
-				"rotation": {
-					"x": 2.75156879,
-					"y": 277.988,
-					"z": 0.469882339
+				{
+					"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
+					"position": {
+						"x": -16.1329575,
+						"y": -290.933655,
+						"z": 685.2674
+					},
+					"rotation": {
+						"x": 359.650024,
+						"y": 213.821167,
+						"z": 0.407298
+					},
+					"scale": 0.599999964,
+					"parentPath": "Sector_DreamWorld/Prisoner_Clone"
 				},
-				"scale": 0.599999964,
-				"parentPath": "Sector_DreamWorld/Prisoner_Clone"
-			},
-			{
-				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
-				"position": {
-					"x": -12.1159134,
-					"y": -290.938416,
-					"z": 688.346069
+				{
+					"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
+					"position": {
+						"x": -17.9476089,
+						"y": -290.9167,
+						"z": 684.8055
+					},
+					"rotation": {
+						"x": 359.680664,
+						"y": 213.4531,
+						"z": 0.3311873
+					},
+					"scale": 0.599999964,
+					"parentPath": "Sector_DreamWorld/Prisoner_Clone"
 				},
-				"rotation": {
-					"x": 0.400781751,
-					"y": 264.371429,
-					"z": 0.175888
+				{
+					"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
+					"position": {
+						"x": -16.9515915,
+						"y": -290.922119,
+						"z": 682.7525
+					},
+					"rotation": {
+						"x": 359.8449,
+						"y": 194.825958,
+						"z": 0.4252359
+					},
+					"scale": 0.599999964,
+					"parentPath": "Sector_DreamWorld/Prisoner_Clone"
 				},
-				"scale": 0.599999964,
-				"parentPath": "Sector_DreamWorld/Prisoner_Clone"
-			},
-			{
-				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
-				"position": {
-					"x": -13.568161,
-					"y": -290.943634,
-					"z": 689.382263
+				{
+					"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
+					"position": {
+						"x": -16.0908127,
+						"y": -290.924042,
+						"z": 680.9387
+					},
+					"rotation": {
+						"x": 0.4926645,
+						"y": 89.39256,
+						"z": 0.136022255
+					},
+					"scale": 0.599999964,
+					"parentPath": "Sector_DreamWorld/Prisoner_Clone"
 				},
-				"rotation": {
-					"x": 0.09786988,
-					"y": 264.8888,
-					"z": 0.0215742271
+				{
+					"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
+					"position": {
+						"x": -14.5523987,
+						"y": -290.940033,
+						"z": 682.0749
+					},
+					"rotation": {
+						"x": 0.481772363,
+						"y": 93.46129,
+						"z": 0.170634583
+					},
+					"scale": 0.599999964,
+					"parentPath": "Sector_DreamWorld/Prisoner_Clone"
 				},
-				"scale": 0.599999964,
-				"parentPath": "Sector_DreamWorld/Prisoner_Clone"
-			},
-			{
-				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
-				"position": {
-					"x": -14.3868484,
-					"y": -290.945923,
-					"z": 687.6228
+				{
+					"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
+					"position": {
+						"x": -13.0211258,
+						"y": -290.950958,
+						"z": 681.322266
+					},
+					"rotation": {
+						"x": 0.5896846,
+						"y": 78.38822,
+						"z": 0.109810442
+					},
+					"scale": 0.599999964,
+					"parentPath": "Sector_DreamWorld/Prisoner_Clone"
 				},
-				"rotation": {
-					"x": 0.330845445,
-					"y": 248.958252,
-					"z": 0.347690582
+				{
+					"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
+					"position": {
+						"x": -12.0271835,
+						"y": -290.965149,
+						"z": 683.1145
+					},
+					"rotation": {
+						"x": 359.8793,
+						"y": 57.5697861,
+						"z": 0.000321983447
+					},
+					"scale": 0.599999964,
+					"parentPath": "Sector_DreamWorld/Prisoner_Clone"
 				},
-				"scale": 0.599999964,
-				"parentPath": "Sector_DreamWorld/Prisoner_Clone"
-			},
-			{
-				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
-				"position": {
-					"x": -16.1951141,
-					"y": -290.933,
-					"z": 687.805
+				{
+					"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
+					"position": {
+						"x": -10.3526611,
+						"y": -290.962372,
+						"z": 682.9477
+					},
+					"rotation": {
+						"x": 359.8834,
+						"y": 42.745533,
+						"z": 0.03119264
+					},
+					"scale": 0.599999964,
+					"parentPath": "Sector_DreamWorld/Prisoner_Clone"
 				},
-				"rotation": {
-					"x": 359.6757,
-					"y": 222.342422,
-					"z": 0.304492176
+				{
+					"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
+					"position": {
+						"x": -9.401428,
+						"y": -290.911072,
+						"z": 684.608337
+					},
+					"rotation": {
+						"x": 359.7737,
+						"y": 99.23653,
+						"z": 357.505737
+					},
+					"scale": 0.599999964,
+					"parentPath": "Sector_DreamWorld/Prisoner_Clone"
 				},
-				"scale": 0.599999964,
-				"parentPath": "Sector_DreamWorld/Prisoner_Clone"
-			},
-			{
-				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
-				"position": {
-					"x": -16.1329575,
-					"y": -290.933655,
-					"z": 685.2674
+				{
+					"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
+					"position": {
+						"x": -7.936928,
+						"y": -291.0199,
+						"z": 683.1764
+					},
+					"rotation": {
+						"x": 1.55050468,
+						"y": 107.975868,
+						"z": 1.08291674
+					},
+					"scale": 0.599999964,
+					"parentPath": "Sector_DreamWorld/Prisoner_Clone"
 				},
-				"rotation": {
-					"x": 359.650024,
-					"y": 213.821167,
-					"z": 0.407298
-				},
-				"scale": 0.599999964,
-				"parentPath": "Sector_DreamWorld/Prisoner_Clone"
-			},
-			{
-				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
-				"position": {
-					"x": -17.9476089,
-					"y": -290.9167,
-					"z": 684.8055
-				},
-				"rotation": {
-					"x": 359.680664,
-					"y": 213.4531,
-					"z": 0.3311873
-				},
-				"scale": 0.599999964,
-				"parentPath": "Sector_DreamWorld/Prisoner_Clone"
-			},
-			{
-				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
-				"position": {
-					"x": -16.9515915,
-					"y": -290.922119,
-					"z": 682.7525
-				},
-				"rotation": {
-					"x": 359.8449,
-					"y": 194.825958,
-					"z": 0.4252359
-				},
-				"scale": 0.599999964,
-				"parentPath": "Sector_DreamWorld/Prisoner_Clone"
-			},
-			{
-				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
-				"position": {
-					"x": -16.0908127,
-					"y": -290.924042,
-					"z": 680.9387
-				},
-				"rotation": {
-					"x": 0.4926645,
-					"y": 89.39256,
-					"z": 0.136022255
-				},
-				"scale": 0.599999964,
-				"parentPath": "Sector_DreamWorld/Prisoner_Clone"
-			},
-			{
-				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
-				"position": {
-					"x": -14.5523987,
-					"y": -290.940033,
-					"z": 682.0749
-				},
-				"rotation": {
-					"x": 0.481772363,
-					"y": 93.46129,
-					"z": 0.170634583
-				},
-				"scale": 0.599999964,
-				"parentPath": "Sector_DreamWorld/Prisoner_Clone"
-			},
-			{
-				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
-				"position": {
-					"x": -13.0211258,
-					"y": -290.950958,
-					"z": 681.322266
-				},
-				"rotation": {
-					"x": 0.5896846,
-					"y": 78.38822,
-					"z": 0.109810442
-				},
-				"scale": 0.599999964,
-				"parentPath": "Sector_DreamWorld/Prisoner_Clone"
-			},
-			{
-				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
-				"position": {
-					"x": -12.0271835,
-					"y": -290.965149,
-					"z": 683.1145
-				},
-				"rotation": {
-					"x": 359.8793,
-					"y": 57.5697861,
-					"z": 0.000321983447
-				},
-				"scale": 0.599999964,
-				"parentPath": "Sector_DreamWorld/Prisoner_Clone"
-			},
-			{
-				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
-				"position": {
-					"x": -10.3526611,
-					"y": -290.962372,
-					"z": 682.9477
-				},
-				"rotation": {
-					"x": 359.8834,
-					"y": 42.745533,
-					"z": 0.03119264
-				},
-				"scale": 0.599999964,
-				"parentPath": "Sector_DreamWorld/Prisoner_Clone"
-			},
-			{
-				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
-				"position": {
-					"x": -9.401428,
-					"y": -290.911072,
-					"z": 684.608337
-				},
-				"rotation": {
-					"x": 359.7737,
-					"y": 99.23653,
-					"z": 357.505737
-				},
-				"scale": 0.599999964,
-				"parentPath": "Sector_DreamWorld/Prisoner_Clone"
-			},
-			{
-				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
-				"position": {
-					"x": -7.936928,
-					"y": -291.0199,
-					"z": 683.1764
-				},
-				"rotation": {
-					"x": 1.55050468,
-					"y": 107.975868,
-					"z": 1.08291674
-				},
-				"scale": 0.599999964,
-				"parentPath": "Sector_DreamWorld/Prisoner_Clone"
-			},
-			{
-				"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
-				"position": {
-					"x": -6.30349731,
-					"y": -291.193451,
-					"z": 683.1167
-				},
-				"rotation": {
-					"x": 9.941251,
-					"y": 142.562729,
-					"z": 357.8504
-				},
-				"scale": 0.599999964,
-				"parentPath": "Sector_DreamWorld/Prisoner_Clone"
-			}
+				{
+					"path": "DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (9)",
+					"position": {
+						"x": -6.30349731,
+						"y": -291.193451,
+						"z": 683.1167
+					},
+					"rotation": {
+						"x": 9.941251,
+						"y": 142.562729,
+						"z": 357.8504
+					},
+					"scale": 0.599999964,
+					"parentPath": "Sector_DreamWorld/Prisoner_Clone"
+				}
 		],
 		"dialogue": [
 			{

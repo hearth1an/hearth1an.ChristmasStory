@@ -48,6 +48,7 @@ namespace ChristmasStory.Characters.Travelers
 			var holdingWarpCore = HeldItemHandler.IsPlayerHoldingWarpCore();
 			var holdingStrangerArtifact = HeldItemHandler.IsPlayerHoldingStrangerArtifact();
 			var holdingJunkItem = HeldItemHandler.IsPlayerHoldingJunk();
+		//	var holdingItem = FindObjectOfType<ToolModeSwapper>()._currentToolMode == ToolMode.Item && FindObjectOfType<ToolModeSwapper>()._currentToolMode == ToolMode.None;
 
 			var shipDestroyed = ShipHandler.HasShipExploded();
 
@@ -57,10 +58,11 @@ namespace ChristmasStory.Characters.Travelers
 			Conditions.Set(Conditions.CONDITION.CHERT_SHIP_NEAR, shipNearChert);
 			Conditions.Set(Conditions.CONDITION.CHERT_SHIP_FAR, shipFar);
 
+			Conditions.Set(Conditions.CONDITION.HOLDING_JUNK_ITEM, holdingJunkItem);			
+
 			Conditions.Set(Conditions.CONDITION.HOLDING_CORE, holdingWarpCore);
 			Conditions.Set(Conditions.CONDITION.HOLDING_DLC_ITEM, holdingStrangerArtifact);
-
-			Conditions.Set(Conditions.CONDITION.HOLDING_JUNK_ITEM, holdingJunkItem);
+						
 
 			ValidateAllDone();			
 		}
@@ -71,10 +73,30 @@ namespace ChristmasStory.Characters.Travelers
 			var coreDone = Conditions.Get(Conditions.CONDITION.CHERT_CORE_DONE);
 			var dlcDone = Conditions.Get(Conditions.CONDITION.CHERT_DLC_ITEM_DONE);
 
+			var holdingSomething = HeldItemHandler.IsPlayerHoldingItem();
+
 			if (phraseTold && coreDone && dlcDone)
 			{
 				Conditions.Set(Conditions.CONDITION.CHERT_ALL_DONE, true);
 				ChristmasStory.Instance.ModHelper.Console.WriteLine("Chert conditions done!");
+				Conditions.Set(Conditions.CONDITION.CHERT_PHRASE_AND_CORE, false);
+				Conditions.Set(Conditions.CONDITION.CHERT_PHRASE_AND_DLC_ITEM, false);
+			}
+			if (phraseTold && coreDone && !dlcDone && !holdingSomething)
+			{
+				Conditions.Set(Conditions.CONDITION.CHERT_PHRASE_AND_CORE, true);
+				Conditions.Set(Conditions.CONDITION.CHERT_PHRASE_AND_DLC_ITEM, false);
+				Conditions.Set(Conditions.CONDITION.CHERT_PHRASE_SOLO, false);
+			}
+			if (phraseTold && dlcDone && !coreDone && !holdingSomething)
+			{
+				Conditions.Set(Conditions.CONDITION.CHERT_PHRASE_AND_DLC_ITEM, true);
+				Conditions.Set(Conditions.CONDITION.CHERT_PHRASE_AND_CORE, false);
+				Conditions.Set(Conditions.CONDITION.CHERT_PHRASE_SOLO, false);
+			}
+			if (phraseTold && !holdingSomething && !dlcDone && !coreDone )
+			{
+				Conditions.Set(Conditions.CONDITION.CHERT_PHRASE_SOLO, true);
 			}
 		}
 

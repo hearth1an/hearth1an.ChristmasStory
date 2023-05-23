@@ -4,7 +4,7 @@
 	"author": "hearth1an & xen",
 	"name": "Christmas Story",
 	"uniqueName": "hearth1an.ChristmasStory",
-	"version": "0.1.2",
+	"version": "0.1.3",
 	"owmlVersion": "2.9.0",
 	"dependencies": [ "xen.NewHorizons" ],
 	"conflicts": [ "Classic.CozyShip" ]	

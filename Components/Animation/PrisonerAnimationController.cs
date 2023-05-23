@@ -20,6 +20,7 @@ namespace ChristmasStory.Components.Animation
             _visionTorchTarget = SearchUtilities.Find("Prisoner_Vision").GetComponent<VisionTorchTarget>();
             _visionTorchTarget.onSlidesComplete = Instance.OnVisionEnd;
             _visionTorchTarget.onSlidesStart = Instance.OnVisionStart;
+            Invoke("EnableCandle", 20);
 
             TotemCodePromptVolume.Create(SearchUtilities.Find("DreamWorld_Body"), new Vector3(-17.9f, -289.6f, 681.9f), 3f);
             var totemPromt = SearchUtilities.Find("DreamWorld_Body/TotemCodePromptVolume");           
@@ -53,33 +54,55 @@ namespace ChristmasStory.Components.Animation
             SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Interactibles_PrisonCell/Elevator_Pivot/Floor_Bottom/Prefab_IP_DreamLibraryPedestal/PressurePlateRoot/DreamLanternSocket").SetActive(false);
             Locator.GetPauseCommandListener().RemovePauseCommandLock();
 
+            Invoke("EnableCandle", 20);
             Invoke("EnableElevator", 50);
         }
         private void TransformTotemRings()
         {
+            Locator.GetPauseCommandListener().RemovePauseCommandLock();
+            
+            SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/DreamCandles/Prefab_IP_DreamCandle (25)/PointLight_Candle").GetComponent<Light>().color = new Color(0, 0.8997f, 0.8038f, 1);
+            SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/DreamCandles/Prefab_IP_DreamCandle (25)/Prop_IP_Candle_Ground/Candle_Ground_Flame").GetComponent<MeshRenderer>().material.color = new Color(0, 1, 1, 1);
+
+           
+
             var ring_1 = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/IslandsRoot/IslandPivot_C/Island_C/Interactibles_Island_C/Prefab_IP_DW_CodeTotem/CodeDisplay/Props_IP_CodeTotem/rings/ring01").GetComponent<RotaryDial>();
             var ring_2 = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/IslandsRoot/IslandPivot_C/Island_C/Interactibles_Island_C/Prefab_IP_DW_CodeTotem/CodeDisplay/Props_IP_CodeTotem/rings/ring02").GetComponent<RotaryDial>();
             var ring_3 = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/IslandsRoot/IslandPivot_C/Island_C/Interactibles_Island_C/Prefab_IP_DW_CodeTotem/CodeDisplay/Props_IP_CodeTotem/rings/ring03").GetComponent<RotaryDial>();
             var ring_4 = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/IslandsRoot/IslandPivot_C/Island_C/Interactibles_Island_C/Prefab_IP_DW_CodeTotem/CodeDisplay/Props_IP_CodeTotem/rings/ring04").GetComponent<RotaryDial>();
             var ring_5 = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/IslandsRoot/IslandPivot_C/Island_C/Interactibles_Island_C/Prefab_IP_DW_CodeTotem/CodeDisplay/Props_IP_CodeTotem/rings/ring05").GetComponent<RotaryDial>();
 
-            ring_1._symbolSelected = 1;
+            ring_1._symbolSelected = 2;
             ring_1.Awake();
 
-            ring_2._symbolSelected = 2;
+            ring_2._symbolSelected = 1;
             ring_2.Awake();
 
             ring_3._symbolSelected = 3;
             ring_3.Awake();
 
-            ring_4._symbolSelected = 2;
+            ring_4._symbolSelected = 1;
             ring_4.Awake();
 
-            ring_5._symbolSelected = 1;
+            ring_5._symbolSelected = 2;
             ring_5.Awake();
 
             SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/IslandsRoot/IslandPivot_C/Island_C/Interactibles_Island_C/Prefab_IP_DW_CodeTotem").GetComponent<EclipseCodeController4>().CheckForCode();
+           
+                        
+        }
+        public void EnableCandle()
+        {
+            var candle = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/DreamCandles/Prefab_IP_DreamCandle (25)").GetComponent<DreamCandle>();
+            candle._startLit = true;
+            candle._lit = true;            
+            candle.enabled = true;
+            candle.Start();
+
+            WriteUtil.WriteLine("Enabling candle");
+
             SearchUtilities.Find("DreamWorld_Body/TotemCodePromptVolume").SetActive(true);
+            SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/IslandsRoot/IslandPivot_C/Island_C/Interactibles_Island_C/Prefab_IP_DW_CodeTotem/CodeDisplay/Props_IP_CodeTotem/InteriorGlow").SetActive(true);
         }
         private void EnableElevator() => SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Interactibles_PrisonCell/Elevator_Pivot/Floor_Bottom/Prefab_IP_DreamLibraryPedestal/PressurePlateRoot/DreamLanternSocket").SetActive(true);
     }   

@@ -62,13 +62,46 @@
             {
                 "deathType": "bigBang",
                 "creditsType": "fast",
-                "gameOverText": "ENDING_TEXT",
+                "gameOverText": "ENDING_TEXT_5",
                 "radius": 10,
                 "isRelativeToParent": true,
                 "position": {
                     "y": -100
                 },
-                "rename": "Ending_Trigger"
+                "rename": "Ending_Trigger_5"
+            },
+            {
+                "deathType": "bigBang",
+                "creditsType": "fast",
+                "gameOverText": "ENDING_TEXT_6",
+                "radius": 10,
+                "isRelativeToParent": true,
+                "position": {
+                    "y": -100
+                },
+                "rename": "Ending_Trigger_6"
+            },
+            {
+                "deathType": "bigBang",
+                "creditsType": "fast",
+                "gameOverText": "ENDING_TEXT_7",
+                "radius": 10,
+                "isRelativeToParent": true,
+                "position": {
+                    "y": -100
+                },
+                "rename": "Ending_Trigger_7"
+            },
+            {
+                "deathType": "bigBang",
+                "creditsType": "fast",
+                "gameOverText": "ENDING_TEXT_8",
+                "radius": 10,
+                "isRelativeToParent": true,
+                "position": {
+                    "y": -100
+                },
+                "rename": "Ending_Trigger_8"
             }
         ]
     },

@@ -10,7 +10,7 @@
 		<DialogueOptionsList>
 			<DialogueOption>
 				<Text>TEPHRA_START_2</Text>
-				<DialogueTarget>1</DialogueTarget>
+				<DialogueTarget>END_2</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
 			<RequiredPersistentCondition>SORRY_GALENA</RequiredPersistentCondition>
@@ -25,8 +25,10 @@
 		<Name>2</Name>	
 		<SetPersistentCondition>SNOWMAN_TEPHRA_TOLD</SetPersistentCondition>	
 		<Dialogue>
-			<Page>TEPHRA_START_4</Page>
-			<Page>TEPHRA_START_5</Page>			
+			<Page>TEPHRA_START_4</Page>			
+			<Page>TEPHRA_START_5</Page>
+			<Page>TEPHRA_START_4.1</Page>
+			<Page>TEPHRA_START_4.2</Page>
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
@@ -52,19 +54,30 @@
 
 	<DialogueNode>
 		<Name>1</Name>	
-		<SetCondition>END</SetCondition>
+		<SetCondition>END</SetCondition>		
 		<Dialogue>
-			<Page>TEPHRA_START_9</Page>						
+			<Page>TEPHRA_START_8.1</Page>						
 		</Dialogue>
-		<DialogueOptionsList>					
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>TEPHRA_START_8.2</Text>
+				<DialogueTarget>END_2</DialogueTarget>
+			</DialogueOption>
 		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>END_2</Name>		
+		<Dialogue>
+			<Page>TEPHRA_START_9</Page>
+		</Dialogue>	
 	</DialogueNode>
 
 	<DialogueNode>
 		<Name>END</Name>	
 		<EntryCondition>END</EntryCondition>
 		<Dialogue>
-			<Page>TEPHRA_START_9</Page>						
+			<Page>TEPHRA_START_1</Page>						
 		</Dialogue>
 		<DialogueOptionsList>
 		<DialogueOption>
@@ -72,7 +85,35 @@
 			<CancelledPersistentCondition>SNOWMAN_TEPHRA_TOLD</CancelledPersistentCondition>
 				<Text>TEPHRA_START_3</Text>
 				<DialogueTarget>2</DialogueTarget>
-			</DialogueOption>					
+			</DialogueOption>
+			<DialogueOption>				
+				<CancelledCondition>RECORDER_REPEAT</CancelledCondition>
+				<Text>TEPHRA_START_4.3</Text>
+				<DialogueTarget>RECORDER</DialogueTarget>
+			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
+
+	<DialogueNode>
+		<Name>END_RECORDER</Name>
+		<EntryCondition>RECORDER_REPEAT</EntryCondition>
+		<Dialogue>
+			<Page>TEPHRA_START_9</Page>
+		</Dialogue>		
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>RECORDER</Name>
+		<SetCondition>RECORDER_REPEAT</SetCondition>
+		<Dialogue>
+			<Page>TEPHRA_START_4.4</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>TEPHRA_START_8.3</Text>
+				<DialogueTarget>END_2</DialogueTarget>				
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+	
 </DialogueTree>

@@ -49,7 +49,7 @@ namespace ChristmasStory.Characters.Villagers
 			}
 
 			base.Start();
-			Invoke("ChangePromt", 1f);
+			ChangePromt();
 		}
 
 		protected override void Dialogue_OnStartConversation()
@@ -80,6 +80,8 @@ namespace ChristmasStory.Characters.Villagers
 		}
 		protected override void Dialogue_OnEndConversation()
 		{
+
+			// Can remove toy
 			if (Conditions.Get(Conditions.CONDITION.TOY_PLACED) == true)
             {
 				WriteUtil.WriteLine("toy  placed");				
@@ -110,6 +112,7 @@ namespace ChristmasStory.Characters.Villagers
 				}
 			}
 
+			// Can't remove toy, only place it
 			if (Conditions.Get(Conditions.CONDITION.TOY_PLACED) != true)
             {
 				WriteUtil.WriteLine("toy not placed");
