@@ -19,8 +19,7 @@ namespace ChristmasStory.Components.Animation
             _animator = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner/Ghostbird_IP_ANIM").GetComponent<PrisonerEffects>();
             _visionTorchTarget = SearchUtilities.Find("Prisoner_Vision").GetComponent<VisionTorchTarget>();
             _visionTorchTarget.onSlidesComplete = Instance.OnVisionEnd;
-            _visionTorchTarget.onSlidesStart = Instance.OnVisionStart;
-            Invoke("EnableCandle", 20);
+            _visionTorchTarget.onSlidesStart = Instance.OnVisionStart;            
 
             TotemCodePromptVolume.Create(SearchUtilities.Find("DreamWorld_Body"), new Vector3(-17.9f, -289.6f, 681.9f), 3f);
             var totemPromt = SearchUtilities.Find("DreamWorld_Body/TotemCodePromptVolume");           
@@ -64,7 +63,6 @@ namespace ChristmasStory.Components.Animation
             SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/DreamCandles/Prefab_IP_DreamCandle (25)/PointLight_Candle").GetComponent<Light>().color = new Color(0, 0.8997f, 0.8038f, 1);
             SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/DreamCandles/Prefab_IP_DreamCandle (25)/Prop_IP_Candle_Ground/Candle_Ground_Flame").GetComponent<MeshRenderer>().material.color = new Color(0, 1, 1, 1);
 
-           
 
             var ring_1 = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/IslandsRoot/IslandPivot_C/Island_C/Interactibles_Island_C/Prefab_IP_DW_CodeTotem/CodeDisplay/Props_IP_CodeTotem/rings/ring01").GetComponent<RotaryDial>();
             var ring_2 = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/IslandsRoot/IslandPivot_C/Island_C/Interactibles_Island_C/Prefab_IP_DW_CodeTotem/CodeDisplay/Props_IP_CodeTotem/rings/ring02").GetComponent<RotaryDial>();
