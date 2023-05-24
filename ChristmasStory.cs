@@ -44,8 +44,10 @@ namespace ChristmasStory
 			{	
 				if (loadScene == OWScene.TitleScreen)
                 {
+					var sceneTransformController_2 = new GameObject("SceneTransformController");
+					sceneTransformController_2.AddComponent<SceneTransformController>();
 					// for swithcing scene
-					sceneTransformController.GetComponent<SceneTransformController>().TitleScreenChanges();
+					sceneTransformController_2.GetComponent<SceneTransformController>().TitleScreenChanges();
 				}
 				if (loadScene == OWScene.Credits_Fast)
 				{

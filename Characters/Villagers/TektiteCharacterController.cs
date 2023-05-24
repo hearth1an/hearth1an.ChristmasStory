@@ -84,6 +84,7 @@ namespace ChristmasStory.Characters.Villagers
 			SearchUtilities.Find("Tektite_Trigger").SetActive(true);
 			SearchUtilities.Find("Tektite_Trigger").GetComponent<UnityEngine.SphereCollider>().enabled = false;
 			SearchUtilities.Find("Tektite_Trigger").GetComponent<UnityEngine.SphereCollider>().enabled = true;
+			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2/Tektite_Dialogue").GetComponent<CharacterDialogueTree>().StartConversation();
 		}
 
 

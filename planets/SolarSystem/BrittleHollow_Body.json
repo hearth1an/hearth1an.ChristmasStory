@@ -105,6 +105,20 @@
 				}
 			},
 			{
+				"rename": "Grav_Crystal_3.1",
+				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Interactables_Crossroads/VisibleFrom_BH/GravityCrystals/OtherComponentsGroup/Prefab_NOM_GravityCrystal",
+				"position": {
+					"x": 123.1839,
+					"y": -102.4755,
+					"z": -184.6826
+				},
+				"rotation": {
+					"x": 24.34,
+					"y": 357.55,
+					"z": 300.38
+				}
+			},
+			{
 				"rename": "Grav_Crystal_4",
 				"path": "BrittleHollow_Body/Sector_BH/Sector_Crossroads/Interactables_Crossroads/VisibleFrom_BH/GravityCrystals/OtherComponentsGroup/Prefab_NOM_GravityCrystal",
 				"position": {

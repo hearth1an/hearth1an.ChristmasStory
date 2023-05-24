@@ -31,7 +31,7 @@ namespace ChristmasStory.Characters.Villagers
 			}
 			if (Conditions.Get(Conditions.CONDITION.START_END_EVENT))
 			{
-				PlayerEffectController.AddLock(7);
+				PlayerEffectController.AddLock(2);
 				PlayerEffectController.CloseEyes(3);
 				PlayerEffectController.OpenEyes(4);
 

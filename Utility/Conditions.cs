@@ -9,6 +9,8 @@ namespace ChristmasStory.Utility
 			SHIP_DESTROYED,
 			SHIP_NEAR_VILLAGE,
 
+			// Slate
+			SLATE_DO_NOT_START_IMMIDIATE,
 
 			// Chert
 			CHERT_SHIP_NEAR,
@@ -112,7 +114,7 @@ namespace ChristmasStory.Utility
 
 			ALL_TRAVELLERS_DONE,
 
-			SLATE_START_DONE,			
+			SLATE_START_DONE,	
 			HAL_ROCK_TOLD,
 			HORNFELS_FISH_TOLD,
 			ERNESTO_DONE,

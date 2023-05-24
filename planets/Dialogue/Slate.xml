@@ -28,6 +28,7 @@
 				<DialogueTarget>7.2</DialogueTarget>
 			</DialogueOption>			
 			<DialogueOption>
+				<CancelledPersistentCondition>ALL_TRAVELLERS_DONE</CancelledPersistentCondition>
 				<Text>SLATE_START_50</Text>
 				<RequiredPersistentCondition>SLATE_FIRST_LOOP_DONE</RequiredPersistentCondition>
 				<DialogueTarget>11</DialogueTarget>
@@ -160,7 +161,7 @@
 				<Text>SLATE_START_2</Text>
 				<DialogueTarget>100</DialogueTarget>
 		</DialogueOption>
-			<DialogueOption>
+			<DialogueOption>				
 				<RequiredPersistentCondition>SLATE_TOLD_SCOUT</RequiredPersistentCondition>
 				<Text>SLATE_START_5</Text>
 				<ConditionToSet>SLATE_START_VILLAGE</ConditionToSet>
@@ -172,6 +173,7 @@
 				<DialogueTarget>10</DialogueTarget>
 		</DialogueOption>
 		<DialogueOption>
+			<CancelledPersistentCondition>ALL_TRAVELLERS_DONE</CancelledPersistentCondition>
 				<Text>SLATE_START_4</Text>
 				<DialogueTarget>7.2</DialogueTarget>
 		</DialogueOption>	
@@ -191,7 +193,7 @@
 	</DialogueNode>
 
 	<DialogueNode>
-		<Name>11.1</Name>
+		<Name>11.1</Name>		
 		<Dialogue>
 			<Page>SLATE_START_32</Page>
 		</Dialogue>
@@ -256,12 +258,15 @@
 		<DialogueOptionsList>
 		<DialogueOption>		
 				<Text>SLATE_START_39</Text>
-				<DialogueTarget>11</DialogueTarget>
-				<ConditionToSet>SLATE_TRAVELLERS_DONE_2</ConditionToSet>
+				<DialogueTarget>101</DialogueTarget>
+			<ConditionToCancel>SLATE_DO_NOT_START_IMMIDIATE</ConditionToCancel>			   
 		</DialogueOption>
 		<DialogueOption>
 				<Text>SLATE_START_40</Text>
 				<DialogueTarget>103</DialogueTarget>
+			<ConditionToSet>SLATE_DO_NOT_START_IMMIDIATE</ConditionToSet>
+			    <ConditionToSet>SLATE_TRAVELLERS_DONE_2</ConditionToSet>
+			   
 		</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
@@ -276,10 +281,12 @@
 		<DialogueOption>
 				<Text>SLATE_START_43</Text>
 				<DialogueTarget>11.1</DialogueTarget>
+			    <ConditionToCancel>SLATE_DO_NOT_START_IMMIDIATE</ConditionToCancel>
 		</DialogueOption>
 		<DialogueOption>
 				<Text>SLATE_START_44</Text>
 				<DialogueTarget>103</DialogueTarget>
+			    <ConditionToSet>SLATE_DO_NOT_START_IMMIDIATE</ConditionToSet>
 		</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
@@ -297,8 +304,9 @@
 		</DialogueOption>
 		<DialogueOption>
 				<Text>SLATE_START_47</Text>
-				<DialogueTarget>103</DialogueTarget>				
-		</DialogueOption>
+				<DialogueTarget>103</DialogueTarget>
+			    <ConditionToSet>SLATE_DO_NOT_START_IMMIDIATE</ConditionToSet>		
+	</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
 

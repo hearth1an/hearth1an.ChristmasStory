@@ -45,6 +45,7 @@ namespace ChristmasStory.Components.Animation
             SearchUtilities.Find("Prisoner_Dialogue").SetActive(false);
             SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Props_PrisonCell/LowerCell/Props_IP_GhostbirdInstrument").SetActive(false);
             SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Props_PrisonCell/LowerCell/Props_IP_GhostbirdInstrument_Bow").SetActive(false);
+            
         }
         private void OnVisionEnd()
         {
@@ -60,9 +61,7 @@ namespace ChristmasStory.Components.Animation
         {
             Locator.GetPauseCommandListener().RemovePauseCommandLock();
             
-            SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/DreamCandles/Prefab_IP_DreamCandle (25)/PointLight_Candle").GetComponent<Light>().color = new Color(0, 0.8997f, 0.8038f, 1);
-            SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/DreamCandles/Prefab_IP_DreamCandle (25)/Prop_IP_Candle_Ground/Candle_Ground_Flame").GetComponent<MeshRenderer>().material.color = new Color(0, 1, 1, 1);
-
+           
 
             var ring_1 = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/IslandsRoot/IslandPivot_C/Island_C/Interactibles_Island_C/Prefab_IP_DW_CodeTotem/CodeDisplay/Props_IP_CodeTotem/rings/ring01").GetComponent<RotaryDial>();
             var ring_2 = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/IslandsRoot/IslandPivot_C/Island_C/Interactibles_Island_C/Prefab_IP_DW_CodeTotem/CodeDisplay/Props_IP_CodeTotem/rings/ring02").GetComponent<RotaryDial>();
@@ -91,16 +90,30 @@ namespace ChristmasStory.Components.Animation
         }
         public void EnableCandle()
         {
-            var candle = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/DreamCandles/Prefab_IP_DreamCandle (25)").GetComponent<DreamCandle>();
-            candle._startLit = true;
-            candle._lit = true;            
-            candle.enabled = true;
-            candle.Start();
-
-            WriteUtil.WriteLine("Enabling candle");
-
-            SearchUtilities.Find("DreamWorld_Body/TotemCodePromptVolume").SetActive(true);
+           SearchUtilities.Find("DreamWorld_Body/TotemCodePromptVolume").SetActive(true);
             SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/IslandsRoot/IslandPivot_C/Island_C/Interactibles_Island_C/Prefab_IP_DW_CodeTotem/CodeDisplay/Props_IP_CodeTotem/InteriorGlow").SetActive(true);
+
+
+            ChristmasStory.Instance.ModHelper.Events.Unity.FireOnNextUpdate(() =>
+            {
+                SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/DreamCandles/Prefab_IP_DreamCandle (25)/PointLight_Candle").GetComponent<Light>().color = new Color(0, 0.8997f, 0.8038f, 1);
+                SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/DreamCandles/Prefab_IP_DreamCandle (25)/Prop_IP_Candle_Ground/Candle_Ground_Flame").GetComponent<MeshRenderer>().material.color = new Color(0, 1, 1, 1);
+                /*
+                var candle = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/DreamCandles/Prefab_IP_DreamCandle (25)").GetComponent<DreamCandle>();
+                candle._startLit = true;
+                candle.SetLit(true);
+                candle._lit = true;
+                candle.enabled = true;
+                candle.Start();
+                */
+
+                var candleController = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/DreamCandles/Prefab_IP_DreamCandle (25)").GetComponent<OWFlameController>();
+                candleController.SetIntensity(1);
+                candleController._intensity = 1f;
+                candleController.UpdateVisuals();
+
+                WriteUtil.WriteLine("Enabling candle! "+candleController.GetIntensity());
+            });
         }
         private void EnableElevator() => SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Interactibles_PrisonCell/Elevator_Pivot/Floor_Bottom/Prefab_IP_DreamLibraryPedestal/PressurePlateRoot/DreamLanternSocket").SetActive(true);
     }   

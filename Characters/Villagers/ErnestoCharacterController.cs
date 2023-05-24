@@ -28,7 +28,7 @@ namespace ChristmasStory.Characters.Villagers
 			{
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Interactables_Observatory/AnglerFishExhibit/Ernesto_Dialogue").SetActive(false);
 				PlayerEffectController.Blink(4f);
-				PlayerEffectController.AddLock(4f);
+				PlayerEffectController.AddLock(3f);
 				Invoke("EnableErnesto", 2f);
 			}
 

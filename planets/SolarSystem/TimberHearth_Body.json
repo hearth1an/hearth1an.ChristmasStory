@@ -805,14 +805,14 @@
 					"FoundShipTrigger"
 				],
 				"position": {
-					"x": 6.2146,
-					"y": -113.1721,
-					"z": 231.55
+					"x": -0.4156,
+					"y": -114.4282,
+					"z": 231.57
 				},
 				"rotation": {
-					"x": 28.4168,
-					"y": 232.5569,
-					"z": 183.4288
+					"x": 11.4069,
+					"y": 235.3808,
+					"z": 76.2901
 				}
 			},
 			{
@@ -1428,7 +1428,7 @@
 			{
 				"position": {
 					"x": 0,
-					"y": 2,
+					"y": 1.5,
 					"z": 0
 				},
 				"xmlFile": "planets/Dialogue/Slate.xml",
@@ -1448,8 +1448,7 @@
 				},
 				"rename": "Slate_Dialogue",
 				"lookAtRadius": 6,
-				"radius": 1,
-				"range": 2
+				"radius": 1				
 			},
 			{
 				"position": {
@@ -1458,6 +1457,7 @@
 					"z": 0
 				},
 				"xmlFile": "planets/Dialogue/Slate.xml",
+				"rename": "Slate_Dialogue_Main",
 				"parentPath": "Sector_TH/Slate_Village",
 				"isRelativeToParent": true,
 				"pathToAnimController": "Sector_TH/Slate_Village/Villager_HEA_Slate_ANIM_LogSit",
@@ -1468,6 +1468,7 @@
 
 			{
 				"parentPath": "Sector_TH/Slate_Village_Final",
+				"rename": "Slate_Final_Dialogue",
 				"isRelativeToParent": true,
 				"position": {
 					"x": 0,
@@ -1592,7 +1593,7 @@
 				"xmlFile": "planets/Dialogue/Rutile.xml",
 				"rename": "Rutile_Dialogue",
 				"pathToAnimController": "Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Rutile/Villager_HEA_Rutile_ANIM_Rocking",
-				"lookAtRadius": 2,
+				"lookAtRadius": 1,
 				"radius": 2,
 				"range": 2
 			},
@@ -1754,12 +1755,10 @@
 		"Sector_TH/Sector_Village/Interactables_Village/GeyserBoards_Flags",
 		"Sector_TH/Sector_Village/Sector_LowerVillage/Lighting_LowerVillage/OtherComponentsGroup/LowerVillage/Props_HEA_Lantern (11)",
 		"Sector_TH/Sector_Village/Volumes_Village/MusicVolume_Village",
-		"Sector_TH/Sector_Village/Sector_StartingCamp/Characters_StartingCamp/Villager_HEA_Slate",
-		"Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Porphy/ConversationZone",
+		"Sector_TH/Sector_Village/Sector_StartingCamp/Characters_StartingCamp/Villager_HEA_Slate",		
 		"Sector_TH/Sector_Village/Sector_Observatory/Interactables_Observatory/AnglerFishExhibit/AnglerFishTankPivot/Beast_Anglerfish/Ernesto_Dialogue",
-
-		"Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Marl_Dialogue_Final",
 		"Sector_TH/Slate_Village/Slate_Dialogue",
+		"Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/Marl_Dialogue_Final",
 		"Sector_TH/Sector_Village/Sector_Observatory/Characters_Observatory/Character_HEA_Hal_Museum",
 		"Sector_TH/Hal_Village_Final",
 		"Sector_TH/Hornfels_Village_Final",

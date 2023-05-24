@@ -1,6 +1,7 @@
 ﻿using ChristmasStory.Components;
 using ChristmasStory.Utility;
 using NewHorizons.Utility;
+using NewHorizons.Components;
 using UnityEngine;
 
 namespace ChristmasStory.Characters.Villagers
@@ -63,14 +64,14 @@ namespace ChristmasStory.Characters.Villagers
 		private void SwapDialogue()
 		{
 			PlayerEffectController.PlayAudioOneShot(AudioType.ToolItemSharedStonePickUp, 1f);
-			HeldItemHandler.GivePlayerInviteStone();
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Trigger_2").SetActive(true);
-			Invoke("EnableDialogue3", 3f);
+			HeldItemHandler.GivePlayerInviteStone();			
+			Invoke("EnableDialogue3", 1f);
 		}
 
 		private void EnableDialogue3()
 		{
-			SearchUtilities.Find("TimberHearth_Body/Sector_THHal_Village/Hal_Dialogue_3").SetActive(true);
+			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Dialogue_3").SetActive(true);
+			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Dialogue_3").GetComponent<CharacterDialogueTree>().StartConversation();
 		}
 		protected override void OnChangeState(STATE oldState, STATE newState) { }
 	}

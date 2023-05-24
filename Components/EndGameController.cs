@@ -16,15 +16,13 @@ namespace ChristmasStory.Components
 		public void Start()
 		{
 			Instance = this;
-
 		}
 
 		public void StartErnestoShine()
 		{
 			PlayerEffectController.PlayAudioOneShot(AudioType.PlayerGasp_Light, 1f);
 			StartCoroutine(IncreaseLightLevel());
-			EndGameEvent();
-			Locator.GetPauseCommandListener().AddPauseCommandLock();
+			EndGameEvent();			
 		}
 
 		public IEnumerator IncreaseLightLevel()
@@ -42,7 +40,10 @@ namespace ChristmasStory.Components
 		public void EndGameEvent()
 		{
 			Invoke("EndingTrigger", 52f);
-			Invoke("BlowUpSun", 45f);
+            Invoke("BlowUpSun", 45f);
+
+			Locator.GetPauseCommandListener().AddPauseCommandLock();
+			Locator.GetPlayerCamera().GetComponent<FirstPersonManipulator>().enabled = false;			
 
 			if (Conditions.Get(Conditions.PERSISTENT.ALL_TRAVELLERS_DONE) && Conditions.Get(Conditions.PERSISTENT.SOLANUM_DONE) && Conditions.Get(Conditions.PERSISTENT.PRISONER_DONE))
 			{
@@ -64,33 +65,40 @@ namespace ChristmasStory.Components
 				SearchUtilities.Find("music_no_sol_no_bird").SetActive(true);
 				SearchUtilities.Find("music_no_sol_no_bird").transform.localPosition = new Vector3(0, 1, 0);
 			}
+			
 		}		 
 		public void EndingTrigger()
 		{
 			PlayerEffectController.Blink(3);
 
-			if (Conditions.Get(Conditions.PERSISTENT.ALL_TRAVELLERS_DONE) && !Conditions.Get(Conditions.PERSISTENT.SOLANUM_DONE) && !Conditions.Get(Conditions.PERSISTENT.PRISONER_DONE) && !Conditions.Get(Conditions.PERSISTENT.SELF_DONE))
+			if (Conditions.Get(Conditions.PERSISTENT.ALL_TRAVELLERS_DONE) && Conditions.Get(Conditions.PERSISTENT.SOLANUM_DONE) && Conditions.Get(Conditions.PERSISTENT.PRISONER_DONE) && Conditions.Get(Conditions.PERSISTENT.SELF_DONE))
 			{
-				SearchUtilities.Find("EndingTrigger_5").transform.localPosition = new Vector3(0, 0, 0);
-				SearchUtilities.Find("EndingTrigger_5").SetActive(true);
-			}
-			else if (Conditions.Get(Conditions.PERSISTENT.ALL_TRAVELLERS_DONE) && Conditions.Get(Conditions.PERSISTENT.SOLANUM_DONE) || Conditions.Get(Conditions.PERSISTENT.PRISONER_DONE) || Conditions.Get(Conditions.PERSISTENT.SELF_DONE))
-			{
-				SearchUtilities.Find("EndingTrigger_6").transform.localPosition = new Vector3(0, 0, 0);
-				SearchUtilities.Find("EndingTrigger_6").SetActive(true);
+				SearchUtilities.Find("Ending_Trigger_8").transform.localPosition = new Vector3(0, 0, 0);
+				SearchUtilities.Find("Ending_Trigger_8").SetActive(true);
+				WriteUtil.WriteLine("Ending 8/8");
 			}
 			else if (Conditions.Get(Conditions.PERSISTENT.ALL_TRAVELLERS_DONE) && Conditions.Get(Conditions.PERSISTENT.SOLANUM_DONE) && Conditions.Get(Conditions.PERSISTENT.PRISONER_DONE) || Conditions.Get(Conditions.PERSISTENT.SELF_DONE))
 			{
-				SearchUtilities.Find("EndingTrigger_7").transform.localPosition = new Vector3(0, 0, 0);
-				SearchUtilities.Find("EndingTrigger_7").SetActive(true);
+				SearchUtilities.Find("Ending_Trigger_7").transform.localPosition = new Vector3(0, 0, 0);
+				SearchUtilities.Find("Ending_Trigger_7").SetActive(true);
+				WriteUtil.WriteLine("Ending 7/8");
 			}
-			else if (Conditions.Get(Conditions.PERSISTENT.ALL_TRAVELLERS_DONE) && Conditions.Get(Conditions.PERSISTENT.SOLANUM_DONE) && Conditions.Get(Conditions.PERSISTENT.PRISONER_DONE) && Conditions.Get(Conditions.PERSISTENT.SELF_DONE))
+			else if (Conditions.Get(Conditions.PERSISTENT.ALL_TRAVELLERS_DONE) && Conditions.Get(Conditions.PERSISTENT.SOLANUM_DONE) || Conditions.Get(Conditions.PERSISTENT.PRISONER_DONE) || Conditions.Get(Conditions.PERSISTENT.SELF_DONE))
 			{
-				SearchUtilities.Find("EndingTrigger_8").transform.localPosition = new Vector3(0, 0, 0);
-				SearchUtilities.Find("EndingTrigger_8").SetActive(true);
+				SearchUtilities.Find("Ending_Trigger_6").transform.localPosition = new Vector3(0, 0, 0);
+				SearchUtilities.Find("Ending_Trigger_6").SetActive(true);
+				WriteUtil.WriteLine("Ending 6/8");
+			}
+			else if (Conditions.Get(Conditions.PERSISTENT.ALL_TRAVELLERS_DONE) && !Conditions.Get(Conditions.PERSISTENT.SOLANUM_DONE) && !Conditions.Get(Conditions.PERSISTENT.PRISONER_DONE) && !Conditions.Get(Conditions.PERSISTENT.SELF_DONE))
+			{
+				SearchUtilities.Find("Ending_Trigger_5").transform.localPosition = new Vector3(0, 0, 0);
+				SearchUtilities.Find("Ending_Trigger_5").SetActive(true);
+				WriteUtil.WriteLine("Ending 5/8");
 			}
 
-			PlayerEffectController.OpenEyes(3);			
+			PlayerEffectController.OpenEyes(3);
+
+			//Locator.GetPauseCommandListener().RemovePauseCommandLock();
 		}
 
 		public void BlowUpSun()

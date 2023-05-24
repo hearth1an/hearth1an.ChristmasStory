@@ -11,7 +11,7 @@ namespace ChristmasStory.Characters.Villagers
 
 		public override void Start()
 		{
-			dialogue = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village/ConversationZone").GetComponent<CharacterDialogueTree>();
+			dialogue = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village/Slate_Dialogue_Main").GetComponent<CharacterDialogueTree>();
 
 			originalCharacter = SearchUtilities.Find("TimberHearth_Body/Slate_Village");
 			originalCharacter.SetActive(true);
@@ -20,7 +20,8 @@ namespace ChristmasStory.Characters.Villagers
 
 			if (Conditions.Get(Conditions.PERSISTENT.SLATE_START_DONE))
 			{
-				SpawnEndGameProps();
+				Invoke("SpawnPreEndGameProps", 1);
+				WriteUtil.WriteLine("Spawning endgame props");
 			}
 		}
 
@@ -31,13 +32,17 @@ namespace ChristmasStory.Characters.Villagers
 
 		protected override void Dialogue_OnEndConversation()
 		{
-			if (Conditions.Get(Conditions.PERSISTENT.SLATE_START_DONE))
+			if (Conditions.Get(Conditions.PERSISTENT.SLATE_START_DONE) && Conditions.Get(Conditions.CONDITION.SLATE_DO_NOT_START_IMMIDIATE))
 			{
 				PlayerEffectController.Blink(5f);
 				PlayerEffectController.AddLock(5f);
 				PlayerEffectController.PlayAudioOneShot(AudioType.PlayerGasp_Light, 1f);
 				Invoke("SpawnEndGameProps", 2f);
 			}
+		}
+		public void SpawnPreEndGameProps()
+		{
+			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village").SetActive(true);
 		}
 
 		public void SpawnEndGameProps()
