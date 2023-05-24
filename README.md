@@ -3,7 +3,7 @@
 ![Christmas Story thumbnail](https://user-images.githubusercontent.com/106444732/233448864-58a81d0e-05f9-46c2-b743-3355a1532f74.jpg)
 
 
-[Watch trailer](https://youtu.be/GcPm7fpr0ZM)
+# [Watch trailer](https://youtu.be/GcPm7fpr0ZM)
 
 Winter came to Timber Hearth with new story and adventures!
 
