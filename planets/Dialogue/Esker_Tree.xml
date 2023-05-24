@@ -58,8 +58,7 @@
 		<Dialogue>
 			<Page>ESKER_ONE_LOOP_DONE</Page>
 		</Dialogue>
-		<SetPersistentCondition>ESKER_LOOP_DIALOGUE_COMPLETE</SetPersistentCondition>
-		<DialogueTarget>Start</DialogueTarget>
+		<SetPersistentCondition>ESKER_LOOP_DIALOGUE_COMPLETE</SetPersistentCondition>		
 	</DialogueNode>
 
 </DialogueTree>

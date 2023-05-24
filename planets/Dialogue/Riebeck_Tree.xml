@@ -72,8 +72,7 @@
 		<Name>One_Loop_Complete_2</Name>
 		<Dialogue>
 			<Page>RIEBECK_ONE_LOOP_DONE</Page>
-		</Dialogue>
-		<DialogueTarget>Start</DialogueTarget>
+		</Dialogue>		
 		<SetPersistentCondition>RIEBECK_LOOP_DIALOGUE_COMPLETE</SetPersistentCondition>
 	</DialogueNode>
 

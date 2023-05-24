@@ -82,8 +82,7 @@
 		<Name>One_Loop_Complete_2</Name>
 		<Dialogue>
 			<Page>FELDSPAR_ONE_LOOP_DONE</Page>
-		</Dialogue>
-		<DialogueTarget>Start</DialogueTarget>
+		</Dialogue>		
 		<SetPersistentCondition>FELDSPAR_LOOP_DIALOGUE_COMPLETE</SetPersistentCondition>
 	</DialogueNode>
 

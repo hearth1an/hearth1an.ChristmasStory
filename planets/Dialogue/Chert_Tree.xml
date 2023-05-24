@@ -65,8 +65,7 @@
 		<Name>One_Loop_Complete_2</Name>
 		<Dialogue>
 			<Page>CHERT_ONE_LOOP_DONE</Page>
-		</Dialogue>
-		<DialogueTarget>Start</DialogueTarget>
+		</Dialogue>		
 		<SetPersistentCondition>CHERT_LOOP_DIALOGUE_COMPLETE</SetPersistentCondition>
 	</DialogueNode>
 
