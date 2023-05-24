@@ -8,6 +8,7 @@
 Winter came to Timber Hearth with new story and adventures!
 
 Works only on PC and compitable with both flat version and VR ([NomaiVR](https://outerwildsmods.com/mods/nomaivr)).
+
 Join the [Outer Wilds Modding Discord](https://discord.gg/MvbCbBz6Q6) if you have any questions or just want to chat about modding.
 
 # Warning!
@@ -24,15 +25,18 @@ Inspired by:
 - [Less Lonely Ship mod by Classic](https://outerwildsmods.com/mods/lesslonelyship/)
 
 Arts by:
-- some person
+- Elwensà
+
+Testers:
+- GameWyrm
+- TimeWarp Knoght
+- halley
+- bismuthdistrict
+- Ink
+- Turtle
 
 Music by:
 - Greenpixel
-
-
-
-real????
-
 
 
 
