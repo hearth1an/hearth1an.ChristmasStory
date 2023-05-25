@@ -1,13 +1,14 @@
 ﻿using ChristmasStory.Components;
 using ChristmasStory.Utility;
 using NewHorizons.Utility;
+using NewHorizons.Handlers;
 
 namespace ChristmasStory.Characters.Villagers
 {	
 	internal class TektiteCharacterController : TravelerCharacterController
 	{
-		public override Conditions.PERSISTENT DoneCondition => Conditions.PERSISTENT.TEKTITE_DONE;
-
+		
+		public override Conditions.PERSISTENT DoneCondition => Conditions.PERSISTENT.TEKTITE_DONE;	
 		public override void Start()
 		{
 			dialogue = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2/Tektite_Dialogue").GetComponent<CharacterDialogueTree>();
@@ -48,7 +49,7 @@ namespace ChristmasStory.Characters.Villagers
 				PlayerEffectController.Blink(2f);
 				PlayerEffectController.AddLock(2f);
 				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2/Tektite_Dialogue").SetActive(false);				
-				Invoke("DoneThings", 1f);
+				Invoke("DoneThings", 1f);				
 			}
 		}
 
@@ -61,7 +62,9 @@ namespace ChristmasStory.Characters.Villagers
 
 		private void DoneThings()
 		{
-			var sfx = ChristmasStory.Instance.ModHelper.Assets.GetAudio("planets/Content/music/tektite_go.mp3");
+			
+		    var sfx = ChristmasStory.Instance.ModHelper.Assets.GetAudio("planets/Content/music/tektite_go.mp3");
+
 			PlayerEffectController.PlayAudioExternalOneShot(sfx, 3f);
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl").SetActive(true);
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2").SetActive(false);
@@ -75,16 +78,22 @@ namespace ChristmasStory.Characters.Villagers
 			PlayerData.SetPersistentCondition("SNOWMAN_CURRENT_TOY", false);
 			PlayerData.SetPersistentCondition("TOY_PLACED", true);
 			PlayerData.SetPersistentCondition("TOYS_REMOVED", false);
+
+			
 		}
 
-		private void OpenEyes() => PlayerEffectController.OpenEyes(1f);
-        private void InvokeTrigger()
+		private void OpenEyes() => PlayerEffectController.OpenEyes(1f);		
+
+		
+		private void InvokeTrigger()
         {
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2/Tektite_Dialogue").SetActive(true);
+			
 			SearchUtilities.Find("Tektite_Trigger").SetActive(true);
 			SearchUtilities.Find("Tektite_Trigger").GetComponent<UnityEngine.SphereCollider>().enabled = false;
 			SearchUtilities.Find("Tektite_Trigger").GetComponent<UnityEngine.SphereCollider>().enabled = true;
-			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2/Tektite_Dialogue").GetComponent<CharacterDialogueTree>().StartConversation();
+			
+			//SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Characters_ImpactCrater/Villager_HEA_Tektite_2/Tektite_Dialogue").GetComponent<CharacterDialogueTree>().StartConversation();
 		}
 
 

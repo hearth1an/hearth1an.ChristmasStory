@@ -800,6 +800,7 @@
 				"path": "GabbroShip_Body/Sector_GabbroShip",
 				"rename": "GabbroShip",
 				"removeComponents": true,
+				"isRelativeToParent": true,
 				"removeChildren": [
 					"SectorTrigger_GabbroShip",
 					"FoundShipTrigger"

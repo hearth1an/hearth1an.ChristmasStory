@@ -1,11 +1,14 @@
 ﻿using ChristmasStory.Components;
 using ChristmasStory.Utility;
 using NewHorizons.Utility;
+using NewHorizons.Handlers;
 
 namespace ChristmasStory.Characters.Villagers
 {	
 	internal class MicaCharacterController : TravelerCharacterController
+
 	{
+		
 		public override Conditions.PERSISTENT DoneCondition => Conditions.PERSISTENT.ERNESTO_DONE;
 
 		public override void Start()
@@ -39,7 +42,7 @@ namespace ChristmasStory.Characters.Villagers
 			var rockAnimationActive = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Snowman_Cairn/Props_TH_ClutterSmall").GetComponent<NomaiCairnRock>().enabled;
             var micaDialogue = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Mica/Mica_Dialogue");
 			var shipDialogue = SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Box/Ship_Toy_Dialogue");
-
+			
 			if (shipModelTriggered && rockAnimationActive && !PlayerData.GetPersistentCondition("SNOWMAN_DESTROYED_EARLY") && micaDialogue.activeSelf)
             {
 				PlayerData.SetPersistentCondition("SNOWMAN_DESTROYED_EARLY", true);				
@@ -59,11 +62,14 @@ namespace ChristmasStory.Characters.Villagers
 				Utility.WriteUtil.WriteLine("SNOWMAN_NOT_DESTROYED");
 				micaDialogue.SetActive(true);
 			}
-			if (PlayerData.GetPersistentCondition("SNOWMAN_TOY_GIVEN") && !shipDialogue.activeSelf)
+
+			if (PlayerData.GetPersistentCondition("SNOWMAN_TOY_GIVEN") && !shipDialogue.activeSelf || PlayerData.GetPersistentCondition("SEED_TOY_GIVEN"))
 			{
 				PlayerEffectController.AddLock(2f);
 				PlayerEffectController.Blink(2f);
 				shipDialogue.SetActive(true);
+
+				
 
 				PlayerData.SetPersistentCondition("SEED_CURRENT_TOY", false);
 				PlayerData.SetPersistentCondition("SNOWMAN_CURRENT_TOY", true);
@@ -75,6 +81,8 @@ namespace ChristmasStory.Characters.Villagers
 				SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Snowman").SetActive(true);
 				SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Seed").SetActive(false);
 			}
+			
+				
 
 		}
 		protected override void OnChangeState(STATE oldState, STATE newState) { }

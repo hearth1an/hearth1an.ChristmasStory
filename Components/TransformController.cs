@@ -376,6 +376,9 @@ namespace ChristmasStory.Components
                 SearchUtilities.Find("Probe_Body/ProbeGravity/Props_NOM_GravityCrystal_Base").transform.localScale = new Vector3(0.16f, 0.16f, 0.16f);
                 //SearchUtilities.Find("Probe_Body/ProbeGravity/CapsuleVolume_NOM_GravityCrystal").transform.localScale = new Vector3(2f, 2f, 2f);
 
+                SearchUtilities.Find("TimberHearth_Body/Sector_TH/GabbroShip").transform.localPosition = new Vector3(-0.4157f, -112.9464f, 231.8697f);
+                SearchUtilities.Find("TimberHearth_Body/Sector_TH/GabbroShip").transform.localRotation = new Quaternion(0.3096f, 0.3218f, 0.0643f, 0.8924f);
+
                 // Rudolfo tiny fish
                 SearchUtilities.Find("Rudolfo/AudioController/LoopSource").GetComponent<AudioSource>().volume = 0.3f;
                 SearchUtilities.Find("Rudolfo").SetActive(false);
