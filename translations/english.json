@@ -141,7 +141,7 @@
 
 		// Feldspar ship
 		"FELDSPAR_SHIP_1.1": "Wow! I think that's the angler I followed! Not sure if it's dangerous since it's so small.",
-		"FELDSPAR_SHIP_1": "Nice ship, by the way! I'll have to ask Slate to make a new one for me like this. Let me know when we land near the Village, okay?",
+		"FELDSPAR_SHIP_1": "Nice ship, by the way! I'll ask Slate to make a new one for me like this. Let me know when we land near the Village, okay?",
 		"FELDSPAR_SHIP_2": "We're already home, welcome back!",
 		"FELDSPAR_SHIP_3": "Sure! I'll let you know.",
 		"FELDSPAR_SHIP_4": "Yay! Thanks for the ride. Let's go celebrate!",
@@ -287,7 +287,7 @@
 		"MARL_START_1": "Hey! You see that tree? <![CDATA[<i>]]>That's my work.<![CDATA[</i>]]> Impressive, eh?",
 		"MARL_START_2": "Yes, the tree is very impressive.",
 		"MARL_START_3": "That's what I'm talking about! Good luck in space!",
-		"MARL_START_4": "Good luck on your flight. We're all waiting for your mission to be completed.",
+		"MARL_START_4": "Good luck on your flight. Your mission is very important.",
 		"MARL_START_5": "Marl, Tektite is asking for your help. There's a bramble seed on Timber Hearth and it's gro...",
 		"MARL_START_6": "<![CDATA[<i>]]>GROWING FAST?!<![CDATA[</i>]]>",
 		"MARL_START_7": "We need to cut down this bush as soon as possible! I'm going to Tektite! Let's meet there!",
@@ -499,7 +499,7 @@
 		"TEKTITE_START_14": "Thank you! Marl is here now.",
 		"TEKTITE_START_15": "I think they'll be able destroy it. We just need to give them some more time.",
 		"TEKTITE_START_16": "Alright, let's wait.",
-		"TEKTITE_START_17": "Yeah, thank you for help. Look, I found this tiny seed here.",
+		"TEKTITE_START_17": "Yeah, thank you for help. Look, I found this <![CDATA[<color=lightblue>tiny seed</color>]]> here.",
 		"TEKTITE_START_18": "Seems like it's not growing at all, maybe it's dormant. You should take it as a trophy!",
 		"TEKTITE_START_19": "Are you sure it's safe?",
 		"TEKTITE_START_20": "I'll put it in your ship, you can have it as a toy or a little decoration or something.",
@@ -532,7 +532,7 @@
 		"RADIO_START_14": "HELP!!! I'm here in radio!",
 		"RADIO_START_15": "<![CDATA[<i>]]>Gossan:<![CDATA[</i>]]> Hatchling? What are you doing there?!",
 		"RADIO_START_16": "I think Tuff forgot about me. Can you call the elevator down here?",
-		"RADIO_START_17": "<![CDATA[<i>]]>Gossan:<![CDATA[</i>]]> Sure, I'm calling the elevator now. We will wait you in the center of the Village.",
+		"RADIO_START_17": "<![CDATA[<i>]]>Gossan:<![CDATA[</i>]]> Sure, I'm calling the elevator now. We will will be at the center of the Village.",
 		"RADIO_START_18": "<![CDATA[<i>]]>Gossan out.<![CDATA[</i>]]>",
 		"RADIO_START_19": "Thank you, Gossan! <![CDATA[<i>]]><![CDATA[</i>]]>",
 
@@ -583,6 +583,13 @@
 		"TEPHRA_START_4.3": "Could you remind me about <![CDATA[<i>]]>\"flickering thing\"<![CDATA[</i>]]> you saw?",
 		"TEPHRA_START_4.4": "Awww sure! It was carried away by the river, just before it became frozen!",
 
+		"TEPHRA_START_5.1": "Hey-hey, how is it going?",
+		"TEPHRA_START_5.1.1": "Thanks! How is it going, Tephra?",
+		"TEPHRA_START_5.2": "Good! We found magic rocks for snowian and also a <![CDATA[<i>]]>flickering Nomai thing with blue lights<![CDATA[</i>]]>!",
+		"TEPHRA_START_5.3": "A <![CDATA[<i>]]>flickering Nomai thing<![CDATA[</i>]]>? You mean a Nomai recorder?",
+		"TEPHRA_START_5.4": "Dunno. We lost it almost immidiately, it was carried awway by river!",
+		"TEPHRA_START_5.5": "Any ideas where I can search for it?",
+
 
 		"TEPHRA_START_5": "Then we decided to make a snowian with the leftover rocks since Moraine and Arkose are \"too busy\" to play with us.",
 		"TEPHRA_START_6": "What do you mean?",
@@ -618,12 +625,12 @@
 		"GNEISS_START_7": "Please, take care of yourself up in space!",
 
 		// Tuff (cave)
-		"TUFF_START_1": "Hey there!<![CDATA[<Pause=1>]]> Shouldn't you have lifted off already?",
+		"TUFF_START_1": "Hey there! Shouldn't you have lifted off already?",
 		"TUFF_START_2": "Yeah. On my way. Actually Gossan asked me to get you to come back up to the surface and...",
 		"TUFF_START_3": "So, what's going on up there?",
 		"TUFF_START_4": "Gossan asked me to get you to come back up to the surface and...",
-		"TUFF_START_5": "Me?<![CDATA[<Pause=1>]]> Going back to the surface?!<![CDATA[<Pause=1>]]>",
-		"TUFF_START_6": "Finally!!!<![CDATA[<Pause=1>]]>See ya around!!!",
+		"TUFF_START_5": "Me? Going back to the surface?!",
+		"TUFF_START_6": "Finally! See ya around!",
 
 		// Tuff tree
 		"TUFF_TREE_1": "I am so sorry about that accident!<![CDATA[<Pause=2>]]> I was too happy that I'm getting out of that cave that I forgot about you.<![CDATA[<Pause=2>]]>.<![CDATA[<Pause=2>]]>.<![CDATA[<Pause=2>]]>",
@@ -639,13 +646,13 @@
 		"MICA_START_4": "No, thanks, I'm good.",
 		"MICA_START_5": "Hey, did you change your mind and come back to try out the model ship?",
 		"MICA_START_6": "Yes, I have changed my mind.",
-		"MICA_START_7": "Nice! Listen, since my boot's are not made for snow, I can't go down and play with others...",
-		"MICA_START_8": "They've been having snowball fights and even made a snowian? Let's crash the model ship into it, that would be fun!",
+		"MICA_START_7": "Nice! Listen, since my boot's are... <![CDATA[<i>]]>not made for snow<![CDATA[</i>]]>, I can't go down and play with others...",
+		"MICA_START_8": "They've been having snowball fights and even made a snowian!!! Let's crash the model ship into it, that would be fun!",
 		"MICA_START_9": "I've tried already. It's indestructible!",
 		"MICA_START_10": "Alright, I'll do this.",
 		"MICA_START_11": "I don't think we should do that Mica.",
 		"MICA_START_12": "Meh meh meh... don't worry! Just try it and you'll see that it's not a regular snowian, I swear!",
-		"MICA_START_13": "It will be fun, ha-ha!",
+		"MICA_START_13": "It will be fun, ha-ha! The snowian is on the left of the Christmas tree.",
 		"MICA_START_14": "Well... at least you tried!",
 		"MICA_START_15": "You didn't tell me it was indestructible.",
 		"MICA_START_16": "Yeah... I gotta go.",
@@ -762,7 +769,8 @@
 		"TOTEM_CODE": "Code:",
 		"RADIO_PROMT": "Listen to the radio",
 		"SHIP_TOY_PROMT": "Manage your dashboard toys",
-		"INVITE_STONE_ITEM": "<![CDATA[<color=orange>Hal's</color>]]> Invite Stone"		
+		"SHIP_TOY_NOTIFICATION": "NEW SHIP TOY ADDED",
+		"INVITE_STONE_ITEM": "<![CDATA[<color=orange>Hal's</color>]]> Invite Stone"
 
 	},
 	"ShipLogDictionary": {

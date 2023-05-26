@@ -18,6 +18,38 @@
 				<Text>TEPHRA_START_3</Text>
 				<DialogueTarget>2</DialogueTarget>
 			</DialogueOption>
+			<DialogueOption>
+				<CancelledPersistentCondition>SORRY_GALENA</CancelledPersistentCondition>
+				<Text>TEPHRA_START_5.1</Text>
+				<DialogueTarget>RECORDER</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>RECORDER</Name>
+		<Dialogue>
+			<Page>TEPHRA_START_5.2</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>TEPHRA_START_5.3</Text>
+				<DialogueTarget>RECORDER_2</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+
+	<DialogueNode>
+		<SetPersistentCondition>RECORDER_TOLD</SetPersistentCondition>
+		<Name>RECORDER_2</Name>
+		<Dialogue>
+			<Page>TEPHRA_START_5.4</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>TEPHRA_START_5.5</Text>
+				<DialogueTarget>1</DialogueTarget>
+			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
 
@@ -70,7 +102,15 @@
 		<Name>END_2</Name>		
 		<Dialogue>
 			<Page>TEPHRA_START_9</Page>
-		</Dialogue>	
+		</Dialogue>
+		<DialogueOptionsList>
+		<DialogueOption>
+			<CancelledPersistentCondition>SORRY_GALENA</CancelledPersistentCondition>
+			<CancelledPersistentCondition>RECORDER_TOLD</CancelledPersistentCondition>
+			<Text>TEPHRA_START_5.1.1</Text>
+			<DialogueTarget>RECORDER</DialogueTarget>
+		</DialogueOption>
+		</DialogueOptionsList>
 	</DialogueNode>
 
 	<DialogueNode>
@@ -89,7 +129,7 @@
 			<DialogueOption>				
 				<CancelledCondition>RECORDER_REPEAT</CancelledCondition>
 				<Text>TEPHRA_START_4.3</Text>
-				<DialogueTarget>RECORDER</DialogueTarget>
+				<DialogueTarget>RECORDER_REPEAT</DialogueTarget>
 			</DialogueOption>
 		</DialogueOptionsList>
 	</DialogueNode>
@@ -103,7 +143,7 @@
 	</DialogueNode>
 
 	<DialogueNode>
-		<Name>RECORDER</Name>
+		<Name>RECORDER_REPEAT</Name>
 		<SetCondition>RECORDER_REPEAT</SetCondition>
 		<Dialogue>
 			<Page>TEPHRA_START_4.4</Page>

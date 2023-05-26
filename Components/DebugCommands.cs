@@ -31,7 +31,7 @@ namespace ChristmasStory.Components
 			RegisterDebugCommand(Key.Numpad4, OpenSarcophagus, "Open sarcophagus");
 			RegisterDebugCommand(Key.Numpad9, Conditions.ResetAllConditions, "Reset conditions");
 
-			RegisterDebugWarpCommand(Key.Numpad0, () => WarpUtils.WarpToPlanet(AstroObject.Name.TimberHearth, new Vector3(-11.8f, -27.2f, 184.8f)), "Warp to Village");
+			RegisterDebugWarpCommand(Key.Numpad0, () => WarpUtils.WarpToPlanet(AstroObject.Name.TimberHearth, new Vector3(-11.8f, -27.2f, 184.8f)), "Warp to Village");		
 			RegisterDebugWarpCommand(Key.Numpad1, () => WarpUtils.WarpToPlanet(AstroObject.Name.TimberMoon, 100f), "Warp to Esker");
 			RegisterDebugWarpCommand(Key.Numpad2, () => WarpUtils.WarpToPlanet(AstroObject.Name.CaveTwin, 180), "Warp to Chert");
 			RegisterDebugWarpCommand(Key.Numpad3, () => WarpUtils.WarpToPlanet(AstroObject.Name.BrittleHollow, 350f), "Warp to Riebeck");

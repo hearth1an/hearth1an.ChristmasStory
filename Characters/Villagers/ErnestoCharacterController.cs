@@ -10,7 +10,7 @@ namespace ChristmasStory.Characters.Villagers
 
 		public override void Start()
 		{
-			dialogue = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Interactables_Observatory/AnglerFishExhibit/Ernesto_Dialogue").GetComponent<CharacterDialogueTree>();
+			dialogue = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Interactables_Observatory/AnglerFishExhibit/AnglerFishTankPivot/Beast_Anglerfish/Ernesto_Dialogue").GetComponent<CharacterDialogueTree>();
 
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Ernesto").SetActive(false);			
 

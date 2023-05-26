@@ -13,9 +13,9 @@ namespace ChristmasStory.Characters.Villagers
 		{
 			dialogue = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village/Slate_Dialogue_Main").GetComponent<CharacterDialogueTree>();
 
-			originalCharacter = SearchUtilities.Find("TimberHearth_Body/Slate_Village");
+			originalCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village");
 			originalCharacter.SetActive(true);
-			treeCharacter = SearchUtilities.Find("TimberHearth_Body/Slate_Village_Final");
+			treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village_Final");
 			base.Start();
 
 			if (Conditions.Get(Conditions.PERSISTENT.SLATE_START_DONE))

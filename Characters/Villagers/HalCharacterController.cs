@@ -53,7 +53,7 @@ namespace ChristmasStory.Characters.Villagers
 
 			SearchUtilities.Find("Hal_Text").transform.parent = inviteStone.transform;
 			SearchUtilities.Find("Hal_Text").transform.localPosition = new Vector3(0, 0, 0);
-			var textArc = SearchUtilities.Find("TimberHearth_Body/Invite_Stone/Hal_Text/Arc 1 - Child of -1");
+			var textArc = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Invite_Stone/Hal_Text/Arc 1 - Child of -1");
 			textArc.transform.localPosition = new Vector3(0.1f, -0.1f, 0.08f);
 			textArc.transform.localRotation = new Quaternion(0, 0, 0.6279f, 0.7783f);
 			textArc.GetComponent<NomaiTextLine>()._radius = 2;

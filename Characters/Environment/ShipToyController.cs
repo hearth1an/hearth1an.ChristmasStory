@@ -9,6 +9,7 @@ namespace ChristmasStory.Characters.Villagers
 	internal class ShipToyController : TravelerCharacterController
 	{
 		public override Conditions.PERSISTENT DoneCondition => Conditions.PERSISTENT.TUFF_DONE;
+		
 
 		public override void Start()
 		{
@@ -156,7 +157,7 @@ namespace ChristmasStory.Characters.Villagers
 			}
 		}
 
-		private void DestroyVines()
+		public void DestroyVines()
         {
 			PlayerData.SetPersistentCondition(("SEED_CURRENT_TOY_1_LOOP"), false);
 			PlayerData.SetPersistentCondition(("SEED_CURRENT_TOY_2_LOOP"), false);

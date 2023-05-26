@@ -109,7 +109,9 @@ namespace ChristmasStory
 			characterControllers.AddComponent<ShipToyController>();
 
 			var transformController = new GameObject("TransformController");
-			transformController.AddComponent<TransformController>();			
+			transformController.AddComponent<TransformController>();	
+			
+			
 
 			PlayerData.SetPersistentCondition("MARK_ON_HUD_TUTORIAL_COMPLETE", true);
 			PlayerData.SetPersistentCondition("COMPLETED_SHIPLOG_TUTORIAL", true);
@@ -142,10 +144,7 @@ namespace ChristmasStory
 #if DEBUG
 			player.AddComponent<DebugCommands>();
 #endif
-			Instance.ModHelper.Events.Unity.FireOnNextUpdate(() =>
-			{
-				transformController.GetComponent<TransformController>().Start();
-			});
+			Instance.ModHelper.Events.Unity.FireInNUpdates(transformController.GetComponent<TransformController>().Start, 10);
 		}
 	}
 

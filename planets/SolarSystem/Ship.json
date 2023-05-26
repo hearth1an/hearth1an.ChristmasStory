@@ -61,7 +61,7 @@
 				"rename": "snowman_bottom_ship"
 			},
 			{
-				"path": "TimberHearth_Body/Sector_TH/Tuff_Radio/Props_HEA_WoodenCrate_Radio",
+				"path": "TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Kids_Hidden/Prefab_HideAndSeekRadio/Props_HEA_Radio/Props_HEA_WoodenCrate_Radio",
 				"rename": "Toy_Box",
 				"parentPath": "Module_Cockpit",
 				"isRelativeToParent": true,
@@ -79,7 +79,7 @@
 				"keepLoaded": true
 			},
 			{
-				"path": "TimberHearth_Body/Sector_TH/Tuff_Radio/Props_HEA_WoodenCrate_Radio",
+				"path": "TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Kids_Hidden/Prefab_HideAndSeekRadio/Props_HEA_Radio/Props_HEA_WoodenCrate_Radio",
 				"rename": "Toy_Box_2",
 				"parentPath": "Module_Cockpit/Toy_Box",
 				"isRelativeToParent": true,

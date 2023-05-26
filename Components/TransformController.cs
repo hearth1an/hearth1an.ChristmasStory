@@ -4,6 +4,8 @@ using OWML.ModHelper;
 using System;
 using System.Reflection;
 using UnityEngine;
+using NewHorizons.Builder;
+using NewHorizons.External.Modules;
 
 namespace ChristmasStory.Components
 {
@@ -57,14 +59,13 @@ namespace ChristmasStory.Components
                 PlayerData.GetFreezeTimeWhileReadingConversations();
 
                 // Timber Hearth transform
-                SearchUtilities.Find("TimberHearth_Body/Sector_TH/Center_Barrel").transform.localScale = new Vector3(7f, 4.5f, 7f);
-                SearchUtilities.Find("TimberHearth_Body/Sector_TH/Center_Barrel").AddComponent<CapsuleCollider>();
+                SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Center_Barrel").transform.localScale = new Vector3(7f, 4.5f, 7f);
+                SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Center_Barrel").AddComponent<CapsuleCollider>();
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Snowman_Cairn/Props_TH_ClutterLarge").DestroyAllComponents<MeshRenderer>();
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Villager_HEA_Esker_ANIM_Rocking/Esker_Dialogue").AddComponent<CapsuleCollider>().height = 4f;
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Villager_HEA_Esker_ANIM_Rocking").transform.localPosition = new Vector3(-2.52f, -23.30f, 185.66f);
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Villager_HEA_Esker_ANIM_Rocking/Signal_Esker").AddComponent<CapsuleCollider>().height = 2f;
-                SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Dialogue").SetActive(true);
-                SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village/ConversationZone").transform.localPosition = new Vector3(0, 2f, 0);
+                SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Hal_Dialogue").SetActive(true);                
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Slate_Village/ConversationZone_RSci").DestroyAllComponents<InteractReceiver>();
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Marl/ConversationZone").DestroyAllComponents<InteractReceiver>();
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Christmas_Tree").GetComponent<CapsuleCollider>().radius = 1f;
@@ -323,16 +324,15 @@ namespace ChristmasStory.Components
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/New_Tektite/ConversationZone").DestroyAllComponents<InteractReceiver>();
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/New_Tektite/ConversationZone").DestroyAllComponents<CharacterDialogueTree>();
 
-                SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Rutile/ConversationZone").DestroyAllComponents<InteractReceiver>();
+                SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Rutile/ConversationZone").DestroyAllComponents<InteractReceiver>();              
+                SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Rutile/ConversationZone").DestroyAllComponents<CharacterDialogueTree>();
 
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Spinel/ConversationZone").DestroyAllComponents<InteractReceiver>();
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Spinel/ConversationZone").DestroyAllComponents<CharacterDialogueTree>();
 
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Gneiss/ConversationZone").DestroyAllComponents<InteractReceiver>();
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Gneiss/ConversationZone").DestroyAllComponents<CharacterDialogueTree>();
-
-                SearchUtilities.Find("TimberHearth_Body/Sector_TH/Secto r_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Rutile/ConversationZone").DestroyAllComponents<InteractReceiver>();
-                SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Rutile/ConversationZone").DestroyAllComponents<CharacterDialogueTree>();
+                
 
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Kids_PreGame/Villager_HEA_Galena/ConversationZone").DestroyAllComponents<InteractReceiver>();
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Kids_PreGame/Villager_HEA_Galena/ConversationZone").DestroyAllComponents<CharacterDialogueTree>();
@@ -344,8 +344,8 @@ namespace ChristmasStory.Components
 
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/New_Arkose/ConversationZone").DestroyAllComponents<InteractReceiver>();
 
-                SearchUtilities.Find("TimberHearth_Body/Sector_TH/New_Tuff/ConversationZone").DestroyAllComponents<InteractReceiver>();
-                SearchUtilities.Find("TimberHearth_Body/Sector_TH/New_Tuff/ConversationZone").DestroyAllComponents<CharacterDialogueTree>();
+                SearchUtilities.Find("TimberHearth_Body/Sector_TH/New_Tuff/ConversationZone_Tuff").DestroyAllComponents<InteractReceiver>();
+                SearchUtilities.Find("TimberHearth_Body/Sector_TH/New_Tuff/ConversationZone_Tuff").DestroyAllComponents<CharacterDialogueTree>();
 
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/New_Tephra/ConversationZone").DestroyAllComponents<InteractReceiver>();
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/New_Tephra/ConversationZone").DestroyAllComponents<CharacterDialogueTree>();
@@ -358,7 +358,6 @@ namespace ChristmasStory.Components
 
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/New_Spinel/ConversationZone").DestroyAllComponents<InteractReceiver>();
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/New_Spinel/ConversationZone").DestroyAllComponents<CharacterDialogueTree>();
-
 
             }
             catch (Exception ex)

@@ -26,7 +26,7 @@ namespace ChristmasStory.Characters.Villagers
 		{
 			if (Conditions.Get(Conditions.CONDITION.HORNFELS_FISH_TOLD))
 			{
-				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Interactables_Observatory/AnglerFishExhibit/Ernesto_Dialogue").SetActive(true);
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Interactables_Observatory/AnglerFishExhibit/AnglerFishTankPivot/Beast_Anglerfish/Ernesto_Dialogue").SetActive(true);
 
 			}
 			if (Conditions.Get(Conditions.CONDITION.START_END_EVENT))

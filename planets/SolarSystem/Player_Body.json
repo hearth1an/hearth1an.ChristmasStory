@@ -106,10 +106,13 @@
         ]
     },
     "removeChildren": [
-        "Ending_Trigger",
+        "Ending_Trigger_5",
+        "Ending_Trigger_6",
+        "Ending_Trigger_7",
+        "Ending_Trigger_8",
         "music_no_sol_no_bird",
         "music_no_sol",
         "music_no_bird",
-        "music_all"        
+        "music_all"
     ]
 }
