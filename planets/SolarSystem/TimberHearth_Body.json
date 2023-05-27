@@ -282,6 +282,7 @@
 				"path": "TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Geometry_Observatory/Structure_HEA_Observatory_v3/ObservatoryPivot/Observatory_Interior/Interior_Exhibits/Exhibits_Pictures",
 				"rename": "Fixed_Pictures",
 				"isRelativeToParent": true,
+				"keepLoaded": true,
 				//"parentPath": "Sector_TH/Sector_Village/Sector_Observatory/Geometry_Observatory/Structure_HEA_Observatory_v3/ObservatoryPivot/Observatory_Interior/Interior_Exhibits/",
 				"position": {
 					"x": 0,
@@ -299,6 +300,7 @@
 				"path": "TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Interactables_Observatory/MapSatelliteExhibit",
 				"rename": "Fixed_Pictures_DLC",
 				"isRelativeToParent": true,
+				"keepLoaded": true,
 				"position": {
 					"x": 0,
 					"y": 0,
@@ -330,6 +332,7 @@
 				"assetBundle": "planets/assetbundle/new_terrain",
 				"path": "Assets/PREFABS/ice_river.prefab",
 				"rename": "TH_NEW_RIVER",
+				"keepLoaded": true,
 				"position": {
 					"x": 0,
 					"y": 0,
@@ -1594,7 +1597,7 @@
 				"xmlFile": "planets/Dialogue/Rutile.xml",
 				"rename": "Rutile_Dialogue",
 				"pathToAnimController": "Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Rutile/Villager_HEA_Rutile_ANIM_Rocking",
-				"lookAtRadius": 1,
+				"lookAtRadius": 1.5,
 				"radius": 2,
 				"range": 2
 			},

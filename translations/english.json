@@ -571,6 +571,15 @@
 		"SPINEL_START_9": "I bet everything will be fine on your first flight! Have fun in space!",
 		"SPINEL_START_10": "Wow! <![CDATA[<i>]]>Much better<![CDATA[</i>]]> now!",
 
+
+		"SPINEL_ONE_LOOP_RESPONSE": "Yes, I know that you can't catch any fish like that, but I already suggested you to try get closer to waterfall, remember?",
+		"SPINEL_ONE_LOOP_DONE": "No, you just came up, what are you talking about?",
+
+		"SPINEL_TWO_LOOP_RESPONSE": "Just get closer to the waterfall as I said before...",
+		"SPINEL_TWO_LOOP_DONE": "Before?",
+		"SPINEL_TWO_LOOP_REPLY": "Nevermind.",
+
+
 		// Tephra
 
 		"TEPHRA_START_1": "Hullo! Are you going to the space today?",
@@ -757,6 +766,11 @@
 		"RIEBECK_ONE_LOOP_START": "DID THE SUN EXPLODE? WHAT WAS THAT!",
 		"RIEBECK_ONE_LOOP_RESPONSE": "Yes it did, but try not to worry about it, we're safe here.",
 		"RIEBECK_ONE_LOOP_DONE": "I find that hard to believe! But if the sun exploded and we're still alive then I guess you're right. I think."
+
+
+
+
+
 	},
 
 	"UIDictionary": {

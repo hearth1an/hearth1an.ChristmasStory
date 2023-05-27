@@ -77,6 +77,7 @@ namespace ChristmasStory.Characters.Travelers
 
 			// Open eyes
 			PlayerEffectController.OpenEyes(0.33f);
+			TransformController.ResetVillageSignals();
 
 			OWInput.ChangeInputMode(oldInputMode);
 			Locator.GetPauseCommandListener().RemovePauseCommandLock();

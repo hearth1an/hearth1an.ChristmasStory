@@ -16,6 +16,12 @@ namespace ChristmasStory.Characters.Villagers
 			SearchUtilities.Find("New_Spinel").SetActive(false);
 
 			base.Start();
+			
+			if (PlayerData.GetPersistentCondition("SPINEL_TOLD_2"))
+            {
+				PlayerData.SetPersistentCondition("SPINEL_TOLD", false);
+            }
+
 		}
 
 		protected override void Dialogue_OnStartConversation()

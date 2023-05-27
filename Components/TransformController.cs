@@ -17,7 +17,8 @@ namespace ChristmasStory.Components
             VillagersTransforms();
             VariousTransforms();
             ShipTransforms();
-            PrisonerTransforms();            
+            PrisonerTransforms();
+            FixPictures();
         }
 
         public void TimberHearthTransforms()
@@ -107,8 +108,14 @@ namespace ChristmasStory.Components
                 water.AddComponent<MeshCollider>();
                 water.AddComponent<OWCollider>();
 
-                SearchUtilities.Find("TH_NEW_RIVER").AddComponent<BatchedMaterialLookup>();
-                SearchUtilities.Find("TH_NEW_RIVER").GetComponent<BatchedMaterialLookup>().materials = iceSurface.materials;
+                var newRiver = SearchUtilities.Find("TH_NEW_RIVER");
+                newRiver.AddComponent<BatchedMaterialLookup>();
+                newRiver.GetComponent<BatchedMaterialLookup>().materials = iceSurface.materials;
+
+                /*
+                newRiver.DestroyAllComponents<StreamingMeshHandle>();
+                water.DestroyAllComponents<StreamingMeshHandle>();
+                */
 
                 // Hal's stone
                 SearchUtilities.Find("TimberHearth_Body/Sector_TH/Hal_Village/Villager_HEA_Hal_ANIM_Museum/hal_skin:player_rig_v01:Traveller_Trajectory_Jnt/hal_skin:player_rig_v01:Traveller_ROOT_Jnt/hal_skin:player_rig_v01:Traveller_Spine_01_Jnt/hal_skin:player_rig_v01:Traveller_Spine_02_Jnt/hal_skin:player_rig_v01:Traveller_Spine_Top_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Clavicle_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Shoulder_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Elbow_Jnt/hal_skin:player_rig_v01:Traveller_LF_Arm_Wrist_Jnt/Props_HEA_RoastingStick/Prefab_NOM_SharedStone").SetActive(false);
@@ -246,22 +253,7 @@ namespace ChristmasStory.Components
                     }
                 }
 
-                // fixing pictures in the museum
-                var oldPictures = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Geometry_Observatory/Structure_HEA_Observatory_v3/ObservatoryPivot/Observatory_Interior/Interior_Exhibits/Exhibits_Pictures");
-                var newPictures = SearchUtilities.Find("Fixed_Pictures");
-
-                var oldExhibition = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Interactables_Observatory/MapSatelliteExhibit");
-                var newExhibition = SearchUtilities.Find("Fixed_Pictures_DLC");
-
-                newPictures.transform.parent = oldPictures.transform.parent;
-                newPictures.transform.localPosition = oldPictures.transform.localPosition;
-                newPictures.transform.localRotation = oldPictures.transform.localRotation;
-                oldPictures.SetActive(false);
-
-                newExhibition.transform.parent = oldExhibition.transform.parent;
-                newExhibition.transform.localPosition = oldExhibition.transform.localPosition;
-                newExhibition.transform.localRotation = oldExhibition.transform.localRotation;
-                oldExhibition.SetActive(false);
+                
 
                 // Snowman near kids
                 var snowmanTop = SearchUtilities.Find("snowman_top");
@@ -280,6 +272,33 @@ namespace ChristmasStory.Components
                 var cairnBottom = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Snowman_Cairn/Props_TH_ClutterLarge2");
                 snowmanBottom.transform.SetParent(cairnBottom.transform);
                 snowmanBottom.transform.localPosition = new Vector3(0, -0.4f, 0);
+            }
+            catch (Exception ex)
+            {
+                WriteUtil.WriteError($"{ex}");
+            }
+        }
+
+        public void FixPictures()
+        {
+            try
+            {
+                // fixing pictures in the museum
+                var oldPictures = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Geometry_Observatory/Structure_HEA_Observatory_v3/ObservatoryPivot/Observatory_Interior/Interior_Exhibits/Exhibits_Pictures");
+                var newPictures = SearchUtilities.Find("Fixed_Pictures");
+
+                var oldExhibition = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_Observatory/Interactables_Observatory/MapSatelliteExhibit");
+                var newExhibition = SearchUtilities.Find("Fixed_Pictures_DLC");
+
+                newPictures.transform.parent = oldPictures.transform.parent;
+                newPictures.transform.localPosition = oldPictures.transform.localPosition;
+                newPictures.transform.localRotation = oldPictures.transform.localRotation;
+                oldPictures.SetActive(false);
+
+                newExhibition.transform.parent = oldExhibition.transform.parent;
+                newExhibition.transform.localPosition = oldExhibition.transform.localPosition;
+                newExhibition.transform.localRotation = oldExhibition.transform.localRotation;
+                oldExhibition.SetActive(false);
             }
             catch (Exception ex)
             {
@@ -614,7 +633,7 @@ namespace ChristmasStory.Components
         private static void ResetSignal(OWAudioSource audioSource)
         {
             audioSource.Stop();
-            audioSource.Play();
+            audioSource.Start();
         }
 
         public static void ResetVillageSignals()

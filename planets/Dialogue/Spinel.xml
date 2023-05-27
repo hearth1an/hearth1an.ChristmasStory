@@ -8,12 +8,50 @@
 			<Page>SPINEL_START_1</Page>
 		</Dialogue>
 		<DialogueOptionsList>			
-			<DialogueOption>			
+			<DialogueOption>
+				<CancelledPersistentCondition>SPINEL_TOLD</CancelledPersistentCondition>
+				<CancelledPersistentCondition>SPINEL_TOLD_2</CancelledPersistentCondition>
 				<Text>SPINEL_START_2</Text>
 				<DialogueTarget>1</DialogueTarget>
-			</DialogueOption>				
+			</DialogueOption>
+			<DialogueOption>
+				<RequiredPersistentCondition>SPINEL_TOLD</RequiredPersistentCondition>
+				<Text>SPINEL_ONE_LOOP_RESPONSE</Text>
+				<DialogueTarget>LOOP_ONE</DialogueTarget>
+			</DialogueOption>
+			<DialogueOption>
+				<RequiredPersistentCondition>SPINEL_TOLD_2</RequiredPersistentCondition>
+				<Text>SPINEL_TWO_LOOP_RESPONSE</Text>
+				<DialogueTarget>LOOP_TWO</DialogueTarget>
+			</DialogueOption>
 		</DialogueOptionsList>
-	</DialogueNode>	
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>LOOP_ONE</Name>
+		<SetPersistentCondition>SPINEL_TOLD_2</SetPersistentCondition>
+		<Dialogue>
+			<Page>SPINEL_ONE_LOOP_DONE</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>SPINEL_TWO_LOOP_REPLY</Text>
+				<DialogueTarget>3.1</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
+	<DialogueNode>
+		<Name>LOOP_TWO</Name>
+		<Dialogue>
+			<Page>SPINEL_TWO_LOOP_DONE</Page>
+		</Dialogue>
+		<DialogueOptionsList>
+			<DialogueOption>
+				<Text>SPINEL_TWO_LOOP_REPLY</Text>
+				<DialogueTarget>3.1</DialogueTarget>
+			</DialogueOption>
+		</DialogueOptionsList>
+	</DialogueNode>
 
 	<DialogueNode>
 		<Name>1</Name>		
@@ -42,7 +80,17 @@
 	</DialogueNode>
 
 	<DialogueNode>
-		<Name>3</Name>	
+		<Name>3.1</Name>
+		<SetPersistentCondition>SPINEL_TOLD</SetPersistentCondition>
+		<SetCondition>SPINEL_TOLD</SetCondition>
+		<Dialogue>			
+			<Page>SPINEL_START_8</Page>			
+		</Dialogue>
+	</DialogueNode>
+
+	<DialogueNode>
+		<Name>3</Name>
+		<SetPersistentCondition>SPINEL_TOLD</SetPersistentCondition>
 		<SetCondition>SPINEL_TOLD</SetCondition>		
 		<Dialogue>
 			<Page>SPINEL_START_7</Page> 
