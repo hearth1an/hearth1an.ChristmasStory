@@ -7,9 +7,9 @@
 				"name": "Feldspar",
 				"frequency": "Traveler",
 				"position": {
-					"x": 264.429779,
-					"y": -195.167542,
-					"z": -262.286377
+					"x": 258.336,
+					"y": -105,
+					"z": -256.7172
 				},
 				"audio": "TravelerFeldspar",
 				"rename": "Feldspar_Hub_1",

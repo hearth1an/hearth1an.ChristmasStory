@@ -641,7 +641,7 @@ namespace ChristmasStory.Components
             audioSource.Start();
         }
 
-        public static void ResetVillageSignals()
+        public void ResetVillageSignals()
         {
             ResetSignal(SearchUtilities.Find("TimberHearth_Body/Sector_TH/GhostBird/Signal_Prisoner").GetComponent<OWAudioSource>());
             ResetSignal(SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Feldspar/Signal_Signal_Harmonica").GetComponent<OWAudioSource>());

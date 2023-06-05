@@ -2,6 +2,7 @@
 using ChristmasStory.Utility;
 using System.Collections;
 using UnityEngine;
+using NewHorizons.Utility;
 
 namespace ChristmasStory.Characters
 {
@@ -120,8 +121,7 @@ namespace ChristmasStory.Characters
 			OnSetState(state);
 
 			// Play ship takeoff sound
-			PlayerEffectController.PlayAudioOneShot(AudioType.ShipThrustIgnition, 0.3f);
-			TransformController.ResetVillageSignals();
+			PlayerEffectController.PlayAudioOneShot(AudioType.ShipThrustIgnition, 0.3f);			
 
 			yield return new WaitForSeconds(1f);
 
@@ -138,7 +138,7 @@ namespace ChristmasStory.Characters
 			Locator.GetPauseCommandListener().AddPauseCommandLock();
 
 			PlayerEffectController.Blink(2);
-			TransformController.ResetVillageSignals();
+			
 
 			yield return new WaitForSeconds(wait);
 
@@ -146,6 +146,7 @@ namespace ChristmasStory.Characters
 
 			OWInput.ChangeInputMode(InputMode.Character);
 			Locator.GetPauseCommandListener().RemovePauseCommandLock();
+			SearchUtilities.Find("TransformController").GetComponent<TransformController>().ResetVillageSignals();
 		}
 
 		protected void OnSetState(STATE state)
