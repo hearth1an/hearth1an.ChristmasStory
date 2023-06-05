@@ -33,6 +33,7 @@ namespace ChristmasStory.Characters.Travelers
 				SearchUtilities.Find("DB_ClusterDimension_Body/Sector_ClusterDimension/Interactables_ClusterDimension/SeedWarp_ToPioneer/Signal_Harmonica").SetActive(false);
 				SearchUtilities.Find("DB_HubDimension_Body/Sector_HubDimension/Interactables_HubDimension/InnerWarp_ToCluster/Signal_Harmonica").SetActive(false);
 				SearchUtilities.Find("DB_HubDimension_Body/Sector_HubDimension/Feldspar_Hub_1").SetActive(true);
+				SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_ImpactCrater/Interactables_ImpactCrater/BrambleSeed/InnerWarp_ToPioneer (1)/Signal_Harmonica").SetActive(false);
 				SearchUtilities.Find("DB_PioneerDimension_Body/Sector_PioneerDimension/Feldspar_Pioneer").SetActive(true);
 			});
 

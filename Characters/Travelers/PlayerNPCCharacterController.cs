@@ -9,6 +9,7 @@ namespace ChristmasStory.Characters.Travelers
 	{
 		public override Conditions.PERSISTENT DoneCondition => Conditions.PERSISTENT.SELF_DONE;
 
+		PlayerNPCCharacterController instance;
 		public override void Start()
 		{
 			dialogue = SearchUtilities.Find("TimeLoopRing_Body/Characters_TimeLoopRing/NPC_Player/Player_Dialogue").GetComponent<CharacterDialogueTree>();
@@ -19,18 +20,23 @@ namespace ChristmasStory.Characters.Travelers
 			shipCharacter = SearchUtilities.Find("Ship_Body/ShipSector/Ship_Player");
 			treeCharacter = SearchUtilities.Find("TimberHearth_Body/Sector_TH/NPC_Player");
 
+			instance = this;
+			
             SearchUtilities.Find("TimeLoopRing_Body/Characters_TimeLoopRing/NPC_Player/Traveller_HEA_Player_v2").DestroyAllComponents<FacePlayerWhenTalking>();
 
             var loopCoreController = SearchUtilities.Find("TowerTwin_Body/Sector_TowerTwin/Sector_TimeLoopInterior/Interactables_TimeLoopInterior/CoreCasingController").GetComponent<TimeLoopCoreController>();
 
+			base.Start();
+
 			ChristmasStory.Instance.ModHelper.Events.Unity.FireOnNextUpdate(() =>
 			{
-				if (!loopCoreController._playerEnteredCoreCurrentLoop)
+				if (loopCoreController._playerEnteredCoreLastLoop && !Conditions.Get(Conditions.PERSISTENT.SELF_DONE))
 				{
-					originalCharacter.SetActive(false);
+					originalCharacter.SetActive(true);
 				}
+				else
+					originalCharacter.SetActive(false);
 			});
-			base.Start();
 		}
 
 		protected override void Dialogue_OnStartConversation()
@@ -60,6 +66,7 @@ namespace ChristmasStory.Characters.Travelers
 					if (Conditions.Get(Conditions.CONDITION.NPC_PLAYER_SHIP_DONE))
 					{
 						ChangeState(STATE.AT_TREE);
+						SearchUtilities.Find("TowerTwin_Body/Sector_TowerTwin/Sector_TimeLoopInterior/Interactables_TimeLoopInterior/CoreCasingController").GetComponent<TimeLoopCoreController>()._playerEnteredCoreLastLoop = false;
 					}
 					break;
 			}

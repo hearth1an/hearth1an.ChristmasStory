@@ -2,6 +2,7 @@
 using ChristmasStory.Utility;
 using NewHorizons.Utility;
 
+
 namespace ChristmasStory.Characters.Travelers
 {	
 	internal class RiebeckCharacterController : TravelerCharacterController
@@ -61,7 +62,6 @@ namespace ChristmasStory.Characters.Travelers
 
 			Conditions.Set(Conditions.CONDITION.RIEBECK_SHOW_LOOP_DIALOGUE, false);
 		}
-
 		protected override void OnChangeState(STATE oldState, STATE newState) { }
 	}
 }

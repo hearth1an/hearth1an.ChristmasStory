@@ -253,8 +253,6 @@ namespace ChristmasStory.Components
                     }
                 }
 
-                
-
                 // Snowman near kids
                 var snowmanTop = SearchUtilities.Find("snowman_top");
                 var cairnTop = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Snowman_Cairn/Props_TH_ClutterSmall");
@@ -401,9 +399,16 @@ namespace ChristmasStory.Components
                 SearchUtilities.Find("Rudolfo/AudioController/LoopSource").GetComponent<AudioSource>().volume = 0.3f;
                 SearchUtilities.Find("Rudolfo").SetActive(false);
 
-                // Riebeck transforms 
-                var bhFragment = SearchUtilities.Find("BrittleHollow_Body/Sector_BH/Sector Quantum Pole Path/Fragment QuantumPolePath 5");
-                bhFragment.GetComponent<FragmentIntegrity>()._ignoreMeteorDamage = true;
+                // Riebeck 
+               
+                var fragment = SearchUtilities.Find("Fragment QuantumPolePath 5_Body/ScaleRoot/Fragment QuantumPolePath 5");
+                fragment.DestroyAllComponents<FragmentIntegrity>();
+                fragment.GetComponent<DetachableFragment>()._forceDetection = DetachableFragment.ForceMask.SunOnly;
+                //fragment.GetComponent<DetachableFragment>().
+                //fragment.DestroyAllComponents<FragmentDragAnimator>();
+                //fragment.DestroyAllComponents<DetachableFragment>();
+                //fragment.DestroyAllComponents<FragmentEffects>();
+                
 
             }
             catch (Exception ex)
