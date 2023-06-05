@@ -34,6 +34,7 @@ Testers:
 - bismuthdistrict
 - Ink
 - Turtle
+- That Thing
 
 Music by:
 - Greenpixel
