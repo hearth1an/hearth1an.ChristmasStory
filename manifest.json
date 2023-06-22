@@ -7,5 +7,5 @@
 	"version": "1.0.0",
 	"owmlVersion": "2.9.0",
 	"dependencies": [ "xen.NewHorizons" ],
-	"conflicts": [ "Classic.CozyShip" ]	
+	"conflicts": [ "Classic.CozyShip", "hearth1an.ProbeTeleporter" ]	
 }
