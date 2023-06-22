@@ -33,22 +33,16 @@ Music by:
 Testers:
 - GameWyrm
 - TimeWarp Knoght
-- halley
 - bismuthdistrict
 - Ink
-- Turtle
+- Music Turtle
 - That Thing
+- Outer Spacecorns
+- fire_minth
+- John Corby
 
 Translation credits (in work):
 - English: [xen](https://github.com/xen-42), [heart1an](https://github.com/hearth1an)
-- Russian:  
-- Portuguese: [ShoosGun](https://github.com/ShoosGun),
-- French: [Deadofnothnig](https://github.com/Deadofnothing),
-- Сhinese: [星际拓荒讨论群群友](https://github.com/REME-easy),
-- Spanish: [Alejandro-SB](https://github.com/Alejandro-SB),
-- German: Derko,
-- Japanese: [9638](https://github.com/96-38)
-- Italian: ilyNerY.
 
 # Disclaimer
 This work is unofficial Fan Content created under permission from the Mobius Digital Fan Content Policy.
