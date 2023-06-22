@@ -59,8 +59,7 @@ namespace ChristmasStory.Components.Animation
         }
         private void TransformTotemRings()
         {
-            Locator.GetPauseCommandListener().RemovePauseCommandLock();
-            
+            Locator.GetPauseCommandListener().RemovePauseCommandLock();          
            
 
             var ring_1 = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/IslandsRoot/IslandPivot_C/Island_C/Interactibles_Island_C/Prefab_IP_DW_CodeTotem/CodeDisplay/Props_IP_CodeTotem/rings/ring01").GetComponent<RotaryDial>();
@@ -85,7 +84,7 @@ namespace ChristmasStory.Components.Animation
             ring_5.Awake();
 
             SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/IslandsRoot/IslandPivot_C/Island_C/Interactibles_Island_C/Prefab_IP_DW_CodeTotem").GetComponent<EclipseCodeController4>().CheckForCode();
-           
+            SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/New_Vision_Torch/VisionBeam").SetActive(true);
                         
         }
         public void EnableCandle()

@@ -34,6 +34,15 @@ namespace ChristmasStory
 			newHorizonsAPI.GetStarSystemLoadedEvent().AddListener(OnStarSystemLoaded);
 			ModHelper.Console.WriteLine($"{nameof(ChristmasStory)} is loaded!", MessageType.Success);
 
+			//Check DLC
+			ModHelper.Events.Unity.RunWhen(() => EntitlementsManager.IsDlcOwned() != EntitlementsManager.AsyncOwnershipStatus.NotReady, () =>
+			{
+				if (EntitlementsManager.IsDlcOwned() != EntitlementsManager.AsyncOwnershipStatus.Owned)
+				{
+					ModHelper.Console.WriteLine("Christmas Story requires DLC owned. DLC not found. Check if DLC enabled or try to verify game files.", MessageType.Fatal);
+				}
+			});
+
 			var sceneTransformController = new GameObject("SceneTransformController");
 			sceneTransformController.AddComponent<SceneTransformController>();
 
