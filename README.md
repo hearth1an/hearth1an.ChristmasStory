@@ -25,7 +25,10 @@ Inspired by:
 - [Less Lonely Ship mod by Classic](https://outerwildsmods.com/mods/lesslonelyship/)
 
 Arts by:
-- Elwensà
+- [Elwensà](https://twitter.com/Elwensa)
+
+Music by:
+- Greenpixel
 
 Testers:
 - GameWyrm
@@ -36,8 +39,21 @@ Testers:
 - Turtle
 - That Thing
 
-Music by:
-- Greenpixel
+Translation credits (in work):
+- English: [xen](https://github.com/xen-42), [heart1an](https://github.com/hearth1an)
+- Russian:  
+- Portuguese: [ShoosGun](https://github.com/ShoosGun),
+- French: [Deadofnothnig](https://github.com/Deadofnothing),
+- Сhinese: [星际拓荒讨论群群友](https://github.com/REME-easy),
+- Spanish: [Alejandro-SB](https://github.com/Alejandro-SB),
+- German: Derko,
+- Japanese: [9638](https://github.com/96-38)
+- Italian: ilyNerY.
+
+# Disclaimer
+This work is unofficial Fan Content created under permission from the Mobius Digital Fan Content Policy.
+
+It includes materials which are the property of Mobius Digital and it is neither approved nor endorsed by Mobius Digital.
 
 
 
