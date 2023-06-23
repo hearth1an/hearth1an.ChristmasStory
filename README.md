@@ -28,7 +28,7 @@ Arts by:
 - [Elwensà](https://twitter.com/Elwensa)
 
 Music by:
-- Greenpixel
+- [Greenpixel](https://twitter.com/Greenpixel10)
 
 Testers:
 - GameWyrm
