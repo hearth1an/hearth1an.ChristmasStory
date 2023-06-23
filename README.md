@@ -32,7 +32,7 @@ Music by:
 
 Testers:
 - GameWyrm
-- TimeWarp Knoght
+- TimeWarp Knight
 - bismuthdistrict
 - Ink
 - Music Turtle
