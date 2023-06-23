@@ -1,6 +1,6 @@
 Outer Wilds - Chrismas Story (unofficial story mod) 
 
-![Christmas Story thumbnail](https://user-images.githubusercontent.com/106444732/233448864-58a81d0e-05f9-46c2-b743-3355a1532f74.jpg)
+![Gif christmas story](https://github.com/hearth1an/hearth1an.ChristmasStory/assets/106444732/a7c72688-d53a-49cc-8f86-de87cf9f23d9)
 
 
 # [Watch trailer](https://youtu.be/GcPm7fpr0ZM)
