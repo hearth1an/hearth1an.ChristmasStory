@@ -48,30 +48,3 @@ Translation credits (in work):
 This work is unofficial Fan Content created under permission from the Mobius Digital Fan Content Policy.
 
 It includes materials which are the property of Mobius Digital and it is neither approved nor endorsed by Mobius Digital.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Disclaimer
-This work is unofficial Fan Content created under permission from the Mobius Digital Fan Content Policy.
-
-It includes materials which are the property of Mobius Digital and it is neither approved nor endorsed by Mobius Digital.
