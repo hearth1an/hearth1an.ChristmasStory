@@ -13,12 +13,16 @@ namespace ChristmasStory.Components
     {
         public void Start()
         {
+            ChristmasStory.Instance.ModHelper.Events.Unity.FireOnNextUpdate(() =>
+            {
+                FixPictures();
+            });
+
             TimberHearthTransforms();
             VillagersTransforms();
             VariousTransforms();
             ShipTransforms();
-            PrisonerTransforms();
-            FixPictures();
+            PrisonerTransforms();            
         }
 
         public void TimberHearthTransforms()
@@ -526,14 +530,10 @@ namespace ChristmasStory.Components
                 SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/Prefab_IP_VisionTorchProjector").transform.localPosition = new Vector3(-5f, -2f, -35f);
                 SearchUtilities.Find("Prisoner_Lantern").GetComponent<DreamLanternController>()._lit = true;
 
-
                 var prisonerTotem = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/IslandsRoot/IslandPivot_C/Island_C/Interactibles_Island_C/Prefab_IP_DW_CodeTotem").GetComponent<EclipseCodeController4>();
                 int[] code = { 2, 1, 3, 1, 2 };
                 prisonerTotem._code = code;
                 prisonerTotem.CheckForCode();
-
-
-
 
                 var prisonerDialogue = SearchUtilities.Find("Prisoner_Dialogue");
                 var prisonerInteractReciever = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner/InteractReceiver");

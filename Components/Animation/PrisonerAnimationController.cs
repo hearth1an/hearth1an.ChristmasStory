@@ -52,9 +52,10 @@ namespace ChristmasStory.Components.Animation
             SearchUtilities.Find("Prisoner_Vision").SetActive(false);
             TransformTotemRings();
             SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Interactibles_PrisonCell/Elevator_Pivot/Floor_Bottom/Prefab_IP_DreamLibraryPedestal/PressurePlateRoot/DreamLanternSocket").SetActive(false);
-            Locator.GetPauseCommandListener().RemovePauseCommandLock();
+            Locator.GetPauseCommandListener().RemovePauseCommandLock();            
 
-            Invoke("EnableCandle", 20);
+            ChristmasStory.Instance.ModHelper.Events.Unity.FireInNUpdates(EnableCandle, 10);
+
             Invoke("EnableElevator", 50);
         }
         private void TransformTotemRings()

@@ -190,11 +190,12 @@
 		"GABBRO_START_13": "Make a big explosion with the ship?! Are you crazy?! Alright, let's do it!",
 		"GABBRO_START_14": "Ha-ha, yep! <![CDATA[<i>*whistling*</i>]]>",
 		"GABBRO_START_14.1": "By the way, remember the new exhibit at the observatory? There is <![CDATA[<i>]]>a secret<![CDATA[</i>]]> associated with it. But I will tell about it only on Timber Hearth.",
-		"GABBRO_START_15": "So... I'm waiting for ship explosion! Hurry up and kill me already so we can start a new loop... and tell you <![CDATA[<i>]]>the secret!<![CDATA[</i>]]>",
+		"GABBRO_START_15": "So... I'm waiting for ship explosion! Hurry up and kill me already so we can start a new loop... and tell you <![CDATA[<i>]]>the secret!<![CDATA[</i>]]>. And will teach you how to meditate!",
 		"GABBRO_START_16": "Um. The thing is... my ship is already destroyed.",
 		"GABBRO_START_17": "Sure. I'm working on it.",
 		"GABBRO_START_18": "No luck then. Try not to screw this up next loop!",
 		"GABBRO_START_19": "Got it! I'll be here.",
+
 
 		// Gabbro tree
 		"GABBRO_TREE_1": "Hey! That was a really huge explosion! Are you alright?",
@@ -218,6 +219,8 @@
 		"GABBRO_TREE_19": "Alright, I'm uploading it to your ship log. It should be there when you get back to your ship.",
 		"GABBRO_TREE_20": "I changed my mind, can you give me the coordinates to the strange ship?",
 
+		"GABBRO_MEDITATION_1": "Can you teach me how to meditate?",
+		"GABBRO_MEDITATION_2": "Sure! Hear me out...",
 
 		// Hal
 		"HAL_START_1": "Hey! Are you feeling nervous about your first launch? I know that feeling! I'm nervous about it too!",

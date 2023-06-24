@@ -118,9 +118,7 @@ namespace ChristmasStory
 			characterControllers.AddComponent<ShipToyController>();
 
 			var transformController = new GameObject("TransformController");
-			transformController.AddComponent<TransformController>();	
-			
-			
+			transformController.AddComponent<TransformController>();			
 
 			PlayerData.SetPersistentCondition("MARK_ON_HUD_TUTORIAL_COMPLETE", true);
 			PlayerData.SetPersistentCondition("COMPLETED_SHIPLOG_TUTORIAL", true);
