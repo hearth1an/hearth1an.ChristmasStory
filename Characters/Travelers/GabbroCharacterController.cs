@@ -41,6 +41,11 @@ namespace ChristmasStory.Characters.Travelers
 				Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly());
 			}
 
+			if (Conditions.Get(Conditions.PERSISTENT.GABBRO_DONE))
+            {
+				SearchUtilities.Find("GabbroIsland_Body/Sector_GabbroIsland/Interactables_GabbroIsland/Traveller_HEA_Gabbro").SetActive(false);
+			}
+
 			ShipHandler.Instance.ShipExplosion.AddListener(ShipHandler_ShipExplosion);
 		}
 
@@ -91,7 +96,7 @@ namespace ChristmasStory.Characters.Travelers
 			_thShip?.SetActive(newState == STATE.AT_TREE);
 
 			_signal?.SetActive(newState == STATE.ORIGINAL);
-			dialogue?.gameObject?.SetActive(newState == STATE.ORIGINAL);
+			//dialogue?.gameObject?.SetActive(newState == STATE.ORIGINAL);
 		}
 	}
 }
