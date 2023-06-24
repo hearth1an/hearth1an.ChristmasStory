@@ -69,6 +69,7 @@ namespace ChristmasStory.Characters.Travelers
 			originalCharacter.SetActive(false);
 			_signal?.SetActive(false);
 			//dialogue?.gameObject?.SetActive(false);
+			SearchUtilities.Find("GabbroIsland_Body/Sector_GabbroIsland/Interactables_GabbroIsland/Traveller_HEA_Gabbro").SetActive(false);
 		}
 
 		protected override void Dialogue_OnStartConversation() { }
