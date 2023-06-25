@@ -28,7 +28,7 @@
 				<DialogueTarget>Secret_Agree</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>
-				<CancelledPersistentCondition>LEARN_MEDITATION</CancelledPersistentCondition>
+				<CancelledPersistentCondition>KNOWS_MEDITATION</CancelledPersistentCondition>
 				<Text>GABBRO_MEDITATION_1</Text>
 				<DialogueTarget>MEDITATION</DialogueTarget>
 			</DialogueOption>
@@ -77,7 +77,12 @@
 			<CancelledPersistentCondition>GABBRO_SECRET_AGREE</CancelledPersistentCondition>
 				<Text>GABBRO_TREE_20</Text>
 				<DialogueTarget>Secret_Agree</DialogueTarget>
-			</DialogueOption>			
+			</DialogueOption>
+			<DialogueOption>
+				<CancelledPersistentCondition>KNOWS_MEDITATION</CancelledPersistentCondition>
+				<Text>GABBRO_MEDITATION_1</Text>
+				<DialogueTarget>MEDITATION</DialogueTarget>
+			</DialogueOption>		
 		</DialogueOptionsList>
 	</DialogueNode>
 	<DialogueNode>

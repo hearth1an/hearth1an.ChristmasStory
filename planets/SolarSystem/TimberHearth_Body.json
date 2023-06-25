@@ -1118,7 +1118,6 @@
 					"z": 0
 				},
 				"xmlFile": "planets/Dialogue/Ernesto.xml",
-				"pathToAnimController": "Sector_TH/Sector_Village/Sector_Observatory/Interactables_Observatory/AnglerFishExhibit/AnglerFishTankPivot/Beast_Anglerfish/B_angler_root",
 				"rename": "Ernesto_Dialogue",
 				"radius": 2
 			},

@@ -26,6 +26,8 @@ namespace ChristmasStory.Characters.Villagers
 			shipDialogue.SetActive(false);
 			SearchUtilities.Find("Toy_Box").AddComponent<OWCapsuleCollider>();
 
+			SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Seed/Signal_Harmonica").SetActive(false);
+
 			var seedToy = SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Seed");
 			var snowmanToy = SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Snowman");
 			seedToy.SetActive(false);

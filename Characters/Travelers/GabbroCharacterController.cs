@@ -3,26 +3,15 @@ using ChristmasStory.Utility;
 using NewHorizons.Utility;
 using System.Collections;
 using UnityEngine;
-using HarmonyLib;
-using System.Reflection;
 
 namespace ChristmasStory.Characters.Travelers
-{
-	[HarmonyPatch]
+{	
 	internal class GabbroCharacterController : TravelerCharacterController
 	{
-
 		public override Conditions.PERSISTENT DoneCondition => Conditions.PERSISTENT.GABBRO_DONE;
 
 		private GameObject _gdShip, _thShip;
-		private GameObject _signal;
-
-		[HarmonyPostfix]
-		[HarmonyPatch(typeof(PauseMenuManager), nameof(PauseMenuManager.Start))]
-		private static void PauseMenuManager_Start(PauseMenuManager __instance)
-		{
-			__instance._skipToNextLoopButton.SetActive(true);
-		}
+		private GameObject _signal;		
 		public override void Start()
 		{
 			dialogue = SearchUtilities.Find("Gabbro_Dialogue_Tree").GetComponent<CharacterDialogueTree>();
@@ -32,18 +21,11 @@ namespace ChristmasStory.Characters.Travelers
 			_gdShip = SearchUtilities.Find("GabbroShip_Body");
 			_thShip = SearchUtilities.Find("TimberHearth_Body/Sector_TH/GabbroShip");
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Traveller_HEA_Gabbro/Signal_Flute").transform.localPosition = new Vector3(0, 1, 0);
-			base.Start();
-
-			Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly());
-
-			if (Conditions.Get(Conditions.PERSISTENT.LEARN_MEDITATION))
-			{
-				Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly());
-			}
+			base.Start();           
 
 			if (Conditions.Get(Conditions.PERSISTENT.GABBRO_DONE))
             {
-				SearchUtilities.Find("GabbroIsland_Body/Sector_GabbroIsland/Interactables_GabbroIsland/Traveller_HEA_Gabbro").SetActive(false);
+				SearchUtilities.Find("GabbroIsland_Body/Sector_GabbroIsland/Interactables_GabbroIsland/Traveller_HEA_Gabbro/ConversationZone_Gabbro").SetActive(false);
 			}
 
 			ShipHandler.Instance.ShipExplosion.AddListener(ShipHandler_ShipExplosion);
@@ -74,19 +56,19 @@ namespace ChristmasStory.Characters.Travelers
 			originalCharacter.SetActive(false);
 			_signal?.SetActive(false);
 			//dialogue?.gameObject?.SetActive(false);
-			SearchUtilities.Find("GabbroIsland_Body/Sector_GabbroIsland/Interactables_GabbroIsland/Traveller_HEA_Gabbro").SetActive(false);
+			SearchUtilities.Find("GabbroIsland_Body/Sector_GabbroIsland/Interactables_GabbroIsland/Traveller_HEA_Gabbro/ConversationZone_Gabbro").SetActive(false);
 		}
 
 		protected override void Dialogue_OnStartConversation() { }
         protected override void Dialogue_OnEndConversation()
         {       
-            if (Conditions.Get(Conditions.PERSISTENT.LEARN_MEDITATION) && !PlayerData.GetPersistentCondition("MEDITATION_KNOWN")) 
+            if (Conditions.Get(Conditions.PERSISTENT.LEARN_MEDITATION) && !PlayerData.GetPersistentCondition("KNOWS_MEDITATION")) 
 			{
 				PlayerEffectController.Blink(2f);
 				PlayerEffectController.AddLock(2f);
-				Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly());
-				WriteUtil.WriteLine("Enabling meditation");
-				PlayerData.SetPersistentCondition("MEDITATION_KNOWN", true);
+				PlayerData.SetPersistentCondition("KNOWS_MEDITATION", true);
+
+				WriteUtil.WriteLine("Enabling meditation");				
 			}	
 		}
 

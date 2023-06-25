@@ -412,6 +412,8 @@ namespace ChristmasStory.Components
                 //fragment.DestroyAllComponents<FragmentDragAnimator>();
                 //fragment.DestroyAllComponents<DetachableFragment>();
                 //fragment.DestroyAllComponents<FragmentEffects>();
+
+                SearchUtilities.Find("TimberHearth_Body/Sector_TH/Nomai_Recorder/PointLight_NOM_Recorder").GetComponent<Light>().intensity = 1.5f;
                 
 
             }

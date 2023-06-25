@@ -16,6 +16,20 @@
 					"y": 253.0724,
 					"z": 327.3363
 				}
+			},
+			{
+				"path": "TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Kids_Hidden/Prefab_HideAndSeekRadio/Props_HEA_Radio",
+				"position": {
+					"x": 21.268,
+					"y": -15.0595,
+					"z": -0.8563
+				},
+				"rotation": {
+					"x": 27.8624,
+					"y": 217.2257,
+					"z": 346.6439
+				},
+				"scale": 0.7
 			}
 		],
 		"dialogue": [
@@ -41,6 +55,21 @@
 				},
 				"audio": "TravelerFeldspar",
 				"rename": "Feldspar_Pioneer",
+				"detectionRadius": 50,
+				"identificationRadius": 5
+			},
+			{
+				"name": "Feldspar",
+				"frequency": "Traveler",
+				"isRelativeToParent": true,
+				"parentPath": "Sector_PioneerDimension/Props_HEA_Radio",
+				"position": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"audio": "planets/Content/music/feldspar_radio.mp3",
+				"rename": "Feldspar_Pioneer_Radio",
 				"detectionRadius": 50,
 				"identificationRadius": 5
 			}
