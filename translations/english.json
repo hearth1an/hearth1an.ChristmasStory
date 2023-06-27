@@ -381,7 +381,7 @@
 		"RIEBECK_START_2": "Just... how? I mean... <![CDATA[<i>]]>how did you end up here?<![CDATA[</i>]]>",
 		"RIEBECK_START_3": "Yep, my ship should be nearby. Let's get in.",
 		"RIEBECK_START_4": "Hold on, I'll bring my ship a little closer.",
-		"RIEBECK_START_5": "I'm so sorry... but my ship is not broken... Unfortunately I can't help.",
+		"RIEBECK_START_5": "I'm so sorry... but my ship is broken... Unfortunately I can't help.",
 		"RIEBECK_START_6": "Well, I'd like to see how you'd react if a piece of the planet broke off and fell right behind you!",
 		"RIEBECK_START_7": "I had barely any time to react, so I took all the gravity crystals I had and I found a safe new place. Logically, from this side, I won't ever fall DOWN.",
 		"RIEBECK_START_8": "You get it? Ha-ha!",
@@ -537,7 +537,7 @@
 		"RADIO_START_16": "I think Tuff forgot about me. Can you call the elevator down here?",
 		"RADIO_START_17": "<![CDATA[<i>]]>Gossan:<![CDATA[</i>]]> Sure, I'm calling the elevator now. We will will be at the center of the Village.",
 		"RADIO_START_18": "<![CDATA[<i>]]>Gossan out.<![CDATA[</i>]]>",
-		"RADIO_START_19": "Thank you, Gossan! <![CDATA[<i>]]><![CDATA[</i>]]>",
+		"RADIO_START_19": "Thank you, Gossan!",
 
 		// Galena
 

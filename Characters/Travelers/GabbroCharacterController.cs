@@ -67,6 +67,7 @@ namespace ChristmasStory.Characters.Travelers
 				PlayerEffectController.Blink(2f);
 				PlayerEffectController.AddLock(2f);
 				PlayerData.SetPersistentCondition("KNOWS_MEDITATION", true);
+				Locator.GetSceneMenuManager()._pauseMenu._skipToNextLoopButton.SetActive(true);
 
 				WriteUtil.WriteLine("Enabling meditation");				
 			}	
