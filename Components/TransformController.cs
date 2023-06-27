@@ -502,13 +502,13 @@ namespace ChristmasStory.Components
                 var prisonLigthBeam = SearchUtilities.Find("RingWorld_Body/Sector_RingWorld/Prison_Light");
                 var prisonLight = SearchUtilities.Find("RingWorld_Body/Sector_RingWorld/Prison_Light2");
 
-                prisonLigthBeam.transform.localPosition = new Vector3(212.7656f, -72.5982f, -135.8029f);
+                prisonLigthBeam.transform.localPosition = new Vector3(213.6656f, -72.8982f, -136.0029f);
                 prisonLigthBeam.transform.localRotation = new Quaternion(0.6013f, -0.3345f, 0.3018f, 0.6599f);
                 prisonLigthBeam.transform.localScale = new Vector3(0.3f, 0.8f, 0.3f);
 
-                prisonLight.transform.localPosition = new Vector3(201.4169f, -70.8692f, -127.4167f);
-                prisonLight.transform.localRotation = new Quaternion(-0.0135f, 0.8952f, 0.1759f, -0.4093f);
-                prisonLight.transform.localScale = new Vector3(0.7f, 0.7f, 0.7f);
+                prisonLight.transform.localPosition = new Vector3(200.8169f, -71.0692f, -126.9167f);
+                prisonLight.transform.localRotation = new Quaternion(-0.6183f, 0.6849f, 0.3837f, 0.0377f);
+                prisonLight.transform.localScale = new Vector3(0.2f, 0.8127f, 0.8f);
 
                 SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_L (14)").transform.localPosition = new Vector3(-5f, -2f, -35f);
                 SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Interactibles_Underground/SarcophagusController/PrisonerFootprints/Decal_DW_Footprint_R (15)").transform.localPosition = new Vector3(-5f, -2f, -35f);

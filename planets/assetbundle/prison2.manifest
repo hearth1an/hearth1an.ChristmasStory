@@ -1,0 +1,34 @@
+ManifestFileVersion: 0
+CRC: 2081188440
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 135c3cd9f419b60946c1b1205e2db725
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c5d8728239c5b2dfb84e4bcc6a363eb3
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 64
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/PREFABS/Prison_Body_Interior_fixed.prefab
+- Assets/PREFABS/prison_ext.prefab
+Dependencies: []
