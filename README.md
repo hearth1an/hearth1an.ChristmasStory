@@ -44,6 +44,7 @@ Testers:
 Translation credits (in work):
 - English: [xen](https://github.com/xen-42), [heart1an](https://github.com/hearth1an)
 - Chinese: [solitary-sails](https://github.com/solitary-sails)
+- French: Balex
 
 # Disclaimer
 This work is unofficial Fan Content created under permission from the Mobius Digital Fan Content Policy.
