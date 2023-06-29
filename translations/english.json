@@ -655,6 +655,12 @@
 		"MICA_START_1": "Oh, hey! It's you!",
 		"MICA_START_2": "I'm excited to see your launch today.",
 		"MICA_START_3": "Do you want to practice with the model ship before you leave?",
+
+		// ADD THIS STRING 
+
+		"MICA_START_3.1": "Sure!",
+
+
 		"MICA_START_4": "No, thanks, I'm good.",
 		"MICA_START_5": "Hey, did you change your mind and come back to try out the model ship?",
 		"MICA_START_6": "Yes, I have changed my mind.",

@@ -10,7 +10,7 @@
 		</Dialogue>
 		<DialogueOptionsList>
 			<DialogueOption>
-				<Text>Sure!</Text>
+				<Text>MICA_START_3.1</Text>
 				<DialogueTarget>2</DialogueTarget>
 			</DialogueOption>
 			<DialogueOption>

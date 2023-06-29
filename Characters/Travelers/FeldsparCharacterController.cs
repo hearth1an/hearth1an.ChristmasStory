@@ -23,8 +23,12 @@ namespace ChristmasStory.Characters.Travelers
 			SearchUtilities.Find("DB_HubDimension_Body/Sector_HubDimension/Feldspar_Hub_2").SetActive(false);
 			SearchUtilities.Find("DB_PioneerDimension_Body/Sector_PioneerDimension/Feldspar_Pioneer").SetActive(false);
 
+			base.Start();
+
+			originalCharacter.SetActive(false);
+
 			ChristmasStory.Instance.ModHelper.Events.Unity.RunWhen(() => Conditions.Get(Conditions.PERSISTENT.FELDSPAR_START_ENTRY) && !Conditions.Get(Conditions.PERSISTENT.FELDSPAR_DONE), () =>
-			{								
+			{
 				originalCharacter.SetActive(true);
 
 				// After entry
@@ -37,8 +41,6 @@ namespace ChristmasStory.Characters.Travelers
 				SearchUtilities.Find("DB_PioneerDimension_Body/Sector_PioneerDimension/Feldspar_Pioneer").SetActive(true);
 				SearchUtilities.Find("DB_PioneerDimension_Body/Sector_PioneerDimension/Props_HEA_Radio/Feldspar_Pioneer_Radio").SetActive(true);
 			});
-
-			base.Start();
 
 			if (State == STATE.AT_TREE && !Conditions.Get(Conditions.PERSISTENT.FELDSPAR_LOOP_DIALOGUE_COMPLETE))
 			{
