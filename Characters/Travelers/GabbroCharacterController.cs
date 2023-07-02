@@ -26,6 +26,7 @@ namespace ChristmasStory.Characters.Travelers
 			if (Conditions.Get(Conditions.PERSISTENT.GABBRO_DONE))
             {
 				SearchUtilities.Find("GabbroIsland_Body/Sector_GabbroIsland/Interactables_GabbroIsland/Traveller_HEA_Gabbro/ConversationZone_Gabbro").SetActive(false);
+				SearchUtilities.Find("GabbroIsland_Body/Sector_GabbroIsland/Interactables_GabbroIsland/Traveller_HEA_Gabbro/ConversationZone").SetActive(false);
 			}
 
 			ShipHandler.Instance.ShipExplosion.AddListener(ShipHandler_ShipExplosion);
@@ -46,6 +47,9 @@ namespace ChristmasStory.Characters.Travelers
 				WriteUtil.WriteDebug("Kaboom!");
 				Conditions.Set(DoneCondition, true);
 				StartCoroutine(KillGabbro());
+
+				SearchUtilities.Find("GabbroIsland_Body/Sector_GabbroIsland/Interactables_GabbroIsland/Traveller_HEA_Gabbro/ConversationZone_Gabbro").SetActive(false);
+				SearchUtilities.Find("GabbroIsland_Body/Sector_GabbroIsland/Interactables_GabbroIsland/Traveller_HEA_Gabbro/ConversationZone").SetActive(false);
 			}
 		}
 
@@ -55,8 +59,7 @@ namespace ChristmasStory.Characters.Travelers
 			yield return 1.5f;
 			originalCharacter.SetActive(false);
 			_signal?.SetActive(false);
-			//dialogue?.gameObject?.SetActive(false);
-			SearchUtilities.Find("GabbroIsland_Body/Sector_GabbroIsland/Interactables_GabbroIsland/Traveller_HEA_Gabbro/ConversationZone_Gabbro").SetActive(false);
+			//dialogue?.gameObject?.SetActive(false);			
 		}
 
 		protected override void Dialogue_OnStartConversation() { }
