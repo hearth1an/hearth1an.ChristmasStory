@@ -20,7 +20,10 @@ namespace ChristmasStory.Components.Animation
             _animator = SearchUtilities.Find("DreamWorld_Body/Sector_DreamWorld/Sector_Underground/Sector_PrisonCell/Ghosts_PrisonCell/GhostNodeMap_PrisonCell_Lower/Prefab_IP_GhostBird_Prisoner/Ghostbird_IP_ANIM").GetComponent<PrisonerEffects>();
             _visionTorchTarget = SearchUtilities.Find("Prisoner_Vision").GetComponent<VisionTorchTarget>();
             _visionTorchTarget.onSlidesComplete = Instance.OnVisionEnd;
-            _visionTorchTarget.onSlidesStart = Instance.OnVisionStart;            
+            _visionTorchTarget.onSlidesStart = Instance.OnVisionStart;
+
+            var vanillaVisionShape = SearchUtilities.Find("PrisonerHeadDetector").GetComponent<Shape>();
+            vanillaVisionShape.SetActivation(false);
 
             TotemCodePromptVolume.Create(SearchUtilities.Find("DreamWorld_Body"), new Vector3(-17.9f, -289.6f, 681.9f), 3f);
             var totemPromt = SearchUtilities.Find("DreamWorld_Body/TotemCodePromptVolume");           
