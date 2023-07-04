@@ -2,6 +2,7 @@
 using UnityEngine;
 using NewHorizons.Builder.Props;
 using ChristmasStory.Utility;
+using OWML.ModHelper;
 
 namespace ChristmasStory.Components.Animation
 {
@@ -29,6 +30,23 @@ namespace ChristmasStory.Components.Animation
                 totemPromt.SetActive(false);                                        
             }
 
+        }
+
+        public void OnRenderObject()
+        {
+            IGizmosAPI gizmosAPI = ChristmasStory.Instance.ModHelper.Interaction.TryGetModApi<IGizmosAPI>("Locochoco.GizmosLibrary");
+            gizmosAPI.SetDefaultMaterialPass();
+            gizmosAPI.DrawOnGlobalReference(() =>
+            {
+                Shape shapeInPlayer = Locator.GetPlayerDetector().gameObject.GetComponent<Shape>();
+                if (shapeInPlayer != null)
+                {
+                    Shape modShape = SearchUtilities.Find("Prisoner_Vision").GetComponent<Shape>();
+                    Shape vanillaShape = SearchUtilities.Find("PrisonerHeadDetector").GetComponent<Shape>();
+                    gizmosAPI.DrawShape(modShape, Color.green);
+                    gizmosAPI.DrawShape(vanillaShape, Color.red);
+                }
+            });
         }
 
         public void PlayLightsUp()
