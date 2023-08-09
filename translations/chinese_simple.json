@@ -137,7 +137,7 @@
 		"ESKER_TREE_6": "没事...当我没说...",
 
 		// Feldspar note
-		"FELDSPAR_NOTE": "好吧，我现在要离开这个鬼地方。 我不确定没有船我是否会成功，但至少我会尝试。我的口琴复读机应该有助于找到这个音符。 \n <![CDATA[<i>]]>- 费尔德斯巴<![CDATA[</i>]]>",
+		"FELDSPAR_NOTE": "好吧，我现在要离开这个鬼地方。 我不确定没有飞船我是否能成功，但至少我该试试。我的口琴复读机应该能帮你们找到这张便签。 \n <![CDATA[<i>]]>- 费尔德斯巴<![CDATA[</i>]]>",
 
 		// Feldspar ship
 		"FELDSPAR_SHIP_1.1": "哇！ 我想这就是我跟着的安康鱼！不知道它是否危险，因为它太小了。",
@@ -229,7 +229,7 @@
 		"HAL_START_4": "我很好，哈尔。我得走了",
 		"HAL_START_5": "你在对那块石头做什么？",
 		"HAL_START_6": "这就是我要说的了！祝你在太空里顺利！",
-		"HAL_START_7": "我只是在联系我的 <![CDATA[<i>]]>挪麦书法。<![CDATA[</i>]]> 在制作挪麦语言翻译器时我深入学习了他们的文字，我想我最好也能用他们的文字书写。",
+		"HAL_START_7": "我只是在练习我的 <![CDATA[<i>]]>挪麦书法。<![CDATA[</i>]]> 在制作挪麦语言翻译器时我深入学习了他们的文字，我想我最好也能用他们的文字书写。",
 		"HAL_START_8": "我实际上不知道这语言是什么。不管怎么说... 没人有办法能读懂它。",
 		"HAL_START_9": "是。愿你顺利。",
 		"HAL_START_10": "当然！如你所见，我经常练习。所以，这一定是为了测试翻译器吧。",
@@ -532,7 +532,7 @@
 		"RADIO_START_10": "你好???",
 		"RADIO_START_11": "我被困在这里了!!",
 		"RADIO_START_12": "谁都行...",
-		"RADIO_START_13": "<![CDATA[<size=20>]]> <![CDATA[<i>]]>塔夫：<![CDATA[</i>]]>坚持住，我想我听到了什么...<![CDATA[</size>]]>",
+		"RADIO_START_13": "<![CDATA[<size=20>]]> <![CDATA[<i>]]>塔夫：<![CDATA[</i>]]>等一下，我想我听到了什么...<![CDATA[</size>]]>",
 		"RADIO_START_14": "救命！！！我在广播里说话！",
 		"RADIO_START_15": "<![CDATA[<i>]]>古萨：<![CDATA[</i>]]>年轻人？你在那里干什么？！",
 		"RADIO_START_16": "我想塔夫忘记了我。你能叫电梯到这下面吗？",
@@ -555,12 +555,12 @@
 
 		// Moraine
 
-		"MORAINE_START_1": "<![CDATA[<i>]]>Hey! Watch out!<![CDATA[</i>]]>",
-		"MORAINE_START_2": "Hey! You're not listening to the travelers anymore?",
-		"MORAINE_START_3": "Signal all the same! Always!",
-		"MORAINE_START_4": "Oh yeah, I was listening to Riebeck and their signal was gone for a few minutes! I don't know what happened to them.",
-		"MORAINE_START_5": "Alright, I'll visit them to see what's up.",
-		"MORAINE_START_6": "<![CDATA[<i>]]>Watch out!<![CDATA[</i>]]>",
+		"MORAINE_START_1": "<![CDATA[<i>]]>嗨！当心！<![CDATA[</i>]]>",
+		"MORAINE_START_2": "嗨！你怎么不去听旅行者们的信号了？",
+		"MORAINE_START_3": "信号总是一样的，一如既往。",
+		"MORAINE_START_4": "嗯，我在收听瑞拜克的信号，他的信号不知道为什么消失了一会儿。我不知道他遇到什么事了。",
+		"MORAINE_START_5": "好吧，我会去看看他们那里发生了什么",
+		"MORAINE_START_6": "<![CDATA[<i>]]>当心！<![CDATA[</i>]]>",
 
 		// Spinel
 
@@ -721,10 +721,10 @@
 
 		"RECORDER_1": "奥埃诺：科利耶斯，你能告诉我你正在研究的想法到底是什么吗？",
 		"RECORDER_2": "科利耶斯：当然。想象一下当太阳站按预期工作时，我们应该得有一个能远程来监控它和<![CDATA[<color=orange>灰烬双星计划</color>]]>的地方，不是吗？",
-		"RECORDER_3": "奥埃诺：我明白你的意思了。只有特定数量的挪麦人适合进入灰烬双星的核心来监控该项目，而且我们可以连接的雕像数量有限。 我相信<![CDATA[<color=orange>木炉星h</color>]]>矿井可以作为次要安全观测点。",
+		"RECORDER_3": "奥埃诺：我明白你的意思了。只有特定数量的挪麦人适合进入灰烬双星的核心来监控该项目，而且我们可以连接的雕像数量有限。 我相信<![CDATA[<color=orange>木炉星</color>]]>矿井可以作为次要安全观测点。",
 		"RECORDER_4": "科利耶斯：确切地。如果我的假设是正确的，与雕像相比，这些电线将能够以相对有限的容量将多个个体的记忆传输到<![CDATA[<color=orange>灰烬双星计划</color>]]>。我相信数据传输<![CDATA[<i>]]>只会在距离设备10到20米的半径范围内有效。<![CDATA[</i>]]>",
 		"RECORDER_5": "亚罗: 我们没有时间或资源进行额外的实验，科利耶斯。我们只有在<![CDATA[<color=orange>灰烬双星计划</color>]]>成功之后才能确定它是否有效。请现在不要在这上面浪费任何时间。",
-		"RECORDER_6": "科利耶斯：你是对的。<![CDATA[<i>]]>我们应该更加专注于我们的主要任务。<![CDATA[</i>]]>在<![CDATA[<color=orange>灰烬双星计划t</color>]]>完成其使命后，我将有充足的时间来改进这项技术。",
+		"RECORDER_6": "科利耶斯：你是对的。<![CDATA[<i>]]>我们应该更加专注于我们的主要任务。<![CDATA[</i>]]>在<![CDATA[<color=orange>灰烬双星计划</color>]]>完成其使命后，我将有充足的时间来改进这项技术。",
 
 		"HAL_STONE_TEXT": "<![CDATA[<size=50>]]><![CDATA[<color=red>错误:</color>]]>瀙噯の所萊內姆，涐想邀請伱呿朩爐煋啝涐扪①起慶祝聖誕兯！！！<![CDATA[</size>]]>",
 
@@ -786,7 +786,7 @@
 
 	"UIDictionary": {
 
-		"MOD_POPUP": "感谢安装圣诞故事！本模组包含对本体和DLC的完整剧透！为避免缺字问题，建议额外安装OuterWildsFixFont这个Mod",
+		"MOD_POPUP": "感谢安装圣诞故事！本模组包含对本体和DLC的完整剧透！为避免Bug，请使用新的个人资料游玩。为避免缺字问题，建议额外安装OuterWildsFixFont这个Mod",
 		"ENDING_TEXT_5": "THE END \n \n 已邀请 5/8 位旅行者",
 		"ENDING_TEXT_6": "THE END \n \n 已邀请 6/8 位旅行者",
 		"ENDING_TEXT_7": "THE END \n \n 已邀请 7/8 位旅行者",
