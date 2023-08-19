@@ -433,7 +433,13 @@ namespace ChristmasStory.Components
                 SearchUtilities.Find("Ship_Body/ShipSector/Ship_Player/ConversationZone").GetComponent<InteractReceiver>()._usableInShip = true;
                 SearchUtilities.Find("Ship_Body/ShipSector/Ship_Riebeck/ConversationZone").GetComponent<InteractReceiver>()._usableInShip = true;
                 SearchUtilities.Find("Ship_Body/ShipSector/Ship_Esker/ConversationZone").GetComponent<InteractReceiver>()._usableInShip = true;
+
+
+
+                SearchUtilities.Find("Ship_Body/Module_Cockpit/Toy_Seed/Toy_Vine_3/Vine_Collider").transform.localScale = new Vector3(500, 500,500);
             }
+
+
             catch (Exception ex)
             {
                 WriteUtil.WriteError($"{ex}");

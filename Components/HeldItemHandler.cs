@@ -14,6 +14,7 @@ namespace ChristmasStory.Components
 		private ItemTool _itemTool;
 		public GameObject _sharedStone;
 		private GameObject _villageSector;
+		private SphereCollider PrisonerLanternCollider;
 		public DreamLanternController PrisonerLantern { get; private set; }
 		public DreamLanternItem PrisonerLanternItem { get; private set; }
 		public class ItemEvent : UnityEvent<OWItem> { }
@@ -22,6 +23,7 @@ namespace ChristmasStory.Components
 		public static HeldItemHandler Instance;
 		
 		private bool isPrisonerFailed = false;
+		private bool hasRangeChanged = false;
 
 		public void Start()
 		{
@@ -34,9 +36,17 @@ namespace ChristmasStory.Components
 
 			// Fix prisoner lantern
 			PrisonerLantern = SearchUtilities.Find("Prisoner_Artifact").GetComponent<DreamLanternController>();
-			PrisonerLanternItem = PrisonerLantern.GetComponent<DreamLanternItem>();		
-			
+			PrisonerLanternItem = PrisonerLantern.GetComponent<DreamLanternItem>();
+			PrisonerLanternCollider = SearchUtilities.Find("Prisoner_Artifact").GetComponent<SphereCollider>();
+
+
+
 		}
+
+		private void OnPickedUp()
+        {
+
+        }
 	
 		public void PrisonerFailed()
 		{
@@ -79,6 +89,11 @@ namespace ChristmasStory.Components
 		{
 			if (IsPlayerHoldingPrisonerArtifact() && PrisonerLantern._lit == true)
 			{
+				if (!hasRangeChanged)
+                {
+					PrisonerLanternCollider.radius = 1.5f;
+					hasRangeChanged = true;
+				}
 				if (PlayerState._isCameraUnderwater == true && !isPrisonerFailed)
 				{
 					PrisonerFailed();
