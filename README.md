@@ -17,7 +17,7 @@ This mod contains major spoilers for Outer Wilds original game and Echoes Of the
 
 # Credits
 Authors:
-- [heart1an](https://github.com/hearth1an)
+- [hearth1an](https://github.com/hearth1an)
 - [xen](https://github.com/xen-42)
 
 Inspired by:
@@ -45,6 +45,9 @@ Translation credits (in work):
 - English: [xen](https://github.com/xen-42), [heart1an](https://github.com/hearth1an)
 - Chinese: [solitary-sails](https://github.com/solitary-sails)
 - French: Balex
+- Japanese: [orclecle](https://github.com/TRSasasusu)
+- German: Derko
+- Italian: ilynery
 
 # Disclaimer
 This work is unofficial Fan Content created under permission from the Mobius Digital Fan Content Policy.
