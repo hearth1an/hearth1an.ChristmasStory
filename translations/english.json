@@ -774,9 +774,32 @@
 
 		"RIEBECK_ONE_LOOP_START": "DID THE SUN EXPLODE? WHAT WAS THAT!",
 		"RIEBECK_ONE_LOOP_RESPONSE": "Yes it did, but try not to worry about it, we're safe here.",
-		"RIEBECK_ONE_LOOP_DONE": "I find that hard to believe! But if the sun exploded and we're still alive then I guess you're right. I think."
+		"RIEBECK_ONE_LOOP_DONE": "I find that hard to believe! But if the sun exploded and we're still alive then I guess you're right. I think.",
 
-
+		"Chert": "Chert",
+		"Esker": "Esker",
+		"Feldspar": "Feldspar",
+		"Gabbro": "Gabbro",
+		"Hal": "Hal",
+		"Hornfels": "Hornfels",
+		"Marl": "Marl",
+		"Self": "Self",
+		"Porphy": "Porphy",
+		"the Prisoner": "the Prisoner",
+		"Riebeck": "Riebeck",
+		"Slate": "Slate",
+		"Gossan": "Gossan",
+		"Tektite": "Tektite",
+		"Galena": "Galena",
+		"Moraine": "Maraine",
+		"Spinel": "Spinel",
+		"Tephra": "Tephra",
+		"Arcose": "Arcose",
+		"Rutile": "Rutile",
+		"Gneiss": "Gneiss",
+		"Tuff": "Tuff",
+		"Mica": "Mica",
+		"Solanum": "Solanum"
 
 
 

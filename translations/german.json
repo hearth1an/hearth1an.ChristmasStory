@@ -774,9 +774,31 @@
 
 		"RIEBECK_ONE_LOOP_START": "IST DIE SONNE EXPLODIERT? WAS WAR DAS!",
 		"RIEBECK_ONE_LOOP_RESPONSE": "Ja, das ist sie, aber mach dir darum keine Sorgen. Hier sind wir sicher.",
-		"RIEBECK_ONE_LOOP_DONE": "Schwer zu glauben! Aber wenn die Sonne explodiert ist und wir immer noch leben, glaube ich, dass du Recht hast. Denke ich."
+		"RIEBECK_ONE_LOOP_DONE": "Schwer zu glauben! Aber wenn die Sonne explodiert ist und wir immer noch leben, glaube ich, dass du Recht hast. Denke ich.",
 
-
+		"Chert": "Chert",
+		"Esker": "Wallberg",
+		"Feldspar": "Feldspat",
+		"Gabbro": "Gabbro",
+		"Hal": "Hal",
+		"Hornfels": "Hornfels",
+		"Marl": "Mergel",
+		"Self": "Ich",
+		"Porphy": "Porphi",
+		"Riebeck": "Riebeck",
+		"Slate": "Schiefer",
+		"Gossan": "Eisenhut",
+		"Tektite": "Tektit",
+		"Galena": "Galenit",
+		"Moraine": "Moräne",
+		"Spinel": "Spinell",
+		"Tephra": "Pyroklastika",
+		"Arcose": "Arkose",
+		"Rutile": "Rutil",
+		"Gneiss": "Gneis",
+		"Tuff": "Tuff",
+		"Mica": "Glimmer",
+		"Solanum": "Solanum"
 
 
 

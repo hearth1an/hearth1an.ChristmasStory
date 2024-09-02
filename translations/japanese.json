@@ -779,9 +779,32 @@
 
 		"RIEBECK_ONE_LOOP_START": "<![CDATA[<size=57>]]>太陽が爆発した？あれはなんなんだ！<![CDATA[</size>]]>",
 		"RIEBECK_ONE_LOOP_RESPONSE": "ああ、そうだな。でも心配しないでくれ、ここは安全だから。",
-		"RIEBECK_ONE_LOOP_DONE": "信じられない！でも、太陽が爆発しても私らが生きているのだとしたら、お前が言うことは正しいのだろう。多分。"
+		"RIEBECK_ONE_LOOP_DONE": "信じられない！でも、太陽が爆発しても私らが生きているのだとしたら、お前が言うことは正しいのだろう。多分。",
 
-
+		"Chert": "Chert",
+		"Esker": "Esker",
+		"Feldspar": "Feldspar",
+		"Gabbro": "Gabbro",
+		"Hal": "Hal",
+		"Hornfels": "Hornfels",
+		"Marl": "Marl",
+		"Self": "Self",
+		"Porphy": "Porphy",
+		"the Prisoner": "囚人",
+		"Riebeck": "Riebeck",
+		"Slate": "Slate",
+		"Gossan": "Gossan",
+		"Tektite": "Tektite",
+		"Galena": "Galena",
+		"Moraine": "Maraine",
+		"Spinel": "Spinel",
+		"Tephra": "Tephra",
+		"Arcose": "Arcose",
+		"Rutile": "Rutile",
+		"Gneiss": "Gneiss",
+		"Tuff": "Tuff",
+		"Mica": "Mica",
+		"Solanum": "Solanum"
 
 
 

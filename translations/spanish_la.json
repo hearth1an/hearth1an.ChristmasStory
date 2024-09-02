@@ -138,7 +138,7 @@
 
 		// Feldspar note
 		"FELDSPAR_NOTE": "Vale, toca abandonar este maldito lugar. No estoy seguro de si me irá bien sin la nave, pero al menos lo intentaré. Mi repetidor debería ayudar a llegar a esta nota. \n  \n <![CDATA[<i>]]>- Feldespato<![CDATA[</i>]]>",
-		
+
 		// Feldspar ship
 		"FELDSPAR_SHIP_1.1": "¡Guau! ¡Creo que ese es el rape al que seguí! No sé si es peligroso ya que es bastante pequeño.",
 		"FELDSPAR_SHIP_1": "Bonita nave, por cierto. Le pediré a Launa que me haga una nueva como ésta. Avísame cuando aterricemos cerca de la aldea, ¿vale?",
@@ -773,11 +773,32 @@
 
 		"RIEBECK_ONE_LOOP_START": "¿ACABA DE EXPLOTAR EL SOL? ¿QUÉ FUE ESO?",
 		"RIEBECK_ONE_LOOP_RESPONSE": "Me temo que sí, pero intenta no preocuparte mucho por ello, aquí estamos a salvo.",
-		"RIEBECK_ONE_LOOP_DONE": "¡Me parece difícil de creer! Pero si el sol explotó y seguimos vivos, supongo que tienes razón. Creo."
+		"RIEBECK_ONE_LOOP_DONE": "¡Me parece difícil de creer! Pero si el sol explotó y seguimos vivos, supongo que tienes razón. Creo.",
 
-
-
-
+		"Chert": "Chert",
+		"Esker": "Esker",
+		"Feldspar": "Feldspar",
+		"Gabbro": "Gabbro",
+		"Hal": "Hal",
+		"Hornfels": "Hornfels",
+		"Marl": "Marl",
+		"Self": "Self",
+		"Porphy": "Porphy",
+		"the Prisoner": "the Prisoner",
+		"Riebeck": "Riebeck",
+		"Slate": "Slate",
+		"Gossan": "Gossan",
+		"Tektite": "Tektite",
+		"Galena": "Galena",
+		"Moraine": "Maraine",
+		"Spinel": "Spinel",
+		"Tephra": "Tephra",
+		"Arcose": "Arcose",
+		"Rutile": "Rutile",
+		"Gneiss": "Gneiss",
+		"Tuff": "Tuff",
+		"Mica": "Mica",
+		"Solanum": "Solanum"
 
 	},
 

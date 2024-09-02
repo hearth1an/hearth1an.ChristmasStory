@@ -6,6 +6,7 @@ using ChristmasStory.Components.Animation;
 using ChristmasStory.Utility;
 using HarmonyLib;
 using NewHorizons.Utility;
+using NewHorizons.Handlers;
 using OWML.Common;
 using OWML.ModHelper;
 using System;
@@ -89,7 +90,7 @@ namespace ChristmasStory
 			player.AddComponent<PlayerEffectController>();
 			player.AddComponent<HeldItemHandler>();
 			player.AddComponent<SolanumAnimationController>();
-			player.AddComponent<PrisonerAnimationController>();
+			player.AddComponent<PrisonerAnimationController>();		
 
 			var ship = SearchUtilities.Find("Ship_Body");
 			ship.AddComponent<ShipHandler>();			

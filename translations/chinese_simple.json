@@ -776,12 +776,32 @@
 
 		"RIEBECK_ONE_LOOP_START": "太阳爆炸了吗？ 那是什么！",
 		"RIEBECK_ONE_LOOP_RESPONSE": "是的，确实如此，但尽量不要担心，我们在这里很安全。",
-		"RIEBECK_ONE_LOOP_DONE": "我觉得很难相信！但如果太阳爆炸了而我们还活着，那么我想你是对的。我是这么认为的。"
+		"RIEBECK_ONE_LOOP_DONE": "我觉得很难相信！但如果太阳爆炸了而我们还活着，那么我想你是对的。我是这么认为的。",
 
-
-
-
-
+		"Chert": "Chert",
+		"Esker": "Esker",
+		"Feldspar": "Feldspar",
+		"Gabbro": "Gabbro",
+		"Hal": "Hal",
+		"Hornfels": "Hornfels",
+		"Marl": "Marl",
+		"Self": "Self",
+		"Porphy": "Porphy",
+		"the Prisoner": "the Prisoner",
+		"Riebeck": "Riebeck",
+		"Slate": "Slate",
+		"Gossan": "Gossan",
+		"Tektite": "Tektite",
+		"Galena": "Galena",
+		"Moraine": "Maraine",
+		"Spinel": "Spinel",
+		"Tephra": "Tephra",
+		"Arcose": "Arcose",
+		"Rutile": "Rutile",
+		"Gneiss": "Gneiss",
+		"Tuff": "Tuff",
+		"Mica": "Mica",
+		"Solanum": "Solanum"
 	},
 
 	"UIDictionary": {

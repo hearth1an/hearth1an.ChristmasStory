@@ -8,17 +8,16 @@ namespace ChristmasStory.Characters.Villagers
 	internal class MicaCharacterController : TravelerCharacterController
 
 	{
-
 		public override Conditions.PERSISTENT DoneCondition => Conditions.PERSISTENT.ERNESTO_DONE;
 
 		public override void Start()
 		{
-			dialogue = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Mica/Mica_Dialogue").GetComponent<CharacterDialogueTree>();
+			dialogue = SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Mica/Mica_Dialogue").GetComponent<CharacterDialogueTree>();			
 
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Mica/ConversationZone").DestroyAllComponents<InteractReceiver>();
 			SearchUtilities.Find("TimberHearth_Body/Sector_TH/Sector_Village/Sector_LowerVillage/Characters_LowerVillage/Villager_HEA_Mica/ConversationZone").DestroyAllComponents<CharacterDialogueTree>();
 
-			base.Start();
+			base.Start();			
 		}
 
 		protected override void Dialogue_OnStartConversation()

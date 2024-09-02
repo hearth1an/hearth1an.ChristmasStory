@@ -774,11 +774,32 @@
 
 		"RIEBECK_ONE_LOOP_START": "IL SOLE È ESPLOSO? COS'ERA QUELLO?!",
 		"RIEBECK_ONE_LOOP_RESPONSE": "Sì, è esploso. Ma non preoccuparti, siamo al sicuro qui.",
-		"RIEBECK_ONE_LOOP_DONE": "Lo trovo difficile da credere! Ma se il Sole è esploso e noi siamo ancora vivi immagino tu abbia ragione. Credo."
+		"RIEBECK_ONE_LOOP_DONE": "Lo trovo difficile da credere! Ma se il Sole è esploso e noi siamo ancora vivi immagino tu abbia ragione. Credo.",
 
-
-
-
+		"Chert": "Chert",
+		"Esker": "Esker",
+		"Feldspar": "Feldspato",
+		"Gabbro": "Gabbro",
+		"Hal": "Hal",
+		"Hornfels": "Scogliocorno",
+		"Marl": "Marl",
+		"Self": "Self", //yeah i don't know about this one. it's officially translated as "Self" but that's not even a word in italian. it should be something like "me stesso".
+		"Porphy": "Porfy",
+		"the Prisoner": "il Prigioniero",
+		"Riebeck": "Riebeck",
+		"Slate": "Slate",
+		"Gossan": "Gossan",
+		"Tektite": "Tectite",
+		"Galena": "Galena",
+		"Moraine": "Moraine",
+		"Spinel": "Spinel",
+		"Tephra": "Lapillo",
+		"Arcose": "Arcosa",
+		"Rutile": "Rutilio",
+		"Gneiss": "Gneis",
+		"Tuff": "Tufo",
+		"Mica": "Mica",
+		"Solanum": "Solanum"
 
 	},
 
@@ -793,10 +814,8 @@
 		"RADIO_PROMT": "Ascolta la radio",
 		"SHIP_TOY_PROMT": "Gestisci le decorazioni",
 		"SHIP_TOY_NOTIFICATION": "NUOVA DECORAZIONE DELLA NAVE AGGIUNTA",
-		"INVITE_STONE_ITEM": "Pietra con l'invito di <![CDATA[<color=orange>Hal</color>]]>",
-
-		//things different in italian, sorry hearth1an
-		"FELDSPAR": "FELDSPATO"
+		"INVITE_STONE_ITEM": "Pietra con l'invito di <![CDATA[<color=orange>Hal</color>]]>"
+		
 
 	},
 	"ShipLogDictionary": {
