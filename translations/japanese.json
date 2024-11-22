@@ -679,7 +679,7 @@
 		"MICA_START_14": "えっと…少なくとも試してくれたね！",
 		"MICA_START_15": "あれが再生するなんて聞いてない。",
 		"MICA_START_16": "あー…行かなくちゃ。",
-		"MICA_START_17": "まあいいよ。いつでも戻ってまた挑戦してみてよ。",
+		"MICA_START_17": "まあいいよ。いつでも戻ってまた挑戦してみてよ。絶対だよ！",
 		"MICA_START_18": "いいフライトを！",
 		"MICA_START_19": "あはは！うん、多分TephraとGalenaが何か特別なことをしたんだと思う。",
 		"MICA_START_20": "この<![CDATA[<color=lightblue>小さな雪だるま</color>]]>をその努力をたたえた残念トロフィーとして受け取ってよ。あなたの探査艇のコックピットに置いておくね。",
@@ -812,7 +812,7 @@
 
 	"UIDictionary": {
 
-		"MOD_POPUP": "Christmas Storyをインストールしていただきありがとうございます！このMODにはOuter WildsおよびDLCの重大なネタバレが含まれています！より良い体験を得るために、新しいプロフィールを作ってプレイすることをオススメします。",
+		"MOD_POPUP": "Christmas Storyをインストールしていただきありがとうございます！このMODにはOuter WildsおよびDLCの重大なネタバレが含まれています！より良い体験を得るために、新しいプロフィールを作ってプレイすることをオススメします。",
 		"ENDING_TEXT_5": "THE END \n \n 5/8 travelers done",
 		"ENDING_TEXT_6": "THE END \n \n 6/8 travelers done",
 		"ENDING_TEXT_7": "THE END \n \n 7/8 travelers done",
