@@ -88,7 +88,7 @@ namespace ChristmasStory
 		{
 			var player = SearchUtilities.Find("Player_Body");
 			player.AddComponent<PlayerEffectController>();
-			player.AddComponent<HeldItemHandler>();
+			player.AddComponent<Components.HeldItemHandler>();
 			player.AddComponent<SolanumAnimationController>();
 			player.AddComponent<PrisonerAnimationController>();		
 
