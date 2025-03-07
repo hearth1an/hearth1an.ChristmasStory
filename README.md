@@ -46,6 +46,7 @@ Translation credits (in work):
 - Chinese: [solitary-sails](https://github.com/solitary-sails)
 - French: Balex
 - Japanese: [orclecle](https://github.com/TRSasasusu)
+- Korean: [Barirn](https://github.com/Barirn)
 - German: Derko
 - Italian: ilynery
 
